@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-llm-radar"
+version = "0.1.0"
+description = "Daily research radar for music and audio foundation models"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+audio-llm-radar = "audio_radar.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

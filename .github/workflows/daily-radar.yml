@@ -1,0 +1,52 @@
+name: Daily audio LLM radar
+
+on:
+  workflow_dispatch:
+    inputs:
+      include_seen:
+        description: Include papers already seen
+        required: false
+        type: boolean
+        default: false
+  schedule:
+    - cron: "30 11 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-audio-llm-radar
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run radar
+        env:
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [[ "${{ inputs.include_seen }}" == "true" ]]; then
+            ./scripts/run_daily.sh --include-seen
+          else
+            ./scripts/run_daily.sh
+          fi
+      - name: Commit report and state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports data/radar.db
+          git diff --cached --quiet || git commit -m "radar: daily update $(date -u +%F)"
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio-llm-radar-${{ github.run_id }}
+          path: reports/

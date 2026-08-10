@@ -1,0 +1,130 @@
+{
+  "radar_name": "音乐/音频大模型研究雷达",
+  "lookback_days": 7,
+  "minimum_score": 6,
+  "maximum_daily_papers": 60,
+  "minimum_model_score": 7,
+  "maximum_daily_models": 30,
+  "negative_keywords": [
+    "wireless channel", "radar signal", "sonar", "medical ultrasound",
+    "acoustic modem", "seismic", "room impulse response estimation"
+  ],
+  "sources": {
+    "arxiv": {"enabled": true, "max_results": 300},
+    "semantic_scholar": {"enabled": true, "max_results_per_topic": 30},
+    "openalex": {"enabled": false, "max_results_per_topic": 30},
+    "huggingface_models": {
+      "enabled": true,
+      "max_results_per_task": 60,
+      "max_readmes": 32,
+      "pipeline_tags": [
+        "audio-text-to-text",
+        "text-to-audio",
+        "text-to-speech",
+        "automatic-speech-recognition",
+        "audio-to-audio",
+        "audio-classification",
+        "voice-activity-detection"
+      ]
+    }
+  },
+  "topics": [
+    {
+      "id": "audio_language_models",
+      "name": "音频/语音语言模型",
+      "keywords": {
+        "audio language model": 6,
+        "audio large language model": 8,
+        "audio-language model": 7,
+        "speech language model": 6,
+        "speech-language model": 7,
+        "spoken language model": 6,
+        "audio foundation model": 7,
+        "speech foundation model": 7,
+        "audio instruction tuning": 7,
+        "audio tokenization": 5,
+        "audio llm": 7,
+        "speech llm": 7
+      }
+    },
+    {
+      "id": "music_foundation_models",
+      "name": "音乐基础模型与表征",
+      "keywords": {
+        "music foundation model": 8,
+        "music language model": 7,
+        "music representation learning": 5,
+        "music understanding": 4,
+        "music information retrieval": 3,
+        "symbolic music": 4,
+        "music embedding": 4,
+        "musical reasoning": 6,
+        "music llm": 7
+      }
+    },
+    {
+      "id": "generative_music_audio",
+      "name": "生成式音乐与音频",
+      "keywords": {
+        "text-to-music": 7,
+        "text to music": 7,
+        "music generation": 5,
+        "audio generation": 5,
+        "text-to-audio": 7,
+        "audio diffusion": 6,
+        "music diffusion": 6,
+        "neural audio codec": 6,
+        "audio codec language model": 8,
+        "singing voice synthesis": 5,
+        "musicgen": 5,
+        "audiogen": 5
+      }
+    },
+    {
+      "id": "audio_understanding_reasoning",
+      "name": "音频理解与推理",
+      "keywords": {
+        "audio reasoning": 7,
+        "audio question answering": 7,
+        "audio captioning": 5,
+        "audio understanding": 5,
+        "sound event detection": 3,
+        "audio-text": 5,
+        "audio visual language model": 7,
+        "multimodal audio": 5
+      }
+    },
+    {
+      "id": "speech_models",
+      "name": "语音生成、识别与对话",
+      "keywords": {
+        "speech generation": 5,
+        "speech synthesis": 4,
+        "text-to-speech": 5,
+        "automatic speech recognition": 3,
+        "speech translation": 4,
+        "voice cloning": 6,
+        "speech-to-speech": 6,
+        "speech dialogue": 5,
+        "full duplex speech": 7
+      }
+    },
+    {
+      "id": "evaluation_alignment_safety",
+      "name": "评测、对齐、安全与版权",
+      "keywords": {
+        "audio benchmark": 5,
+        "music benchmark": 5,
+        "audio hallucination": 7,
+        "audio preference alignment": 7,
+        "music preference alignment": 7,
+        "audio deepfake": 6,
+        "speech deepfake": 6,
+        "audio watermarking": 7,
+        "music watermarking": 7,
+        "audio copyright": 6,
+        "music copyright": 6
+      }
+    }
+  ]
+}
