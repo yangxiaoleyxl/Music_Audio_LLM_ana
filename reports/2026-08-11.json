@@ -3,55 +3,957 @@
   "window_start": "2026-08-04",
   "source_counts": {
     "arxiv": 0,
-    "semantic_scholar": 59
+    "semantic_scholar": 62
   },
   "errors": [
-    "arXiv: HTTP Error 429: Unknown Error"
+    "arXiv: HTTP Error 500: Internal Server Error"
   ],
-  "papers": [],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "2608.08067",
+      "title": "DialectS2S: End-to-End Speech Dialogue Modeling for Low-Resource Chinese Dialects",
+      "abstract": "Current end-to-end speech dialogue models are primarily optimized for mainstream languages and remain limited in low-resource dialect scenarios due to the scarcity of dialect speech data. Moreover, during dialect adaptation, the semantic representation space of speech dialogue models continuously evolves, while conventional speech supervision remains unchanged, leading to semantic inconsistency between hidden representations and speech targets and degrading speech stability and naturalness. To address these issues, we propose DialectS2S, an end-to-end speech dialogue model for Chinese dialects. We first develop a scalable dialect speech dialogue synthesis pipeline for efficient data construction. We further introduce a two-stage post-training strategy with self-aligned speech supervision, which aligns the semantic content of speech supervision with the evolved semantic representations of the model to improve dialect speech generation quality. Experimental results show that DialectS2S consistently outperforms existing baselines across multiple Chinese dialects in speech dialogue, achieving substantial improvements in dialect consistency, response quality, and speech intelligibility. Our work provides an efficient and scalable solution for end-to-end speech dialogue modeling in low-resource dialect scenarios. To facilitate future research and practical applications, we fully open-source the DialectS2S framework, including model checkpoints, training datasets, and fine-tuning code.",
+      "authors": [
+        "Yiqiao Shu",
+        "Tianyu Peng",
+        "Yingzhuo Deng",
+        "Wen Yang",
+        "Jun Lin",
+        "Changming Xie",
+        "Xinyu Yu",
+        "Jiajun Zhang"
+      ],
+      "published": "2026-08-08",
+      "updated": "2026-08-08",
+      "url": "https://arxiv.org/abs/2608.08067",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 15
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, speech dialogue"
+      ],
+      "is_new": true
+    }
+  ],
   "models": [
     {
-      "repo_id": "yun196/Qwen3-ASR-1.7B",
-      "author": "yun196",
-      "created_at": "2026-08-11",
+      "repo_id": "bhushan1729/orpheus-3b-stage3-tagged-checkpoint-296",
+      "author": "bhushan1729",
+      "created_at": "2026-08-06",
       "last_modified": "2026-08-11",
-      "pipeline_tag": "automatic-speech-recognition",
+      "pipeline_tag": "text-to-speech",
       "tags": [
-        "safetensors",
-        "qwen3_asr",
-        "automatic-speech-recognition",
-        "arxiv:2601.21337",
+        "peft",
+        "text-to-speech",
+        "tts",
+        "hindi",
+        "unsloth",
+        "llama",
+        "audio",
+        "voice-cloning",
+        "hi",
+        "base_model:unsloth/orpheus-3b-0.1-ft",
+        "base_model:adapter:unsloth/orpheus-3b-0.1-ft",
         "license:apache-2.0",
         "region:us"
       ],
       "downloads": 0,
       "likes": 0,
       "trending_score": 0.0,
-      "library_name": "",
+      "library_name": "peft",
       "license": "apache-2.0",
       "gated": false,
-      "url": "https://huggingface.co/yun196/Qwen3-ASR-1.7B",
-      "card_text": "---\nlicense: apache-2.0\npipeline_tag: automatic-speech-recognition\n---\n\n# Qwen3-ASR\n\n## Overview\n\n### Introduction\n\n<p align=\"center\">\n    <img src=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/qwen3_asr_introduction.png\" width=\"90%\"/>\n<p>\n\nThe Qwen3-ASR family includes Qwen3-ASR-1.7B and Qwen3-ASR-0.6B, which support language identification and ASR for 52 languages and dialects. Both leverage large-scale speech training data and the strong audio understanding capability of their foundation model, Qwen3-Omni. Experiments show that the 1.7B version achieves state-of-the-art performance among open-source ASR models and is competitive with the strongest proprietary commercial APIs. Here are the main features:\n\n* **All-in-one**: Qwen3-ASR-1.7B and Qwen3-ASR-0.6B support language identification and speech recognition for 30 languages and 22 Chinese dialects, so as to English accents from multiple countries and regions.\n\n* **Excellent and Fast**: The Qwen3-ASR family ASR models maintains high-quality and robust recognition under complex acoustic environments and challenging text patterns. Qwen3-ASR-1.7B achieves strong performance on both open-sourced and internal benchmarks. While the 0.6B version achieves accuracy-efficient trade-off, it reaches 2000 times throughput at a concurrency of 128. They both achieve streaming / offline unified inference with single model and support transcribe long audio.\n\n* **Novel and strong forced alignment Solution**: We introduce Qwen3-ForcedAligner-0.6B, which supports timestamp prediction for arbitrary units within up to 5 minutes of speech in 11 languages. Evaluations show its timestamp accuracy surpasses E2E based forced-alignment models.\n\n* **Comprehensive inference toolkit**: In addition to open-sourcing the architectures and weights of the Qwen3-ASR series, we also release a powerful, full-featured inference framework that supports vLLM-based batch inference, asynchronous serving, streaming inference, timestamp prediction, and more.\n\n### Model Architecture\n\n<p align=\"center\">\n    <img src=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/overview.jpg\" width=\"100%\"/>\n<p>\n\n\n### Released Models Description and Download\n\nBelow is an introduction and download information for the Qwen3-ASR models. Please select and download the model that fits your needs.\n\n| Model | Supported Languages | Supported Dialects | Inference Mode | Audio Types |\n|---|---|---|---|---|\n| Qwen3-ASR-1.7B & Qwen3-ASR-0.6B | Chinese (zh), English (en), Cantonese (yue), Arabic (ar), German (de), French (fr), Spanish (es), Portuguese (pt), Indonesian (id), Italian (it), Korean (ko), Russian (ru), Thai (th), Vietnamese (vi), Japanese (ja), Turkish (tr), Hindi (hi), Malay (ms), Dutch (nl), Swedish (sv), Danish (da), Finnish (fi), Polish (pl), Czech (cs), Filipino (fil), Persian (fa), Greek (el), Hungarian (hu), Macedonian (mk), Romanian (ro) | Anhui, Dongbei, Fujian, Gansu, Guizhou, Hebei, Henan, Hubei, Hunan, Jiangxi, Ningxia, Shandong, Shaanxi, Shanxi, Sichuan, Tianjin, Yunnan, Zhejiang, Cantonese (Hong Kong accent), Cantonese (Guangdong accent), Wu language, Minnan language. | Offline / Streaming | Speech, Singing Voice, Songs with BGM |\n| Qwen3-ForcedAligner-0.6B | Chinese, English, Cantonese, French, German, Italian, Japanese, Korean, Portuguese, Russian, Spanish | -- | NAR | Speech |\n\nDuring model loading in the `qwen-asr` package or vLLM, model weights will be downloaded automatically based on the model name. However, if your runtime environment does not allow downloading weights during execution, you can use the following commands to manually download the model weights to a local directory:\n\n```bash\n# Download through ModelScope (recommended for users in Mainland China)\npip install -U modelscope\nmodelscope download --model Qwen/Qwen3-ASR-1.7B  --local_dir ./Qwen3-ASR-1.7B\nmodelscope download --model Qwen/Qwen3-ASR-0.6B --local_dir ./Qwen3-ASR-0.6B\nmodelscope download --model Qwen/Qwen3-ForcedAligner-0.6B --local_dir ./Qwen3-ForcedAligner-0.6B\n# Download through Hugging Face\npip install -U \"huggingface_hub[cli]\"\nhuggingface-cli download Qwen/Qwen3-ASR-1.7B --local-dir ./Qwen3-ASR-1.7B\nhuggingface-cli download Qwen/Qwen3-ASR-0.6B --local-dir ./Qwen3-ASR-0.6B\nhuggingface-cli download Qwen/Qwen3-ForcedAligner-0.6B --local-dir ./Qwen3-ForcedAligner-0.6B\n```\n\n\n## Quickstart\n\n### Environment Setup\n\nThe easiest way to use Qwen3-ASR is to install the `qwen-asr` Python package from PyPI. This will pull in the required runtime dependencies and allow you to load any released Qwen3-ASR model. If you’d like to simplify environment setup further, you can also use our official [Docker image](#docker). The `qwen-asr` package provides two backends: the transformers backend and the vLLM backend. For usage instructions for different backends, please refer to [Python Package Usage](#python-package-usage). We recommend using a **fresh, isolated environment** to avoid dependency conflicts with existing packages. You can create a clean Python 3.12 environment like this:\n\n```bash\nconda create -n qwen3-asr python=3.12 -y\nconda activate qwen3-asr\n```\n\nRun the following command to get the minimal installation with transformers-backend support:\n\n```bash\npip install -U qwen-asr\n```\n\nTo enable the vLLM backend for faster inference and streaming support, run:\n\n```bash\npip install -U qwen-asr[vllm]\n```\n\nIf you want to develop or modify the code locally, install from source in editable mode:\n\n```bash\ngit clone https://github.com/QwenLM/Qwen3-ASR.git\ncd Qwen3-ASR\npip install -e .\n# support vLLM backend\n# pip install -e \".[vllm]\"\n```\n\nAdditionally, we recommend using FlashAttention 2 to reduce GPU memory usage and accelerate inference speed, especially for long inputs and large batch sizes.\n\n```bash\npip install -U flash-attn --no-build-isolation\n```\n\nIf your machine has less than 96GB of RAM and lots of CPU cores, run:\n\n```bash\nMAX_JOBS=4 pip install -U flash-attn --no-build-isolation\n```\n\nAlso, you should have hardware that is compatible with FlashAttention 2. Read more about it in the official documentation of the [FlashAttention repository](https://github.com/Dao-AILab/flash-attention). FlashAttention 2 can only be used when a model is loaded in `torch.float16` or `torch.bfloat16`.\n\n### Python Package Usage\n\n#### Quick Inference\n\nThe `qwen-asr` package provides two backends: **transformers backend** and **vLLM backend**. You can pass audio inputs as a local path, a URL, base64 data, or a `(np.ndarray, sr)` tuple, and run batch inference. To quickly try Qwen3-ASR, you can use `Qwen3ASRModel.from_pretrained(...)` for the transformers backend with the following code:\n\n```python\nimport torch\nfrom qwen_asr import Qwen3ASRModel\n\nmodel = Qwen3ASRModel.from_pretrained(\n    \"Qwen/Qwen3-ASR-1.7B\",\n    dtype=torch.bfloat16,\n    device_map=\"cuda:0\",\n    # attn_implementation=\"flash_attention_2\",\n    max_inference_batch_size=32, # Batch size limit for inference. -1 means unlimited. Smaller values can help avoid OOM.\n    max_new_tokens=256, # Maximum number of tokens to generate. Set a larger value for long audio input.\n)\n\nresults = model.transcribe(\n    audio=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav\",\n    language=None, # set \"English\" to force the language\n)\n\nprint(results[0].language)\nprint(results[0].text)\n```\n\nIf you want to return timestamps, pass `forced_aligner` and its init kwargs. Here is an example of batch inference with timestamps output:\n\n```python\nimport torch\nfrom qwen_asr import Qwen3ASRModel\n\nmodel = Qwen3ASRModel.from_pretrained(\n    \"Qwen/Qwen3-ASR-1.7B\",\n    dtype=torch.bfloat16,\n    device_map=\"cuda:0\",\n    # attn_implementation=\"flash_attention_2\",\n    max_inference_batch_size=32, # Batch size limit for inference. -1 means unlimited. Smaller values can help avoid OOM.\n    max_new_tokens=256, # Maximum number of tokens to generate. Set a larger value for long audio input.\n    forced_aligner=\"Qwen/Qwen3-ForcedAligner-0.6B\",\n    forced_aligner_kwargs=dict(\n        dtype=torch.bfloat16,\n        device_map=\"cuda:0\",\n        # attn_implementation=\"flash_attention_2\",\n    ),\n)\n\nresults = model.transcribe(\n    audio=[\n      \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_zh.wav\",\n      \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav\",\n    ],\n    language=[\"Chinese\", \"English\"], # can also be set to None for automatic language detection\n    return_time_stamps=True,\n)\n\nfor r in results:\n    print(r.language, r.text, r.time_stamps[0])\n```\n\nFor more detailed usage examples, please refer to the [example code](https://github.com/QwenLM/Qwen3-ASR/blob/main/examples/example_qwen3_asr_transformers.py) for the transformers backend.\n\n#### vLLM Backend\n\nIf you want the fastest inference speed with Qwen3-ASR, we strongly recommend using the vLLM backend by initializing the model with `Qwen3ASRModel.LLM(...)`. Example code is provided below. Note that you must install it via `pip install -U qwen-asr[vllm]`. If you want the model to output timestamps, it’s best to install FlashAttention via `pip install -U flash-attn --no-build-isolation` to speed up inference for the forced aligner model. Remember to wrap your code under `if __name__ == '__main__':` to avoid the `spawn` error described in [vLLM Troubleshooting](https://docs.vllm.ai/en/latest/usage/troubleshooting/#python-multiprocessing).\n\n```python\nimport torch\nfrom qwen_asr import Qwen3ASRModel\n\nif __name__ == '__main__':\n    model = Qwen3ASRModel.LLM(\n        model=\"Qwen/Qwen3-ASR-1.7B\",\n        gpu_memory_utilization=0.7,\n        max_inference_batch_size=128, # Batch size limit for inference. -1 means unlimited. Smaller values can help avoid OOM.\n        max_new_tokens=4096, # Maximum number of tokens to generate. Set a larger value for long audio input.\n        forced_aligner=\"Qwen/Qwen3-ForcedAligner-0.6B\",\n        forced_aligner_kwargs=dict(\n            dtype=torch.bfloat16,\n            device_map=\"cuda:0\",\n            # attn_implementation=\"flash_attention_2\",\n        ),\n    )\n\n    results = model.transcribe(\n        audio=[\n        \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_zh.wav\",\n        \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav\",\n        ],\n        language=[\"Chinese\", \"English\"], # can also be set to None for automatic language detection\n        return_time_stamps=True,\n    )\n\n    for r in results:\n        print(r.language, r.text, r.time_stamps[0])\n```\n\nFor more detailed usage examples, please refer to the [example code](https://github.com/QwenLM/Qwen3-ASR/blob/main/examples/example_qwen3_asr_vllm.py) for the vLLM backend. In addition, you can start a vLLM server via the `qwen-asr-serve` command, which is a wrapper around `vllm serve`. You can pass any arguments supported by `vllm serve`, for example:\n\n```bash\nqwen-asr-serve Qwen/Qwen3-ASR-1.7B --gpu-memory-utilization 0.8 --host 0.0.0.0 --port 8000\n```\n\nAnd send requests to the server via:\n\n```python\nimport requests\n\nurl = \"http://localhost:8000/v1/chat/completions\"\nheaders = {\"Content-Type\": \"application/json\"}\n\ndata = {\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"audio_url\",\n                    \"audio_url\": {\n                        \"url\": \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav\"\n                    },\n                }\n            ],\n        }\n    ]\n}\n\nresponse = requests.post(url, headers=headers, json=data, timeout=300)\nresponse.raise_for_status()\ncontent = response.json()['choices'][0]['message']['content']\nprint(content)\n\n# parse ASR output if you want\nfrom qwen_asr import parse_asr_output\nlanguage, text = parse_asr_output(content)\nprint(language)\nprint(text)\n```\n\n#### Streaming Inference\n\nQwen3-ASR fully supports streaming inference. Currently, streaming inference is only available with the vLLM backend. Note that streaming inference does not support batch inference or returning timestamps. Please refer to the [example code](https://github.com/QwenLM/Qwen3-ASR/blob/main/examples/example_qwen3_asr_vllm_streaming.py) for details. You can also launch a streaming web demo through the [guide](#streaming-demo) to experience Qwen3-ASR’s streaming transcription capabilities. \n\n#### ForcedAligner Usage\n\n`Qwen3-ForcedAligner-0.6B` can align text–speech pairs and return word or character level timestamps. Here is an example of using the forced aligner directly:\n\n```python\nimport torch\nfrom qwen_asr import Qwen3ForcedAligner\n\nmodel = Qwen3ForcedAligner.from_pretrained(\n    \"Qwen/Qwen3-ForcedAligner-0.6B\",\n    dtype=torch.bfloat16,\n    device_map=\"cuda:0\",\n    # attn_implementation=\"flash_attention_2\",\n)\n\nresults = model.align(\n    audio=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_zh.wav\",\n    text=\"甚至出现交易几乎停滞的情况。\",\n    language=\"Chinese\",\n)\n\nprint(results[0])\nprint(results[0][0].text, results[0][0].start_time, results[0][0].end_time)\n```\n\nIn addition, the forced aligner supports local paths / URLs / base64 data / `(np.ndarray, sr)` inputs and batch inference. Please refer to the [example code](https://github.com/QwenLM/Qwen3-ASR/blob/main/examples/example_qwen3_forced_aligner.py) for details.\n\n### DashScope API Usage\n\nTo further explore Qwen3-ASR, we encourage you to try our DashScope API for a faster and more efficient experience. For detailed API information and documentation, please refer to the following:\n\n| API Description | API Documentation (Mainland China) | API Documentation (International) |\n|------------------|-----------------------------------|------------------------------------|\n| Real-time API for Qwen3-ASR. | [https://help.aliyun.com/zh/model-studio/qwen-real-time-speech-recognition](https://help.aliyun.com/zh/model-studio/qwen-real-time-speech-recognition) | [https://www.alibabacloud.com/help/en/model-studio/qwen-real-time-speech-recognition](https://www.alibabacloud.com/help/en/model-studio/qwen-real-time-speech-recognition) |\n| FileTrans API for Qwen3-ASR. | [https://help.aliyun.com/zh/model-studio/qwen-speech-recognition](https://help.aliyun.com/zh/model-studio/qwen-speech-recognition) | [https://www.alibabacloud.com/help/en/model-studio/qwen-speech-recognition](https://www.alibabacloud.com/help/en/model-studio/qwen-speech-recognition) |\n\n\n## Launch Local Web UI Demo\n\n### Gradio Demo\n\nTo launch the Qwen3-ASR web UI gradio demo, install the `qwen-asr` package and run `qwen-asr-demo`. Use the command below for help:\n\n```bash\nqwen-asr-demo --help\n```\n\nTo launch the demo, you can use the following commands:\n\n```bash\n# Transformers backend\nqwen-asr-demo \\\n  --asr-checkpoint Qwen/Qwen3-ASR-1.7B \\\n  --backend transformers \\\n  --cuda-visible-devices 0 \\\n  --ip 0.0.0.0 --port 8000\n\n# Transformers backend + Forced Aligner (enable timestamps)\nqwen-asr-demo \\\n  --asr-checkpoint Qwen/Qwen3-ASR-1.7B \\\n  --aligner-checkpoint Qwen/Qwen3-ForcedAligner-0.6B \\\n  --backend transformers \\\n  --cuda-visible-devices 0 \\\n  --backend-kwargs '{\"device_map\":\"cuda:0\",\"dtype\":\"bfloat16\",\"max_inference_batch_size\":8,\"max_new_tokens\":256}' \\\n  --aligner-kwargs '{\"device_map\":\"cuda:0\",\"dtype\":\"bfloat16\"}' \\\n  --ip 0.0.0.0 --port 8000\n\n# vLLM backend + Forced Aligner (enable timestamps)\nqwen-asr-demo \\\n  --asr-checkpoint Qwen/Qwen3-ASR-1.7B \\\n  --aligner-checkpoint Qwen/Qwen3-ForcedAligner-0.6B \\\n  --backend vllm \\\n  --cuda-visible-devices 0 \\\n  --backend-kwargs '{\"gpu_memory_utilization\":0.7,\"max_inference_batch_size\":8,\"max_new_tokens\":2048}' \\\n  --aligner-kwargs '{\"device_map\":\"cuda:0\",\"dtype\":\"bfloat16\"}' \\\n  --ip 0.0.0.0 --port 8000\n```\n\nThen open `http://<your-ip>:8000`, or access it via port forwarding in tools like VS Code.\n\n#### Backend Notes\n\nThis demo supports two backends: transformers and vLLM. All backend-specific initialization parameters should be passed via `--backend-kwargs` as a JSON dict. If not provided, the demo will use sensible defaults.\n\n```bash\n# Example: override transformers init args without flash attention\n--backend-kwargs '{\"device_map\":\"cuda:0\",\"dtype\":\"bfloat16\"}'\n\n# Example: override vLLM init args with 65% GPU memory\n--backend-kwargs '{\"gpu_memory_utilization\":0.65}'\n```\n\n#### CUDA Device Notes\n\nBecause vLLM does not follow `cuda:0` style device selection, this demo selects GPUs by setting `CUDA_VISIBLE_DEVICES` via `--cuda-visible-devices`.\n\n```bash\n# Use GPU 0\n--cuda-visible-devices 0\n\n# Use GPU 1\n--cuda-visible-devices 1\n```\n\n#### Timestamps Notes\n\nTimestamps are only available when `--aligner-checkpoint` is provided. If you launch the demo without a forced aligner, the timestamps UI will be hidden automatically.\n\n```bash\n# No forced aligner\nqwen-asr-demo --asr-checkpoint Qwen/Qwen3-ASR-1.7B\n\n# With forced aligner\nqwen-asr-demo \\\n  --asr-checkpoint Qwen/Qwen3-ASR-1.7B \\\n  --aligner-checkpoint Qwen/Qwen3-ForcedAligner-0.6B\n```\n\n#### HTTPS Notes\n\nTo avoid browser microphone permission issues after deploying the server, it is recommended/required to run the gradio service over HTTPS (especially when accessed remotely or behind modern browsers/gateways). Use `--ssl-certfile` and `--ssl-keyfile` to enable HTTPS. First, generate a private key and a self-signed certificate (valid for 365 days):\n\n```bash\nopenssl req -x509 -newkey rsa:2048 \\\n  -keyout key.pem -out cert.pem \\\n  -days 365 -nodes \\\n  -subj \"/CN=localhost\"\n```\n\nThen run the demo with HTTPS:\n\n```bash\nqwen-asr-demo \\\n  --asr-checkpoint Qwen/Qwen3-ASR-1.7B \\\n  --backend transformers \\\n  --cuda-visible-devices 0 \\\n  --ip 0.0.0.0 --port 8000 \\\n  --ssl-certfile cert.pem \\\n  --ssl-keyfile key.pem \\\n  --no-ssl-verify\n```\n\nThen open `https://<your-ip>:8000` to use it. If your browser shows a warning, that’s expected for self-signed certificates. For production, use a real certificate.\n\n### Streaming Demo\n\nTo experience Qwen3-ASR’s streaming transcription capability in a web UI, we provide a minimal Flask-based streaming demo. The demo captures microphone audio in the browser, resamples it to 16,000 Hz, and continuously pushes PCM chunks to the model. Run the demo with the following command:\n\n```bash\nqwen-asr-demo-streaming \\\n  --asr-model-path Qwen/Qwen3-ASR-1.7B \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --gpu-memory-utilization 0.9\n```\n\nThen open `http://<your-ip>:8000`, or access it via port forwarding in tools like VS Code.\n\n## Deployment with vLLM\n\nvLLM officially provides day-0 model support for Qwen3-ASR for efficient inference. \n\n### Installation\nYou can run Qwen3-ASR with vLLM nightly wheel or docker image. To install the nightly version of vLLM, we recommend using `uv` as the environment manager\n```bash\nuv venv\nsource .venv/bin/activate\nuv pip install -U vllm --pre \\\n    --extra-index-url https://wheels.vllm.ai/nightly/cu129 \\\n    --extra-index-url https://download.pytorch.org/whl/cu129 \\\n    --index-strategy unsafe-best-match\nuv pip install \"vllm[audio]\" # For additional audio dependencies\n```\n\n### Online Serving\nYou can easily deploy Qwen3-ASR with vLLM by running the following command\n```bash\nvllm serve Qwen/Qwen3-ASR-1.7B\n```\nAfter the model server is successfully deployed, you can interact with it in multiple ways.\n\n#### Using OpenAI SDK\n```python\nimport base64\nimport httpx\nfrom openai import OpenAI\n\n# Initialize client\nclient = OpenAI(\n    base_url=\"http://localhost:8000/v1\",\n    api_key=\"EMPTY\"\n)\n\n# Create multimodal chat completion request\nresponse = client.chat.completions.create(\n    model=\"Qwen/Qwen3-ASR-1.7B\",\n    messages=[\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"audio_url\",\n                    \"audio_url\": {\n                        {\"url\": \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav\"}\n                    }\n                }\n            ]\n        }\n    ],\n)\n\nprint(response.choices[0].message.content)\n```\nThis model is also supported on vLLM with OpenAI transcription API.\n```python\nimport httpx\nfrom openai import OpenAI\n\n# Initialize client\nclient = OpenAI(\n    base_url=\"http://localhost:8000/v1\",\n    api_key=\"EMPTY\"\n)\naudio_url = \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav\"\naudio_file = httpx.get(audio_url).content\n\ntranscription = client.audio.transcriptions.create(\n    model=\"Qwen/Qwen3-ASR-1.7B\",\n    file=audio_file,\n)\n\nprint(transcription.text)\n```\n\n#### Using cURL\n```bash\ncurl http://localhost:8000/v1/chat/completions \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\n    \"messages\": [\n    {\"role\": \"user\", \"content\": [\n        {\"type\": \"audio_url\", \"audio_url\": {\"url\": \"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav\"}}\n    ]}\n    ]\n    }'\n```\n\n### Offline Inference\nSee the following example on using vLLM to run offline inference with Qwen3-ASR\n```python\nfrom vllm import LLM, SamplingParams\nfrom vllm.assets.audio import AudioAsset\nimport base64\nimport requests\n\n# Initialize the LLM\nllm = LLM(\n    model=\"Qwen/Qwen3-ASR-1.7B\"\n)\n\n# Load audio\naudio_asset = AudioAsset(\"winning_call\")\n\n# Create conversation with audio content\nconversation = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\n                \"type\": \"audio_url\",\n                \"audio_url\": {\"url\": audio_asset.url}\n            }\n        ]\n    }\n]\n\nsampling_params = SamplingParams(temperature=0.01, max_tokens=256)\n\n# Run inference using .chat()\noutputs = llm.chat(conversation, sampling_params=sampling_params)\nprint(outputs[0].outputs[0].text)\n```\n\n\n## Docker\n\nTo make it easier to use our `qwen-asr` Python package, we provide a pre-built Docker image: [qwenllm/qwen3-asr](https://hub.docker.com/r/qwenllm/qwen3-asr). You only need to install the GPU driver and download the model files to run the code. Please follow the [NVIDIA Container Toolkit installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) to ensure Docker can access your GPU. If you are in Mainland China and have trouble reaching Docker Hub, you may use a registry mirror to accelerate image pulls.\n\nFirst, pull the image and start a container:\n\n```bash\nLOCAL_WORKDIR=/path/to/your/workspace\nHOST_PORT=8000\nCONTAINER_PORT=80\ndocker run --gpus all --name qwen3-asr \\\n    -v /var/run/docker.sock:/var/run/docker.sock -p $HOST_PORT:$CONTAINER_PORT \\\n    --mount type=bind,source=$LOCAL_WORKDIR,target=/data/shared/Qwen3-ASR \\\n    --shm-size=4gb \\\n    -it qwenllm/qwen3-asr:latest\n```\n\nAfter running the command, you will enter the container’s bash shell. Your local workspace (**replace** `/path/to/your/workspace` **with the actual path**) will be mounted inside the container at `/data/shared/Qwen3-ASR`. Port `8000` on the host is mapped to port `80` in the container, so you can access services running in the container via `http://<host-ip>:8000`. Note that services inside the container must bind to `0.0.0.0` (not `127.0.0.1`) for port forwarding to work.\n\nIf you exit the container, you can start it again and re-enter it with:\n\n```bash\ndocker start qwen3-asr\ndocker exec -it qwen3-asr bash\n```\n\nTo remove the container completely, run:\n\n```bash\ndocker rm -f qwen3-asr\n```\n\n\n## Evaluation\n\nDuring evaluation, we ran inference for all models with `dtype=torch.bfloat16` and set `max_new_tokens=1024` using vLLM. Greedy search was used for all decoding, and none of the tests specified a language parameter. The detailed evaluation results are shown below.\n\n<details>\n<summary>ASR Benchmarks on Public Datasets (WER ↓)</summary>\n\n<table>\n  <thead>\n    <tr>\n      <th colspan=\"2\" style=\"text-align: left;\"></th>\n      <th style=\"text-align: center;\">GPT-4o<br>-Transcribe</th>\n      <th style=\"text-align: center;\">Gemini-2.5<br>-Pro</th>\n      <th style=\"text-align: center;\">Doubao-ASR</th>\n      <th style=\"text-align: center;\">Whisper<br>-large-v3</th>\n      <th style=\"text-align: center;\">Fun-ASR<br>-MLT-Nano</th>\n      <th style=\"text-align: center;\">Qwen3-ASR<br>-0.6B</th>\n      <th style=\"text-align: center;\">Qwen3-ASR<br>-1.7B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td colspan=\"9\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">English (en)</td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">Librispeech<br>clean | other</td>\n      <td style=\"text-align: center;\"><strong>1.39</strong> | 3.75</td>\n      <td style=\"text-align: center;\">2.89 | 3.56</td>\n      <td style=\"text-align: center;\">2.78 | 5.70</td>\n      <td style=\"text-align: center;\">1.51 | 3.97</td>\n      <td style=\"text-align: center;\">1.68 | 4.03</td>\n      <td style=\"text-align: center;\">2.11 | 4.55</td>\n      <td style=\"text-align: center;\">1.63 | <strong>3.38</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">GigaSpeech</td>\n      <td style=\"text-align: center;\">25.50</td>\n      <td style=\"text-align: center;\">9.37</td>\n      <td style=\"text-align: center;\">9.55</td>\n      <td style=\"text-align: center;\">9.76</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">8.88</td>\n      <td style=\"text-align: center;\"><strong>8.45</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">CV-en</td>\n      <td style=\"text-align: center;\">9.08</td>\n      <td style=\"text-align: center;\">14.49</td>\n      <td style=\"text-align: center;\">13.78</td>\n      <td style=\"text-align: center;\">9.90</td>\n      <td style=\"text-align: center;\">9.90</td>\n      <td style=\"text-align: center;\">9.92</td>\n      <td style=\"text-align: center;\"><strong>7.39</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">Fleurs-en</td>\n      <td style=\"text-align: center;\"><strong>2.40</strong></td>\n      <td style=\"text-align: center;\">2.94</td>\n      <td style=\"text-align: center;\">6.31</td>\n      <td style=\"text-align: center;\">4.08</td>\n      <td style=\"text-align: center;\">5.49</td>\n      <td style=\"text-align: center;\">4.39</td>\n      <td style=\"text-align: center;\">3.35</td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">MLS-en</td>\n      <td style=\"text-align: center;\">5.12</td>\n      <td style=\"text-align: center;\"><strong>3.68</strong></td>\n      <td style=\"text-align: center;\">7.09</td>\n      <td style=\"text-align: center;\">4.87</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">6.00</td>\n      <td style=\"text-align: center;\">4.58</td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">Tedlium</td>\n      <td style=\"text-align: center;\">7.69</td>\n      <td style=\"text-align: center;\">6.15</td>\n      <td style=\"text-align: center;\">4.91</td>\n      <td style=\"text-align: center;\">6.84</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>3.85<strong></td>\n      <td style=\"text-align: center;\"><strong>4.50</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">VoxPopuli</td>\n      <td style=\"text-align: center;\">10.29</td>\n      <td style=\"text-align: center;\">11.36</td>\n      <td style=\"text-align: center;\">12.12</td>\n      <td style=\"text-align: center;\">12.05</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>9.96<strong></td>\n      <td style=\"text-align: center;\"><strong>9.15</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"9\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Chinese (zh)</td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">WenetSpeech<br>net | meeting</td>\n      <td style=\"text-align: center;\">15.30 | 32.27</td>\n      <td style=\"text-align: center;\">14.43 | 13.47</td>\n      <td style=\"text-align: center;\">N/A</td>\n      <td style=\"text-align: center;\">9.86 | 19.11</td>\n      <td style=\"text-align: center;\">6.35 | -</td>\n      <td style=\"text-align: center;\">5.97 | 6.88</td>\n      <td style=\"text-align: center;\"><strong>4.97</strong> | <strong>5.88</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">AISHELL-2-test</td>\n      <td style=\"text-align: center;\">4.24</td>\n      <td style=\"text-align: center;\">11.62</td>\n      <td style=\"text-align: center;\">2.85</td>\n      <td style=\"text-align: center;\">5.06</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">3.15</td>\n      <td style=\"text-align: center;\"><strong>2.71</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">SpeechIO</td>\n      <td style=\"text-align: center;\">12.86</td>\n      <td style=\"text-align: center;\">5.30</td>\n      <td style=\"text-align: center;\">2.93</td>\n      <td style=\"text-align: center;\">7.56</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">3.44</td>\n      <td style=\"text-align: center;\"><strong>2.88</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">Fleurs-zh</td>\n      <td style=\"text-align: center;\">2.44</td>\n      <td style=\"text-align: center;\">2.71</td>\n      <td style=\"text-align: center;\">2.69</td>\n      <td style=\"text-align: center;\">4.09</td>\n      <td style=\"text-align: center;\">3.51</td>\n      <td style=\"text-align: center;\">2.88</td>\n      <td style=\"text-align: center;\"><strong>2.41</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">CV-zh</td>\n      <td style=\"text-align: center;\">6.32</td>\n      <td style=\"text-align: center;\">7.70</td>\n      <td style=\"text-align: center;\">5.95</td>\n      <td style=\"text-align: center;\">12.91</td>\n      <td style=\"text-align: center;\">6.20</td>\n      <td style=\"text-align: center;\">6.89</td>\n      <td style=\"text-align: center;\"><strong>5.35</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"9\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Chinese Dialect</td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">KeSpeech</td>\n      <td style=\"text-align: center;\">26.87</td>\n      <td style=\"text-align: center;\">24.71</td>\n      <td style=\"text-align: center;\">5.27</td>\n      <td style=\"text-align: center;\">28.79</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">7.08</td>\n      <td style=\"text-align: center;\"><strong>5.10</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">Fleurs-yue</td>\n      <td style=\"text-align: center;\">4.98</td>\n      <td style=\"text-align: center;\">9.43</td>\n      <td style=\"text-align: center;\">4.98</td>\n      <td style=\"text-align: center;\">9.18</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">5.79</td>\n      <td style=\"text-align: center;\"><strong>3.98</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">CV-yue</td>\n      <td style=\"text-align: center;\">11.36</td>\n      <td style=\"text-align: center;\">18.76</td>\n      <td style=\"text-align: center;\">13.20</td>\n      <td style=\"text-align: center;\">16.23</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">9.50</td>\n      <td style=\"text-align: center;\"><strong>7.57</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">CV-zh-tw</td>\n      <td style=\"text-align: center;\">6.32</td>\n      <td style=\"text-align: center;\">7.31</td>\n      <td style=\"text-align: center;\">4.06</td>\n      <td style=\"text-align: center;\">7.84</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">5.59</td>\n      <td style=\"text-align: center;\"><strong>3.77</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">WenetSpeech-Yue<br>short | long</td>\n      <td style=\"text-align: center;\">15.62 | 25.29</td>\n      <td style=\"text-align: center;\">25.19 | 11.23</td>\n      <td style=\"text-align: center;\">9.74 | 11.40</td>\n      <td style=\"text-align: center;\">32.26 | 46.64</td>\n      <td style=\"text-align: center;\">- | -</td>\n      <td style=\"text-align: center;\">7.54 | 9.92</td>\n      <td style=\"text-align: center;\"><strong>5.82</strong> | <strong>8.85</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\" style=\"text-align: left;\">WenetSpeech-Chuan<br>easy | hard</td>\n      <td style=\"text-align: center;\">34.81 | 53.98</td>\n      <td style=\"text-align: center;\">43.79 | 67.30</td>\n      <td style=\"text-align: center;\"><strong>11.40<strong> | <strong>20.20</strong></td>\n      <td style=\"text-align: center;\">14.35 | 26.80</td>\n      <td style=\"text-align: center;\">- | -</td>\n      <td style=\"text-align: center;\">13.92 | 24.45</td>\n      <td style=\"text-align: center;\">11.99 | 21.63</td>\n    </tr>\n  </tbody>\n</table>\n\n</details>\n\n<details>\n<summary>ASR Benchmarks on Internal Datasets (WER ↓)</summary>\n\n<table>\n  <thead>\n    <tr>\n      <th style=\"text-align: left;\"></th>\n      <th style=\"text-align: center;\">GPT-4o<br>-Transcribe</th>\n      <th style=\"text-align: center;\">Gemini-2.5<br>-Pro</th>\n      <th style=\"text-align: center;\">Doubao-ASR</th>\n      <th style=\"text-align: center;\">Whisper<br>-large-v3</th>\n      <th style=\"text-align: center;\">Fun-ASR<br>-MLT-Nano</th>\n      <th style=\"text-align: center;\">Qwen3-ASR<br>-0.6B</th>\n      <th style=\"text-align: center;\">Qwen3-ASR<br>-1.7B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td colspan=\"8\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Accented English</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Dialog-Accented English</td>\n      <td style=\"text-align: center;\">28.56</td>\n      <td style=\"text-align: center;\">23.85</td>\n      <td style=\"text-align: center;\">20.41</td>\n      <td style=\"text-align: center;\">21.30</td>\n      <td style=\"text-align: center;\">19.96</td>\n      <td style=\"text-align: center;\"><strong>16.62<strong></td>\n      <td style=\"text-align: center;\"><strong>16.07</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"8\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Chinese Mandarin</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Elders&Kids</td>\n      <td style=\"text-align: center;\">14.27</td>\n      <td style=\"text-align: center;\">36.93</td>\n      <td style=\"text-align: center;\">4.17</td>\n      <td style=\"text-align: center;\">10.61</td>\n      <td style=\"text-align: center;\">4.54</td>\n      <td style=\"text-align: center;\">4.48</td>\n      <td style=\"text-align: center;\"><strong>3.81</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">ExtremeNoise</td>\n      <td style=\"text-align: center;\">36.11</td>\n      <td style=\"text-align: center;\">29.06</td>\n      <td style=\"text-align: center;\">17.04</td>\n      <td style=\"text-align: center;\">63.17</td>\n      <td style=\"text-align: center;\">36.55</td>\n      <td style=\"text-align: center;\">17.88</td>\n      <td style=\"text-align: center;\"><strong>16.17</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">TongueTwister</td>\n      <td style=\"text-align: center;\">20.87</td>\n      <td style=\"text-align: center;\">4.97</td>\n      <td style=\"text-align: center;\">3.47</td>\n      <td style=\"text-align: center;\">16.63</td>\n      <td style=\"text-align: center;\">9.02</td>\n      <td style=\"text-align: center;\">4.06</td>\n      <td style=\"text-align: center;\"><strong>2.44</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Dialog-Mandarin</td>\n      <td style=\"text-align: center;\">20.73</td>\n      <td style=\"text-align: center;\">12.50</td>\n      <td style=\"text-align: center;\">6.61</td>\n      <td style=\"text-align: center;\">14.01</td>\n      <td style=\"text-align: center;\">7.32</td>\n      <td style=\"text-align: center;\">7.06</td>\n      <td style=\"text-align: center;\"><strong>6.54</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"8\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Chinese Dialect</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Dialog-Cantonese</td>\n      <td style=\"text-align: center;\">16.05</td>\n      <td style=\"text-align: center;\">14.98</td>\n      <td style=\"text-align: center;\">7.56</td>\n      <td style=\"text-align: center;\">31.04</td>\n      <td style=\"text-align: center;\">5.85</td>\n      <td style=\"text-align: center;\"><strong>4.80<strong></td>\n      <td style=\"text-align: center;\"><strong>4.12</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Dialog-Chinese Dialects</td>\n      <td style=\"text-align: center;\">45.37</td>\n      <td style=\"text-align: center;\">47.70</td>\n      <td style=\"text-align: center;\">19.85</td>\n      <td style=\"text-align: center;\">44.55</td>\n      <td style=\"text-align: center;\">19.41</td>\n      <td style=\"text-align: center;\"><strong>18.24<strong></td>\n      <td style=\"text-align: center;\"><strong>15.94</strong></td>\n    </tr>\n  </tbody>\n</table>\n<p><strong>Dialect coverage:</strong> Results for <em>Dialog-Accented English</em> are averaged over 16 accents, and results for <em>Dialog-Chinese Dialects</em> are averaged over 22 Chinese dialects.</p>\n\n</details>\n\n<details>\n<summary>Multilingual ASR Benchmarks (WER ↓)</summary>\n\n<table>\n  <thead>\n    <tr>\n      <th style=\"text-align: left;\"></th>\n      <th style=\"text-align: center;\">GLM-ASR<br>-Nano-2512</th>\n      <th style=\"text-align: center;\">Whisper<br>-large-v3</th>\n      <th style=\"text-align: center;\">Fun-ASR<br>-MLT-Nano</th>\n      <th style=\"text-align: center;\">Qwen3-ASR<br>-0.6B</th>\n      <th style=\"text-align: center;\">Qwen3-ASR<br>-1.7B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td colspan=\"6\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Open-sourced Benchmarks</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">MLS</td>\n      <td style=\"text-align: center;\">13.32</td>\n      <td style=\"text-align: center;\">8.62</td>\n      <td style=\"text-align: center;\">28.70</td>\n      <td style=\"text-align: center;\">13.19</td>\n      <td style=\"text-align: center;\"><strong>8.55</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">CommonVoice</td>\n      <td style=\"text-align: center;\">19.40</td>\n      <td style=\"text-align: center;\">10.77</td>\n      <td style=\"text-align: center;\">17.25</td>\n      <td style=\"text-align: center;\">12.75</td>\n      <td style=\"text-align: center;\"><strong>9.18</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">MLC-SLM</td>\n      <td style=\"text-align: center;\">34.93</td>\n      <td style=\"text-align: center;\">15.68</td>\n      <td style=\"text-align: center;\">29.94</td>\n      <td style=\"text-align: center;\">15.84</td>\n      <td style=\"text-align: center;\"><strong>12.74</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Fleurs</td>\n      <td style=\"text-align: center;\">16.08</td>\n      <td style=\"text-align: center;\">5.27</td>\n      <td style=\"text-align: center;\">10.03</td>\n      <td style=\"text-align: center;\">7.57</td>\n      <td style=\"text-align: center;\"><strong>4.90</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Fleurs<sup>†</sup></td>\n      <td style=\"text-align: center;\">20.05</td>\n      <td style=\"text-align: center;\">6.85</td>\n      <td style=\"text-align: center;\">31.89</td>\n      <td style=\"text-align: center;\">10.37</td>\n      <td style=\"text-align: center;\"><strong>6.62</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Fleurs<sup>††</sup></td>\n      <td style=\"text-align: center;\">24.83</td>\n      <td style=\"text-align: center;\"><strong>8.16</strong></td>\n      <td style=\"text-align: center;\">47.84</td>\n      <td style=\"text-align: center;\">21.80</td>\n      <td style=\"text-align: center;\">12.60</td>\n    </tr>\n    <tr>\n      <td colspan=\"6\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Qwen-ASR Internal Benchmarks</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">News-Multilingual</td>\n      <td style=\"text-align: center;\">49.40</td>\n      <td style=\"text-align: center;\">14.80</td>\n      <td style=\"text-align: center;\">65.07</td>\n      <td style=\"text-align: center;\">17.39</td>\n      <td style=\"text-align: center;\"><strong>12.80</strong></td>\n    </tr>\n  </tbody>\n</table>\n<p><strong>Language coverage:</strong> <em>MLS</em> includes 8 languages: {da, de, en, es, fr, it, pl, pt}.<br><em>CommonVoice</em> includes 13 languages: {en, zh, yue, zh_TW, ar, de, es, fr, it, ja, ko, pt, ru}.<br><em>MLC-SLM</em> includes 11 languages: {en, fr, de, it, pt, es, ja, ko, ru, th, vi}.<br><em>Fleurs</em> includes 12 languages: {en, zh, yue, ar, de, es, fr, it, ja, ko, pt, ru }.<br><em>Fleurs<sup>†</sup></em> includes 8 additional languages beyond Fleurs: {hi, id, ms, nl, pl, th, tr, vi}.<br><em>Fleurs<sup>††</sup></em> includes 10 additional languages beyond Fleurs<sup>†</sup>: {cs, da, el, fa, fi, fil, hu, mk, ro, sv}.<br><em>News-Multilingual</em> includes 15 languages: {ar, de, es, fr, hi, id, it, ja, ko, nl, pl, pt, ru, th, vi}.</p>\n\n</details>\n\n<details>\n<summary>Language Identification Accuracy (%) ↑</summary>\n\n<table>\n  <thead>\n    <tr>\n      <th style=\"text-align: left;\"></th>\n      <th style=\"text-align: center;\">Whisper-large-v3</th>\n      <th style=\"text-align: center;\">Qwen3-ASR-0.6B</th>\n      <th style=\"text-align: center;\">Qwen3-ASR-1.7B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"text-align: left;\">MLS</td>\n      <td style=\"text-align: center;\"><strong>99.9</strong></td>\n      <td style=\"text-align: center;\">99.3</td>\n      <td style=\"text-align: center;\"><strong>99.9</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">CommonVoice</td>\n      <td style=\"text-align: center;\">92.7</td>\n      <td style=\"text-align: center;\"><strong>98.2<strong></td>\n      <td style=\"text-align: center;\"><strong>98.7</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">MLC-SLM</td>\n      <td style=\"text-align: center;\">89.2</td>\n      <td style=\"text-align: center;\"><strong>92.7<strong></td>\n      <td style=\"text-align: center;\"><strong>94.1</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Fleurs</td>\n      <td style=\"text-align: center;\">94.6</td>\n      <td style=\"text-align: center;\"><strong>97.1<strong></td>\n      <td style=\"text-align: center;\"><strong>98.7</strong></td>\n    </tr>\n    <tr style=\"border-top: 1px solid #ddd;\">\n      <td style=\"text-align: left;\"><em>Avg.</em></td>\n      <td style=\"text-align: center;\">94.1</td>\n      <td style=\"text-align: center;\"><strong>96.8<strong></td>\n      <td style=\"text-align: center;\"><strong>97.9</strong></td>\n    </tr>\n  </tbody>\n</table>\n<p><strong>Language coverage:</strong> The language sets follow Multilingual ASR Benchmarks. Here, Fleurs corresponds to Fleurs<sup>††</sup> in Multilingual ASR Benchmarks and covers 30 languages.</p>\n\n</details>\n\n<details>\n<summary>Singing Voice & Song Transcription (WER ↓)</summary>\n\n<table>\n  <thead>\n    <tr>\n      <th style=\"text-align: left;\"></th>\n      <th style=\"text-align: center;\">GPT-4o<br>-Transcribe</th>\n      <th style=\"text-align: center;\">Gemini-2.5<br>-Pro</th>\n      <th style=\"text-align: center;\">Doubao-ASR<br>-1.0</th>\n      <th style=\"text-align: center;\">Whisper<br>-large-v3</th>\n      <th style=\"text-align: center;\">Fun-ASR-MLT<br>-Nano</th>\n      <th style=\"text-align: center;\">Qwen3-ASR<br>-1.7B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td colspan=\"7\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Singing</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">M4Singer</td>\n      <td style=\"text-align: center;\">16.77</td>\n      <td style=\"text-align: center;\">20.88</td>\n      <td style=\"text-align: center;\">7.88</td>\n      <td style=\"text-align: center;\">13.58</td>\n      <td style=\"text-align: center;\">7.29</td>\n      <td style=\"text-align: center;\"><strong>5.98</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">MIR-1k-vocal</td>\n      <td style=\"text-align: center;\">11.87</td>\n      <td style=\"text-align: center;\">9.85</td>\n      <td style=\"text-align: center;\">6.56</td>\n      <td style=\"text-align: center;\">11.71</td>\n      <td style=\"text-align: center;\">8.17</td>\n      <td style=\"text-align: center;\"><strong>6.25</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Opencpop</td>\n      <td style=\"text-align: center;\">7.93</td>\n      <td style=\"text-align: center;\">6.49</td>\n      <td style=\"text-align: center;\">3.80</td>\n      <td style=\"text-align: center;\">9.52</td>\n      <td style=\"text-align: center;\"><strong>2.98</strong></td>\n      <td style=\"text-align: center;\">3.08</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Popcs</td>\n      <td style=\"text-align: center;\">32.84</td>\n      <td style=\"text-align: center;\">15.13</td>\n      <td style=\"text-align: center;\">8.97</td>\n      <td style=\"text-align: center;\">13.77</td>\n      <td style=\"text-align: center;\">9.42</td>\n      <td style=\"text-align: center;\"><strong>8.52</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"7\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Songs with BGM</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">EntireSongs-en</td>\n      <td style=\"text-align: center;\">30.71</td>\n      <td style=\"text-align: center;\"><strong>12.18</strong></td>\n      <td style=\"text-align: center;\">33.51</td>\n      <td style=\"text-align: center;\">N/A</td>\n      <td style=\"text-align: center;\">N/A</td>\n      <td style=\"text-align: center;\">14.60</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">EntireSongs-zh</td>\n      <td style=\"text-align: center;\">34.86</td>\n      <td style=\"text-align: center;\">18.68</td>\n      <td style=\"text-align: center;\">23.99</td>\n      <td style=\"text-align: center;\">N/A</td>\n      <td style=\"text-align: center;\">N/A</td>\n      <td style=\"text-align: center;\"><strong>13.91</strong></td>\n    </tr>\n  </tbody>\n</table>\n\n</details>\n\n<details>\n<summary>ASR Inference Mode Performance (WER ↓)</summary>\n\n<table>\n  <thead>\n    <tr>\n      <th style=\"text-align: left;\">Model</th>\n      <th style=\"text-align: left;\">Infer. Mode</th>\n      <th style=\"text-align: center;\">Librispeech</th>\n      <th style=\"text-align: center;\">Fleurs-en</th>\n      <th style=\"text-align: center;\">Fleurs-zh</th>\n      <th style=\"text-align: center;\">Avg.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td rowspan=\"2\" style=\"text-align: left; vertical-align: middle;\">Qwen3-ASR-1.7B</td>\n      <td style=\"text-align: left;\">Offline</td>\n      <td style=\"text-align: center;\">1.63 | 3.38</td>\n      <td style=\"text-align: center;\">3.35</td>\n      <td style=\"text-align: center;\">2.41</td>\n      <td style=\"text-align: center;\">2.69</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Streaming</td>\n      <td style=\"text-align: center;\">1.95 | 4.51</td>\n      <td style=\"text-align: center;\">4.02</td>\n      <td style=\"text-align: center;\">2.84</td>\n      <td style=\"text-align: center;\">3.33</td>\n    </tr>\n    <tr style=\"border-top: 1px solid #ddd;\">\n      <td rowspan=\"2\" style=\"text-align: left; vertical-align: middle;\">Qwen3-ASR-0.6B</td>\n      <td style=\"text-align: left;\">Offline</td>\n      <td style=\"text-align: center;\">2.11 | 4.55</td>\n      <td style=\"text-align: center;\">4.39</td>\n      <td style=\"text-align: center;\">2.88</td>\n      <td style=\"text-align: center;\">3.48</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Streaming</td>\n      <td style=\"text-align: center;\">2.54 | 6.27</td>\n      <td style=\"text-align: center;\">5.38</td>\n      <td style=\"text-align: center;\">3.40</td>\n      <td style=\"text-align: center;\">4.40</td>\n    </tr>\n  </tbody>\n</table>\n\n</details>\n\n<details>\n<summary>Forced Alignment Benchmarks (AAS ms ↓)</summary>\n\n<table>\n  <thead>\n    <tr>\n      <th style=\"text-align: left;\"></th>\n      <th style=\"text-align: center;\">Monotonic-Aligner</th>\n      <th style=\"text-align: center;\">NFA</th>\n      <th style=\"text-align: center;\">WhisperX</th>\n      <th style=\"text-align: center;\">Qwen3-ForcedAligner-0.6B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td colspan=\"5\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">MFA-Labeled Raw</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Chinese</td>\n      <td style=\"text-align: center;\">161.1</td>\n      <td style=\"text-align: center;\">109.8</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>33.1</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">English</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">107.5</td>\n      <td style=\"text-align: center;\">92.1</td>\n      <td style=\"text-align: center;\"><strong>37.5</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">French</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">100.7</td>\n      <td style=\"text-align: center;\">145.3</td>\n      <td style=\"text-align: center;\"><strong>41.7</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">German</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">122.7</td>\n      <td style=\"text-align: center;\">165.1</td>\n      <td style=\"text-align: center;\"><strong>46.5</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Italian</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">142.7</td>\n      <td style=\"text-align: center;\">155.5</td>\n      <td style=\"text-align: center;\"><strong>75.5</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Japanese</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>42.2</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Korean</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>37.2</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Portuguese</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>38.4</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Russian</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">200.7</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>40.2</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Spanish</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">124.7</td>\n      <td style=\"text-align: center;\">108.0</td>\n      <td style=\"text-align: center;\"><strong>36.8</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\"><em>Avg.</em></td>\n      <td style=\"text-align: center;\">161.1</td>\n      <td style=\"text-align: center;\">129.8</td>\n      <td style=\"text-align: center;\">133.2</td>\n      <td style=\"text-align: center;\"><strong>42.9</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"5\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">MFA-Labeled Concat-300s</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Chinese</td>\n      <td style=\"text-align: center;\">1742.4</td>\n      <td style=\"text-align: center;\">235.0</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>36.5</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">English</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">226.7</td>\n      <td style=\"text-align: center;\">227.2</td>\n      <td style=\"text-align: center;\"><strong>58.6</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">French</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">230.6</td>\n      <td style=\"text-align: center;\">2052.2</td>\n      <td style=\"text-align: center;\"><strong>53.4</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">German</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">220.3</td>\n      <td style=\"text-align: center;\">993.4</td>\n      <td style=\"text-align: center;\"><strong>62.4</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Italian</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">290.5</td>\n      <td style=\"text-align: center;\">5719.4</td>\n      <td style=\"text-align: center;\"><strong>81.6</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Japanese</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>81.3</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Korean</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>42.2</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Portuguese</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>50.0</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Russian</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">283.3</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>43.0</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Spanish</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">240.2</td>\n      <td style=\"text-align: center;\">4549.9</td>\n      <td style=\"text-align: center;\"><strong>39.6</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Cross-lingual</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>34.2</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\"><em>Avg.</em></td>\n      <td style=\"text-align: center;\">1742.4</td>\n      <td style=\"text-align: center;\">246.7</td>\n      <td style=\"text-align: center;\">2708.4</td>\n      <td style=\"text-align: center;\"><strong>52.9</strong></td>\n    </tr>\n    <tr>\n      <td colspan=\"5\" style=\"text-align: left; font-style: italic; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;\">Human-Labeled</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Raw</td>\n      <td style=\"text-align: center;\">49.9</td>\n      <td style=\"text-align: center;\">88.6</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>27.8</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Raw-Noisy</td>\n      <td style=\"text-align: center;\">53.3</td>\n      <td style=\"text-align: center;\">89.5</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>41.8</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Concat-60s</td>\n      <td style=\"text-align: center;\">51.1</td>\n      <td style=\"text-align: center;\">86.7</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>25.3</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Concat-300s</td>\n      <td style=\"text-align: center;\">410.8</td>\n      <td style=\"text-align: center;\">140.0</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>24.8</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\">Concat-Cross-lingual</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>42.5</strong></td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left;\"><em>Avg.</em></td>\n      <td style=\"text-align: center;\">141.3</td>\n      <td style=\"text-align: center;\">101.2</td>\n      <td style=\"text-align: center;\">-</td>\n      <td style=\"text-align: center;\"><strong>32.4</strong></td>\n    </tr>\n  </tbody>\n</table>\n\n</details>\n\n\n## Citation\n\nIf you find our paper and code useful in your research, please consider giving a star :star: and citation :pencil: :)\n\n```BibTeX\n@article{Qwen3-ASR,\n  title={Qwen3-ASR Technical Report},\n  author={Xian Shi, Xiong Wang, Zhifang Guo, Yongqi Wang, Pei Zhang, Xinyu Zhang, Zishan Guo, Hongkun Hao, Yu Xi, Baosong Yang, Jin Xu, Jingren Zhou, Junyang Lin},\n  journal={arXiv preprint arXiv:2601.21337},\n  year={2026}\n}\n```\n\n\n<br>",
+      "url": "https://huggingface.co/bhushan1729/orpheus-3b-stage3-tagged-checkpoint-296",
+      "card_text": "---\nlanguage:\n- hi\nlicense: apache-2.0\nbase_model: unsloth/orpheus-3b-0.1-ft\ntags:\n- text-to-speech\n- tts\n- hindi\n- unsloth\n- llama\n- audio\n- voice-cloning\npipeline_tag: text-to-speech\nlibrary_name: peft\n---\n\n# 🎙️ Orpheus 3B Hindi TTS (`orpheus-3b-tts-hindi`)\n\nBuilt upon Canopy Labs' [Orpheus-TTS](https://github.com/canopyai/Orpheus-TTS) architecture and fine-tuned using Unsloth's optimized Llama engine [`unsloth/orpheus-3b-0.1-ft`](https://huggingface.co/unsloth/orpheus-3b-0.1-ft), **Orpheus 3B Hindi TTS** (`orpheus-3b-tts-hindi`) is a 3-stage fine-tuned model adapting autoregressive audio LLMs to high-fidelity, emotionally expressive Hindi speech synthesis.\n\n---\n\n## 🔗 Base Model & Dataset Links\n\n- **Base Model**: [`unsloth/orpheus-3b-0.1-ft`](https://huggingface.co/unsloth/orpheus-3b-0.1-ft)\n- **Multi-Source Training Datasets**:\n  - **Rasa (AI4Bharat)**: [`ai4bharat/Rasa`](https://huggingface.co/datasets/ai4bharat/Rasa) (10,250 samples / ~18.6 hrs)\n  - **Kathbath**: [`ai4bharat/kathbath`](https://huggingface.co/datasets/ai4bharat/kathbath) (9,000 samples / ~12.1 hrs)\n  - **Hinglish Corpus**: (12,144 samples / ~22.1 hrs)\n\n---\n\n## 🌟 Highlights & Key Features\n\n- **Unified Autoregressive Generation**: Predicts text and 24 kHz SNAC audio tokens within a single causal Llama 3B model.\n- **3-Stage Fine-Tuning Pipeline**:\n  - **Stage 1 (Pronunciation SFT)**: Teaches Devanagari script reading & phonetic stability.\n  - **Stage 2 (Speaker ID Conditioning)**: Eliminates voice identity drift using `[Speaker: Name]` tags (**Prakhar** & **Prerna**).\n  - **Stage 3 (Dual-Tag Emotion SFT)**: Injects 7 distinct emotional tones (`[Speaker: Name] [Tone: Emotion]`).\n- **Zero-OOM Validation Engine**: Custom lightweight callbacks (`CustomEvalCallback` + `ForceEvalCallback`) providing exact validation loss monitoring under 6 GB VRAM.\n\n---\n\n## 📊 Performance Metrics\n\n| Metric / Evaluation | Value / Score | Details |\n|---|---|---|\n| **Word Error Rate (WER)** | **0.3090** | **↓ 66.6%** cumulative reduction from baseline |\n| **Character Error Rate (CER)** | **0.1540** | **↓ 82.4%** cumulative reduction from baseline |\n| **Intra-Speaker Cosine Similarity** | **0.70** | High voice identity match across prompts (`speechbrain` ECAPA-TDNN) |\n| **Inter-Speaker Separation** | **0.31** | Distinct separation between male (\"Prakhar\") & female (\"Prerna\") voices |\n\n---\n\n## 🗣️ Supported Speakers & Emotions\n\n### 1. Supported Speakers\n- `Prakhar` (Male)\n- `Prerna` (Female)\n\n### 2. Supported Emotions (Stage 3)\n- 😡 `ANGER`: Fast, sharp delivery\n- 😲 `SURPRISE`: Elevated pitch and varied tempo\n- 😢 `SAD`: Slower, breathy speech patterns\n- 😄 `HAPPY`: High energy and rhythmic variance\n- 😐 `NEUTRAL`: Standard textbook delivery\n- 😨 `FEAR`: Rapid, irregular pacing\n- 🤢 `DISGUST`: Distinctive phonetic emphasis\n\n---\n\n## ⚡ Inference Setup\n\n### 1. Install Dependencies\n```bash\npip install unsloth torch torchaudio transformers peft snac\n```\n\n### 2. Python Inference Code\n```python\nfrom inference.synthesize import load_inference_pipeline, synthesize_speech\nfrom IPython.display import Audio, display\n\n# 1. Load pipeline directly from Hugging Face\nmodel, tokenizer, snac_model, device = load_inference_pipeline(\n    checkpoint_dir=\"CoriolisTechnologies/orpheus-3b-tts-hindi\"\n)\n\n# 2. Synthesize audio with speaker and emotion tags\ntext_input = \"इस कूरियर सर्विस की गुणवत्ता बहुत बेहतरीन है!\"\naudio_path = synthesize_speech(\n    text=text_input,\n    model=model,\n    tokenizer=tokenizer,\n    snac_model=snac_model,\n    device=device,\n    output_path=\"output_synthesized.wav\",\n    speaker=\"Prakhar\", # Prakhar | Prerna\n    emotion=\"HAPPY\"   # ANGER | SURPRISE | SAD | HAPPY | NEUTRAL | FEAR | DISGUST\n)\n\n# 3. Play generated 24 kHz WAV audio\ndisplay(Audio(audio_path, autoplay=True))\n```\n\n---\n\n## 💻 Source Code Repository\n\nFull code, training scripts, preprocessing tools, and technical documentation:\n👉 **[GitHub Repository: coriolis/orpheus-3b-tts-hindi](https://github.com/coriolis/orpheus-3b-tts-hindi)**\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "unsloth/orpheus-3b-0.1-ft"
+      ],
+      "variants": [],
+      "score": 26,
+      "topic_scores": {
+        "audio_language_models": 7,
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "Audio & Speech Language Models: audio llm",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "dots-studio/dots.tts-mf-2steps-stts",
+      "author": "dots-studio",
+      "created_at": "2026-08-10",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dots_tts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "audio",
+        "speech-synthesis",
+        "voice-cloning",
+        "streaming-tts",
+        "double-streaming",
+        "autoregressive",
+        "meanflow",
+        "two-step",
+        "arxiv:2606.07080",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "dots_tts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/dots-studio/dots.tts-mf-2steps-stts",
+      "card_text": "---\nlicense: apache-2.0\npipeline_tag: text-to-speech\nlibrary_name: dots_tts\ntags:\n  - text-to-speech\n  - tts\n  - audio\n  - speech-synthesis\n  - voice-cloning\n  - streaming-tts\n  - double-streaming\n  - autoregressive\n  - meanflow\n  - two-step\n---\n\n# dots.tts-mf-2steps-stts\n\n<p align=\"left\">\n  <a href=\"https://github.com/studio-dots-ai/dots.tts\"><img src=\"https://img.shields.io/badge/GitHub-studio--dots--ai%2Fdots.tts-blue?logo=github\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/spaces/dots-studio/dots.tts\"><img src=\"https://img.shields.io/badge/Playground-Live-orange\" alt=\"Playground\"></a>\n  <a href=\"https://studio-dots-ai.github.io/dots.tts-demo/\"><img src=\"https://img.shields.io/badge/Demo%20Page-Live-red\" alt=\"Demo Page\"></a>\n</p>\n\nThis repository provides a standalone dots.tts artifact for **fixed two-step double-streaming TTS inference**.\nThe sampling and streaming contracts are stored in `config.json` and selected automatically.\nSampling and streaming cadence options should be omitted.\n\n## Quick start\n\n```python\nimport torch\nimport soundfile as sf\n\nfrom dots_tts.runtime_double_streaming import DotsTtsRuntimeDoubleStreaming\n\nruntime = DotsTtsRuntimeDoubleStreaming.from_pretrained(\n    \"dots-studio/dots.tts-mf-2steps-stts\",\n    precision=\"bfloat16\",\n    optimize=True,\n    max_generate_length=500,\n)\n\ntext = \"Hello from two-step double streaming.\"\ntext_token_ids = runtime.model.tokenizer.encode(text, add_special_tokens=False)\n\nsession = runtime.start_double_streaming(\n    prompt_audio_path=\"/path/to/reference.wav\",\n    prompt_text=\"The exact transcript spoken in the reference audio.\",\n)\n\nchunks = []\nfor token_id in text_token_ids:\n    chunk = session.push_text_token(token_id)\n    if chunk is not None:\n        chunks.append(chunk.detach().cpu())\n\nfor chunk in session.finish_text():\n    chunks.append(chunk.detach().cpu())\n\naudio = torch.cat(chunks, dim=-1).float().squeeze().numpy()\nsf.write(\"double_streaming.wav\", audio, runtime.sample_rate)\n```\n\nFor a complete command-line example, see\n[`scripts/example_double_streaming.py`](https://github.com/studio-dots-ai/dots.tts/blob/main/scripts/example_double_streaming.py).\n\nPassing incompatible sampling values raises an error. Streaming cadence is selected from the artifact configuration.\n\n## Scope and limitations\n\nThis model is intended for fixed two-step double-streaming inference. Other sampling or streaming settings are not claimed.\nHigh-fidelity voice cloning must be used only with authorization and consent; do not use it\nfor impersonation, fraud, or disinformation.\n\n---\n\n## Citation\n\n```bibtex\n@article{dotstts2026,\n  title         = {dots.tts Technical Report},\n  author        = {dots.tts Team},\n  year          = {2026},\n  eprint        = {2606.07080},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.SD},\n}\n```\n\n## License\n\nReleased under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).\n",
       "arxiv_ids": [
-        "2601.21337"
+        "2606.07080"
       ],
       "datasets": [],
       "base_models": [],
       "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "dots-studio/dots.tts-mf-2steps",
+      "author": "dots-studio",
+      "created_at": "2026-08-10",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dots_tts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "audio",
+        "speech-synthesis",
+        "voice-cloning",
+        "autoregressive",
+        "meanflow",
+        "two-step",
+        "arxiv:2606.07080",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "dots_tts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/dots-studio/dots.tts-mf-2steps",
+      "card_text": "---\nlicense: apache-2.0\npipeline_tag: text-to-speech\nlibrary_name: dots_tts\ntags:\n  - text-to-speech\n  - tts\n  - audio\n  - speech-synthesis\n  - voice-cloning\n  - autoregressive\n  - meanflow\n  - two-step\n---\n\n# dots.tts-mf-2steps\n\n<p align=\"left\">\n  <a href=\"https://github.com/studio-dots-ai/dots.tts\"><img src=\"https://img.shields.io/badge/GitHub-studio--dots--ai%2Fdots.tts-blue?logo=github\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/spaces/dots-studio/dots.tts\"><img src=\"https://img.shields.io/badge/Playground-Live-orange\" alt=\"Playground\"></a>\n  <a href=\"https://studio-dots-ai.github.io/dots.tts-demo/\"><img src=\"https://img.shields.io/badge/Demo%20Page-Live-red\" alt=\"Demo Page\"></a>\n</p>\n\nThis repository provides a standalone dots.tts artifact for **fixed two-step inference**.\nThe sampling contract is stored in `config.json` and selected automatically.\nSampling options should be omitted.\n\n## Quick start\n\n```bash\ndots.tts \\\n  --model-name-or-path dots-studio/dots.tts-mf-2steps \\\n  --text \"Hello from two-step MeanFlow.\" \\\n  --output output.wav\n```\n\n```python\nfrom dots_tts.runtime import DotsTtsRuntime\n\nruntime = DotsTtsRuntime.from_pretrained(\n    \"dots-studio/dots.tts-mf-2steps\",\n    precision=\"bfloat16\",\n)\nresult = runtime.generate(text=\"Hello from two-step MeanFlow.\")\n```\n\nPassing incompatible sampling values raises an error.\n\n## Scope and limitations\n\nThis model is intended for fixed two-step inference. Other sampling settings are not claimed.\nHigh-fidelity voice cloning must be used only with authorization and consent; do not use it\nfor impersonation, fraud, or disinformation.\n\n---\n\n## Citation\n\n```bibtex\n@article{dotstts2026,\n  title         = {dots.tts Technical Report},\n  author        = {dots.tts Team},\n  year          = {2026},\n  eprint        = {2606.07080},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.SD},\n}\n```\n\n## License\n\nReleased under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).\n",
+      "arxiv_ids": [
+        "2606.07080"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "dots-studio/dots.tts-soar",
+      "author": "dots-studio",
+      "created_at": "2026-06-04",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dots_tts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "audio",
+        "speech-synthesis",
+        "voice-cloning",
+        "autoregressive",
+        "flow-matching",
+        "post-trained",
+        "base_model:dots-studio/dots.tts-base",
+        "base_model:finetune:dots-studio/dots.tts-base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1515,
+      "likes": 90,
+      "trending_score": 0.0,
+      "library_name": "dots_tts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/dots-studio/dots.tts-soar",
+      "card_text": "---\nlicense: apache-2.0\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - tts\n  - audio\n  - speech-synthesis\n  - voice-cloning\n  - autoregressive\n  - flow-matching\n  - post-trained\nlibrary_name: dots_tts\nbase_model: dots-studio/dots.tts-base\n---\n\n# dots.tts-soar\n\n<p align=\"left\">\n  <a href=\"https://github.com/studio-dots-ai/dots.tts\"><img src=\"https://img.shields.io/badge/GitHub-studio--dots--ai%2Fdots.tts-blue?logo=github\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/spaces/dots-studio/dots.tts\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Spaces-Playground-orange\" alt=\"Playground\"></a>\n  <a href=\"https://studio-dots-ai.github.io/dots.tts-demo/\"><img src=\"https://img.shields.io/badge/Demo%20Page-Live-red\" alt=\"Demo Page\"></a>\n</p>\n\n**dots.tts** is a **2B-parameter fully continuous, end-to-end autoregressive (AR) text-to-speech system**. The backbone pairs a semantic encoder, an LLM, and an autoregressive flow-matching acoustic head over a 48 kHz AudioVAE — no discrete codec tokens anywhere in the pipeline.\n\nThis repository hosts **`dots.tts-soar`** — the pretrained backbone further refined with **Self-corrective Alignment (SCA)**, a reward-free flow-matching-native post-training stage. SCA pushes the model to the **highest zero-shot fidelity and speaker similarity** of the three releases and is the **recommended default for production zero-shot voice cloning**.\n\n<table>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-base\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--base-yellow\" alt=\"dots.tts-base\"></a></td>\n    <td>Pretrain (~1.5M h). Fine-tuning, full CFG / NFE control.</td>\n  </tr>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-soar\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--soar-yellow\" alt=\"dots.tts-soar\"></a></td>\n    <td>← <em>you are here</em> — + Self-corrective Alignment. <strong>Highest zero-shot fidelity and speaker similarity</strong>; also recommended for fine-tuning.</td>\n  </tr>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-mf\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--mf-yellow\" alt=\"dots.tts-mf\"></a></td>\n    <td>+ MeanFlow distillation. Few-step inference (NFE = 4), low latency.</td>\n  </tr>\n</table>\n\n---\n\n## Quick Start\n\n### Installation\n\n```bash\nconda create -n dots_tts python=3.10 -y\nconda activate dots_tts\n\npython -m pip install --upgrade pip\npython -m pip install \"git+https://github.com/studio-dots-ai/dots.tts.git\" \\\n  -c \"https://raw.githubusercontent.com/studio-dots-ai/dots.tts/main/constraints/recommended.txt\"\n```\n\n### CLI\n\n```bash\n# Continuation voice cloning (reference audio + transcript) — recommended\ndots.tts \\\n  --model-name-or-path dots-studio/dots.tts-soar \\\n  --text \"Hello, this is a zero-shot voice cloning demonstration.\" \\\n  --prompt-audio /path/to/reference.wav \\\n  --prompt-text \"The exact transcript of the reference audio.\" \\\n  --output clone.wav\n```\n\n### Python API\n\n```python\nfrom dots_tts.runtime import DotsTtsRuntime\nimport soundfile as sf\n\nruntime = DotsTtsRuntime.from_pretrained(\n    \"dots-studio/dots.tts-soar\",\n    precision=\"bfloat16\",\n)\n\nresult = runtime.generate(\n    text=\"Hello, this is a quick speech synthesis test.\",\n    prompt_audio_path=\"/path/to/reference.wav\",\n    prompt_text=\"The exact transcript of the reference audio.\",\n    num_steps=10,\n    guidance_scale=1.2,\n)\n\nsf.write(\"output.wav\", result[\"audio\"].float().cpu().squeeze().numpy(), result[\"sample_rate\"])\n```\n\n### Recommended sampling settings\n\n| Flag | Recommended | Notes |\n|---|---:|---|\n| `--num-steps` | `10`–`32` | Flow-matching sampling steps; higher = better quality, slower |\n| `--guidance-scale` | `1.2` (default) | Standard CFG; SCA already tightens text and timbre adherence so small CFG suffices |\n\n### Fine-tuning\n\nBoth `dots.tts-base` and `dots.tts-soar` are valid fine-tuning starting points. Pick `dots.tts-soar` when you want to inherit its tightened text/timbre alignment on top of the pretrained backbone. See the [training script](https://github.com/studio-dots-ai/dots.tts/blob/main/scripts/train_dots_tts.py) and [smoke config](https://github.com/studio-dots-ai/dots.tts/blob/main/configs/dots_tts.yaml) in the source repository:\n\n```bash\naccelerate launch scripts/train_dots_tts.py --config configs/dots_tts.yaml\n```\n\n---\n\n## Architecture\n\nA frozen **AudioVAE** encodes 48 kHz mono waveform into a continuous latent and decodes it back via a BigVGAN-style causal decoder. An **autoregressive backbone** predicts that latent one patch at a time:\n\n- **Semantic encoder** — re-encodes each newly generated VAE patch into a compact embedding for the LLM, stripping high-variance acoustic detail.\n- **LLM** — initialized from **Qwen2.5-1.5B-Base**, consumes BPE text directly (no phonemes), emits one hidden state per audio step.\n- **AR flow-matching head** — a DiT that conditions on the LLM hidden state and the AR prefix to denoise the next VAE patch, with a frozen CAM++ speaker x-vector as side input.\n\n**Self-corrective Alignment** is a reward-free, flow-matching-native post-training stage applied on top of `dots.tts-base`. It improves text and speaker adherence without changing inference cost or sampling schedule.\n\n---\n\n## Performance — `dots.tts-soar`\n\n### Seed-TTS-Eval — **state-of-the-art average SIM (79.2)**\n\n| Model | Params | test-en WER↓ / SIM↑ | test-zh WER↓ / SIM↑ | test-zh-hard WER↓ / SIM↑ | **Avg WER↓ / SIM↑** |\n|---|---:|:---:|:---:|:---:|:---:|\n| Seed-TTS | — | 2.25 / 76.2 | 1.12 / 79.6 | 7.59 / 77.6 | 3.65 / 77.8 |\n| Qwen3-TTS | 1.7B | **1.23** / 71.7 | 1.22 / 77.0 | 6.76 / 74.8 | 3.07 / 74.5 |\n| VoxCPM 2 | 2B | 1.84 / 75.3 | 0.97 / 79.5 | 8.13 / 75.3 | 3.65 / 76.7 |\n| dots.tts-base | 2B | 1.34 / 76.8 | 0.96 / 80.5 | **6.46** / 79.2 | **2.92** / 78.8 |\n| **dots.tts-soar** | **2B** | 1.30 / **77.1** | **0.94** / **81.0** | 6.60 / **79.5** | 2.95 / **79.2** |\n\n### MiniMax Multilingual — **highest average SIM (83.9) across 24 languages**\n\n| Model | Avg WER↓ | Avg SIM↑ |\n|---|:---:|:---:|\n| MiniMax | **2.8** | 76.6 |\n| Fish-Audio S2 | 3.7 | 78.0 |\n| VoxCPM 2 | 5.7 | 82.3 |\n| dots.tts-base | 6.6 | 83.5 |\n| **dots.tts-soar** | 6.8 | **83.9** |\n\n### CV3-Eval — **leads both cross-lingual SIM subsets**\n\n| Model | en→zh SIM↑ | zh→en SIM↑ |\n|---|:---:|:---:|\n| CosyVoice 3 (1.5B) | 66.9 | 66.4 |\n| dots.tts-base | 74.6 | 71.9 |\n| **dots.tts-soar** | **75.0** | **72.8** |\n\n### EmergentTTS-Eval — **top Syntactic Complexity in the table (65.7%)**\n\nOn head-to-head judging vs. `gpt-4o-mini-tts`, `dots.tts-soar` posts **65.7% on Syntactic Complexity — above every closed-source system listed**, while keeping competitive Emotions / Questions scores.\n\nSee the [project README](https://github.com/studio-dots-ai/dots.tts#-performance) for full benchmark tables.\n\n---\n\n## Risks and Limitations\n\n- **Misuse risk.** High-fidelity zero-shot voice cloning can produce highly realistic synthetic speech. This checkpoint is intended for research and authorized deployment. Do **not** use it for impersonation, fraud, or disinformation. Combine downstream use with consent-aware reference-audio policies, robust synthetic-speech detection, and content watermarking. Clearly mark AI-generated audio.\n- **Low-resource WER gap.** A BPE backbone inherits the text LLM's language coverage at the cost of a higher data appetite. On script-divergent and under-represented languages (Arabic, Hindi, Turkish, Vietnamese) WER is higher than on high-resource languages; speaker similarity is preserved.\n- **Speech-heavy training.** The backbone is trained on a speech-heavy mixture. Singing and unified speech + sound generation are not covered.\n\n---\n\n## Citation\n\n```bibtex\n@article{dotstts2026,\n  title   = {dots.tts Technical Report},\n  author  = {dots.tts Team},\n  journal = {arXiv preprint},\n  year    = {2026},\n}\n```\n\n## License\n\nReleased under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "dots-studio/dots.tts-base"
+      ],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0",
+        "community likes 90"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "dots-studio/dots.tts-base",
+      "author": "dots-studio",
+      "created_at": "2026-06-03",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dots_tts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "audio",
+        "speech-synthesis",
+        "voice-cloning",
+        "autoregressive",
+        "flow-matching",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 304,
+      "likes": 48,
+      "trending_score": 0.0,
+      "library_name": "dots_tts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/dots-studio/dots.tts-base",
+      "card_text": "---\nlicense: apache-2.0\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - tts\n  - audio\n  - speech-synthesis\n  - voice-cloning\n  - autoregressive\n  - flow-matching\nlibrary_name: dots_tts\n---\n\n# dots.tts-base\n\n<p align=\"left\">\n  <a href=\"https://github.com/studio-dots-ai/dots.tts\"><img src=\"https://img.shields.io/badge/GitHub-studio--dots--ai%2Fdots.tts-blue?logo=github\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/spaces/dots-studio/dots.tts\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Spaces-Playground-orange\" alt=\"Playground\"></a>\n  <a href=\"https://studio-dots-ai.github.io/dots.tts-demo/\"><img src=\"https://img.shields.io/badge/Demo%20Page-Live-red\" alt=\"Demo Page\"></a>\n</p>\n\n**dots.tts** is a **2B-parameter fully continuous, end-to-end autoregressive (AR) text-to-speech system**. The backbone pairs a semantic encoder, an LLM, and an autoregressive flow-matching acoustic head over a 48 kHz AudioVAE — no discrete codec tokens anywhere in the pipeline.\n\nThis repository hosts **`dots.tts-base`**, the **end-to-end pretrained checkpoint** trained on ~1.5M hours of speech. It is the foundation for the two post-trained variants and the recommended starting point for **fine-tuning**.\n\n<table>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-base\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--base-yellow\" alt=\"dots.tts-base\"></a></td>\n    <td>← <em>you are here</em> — Pretrain (~1.5M h). Fine-tuning, full CFG / NFE control.</td>\n  </tr>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-soar\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--soar-yellow\" alt=\"dots.tts-soar\"></a></td>\n    <td>+ Self-corrective Alignment. Highest zero-shot fidelity and speaker similarity; also recommended for fine-tuning.</td>\n  </tr>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-mf\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--mf-yellow\" alt=\"dots.tts-mf\"></a></td>\n    <td>+ MeanFlow distillation. Few-step inference (NFE = 4), low latency.</td>\n  </tr>\n</table>\n\n---\n\n## Quick Start\n\n### Installation\n\n```bash\nconda create -n dots_tts python=3.10 -y\nconda activate dots_tts\n\npython -m pip install --upgrade pip\npython -m pip install \"git+https://github.com/studio-dots-ai/dots.tts.git\" \\\n  -c \"https://raw.githubusercontent.com/studio-dots-ai/dots.tts/main/constraints/recommended.txt\"\n```\n\n### CLI\n\n```bash\n# Continuation voice cloning (reference audio + transcript) — recommended\ndots.tts \\\n  --model-name-or-path dots-studio/dots.tts-base \\\n  --text \"Hello, this is a zero-shot voice cloning demonstration.\" \\\n  --prompt-audio /path/to/reference.wav \\\n  --prompt-text \"The exact transcript of the reference audio.\" \\\n  --output clone.wav\n```\n\n### Python API\n\n```python\nfrom dots_tts.runtime import DotsTtsRuntime\nimport soundfile as sf\n\nruntime = DotsTtsRuntime.from_pretrained(\n    \"dots-studio/dots.tts-base\",\n    precision=\"bfloat16\",\n)\n\nresult = runtime.generate(\n    text=\"Hello, this is a quick speech synthesis test.\",\n    prompt_audio_path=\"/path/to/reference.wav\",\n    prompt_text=\"The exact transcript of the reference audio.\",\n    num_steps=10,\n    guidance_scale=1.2,\n)\n\nsf.write(\"output.wav\", result[\"audio\"].float().cpu().squeeze().numpy(), result[\"sample_rate\"])\n```\n\n### Recommended sampling settings\n\n| Flag | Recommended | Notes |\n|---|---:|---|\n| `--num-steps` | `10`–`32` | Flow-matching sampling steps; higher = better quality, slower |\n| `--guidance-scale` | `1.2` (default) | Standard CFG; raise modestly for stronger text/timbre adherence |\n\n### Fine-tuning\n\n`dots.tts-base` is the recommended starting point for fine-tuning. See the [training script](https://github.com/studio-dots-ai/dots.tts/blob/main/scripts/train_dots_tts.py) and [smoke config](https://github.com/studio-dots-ai/dots.tts/blob/main/configs/dots_tts.yaml) in the source repository:\n\n```bash\naccelerate launch scripts/train_dots_tts.py --config configs/dots_tts.yaml\n```\n\n---\n\n## Architecture\n\nA frozen **AudioVAE** encodes 48 kHz mono waveform into a continuous latent and decodes it back via a BigVGAN-style causal decoder. An **autoregressive backbone** predicts that latent one patch at a time:\n\n- **Semantic encoder** — re-encodes each newly generated VAE patch into a compact embedding for the LLM, stripping high-variance acoustic detail.\n- **LLM** — initialized from **Qwen2.5-1.5B-Base**, consumes BPE text directly (no phonemes), emits one hidden state per audio step.\n- **AR flow-matching head** — a DiT that conditions on the LLM hidden state and the AR prefix to denoise the next VAE patch, with a frozen CAM++ speaker x-vector as side input.\n\n---\n\n## Performance — `dots.tts-base`\n\n### Seed-TTS-Eval (zero-shot, ~3 s reference)\n\n| Model | Params | test-en WER↓ / SIM↑ | test-zh WER↓ / SIM↑ | test-zh-hard WER↓ / SIM↑ | **Avg WER↓ / SIM↑** |\n|---|---:|:---:|:---:|:---:|:---:|\n| Seed-TTS | — | 2.25 / 76.2 | 1.12 / 79.6 | 7.59 / 77.6 | 3.65 / 77.8 |\n| Qwen3-TTS | 1.7B | **1.23** / 71.7 | 1.22 / 77.0 | 6.76 / 74.8 | 3.07 / 74.5 |\n| VoxCPM 2 | 2B | 1.84 / 75.3 | 0.97 / 79.5 | 8.13 / 75.3 | 3.65 / 76.7 |\n| **dots.tts-base** | **2B** | 1.34 / **76.8** | **0.96** / **80.5** | **6.46** / **79.2** | **2.92** / **78.8** |\n\n### MiniMax Multilingual (24 languages, average)\n\n| Model | Avg WER↓ | Avg SIM↑ |\n|---|:---:|:---:|\n| MiniMax | **2.8** | 76.6 |\n| Fish-Audio S2 | 3.7 | 78.0 |\n| VoxCPM 2 | 5.7 | 82.3 |\n| **dots.tts-base** | 6.6 | **83.5** |\n\nSee the [project README](https://github.com/studio-dots-ai/dots.tts#-performance) for the full per-language breakdown, CV3-Eval and EmergentTTS-Eval results.\n\n---\n\n## Risks and Limitations\n\n- **Misuse risk.** High-fidelity zero-shot voice cloning can produce highly realistic synthetic speech. This checkpoint is intended for research and authorized deployment. Do **not** use it for impersonation, fraud, or disinformation. Combine downstream use with consent-aware reference-audio policies, robust synthetic-speech detection, and content watermarking. Clearly mark AI-generated audio.\n- **Low-resource WER gap.** A BPE backbone inherits the text LLM's language coverage at the cost of a higher data appetite. On script-divergent and under-represented languages (Arabic, Hindi, Turkish, Vietnamese) WER is higher than on high-resource languages; speaker similarity is preserved.\n- **Speech-heavy training.** The backbone is trained on a speech-heavy mixture. Singing and unified speech + sound generation are not covered.\n\n---\n\n## Citation\n\n```bibtex\n@article{dotstts2026,\n  title   = {dots.tts Technical Report},\n  author  = {dots.tts Team},\n  journal = {arXiv preprint},\n  year    = {2026},\n}\n```\n\n## License\n\nReleased under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0",
+        "community likes 48"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "audio-cpp/audio.cpp-gguf",
+      "author": "audio-cpp",
+      "created_at": "2026-07-14",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audio.cpp",
+        "gguf",
+        "quantized",
+        "text-to-speech",
+        "automatic-speech-recognition",
+        "voice-conversion",
+        "text-to-audio",
+        "audio-to-audio",
+        "source-separation",
+        "speaker-diarization",
+        "speech",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:quantized:ACE-Step/Ace-Step1.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 106617,
+      "likes": 46,
+      "trending_score": 0.0,
+      "library_name": "audio.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/audio-cpp/audio.cpp-gguf",
+      "card_text": "---\nlicense: other\nlibrary_name: audio.cpp\npipeline_tag: text-to-speech\ntags:\n- gguf\n- audio.cpp\n- quantized\n- text-to-speech\n- automatic-speech-recognition\n- voice-conversion\n- text-to-audio\n- audio-to-audio\n- source-separation\n- speaker-diarization\n- speech\nbase_model_relation: quantized\nbase_model:\n- ACE-Step/Ace-Step1.5\n- ACE-Step/acestep-v15-base\n- Aratako/Irodori-TTS-500M-v3\n- Aratako/Irodori-TTS-600M-v3-VoiceDesign\n- Aratako/Irodori-TTS-v4-Small\n- Aratako/MioCodec-25Hz-44.1kHz-v2\n- Aratako/MioTTS-1.7B\n- Aratako/Semantic-DACVAE-Japanese-32dim\n- Banafo/Kroko-ASR\n- dots-studio/dots.tts-mf\n- dots-studio/dots.tts-soar\n- fishaudio/s2-pro\n- FunAudioLLM/Fun-ASR-Nano-2512-hf\n- HeartMuLa/HeartCodec-oss-20260123\n- HeartMuLa/HeartMuLa-oss-3B\n- HeartMuLa/HeartMuLaGen\n- OpenBMB/VoxCPM2\n- OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano\n- OpenMOSS-Team/MOSS-Audio-Tokenizer-v2\n- OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5\n- OpenMOSS-Team/MOSS-TTS-Nano-100M\n- Qwen/Qwen3-ASR-0.6B\n- Qwen/Qwen3-ASR-1.7B-hf\n- Qwen/Qwen3-ForcedAligner-0.6B\n- Qwen/Qwen3-TTS-12Hz-0.6B-Base\n- Qwen/Qwen3-TTS-12Hz-1.7B-Base\n- Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\n- Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign\n- Qwen/Qwen3-TTS-Tokenizer-12Hz\n- ResembleAI/chatterbox\n- RMSnow/Vevo2\n- bosonai/higgs-audio-v3-stt\n- bosonai/higgs-audio-v3-tts-4b\n- k2-fsa/OmniVoice\n- kyutai/pocket-tts\n- llm-jp/llm-jp-3-150m\n- microsoft/VibeVoice-1.5B\n- microsoft/VibeVoice-ASR\n- mistralai/Voxtral-Mini-4B-Realtime-2602\n- mirek190/audio.cpp\n- mlx-community/SeedVC-MLX\n- mlx-community/index-tts2-mlx\n- mlx-community/mel-roformer-mlx\n- mlx-community/supertonic-3-mlx\n- mlx-community/wavlm-base-plus-mlx\n- MuScriptor/muscriptor-small\n- syvai/hviske-v5.3\n- nvidia/diar_sortformer_4spk-v1\n- nvidia/magpie_tts_multilingual_357m\n- nvidia/nemotron-3.5-asr-streaming-0.6b\n- nvidia/parakeet-tdt-0.6b-v3\n- owensong/Inflect-Micro-v2\n- stabilityai/stable-audio-3-medium\n- stabilityai/stable-audio-3-small-music\n- stabilityai/stable-audio-3-small-sfx\n---\n\n# audio.cpp GGUF Model Packages\n\nThis directory contains audio.cpp-native GGUF conversions of multiple speech models. These files are intended for use with [audio.cpp](https://github.com/0xShug0/audio.cpp).\n\nFor conversion details, supported layouts, direct-file loading, sidecar embedding, and the latest compatibility notes, see the audio.cpp GGUF guide:\n\n- https://github.com/0xShug0/audio.cpp/blob/main/docs/gguf.md\n\n!!! Automated audio checks are intentionally strict and may flag length, log-mel, or transcript drift that can still sound acceptable to human listeners. Validate the exact file, backend, and route you plan to use. These converted weights are provided as-is; use them at your own risk.\n\n\n## Files\n\n`Tested` summarizes the current audio.cpp path-test status. See the GGUF guide above\nfor the full matrix and drift notes.\n\n| Directory | Files | audio.cpp family | Tested | Original model license |\n|---|---|---|---|---|\n| `ACE-Step1.5-GGUF` | `base/ace-step-1.5-base-bf16.gguf`, `base/ace-step-1.5-base-q8_0.gguf`, `turbo/ace-step-1.5-turbo-bf16.gguf`, `turbo/ace-step-1.5-turbo-q8_0.gguf` | `ace_step` | 16-bit + Q8 drift | MIT |\n| `BS-RoFormer-ep368-GGUF` | `bs-roformer-ep368-q8_0.gguf` | `bs_roformer` | Q8 pass | Apache-2.0 |\n| `Chatterbox-GGUF` | `chatterbox-f16.gguf`, `chatterbox-q8_0.gguf` | `chatterbox` | 16-bit + Q8 ASR-match drift | MIT |\n| `Citrinet-ASR-GGUF` | `citrinet-asr-q8_0.gguf` | `citrinet_asr` | Q8 pass | CC-BY-4.0 |\n| `Confucius4-TTS-GGUF` | `confucius4-tts-orig.gguf` | `confucius4_tts` | orig pass | Apache-2.0 |\n| `DotTTS-MF-GGUF` | `dots-tts-mf-bf16.gguf` | `dots_tts` | experimental | Apache-2.0 |\n| `DotTTS-SOAR-GGUF` | `dots-tts-soar-orig.gguf`, `dots-tts-soar-bf16.gguf` | `dots_tts` | experimental | Apache-2.0 |\n| `DramaBox-GGUF` | `dramabox-q8_0.gguf` | `dramabox` | Q8 pass | LTX-2 Community License |\n| `Fish-Audio-S2-Pro-GGUF` | `fish-audio-s2-pro-bf16.gguf`, `fish-audio-s2-pro-q8_0.gguf` | `fish_audio` | 16-bit + Q8 pass | Fish Audio Research License |\n| `Fun-ASR-Nano-2512-GGUF` | `fun-asr-nano-2512-f16.gguf`, `fun-asr-nano-2512-q8_0.gguf` | `fun_asr_nano` | 16-bit + Q8 pass | FunASR Model Open Source License Agreement v1.1 |\n| `HeartMuLa-GGUF` | `heartmula-f16.gguf`, `heartmula-q8_0.gguf` | `heartmula` | 16-bit + Q8 drift | Apache-2.0 |\n| `HTDemucs-GGUF` | `htdemucs-f16.gguf`, `htdemucs-q8_0.gguf` | `htdemucs` | 16-bit pass, Q8 drift | MIT |\n| `Higgs-Audio-v3-STT-GGUF` | `higgs-audio-v3-stt-f16.gguf`, `higgs-audio-v3-stt-q8_0.gguf` | `higgs_audio_stt` | 16-bit + Q8 pass | Apache-2.0 |\n| `Higgs-Audio-v3-TTS-4B-GGUF` | `higgs-audio-v3-tts-4b-bf16.gguf`, `higgs-audio-v3-tts-4b-q8_0.gguf` | `higgs_audio_tts` | 16-bit + Q8 pass | Boson Higgs TTS 3 Research and Non-Commercial License |\n| `Hviske-v5.3-GGUF` | `hviske-v5.3-q8_0.gguf` | `hviske_asr` | Q8 pass | CC-BY-NC-4.0 |\n| `IndexTTS2-GGUF` | `index-tts2-orig.gguf`, `index-tts2-f16.gguf`, `index-tts2-q8_0.gguf` | `index_tts2` | orig + 16-bit pass/drift, Q8 ASR-match drift | bilibili Model Use License Agreement |\n| `Inflect-Micro-v2-GGUF` | `inflect-micro-v2-orig.gguf` | `inflect_v2` | orig pass | Apache-2.0 |\n| `Irodori-TTS-500M-v3-GGUF` | `irodori-tts-500m-v3-f16.gguf`, `irodori-tts-500m-v3-q8_0.gguf` | `irodori_tts` | 16-bit pass, Q8 drift | MIT |\n| `Irodori-TTS-600M-v3-VoiceDesign-GGUF` | `irodori-tts-600m-v3-voicedesign-f16.gguf`, `irodori-tts-600m-v3-voicedesign-q8_0.gguf` | `irodori_tts` | 16-bit pass, Q8 drift | MIT |\n| `Irodori-TTS-v4-Small-GGUF` | `irodori-tts-v4-small-f16.gguf`, `irodori-tts-v4-small-q8_0.gguf` | `irodori_tts` | 16-bit + Q8 pass | MIT |\n| `Kroko-ASR-GGUF` | `kroko-en-community-64-l-q8_0.gguf` | `kroko_asr` | Q8 pass | CC-BY-SA community model license |\n| `MOSS-TTS-Local-v1.5-GGUF` | `moss-tts-local-v1.5-bf16.gguf`, `moss-tts-local-v1.5-q8_0.gguf` | `moss_tts_local` | 16-bit pass, Q8 ASR-match drift | Apache-2.0 |\n| `MOSS-TTS-Nano-100M-GGUF` | `moss-tts-nano-100m-bf16.gguf`, `moss-tts-nano-100m-q8_0.gguf` | `moss_tts_nano` | 16-bit pass, Q8 ASR-match drift | Apache-2.0 |\n| `MagpieTTS-Multilingual-357M-GGUF` | `magpie-tts-multilingual-357m-orig.gguf` | `magpie_tts` | experimental | NVIDIA Open Model License |\n| `Mel-Band-RoFormer-GGUF` | `mel-band-roformer-f16.gguf`, `mel-band-roformer-q8_0.gguf` | `mel_band_roformer` | 16-bit + Q8 drift | MIT |\n| `MioCodec-25Hz-44.1kHz-v2-GGUF` | `miocodec-25hz-44khz-v2-orig.gguf`, `miocodec-25hz-44khz-v2-f16.gguf`, `miocodec-25hz-44khz-v2-q8_0.gguf` | `miocodec` | orig pass, 16-bit + Q8 drift | MIT |\n| `MioTTS-1.7B-GGUF` | `miotts-1.7b-orig.gguf`, `miotts-1.7b-bf16.gguf`, `miotts-1.7b-q8_0.gguf` | `miotts` | orig pass, 16-bit drift, Q8 ASR-match drift | Apache-2.0 |\n| `MuScriptor-Small-GGUF` | `muscriptor-small-f32.gguf` | `muscriptor` | F32 pass | CC-BY-NC-4.0 |\n| `Nemotron-3.5-ASR-Streaming-0.6B-GGUF` | `nemotron-3.5-asr-streaming-0.6b-f16.gguf`, `nemotron-3.5-asr-streaming-0.6b-q8_0.gguf` | `nemotron_asr` | 16-bit pass, Q8 minor filler drift | OpenMDW-1.1 |\n| `OmniVoice-GGUF` | `omnivoice-bf16.gguf`, `omnivoice-f16.gguf`, `omnivoice-q8_0.gguf` | `omnivoice` | 16-bit + Q8 drift | Apache-2.0 |\n| `Parakeet-TDT-0.6B-v3-GGUF` | `parakeet-tdt-0.6b-v3-f16.gguf`, `parakeet-tdt-0.6b-v3-q8_0.gguf` | `parakeet_tdt` | 16-bit + Q8 pass | CC-BY-4.0 |\n| `PocketTTS-GGUF` | `english/`, `german/`, `italian/`, `portuguese/`, `spanish/` each contain `bf16` and `q8_0` GGUFs | `pocket_tts` | 16-bit pass, Q8 drift | CC-BY-4.0 |\n| `Qwen3-ASR-0.6B-GGUF` | `qwen3-asr-0.6b-f16.gguf`, `qwen3-asr-0.6b-q8_0.gguf` | `qwen3_asr` | 16-bit + Q8 pass | Apache-2.0 |\n| `Qwen3-ASR-1.7B-GGUF` | `qwen3-asr-1.7b-f16.gguf`, `qwen3-asr-1.7b-q8_0.gguf` | `qwen3_asr` | 16-bit + Q8 pass | Apache-2.0 |\n| `Qwen3-ForcedAligner-0.6B-GGUF` | `qwen3-forced-aligner-0.6b-f16.gguf`, `qwen3-forced-aligner-0.6b-q8_0.gguf` | `qwen3_forced_aligner` | 16-bit + Q8 pass | Apache-2.0 |\n| `Qwen3-TTS-12Hz-0.6B-Base-GGUF` | `qwen3-tts-12hz-0.6b-base-bf16.gguf`, `qwen3-tts-12hz-0.6b-base-q8_0.gguf` | `qwen3_tts` | BF16 exact vs safetensors, Q8 ASR-match drift | Apache-2.0 |\n| `Qwen3-TTS-12Hz-1.7B-Base-GGUF` | `qwen3-tts-12hz-1.7b-base-orig.gguf`, `qwen3-tts-12hz-1.7b-base-bf16.gguf`, `qwen3-tts-12hz-1.7b-base-q8_0_v2.gguf` | `qwen3_tts` | orig pass, 16-bit + Q8 ASR-match drift | Apache-2.0 |\n| `Qwen3-TTS-12Hz-1.7B-CustomVoice-GGUF` | `qwen3-tts-12hz-1.7b-customvoice-bf16.gguf`, `qwen3-tts-12hz-1.7b-customvoice-q8_0.gguf` | `qwen3_tts` | 16-bit + Q8 ASR-match drift | Apache-2.0 |\n| `Qwen3-TTS-12Hz-1.7B-VoiceDesign-GGUF` | `qwen3-tts-12hz-1.7b-voicedesign-bf16.gguf`, `qwen3-tts-12hz-1.7b-voicedesign-q8_0.gguf` | `qwen3_tts` | 16-bit + Q8 ASR-match drift | Apache-2.0 |\n| `RVC-GGUF` | `rvc-f16.gguf` | `rvc` | F16 pass | MIT |\n| `SeedVC-MLX-GGUF` | `seed-vc-mlx-orig.gguf`, `seed-vc-mlx-f16.gguf`, `seed-vc-mlx-q8_0.gguf` | `seed_vc` | 16-bit + Q8 drift | GPL-3.0 |\n| `Sortformer-Diar-4spk-v1-GGUF` | `sortformer-diar-4spk-v1-f16.gguf`, `sortformer-diar-4spk-v1-q8_0.gguf` | `sortformer_diar` | 16-bit + Q8 pass | CC-BY-NC-4.0 |\n| `Stable-Audio-3-Medium-GGUF` | `stable-audio-3-medium-f16.gguf`, `stable-audio-3-medium-q8_0.gguf` | `stable_audio` | 16-bit + Q8 drift | Stability AI Community License |\n| `Stable-Audio-3-Small-Music-GGUF` | `stable-audio-3-small-music-f16.gguf`, `stable-audio-3-small-music-q8_0.gguf` | `stable_audio` | 16-bit + Q8 drift | Stability AI Community License |\n| `Stable-Audio-3-Small-SFX-GGUF` | `stable-audio-3-small-sfx-f16.gguf`, `stable-audio-3-small-sfx-q8_0.gguf` | `stable_audio` | 16-bit + Q8 drift | Stability AI Community License |\n| `Supertonic-3-GGUF` | `supertonic-3-orig.gguf`, `supertonic-3-f16.gguf`, `supertonic-3-q8_0.gguf` | `supertonic` | F32/orig pass; f16 not tested; Q8 unsupported dtype | BigScience Open RAIL-M |\n| `Vevo2-GGUF` | `vevo2-orig.gguf`, `vevo2-f16.gguf`, `vevo2-q8_0.gguf` | `vevo2` | orig + 16-bit pass/drift; Q8 mixed route drift | CC-BY-NC-ND-4.0 |\n| `VibeVoice-1.5B-GGUF` | `vibevoice-1.5b-bf16.gguf`, `vibevoice-1.5b-q8_0.gguf`, `vibevoice-1.5b-q4-ios.gguf` | `vibevoice` | 16-bit pass, Q8 drift | MIT |\n| `VibeVoice-ASR-GGUF` | `vibevoice-asr-f16.gguf`, `vibevoice-asr-q8_0.gguf` | `vibevoice_asr` | 16-bit + Q8 pass | MIT |\n| `VoxCPM2-GGUF` | `voxcpm2-orig.gguf`, `voxcpm2-bf16.gguf`, `voxcpm2-q8_0.gguf` | `voxcpm2` | orig pass, 16-bit + Q8 ASR-match drift | Apache-2.0 |\n| `Voxtral-Mini-4B-Realtime-2602-GGUF` | `voxtral-mini-4b-realtime-2602-bf16.gguf`, `voxtral-mini-4b-realtime-2602-q8_0.gguf`, `voxtral-mini-4b-realtime-2602-q4_k.gguf` | `voxtral_realtime` | 16-bit + Q8 pass; Q4_K quick check passed | Apache-2.0 |\n\n## Q8 Notes\n\n- Chatterbox Q8 is intentionally mixed type. Graph-sensitive scalar, norm, bias,\n  and side tensors stay in non-Q8 types while matmul-compatible weights are\n  quantized.\n- PocketTTS Q8 keeps the four `flow_lm.flow_net.time_embed.*.mlp.{0,2}.weight`\n  tensors in Q8 in addition to the default converter selection. `conditioner.embed`,\n  `cond_embed`, and Mimi conv tensors are not forced to Q8 because tested outputs\n  drifted or the current conv path casts quantized conv weights back to F32.\n- Voxtral Q4_K is smaller than Q8_0 and was faster in a quick CUDA path check,\n  with transcripts matching Q8_0 except for one capitalization-only difference.\n\n## Usage\n\nPass a GGUF file directly as `--model`:\n\n```bash\naudiocpp_cli --task tts --family supertonic --model Supertonic-3-GGUF/supertonic-3-orig.gguf --backend cuda --language en --text \"Hello.\" --voice-id M1 --out out.wav\n```\n\nFor ASR:\n\n```bash\naudiocpp_cli --task asr --family qwen3_asr --model Qwen3-ASR-0.6B-GGUF/qwen3-asr-0.6b-f16.gguf --backend cuda --audio speech.wav --text \"\" --text-out transcript.txt\n```\n\n## License\n\nEach GGUF file is a converted form of its original model. Use and redistribution are governed by the corresponding original model license listed above. Please review the original model card and license terms before using or redistributing any converted weights.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/Ace-Step1.5",
+        "ACE-Step/acestep-v15-base",
+        "Aratako/Irodori-TTS-500M-v3",
+        "Aratako/Irodori-TTS-600M-v3-VoiceDesign",
+        "Aratako/Irodori-TTS-v4-Small",
+        "Aratako/MioCodec-25Hz-44.1kHz-v2",
+        "Aratako/MioTTS-1.7B",
+        "Aratako/Semantic-DACVAE-Japanese-32dim",
+        "Banafo/Kroko-ASR",
+        "dots-studio/dots.tts-mf",
+        "dots-studio/dots.tts-soar",
+        "fishaudio/s2-pro",
+        "FunAudioLLM/Fun-ASR-Nano-2512-hf",
+        "HeartMuLa/HeartCodec-oss-20260123",
+        "HeartMuLa/HeartMuLa-oss-3B",
+        "HeartMuLa/HeartMuLaGen",
+        "OpenBMB/VoxCPM2",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2",
+        "OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5",
+        "OpenMOSS-Team/MOSS-TTS-Nano-100M",
+        "Qwen/Qwen3-ASR-0.6B",
+        "Qwen/Qwen3-ASR-1.7B-hf",
+        "Qwen/Qwen3-ForcedAligner-0.6B",
+        "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "Qwen/Qwen3-TTS-Tokenizer-12Hz",
+        "ResembleAI/chatterbox",
+        "RMSnow/Vevo2",
+        "bosonai/higgs-audio-v3-stt",
+        "bosonai/higgs-audio-v3-tts-4b",
+        "k2-fsa/OmniVoice",
+        "kyutai/pocket-tts",
+        "llm-jp/llm-jp-3-150m",
+        "microsoft/VibeVoice-1.5B",
+        "microsoft/VibeVoice-ASR",
+        "mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "mirek190/audio.cpp",
+        "mlx-community/SeedVC-MLX",
+        "mlx-community/index-tts2-mlx",
+        "mlx-community/mel-roformer-mlx",
+        "mlx-community/supertonic-3-mlx",
+        "mlx-community/wavlm-base-plus-mlx",
+        "MuScriptor/muscriptor-small",
+        "syvai/hviske-v5.3",
+        "nvidia/diar_sortformer_4spk-v1",
+        "nvidia/magpie_tts_multilingual_357m",
+        "nvidia/nemotron-3.5-asr-streaming-0.6b",
+        "nvidia/parakeet-tdt-0.6b-v3",
+        "owensong/Inflect-Micro-v2",
+        "stabilityai/stable-audio-3-medium",
+        "stabilityai/stable-audio-3-small-music",
+        "stabilityai/stable-audio-3-small-sfx"
+      ],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition",
+        "declares license other",
+        "community likes 46"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "dots-studio/dots.tts-mf",
+      "author": "dots-studio",
+      "created_at": "2026-06-04",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dots_tts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "audio",
+        "speech-synthesis",
+        "voice-cloning",
+        "autoregressive",
+        "flow-matching",
+        "meanflow",
+        "distillation",
+        "low-latency",
+        "base_model:dots-studio/dots.tts-soar",
+        "base_model:finetune:dots-studio/dots.tts-soar",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1557,
+      "likes": 27,
+      "trending_score": 0.0,
+      "library_name": "dots_tts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/dots-studio/dots.tts-mf",
+      "card_text": "---\nlicense: apache-2.0\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - tts\n  - audio\n  - speech-synthesis\n  - voice-cloning\n  - autoregressive\n  - flow-matching\n  - meanflow\n  - distillation\n  - low-latency\nlibrary_name: dots_tts\nbase_model: dots-studio/dots.tts-soar\n---\n\n# dots.tts-mf\n\n<p align=\"left\">\n  <a href=\"https://github.com/studio-dots-ai/dots.tts\"><img src=\"https://img.shields.io/badge/GitHub-studio--dots--ai%2Fdots.tts-blue?logo=github\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/spaces/dots-studio/dots.tts\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Spaces-Playground-orange\" alt=\"Playground\"></a>\n  <a href=\"https://studio-dots-ai.github.io/dots.tts-demo/\"><img src=\"https://img.shields.io/badge/Demo%20Page-Live-red\" alt=\"Demo Page\"></a>\n</p>\n\n**dots.tts** is a **2B-parameter fully continuous, end-to-end autoregressive (AR) text-to-speech system**. The backbone pairs a semantic encoder, an LLM, and an autoregressive flow-matching acoustic head over a 48 kHz AudioVAE — no discrete codec tokens anywhere in the pipeline.\n\nThis repository hosts **`dots.tts-mf`** — the **CFG-aware MeanFlow distillation** of `dots.tts-soar`. MeanFlow collapses the per-patch ODE to **as few as 2–4 NFE** with a **single model evaluation per step** (CFG is fused into the student — no separate unconditional pass, and `guidance_scale` has no effect at inference time). This is the **recommended checkpoint for low-latency / few-step inference**.\n\n<table>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-base\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--base-yellow\" alt=\"dots.tts-base\"></a></td>\n    <td>Pretrain (~1.5M h). Fine-tuning, full CFG / NFE control.</td>\n  </tr>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-soar\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--soar-yellow\" alt=\"dots.tts-soar\"></a></td>\n    <td>+ Self-corrective Alignment. Highest zero-shot fidelity and speaker similarity; also recommended for fine-tuning.</td>\n  </tr>\n  <tr>\n    <td align=\"left\" valign=\"middle\"><a href=\"https://huggingface.co/dots-studio/dots.tts-mf\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-dots.tts--mf-yellow\" alt=\"dots.tts-mf\"></a></td>\n    <td>← <em>you are here</em> — + MeanFlow distillation. <strong>Few-step inference (NFE = 4), low latency</strong>.</td>\n  </tr>\n</table>\n\n---\n\n## Quick Start\n\n### Installation\n\n```bash\nconda create -n dots_tts python=3.10 -y\nconda activate dots_tts\n\npython -m pip install --upgrade pip\npython -m pip install \"git+https://github.com/studio-dots-ai/dots.tts.git\" \\\n  -c \"https://raw.githubusercontent.com/studio-dots-ai/dots.tts/main/constraints/recommended.txt\"\n```\n\n### CLI\n\n```bash\n# Few-step inference — NFE = 4 is the recommended quality / latency trade-off.\n# Note: --guidance-scale is a no-op on this checkpoint (CFG is fused into the\n# distilled student); leave it at the CLI default or set it to anything.\ndots.tts \\\n  --model-name-or-path dots-studio/dots.tts-mf \\\n  --text \"Hello, this is a zero-shot voice cloning demonstration.\" \\\n  --prompt-audio /path/to/reference.wav \\\n  --prompt-text \"The exact transcript of the reference audio.\" \\\n  --num-steps 4 \\\n  --output clone.wav\n```\n\n### Python API\n\n```python\nfrom dots_tts.runtime import DotsTtsRuntime\nimport soundfile as sf\n\nruntime = DotsTtsRuntime.from_pretrained(\n    \"dots-studio/dots.tts-mf\",\n    precision=\"bfloat16\",\n)\n\nresult = runtime.generate(\n    text=\"Hello, this is a quick speech synthesis test.\",\n    prompt_audio_path=\"/path/to/reference.wav\",\n    prompt_text=\"The exact transcript of the reference audio.\",\n    num_steps=4,           # NFE = 4 is the recommended setting\n    # guidance_scale is a no-op on dots.tts-mf — CFG is fused into the student\n)\n\nsf.write(\"output.wav\", result[\"audio\"].float().cpu().squeeze().numpy(), result[\"sample_rate\"])\n```\n\n### Recommended sampling settings\n\n| Flag | Recommended | Notes |\n|---|---:|---|\n| `--num-steps` | `4` | NFE = 4 is the recommended quality / latency trade-off; NFE = 2 / 3 work but regress on WER / SIM (see table below) |\n| `--guidance-scale` | *ignored* | CFG is fused into the distilled student; this flag is a no-op here |\n\n---\n\n## Architecture\n\nA frozen **AudioVAE** encodes 48 kHz mono waveform into a continuous latent and decodes it back via a BigVGAN-style causal decoder. An **autoregressive backbone** predicts that latent one patch at a time:\n\n- **Semantic encoder** — re-encodes each newly generated VAE patch into a compact embedding for the LLM, stripping high-variance acoustic detail.\n- **LLM** — initialized from **Qwen2.5-1.5B-Base**, consumes BPE text directly (no phonemes), emits one hidden state per audio step.\n- **AR flow-matching head** — a DiT that conditions on the LLM hidden state and the AR prefix to denoise the next VAE patch, with a frozen CAM++ speaker x-vector as side input.\n\n**CFG-aware MeanFlow distillation** trains the flow-matching head as a MeanFlow student over the SCA teacher's velocity field, with classifier-free guidance directly absorbed into the student. The result is a 2–4 NFE sampler that retains the bulk of the teacher's quality with a single model evaluation per step.\n\n---\n\n## Performance — `dots.tts-mf`\n\n### Seed-TTS-Eval (zero-shot, ~3 s reference)\n\n| Model | NFE | test-en WER↓ / SIM↑ | test-zh WER↓ / SIM↑ | test-zh-hard WER↓ / SIM↑ | **Avg WER↓ / SIM↑** |\n|---|:---:|:---:|:---:|:---:|:---:|\n| dots.tts-soar (teacher) | 10 | 1.30 / **77.1** | **0.94** / **81.0** | **6.60** / **79.5** | 2.95 / **79.2** |\n| **dots.tts-mf** | **4** | **1.29** / 76.2 | **0.94** / 80.0 | **6.60** / 78.5 | **2.94** / 78.2 |\n| **dots.tts-mf** | **3** | 1.41 / 75.9 | 1.02 / 79.9 | 7.19 / 78.6 | 3.21 / 78.1 |\n| **dots.tts-mf** | **2** | 1.51 / 75.2 | 1.04 / 79.1 | 7.74 / 76.7 | 3.43 / 77.0 |\n\nAt NFE = 4, `dots.tts-mf` essentially matches its teacher on average WER (2.94 vs. 2.95) with **~2.5× fewer model evaluations per patch** and a single conditional pass per step.\n\n### CV3-Eval\n\n| Model | NFE | hard-en WER↓ |\n|---|:---:|:---:|\n| Fish-Audio S2 | — | 4.40 |\n| dots.tts-soar | 10 | 4.49 |\n| **dots.tts-mf** | **4** | **4.37** |\n\nSee the [project README](https://github.com/studio-dots-ai/dots.tts#-performance) for full benchmark tables including MiniMax Multilingual and EmergentTTS-Eval.\n\n---\n\n## Risks and Limitations\n\n- **Misuse risk.** High-fidelity zero-shot voice cloning can produce highly realistic synthetic speech. This checkpoint is intended for research and authorized deployment. Do **not** use it for impersonation, fraud, or disinformation. Combine downstream use with consent-aware reference-audio policies, robust synthetic-speech detection, and content watermarking. Clearly mark AI-generated audio.\n- **Few-step trade-off.** At NFE = 2/3 there is a measurable WER and SIM regression vs. NFE = 4 (see table above). Pick the NFE that matches your latency budget.\n- **CFG fused.** Unlike `base` / `soar`, `--guidance-scale` is ignored by the MeanFlow sampler — guidance is baked into the student at distillation time and cannot be adjusted at inference.\n- **Low-resource WER gap.** A BPE backbone inherits the text LLM's language coverage at the cost of a higher data appetite. On script-divergent and under-represented languages (Arabic, Hindi, Turkish, Vietnamese) WER is higher than on high-resource languages; speaker similarity is preserved.\n- **Speech-heavy training.** The backbone is trained on a speech-heavy mixture. Singing and unified speech + sound generation are not covered.\n\n---\n\n## Citation\n\n```bibtex\n@article{dotstts2026,\n  title   = {dots.tts Technical Report},\n  author  = {dots.tts Team},\n  journal = {arXiv preprint},\n  year    = {2026},\n}\n```\n\n## License\n\nReleased under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "dots-studio/dots.tts-soar"
+      ],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0",
+        "community likes 27"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Prince-1/VibeVoice-Realtime-0.5B-Onnx",
+      "author": "Prince-1",
+      "created_at": "2026-07-26",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnxruntime",
+        "onnx",
+        "TTS",
+        "Realtime TTS",
+        "Streaming text input",
+        "Long-form speech generation",
+        "text-to-speech",
+        "en",
+        "arxiv:2508.19205",
+        "arxiv:2412.08635",
+        "base_model:microsoft/VibeVoice-Realtime-0.5B",
+        "base_model:quantized:microsoft/VibeVoice-Realtime-0.5B",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "onnxruntime",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Prince-1/VibeVoice-Realtime-0.5B-Onnx",
+      "card_text": "---\nlicense: mit\nlanguage:\n- en\npipeline_tag: text-to-speech\ntags:\n- onnx\n- TTS\n- Realtime TTS\n- Streaming text input\n- Long-form speech generation\nlibrary_name: onnxruntime\nbase_model:\n- microsoft/VibeVoice-Realtime-0.5B\n---\n\n## VibeVoice: A Frontier Open-Source Text-to-Speech Model\n\nVibeVoice-Realtime is a **lightweight real‑time** text-to-speech model supporting **streaming text input** and **robust long-form speech generation**. It can be used to build realtime TTS services, narrate live data streams, and let different LLMs start speaking from their very first tokens (plug in your preferred model) long before a full answer is generated. It produces initial audible speech in **~300 ms** (hardware dependent).\n\n[▶️ Watch demo video](https://github.com/user-attachments/assets/0901d274-f6ae-46ef-a0fd-3c4fba4f76dc) (Launch your own realtime demo via the websocket example in [Usage](https://github.com/microsoft/VibeVoice/blob/main/docs/vibevoice-realtime-0.5b.md#usage-1-launch-real-time-websocket-demo))\n\nAlthough the model is primarily built for English, we found that it still exhibits a certain level of multilingual capability—and even performs reasonably well in some languages. We provide nine additional languages (German, French, Italian, Japanese, Korean, Dutch, Polish, Portuguese, and Spanish) for users to explore and share feedback.\n\nThe model uses an interleaved, windowed design: it incrementally encodes incoming text chunks while, in parallel, continuing diffusion-based acoustic latent generation from prior context. Unlike the full multi-speaker long-form variants, this streaming model removes the semantic tokenizer and relies solely on an efficient acoustic tokenizer operating at an ultra-low frame rate (7.5 Hz).\n\nKey features:\n- Parameter size: 0.5B (deployment-friendly)\n- Realtime TTS (~300 ms first audible latency)\n- Streaming text input\n- Robust long-form speech generation\n\n<p align=\"left\">\n  <img src=\"figures/Fig1.png\" alt=\"VibeVoice Realtime Model Overview\" height=\"250px\">\n</p>\n\nThis realtime variant supports only a single speaker. For multi-speaker conversational speech generation, please use other [VibeVoice models](https://huggingface.co/collections/microsoft/vibevoice). The model is currently intended for English speech only; other languages may produce unpredictable results.\n\n➡️ **Technical Report:** [VibeVoice Technical Report](https://arxiv.org/abs/2508.19205)\n\n➡️ **Project Page:** [microsoft/VibeVoice](https://microsoft.github.io/VibeVoice)\n\n➡️ **Code:** [microsoft/VibeVoice-Code](https://github.com/microsoft/VibeVoice)\n\n➡️ **App:** [anycoderapps/VibeVoice-Realtime-0.5B](https://huggingface.co/spaces/anycoderapps/VibeVoice-Realtime-0.5B)\n\n\n\n## Training Details\nTransformer-based Large Language Model (LLM) integrated with specialized acoustic tokenizer and a diffusion-based decoding head.\n- LLM: [Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B) for this release.\n- Tokenizers:\n    - Acoustic Tokenizer: Based on a σ-VAE variant (proposed in [LatentLM](https://arxiv.org/pdf/2412.08635)), with a mirror-symmetric encoder-decoder structure featuring 7 stages of modified Transformer blocks. Achieves 3200x downsampling from 24kHz input. Decoder component is ~340M parameters.\n- Diffusion Head: Lightweight module (4 layers, ~40M parameters) conditioned on LLM hidden states. Predicts acoustic VAE features using a Denoising Diffusion Probabilistic Models (DDPM) process. Uses Classifier-Free Guidance (CFG) and DPM-Solver (and variants) during inference.\n- Context Length: Trained with a curriculum increasing up to 8,192 tokens.\n- Training Stages:\n    - Tokenizer Pre-training: Acoustic tokenizer is pre-trained.\n    - VibeVoice Training: Pre-trained tokenizer is frozen; only the LLM and diffusion head parameters are trained. A curriculum learning strategy is used for input sequence length (4k -> 8K). Text tokenizer not explicitly specified, but the LLM (Qwen2.5) typically uses its own. Audio is \"tokenized\" via the acoustic tokenizer.\n\n\n## Models\n| Model | Context Length | Generation Length |  Weight |\n|-------|----------------|----------|----------|\n| VibeVoice-Realtime-0.5B | 8k | ~10 min | You are here. |\n| VibeVoice-1.5B | 64K | ~90 min | [HF link](https://huggingface.co/microsoft/VibeVoice-1.5B) |\n| VibeVoice-Large| 32K | ~45 min | [HF link](https://huggingface.co/microsoft/VibeVoice-Large) |\n\n\n## Results\n\nThe model achieves satisfactory performance on short-sentence benchmarks, while the model is more focused on long‑form speech generation.\n\n### Zero-shot TTS performance on LibriSpeech test-clean set\n\n| Model | WER (%) ↓ | Speaker Similarity ↑ |\n|:--------------------|:---------:|:----------------:|\n| VALL-E 2            | 2.40      | 0.643            |\n| Voicebox            | 1.90      | 0.662            |\n| MELLE               | 2.10      | 0.625            |\n| **VibeVoice-Realtime-0.5B** | 2.00 | 0.695            |\n\n### Zero-shot TTS performance on SEED test-en set\n\n| Model | WER (%) ↓ | Speaker Similarity ↑ |\n|:--------------------|:---------:|:----------------:|\n| MaskGCT             | 2.62      | 0.714            |\n| Seed-TTS            | 2.25      | 0.762            |\n| FireRedTTS          | 3.82      | 0.460            |\n| SparkTTS            | 1.98      | 0.584            |\n| CosyVoice2          | 2.57      | 0.652            |\n| **VibeVoice-Realtime-0.5B** | 2.05 | 0.633            | \n\n\n## Installation and Usage\n\nPlease refer to [GitHub README](https://github.com/microsoft/VibeVoice/blob/main/docs/vibevoice-realtime-0.5b.md#installation)\n\n\n## Responsible Usage\n### Direct intended uses\nThe VibeVoice-Realtime model is limited to research purposes exploring real-time highly realistic audio generation detailed in the [tech report](https://arxiv.org/pdf/2508.19205). \n\n### Out-of-scope uses\nUse in any manner that violates applicable laws or regulations (including trade compliance laws). Use in any other way that is prohibited by MIT License. Use to generate any text transcript. Furthermore, this release is not intended or licensed for any of the following scenarios:\n\n- Voice impersonation without explicit, recorded consent, including but not limited to, cloning a real individual's voice for satire, advertising, ransom, social‑engineering, or authentication bypass. \n- Disinformation or impersonation, including but not limited to, creating audio presented as genuine recordings of real people or events. \n- Real‑time or low‑latency voice conversion, including but not limited to, telephone or video‑conference \"live deep‑fake\" applications.\n- Any act to circumvent, disable, or otherwise interfere with any technical or procedural safeguards implemented in this release, including but not limited to security controls, watermarking and other transparency mechanisms. Any act of reverse engineering, modification, injection of unauthorized code, or exploitation of vulnerabilities for purposes beyond the intended scope of use. \n- Unsupported language – the model is trained only on English data; outputs in other languages are unsupported and may be unintelligible or inappropriate.\n- Generation of background ambience, Foley, or music – VibeVoice is speech‑only and cannot produce coherent non‑speech audio such as music.\n\n\n## Risks and limitations\nWhile efforts have been made to optimize it through various techniques, it may still produce outputs that are unexpected, biased, or inaccurate. VibeVoice may inherit any biases, errors, or omissions produced by its base model (specifically, Qwen2.5 0.5b in this release). \nPotential for Deepfakes and Disinformation: High-quality synthetic speech can be misused to create convincing fake audio content for impersonation, fraud, or spreading disinformation. Users must ensure transcripts are reliable, check content accuracy, and avoid using generated content in misleading ways. Users are expected to use the generated content and to deploy the models in a lawful manner, in full compliance with all applicable laws and regulations in the relevant jurisdictions. It is best practice to disclose the use of AI when sharing AI-generated content.\nEnglish only: Transcripts in language other than English may result in unexpected audio outputs.\nNon-Speech Audio: The model focuses solely on speech synthesis and does not handle background noise, music, or other sound effects.\nOverlapping Speech: The current model does not explicitly model or generate overlapping speech segments in conversations.\nCode, formulas, and special symbols – The model does not currently support reading code, mathematical formulas, or uncommon symbols. Please pre‑process input text to remove or normalize such content to avoid unpredictable results.\n\n\n## Recommendations\nWe do not recommend using VibeVoice in commercial or real-world applications without further testing and development. If you use this model to generate speech, we recommend disclosing to the end user that they are listening to AI generated content. This model is intended for research and development purposes only. Please use responsibly.\n\nTo mitigate the risks of misuse, we have:\nRemoved acoustic tokenizer to avoid users creating embedding on their own. \nEmbedded an audible disclaimer (e.g. \"This segment was generated by AI\") automatically into every synthesized audio file.\nAdded an imperceptible watermark to generated audio so third parties can verify VibeVoice provenance. Please see contact information at the end of this model card.\nUsers are responsible for sourcing their datasets legally. This may include securing appropriate rights and/or anonymizing data prior to use with VibeVoice. Users are reminded to be mindful of data privacy concerns. \n\n\n## Contact\nThis project was conducted by members of Microsoft Research. We welcome feedback and collaboration from our audience. If you have suggestions, questions, or observe unexpected/offensive behavior in our technology, please contact us at VibeVoice@microsoft.com.\nIf the team receives reports of undesired behavior or identifies issues independently, we will update this repository with appropriate mitigations.\n\n---\n\n# ONNX build — contents, status, and findings\n\nONNX exports of VibeVoice-Realtime-0.5B decomposed into sub-parts (Olive + onnxruntime-genai),\nacross a **3 precisions × 2 devices** matrix. Built 2026-08-04. Scripts in [`code/`](code).\n\n## STATUS: produces speech; quality not yet at parity with PyTorch\n\n`cpu_fp32` / `cpu_int4` generate **intelligible speech that stops on its own**. Getting there took\nfour separate fixes, all in the *driver/export*, none in the weights — see\n[Findings #0](#0-four-defects-between-export-and-intelligible-speech). Voice quality is\n**improved but still short of the PyTorch reference** and is the open item.\n`cpu_fp16` still cannot decode at all (unrelated bug — Findings #1).\n\n| target | attention op | `eval.py` | real generation |\n|---|---|---|---|\n| `cpu_fp32`  | GroupQueryAttention    | 5/5 PASS | **works** — intelligible, self-terminating |\n| `cpu_int4`  | GroupQueryAttention    | 5/5 PASS | works; int4 conditions the diffusion head, so prefer fp32 |\n| `cpu_fp16`  | **MultiHeadAttention** | 5/5 PASS | **crashes on decode step 1** (Findings #1) |\n| `cuda_int4` | GroupQueryAttention    | 5/5 PASS | untested (needs a GPU) |\n| `cuda_fp16` | GroupQueryAttention    | 5/5 PASS | untested (needs a GPU) |\n| `cuda_fp32` | **Attention (packed)** | 5/5 PASS | untested — non-GQA, verify first |\n\nEvery measurement quoted below is reproducible in\n**[`audio_analysis.ipynb`](audio_analysis.ipynb)** (executed, plots included): waveforms, energy\nprofiles, F0 tracks, spectrograms, frame-seam ratios, babble spectra, the text-conditioning\nprogression, and a full acoustic-decoder characterisation (causality, 56-frame receptive field,\nstreaming-vs-batch equality, RTF).\n\nSections 1–8 need only numpy + matplotlib and read the shipped `samples/`:\n`uv run --with matplotlib jupyter lab`. Section 9 re-measures the decoder live if `onnxruntime` and\n`cpu_fp32/` are present, and otherwise prints the recorded results — the real latents it needs are\nshipped as `samples/latents_*.npy` (**the sweep is meaningless on random latents**, which drive this\ndecoder to near-silence).\n\n### Samples\n\nAll for *\"Hello there. This is the VibeVoice realtime model speaking from an ONNX build.\"*\nin [`samples/`](samples), kept as a record of each fix:\n\n| file | what it shows |\n|---|---|\n| `v0_babble_no_textlm_{int4,fp32}.wav` | original defect: voice timbre, unintelligible babble |\n| `v1_textlm_fix.wav` | after exporting the missing 4-layer text LM |\n| `v2_prompt_neg_interleave.wav` | + correct prompt, real CFG negative stream, windowed interleave |\n| `v3_batchdecode_cfg{1.3,3.0}.wav` | + single-pass decode (seams 14.11× → 3.16×); cfg 3.0 clearly better |\n| `v4_eos_cfg3.0.wav` | **current best** — + learned stop; 6.13 s instead of a padded 10.67 s |\n\n## Contents\n\nEach `{device}_{precision}/` holds:\n\n| file | role |\n|---|---|\n| `llm_decoder.onnx` | the **20-layer `tts_language_model`** backbone, `inputs_embeds → hidden_states` |\n| `text_lm.onnx` | the **4-layer `language_model`** text encoder (final norm = `Identity`), carries its own `embed_tokens` |\n| `type_embed.npy` | `[2, 896]` `tts_input_types` lookup — row 1 = text, row 0 = speech; added to every TTS-LM input |\n| `eos_head.npz` | `tts_eos_classifier` (`896→896→1`) — the learned stop; run in numpy each frame |\n| `embeddings.onnx` | `input_ids → inputs_embeds` Gather companion — always fp16 |\n| `acoustic_connector.onnx` | acoustic latent → LLM hidden space |\n| `diffusion_head.onnx` | DiT denoiser (hidden=896), conditioned on LLM hidden states |\n| `acoustic_decoder.onnx` | latents → 24 kHz waveform (decoder-only; realtime ships no acoustic *encoder*) |\n| `tokenizer*.json`, `chat_template.jinja`, `genai_config.json` | runtime assets |\n\n| target | llm | text_lm | acoustic_decoder | diffusion_head | acoustic_connector | embeddings | total |\n|---|---|---|---|---|---|---|---|\n| `cpu_int4`  |  182 MB | 748 MB | 1312 MB | 160 MB | 3 MB | 259 MB | 2.6 GB |\n| `cpu_fp16`  |  571 MB | 374 MB |  733 MB |  80 MB | 1 MB | 259 MB | 2.0 GB |\n| `cpu_fp32`  | 1139 MB | 748 MB | 1312 MB | 160 MB | 3 MB | 259 MB | 3.6 GB |\n| `cuda_int4` |  164 MB | 748 MB | 1312 MB | 160 MB | 3 MB | 259 MB | 2.6 GB |\n| `cuda_fp16` |  571 MB | 374 MB |  733 MB |  80 MB | 1 MB | 259 MB | 2.0 GB |\n| `cuda_fp32` | 1139 MB | 748 MB | 1312 MB | 160 MB | 3 MB | 259 MB | 3.6 GB |\n\n**`text_lm` is fp32 even in int4 targets.** `--precision int4` drives the genai `ModelBuilder`\n(MatMulNBits) and applies to `llm_decoder` **only**; every other component is exported by Olive,\nwhich has no int4 path. The 4-layer text encoder therefore ships fp32 (748 MB) in int4 builds.\nIt must still live in the int4 directory — that is the directory the driver loads.\n\n**int4 is larger than fp16 overall — expected, not a packaging error.** `--precision` sets the\n**LLM** quantization only; the audio/diffusion blocks are conv-VAE/DiT with no\nMatMulNBits-quantizable weights, so an int4 build exports them **fp32** (exactly 2× their fp16\nsize), outweighing the LLM's ~3× shrink. `embeddings.onnx.data` is identical (259 MB) everywhere —\nalways written fp16 by design (an fp32 `[vocab, hidden]` table trips the protobuf 2 GB limit, and\nthe driver upcasts on read).\n\n## Usage\n\n```bash\npip install -r code/requirements.txt\n\n# --max-frames is only a hard cap: the exported tts_eos_classifier stops generation on its own.\n# cfg 3.0 is the default and is audibly better than 1.3 on this build.\npython code/inference_realtime.py --text \"Hello there.\" --out out.wav cpu_fp32\n\n# parity eval vs the PyTorch reference (needs the source checkpoint)\npython code/eval.py --device cpu --precision int4 realtime\n```\n\n`code/`: `inference_realtime.py` (entry point) · `common.py` (ONNX helpers, `OnnxLLM` KV-cache\ndriver, `DiffusionSampler`, audio I/O) · `optimize.py` (builder + registry, imported by `common.py`)\n· `user_script.py` (Olive loaders/io_configs) · `eval.py` · `vibevoice/` (**vendored** upstream\nsubset, 543 KB, MIT — `VIBEVOICE_LICENSE`; required at inference because `common.make_scheduler`\nimports `vibevoice.schedule.dpm_solver`. Never `import vibevoice` directly — its `__init__` collides\nwith transformers' registration; the code uses an isolated-import shim).\n\n## Findings\n\n### 0. Four defects between export and intelligible speech\n\nAll four were driver/export bugs, fixed in this order. Each is worth knowing separately because\n**each one alone still left the audio sounding wrong**, which made them easy to confuse.\n\n| # | defect | symptom | fix |\n|---|---|---|---|\n| a | 4-layer text LM never exported | unintelligible babble | export `text_lm.onnx` + `type_embed.npy` |\n| b | wrong prompt + fake CFG negative | speech-like but not human | `strip()+\"\\n\"`, no special tokens; real parallel negative stream seeded with `<\\|image_pad\\|>`; 5-token/6-frame interleave |\n| c | per-frame acoustic decode | buzzy seam every 3200 samples | decode all latents in **one** pass (seam energy 14.11× → 3.16×) |\n| d | `tts_eos_classifier` never exported | ~40% of the clip was post-speech drift | export `eos_head.npz`, stop at `sigmoid > 0.5` |\n\nOn (d), the numbers for the 18-token sample: generation used to run to `--max-frames` (80 frames =\n10.67 s) regardless of the text. The classifier fires at **frame 46 (p=0.965) = 6.13 s**, and v4 is\nsample-identical to v3 up to that point — it purely removes the tail, which had decayed to\n`rms=0.0372`, collapsed to near-silence (`0.0003`), then emitted an unrelated `0.0902` burst.\n\nNote the text is *consumed* by frame ~24 while the model keeps speaking to frame 46 — that gap is\n**by design**, not drift: text is ingested in 5-token windows faster than it is rendered at 6\nframes per window. That is exactly why the learned stop is needed instead of a frame budget derived\nfrom token count.\n\nThe remaining gap is voice quality, not structure or intelligibility.\n\n### 0a. Detail: the missing text LM\n\n`Realtime` has **two** language models. `model.language_model` (**4 layers**, 49 tensors, final norm\nreplaced by `nn.Identity()`) encodes the *text*; `model.tts_language_model` (**20 layers**) is the\nTTS backbone. The reference pipeline\n(`vibevoice/modular/modeling_vibevoice_streaming_inference.py`) is:\n\n```python\nlm_hidden = language_model(text_embeds)           # 4-layer text encoder\nstart = inputs_embeds.shape[1] - lm_hidden.shape[1]\ninputs_embeds[:, start:, :] = lm_hidden            # splice text hidden into the TAIL\ninputs_embeds += model.tts_input_types(masks)      # segment/type embedding\noutputs = tts_language_model(inputs_embeds=...)    # then the 20-layer backbone\nlogits = tts_eos_classifier(hidden[:, -1, :])      # natural stop\n```\n\nThe **original** build exported only `tts_language_model`, omitting `model.language_model` (text\nencoder), `model.tts_input_types` (type embedding) and `tts_eos_classifier` (EOS). The driver fed raw\n*text-token* embeddings straight into the TTS backbone, which was never trained to consume them — so\nthe backbone, diffusion head and acoustic decoder all worked (hence voice-like timbre) while the text\nconditioning never happened.\n\nMeasured on `v0_babble_*.wav`: the spectrum sits in the voice band (300–3000 Hz ≈ 55%, ZCR\n0.04–0.07 — not noise), but per-100 ms RMS std is only 0.012 with 1% silence on fp32 — a continuous\ndrone with none of the pause structure of real speech. **int4 and fp32 failed identically, which was\nthe tell that this was structural, not a quantization/precision problem.**\n\nAll three are now exported: `text_lm.onnx`, plus `type_embed.npy` and `eos_head.npz` (both tiny —\na 2×896 lookup and an 896→896→1 MLP — computed in numpy rather than given their own graphs).\n\nThe streaming processor also expects a `cached_prompt` (voice-prompt KV cache for *both* LMs), so a\nfaithful port needs that path too.\n\n**Fix required:** export the 4-layer text LM + `tts_input_types` (and ideally `tts_eos_classifier`)\nas additional components, and rewrite the driver to do the two-stage splice.\n\n### 1. The attention op is picked by `(execution_provider, io_dtype)` — and one pick can't decode\n\ngenai's `builders/base.py::make_attention_init()` looks that pair up in `is_gqa_supported()`, then\n`is_packed_attn_supported()`; whichever matches decides the op. It is not selectable. Verified\nagainst the emitted graphs (`onnx.load(..., load_external_data=False)` + a `Counter` over `op_type`):\n\n| target | io_dtype | op emitted | why |\n|---|---|---|---|\n| `cpu_int4` | FLOAT (int4-on-cpu ⇒ fp32 I/O) | GroupQueryAttention | `(\"cpu\",FLOAT)` ∈ GQA set |\n| `cpu_fp32` | FLOAT | GroupQueryAttention | `(\"cpu\",FLOAT)` ∈ GQA set |\n| `cpu_fp16` | FLOAT16 | **MultiHeadAttention** | in *neither* set → fallback |\n| `cuda_int4` / `cuda_fp16` | FLOAT16 | GroupQueryAttention | `(\"cuda\",FLOAT16)` ∈ GQA set |\n| `cuda_fp32` | FLOAT | **Attention (packed)** | ∉ GQA, ∈ packed set |\n\n**Why `cpu_fp16` fails.** The model is GQA-shaped (`num_attn_heads` ≠ `num_kv_heads`), so the MHA\npath inserts a `repeat_kv` expansion. It prefills fine, then dies on the first single-token step:\n\n```\nFAIL : Non-zero status code returned while running Cast node.\nName:'InsertedPrecisionFreeCast_/model/layers.1/attn/v_proj/repeat_kv/Reshape_4/output_0'\nShape mismatch attempting to re-use buffer. {1,1,896} != {1,19,896}\n```\n\n— a buffer sized for the 19-token prefill, reused for the 1-token decode. Only GQA sets\n`past_present_share_buffer`, so only GQA survives the prefill→decode length change here.\n`cuda_fp32` (packed Attention) is also non-GQA and unverified.\n\n### 2. Passing the eval does NOT mean the model works\n\nAll six targets pass 5/5 — including one that can't decode a token and two that emit babble. Not an\neval bug, a scope limit: the `llm` check is **structural** (it counts ops), stage B SKIPs the\nautoregressive loop, and nothing compares generated *audio* to a reference. **Always run the\ninference driver and listen.**\n\n### 3. `acoustic_decoder` shows cos ≈ 0.88–0.92 and still passes — deliberate\n\nFed random latents the decoder emits near-silence, so cosine is noise-dominated while `max|Δ|` is\n~1e-07 (fp16 builds) / ~3–4e-10 (fp32 & int4). The criterion is `cos ≥ 0.99 OR max|Δ| tiny`. Do not\n\"fix\" it by tightening the threshold.\n\n### 4. Other notes\n\n- **20 attention nodes in every target** — the TTS backbone genuinely has **20** layers, not the 24\n  `decoder_config` advertises (`tts_backbone_num_hidden_layers` is the real count).\n- **fp16-on-CPU is buildable** only because the builder calls genai `create_model()` **directly**;\n  the \"FP16 is not supported on CPU\" refusal lives in *Olive's* ModelBuilder pass, which that path\n  bypasses. It builds — see Findings #1 for whether it runs.\n- **CUDA graphs build on a CPU-only box.** `create_model()` emits a CUDA-targeted graph with no CUDA\n  runtime present, and the Olive component passes are pure graph transforms. Building ≠ running.\n- **No learned EOS is exported** (`tts_eos_classifier`), so generation stops at `--max-frames`.\n- io_configs use `dynamic_shapes`, not `dynamic_axes` — required, since the dynamo exporter ignores\n  `dynamic_axes` and would bake the dummy's dimensions in as static.\n\n## Provenance\n\n```bash\npython code/optimize.py --device {cpu,cuda} --precision {int4,fp16,fp32} realtime\n```\n\nModel weights follow the upstream license above. Vendored `vibevoice/` source is MIT — see\n`code/VIBEVOICE_LICENSE`.\n",
+      "arxiv_ids": [
+        "2508.19205",
+        "2412.08635"
+      ],
+      "datasets": [],
+      "base_models": [
+        "microsoft/VibeVoice-Realtime-0.5B"
+      ],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "generative_music_audio": 5,
+        "speech_models": 16
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech (pipeline tag)",
+        "Generative Music & Audio: audio generation",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "IndexTeam/IndexTTS-2.5",
+      "author": "IndexTeam",
+      "created_at": "2026-08-10",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "indextts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "zero-shot",
+        "voice-cloning",
+        "multilingual",
+        "cross-lingual",
+        "emotion-controllable",
+        "zh",
+        "en",
+        "ja",
+        "es",
+        "ar",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 16,
+      "trending_score": 0.0,
+      "library_name": "indextts",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/IndexTeam/IndexTTS-2.5",
+      "card_text": "---\nlanguage:\n  - zh\n  - en\n  - ja\n  - es\n  - ar\nlicense: other\nlicense_name: bilibili-model-license\nlicense_link: LICENSE\nlibrary_name: indextts\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - tts\n  - zero-shot\n  - voice-cloning\n  - multilingual\n  - cross-lingual\n  - emotion-controllable\n---\n# IndexTTS-2.5\n\nIndexTTS-2.5 is a zero-shot text-to-speech model that performs voice cloning from a single reference audio. It supports **Chinese, English, Japanese, Spanish, and Arabic**, with cross-lingual voice transfer and disentangled emotion control.\n\nCompared to IndexTTS-2, it adds Japanese/Spanish/Arabic support, improves inference speed, and enhances controllability of Chinese Pinyin, English CMU phonemes, and Japanese Kana.\n\n## Model Details\n\n- **Developed by:** IndexTeam, Bilibili\n- **Model type:** Autoregressive zero-shot TTS (GPT + DiT + BigVGAN)\n- **Languages:** Chinese, English, Japanese, Spanish, Arabic\n- **License:** Bilibili Model License\n\n### Model Sources\n\n- **Repository:** [github.com/index-tts/index-tts](https://github.com/index-tts/index-tts)\n- **Demo:** [IndexTTS-2.5 Demo Page](https://index-tts.github.io/index-tts2-5.github.io/)\n\n## How to Get Started\n\n### Installation\n\n```bash\ngit clone https://github.com/index-tts/index-tts.git && cd index-tts\ngit lfs pull\npip install -U uv\nuv sync --all-extras\n```\n\n### Download Model Weights\n\n```bash\n# HuggingFace\nuv tool install \"huggingface-hub[cli,hf_xet]\"\nhf download IndexTeam/IndexTTS-2.5 --local-dir=checkpoints\n\n# ModelScope\nuv tool install \"modelscope\"\nmodelscope download --model IndexTeam/IndexTTS-2.5 --local_dir checkpoints\n```\n\n### Quick Inference\n\n```python\nfrom indextts.infer_v2_5 import IndexTTS2\n\ntts = IndexTTS2(cfg_path=\"checkpoints/config.yaml\", model_dir=\"checkpoints\", use_bf16=True)\n\n# Basic voice cloning\ntts.infer(\n    spk_audio_prompt=\"prompt.wav\",\n    text=\"Hello, this is a voice cloning demo.\",\n    lang=\"EN\",\n    output_path=\"output.wav\",\n)\n\n# With emotion control\ntts.infer(\n    spk_audio_prompt=\"prompt.wav\",\n    text=\"快躲起来！是他要来了！\",\n    lang=\"ZH\",\n    output_path=\"output.wav\",\n    emo_vector=[0, 0, 0.8, 0, 0, 0, 0, 0],\n)\n\n# With Pinyin/phoneme annotation\ntts.infer(\n    spk_audio_prompt=\"prompt.wav\",\n    text=\"他在银<行|XING2>里<行|HANG2>走了半天。\",\n    lang=\"ZH\",\n    output_path=\"output.wav\",\n)\n```\n\n### Web Demo\n\n```bash\nuv run webui.py --version 2.5 --model_dir ./checkpoints\n```\n\n## Uses\n\n### Direct Use\n\n- Zero-shot voice cloning from a single reference audio\n- Multilingual speech synthesis (Chinese, English, Japanese, Spanish, Arabic)\n- Cross-lingual voice transfer (e.g., Chinese speaker voice → English output)\n- Emotion-controllable speech synthesis via emotion vectors, emotion reference audio, or text-based emotion detection\n\n### Downstream Use\n\n- Audiobook and podcast production\n- Voice dubbing and localization\n- Conversational AI and virtual assistants\n\n### Out-of-Scope Use\n\n- Impersonation or deception without consent\n- Generating misleading or fraudulent audio content\n- Any use that violates applicable laws or regulations\n\n## Bias, Risks, and Limitations\n\n- Voice cloning quality may vary across speakers and languages.\n- The model may produce artifacts or unnatural prosody for very long or highly complex text.\n- Cross-lingual transfer quality depends on the target language and speaker characteristics.\n- The model does not verify speaker identity or consent. Users are responsible for ethical use.\n\n## Evaluation\n\n### Zero-Shot TTS (CV3-Eval)\n\n| Model | Params | zh WER↓ | zh SS↑ | en WER↓ | en SS↑ | es WER↓ | es SS↑ | ja WER↓ | ja SS↑ | ar WER↓ | ar SS↑ |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| VoxCPM2 | 2B | 3.88 | 74.99 | 5.13 | 71.57 | 5.49 | 74.67 | 6.69 | 72.90 | 14.94 | 65.99 |\n| CosyVoice3-0.5B | 0.5B | 3.84 | 80.01 | 4.88 | 74.16 | 4.04 | 78.85 | - | 76.36 | - | - |\n| Fish Audio S2 Pro | 4B | 3.62 | 67.79 | 3.83 | 61.66 | 2.93 | 67.44 | 5.15 | 66.15 | 14.15 | 59.43 |\n| Qwen3-TTS | 1.7B | 3.27 | 73.02 | 5.06 | 67.17 | 2.87 | 73.17 | 5.89 | 70.18 | - | - |\n| **IndexTTS2.5** | **0.8B** | 4.36 | 77.10 | 5.12 | 68.06 | 3.75 | 76.39 | 5.66 | 74.62 | 14.88 | 69.74 |\n| **IndexTTS2.5-RL** | **0.8B** | 3.93 | 77.92 | 3.89 | 67.79 | 3.33 | 76.68 | 5.30 | 75.41 | 13.58 | 70.36 |\n\n### Cross-Lingual TTS (Chinese prompt → target language)\n\n| Model | Params | zh→en WER↓ | zh→en SS↑ | zh→es WER↓ | zh→es SS↑ | zh→ja WER↓ | zh→ja SS↑ | zh→ar WER↓ | zh→ar SS↑ |\n|---|---|---|---|---|---|---|---|---|---|\n| VoxCPM2 | 2B | 4.48 | 64.25 | 16.38 | 64.89 | 11.84 | 71.54 | 11.09 | 67.62 |\n| CosyVoice3-0.5B | 0.5B | 3.23 | 62.79 | 4.58 | 64.04 | - | - | - | - |\n| **IndexTTS2.5** | **0.8B** | 3.62 | 63.83 | 5.17 | 65.48 | 6.57 | 74.16 | 9.51 | 71.02 |\n| **IndexTTS2.5-RL** | **0.8B** | 3.55 | 67.47 | 4.86 | 64.47 | 6.38 | 75.82 | 9.89 | 73.05 |\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 20,
+      "topic_scores": {
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license other",
+        "community likes 16"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ekacare/parrotlet-a-2.5-pro",
+      "author": "ekacare",
+      "created_at": "2026-08-07",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "speech-llm",
+        "feature-extraction",
+        "medical",
+        "speech",
+        "asr",
+        "multilingual",
+        "automatic-speech-recognition",
+        "custom_code",
+        "en",
+        "hi",
+        "mr",
+        "kn",
+        "te",
+        "base_model:google/medgemma-4b-it",
+        "base_model:finetune:google/medgemma-4b-it",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 2,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/ekacare/parrotlet-a-2.5-pro",
+      "card_text": "---\nlicense: other\nlicense_name: health-ai-developer-foundations\nlicense_link: https://developers.google.com/health-ai-developer-foundations/terms\nlanguage:\n- en\n- hi\n- mr\n- kn\n- te\nmetrics:\n- wer\npipeline_tag: automatic-speech-recognition\nlibrary_name: transformers\ntags:\n- medical\n- speech\n- asr\n- multilingual\nbase_model:\n- openai/whisper-large-v3\n- google/medgemma-4b-it\n---\n\n# EkaCare Parrotlet-a 2.5 Pro\n\nParrotlet-a 2.5 Pro is a purpose-built automatic speech recognition (ASR) model for medical speech in Indian healthcare settings. It transcribes **Indian English, Hindi, Marathi, Kannada and Telugu**, including the heavily code-mixed speech typical of real consultations (English drug names and clinical terms embedded in Indic speech).\n\n[**Live demo**](https://medai.eka.care/asr) · [**Launch blog**](https://info.eka.care/services/benchmark-update-releasing-parrotlet-a-2-5-pro)\n\nThe model combines a **Whisper large-v3 encoder** with a **MedGemma 4B decoder** through a lean projector layer, and was further tuned with GRPO on medical conversation data. Weights are stored in bfloat16.\n\n## Benchmark results\n\nRe-benchmarked against nine production ASR systems on medical evaluation sets in five Indian languages, plus AI4Bharat's IndicVoices as an out-of-domain check. Every medical sample carries a SQUIM objective STOI-based audio-quality rating (binned into Excellent / Good / Bad / Poor) and medical-entity annotations.\n\n**Metric — Semantic WER**: word error rate after medical-unit, number, transliteration and orthography normalization, so a model is not penalised for spelling a drug name in a different script. Lower is better.\n\n### Semantic WER — medical conversations\n\n| Model | Indian English | Hindi | Marathi | Kannada | Telugu |\n|---|---|---|---|---|---|\n| **Parrotlet-a 2.5 Pro** (Eka.care) | **9.15** | **18.16** | **31.61** | **29.24** | **24.77** |\n| Gemini 3.1 Pro (Google) | 12.09 | 19.08 | 39.26 | 36.38 | 31.80 |\n| Gemini 3.6 Flash (Google) | 12.50 | 21.96 | 44.44 | 43.43 | 37.81 |\n| GPT Transcribe (OpenAI) | 13.00 | 26.71 | 51.98 | 58.92 | 42.56 |\n| Saaras v3 (Sarvam) | 14.59 | 21.64 | 40.75 | 33.33 | 29.79 |\n| Scribe V2 (ElevenLabs) | 16.23 | 21.91 | 38.14 | 39.61 | 33.40 |\n| Whisper Large v3 (OpenAI) | 17.46 | 52.26 | 101.42 | 99.59 | 96.22 |\n| Prisma v2.5 (Gnani) | 26.12 | 35.90 | 52.08 | 51.99 | 53.82 |\n| IndicConformer 600M (AI4Bharat) | — | 37.49 | 56.02 | 58.37 | 42.09 |\n\nBest in every language on the medical conversation sets.\n\n### Medical entity accuracy\n\nShare of medical keyword tokens recovered — drug names, doses, conditions, procedures. This is the number that decides whether a transcript is clinically usable. Higher is better.\n\n| Model | Indian English | Hindi | Marathi | Kannada | Telugu |\n|---|---|---|---|---|---|\n| **Parrotlet-a 2.5 Pro** (Eka.care) | **95.05** | **89.10** | **82.46** | **86.01** | **88.99** |\n| Gemini 3.1 Pro (Google) | 94.94 | 88.08 | 57.43 | 70.38 | 71.55 |\n| Gemini 3.6 Flash (Google) | 94.00 | 82.88 | 52.75 | 63.94 | 64.08 |\n| GPT Transcribe (OpenAI) | 90.96 | 73.58 | 42.19 | 43.69 | 54.44 |\n| Saaras v3 (Sarvam) | 87.23 | 76.71 | 46.11 | 62.87 | 63.18 |\n| Scribe V2 (ElevenLabs) | 86.16 | 77.64 | 69.18 | 75.29 | 79.42 |\n| Whisper Large v3 (OpenAI) | 83.81 | 47.42 | 17.37 | 8.50 | 19.95 |\n| Prisma v2.5 (Gnani) | 72.26 | 50.93 | 32.31 | 42.37 | 40.63 |\n| IndicConformer 600M (AI4Bharat) | — | 50.36 | 27.37 | 35.73 | 44.76 |\n\n### Semantic WER — IndicVoices (out-of-domain)\n\nGeneral-domain read and spontaneous speech, outside the medical domain the model is tuned for. Parrotlet-a 2.5 Pro leads on Kannada and sits within a point or two of the best models on Telugu and Marathi — specialisation has not cost general coverage.\n\n| Model | Hindi | Marathi | Kannada | Telugu |\n|---|---|---|---|---|\n| Saaras v3 (Sarvam) | **10.54** | 13.16 | 25.53 | 20.57 |\n| Prisma v2.5 (Gnani) | 11.65 | 14.20 | 25.16 | **19.20** |\n| IndicConformer 600M (AI4Bharat) | 10.76 | **12.58** | 26.25 | 20.69 |\n| **Parrotlet-a 2.5 Pro** (Eka.care) | 12.45 | 13.27 | **24.71** | 20.01 |\n| Gemini 3.1 Pro (Google) | 12.51 | 18.51 | 33.72 | 24.51 |\n| Scribe V2 (ElevenLabs) | 12.21 | 19.58 | 38.66 | 28.08 |\n| Gemini 3.6 Flash (Google) | 15.99 | 24.04 | 41.72 | 30.69 |\n| GPT Transcribe (OpenAI) | 14.24 | 23.27 | 47.12 | 28.96 |\n| Whisper Large v3 (OpenAI) | 25.52 | 77.91 | 88.79 | 105.53 |\n\n### Audio-quality robustness\n\nOn the medical sets split by audio quality (Excellent → Poor, estimated from the audio itself using SQUIM objective STOI, binned at 0.5 / 0.65 / 0.85), Parrotlet-a 2.5 Pro keeps the flattest degradation profile and is the best model in nearly every quality bucket in every language — e.g. Indian English semantic WER of 6.49 on Excellent audio and 25.14 on Poor audio, versus 8.59 → 43.86 for the next-best model.\n\n## Installation Requirements\n\nPython >= 3.10 and the following packages:\n\n```bash\npip install \"torch>=2.7.0\" \"transformers>=4.52.0,<5\" librosa huggingface_hub\n```\n\n## Loading the model from Hugging Face Hub\n\n```python\nfrom transformers import AutoModel\nimport librosa\n\nrepo_name = \"ekacare/parrotlet-a-2.5-pro\"\nmodel = AutoModel.from_pretrained(repo_name, trust_remote_code=True)\n```\n\n## Load an audio file\n\n```python\naudio_path = \"path/to/your/audio.mp3\"\naudio, sample_rate = librosa.load(audio_path, sr=16000)  # 16 kHz is required — sr=16000 resamples on load\n```\n\n## Perform speech recognition\n\n```python\ntranscription = model.transcribe(audio, sample_rate)\nprint(\"Transcription:\", transcription)\n```\n\n## Notes\n\n- Audio (wav, mp3) must be passed at **16 kHz** — load with\n  `librosa.load(..., sr=16000)` as above. Other sample rates are not\n  currently handled by `transcribe()`.\n- The model handles short-form audio up to **30 seconds; longer clips are\n  silently truncated** — chunk longer recordings yourself before\n  transcribing.\n- Weights are bfloat16; the model runs on GPU (CUDA) or CPU.\n\n## License\n\nThis model combines three components:\n\n- **Audio encoder** — derived from [`openai/whisper-large-v3`](https://huggingface.co/openai/whisper-large-v3) (Apache-2.0).\n- **Projector layers** — trained from scratch by Eka Care (Apache-2.0).\n- **Decoder** — a fine-tune of [`google/medgemma-4b-it`](https://huggingface.co/google/medgemma-4b-it), a model derivative under Google's\n  [Health AI Developer Foundations Terms of Use](https://developers.google.com/health-ai-developer-foundations/terms).\n\nThe combined weights are therefore distributed under the **Health AI\nDeveloper Foundations Terms of Use** — by downloading or using this model\nyou agree to those terms, including their use restrictions and the\nrequirement that further derivatives carry the same terms.\n\n## Citation\n\nIf you use this model, please cite:\n\n```bibtex\n@software{parrotlet_a_2_5_pro,\n  author = {{Eka Care}},\n  title  = {Parrotlet-a 2.5 Pro: medical speech recognition for Indian languages},\n  year   = {2026},\n  url    = {https://huggingface.co/ekacare/parrotlet-a-2.5-pro}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "openai/whisper-large-v3",
+        "google/medgemma-4b-it"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 3
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "dots-studio/dots.tts-mf-1step",
+      "author": "dots-studio",
+      "created_at": "2026-08-10",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dots_tts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "flow-matching",
+        "meanflow",
+        "one-step",
+        "arxiv:2606.07080",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "dots_tts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/dots-studio/dots.tts-mf-1step",
+      "card_text": "---\nlicense: apache-2.0\npipeline_tag: text-to-speech\nlibrary_name: dots_tts\ntags:\n  - text-to-speech\n  - tts\n  - voice-cloning\n  - flow-matching\n  - meanflow\n  - one-step\n---\n\n# dots.tts-mf-1step\n\n<p align=\"left\">\n  <a href=\"https://github.com/studio-dots-ai/dots.tts\"><img src=\"https://img.shields.io/badge/GitHub-studio--dots--ai%2Fdots.tts-blue?logo=github\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/spaces/dots-studio/dots.tts\"><img src=\"https://img.shields.io/badge/Playground-Live-orange\" alt=\"Playground\"></a>\n  <a href=\"https://studio-dots-ai.github.io/dots.tts-demo/\"><img src=\"https://img.shields.io/badge/Demo%20Page-Live-red\" alt=\"Demo Page\"></a>\n</p>\n\nThis repository provides a standalone dots.tts artifact for **fixed one-step inference**.\nThe sampling contract is stored in `config.json` and selected automatically.\nSampling options should be omitted.\n\n## Quick start\n\nInstall dots.tts from its official repository, then load this artifact exactly\nlike a standard dots.tts model:\n\n```python\nfrom dots_tts.runtime import DotsTtsRuntime\nimport soundfile as sf\n\nruntime = DotsTtsRuntime.from_pretrained(\n    \"dots-studio/dots.tts-mf-1step\",\n    precision=\"bfloat16\",\n)\n\nresult = runtime.generate(\n    text=\"Hello, this is a one-step synthesis test.\",\n    prompt_audio_path=\"reference.wav\",\n    prompt_text=\"The exact transcript of the reference audio.\",\n)\nsf.write(\"output.wav\", result[\"audio\"].float().cpu().squeeze().numpy(), result[\"sample_rate\"])\n```\n\n## Scope and limitations\n\nThis model was optimized for the fixed one-step path. Multi-step quality is not\nclaimed. A fresh public benchmark evaluation is not included in this artifact.\nHigh-fidelity voice cloning must be used only with authorization and consent;\ndo not use it for impersonation, fraud, or disinformation.\n\n---\n\n## Citation\n\n```bibtex\n@article{dotstts2026,\n  title         = {dots.tts Technical Report},\n  author        = {dots.tts Team},\n  year          = {2026},\n  eprint        = {2606.07080},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.SD},\n}\n```\n\n## License\n\nReleased under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).\n",
+      "arxiv_ids": [
+        "2606.07080"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "vanch007/mlx-indextts2-2.5-fp32",
+      "author": "vanch007",
+      "created_at": "2026-08-11",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx",
+        "indextts2",
+        "indextts-2.5",
+        "apple-silicon",
+        "text-to-speech",
+        "voice-cloning",
+        "emotion-control",
+        "fp32",
+        "zh",
+        "en",
+        "ja",
+        "es",
+        "ar",
+        "base_model:IndexTeam/IndexTTS-2.5",
+        "base_model:finetune:IndexTeam/IndexTTS-2.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/vanch007/mlx-indextts2-2.5-fp32",
+      "card_text": "---\nlibrary_name: mlx\npipeline_tag: text-to-speech\nbase_model: IndexTeam/IndexTTS-2.5\nlicense: other\nlicense_name: bilibili-model-use-license-agreement\nlicense_link: https://huggingface.co/IndexTeam/IndexTTS-2.5/blob/d0aa86e75bb6f3437f3831e95056fa72842d89ef/LICENSE\nlanguage:\n- zh\n- en\n- ja\n- es\n- ar\ntags:\n- indextts2\n- indextts-2.5\n- mlx\n- apple-silicon\n- text-to-speech\n- voice-cloning\n- emotion-control\n- fp32\n---\n\n# mlx-indextts2-2.5-fp32\n\nIndexTTS 2.5 converted to native MLX weights for Apple Silicon. Use it with\n[`vanch007/mlx-indextts2`](https://github.com/vanch007/mlx-indextts2).\n\n## Variant\n\n- Precision / quantization: **fp32**\n- Approximate local size: **4.0GB**\n- Source model: [`IndexTeam/IndexTTS-2.5`](https://huggingface.co/IndexTeam/IndexTTS-2.5)\n- Source revision: `d0aa86e75bb6f3437f3831e95056fa72842d89ef`\n- Conversion status: strict manifest **pass**\n- Details: All GPT, EnhancedCodec, S2Mel/DiT, and BigVGAN floating weights use float32.\n\nThe model supports Chinese, English, Japanese, Spanish, and Arabic, including\ncross-lingual voice transfer, separate speaker/emotion references, manual and\ntext-derived emotion control, and Pinyin/CMU/Kana pronunciation annotations.\n\n## Download and Run\n\n```bash\ngit clone https://github.com/vanch007/mlx-indextts2.git\ncd mlx-indextts2\nuv sync --extra v25\n\nhf download vanch007/mlx-indextts2-2.5-fp32 \\\n  --local-dir models/mlx-indextts2-2.5-fp32\n\nuv run mlx-indextts generate \\\n  --profile v25 \\\n  -m models/mlx-indextts2-2.5-fp32 \\\n  --language zh \\\n  -r /path/to/reference.wav \\\n  -t \"你好，这是 IndexTTS 2.5 的 MLX 推理测试。\" \\\n  -o output.wav\n```\n\nSee the [project README](https://github.com/vanch007/mlx-indextts2#quick-start) and\n[IndexTTS 2.5 guide](https://github.com/vanch007/mlx-indextts2/blob/main/docs/indextts-2.5.md) for batch,\nAPI, WebUI, streaming, duration, pronunciation, and emotion-control examples.\n\n## Included Files\n\n- `gpt.safetensors`\n- `codec.safetensors`\n- `s2mel.safetensors`\n- `bigvgan.safetensors`\n- `multilingual_zh_ja_yue_char_del.tiktoken`\n- `config.yaml` and `config.json`\n- `model_manifest.json` and `conversion_report.json`\n- reference preprocessing statistics/features\n- `LICENSE`\n\nThe runtime additionally resolves the manifest-declared\n`facebook/w2v-bert-2.0` and `funasr/campplus` preprocessing dependencies.\n\n## Validation Boundary\n\nThe converted component coverage and strict load checks passed. The project\nvalidation matrix also covers five-language synthesis, ASR sanity checks,\nspeaker similarity, emotion modes, cross-lingual generation, batch/API/WebUI,\nand completed-segment streaming. Results are hardware- and sample-specific;\nhuman listening remains recommended before production use.\n\n## License and Derivative Notice\n\nThe repository code is MIT-licensed, but these converted model weights are a\nDerivative Work governed by the included **bilibili Model Use License\nAgreement**. Review its commercial thresholds, downstream obligations, use\nrestrictions, and prohibited high-risk scenarios before downloading or using\nthe model.\n\nAny modifications made to the original model in this Derivative Work are not\nendorsed, warranted, or guaranteed by the original right-holder of the\noriginal model, and the original right-holder disclaims all liability related\nto this Derivative Work.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "IndexTeam/IndexTTS-2.5"
+      ],
+      "variants": [
+        "vanch007/mlx-indextts2-2.5-8bit",
+        "vanch007/mlx-indextts2-2.5-fp16"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "AetherAllan/bufeiyan-gpt-sovits-v2pro",
+      "author": "AetherAllan",
+      "created_at": "2026-08-09",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gpt-sovits",
+        "text-to-speech",
+        "voice-cloning",
+        "chinese",
+        "v2pro",
+        "zh",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/AetherAllan/bufeiyan-gpt-sovits-v2pro",
+      "card_text": "---\nlanguage:\n- zh\ntags:\n- gpt-sovits\n- text-to-speech\n- voice-cloning\n- chinese\n- v2pro\nlicense: other\n---\n\n# Bufeiyan GPT-SoVITS v2Pro Voice Model\n\n这是一个用于 GPT-SoVITS v2Pro 的中文语音合成模型。模型需要下面两个配套权重同时使用，不能把 GPT 权重和 SoVITS 权重与其他训练检查点混用。\n\n## 模型文件\n\n- GPT 模型：`GPT_weights_v2Pro/bufeiyan-e15.ckpt`\n- SoVITS 模型：`SoVITS_weights_v2Pro/bufeiyan_e8_s992.pth`\n- 参考音频：`参考音频/[步非烟]其他的福利啊。 加油哦。.wav`\n- 推理配置：`GPT_SoVITS/configs/tts_infer.yaml`\n\n当前配置使用 GPT e15 和 SoVITS e8 配对。仓库中没有上传原始训练音频。\n\n## 使用前提\n\n需要先安装**原版 GPT-SoVITS**，并下载它所需的基础模型到 `GPT_SoVITS/pretrained_models`。本仓库包含推理权重、参考音频、配置文件，以及可选的训练断点和预处理数据；不包含完整的 GPT-SoVITS 程序及基础模型。\n\n## 使用原版 GPT-SoVITS WebUI\n\n在原版 GPT-SoVITS 项目根目录执行：\n\n```bash\nhf download DudeGuuud/bufeiyan-gpt-sovits-v2pro \\\n  --repo-type model \\\n  --local-dir .\n```\n\n启动原版 WebUI：\n\n```bash\nconda activate GPTSoVits\npython webui.py zh_CN\n```\n\n打开 `http://127.0.0.1:9874`，在推理页面选择：\n\n- GPT：`GPT_weights_v2Pro/bufeiyan-e15.ckpt`\n- SoVITS：`SoVITS_weights_v2Pro/bufeiyan_e8_s992.pth`\n\n然后选择或填写参考音频：`参考音频/[步非烟]其他的福利啊。 加油哦。.wav`。\n\n## 使用原版 GPT-SoVITS API\n\n原版 `api_v2.py` 的标准 `/tts` 接口即可调用，不需要本仓库之外的 API 修改：\n\n```bash\nconda activate GPTSoVits\npython api_v2.py \\\n  -a 127.0.0.1 \\\n  -p 9880 \\\n  -c GPT_SoVITS/configs/tts_infer.yaml\n```\n\n配置文件默认使用 CPU，适合 macOS Apple Silicon。启动后 API 地址是 `http://127.0.0.1:9880`。\n\n标准 API 调用示例：\n\n```bash\ncurl -X POST \"http://127.0.0.1:9880/tts\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"text\": \"你好，这是一个测试。\",\n    \"text_lang\": \"zh\",\n    \"ref_audio_path\": \"./参考音频/[步非烟]其他的福利啊。 加油哦。.wav\",\n    \"prompt_lang\": \"zh\",\n    \"prompt_text\": \"其他的福利啊。 加油哦。\",\n    \"media_type\": \"wav\"\n  }' \\\n  --output output.wav\n```\n\n## 继续训练\n\n仓库中的 `training/` 和 `logs/bufeiyan/` 文件是可选的续训包。推理用的 `e15`/`e8` 文件不含完整优化器状态，不能用于严格断点续训；续训应使用下面的完整训练断点：\n\n- GPT 完整断点：`logs/bufeiyan/logs_s1_v2Pro/ckpt/epoch=14-step=435.ckpt`\n- SoVITS 生成器断点：`logs/bufeiyan/logs_s2_v2Pro/G_233333333333.pth`\n- SoVITS 判别器断点：`logs/bufeiyan/logs_s2_v2Pro/D_233333333333.pth`\n\n下载完整仓库后，在项目根目录运行 GPT 续训：\n\n```bash\npython GPT_SoVITS/s1_train.py \\\n  --config_file training/configs/s1_resume.yaml\n```\n\n运行 SoVITS 续训：\n\n```bash\npython GPT_SoVITS/s2_train.py \\\n  --config training/configs/s2_resume.json\n```\n\n两个配置默认训练到第 20 轮。需要更多或更少轮数时，修改对应配置中的 `train.epochs`。`logs/bufeiyan/` 下的 `2-name2text.txt`、`3-bert`、`4-cnhubert`、`5-wav32k`、`6-name2semantic.tsv` 和 `7-sv_cn` 是原训练数据的预处理结果，续训时会被自动读取。\n\n续训需要使用兼容的 GPT-SoVITS v2Pro 代码和基础模型。macOS CPU 训练还需要本项目训练时使用的 CPU DataLoader 修改；GPU 环境通常可以使用对应版本的原版训练脚本。\n\n## SillyTavern 兼容说明\n\n本地版本的 `api_v2.py` 额外增加了 CORS、`/speakers`、根路径 `POST /` 和分段流式返回，这些改动是为了适配当前 SillyTavern 的 `GPT-SoVITS-V2` 插件，并不是模型运行所必需的。\n\n如果使用未修改的原版 GPT-SoVITS，应该调用标准的 `/tts` 接口。当前 SillyTavern 插件的自动声音列表和分段流式播放仍需要本地修改版 API，或者对客户端请求进行适配。\n\n## 注意事项\n\n- 这是 v2Pro 模型，只应与对应的 v2Pro GPT/SoVITS 权重配套使用。\n- 参考音频的清晰度、时长和文本匹配程度会影响合成质量。\n- 本模型和训练数据的发布不自动授予任何声音、人物、音频或文本素材的版权和使用权。\n- 公开仓库中的文件任何人都可以下载。请仅在获得必要授权的情况下使用，并避免冒充、骚扰或误导他人。\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mimba/bluetts-nnh",
+      "author": "mimba",
+      "created_at": "2026-08-10",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot",
+        "malagasy",
+        "nnh",
+        "low-resource",
+        "bluetts",
+        "dataset:mimba/multivoice-nnh",
+        "base_model:notmax123/blue-v2",
+        "base_model:quantized:notmax123/blue-v2",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/mimba/bluetts-nnh",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "mimba/multivoice-nnh"
+      ],
+      "base_models": [
+        "notmax123/blue-v2"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Panhapich/Khmer-TTS",
+      "author": "Panhapich",
+      "created_at": "2026-07-25",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "khmer",
+        "lora",
+        "fish-speech",
+        "voice-cloning",
+        "km",
+        "base_model:fishaudio/s1-mini",
+        "base_model:adapter:fishaudio/s1-mini",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Panhapich/Khmer-TTS",
+      "card_text": "---\nlicense: cc-by-nc-sa-4.0\nlanguage:\n- km\nbase_model: fishaudio/openaudio-s1-mini\npipeline_tag: text-to-speech\ntags:\n- text-to-speech\n- khmer\n- lora\n- fish-speech\n- voice-cloning\n---\n\n# Khmer TTS (Panhapich)\n\nLoRA fine-tunes of [fishaudio/openaudio-s1-mini](https://huggingface.co/fishaudio/openaudio-s1-mini)\nfor **Khmer** text-to-speech, trained in two stages on top of the frozen pretrained\ncheckpoint:\n\n1. **Khmer base** — LoRA rank 32 fine-tune on the\n   [DDD-Cambodia/khmer-speech-dataset](https://huggingface.co/datasets/DDD-Cambodia/khmer-speech-dataset)\n   corpus (~70h, multi-speaker), teaching the model Khmer pronunciation and rhythm.\n2. **Voice clone** — a second, low-rank (r=8) LoRA adapted from the Khmer base\n   checkpoint onto a specific speaker's recordings, so the model speaks Khmer *as that\n   person*.\n\nTraining code: [Pich09/voice-clone](https://github.com/Pich09/voice-clone)\n(`kaggle/khmer_tts_kaggle.ipynb` runs the full pipeline end-to-end on a free Kaggle\nGPU). See that repo's `ARCHITECTURE.md` for how the pipeline fits together.\n\n## Status\n\n🚧 Training in progress. This repo is used as a **checkpoint relay**: each Kaggle\nsession pushes its LoRA checkpoint here (with its training step and validation loss)\nso training can resume across free, session-limited GPU runs. There is no\nproduction-ready checkpoint here yet — check `registry.json` for the current best.\n\n## Repo layout\n\n```\nregistry.json                          # every checkpoint pushed so far, with step/val_loss\nlock.json                              # advisory \"who's training right now\" lock\ncheckpoints/step_<step>_<trainer>/     # one LoRA checkpoint per push\n```\n\n`registry.json` entries look like:\n\n```json\n{\"step\": 8000, \"val_loss\": 2.13, \"trainer_id\": \"panhapich\", \"shard_index\": 0,\n \"path\": \"checkpoints/step_0008000_panhapich\", \"created\": 1753000000.0}\n```\n\nThe \"best\" checkpoint is the lowest `val_loss` (ties broken by highest step); if no\nrun has a parseable val_loss yet, the most-trained (highest step) one is used instead.\nSee `khmer_tts/collab/registry.py` in the training repo for the exact selection logic.\n\n## Model architecture\n\nFish Speech is **autoregressive**, not diffusion: a text frontend turns Khmer\ngraphemes into token ids (no phonemizer/G2P), an LLM-style transformer predicts\ndiscrete audio (VQ) tokens autoregressively, and a frozen DAC-style vocoder decodes\nthose tokens to a waveform. Only the middle (acoustic codec-LM) stage is LoRA\nfine-tuned here — the text frontend and vocoder are untouched.\n\n## Intended use & limitations\n\n- Non-commercial Khmer TTS / voice-cloning research, inheriting `openaudio-s1-mini`'s\n  CC-BY-NC-SA-4.0 license.\n- **Not intended for**: impersonation without consent, voice-authentication bypass,\n  or generating misleading audio of real individuals.\n- Voice-clone-stage checkpoints require the speaker's explicit, recorded consent\n  before any use beyond personal experimentation.\n- Pronunciation quality is bounded by the training data's coverage of Khmer dialects,\n  numbers/dates/currency normalization, and code-switched text — see the training\n  repo's `MODEL_CARD.md` for the filled-in evaluation once available.\n\n## License\n\nDerived from `fishaudio/openaudio-s1-mini`, licensed CC-BY-NC-SA-4.0 (non-commercial,\nshare-alike). These checkpoints inherit that license.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/openaudio-s1-mini"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "iNLP-Lab/Myna-Hokkien",
+      "author": "iNLP-Lab",
+      "created_at": "2026-07-21",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "mynahokkien",
+        "safetensors",
+        "qwen3_omni_moe",
+        "hokkien",
+        "singapore-hokkien",
+        "speech-to-speech",
+        "audio",
+        "audio-to-audio",
+        "nan",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 2,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "mynahokkien",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/iNLP-Lab/Myna-Hokkien",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "thangylvp/stcc",
+      "author": "thangylvp",
+      "created_at": "2026-08-07",
+      "last_modified": "2026-08-11",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3_asr",
+        "automatic-speech-recognition",
+        "qwen3-asr",
+        "speech-to-command",
+        "function-calling",
+        "tool-calling",
+        "vllm",
+        "audio-text-to-text",
+        "custom_code",
+        "vi",
+        "base_model:Qwen/Qwen3-ASR-0.6B",
+        "base_model:finetune:Qwen/Qwen3-ASR-0.6B",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 1,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": true,
+      "url": "https://huggingface.co/thangylvp/stcc",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
       "score": 9,
       "topic_scores": {
-        "audio_understanding_reasoning": 5,
-        "speech_models": 1
+        "audio_understanding_reasoning": 2,
+        "speech_models": 6
       },
       "matched_topics": [
         "Audio Understanding & Reasoning",
         "Speech Generation, Recognition & Dialogue"
       ],
       "reasons": [
-        "Audio Understanding & Reasoning: audio understanding",
-        "model card links an arXiv paper",
-        "declares license apache-2.0",
-        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license apache-2.0"
       ],
       "is_new": true
     }
