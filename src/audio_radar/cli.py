@@ -14,27 +14,27 @@ from .storage import RadarStore
 
 
 def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="音乐/音频大模型每日论文雷达")
+    parser = argparse.ArgumentParser(description="Daily paper radar for music/audio foundation models")
     parser.add_argument("--config", type=Path, default=Path("config/topics.json"))
     parser.add_argument("--database", type=Path, default=Path("data/radar.db"))
     parser.add_argument("--output", type=Path, default=Path("reports"))
-    parser.add_argument("--days", type=int, help="覆盖配置中的回看天数")
-    parser.add_argument("--date", help="以 YYYY-MM-DD 作为运行日期，便于复现测试")
-    parser.add_argument("--include-seen", action="store_true", help="日报包含已出现过的论文")
-    parser.add_argument("--no-write-state", action="store_true", help="不更新 SQLite 状态")
+    parser.add_argument("--days", type=int, help="override the lookback window in the config")
+    parser.add_argument("--date", help="run as YYYY-MM-DD, useful for reproducible testing")
+    parser.add_argument("--include-seen", action="store_true", help="include papers that already appeared in the digest")
+    parser.add_argument("--no-write-state", action="store_true", help="do not update the SQLite state")
     return parser.parse_args(argv)
 
 
 def main(argv=None) -> int:
     args = parse_args(argv)
     if not args.config.exists():
-        print("配置文件不存在：{}".format(args.config), file=sys.stderr)
+        print("Config file not found: {}".format(args.config), file=sys.stderr)
         return 2
     config = json.loads(args.config.read_text(encoding="utf-8"))
     run_date = dt.date.fromisoformat(args.date) if args.date else dt.datetime.now().astimezone().date()
     lookback = args.days if args.days is not None else int(config.get("lookback_days", 7))
     if lookback < 1:
-        print("--days 必须大于 0", file=sys.stderr)
+        print("--days must be greater than 0", file=sys.stderr)
         return 2
     start_date = run_date - dt.timedelta(days=lookback)
 
@@ -72,15 +72,15 @@ def main(argv=None) -> int:
         args.output, config, selected, run_date, start_date,
         source_counts, errors, len(relevant), selected_models, len(relevant_model_families), raw_model_count,
     )
-    print("原始命中 {} 篇，去重后 {} 篇，相关 {} 篇，本期输出 {} 篇。".format(
+    print("Raw hits: {} papers, {} unique, {} relevant, {} in this digest.".format(
         len(raw_papers), len(unique), len(relevant), len(selected)
     ))
-    print("日报：{}".format(report_path))
-    print("Hugging Face 原始模型 {} 个，相关 {} 个（{} 个家族），本期输出 {} 个家族。".format(
+    print("Digest: {}".format(report_path))
+    print("Hugging Face: {} raw models, {} relevant ({} families), {} families in this digest.".format(
         raw_model_count, len(relevant_models), len(relevant_model_families), len(selected_models)
     ))
     if errors:
-        print("数据源提示：", file=sys.stderr)
+        print("Source notes:", file=sys.stderr)
         for error in errors:
             print("- " + error, file=sys.stderr)
     return 0

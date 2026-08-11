@@ -159,7 +159,7 @@ def _rebuild_openalex_abstract(index: dict) -> str:
 def fetch_openalex(config: dict, start: dt.date, end: dt.date) -> Tuple[List[Paper], List[str]]:
     api_key = os.environ.get("OPENALEX_API_KEY", "").strip()
     if not api_key:
-        return [], ["OpenAlex 已启用，但缺少 OPENALEX_API_KEY，已跳过。"]
+        return [], ["OpenAlex is enabled but OPENALEX_API_KEY is missing; skipped."]
     source_config = config["sources"]["openalex"]
     papers: List[Paper] = []
     errors: List[str] = []

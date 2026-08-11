@@ -44,7 +44,7 @@ def _model_from_item(item: dict) -> HubModel:
         likes=int(item.get("likes") or 0),
         trending_score=float(item.get("trendingScore") or 0),
         library_name=item.get("library_name") or card.get("library_name") or "",
-        license=str(card.get("license") or "未知"),
+        license=str(card.get("license") or "unknown"),
         gated=bool(item.get("gated")),
         url="https://huggingface.co/" + repo_id,
         arxiv_ids=arxiv_ids,
@@ -139,7 +139,7 @@ def score_hub_model(model: HubModel, config: dict) -> HubModel:
     combined = metadata + " " + card_text
     if any(term.lower() in combined for term in config.get("negative_keywords", [])):
         model.score = -100
-        model.reasons = ["命中排除词"]
+        model.reasons = ["matched a negative keyword"]
         return model
 
     topic_scores: Dict[str, int] = {}
@@ -158,24 +158,24 @@ def score_hub_model(model: HubModel, config: dict) -> HubModel:
                 matches.append(phrase)
             elif phrase_lower in normalized_pipeline:
                 score += max(1, int(weight) // 2)
-                matches.append(phrase + "（任务标签）")
+                matches.append(phrase + " (pipeline tag)")
         if score:
             topic_scores[topic["id"]] = score
             topic_names.append(topic["name"])
-            reasons.append((score, "{}：{}".format(topic["name"], "、".join(matches[:3]))))
+            reasons.append((score, "{}: {}".format(topic["name"], ", ".join(matches[:3]))))
 
     model.topic_scores = topic_scores
     model.matched_topics = topic_names
     model.score = sum(sorted(topic_scores.values(), reverse=True)[:2])
     if model.arxiv_ids:
         model.score += 2
-        reasons.append((2, "模型卡关联 arXiv 论文"))
-    if model.license != "未知":
+        reasons.append((2, "model card links an arXiv paper"))
+    if model.license != "unknown":
         model.score += 1
-        reasons.append((1, "声明许可证 {}".format(model.license)))
+        reasons.append((1, "declares license {}".format(model.license)))
     if model.likes >= 10:
         model.score += 1
-        reasons.append((1, "社区点赞 {}".format(model.likes)))
+        reasons.append((1, "community likes {}".format(model.likes)))
     model.reasons = [text for _, text in sorted(reasons, reverse=True)[:4]]
     return model
 

@@ -15,7 +15,7 @@ def _escape(value: str) -> str:
 
 
 def _summary(abstract: str, limit: int = 420) -> str:
-    value = " ".join((abstract or "暂无摘要").split())
+    value = " ".join((abstract or "No abstract").split())
     if len(value) <= limit:
         return value
     cut = value[:limit].rsplit(" ", 1)[0]
@@ -38,36 +38,36 @@ def markdown_report(
     lines = [
         "# {} — {}".format(config["radar_name"], run_date.isoformat()),
         "",
-        "> 检索窗口：{} 至 {} · 新论文：{} · 新模型：{} · 窗口内相关论文/模型：{}/{} · 原始论文/模型：{}/{}".format(
+        "> Lookback window: {} to {} · New papers: {} · New models: {} · relevant papers/models in window: {}/{} · raw papers/models: {}/{}".format(
             start_date.isoformat(), run_date.isoformat(), len(papers), len(models), total_relevant,
             total_relevant_models,
             sum(source_counts.values()),
             raw_model_count,
         ),
         "",
-        "来源：" + " · ".join("{}={}".format(name, count) for name, count in source_counts.items())
+        "Sources: " + " · ".join("{}={}".format(name, count) for name, count in source_counts.items())
         + " · huggingface_models={}".format(raw_model_count),
         "",
     ]
     if errors:
-        lines.extend(["## 数据源提示", ""] + ["- " + error for error in errors] + [""])
+        lines.extend(["## Source notes", ""] + ["- " + error for error in errors] + [""])
 
     if not papers and not models:
         lines.extend([
-            "## 今日无新增高相关论文",
+            "## No new highly relevant papers today",
             "",
-            "这通常表示检索窗口内的命中已在之前日报出现；可用 `--include-seen` 查看窗口内全部相关论文。",
+            "This usually means every hit in the lookback window already appeared in an earlier digest; use `--include-seen` to list all relevant items in the window.",
             "",
         ])
         return "\n".join(lines)
 
     if models:
         lines.extend([
-            "## Hugging Face 新模型信号",
+            "## Hugging Face model signals",
             "",
-            "> 活跃度不等于研究质量；downloads/likes 只作采用信号，模型卡、许可证、基准和关联论文仍需人工核验。",
+            "> Activity is not research quality; downloads/likes are adoption signals only — model cards, licenses, benchmarks, and linked papers still need manual review.",
             "",
-            "| # | 模型家族 | 更新 | 任务 | 分数 | 变体 | Downloads | Likes | License |",
+            "| # | Model family | Updated | Task | Score | Variants | Downloads | Likes | License |",
             "|---:|---|---|---|---:|---:|---:|---:|---|",
         ])
         for index, model in enumerate(models, 1):
@@ -78,7 +78,7 @@ def markdown_report(
                     model.likes, _escape(model.license),
                 )
             )
-        lines.extend(["", "### 模型卡片", ""])
+        lines.extend(["", "### Model cards", ""])
         for index, model in enumerate(models, 1):
             paper_links = " · ".join(
                 "[arXiv:{}](https://arxiv.org/abs/{})".format(arxiv_id, arxiv_id)
@@ -87,58 +87,58 @@ def markdown_report(
             lines.extend([
                 "#### M{}. {}".format(index, model.repo_id),
                 "",
-                "- **创建/更新**：{} / {}".format(model.created_at or "未知", model.last_modified),
-                "- **任务/库**：{} / {}".format(model.pipeline_tag or "未知", model.library_name or "未知"),
-                "- **相关性**：{} 分 · {}".format(model.score, "；".join(model.reasons)),
-                "- **采用信号**：downloads={} · likes={} · trending={}".format(
+                "- **Created / updated**: {} / {}".format(model.created_at or "unknown", model.last_modified),
+                "- **Task / library**: {} / {}".format(model.pipeline_tag or "unknown", model.library_name or "unknown"),
+                "- **Relevance**: {} pts · {}".format(model.score, "; ".join(model.reasons)),
+                "- **Adoption signals**: downloads={} · likes={} · trending={}".format(
                     model.downloads, model.likes, model.trending_score
                 ),
-                "- **许可证/访问**：{} / {}".format(model.license, "gated" if model.gated else "公开"),
-                "- **关联论文**：{}".format(paper_links),
-                "- **数据集/基座**：{} / {}".format(
-                    ", ".join(model.datasets[:5]) or "未知", ", ".join(model.base_models[:5]) or "未知"
+                "- **License / access**: {} / {}".format(model.license, "gated" if model.gated else "public"),
+                "- **Related papers**: {}".format(paper_links),
+                "- **Datasets / base models**: {} / {}".format(
+                    ", ".join(model.datasets[:5]) or "unknown", ", ".join(model.base_models[:5]) or "unknown"
                 ),
-                "- **同家族变体**：{}".format(", ".join(model.variants[:10]) or "—"),
+                "- **Variants in family**: {}".format(", ".join(model.variants[:10]) or "—"),
                 "",
             ])
 
     if not papers:
-        lines.extend(["## 今日无新增高相关论文", "", "模型信号见上；论文窗口内没有新增高相关记录。", ""])
+        lines.extend(["## No new highly relevant papers today", "", "Model signals are above; no new relevant papers in the window.", ""])
         return "\n".join(lines)
 
-    lines.extend(["## 研究信号", ""])
+    lines.extend(["## Research signals", ""])
     for name, count in topic_counts.most_common():
-        lines.append("- {}：{} 篇".format(name, count))
-    lines.extend(["", "## 快速浏览", "", "| # | 论文 | 日期 | 分数 | 主题 | 代码 |", "|---:|---|---|---:|---|---|"])
+        lines.append("- {}: {} papers".format(name, count))
+    lines.extend(["", "## Quick scan", "", "| # | Paper | Date | Score | Topics | Code |", "|---:|---|---|---:|---|---|"])
     for index, paper in enumerate(papers, 1):
         code = "[repo]({})".format(paper.code_urls[0]) if paper.code_urls else "—"
         lines.append(
             "| {} | [{}]({}) | {} | {} | {} | {} |".format(
                 index, _escape(paper.title), paper.url, paper.published, paper.score,
-                _escape("、".join(paper.matched_topics)), code,
+                _escape(", ".join(paper.matched_topics)), code,
             )
         )
 
-    lines.extend(["", "## 论文卡片", ""])
+    lines.extend(["", "## Paper cards", ""])
     for index, paper in enumerate(papers, 1):
         authors = ", ".join(paper.authors[:8])
         if len(paper.authors) > 8:
             authors += " et al."
-        links = ["[论文页]({})".format(paper.url)]
+        links = ["[Paper]({})".format(paper.url)]
         if paper.pdf_url:
             links.append("[PDF]({})".format(paper.pdf_url))
         links.extend("[Code {}]({})".format(i + 1, url) for i, url in enumerate(paper.code_urls))
         lines.extend([
             "### {}. {}".format(index, paper.title),
             "",
-            "- **作者**：{}".format(authors or "未知"),
-            "- **日期/来源**：{} · {}".format(paper.published, ", ".join(paper.sources)),
-            "- **相关性**：{} 分 · {}".format(paper.score, "；".join(paper.reasons)),
-            "- **链接**：" + " · ".join(links),
+            "- **Authors**: {}".format(authors or "unknown"),
+            "- **Date / sources**: {} · {}".format(paper.published, ", ".join(paper.sources)),
+            "- **Relevance**: {} pts · {}".format(paper.score, "; ".join(paper.reasons)),
+            "- **Links**: " + " · ".join(links),
             "",
             _summary(paper.abstract),
             "",
-            "**阅读记录**：方法/数据/指标/可复现性/可迁移点：_待填写_",
+            "**Reading notes** (method / data / metrics / reproducibility / transferability): _TODO_",
             "",
         ])
     return "\n".join(lines)

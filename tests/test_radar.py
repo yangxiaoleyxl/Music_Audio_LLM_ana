@@ -28,8 +28,8 @@ CONFIG = {
     "minimum_score": 6,
     "negative_keywords": ["radar signal"],
     "topics": [
-        {"id": "alm", "name": "音频语言模型", "keywords": {"audio large language model": 8}},
-        {"id": "music", "name": "音乐推理", "keywords": {"musical reasoning": 6}},
+        {"id": "alm", "name": "Audio Language Models", "keywords": {"audio large language model": 8}},
+        {"id": "music", "name": "Musical Reasoning", "keywords": {"musical reasoning": 6}},
     ],
 }
 

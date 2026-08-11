@@ -57,7 +57,7 @@ def score_paper(paper: Paper, config: dict) -> Paper:
     combined = title + " " + abstract
     if any(term.lower() in combined for term in config.get("negative_keywords", [])):
         paper.score = -100
-        paper.reasons = ["命中排除词"]
+        paper.reasons = ["matched a negative keyword"]
         return paper
 
     topic_scores: Dict[str, int] = {}
@@ -77,17 +77,17 @@ def score_paper(paper: Paper, config: dict) -> Paper:
         if topic_score:
             topic_scores[topic["id"]] = topic_score
             topic_names.append(topic["name"])
-            reasons.append((topic_score, "{}：{}".format(topic["name"], "、".join(matches[:3]))))
+            reasons.append((topic_score, "{}: {}".format(topic["name"], ", ".join(matches[:3]))))
 
     paper.topic_scores = topic_scores
     paper.matched_topics = topic_names
     paper.score = sum(sorted(topic_scores.values(), reverse=True)[:2])
     if paper.code_urls:
         paper.score += 2
-        reasons.append((2, "提供开源代码链接"))
+        reasons.append((2, "has open-source code link"))
     if len(paper.sources) > 1:
         paper.score += 1
-        reasons.append((1, "被多个学术来源同时收录"))
+        reasons.append((1, "found in multiple academic sources"))
     paper.reasons = [text for _, text in sorted(reasons, reverse=True)[:4]]
     return paper
 
