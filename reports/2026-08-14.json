@@ -1,0 +1,1581 @@
+{
+  "generated_at": "2026-08-14",
+  "window_start": "2026-08-07",
+  "source_counts": {
+    "arxiv": 0,
+    "semantic_scholar": 72
+  },
+  "errors": [
+    "arXiv: HTTP Error 500: Internal Server Error"
+  ],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "c2062bac925d725bb6f905ea3dbd281243fb4ef9",
+      "title": "VIB-TTS: Making Emotion Text-to-Speech More Accurate via Variational Information Bottleneck and Emotion Dimension-Based Selection",
+      "abstract": "",
+      "authors": [
+        "Ruobing Li",
+        "Lin Shen",
+        "Liuxian Ma",
+        "Haodong Lu",
+        "Haojie Zhang",
+        "Yifan Feng",
+        "Jiang Liu",
+        "Yilu Deng",
+        "Kun Qian",
+        "Bin Hu",
+        "Yoshiharu Yamamoto",
+        "Björn W. Schuller"
+      ],
+      "published": "2026-08-10",
+      "updated": "2026-08-10",
+      "url": "https://www.semanticscholar.org/paper/c2062bac925d725bb6f905ea3dbd281243fb4ef9",
+      "pdf_url": "",
+      "doi": "10.1007/s00034-026-03720-1",
+      "venue": "Circuits, systems, and signal processing",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2608.12951",
+      "title": "VoxAudio: Vocalized Audio Synthesis via Multi-Reward Autoregressive Flow Matching",
+      "abstract": "Vocalized audio synthesis, the task of generating audio in which intelligible speech is embedded within an environmental soundscape, underpins applications such as podcast production and video dubbing. Existing Text-to-Audio (T2A) systems either reduce quoted speech to unintelligible vocal murmur or delegate it to a separate TTS model with post-hoc mixing, which forfeits control over when speech occurs and how it interacts with the scene. We present VoxAudio, a causal autoregressive flow matching model that addresses this problem from three complementary aspects. At the architecture level, chunk-wise causal factorization with independent per-chunk noise levels lets audio be emitted through sliding-window streaming inference with KV caching at variable target durations; to enable inference at arbitrary chunk granularities, we further pretrain the model with randomized chunk boundaries. At the preference level, multi-reward Negative-aware FineTuning (NFT) jointly optimizes semantic fidelity, linguistic accuracy, aesthetic quality, and temporal grounding At the data level, to supply the missing supervision for vocal content, we build VoxCorpus, a large-scale corpus whose captions quote the verbatim transcript of embedded speech with time intervals, and VoxBench, an interval-annotated benchmark with a temporal-grounding metric. Experiments on four benchmarks spanning general audio, speech, and unified vocalized audio validate the effectiveness and efficiency of VoxAudio. Our code and demos are available at https://voxaudio.github.io.",
+      "authors": [
+        "Wenxiang Guo",
+        "Changhao Pan",
+        "Ziyue Jiang",
+        "Fei Wu",
+        "Zhou Zhao"
+      ],
+      "published": "2026-08-13",
+      "updated": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12951",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "generative_music_audio": 7
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "MiniMaxAI/MiniMax-Music3",
+      "author": "MiniMaxAI",
+      "created_at": "2026-08-07",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "minimax_music3",
+        "music-generation",
+        "text-to-music",
+        "pytorch",
+        "sglang-omni",
+        "text-to-audio",
+        "region:us"
+      ],
+      "downloads": 63,
+      "likes": 531,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+      "card_text": "---\nlibrary_name: diffusers\npipeline_tag: text-to-audio\ntags:\n  - music-generation\n  - text-to-music\n  - pytorch\n  - sglang-omni\n---\n\n<div align=\"center\">\n  <img width=\"100%\" src=\"figures/Music3.png\" alt=\"MiniMax\">\n</div>\n<p align=\"center\">\n  <a href=\"https://agent.minimax.io/\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Agent-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Agent\"></a>\n  <a href=\"https://platform.minimax.io/docs/guides/text-generation\" target=\"_blank\"><img src=\"https://img.shields.io/badge/API-FF6C37?logo=minimax&logoColor=white\" alt=\"API\"></a>\n  <a href=\"https://www.minimax.io\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Website-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Website\"></a>\n  <br>\n  <a href=\"https://modelscope.cn/organization/minimax\" target=\"_blank\" rel=\"noopener noreferrer\"><img alt=\"ModelScope MiniMax AI\" src=\"https://img.shields.io/badge/ModelScope-MiniMax%20AI-white?labelColor=%23EF3D5D\"></a>\n  <a href=\"https://platform.minimaxi.com/docs/faq/contact-us\" target=\"_blank\"><img src=\"https://img.shields.io/badge/WeChat-07C160?logo=wechat&logoColor=white\" alt=\"WeChat\"></a>\n  <a href=\"https://discord.com/invite/DPC4AHFCBw\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white\" alt=\"Discord\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black\" alt=\"Hugging Face\"></a>\n  <a href=\"https://github.com/MiniMax-AI/MiniMax-Music3\" target=\"_blank\"><img src=\"https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/LICENSE\" target=\"_blank\"><img src=\"https://img.shields.io/badge/LICENSE-4CAF50?logo=creativecommons&logoColor=white\" alt=\"LICENSE\"></a>\n</p>\n\n# MiniMax Music 3\n\n**MiniMax Music 3** is a high-performance music generation model for creating complete songs up to **five minutes** long. Conditioned on lyrics and a detailed music description, it generates structurally coherent songs with expressive vocals, evolving arrangements, and stable long-form audio quality.\n\nMiniMax Music 3 combines an **8B Global LLM** for long-range musical structure, a **0.6B Local LLM** for frame-level acoustic detail, and a continuous hidden-state synthesis system based on **Flow Matching** and **Flow-VAE**. The model produces 32 kHz, 16-bit stereo WAV audio.\n## Demo\n\nExplore music generation examples on the [MiniMax Music 3 Demo](https://minimax-ai.github.io/music3-demo/).\n\n<p align=\"center\">\n  <img width=\"100%\" src=\"figures/music3.0-Architecture-Diagram.png\">\n</p>\n\n## Complete Songs with Long-Range Coherence\n\nMiniMax Music 3 natively supports full-song generation up to five minutes. The model maintains musical themes, rhythm, vocal identity, and arrangement progression across long sequences, enabling complete structures such as intro, verse, pre-chorus, chorus, bridge, instrumental break, and outro.\n\n## Fine-Grained Music Control\n\nThe model accepts two complementary inputs:\n\n- **Lyrics** define the words to be sung and may include explicit section tags such as `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Post-Chorus]`, `[Bridge]`, `[Instrumental]`, `[Solo]`, and `[Outro]`.\n- **Music description** defines the musical style, emotional progression, vocal performance, instrumentation, arrangement, and production profile.\n\nFor precise control, we recommend using a Structured Caption with three sections:\n\n- **Global Metadata**: genre, subgenre, BPM, key, scale, emotional progression, listening scenario, and production profile.\n- **Vocal Details**: vocal gender, timbre, performance style, harmony, backing vocals, and vocal effects.\n- **Arrangement**: primary and secondary instruments, section-level instrument evolution, groove, bass, percussion, textures, and spatial effects.\n\nThis representation allows the model to follow not only a global style, but also the musical development of the song over time.\n\n## Hybrid-LM\n\nMiniMax Music 3 uses a hierarchical autoregressive architecture that separates global musical modeling from local acoustic modeling.\n\n- The **Global LLM (8B)** predicts the first RVQ codebook frame by frame and models the song's long-range semantic and structural progression.\n- The **Local LLM (0.6B)** predicts the remaining acoustic codebooks within each frame and restores fine-grained acoustic information.\n\nThe Global LLM is initialized from Qwen3-8B. During training, its embedding and output layers are first adapted to semantic music tokens. The Global and Local LLMs are then jointly trained to model all RVQ codebooks.\n\n## Continuous Hidden-State Synthesis\n\nInstead of decoding only from discrete RVQ tokens, the synthesis module fuses the final hidden states of the Global and Local LLMs. These continuous representations preserve richer acoustic information for vocal articulation, instrumental texture, and temporal continuity.\n\nThe synthesis path is:\n\n```text\nGlobal and Local LLM hidden states\n                ↓\n       Hidden-state fusion\n                ↓\n     Flow Matching (2.4B)\n                ↓\n        Flow-VAE latent\n                ↓\n    Flow-VAE Decoder (123M)\n                ↓\n       32 kHz stereo audio\n```\n\nThe Flow-VAE architecture is adapted from MiniMax Speech and retrained for the dynamic range and spectral characteristics of music.\n\n## Music Tokenizer\n\nThe training tokenizer uses eight layers of Residual Vector Quantization (RVQ):\n\n- The first semantic codebook contains **16,384** entries and captures the core musical semantics and structure.\n- The remaining seven acoustic codebooks contain **1,024** entries each and represent residual acoustic details.\n\nTraining first optimizes the semantic codebook, then jointly trains all eight codebooks. At inference time, waveform synthesis uses the fused LLM hidden states and does not require the discrete tokenizer decoder.\n\n## How to Use\n\nMiniMax Music 3 is supported by [SGLang-Omni](https://github.com/sgl-project/sglang-omni). Follow the official [installation guide](https://sgl-project.github.io/sglang-omni/get_started/installation.html) to prepare the runtime environment.\n\n### Download the Model\n\n```bash\nhf download MiniMaxAI/MiniMax-Music3 --local-dir /path/to/minimax_ttm\n```\n\nWe recommend the following inference frameworks to serve the model:\n\n- [SGLang](https://docs.sglang.io/) \\- see [cookbook](https://sgl-project.github.io/sglang-omni/cookbook/minimax_music3.html) \n\n- [diffusers](https://github.com/huggingface/diffusers) \\- see [diffusers docs](https://github.com/huggingface/diffusers/blob/minimax-music3-integration/docs/source/en/api/pipelines/minimax_music3.md)\n\n- [ComfyUI](https://github.com/Comfy-Org/ComfyUI) see [comfyUI tutorials](https://docs.comfy.org/tutorials/audio/minimax/minimax-music-3)\n\n\n### Serve with SGLang-Omni\n\n```bash\nsgl-omni serve --model-path MiniMaxAI/MiniMax-Music3 --port 8000\n```\n\n### Generate Music\n\nThe service uses the shared speech API. Put the lyrics in `input` and the music description in `instructions`. Put lyric structure tags such as `[Verse]` and `[Chorus]` on their own lines.\n\n```bash\ncurl http://127.0.0.1:8000/v1/audio/speech \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"model\": \"MiniMaxAI/MiniMax-Music3\",\n    \"input\": \"[Verse]\\nMorning light filtering through the pine\\n[Chorus]\\nSoftly the world begins to breathe\",\n    \"instructions\": \"A warm acoustic pop song with intimate female vocals, fingerpicked guitar, soft piano, and a gradual emotional build into a wide final chorus.\",\n    \"response_format\": \"wav\",\n    \"seed\": 7,\n    \"max_new_tokens\": 750,\n    \"stream\": false\n  }' \\\n  --output minimax_music3.wav\n```\n\n`max_new_tokens` sets the maximum number of audio frames at 25 frames per second. Generation may finish before this limit when the model emits an end-of-audio token. The response is a 32 kHz, 16-bit stereo WAV file.\n\n### Reproducible Example\n\nThe following end-to-end example contains the complete lyrics, music description, and generation parameters used to produce the reference audio.\n\n| Use case | Request | Result |\n|---|---|---|\n| Text-to-music | [View script](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/scripts/end_to_end/minimax_ttm_test.py) | [minimax_ttm.wav](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/assets/minimax_ttm.wav) |\n\n## 🧨 Diffusers\n\nMiniMax Music 3 is available as a [diffusers](https://github.com/huggingface/diffusers) modular pipeline. Until [huggingface/diffusers#14456](https://github.com/huggingface/diffusers/pull/14456) is merged, install diffusers from the PR commit:\n\nThe snippet below fits 24GB+ VRAM GPUs\n\n```bash\npip install git+https://github.com/huggingface/diffusers@dafe3733fcfdbf3c48915fe77be3aef65b5d6a2d transformers accelerate soundfile\n```\n\n```python\nimport soundfile as sf\nimport torch\nfrom diffusers import ModularPipeline\n\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\")\npipe.load_components(dtype=torch.bfloat16)\npipe.to(\"cuda\")\n\nlyrics = \"\"\"[verse]\nMorning light filtering through the pine\nEvery quiet street is yours and mine\n[chorus]\nSoftly the world begins to breathe\"\"\"\n\nprompt = (\n    \"Genre: acoustic pop. BPM: 96. Key: C major. Warm and intimate, building gently into the chorus. \"\n    \"Vocals: soft female lead, close and breathy, light stacked harmonies in the chorus. \"\n    \"Arrangement: fingerpicked guitar and soft piano; brushed drums and upright bass enter in the chorus.\"\n)\n\naudio = pipe(\n    prompt=prompt,\n    lyrics=lyrics,\n    audio_duration=60.0,\n    generator=torch.Generator(\"cuda\").manual_seed(7),\n    output=\"audios\",\n)[0]\n\nsf.write(\"song.wav\", audio.T.float().cpu().numpy(), pipe.sampling_rate)\n```\n\n### Low VRAM\n\nThe full precision fits under 24GB of VRAM. With automatic CPU offloading, generation takes in ~22 GB; additionally streaming the language model layer by layer makes it fit even 8 GB video cards:\n\n```python\nimport torch\nfrom diffusers import ComponentsManager, ModularPipeline\nfrom diffusers.hooks import apply_group_offloading\n\nmanager = ComponentsManager()\nmanager.enable_auto_cpu_offload(device=\"cuda\")\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\", components_manager=manager)\npipe.load_components(dtype=torch.bfloat16)\n\n# Only needed below ~22 GB of VRAM — slower, but fits in 8 GB.\napply_group_offloading(\n    pipe.language_model, onload_device=torch.device(\"cuda\"), offload_type=\"leaf_level\", use_stream=True\n)\n\n\n```\n\n## Prompt Enhancement\n\nA concise natural-language description can be used directly. For richer prompts and more precise control, use the provided [`music-caption-rewriter`](https://github.com/MiniMax-AI/MiniMax-Music3/tree/main/skills/music-caption-rewriter) skill to expand it into a Structured Caption containing `Global Metadata`, `Vocal Details`, and `Arrangement`. The skill preserves musical instructions attached to lyric section tags in the arrangement description while keeping the lyric text in the lyrics input.\n\n```bash\nnpx skills add MiniMax-AI/MiniMax-Music3 --skill music-caption-rewriter\n```\n\n## Limitations\n\n- Inference requires CUDA.\n- Only non-streaming generation is currently supported.\n- The tokenized text prompt is limited to 5,000 tokens.\n- Audio generation is limited to 9,000 acoustic frames.\n- Section tags and music descriptions provide generative control rather than strict symbolic guarantees. The generated tempo, key, instrumentation, lyrics, and song structure may not always match every requested detail exactly.\n\n## Contact Us\n\nContact us at [model@minimax.io](mailto:model@minimax.io).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 47,
+      "topic_scores": {
+        "generative_music_audio": 46
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "community likes 531"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "molbal/Minimax-Music3-GGUF",
+      "author": "molbal",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "gguf",
+        "text-to-audio",
+        "music-generation",
+        "text-to-music",
+        "comfyui",
+        "minimax",
+        "license:creativeml-openrail-m",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "creativeml-openrail-m",
+      "gated": false,
+      "url": "https://huggingface.co/molbal/Minimax-Music3-GGUF",
+      "card_text": "---\nlicense: creativeml-openrail-m\ntags:\n  - text-to-audio\n  - music-generation\n  - text-to-music\n  - gguf\n  - comfyui\n  - minimax\npipeline_tag: text-to-audio\n---\n\n# MiniMax Music 3 - GGUF Quantizations\n\nThis repository contains GGUF quantizations for [MiniMax Music 3](https://github.com/MiniMax-AI/MiniMax-Music3) ([Hugging Face model](https://huggingface.co/MiniMaxAI/MiniMax-Music3)), a music generation model capable of synthesizing complete, structurally coherent songs up to 5 minutes long at 32 kHz stereo.\n\nFor full architectural details, model specifications, and benchmarks, please refer to the official [MiniMax-Music3 GitHub repository](https://github.com/MiniMax-AI/MiniMax-Music3).\n\n---\n\n## Example Workflow\n\nAn example ComfyUI workflow is included in the `examples/` directory:\n* `examples/minimax-music-3.json`\n\n---\n\n## Quantized Models\n\n### Diffusion Transformer (Flow Matching 2.4B DiT)\nPlace these files in `ComfyUI/models/diffusion_models/` or `ComfyUI/models/unet/`:\n\n| File | Quantization | Size | Description |\n|---|---|---|---|\n| `minimax_music3_dit_BF16.gguf` | BF16 | ~4.64 GB | Unquantized reference precision |\n| `minimax_music3_dit_Q8_0.gguf` | Q8_0 | ~2.52 GB | Standard 8-bit quantization |\n| `minimax_music3_dit_Q8_CR.gguf` | Q8_CR | ~2.38 GB | 8-bit channel-residual quantization |\n| `minimax_music3_dit_Q4_0.gguf` | Q4_0 | ~1.39 GB | 4-bit quantization for low VRAM |\n\n### Pruned Text & Language Model Encoder\nPlace these files in `ComfyUI/models/text_encoders/` or `ComfyUI/models/clip/`:\n\n| File | Quantization | Size | Description |\n|---|---|---|---|\n| `minimax_music3_text_encoder_pruned_Q8_0.gguf` | Q8_0 | ~8.93 GB | High precision 8-bit text/audio encoder |\n| `minimax_music3_text_encoder_pruned_Q8_CR.gguf` | Q8_CR | ~8.49 GB | 8-bit channel-residual text/audio encoder |\n| `minimax_music3_text_encoder_pruned_Q4_0.gguf` | Q4_0 | ~5.38 GB | 4-bit text/audio encoder for lower memory |\n\n---\n\n## ComfyUI Node Requirements\n\nTo load and generate music with these GGUF weights in ComfyUI:\n\n1. **ComfyUI-GGUF**:\n   * Repository: [molbal/ComfyUI-GGUF](https://github.com/molbal/ComfyUI-GGUF)\n   * Registry: [comfyui-gguf-reboot](https://registry.comfy.org/publishers/molbal/nodes/comfyui-gguf-reboot)\n2. Load the workflow provided at `examples/minimax-music-3.json`.\n\n---\n\n## Prompting Guide\n\nMiniMax Music 3 accepts two primary conditioning inputs: **Lyrics** and a **Music Description**.\n\n### 1. Lyrics & Section Tags\nStructure your lyrics using standard uppercase section tags placed on their own lines:\n\n```text\n[Intro]\n(Soft acoustic guitar melody)\n\n[Verse 1]\nMorning light filtering through the pine\nEvery quiet street is yours and mine\n\n[Pre-Chorus]\nThe horizon starts to glow\n\n[Chorus]\nSoftly the world begins to breathe\nWaking up under golden leaves\n\n[Bridge]\nTime moves slow in the morning haze\n\n[Chorus]\nSoftly the world begins to breathe\nWaking up under golden leaves\n\n[Outro]\nFading into the dawn\n```\n\nSupported section tags include: `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Post-Chorus]`, `[Bridge]`, `[Instrumental]`, `[Solo]`, and `[Outro]`.\n\n### 2. Structured Caption (Music Description)\nFor precise control over the arrangement and performance, structure your music description across three areas:\n\n* **Global Metadata**: Genre, subgenre, tempo (BPM), key, scale, emotional progression, listening scenario, and production style.\n* **Vocal Details**: Vocal gender, timbre, performance delivery, harmony, backing vocals, and vocal effects (e.g. reverb, delay).\n* **Arrangement**: Primary and secondary instruments, section-by-section instrument progression, groove/rhythm, bassline, percussion style, and spatial atmosphere.\n\n#### Example Structured Caption:\n```text\nGenre: Indie Folk Pop. BPM: 98. Key: G major. \nMood: Warm, intimate, and uplifting with a gradual dynamic build.\nVocals: Close, breathy female lead vocals with light double-tracking and airy reverb; two-part harmonies enter during the chorus.\nArrangement: Fingerpicked acoustic guitar and soft felt piano throughout. Subdued kick and upright bass join in the second verse. Full folk percussion, tambourine, and subtle ambient strings enter during the chorus.\n```\n\n---\n\n## Limitations\n\n* Generation is non-streaming.\n* The tokenized text prompt is limited to 5,000 tokens.\n* Audio generation is capped at 9,000 acoustic frames (~5 minutes).\n* Section tags and descriptions provide generative conditioning; tempo, key, and lyrical timing may vary slightly.\n\n---\n\n## Original Model & License\n\n* **Original weights & code**: [MiniMax-AI/MiniMax-Music3](https://github.com/MiniMax-AI/MiniMax-Music3)\n* **License**: CreativeML Open RAIL-M\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 47,
+      "topic_scores": {
+        "generative_music_audio": 46
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license creativeml-openrail-m"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "nguyenthilaitrieulong/MiniMax-Music3",
+      "author": "nguyenthilaitrieulong",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "sglang-omni",
+        "diffusers",
+        "safetensors",
+        "minimax_music3",
+        "music-generation",
+        "text-to-music",
+        "pytorch",
+        "text-to-audio",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "sglang-omni",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/nguyenthilaitrieulong/MiniMax-Music3",
+      "card_text": "---\nlibrary_name: sglang-omni\npipeline_tag: text-to-audio\ntags:\n  - music-generation\n  - text-to-music\n  - pytorch\n  - sglang-omni\n---\n\n<div align=\"center\">\n  <img width=\"100%\" src=\"figures/Music3.png\" alt=\"MiniMax\">\n</div>\n<p align=\"center\">\n  <a href=\"https://agent.minimax.io/\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Agent-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Agent\"></a>\n  <a href=\"https://platform.minimax.io/docs/guides/text-generation\" target=\"_blank\"><img src=\"https://img.shields.io/badge/API-FF6C37?logo=minimax&logoColor=white\" alt=\"API\"></a>\n  <a href=\"https://www.minimax.io\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Website-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Website\"></a>\n  <br>\n  <a href=\"https://modelscope.cn/organization/minimax\" target=\"_blank\" rel=\"noopener noreferrer\"><img alt=\"ModelScope MiniMax AI\" src=\"https://img.shields.io/badge/ModelScope-MiniMax%20AI-white?labelColor=%23EF3D5D\"></a>\n  <a href=\"https://platform.minimaxi.com/docs/faq/contact-us\" target=\"_blank\"><img src=\"https://img.shields.io/badge/WeChat-07C160?logo=wechat&logoColor=white\" alt=\"WeChat\"></a>\n  <a href=\"https://discord.com/invite/DPC4AHFCBw\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white\" alt=\"Discord\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black\" alt=\"Hugging Face\"></a>\n  <a href=\"https://github.com/MiniMax-AI/MiniMax-Music3\" target=\"_blank\"><img src=\"https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/LICENSE\" target=\"_blank\"><img src=\"https://img.shields.io/badge/LICENSE-4CAF50?logo=creativecommons&logoColor=white\" alt=\"LICENSE\"></a>\n</p>\n\n# MiniMax Music 3\n\n**MiniMax Music 3** is a high-performance music generation model for creating complete songs up to **five minutes** long. Conditioned on lyrics and a detailed music description, it generates structurally coherent songs with expressive vocals, evolving arrangements, and stable long-form audio quality.\n\nMiniMax Music 3 combines an **8B Global LLM** for long-range musical structure, a **0.6B Local LLM** for frame-level acoustic detail, and a continuous hidden-state synthesis system based on **Flow Matching** and **Flow-VAE**. The model produces 32 kHz, 16-bit stereo WAV audio.\n## Demo\n\nExplore music generation examples on the [MiniMax Music 3 Demo](https://minimax-ai.github.io/music3-demo/).\n\n<p align=\"center\">\n  <img width=\"100%\" src=\"figures/music3.0-Architecture-Diagram.png\">\n</p>\n\n## Complete Songs with Long-Range Coherence\n\nMiniMax Music 3 natively supports full-song generation up to five minutes. The model maintains musical themes, rhythm, vocal identity, and arrangement progression across long sequences, enabling complete structures such as intro, verse, pre-chorus, chorus, bridge, instrumental break, and outro.\n\n## Fine-Grained Music Control\n\nThe model accepts two complementary inputs:\n\n- **Lyrics** define the words to be sung and may include explicit section tags such as `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Post-Chorus]`, `[Bridge]`, `[Instrumental]`, `[Solo]`, and `[Outro]`.\n- **Music description** defines the musical style, emotional progression, vocal performance, instrumentation, arrangement, and production profile.\n\nFor precise control, we recommend using a Structured Caption with three sections:\n\n- **Global Metadata**: genre, subgenre, BPM, key, scale, emotional progression, listening scenario, and production profile.\n- **Vocal Details**: vocal gender, timbre, performance style, harmony, backing vocals, and vocal effects.\n- **Arrangement**: primary and secondary instruments, section-level instrument evolution, groove, bass, percussion, textures, and spatial effects.\n\nThis representation allows the model to follow not only a global style, but also the musical development of the song over time.\n\n## Hybrid-LM\n\nMiniMax Music 3 uses a hierarchical autoregressive architecture that separates global musical modeling from local acoustic modeling.\n\n- The **Global LLM (8B)** predicts the first RVQ codebook frame by frame and models the song's long-range semantic and structural progression.\n- The **Local LLM (0.6B)** predicts the remaining acoustic codebooks within each frame and restores fine-grained acoustic information.\n\nThe Global LLM is initialized from Qwen3-8B. During training, its embedding and output layers are first adapted to semantic music tokens. The Global and Local LLMs are then jointly trained to model all RVQ codebooks.\n\n## Continuous Hidden-State Synthesis\n\nInstead of decoding only from discrete RVQ tokens, the synthesis module fuses the final hidden states of the Global and Local LLMs. These continuous representations preserve richer acoustic information for vocal articulation, instrumental texture, and temporal continuity.\n\nThe synthesis path is:\n\n```text\nGlobal and Local LLM hidden states\n                ↓\n       Hidden-state fusion\n                ↓\n     Flow Matching (2.4B)\n                ↓\n        Flow-VAE latent\n                ↓\n    Flow-VAE Decoder (123M)\n                ↓\n       32 kHz stereo audio\n```\n\nThe Flow-VAE architecture is adapted from MiniMax Speech and retrained for the dynamic range and spectral characteristics of music.\n\n## Music Tokenizer\n\nThe training tokenizer uses eight layers of Residual Vector Quantization (RVQ):\n\n- The first semantic codebook contains **16,384** entries and captures the core musical semantics and structure.\n- The remaining seven acoustic codebooks contain **1,024** entries each and represent residual acoustic details.\n\nTraining first optimizes the semantic codebook, then jointly trains all eight codebooks. At inference time, waveform synthesis uses the fused LLM hidden states and does not require the discrete tokenizer decoder.\n\n## How to Use\n\nMiniMax Music 3 is supported by [SGLang-Omni](https://github.com/sgl-project/sglang-omni). Follow the official [installation guide](https://sgl-project.github.io/sglang-omni/get_started/installation.html) to prepare the runtime environment.\n\n### Download the Model\n\n```bash\nhf download MiniMaxAI/MiniMax-Music3 --local-dir /path/to/minimax_ttm\n```\n\nWe recommend the following inference frameworks to serve the model:\n\n- [SGLang](https://docs.sglang.io/) \\- see [cookbook](https://sgl-project.github.io/sglang-omni/cookbook/minimax_music3.html) \n\n- [diffusers](https://github.com/huggingface/diffusers) \\- see [diffusers docs](https://github.com/huggingface/diffusers/blob/minimax-music3-integration/docs/source/en/api/pipelines/minimax_music3.md)\n\n- [ComfyUI](https://github.com/Comfy-Org/ComfyUI) see [comfyUI tutorials](https://docs.comfy.org/tutorials/audio/minimax/minimax-music-3)\n\n\n### Serve with SGLang-Omni\n\n```bash\nsgl-omni serve --model-path MiniMaxAI/MiniMax-Music3 --port 8000\n```\n\n### Generate Music\n\nThe service uses the shared speech API. Put the lyrics in `input` and the music description in `instructions`. Put lyric structure tags such as `[Verse]` and `[Chorus]` on their own lines.\n\n```bash\ncurl http://127.0.0.1:8000/v1/audio/speech \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"model\": \"MiniMaxAI/MiniMax-Music3\",\n    \"input\": \"[Verse]\\nMorning light filtering through the pine\\n[Chorus]\\nSoftly the world begins to breathe\",\n    \"instructions\": \"A warm acoustic pop song with intimate female vocals, fingerpicked guitar, soft piano, and a gradual emotional build into a wide final chorus.\",\n    \"response_format\": \"wav\",\n    \"seed\": 7,\n    \"max_new_tokens\": 750,\n    \"stream\": false\n  }' \\\n  --output minimax_music3.wav\n```\n\n`max_new_tokens` sets the maximum number of audio frames at 25 frames per second. Generation may finish before this limit when the model emits an end-of-audio token. The response is a 32 kHz, 16-bit stereo WAV file.\n\n### Reproducible Example\n\nThe following end-to-end example contains the complete lyrics, music description, and generation parameters used to produce the reference audio.\n\n| Use case | Request | Result |\n|---|---|---|\n| Text-to-music | [View script](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/scripts/end_to_end/minimax_ttm_test.py) | [minimax_ttm.wav](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/assets/minimax_ttm.wav) |\n\n## 🧨 Diffusers\n\nMiniMax Music 3 is available as a [diffusers](https://github.com/huggingface/diffusers) modular pipeline. Until [huggingface/diffusers#14456](https://github.com/huggingface/diffusers/pull/14456) is merged, install diffusers from the PR commit:\n\nThe snippet below fits 24GB+ VRAM GPUs\n\n```bash\npip install git+https://github.com/huggingface/diffusers@dafe3733fcfdbf3c48915fe77be3aef65b5d6a2d transformers accelerate soundfile\n```\n\n```python\nimport soundfile as sf\nimport torch\nfrom diffusers import ModularPipeline\n\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\")\npipe.load_components(dtype=torch.bfloat16)\npipe.to(\"cuda\")\n\nlyrics = \"\"\"[verse]\nMorning light filtering through the pine\nEvery quiet street is yours and mine\n[chorus]\nSoftly the world begins to breathe\"\"\"\n\nprompt = (\n    \"Genre: acoustic pop. BPM: 96. Key: C major. Warm and intimate, building gently into the chorus. \"\n    \"Vocals: soft female lead, close and breathy, light stacked harmonies in the chorus. \"\n    \"Arrangement: fingerpicked guitar and soft piano; brushed drums and upright bass enter in the chorus.\"\n)\n\naudio = pipe(\n    prompt=prompt,\n    lyrics=lyrics,\n    audio_duration=60.0,\n    generator=torch.Generator(\"cuda\").manual_seed(7),\n    output=\"audios\",\n)[0]\n\nsf.write(\"song.wav\", audio.T.float().cpu().numpy(), pipe.sampling_rate)\n```\n\n### Low VRAM\n\nThe full precision fits under 24GB of VRAM. With automatic CPU offloading, generation takes in ~22 GB; additionally streaming the language model layer by layer makes it fit even 8 GB video cards:\n\n```python\nimport torch\nfrom diffusers import ComponentsManager, ModularPipeline\nfrom diffusers.hooks import apply_group_offloading\n\nmanager = ComponentsManager()\nmanager.enable_auto_cpu_offload(device=\"cuda\")\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\", components_manager=manager)\npipe.load_components(dtype=torch.bfloat16)\n\n# Only needed below ~22 GB of VRAM — slower, but fits in 8 GB.\napply_group_offloading(\n    pipe.language_model, onload_device=torch.device(\"cuda\"), offload_type=\"leaf_level\", use_stream=True\n)\n\n\n```\n\n## Prompt Enhancement\n\nA concise natural-language description can be used directly. For richer prompts and more precise control, use the provided [`music-caption-rewriter`](https://github.com/MiniMax-AI/MiniMax-Music3/tree/main/skills/music-caption-rewriter) skill to expand it into a Structured Caption containing `Global Metadata`, `Vocal Details`, and `Arrangement`. The skill preserves musical instructions attached to lyric section tags in the arrangement description while keeping the lyric text in the lyrics input.\n\n```bash\nnpx skills add MiniMax-AI/MiniMax-Music3 --skill music-caption-rewriter\n```\n\n## Limitations\n\n- Inference requires CUDA.\n- Only non-streaming generation is currently supported.\n- The tokenized text prompt is limited to 5,000 tokens.\n- Audio generation is limited to 9,000 acoustic frames.\n- Section tags and music descriptions provide generative control rather than strict symbolic guarantees. The generated tempo, key, instrumentation, lyrics, and song structure may not always match every requested detail exactly.\n\n## Contact Us\n\nContact us at [model@minimax.io](mailto:model@minimax.io).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 46,
+      "topic_scores": {
+        "generative_music_audio": 46
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "TechnoBaptist/MiniMax-Music3",
+      "author": "TechnoBaptist",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "sglang-omni",
+        "diffusers",
+        "safetensors",
+        "minimax_music3",
+        "music-generation",
+        "text-to-music",
+        "pytorch",
+        "text-to-audio",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "sglang-omni",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/TechnoBaptist/MiniMax-Music3",
+      "card_text": "---\nlibrary_name: sglang-omni\npipeline_tag: text-to-audio\ntags:\n  - music-generation\n  - text-to-music\n  - pytorch\n  - sglang-omni\n---\n\n<div align=\"center\">\n  <img width=\"100%\" src=\"figures/Music3.png\" alt=\"MiniMax\">\n</div>\n<p align=\"center\">\n  <a href=\"https://agent.minimax.io/\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Agent-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Agent\"></a>\n  <a href=\"https://platform.minimax.io/docs/guides/text-generation\" target=\"_blank\"><img src=\"https://img.shields.io/badge/API-FF6C37?logo=minimax&logoColor=white\" alt=\"API\"></a>\n  <a href=\"https://www.minimax.io\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Website-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Website\"></a>\n  <br>\n  <a href=\"https://modelscope.cn/organization/minimax\" target=\"_blank\" rel=\"noopener noreferrer\"><img alt=\"ModelScope MiniMax AI\" src=\"https://img.shields.io/badge/ModelScope-MiniMax%20AI-white?labelColor=%23EF3D5D\"></a>\n  <a href=\"https://platform.minimaxi.com/docs/faq/contact-us\" target=\"_blank\"><img src=\"https://img.shields.io/badge/WeChat-07C160?logo=wechat&logoColor=white\" alt=\"WeChat\"></a>\n  <a href=\"https://discord.com/invite/DPC4AHFCBw\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white\" alt=\"Discord\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black\" alt=\"Hugging Face\"></a>\n  <a href=\"https://github.com/MiniMax-AI/MiniMax-Music3\" target=\"_blank\"><img src=\"https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/LICENSE\" target=\"_blank\"><img src=\"https://img.shields.io/badge/LICENSE-4CAF50?logo=creativecommons&logoColor=white\" alt=\"LICENSE\"></a>\n</p>\n\n# MiniMax Music 3\n\n**MiniMax Music 3** is a high-performance music generation model for creating complete songs up to **five minutes** long. Conditioned on lyrics and a detailed music description, it generates structurally coherent songs with expressive vocals, evolving arrangements, and stable long-form audio quality.\n\nMiniMax Music 3 combines an **8B Global LLM** for long-range musical structure, a **0.6B Local LLM** for frame-level acoustic detail, and a continuous hidden-state synthesis system based on **Flow Matching** and **Flow-VAE**. The model produces 32 kHz, 16-bit stereo WAV audio.\n## Demo\n\nExplore music generation examples on the [MiniMax Music 3 Demo](https://minimax-ai.github.io/music3-demo/).\n\n<p align=\"center\">\n  <img width=\"100%\" src=\"figures/music3.0-Architecture-Diagram.png\">\n</p>\n\n## Complete Songs with Long-Range Coherence\n\nMiniMax Music 3 natively supports full-song generation up to five minutes. The model maintains musical themes, rhythm, vocal identity, and arrangement progression across long sequences, enabling complete structures such as intro, verse, pre-chorus, chorus, bridge, instrumental break, and outro.\n\n## Fine-Grained Music Control\n\nThe model accepts two complementary inputs:\n\n- **Lyrics** define the words to be sung and may include explicit section tags such as `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Post-Chorus]`, `[Bridge]`, `[Instrumental]`, `[Solo]`, and `[Outro]`.\n- **Music description** defines the musical style, emotional progression, vocal performance, instrumentation, arrangement, and production profile.\n\nFor precise control, we recommend using a Structured Caption with three sections:\n\n- **Global Metadata**: genre, subgenre, BPM, key, scale, emotional progression, listening scenario, and production profile.\n- **Vocal Details**: vocal gender, timbre, performance style, harmony, backing vocals, and vocal effects.\n- **Arrangement**: primary and secondary instruments, section-level instrument evolution, groove, bass, percussion, textures, and spatial effects.\n\nThis representation allows the model to follow not only a global style, but also the musical development of the song over time.\n\n## Hybrid-LM\n\nMiniMax Music 3 uses a hierarchical autoregressive architecture that separates global musical modeling from local acoustic modeling.\n\n- The **Global LLM (8B)** predicts the first RVQ codebook frame by frame and models the song's long-range semantic and structural progression.\n- The **Local LLM (0.6B)** predicts the remaining acoustic codebooks within each frame and restores fine-grained acoustic information.\n\nThe Global LLM is initialized from Qwen3-8B. During training, its embedding and output layers are first adapted to semantic music tokens. The Global and Local LLMs are then jointly trained to model all RVQ codebooks.\n\n## Continuous Hidden-State Synthesis\n\nInstead of decoding only from discrete RVQ tokens, the synthesis module fuses the final hidden states of the Global and Local LLMs. These continuous representations preserve richer acoustic information for vocal articulation, instrumental texture, and temporal continuity.\n\nThe synthesis path is:\n\n```text\nGlobal and Local LLM hidden states\n                ↓\n       Hidden-state fusion\n                ↓\n     Flow Matching (2.4B)\n                ↓\n        Flow-VAE latent\n                ↓\n    Flow-VAE Decoder (123M)\n                ↓\n       32 kHz stereo audio\n```\n\nThe Flow-VAE architecture is adapted from MiniMax Speech and retrained for the dynamic range and spectral characteristics of music.\n\n## Music Tokenizer\n\nThe training tokenizer uses eight layers of Residual Vector Quantization (RVQ):\n\n- The first semantic codebook contains **16,384** entries and captures the core musical semantics and structure.\n- The remaining seven acoustic codebooks contain **1,024** entries each and represent residual acoustic details.\n\nTraining first optimizes the semantic codebook, then jointly trains all eight codebooks. At inference time, waveform synthesis uses the fused LLM hidden states and does not require the discrete tokenizer decoder.\n\n## How to Use\n\nMiniMax Music 3 is supported by [SGLang-Omni](https://github.com/sgl-project/sglang-omni). Follow the official [installation guide](https://sgl-project.github.io/sglang-omni/get_started/installation.html) to prepare the runtime environment.\n\n### Download the Model\n\n```bash\nhf download MiniMaxAI/MiniMax-Music3 --local-dir /path/to/minimax_ttm\n```\n\nWe recommend the following inference frameworks to serve the model:\n\n- [SGLang](https://docs.sglang.io/) \\- see [cookbook](https://sgl-project.github.io/sglang-omni/cookbook/minimax_music3.html) \n\n- [diffusers](https://github.com/huggingface/diffusers) \\- see [diffusers docs](https://github.com/huggingface/diffusers/blob/minimax-music3-integration/docs/source/en/api/pipelines/minimax_music3.md)\n\n- [ComfyUI](https://github.com/Comfy-Org/ComfyUI)\n\n\n### Serve with SGLang-Omni\n\n```bash\nsgl-omni serve --model-path MiniMaxAI/MiniMax-Music3 --port 8000\n```\n\n### Generate Music\n\nThe service uses the shared speech API. Put the lyrics in `input` and the music description in `instructions`. Put lyric structure tags such as `[Verse]` and `[Chorus]` on their own lines.\n\n```bash\ncurl http://127.0.0.1:8000/v1/audio/speech \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"model\": \"MiniMaxAI/MiniMax-Music3\",\n    \"input\": \"[Verse]\\nMorning light filtering through the pine\\n[Chorus]\\nSoftly the world begins to breathe\",\n    \"instructions\": \"A warm acoustic pop song with intimate female vocals, fingerpicked guitar, soft piano, and a gradual emotional build into a wide final chorus.\",\n    \"response_format\": \"wav\",\n    \"seed\": 7,\n    \"max_new_tokens\": 750,\n    \"stream\": false\n  }' \\\n  --output minimax_music3.wav\n```\n\n`max_new_tokens` sets the maximum number of audio frames at 25 frames per second. Generation may finish before this limit when the model emits an end-of-audio token. The response is a 32 kHz, 16-bit stereo WAV file.\n\n### Reproducible Example\n\nThe following end-to-end example contains the complete lyrics, music description, and generation parameters used to produce the reference audio.\n\n| Use case | Request | Result |\n|---|---|---|\n| Text-to-music | [View script](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/scripts/end_to_end/minimax_ttm_test.py) | [minimax_ttm.wav](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/assets/minimax_ttm.wav) |\n\n## 🧨 Diffusers\n\nMiniMax Music 3 is available as a [diffusers](https://github.com/huggingface/diffusers) modular pipeline. Until [huggingface/diffusers#14456](https://github.com/huggingface/diffusers/pull/14456) is merged, install diffusers from the PR commit:\n\nThe snippet below fits 24GB+ VRAM GPUs\n\n```bash\npip install git+https://github.com/huggingface/diffusers@dafe3733fcfdbf3c48915fe77be3aef65b5d6a2d transformers accelerate soundfile\n```\n\n```python\nimport soundfile as sf\nimport torch\nfrom diffusers import ModularPipeline\n\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\")\npipe.load_components(dtype=torch.bfloat16)\npipe.to(\"cuda\")\n\nlyrics = \"\"\"[verse]\nMorning light filtering through the pine\nEvery quiet street is yours and mine\n[chorus]\nSoftly the world begins to breathe\"\"\"\n\nprompt = (\n    \"Genre: acoustic pop. BPM: 96. Key: C major. Warm and intimate, building gently into the chorus. \"\n    \"Vocals: soft female lead, close and breathy, light stacked harmonies in the chorus. \"\n    \"Arrangement: fingerpicked guitar and soft piano; brushed drums and upright bass enter in the chorus.\"\n)\n\naudio = pipe(\n    prompt=prompt,\n    lyrics=lyrics,\n    audio_duration=60.0,\n    generator=torch.Generator(\"cuda\").manual_seed(7),\n    output=\"audios\",\n)[0]\n\nsf.write(\"song.wav\", audio.T.float().cpu().numpy(), pipe.sampling_rate)\n```\n\n### Low VRAM\n\nThe full precision fits under 24GB of VRAM. With automatic CPU offloading, generation takes in ~22 GB; additionally streaming the language model layer by layer makes it fit even 8 GB video cards:\n\n```python\nimport torch\nfrom diffusers import ComponentsManager, ModularPipeline\nfrom diffusers.hooks import apply_group_offloading\n\nmanager = ComponentsManager()\nmanager.enable_auto_cpu_offload(device=\"cuda\")\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\", components_manager=manager)\npipe.load_components(dtype=torch.bfloat16)\n\n# Only needed below ~22 GB of VRAM — slower, but fits in 8 GB.\napply_group_offloading(\n    pipe.language_model, onload_device=torch.device(\"cuda\"), offload_type=\"leaf_level\", use_stream=True\n)\n\n\n```\n\n## Prompt Enhancement\n\nA concise natural-language description can be used directly. For richer prompts and more precise control, use the provided [`music-caption-rewriter`](https://github.com/MiniMax-AI/MiniMax-Music3/tree/main/skills/music-caption-rewriter) skill to expand it into a Structured Caption containing `Global Metadata`, `Vocal Details`, and `Arrangement`. The skill preserves musical instructions attached to lyric section tags in the arrangement description while keeping the lyric text in the lyrics input.\n\n```bash\nnpx skills add MiniMax-AI/MiniMax-Music3 --skill music-caption-rewriter\n```\n\n## Limitations\n\n- Inference requires CUDA.\n- Only non-streaming generation is currently supported.\n- The tokenized text prompt is limited to 5,000 tokens.\n- Audio generation is limited to 9,000 acoustic frames.\n- Section tags and music descriptions provide generative control rather than strict symbolic guarantees. The generated tempo, key, instrumentation, lyrics, and song structure may not always match every requested detail exactly.\n\n## Contact Us\n\nContact us at [model@minimax.io](mailto:model@minimax.io).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 46,
+      "topic_scores": {
+        "generative_music_audio": 46
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "realrebelai/MiniMax-Music-3_GGUFs",
+      "author": "realrebelai",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "gguf",
+        "quantized",
+        "comfyui",
+        "minimax",
+        "music-generation",
+        "text-to-music",
+        "audio",
+        "low-vram",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:quantized:MiniMaxAI/MiniMax-Music3",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 5,
+      "trending_score": 0.0,
+      "library_name": "gguf",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/realrebelai/MiniMax-Music-3_GGUFs",
+      "card_text": "---\nbase_model: MiniMaxAI/MiniMax-Music3\nbase_model_relation: quantized\nlicense: apache-2.0\npipeline_tag: text-to-audio\nlibrary_name: gguf\ntags:\n  - gguf\n  - quantized\n  - comfyui\n  - minimax\n  - music-generation\n  - text-to-music\n  - audio\n  - low-vram\n---\n\n# MiniMax-Music-3 — GGUF\n\nGGUF quantizations of [MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3), converted from [Comfy-Org's fp32 repack](https://huggingface.co/Comfy-Org/MiniMax-Music-3) for ComfyUI with [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF).\n\nMiniMax-Music-3 generates full music from a text prompt. The diffusion transformer is only **2.46B parameters** — small enough that even the top tier fits comfortably on modest hardware, and Q4 runs on almost anything.\n\nApache-2.0, inherited from the base model.\n\n---\n\n## Files\n\n| Quant | Size | Notes |\n|---|---|---|\n| Q6_K | ~2.0 GB | Excellent |\n| Q5_K_M | ~1.8 GB | Very good |\n| Q4_K_M | ~1.5 GB | Good balance |\n| Q3_K_M | ~1.2 GB | Audible softening on transients |\n| Q2_K | ~0.9 GB | Smallest; noticeable artifacts |\n\n```\nhf download realrebelai/MiniMax-Music-3-GGUF MiniMax-Music-3-Q8_0.gguf --local-dir ComfyUI/models/diffusion_models\n```\n\n**Take a higher tier than you would on an image model.** The fp32 source is 9.15 GB and Q8_0 is 2.6 GB — on a model this small there's little reason to drop low, and audio gives quantization error nowhere to hide. There's no visual channel to mask it: what would read as slightly soft detail in an image reads as smeared transients, ringing, or a thinner stereo field here. Q8_0 or Q6_K is the sensible default.\n\n---\n\n## Companion files\n\nThe GGUF replaces only the diffusion transformer. Both of these come from [Comfy-Org/MiniMax-Music-3](https://huggingface.co/Comfy-Org/MiniMax-Music-3):\n\n| File | Folder |\n|---|---|\n| `minimax_music3_text_encoder_bf16.safetensors` | `models/text_encoders` |\n| `minimax_music3_dav.safetensors` | `models/vae` |\n\nA pruned text-encoder variant is also available in that repo if the bf16 encoder is too large for your setup.\n\n---\n\n## Usage\n\n1. Put the `.gguf` in `ComfyUI/models/diffusion_models`\n2. Load it with **Unet Loader (GGUF)**\n3. Text encoder, VAE and sampler settings are unchanged from the official MiniMax-Music-3 workflow\n\nRequires ComfyUI with MiniMax-Music-3 support, plus the ComfyUI-GGUF custom node.\n\n---\n\n## Conversion notes\n\nConverted from the official fp32 transformer with a streaming converter, quantized with llama-quantize, then repaired.\n\nThis is a **1-D convolutional audio DiT**, not a standard image-model architecture — `preprocess_conv [2304, 2304, 1]`, `postprocess_conv [128, 128, 1]`, `latent_conditioners [2048, 4096, 3]` — with a separate timestep-feature path and a small `cond_layer_logits` gate.\n\nKept at high precision rather than quantized:\n\n```\npreprocess_conv, postprocess_conv, latent_conditioners,\ntimestep_features, to_timestep_embed, cond_layer, proj_out, rope\n```\n\nThe conv layers and the conditioning path are where a music model has the least tolerance for error — the timestep embedding steers every denoising step, and the latent conditioners carry the structure the audio is built on. llama-quantize does not preserve these automatically; they are restored afterward and verified per file.\n\nEvery file was checked after conversion to confirm those layers are stored at F16/F32 and that the tensor count and architecture metadata are intact.\n\n---\n\n## Credits\n\n- [MiniMax](https://huggingface.co/MiniMaxAI) — MiniMax-Music3\n- [Comfy-Org](https://huggingface.co/Comfy-Org/MiniMax-Music-3) — repacked weights, text encoder and VAE\n- [city96](https://github.com/city96/ComfyUI-GGUF) — ComfyUI-GGUF\n\nQuantized by [RealRebelAI](https://huggingface.co/realrebelai) · [GitHub](https://github.com/RealRebelAI) · [X](https://x.com/realrebelai)",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Abiray/MiniMax-Music3-GGUF",
+      "author": "Abiray",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "gguf",
+        "text-to-audio",
+        "text-to-music",
+        "music-generation",
+        "comfyui",
+        "minimax",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:quantized:MiniMaxAI/MiniMax-Music3",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 3,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Abiray/MiniMax-Music3-GGUF",
+      "card_text": "---\nlicense: apache-2.0\ntags:\n  - text-to-audio\n  - text-to-music\n  - music-generation\n  - gguf\n  - comfyui\n  - minimax\nbase_model: MiniMaxAI/MiniMax-Music3\npipeline_tag: text-to-audio\n---\n\n# MiniMax-Music-3 GGUF Quantizations\n\nThis repository contains **GGUF quantizations** for the diffusion transformer / DiT backbone of [MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3), a state-of-the-art text-to-music model capable of generating structured, full-length songs up to 5 minutes long at **32 kHz stereo**.\n\nThese quantized weights enable running MiniMax-Music-3 locally inside **ComfyUI** using the [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) custom node with significantly lower VRAM requirements.\n\n---\n\n## 📦 Quantized Files & Recommendations\n\n| File Name | Quantization | Size | Recommended Use |\n| :--- | :--- | :--- | :--- |\n| `MiniMax-Music3-F16.gguf` | F16 | 4.98 GB | Uncompressed reference baseline |\n| `MiniMax-Music3-Q8_0.gguf` | Q8_0 | 2.70 GB | Near-lossless audio fidelity (**Recommended**) |\n| `MiniMax-Music3-Q6_K.gguf` | Q6_K | 2.12 GB | Excellent fidelity, minimal compression loss |\n| `MiniMax-Music3-Q5_K_M.gguf` | Q5_K_M | 1.79 GB | Great balance of speed and VRAM footprint |\n| `MiniMax-Music3-Q4_K_M.gguf` | Q4_K_M | 1.49 GB | Low VRAM setups (8GB–10GB GPUs) |\n| `MiniMax-Music3-Q3_K_M.gguf` | Q3_K_M | 1.16 GB | Ultra-low VRAM (May introduce audible softening) |\n\n---\n\n## 🧩 Required Companion Files\n\nThe GGUF files in this repository replace only the **diffusion transformer** (DiT). To generate music in ComfyUI, you will also need the text encoder and VAE models provided by Comfy-Org:\n\n* **Text Encoders:** [Comfy-Org/MiniMax-Music-3 Text Encoders](https://huggingface.co/Comfy-Org/MiniMax-Music-3/tree/main/text_encoders)\n* **VAE:** [Comfy-Org/MiniMax-Music-3 VAE](https://huggingface.co/Comfy-Org/MiniMax-Music-3/tree/main/vae)\n\n---\n\n## 📂 ComfyUI File Placement\n\nPlace the downloaded files into their respective folders in your ComfyUI installation:\n\n```text\nComfyUI/\n└── models/\n    ├── diffusion_models/   (or models/unet/)\n    │   └── MiniMax-Music3-Q8_0.gguf\n    │\n    ├── text_encoders/       (or models/clip/)\n    │   └── minimax_music3_text_encoder_bf16.safetensors\n    │\n    └── vae/\n        └── minimax_music3_dav.safetensors\n```\n\n---\n\n## 🚀 How to Use in ComfyUI\n\n1. Install the [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) extension via ComfyUI Manager.\n2. In your workflow:\n   * Load the GGUF model using **`Unet Loader (GGUF)`**.\n   * Load the text encoder using the standard CLIP / Text Encoder loader.\n   * Load the VAE using the standard VAE loader.\n\n---\n\n## 📥 CLI Download Commands\n\n### 1. Download GGUF Model\n```bash\nhuggingface-cli download Abiray/MiniMax-Music3-GGUF MiniMax-Music3-Q8_0.gguf --local-dir ComfyUI/models/diffusion_models\n```\n\n### 2. Download Companion Text Encoder & VAE\n```bash\n# Text Encoder\nhuggingface-cli download Comfy-Org/MiniMax-Music-3 text_encoders/minimax_music3_text_encoder_bf16.safetensors --local-dir ComfyUI/models/text_encoders --local-dir-use-symlinks False\n\n# VAE\nhuggingface-cli download Comfy-Org/MiniMax-Music-3 vae/minimax_music3_dav.safetensors --local-dir ComfyUI/models/vae --local-dir-use-symlinks False\n```\n\n---\n\n## ✍️ Prompting Structure\n\nMiniMax-Music-3 generates the best results when given two separate conditioning inputs:\n\n### Lyrics (with section markers on individual lines)\n```text\n[Verse]\nMorning light filtering through the pine\nEvery quiet street is yours and mine\n\n[Chorus]\nSoftly the world begins to breathe\n```\n\n### Music Description\n```text\nGenre: acoustic pop. BPM: 96. Key: C major. Warm and intimate, building gently into the chorus.\nVocals: soft female lead, close and breathy, light stacked harmonies in the chorus.\nArrangement: fingerpicked guitar and soft piano; brushed drums and upright bass enter in the chorus.\n```\n\n---\n\n## 📜 Credits & License\n\n* **Original Model:** [MiniMaxAI/MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3)\n* **ComfyUI Repack:** [Comfy-Org/MiniMax-Music-3](https://huggingface.co/Comfy-Org/MiniMax-Music-3)\n* **License:** Inherits the [Apache-2.0 License](https://huggingface.co/MiniMaxAI/MiniMax-Music3) from the original release.",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "vanch007/MiniMax-Music3-MLX-8bit",
+      "author": "vanch007",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "apple-silicon",
+        "music-generation",
+        "text-to-music",
+        "minimax_music3",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:finetune:MiniMaxAI/MiniMax-Music3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/vanch007/MiniMax-Music3-MLX-8bit",
+      "card_text": "---\nlibrary_name: mlx\npipeline_tag: text-to-audio\nbase_model: MiniMaxAI/MiniMax-Music3\ntags:\n  - mlx\n  - apple-silicon\n  - music-generation\n  - text-to-music\n  - minimax_music3\nlicense: other\nlicense_name: minimax-music3-community-license\nlicense_link: LICENSE\n---\n\n# MiniMax Music 3 MLX 8-bit\n\nNative Apple MLX checkpoint for [MiniMaxAI/MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3), converted with selective affine 8-bit quantization and BF16 exceptions.\n\nRuntime source and installation instructions: [vanch007/mlx-minimax-music3](https://github.com/vanch007/mlx-minimax-music3).\n\n## Use\n\n```bash\npython -m pip install \"mlx-minimax-music3[server] @ git+https://github.com/vanch007/mlx-minimax-music3.git@v0.1.0\"\n\nmlx-minimax-music3 generate \\\n  --model vanch007/MiniMax-Music3-MLX-8bit \\\n  --prompt \"Warm acoustic pop with intimate female vocals and fingerpicked guitar.\" \\\n  --lyrics $'[verse]\\nMorning light across the sea\\n[chorus]\\nStay here and sing this song with me' \\\n  --duration 10 \\\n  --seed 7 \\\n  --steps 30 \\\n  --output song.wav\n```\n\nApple silicon and Metal are required. The production runtime does not use PyTorch.\n\n## Checkpoint\n\n- Weight size: 14,167,660,156 bytes (13.195 GiB)\n- Components: Qwen3 language model, RVQ depth decoder, condition encoder, flow transformer, stereo vocoder\n- Output: 44.1 kHz stereo waveform\n- Weight shards: 12\n- MLX tensors: 1,978\n- Quantization: affine 8-bit, group size 64\n\nQuantized modules:\n\n- Language-model attention and MLP matrices\n- RVQ depth-decoder attention and MLP matrices\n- Flow-transformer projections, attention, and feed-forward matrices\n\nBF16 modules and parameters:\n\n- Token, codebook, and positional embeddings\n- Language-model and RVQ output heads\n- Normalizations and biases\n- Condition encoder\n- Timestep and Fourier projections\n- Convolutions and complete vocoder\n\nEach component directory includes a conversion manifest with per-shard SHA-256 values, source-shard coverage, tensor names, and remote verification metadata.\n\n## Provenance\n\n| Item | Revision |\n|---|---|\n| Source model | `MiniMaxAI/MiniMax-Music3@c2509fd6b60d1ae169cd1df27f78a53174ba17e8` |\n| Diffusers reference | `huggingface/diffusers@c6da9936e4bda83107943a16eb8682e9a37d8527` |\n| MLX runtime | `vanch007/mlx-minimax-music3@v0.1.0` |\n\nThe full provenance record is in `source_manifest.json`.\n\n## Validation\n\nThe complete repository was downloaded from its fixed Hugging Face commit and passed strict shard, SHA-256, tensor-name, and finite-value checks.\n\nFixed-input component comparisons against the official BF16 PyTorch reference produced:\n\n| Component | Cosine similarity | Relative RMSE |\n|---|---:|---:|\n| Language model | 0.999822 | 0.025001 |\n| RVQ depth decoder | 0.999916 | 0.012956 |\n| Condition encoder | 0.999990 | 0.004654 |\n| Flow transformer | 0.998990 | 0.045071 |\n| Vocoder | 0.999877 | 0.015715 |\n\nA local Apple M3 Max release run generated 10 seconds of audio using 250 autoregressive frames, two overlapping chunks, and 30 flow steps. The result was a finite, non-silent, unclipped 44.1 kHz stereo PCM WAV lasting 9.996 seconds. Peak MLX memory was 23.34 GiB.\n\nThese checks establish implementation and numerical alignment within the recorded quantized tolerances. Human listening review is `pending`; no claim of perceptual quality parity with the source release is made.\n\n## Limitations\n\n- Apple silicon only\n- One song per generation call\n- No streaming output\n- No training or fine-tuning support\n- Generated audio may end before the requested maximum duration\n- Lower-memory Macs have not been validated for this checkpoint\n\n## License\n\nThis converted checkpoint remains subject to the [MiniMax-Music3 Community License](LICENSE), including its attribution, acceptable-use, safeguard, and commercial terms.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ChrisColeTech/minimax-music3-GGUF",
+      "author": "ChrisColeTech",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "gguf",
+        "text-to-music",
+        "music-generation",
+        "quantized",
+        "minimax",
+        "minimax-music3",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:quantized:MiniMaxAI/MiniMax-Music3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "gguf",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/ChrisColeTech/minimax-music3-GGUF",
+      "card_text": "---\r\nlicense: other\r\npipeline_tag: text-to-audio\r\ntags:\r\n  - text-to-music\r\n  - music-generation\r\n  - gguf\r\n  - quantized\r\n  - minimax\r\n  - minimax-music3\r\nlibrary_name: gguf\r\nbase_model:\r\n  - MiniMaxAI/MiniMax-Music3\r\n---\r\n\r\n# MiniMax Music 3 GGUF\r\n\r\nThe MiniMax Music 3 **autoregressive text encoder** + **flow-matching DiT**, converted to GGUF.\r\n\r\nComplete songs with vocals from a **caption** (music description) + **lyrics**. Up to ~5 min, stereo 44.1 kHz.\r\n\r\n---\r\n\r\n## Samples\r\n\r\n### Synth-Pop - 2 min\r\n\r\n<audio controls src=\"https://huggingface.co/ChrisColeTech/minimax-music-GGUF/resolve/main/samples/synthpop_2min.wav\"></audio>\r\n\r\n- **~7.3 min** on an **RTX 5090 (32 GB)**, peak **9.7 GiB**.\r\n\r\n| Parameter | Value |\r\n|---|---|\r\n| Prompt | `Polished modern synth-pop with a cinematic lift. 104 BPM, A minor. Bright, wide and euphoric, building from a restrained verse into a soaring chorus. High-fidelity studio production: pristine and clean, crisp transients, wide stereo image, deep controlled sub, glossy modern mastering. No vinyl noise, no tape hiss, no lo-fi texture. Vocal Details: Clear, confident female lead, forward and centered in the mix, pop-clean and articulate with strong sustained notes in the chorus. Bright airy top end, tight controlled vibrato. Stacked octave harmonies and a layered choir-like double on the chorus, wide and shimmering.`|\r\n\r\n---\r\n\r\n### Lo-fi hip-hop — 0:20 (Q8_0 GGUF)\r\n\r\n<audio controls src=\"https://huggingface.co/ChrisColeTech/minimax-music-GGUF/resolve/main/samples/lofi_20s_gguf_q8_0.wav\"></audio>\r\n\r\n- **~2.3 min** on an **RTX 5090 (32 GB)**, peak **9.7 GiB**.\r\n\r\n| Parameter | Value |\r\n|---|---|\r\n| Prompt | `Lo-fi hip-hop, chillhop. 78 BPM, D♭ major. Soft androgynous vocal, hushed, behind-the-beat. Dusty boom-bap drums, Rhodes, vinyl crackle.` |\r\n\r\n\r\n## Components used to generate\r\n\r\n| Component | File | ~Size | Download |\r\n|---|---|---|---|\r\n| Text Encoder | `minimax_music3_text_encoder_pruned_Q8_0.gguf` | 8.88 GB | [Link](https://huggingface.co/ChrisColeTech/minimax-music-GGUF/blob/main/split/text_encoders/minimax_music3_text_encoder_pruned_Q8_0.gguf) |\r\n| Transformer | `minimax_music3_dit_Q8_0.gguf` | 2.70 GB | [Link](https://huggingface.co/ChrisColeTech/minimax-music-GGUF/blob/main/split/diffusion_models/minimax_music3_dit_Q8_0.gguf) |\r\n| Audio VAE | `minimax_music3_dav.safetensors` | 217 MB | [Link](https://huggingface.co/ChrisColeTech/minimax-music-GGUF/blob/main/split/vae/minimax_music3_dav.safetensors) |\r\n\r\n\r\n\r\n---\r\n\r\n## Recommended settings\r\n\r\n| Parameter | Value | Notes |\r\n|---|---|---|\r\n| `duration` | `120`–`300` | **Upper bound, not a target** — see Notes |\r\n| `steps` | **`30`** | flow-matching Euler |\r\n| `guidance` / CFG | **`1.7`** | flow stage |\r\n| AR CFG / top-k | **`1.5`** / **`50`** | fixed by the reference recipe |\r\n| Output | `44100` Hz stereo | vocoder native |\r\n\r\n**Caption in three parts** — global metadata (genre, BPM, key, mood) → vocal details → arrangement. Describe the vocal explicitly (\"warm female vocal, close and breathy\") or it drifts instrumental.\r\n\r\n**Structure tags each on their own line**: `[intro]` `[verse]` `[pre-chorus]` `[chorus]` `[bridge]` `[instrumental]` `[solo]` `[outro]`. They are the only structural instruction the model executes.\r\n\r\n---\r\n\r\n## ⚠ Must use the updated GGUF Loader ⚠ \r\n\r\nIn comfy:\r\n- Open the ComfyUI Manager\r\n- Change the channel to \"Channel (remote)\"\r\n- and search for comfyui-gguf-loader\r\n\r\n![image](https://cdn-uploads.huggingface.co/production/uploads/6a550d1dc84594e3ada10828/SgiBz44CKsKT5m2sCXDnB.png)\r\n\r\n\r\n\r\n---\r\n\r\n## Sources\r\n\r\n| | |\r\n|---|---|\r\n| **Base model** | [MiniMaxAI/MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3) |\r\n| **Source weights** | [Comfy-Org/MiniMax-Music-3](https://huggingface.co/Comfy-Org/MiniMax-Music-3) |",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "elishabjm/MiniMax-Music3-MLX",
+      "author": "elishabjm",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "qwen3",
+        "apple-silicon",
+        "quantized",
+        "music-generation",
+        "text-to-music",
+        "minimax-music3",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:quantized:MiniMaxAI/MiniMax-Music3",
+        "license:other",
+        "4-bit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/elishabjm/MiniMax-Music3-MLX",
+      "card_text": "---\nbase_model: MiniMaxAI/MiniMax-Music3\nlicense: other\nlicense_name: minimax-music3-community-license\nlicense_link: https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/LICENSE\npipeline_tag: text-to-audio\nlibrary_name: mlx\ntags:\n  - mlx\n  - apple-silicon\n  - quantized\n  - music-generation\n  - text-to-music\n  - minimax-music3\n---\n\n# MiniMax-Music3 language model, MLX 4-bit\n\nThe autoregressive language model of [MiniMaxAI/MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3),\nconverted to MLX and quantized, plus the bridge code that plugs it back into the\noriginal `diffusers` pipeline.\n\nUpstream states that inference requires CUDA and that CPU and MPS are not supported.\nOn a 24 GB Apple Silicon machine the bf16 pipeline does not merely run slowly, it\nnever reaches generation: 21.6 GB of weights plus activations plus the OS puts the\nmachine into full swap. This repo removes that wall by replacing the single\ncomponent responsible for 80% of the weight footprint.\n\n**This is a memory port, not a speed port.** Read the benchmarks before you decide\nwhether it is useful to you.\n\n## What is in here\n\n| File | Content |\n|---|---|\n| `model.safetensors*`, `config.json` | Qwen3 8.6B language model, MLX quantized, 5.65 GB |\n| `mlx_bridge.py` | Torch-facing shim so the `diffusers` pipeline can call the MLX model |\n| `convert_lm_mlx.py` | The conversion script, if you want to redo it at other bit widths |\n| `generate.py` | End-to-end generation script |\n| `LICENSE` | MiniMax-Music3 Community License, unchanged |\n\nThe other components (flow-matching transformer, RVQ depth decoder, Flow-VAE\nvocoder, condition encoder) are **not** redistributed here. They are used unmodified\nin bf16 from the upstream repo.\n\n## Why only the language model\n\nThe pipeline touches `Qwen3ForCausalLM` at exactly three points:\n\n```python\nlanguage_model.model.embed_tokens(ids)\nlanguage_model.model(inputs_embeds=..., past_key_values=..., use_cache=True)\nlanguage_model.lm_head(hidden)\n```\n\nThat is a small enough surface to reimplement on top of an MLX model, which is what\n`mlx_bridge.py` does. Everything else stays in torch/MPS, so the numerical path of\nthe diffusion stage is untouched.\n\n| Component | Upstream bf16 | Here |\n|---|---|---|\n| language model (Qwen3 8.6B) | 17.2 GB | 5.65 GB, MLX |\n| transformer, RVQ decoder, vocoder, condition encoder | 5.6 GB | unchanged, torch/MPS |\n| **resident weights** | **21.6 GB** | **11.3 GB** |\n\nPeak process footprint during a 30 s generation: **15.7 GB**, no swap.\n\n## Quantization\n\n| Tensors | Bits | Group size |\n|---|---|---|\n| transformer block linears | 4 | 64 |\n| `embed_tokens`, `lm_head` | 8 | 64 |\n\n5.264 bits per weight overall. The two embedding tables are kept at 8 bits because\nevery audio code the model emits is looked up and scored through them, and they are\nonly 1.6 GB of the total at that width.\n\n## Benchmarks\n\nApple M4 Pro, 24 GB unified memory, macOS 25.6, torch 2.13, MLX 0.32.\n30 s of audio, 30 denoising steps, measured with explicit `torch.mps.synchronize()`.\n\nComponent load takes 10.5 s. Generation of 30 s of audio takes **356 to 413 s**\nacross runs, which is **12x to 14x slower than realtime**. A 90 s track takes\nroughly 20 minutes.\n\nWhere that time goes, per stage:\n\n| Stage | Time | Share | Backend |\n|---|---|---|---|\n| flow-matching transformer | 265.7 s | 74.6% | torch/MPS |\n| autoregressive loop, total | 81.0 s | 22.7% | mixed |\n| &nbsp;&nbsp;of which RVQ depth decoder | 56.9 s | 16.0% | torch/MPS |\n| &nbsp;&nbsp;of which MLX language model | 16.9 s | 4.7% | MLX |\n| &nbsp;&nbsp;of which `lm_head` | 3.1 s | 0.9% | MLX |\n| &nbsp;&nbsp;of which top-k sampling | 3.9 s | 1.1% | torch/MPS |\n| vocoder | 9.2 s | 2.6% | torch/MPS |\n| condition encoder | 0.3 s | 0.1% | torch/MPS |\n\nPer-operation costs behind those totals:\n\n| Operation | Cost |\n|---|---|\n| flow transformer, one denoising forward (batch 1) | 572.7 ms |\n| RVQ depth decoder, one depth step | 10.0 ms |\n| MLX language model, one frame | 22.5 ms |\n| vocoder, one window | 1078.8 ms |\n| condition encoder, one window | 3.3 ms |\n\nThe language model is **not** the bottleneck once quantized: MLX accounts for about\n6% of wall time. The flow-matching transformer dominates, running 2 forwards per\ndenoising step because classifier-free guidance is executed as two separate batch-1\npasses. Batching them into one batch-2 forward was measured and gains 1.1%, so that\nstage is compute-bound rather than launch-bound. Making this fast on Apple Silicon\nmeans porting the flow transformer to MLX, which this repo does not do. Second\ntarget after that would be the RVQ depth decoder, whose 7 sequential steps per audio\nframe cost 3x more than the language model they feed.\n\nMeasure with `torch.mps.synchronize()` around anything you time here. Torch is\nasynchronous on MPS, and without explicit syncs the cost of the denoising loop is\nattributed to whichever later call happens to drain the queue. An earlier version of\nthis profile reported 219 s in the condition encoder, a 25M-parameter Conv1d whose\nreal cost is 0.3 s.\n\nIf you have a 24 GB CUDA GPU, use the upstream repo instead. It will be far faster.\n\n## Usage\n\n```bash\n# 1. upstream components (diffusers subset, ~28.5 GB)\nhf download MiniMaxAI/MiniMax-Music3 --local-dir models/MiniMax-Music3 \\\n  --include \"condition_encoder/*\" \"language_model/*\" \"rvq_depth_decoder/*\" \\\n  \"scheduler/*\" \"tokenizer/*\" \"transformer/*\" \"vocoder/*\"\nhf download MiniMaxAI/MiniMax-Music3 modular_model_index.json config.json \\\n  --local-dir models/MiniMax-Music3\n\n# 2. this repo\nhf download elishabjm/MiniMax-Music3-MLX --local-dir models/lm-mlx\n\n# 3. dependencies\npip install \"git+https://github.com/huggingface/diffusers@dafe3733fcfdbf3c48915fe77be3aef65b5d6a2d\" \\\n  transformers accelerate soundfile torch mlx mlx-lm\n\n# 4. generate\npython generate.py -p caption.txt -l lyrics.txt -d 60 --steps 30 -o song.wav\n```\n\nYou can skip downloading `language_model/*` in step 1 if you only ever use the MLX\npath. It is listed above because `--lm torch` falls back to it.\n\n### Two gotchas that will cost you an hour otherwise\n\n`modular_model_index.json` points every component at the Hub repo id rather than at\nyour local directory, so the pipeline re-downloads 28 GB even though the weights are\nalready on disk. `generate.py` rewrites those paths on startup.\n\nThe decoder returns `(channels, samples)`; `soundfile` expects `(samples, channels)`.\nWriting the array as-is fails with `Format not recognised`.\n\n## Prompting\n\nUnchanged from upstream. The caption drives the sound, the lyrics only get sung. The\nofficial `music-caption-rewriter` skill in the\n[MiniMax-AI/MiniMax-Music3](https://github.com/MiniMax-AI/MiniMax-Music3) GitHub repo\ncarries a genre router and 1000 reference captions, and is worth reading before\nwriting prompts by hand.\n\n## Quality\n\nNo formal evaluation was run against the bf16 reference, because the bf16 reference\ndoes not fit on the hardware this port targets. Spectral checks on 30 s outputs are\nconsistent with music rather than noise (13.9% of energy below 200 Hz, 34.6% in\n200 Hz to 2 kHz, 17 dB crest factor, structured RMS envelope). Treat that as a\nsanity check, not as a quality claim. If you have a machine that can run both, an\nA/B would be a genuinely useful contribution.\n\n## License and attribution\n\nMiniMax-Music3 Community License, reproduced unchanged in `LICENSE`. The copyright\nnotice must travel with any copy. Commercial use requires displaying\n\"MiniMax-Music3\" in the product interface, and separate written authorization from\nMiniMax above 20M USD yearly revenue.\n\nUpstream components carry their own lineage: the language model derives from\nQwen3-8B (Apache 2.0), the DiT from Stable Audio Open, the VAE from a modified\nStability AI design. See the upstream LICENSE for the full chain.\n\nAll credit for the model belongs to MiniMax. This repo contributes a quantization\nand a compatibility shim, nothing more.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ddalcu/MiniMax-Music3-MLX-Serve-8bit",
+      "author": "ddalcu",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "mlx-serve",
+        "safetensors",
+        "minimax_music3",
+        "mlx",
+        "music",
+        "text-to-music",
+        "minimax",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:quantized:MiniMaxAI/MiniMax-Music3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 4,
+      "trending_score": 0.0,
+      "library_name": "mlx-serve",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/ddalcu/MiniMax-Music3-MLX-Serve-8bit",
+      "card_text": "---\nlicense: other\nlicense_name: minimax-music3-community-license\nlicense_link: LICENSE\nbase_model: MiniMaxAI/MiniMax-Music3\nbase_model_relation: quantized\nlibrary_name: mlx-serve\ntags:\n  - mlx\n  - mlx-serve\n  - music\n  - text-to-music\n  - minimax\npipeline_tag: text-to-audio\n---\n\n# MiniMax Music 3 for mlx-serve (8-bit)\n\n[MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3) converted for\n[mlx-serve](https://github.com/ddalcu/mlx-serve)'s native Zig + MLX engine.\nFull songs with sung lyrics at 44.1 kHz stereo, generated locally on Apple\nSilicon.\n\nQuantization: affine 8-bit, group 64, on every real matmul (LLM, depth\ndecoder, DiT, lm_head). Kept dense on purpose: the embedding tables (gather\nreads), the condition encoder and the whole vocoder (VAE-class precision).\nWorst per-tensor reconstruction error 1.48% RMS. 13 GB on disk instead of the\n57 GB upstream repo (which ships its weights twice).\n\n| File | Contents |\n|---|---|\n| `language_model.safetensors` | Qwen3 8B global LLM, 36L, vocab 200k |\n| `rvq_depth_decoder.safetensors` | 0.6B local LLM, 7 residual codebooks |\n| `transformer.safetensors` | 2.4B flow-matching DiT, 36 blocks |\n| `condition_encoder.safetensors` | hidden-state mix + resampler, f32 |\n| `vocoder.safetensors` | Flow-VAE / DAC decoder, f32 |\n\nEngine parity against the fp32 reference on these exact weights: prefill\ncosine 0.9999, condition encoder 0.999999, DiT velocity 0.999, vocoder\n1.000000. The autoregressive stage runs about 44 ms per frame on an M-series\nMac, so a one-minute song takes roughly a minute of LLM time plus the\ndiffusion pass.\n\n## Run it\n\nDownload **[MLX Core.app](https://github.com/ddalcu/mlx-serve/releases/latest)**,\nopen the Music tab and pick **MiniMax Music 3**. Style prompt + lyrics in,\nWAV out.\n\nOver HTTP:\n\n```bash\nmlx-serve --serve\ncurl http://127.0.0.1:11234/v1/audio/music-generations \\\n  -H 'Content-Type: application/json' -o song.wav -d '{\n    \"model\": \"MiniMax-Music3-MLX-Serve-8bit\",\n    \"prompt\": \"upbeat synthwave with driving bass and dreamy pads\",\n    \"lyrics\": \"[verse]\\nneon lights across the bay\\n[chorus]\\nwe run all night\",\n    \"duration_seconds\": 60\n  }'\n```\n\nLyrics are required (the model is lyric-conditioned) and structure tags like\n`[verse]` or `[chorus]` go on their own lines. `duration_seconds` (1-360) is\nan upper bound, the model may end the song earlier. ACE-Step style fields\n(bpm, keyscale, timesignature, vocal_language) do not exist on this model.\n\nRebuild from the upstream repo with\n[`scripts/convert_music3_weights.py`](https://github.com/ddalcu/mlx-serve/blob/main/scripts/convert_music3_weights.py).\n\nWeights are covered by the MiniMax-Music3 Community License (see `LICENSE`,\nacceptable-use policy included as Exhibit A).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 32,
+      "topic_scores": {
+        "generative_music_audio": 31
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, text-to-audio (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "netease-youdao/Confucius4-TTS",
+      "author": "netease-youdao",
+      "created_at": "2026-06-02",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "confucius4",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "zero-shot",
+        "voice-cloning",
+        "cross-lingual",
+        "multilingual",
+        "llm",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "de",
+        "fr",
+        "id",
+        "vi",
+        "th",
+        "es",
+        "pt",
+        "it",
+        "ru",
+        "ms",
+        "arxiv:2608.11650",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 177,
+      "likes": 19,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/netease-youdao/Confucius4-TTS",
+      "card_text": "---\nlanguage:\n- zh\n- en\n- ja\n- ko\n- de\n- fr\n- id\n- vi\n- th\n- es\n- pt\n- it\n- ru\n- ms\npipeline_tag: text-to-speech\nlicense: apache-2.0\ntags:\n- text-to-speech\n- tts\n- speech-synthesis\n- zero-shot\n- voice-cloning\n- cross-lingual\n- multilingual\n- llm\n---\n\n<div align=\"center\">\n    <img src=\"https://2901733926.github.io/Confucius4-TTS/Confucius4-TTS.jpg\" alt=\"Confucius4-TTS\" width=\"35%\">\n    <h1>Confucius4-TTS: a Multilingual and Cross-Lingual Zero-Shot TTS Engine</h1>\n    <p><b>One voice. Any language.</b></p>\n</div>\n\n<div align=\"center\">\n    <a href=\"./README.zh.md\"><img src=\"https://img.shields.io/badge/README-中文版本-red\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n    <a href=\"https://arxiv.org/abs/2608.11650\"><img src=\"https://img.shields.io/badge/arXiv-2608.11650-b31b1b.svg\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n    <a href=\"./LICENSE\"><img src=\"https://img.shields.io/badge/code_license-Apache%202.0-blue\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n    <a href=\"https://confucius4-tts.youdao.com/gradio\"><img src=\"https://img.shields.io/badge/Demo-在线体验-orange\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n    <a href=\"https://2901733926.github.io/Confucius4-TTS/\"><img src=\"https://img.shields.io/badge/GitHub.io-Demo_Page-blue?logo=GitHub&style=flat-square\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n    <a href=\"https://github.com/netease-youdao/Confucius4-TTS\"><img src=\"https://img.shields.io/badge/GitHub-Code-181717?logo=GitHub\" alt=\"GitHub Code\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n    <a href=\"https://huggingface.co/netease-youdao/Confucius4-TTS\"><img src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Confucius4TTS-yellow\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n    <a href=\"https://modelscope.cn/models/netease-youdao/Confucius4-TTS\"><img src=\"https://img.shields.io/badge/ModelScope-Confucius4TTS-purple\"></a>\n    &nbsp;&nbsp;&nbsp;&nbsp;\n</div>\n<br>\n\nConfucius4-TTS is an advanced LLM-based text-to-speech (TTS) system designed for multilingual and cross-lingual speech synthesis. Built on a speech encoder + large language model (LLM) architecture, Confucius4-TTS enables high-quality speech generation while preserving speaker identity across languages. You can try our online demo at **[https://confucius4-tts.youdao.com/gradio](https://confucius4-tts.youdao.com/gradio)**.\n\n**✨ Key Features**\n\n- **14 Languages Supported**: Chinese, English, Japanese, Korean, German, French, Spanish, Indonesian, Italian, Thai, Portuguese, Russian, Malay and Vietnamese *(more coming soon)*\n- **Unconstrained Voice Cloning**: No reference transcript required\n- **Cross-Lingual Voice Transfer**: Unaccented speech synthesis across 14 languages\n- **Zero-Shot Voice Transfer**: Clone voices without additional training\n- **Seamless Emotion Transfer**: Clone the feeling, not just the voice\n- **Robust Generalization**: Stable performance in real-world multilingual scenarios\n\nWith strong cross-lingual generalization, Confucius4-TTS allows users to seamlessly switch languages while keeping the same voice, delivering fluent, natural, and expressive speech.\n\n## Contents\n\n- [Installation](#-installation)\n- [Inference](#-inference)\n- [Training](#-training)\n- [Performance](#-performance)\n- [Citation](#citation)\n\n## 🛠 Installation\n\n### Requirements\n\n- Python 3.10\n- CUDA 12.6\n\n### Setup\n\n1. Clone the repository:\n\n```bash\ngit clone https://github.com/netease-youdao/Confucius4-TTS.git\ncd Confucius4-TTS\n```\n\n2. Create and activate a conda environment:\n\n```bash\nconda create -n confuciustts python=3.10 -y\nconda activate confuciustts\n```\n\n3. Install dependencies:\n\n```bash\npip install -r requirements.txt\n```\n\n## 🚀 Inference\n\nUse the provided `example.py` script for zero-shot TTS synthesis:\n\n```bash\npython example.py \\\n    --prompt_wav path/to/reference.wav \\\n    --text \"Your text to synthesize\" \\\n    --lang en \\\n    --out output.wav \\\n    --config config/inference_config.yaml\n```\n\nYou can also use the Python API directly:\n\n```python\nimport torch\nimport torchaudio\nfrom confuciustts.cli.inference import ConfuciusTTS\n\nmodel = ConfuciusTTS(\n    config_path=\"config/inference_config.yaml\",\n    device=\"cuda\" if torch.cuda.is_available() else \"cpu\",\n)\n\naudio = model.generate(\n    text=\"Hello, welcome to Confucius4-TTS.\",\n    lang=\"en\",\n    prompt_wav=\"path/to/reference.wav\",\n    verbose=True,\n)\n\ntorchaudio.save(\"output.wav\", audio.cpu(), model.sample_rate)\n```\n\n## 🚀 Fine-Tuning\n\nConfucius4-TTS follows a \"speech encoder + LLM\" architecture. The training pipeline covers two modules:\n- **Text2Semantic (T2S)**: generates semantic token sequences from text and speaker conditioning.\n- **Semantic2Acoustic (S2A)**: a flow-matching model that converts semantic tokens into mel spectrograms.\n\n### 1. Prepare Pretrained Models\n\nDownload the two external models:\n\n```bash\n# Wav2Vec2-BERT (speaker conditioning & semantic feature extraction)\nhuggingface-cli download facebook/w2v-bert-2.0 \\\n    --local-dir pretrained/w2v-bert-2.0\n\n# Amphion MaskGCT (semantic codec implementation)\ngit clone https://github.com/open-mmlab/Amphion.git external/Amphion\n```\n\nAfter downloading, your directory should look like:\n\n```\ncheckpoints/\n├── t2s_model.safetensors        # pretrained T2S weights\n├── s2a_model.pt                 # pretrained S2A weights\n├── wav2vec2bert_stats.pt        # semantic feature normalization statistics\n├── special_tokens_map.json      # tokenizer files\n├── tokenizer.json\n├── tokenizer.model\n└── tokenizer_config.json\npretrained/\n├── w2v-bert-2.0/                # Wav2Vec2-BERT model\n└── campplus/\n    └── campplus_cn_common.bin   # CAMPPlus speaker encoder checkpoint\nexternal/\n└── Amphion/                     # MaskGCT semantic codec implementation\n```\n\n### 2. Prepare Training Data\n\nTraining data is provided as **TSV files** (tab-separated, no header) with the following 5 columns:\n\n| Column | Description |\n|---|---|\n| `lang` | Language code (e.g. `zh`, `en`, `ja`) |\n| `wav_path` | Path to the target audio |\n| `norm_text` | Normalized text |\n| `semantic_ids_path` | Pre-extracted semantic tokens (`.npy` file path) |\n| `ref_audio_paths` | Reference audio path(s), comma-separated for multiple |\n\nConfigure the train/validation paths in `config/train_t2s.yaml`:\n\n```yaml\ndata:\n  train_data_path:\n    - data/train.tsv\n  val_data_path:\n    - data/val.tsv\n```\n\n### 3. Launch T2S Training\n\nSet the pretrained T2S checkpoint path in `config/train_t2s.yaml`:\n\n```yaml\npaths:\n  t2s_checkpoint: checkpoints/t2s_model.safetensors\n```\n\n**Single-node training:**\n\n```bash\npython -m confuciustts.cli.train_t2s -c config/train_t2s.yaml\n```\n\n### 4. Launch S2A Training\n\nSet the checkpoint paths in `config/train_s2a.yaml`. `t2s_checkpoint` points to the frozen T2S backbone; `s2a_checkpoint` is optional and can be used to resume from a pretrained S2A model:\n\n```yaml\npaths:\n  t2s_checkpoint: checkpoints/t2s_model.safetensors\n  s2a_checkpoint: checkpoints/s2a_model.pt   # optional: resume from pretrained S2A\n```\n\n**Single-node training:**\n\n```bash\npython -m confuciustts.cli.train_s2a -c config/train_s2a.yaml\n```\n\nDuring S2A training, the T2S model, speaker encoder (Wav2Vec2-BERT), and style encoder (CAMPPlus) are all frozen. Only the flow-matching S2A model is trained.\n\n## 📊 Performance\n\nConfucius4-TTS achieves competitive results on multilingual and cross-lingual zero-shot TTS benchmarks, with strong intelligibility and speaker similarity across multiple languages.\n\n> Lower is better for WER/CER (↓), and higher is better for SIM (↑).\n\n### CV3-eval Cross-lingual\n\n<details>\n<summary><b>CV3-eval Cross-lingual Results (click to expand)</b></summary>\n\n| Direction | Metric | Confucius4-TTS | CosyVoice2† | CosyVoice3-0.5B† | CosyVoice3-1.5B† | OmniVoice† | VoxCPM2 |\n|---|---|---:|---:|---:|---:|---:|---:|\n| en→zh | CER↓ | **6.16** | 13.50 | 8.48 | 8.01 | 6.53 | 6.29 |\n| ja→zh | CER↓ | 4.87 | 48.10 | 6.86 | 6.78 | 52.64 | **4.20** |\n| ko→zh | CER↓ | 1.28 | 7.70 | 5.24 | 3.30 | 1.71 | **1.20** |\n| zh→en | WER↓ | **3.19** | 17.10 | 6.83 | 5.39 | 3.72 | 3.84 |\n| ja→en | WER↓ | **3.44** | 11.20 | 5.86 | 5.94 | 5.25 | 4.10 |\n| ko→en | WER↓ | **3.42** | 13.10 | 18.30 | 13.70 | 3.91 | 5.69 |\n\n† Requires reference text.\n\n</details>\n\n### X-Voice Benchmark\n\n<details>\n<summary><b>X-Voice Cross-lingual Results (click to expand)</b></summary>\n\n| Direction | Metric | Confucius4-TTS | X-Voice | IndexTTS2 | OmniVoice† | VoxCPM2 |\n|---|---|---:|---:|---:|---:|---:|\n| de→zh | CER↓ | **2.86** | 3.07 | 3.46 | 7.79 | 3.62 |\n| en→zh | CER↓ | 3.21 | **3.06** | 3.78 | 3.30 | 3.35 |\n| fr→zh | CER↓ | **2.70** | 3.01 | 3.53 | 8.16 | 3.75 |\n| ja→zh | CER↓ | 3.50 | **3.39** | 4.11 | 60.88 | 4.53 |\n| ko→zh | CER↓ | **2.86** | 3.13 | 2.90 | 7.35 | 6.33 |\n| th→zh | CER↓ | 2.82 | **2.79** | 3.08 | 2.85 | 5.96 |\n| vi→zh | CER↓ | **2.75** | 2.78 | 2.98 | 6.59 | 3.65 |\n\n† Requires reference text.\n\n</details>\n\n### Seed-TTS-eval\n\n<details>\n<summary><b>Seed-TTS-eval English & Chinese Zero-shot Results (click to expand)</b></summary>\n\n| System | English WER↓ | English SIM↑ | Chinese CER↓ | Chinese SIM↑ |\n|---|---:|---:|---:|---:|\n| Confucius4-TTS | 1.49 | 0.700 | 0.94 | 0.765 |\n| Confucius4-TTS (Continuation)† | 1.68 | 0.715 | 1.15 | 0.766 |\n| Seed-TTS† | 2.25 | **0.762** | 1.12 | **0.796** |\n| Qwen3-TTS† | **1.24** | 0.714 | **0.77** | 0.770 |\n| FishAudio S2† | 1.79 | 0.643 | 0.98 | 0.737 |\n| OmniVoice† | 1.62 | 0.740 | 0.87 | 0.777 |\n| VoxCPM2† | 1.70 | 0.752 | 0.97 | 0.793 |\n| X-Voice | 1.91 | 0.627 | 1.47 | 0.746 |\n\n† Requires reference text.\n\n</details>\n\n### MiniMax-MLS-Test\n\n<details>\n<summary><b>MiniMax-MLS-Test Results (click to expand)</b></summary>\n\n| Language | Metric | Confucius4-TTS | Confucius4-TTS (Continuation)† | MiniMax-Speech | ElevenLabs | Qwen3-TTS† | FishAudio S2† | OmniVoice† | VoxCPM2† |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|\n| German | WER↓ | **0.47** | 0.68 | 1.91 | 0.57 | 1.24 | 0.55 | 0.80 | 1.12 |\n|  | SIM↑ | 0.775 | 0.777 | 0.733 | 0.614 | 0.768 | 0.706 | 0.804 | **0.805** |\n| French | WER↓ | 3.66 | 4.87 | 4.10 | 5.22 | **2.86** | 3.90 | 3.58 | 3.42 |\n|  | SIM↑ | 0.723 | 0.755 | 0.628 | 0.535 | 0.716 | 0.658 | **0.776** | 0.738 |\n| Indonesian | WER↓ | 1.12 | 1.41 | 1.24 | **1.06** | – | 2.93 | 1.34 | 1.17 |\n|  | SIM↑ | 0.765 | 0.767 | 0.729 | 0.660 | – | 0.736 | 0.777 | **0.795** |\n| Korean | CER↓ | 1.84 | 2.50 | 1.75 | 1.87 | 1.76 | **1.62** | 2.66 | 3.34 |\n|  | SIM↑ | 0.812 | 0.824 | 0.776 | 0.700 | 0.790 | 0.742 | 0.831 | **0.837** |\n| Thai | WER↓ | **1.56** | 2.47 | 2.70 | 73.94 | – | 6.66 | 2.93 | 2.19 |\n|  | SIM↑ | 0.773 | 0.807 | 0.800 | 0.588 | – | 0.749 | **0.847** | 0.841 |\n| Japanese | CER↓ | 4.14 | 4.05 | 3.52 | 10.65 | 3.82 | 3.52 | 3.59 | **3.51** |\n|  | SIM↑ | 0.788 | 0.806 | 0.776 | 0.738 | 0.771 | 0.753 | 0.821 | **0.825** |\n| Vietnamese | WER↓ | 1.61 | 1.59 | **0.88** | 73.42 | – | 14.11 | 0.95 | 4.19 |\n|  | SIM↑ | 0.751 | 0.753 | 0.743 | 0.369 | – | 0.693 | 0.775 | **0.793** |\n| Italian | WER↓ | 1.30 | 3.26 | 1.54 | 1.74 | **0.95** | 1.49 | 1.20 | 1.34 |\n|  | SIM↑ | 0.787 | 0.791 | 0.699 | 0.579 | 0.752 | 0.764 | **0.813** | 0.779 |\n| Portuguese | WER↓ | 2.48 | 3.91 | 1.88 | **1.33** | 1.53 | 1.57 | 1.83 | 1.71 |\n|  | SIM↑ | 0.796 | 0.801 | 0.805 | 0.711 | 0.805 | 0.777 | **0.866** | 0.842 |\n| Spanish | WER↓ | 1.02 | 1.65 | 1.03 | 1.08 | 1.13 | 0.95 | **0.81** | 1.32 |\n|  | SIM↑ | 0.778 | 0.794 | 0.762 | 0.615 | 0.814 | 0.734 | 0.814 | **0.829** |\n| Russian | WER↓ | 4.64 | 5.42 | 4.28 | 3.88 | **3.21** | 4.24 | 4.63 | 4.53 |\n|  | SIM↑ | 0.787 | 0.796 | 0.761 | 0.675 | 0.784 | 0.768 | 0.784 | **0.807** |\n\n† Requires reference text.\n\n</details>\n\n---\n\n## Acknowledgements\n\nConfucius4-TTS builds on the following open-source projects:\n\n- **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** — Speaker encoder (ECAPA-TDNN) and text embedding projector architectures\n- **[CosyVoice](https://github.com/FunAudioLLM/CosyVoice)** — Text normalization pipeline\n- **[Amphion / MaskGCT](https://github.com/open-mmlab/Amphion)** — Semantic codec implementation\n- **[w2v-BERT 2.0](https://huggingface.co/facebook/w2v-bert-2.0)** — Semantic feature extraction and speaker conditioning\n- **[Seed-VC](https://github.com/Plachtaa/seed-vc)** — Flow matching architecture reference\n- **[BigVGAN](https://github.com/NVIDIA/BigVGAN)** — High-fidelity neural vocoder for mel-spectrogram to waveform synthesis\n\n---\n\n## Citation\n\nIf you find Confucius4-TTS useful in your research or project, please consider citing:\n\n```bibtex\n@misc{wang2026confucius4tts,\n  title         = {Confucius4-TTS: Transcript-Free Cross-Lingual Zero-Shot TTS with a Learnable Speaker Encoder},\n  author        = {Huaxuan Wang and Huimin Wang and Ruiyu Zhang and Yingjie Li and Yitao Duan},\n  year          = {2026},\n  eprint        = {2608.11650},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.SD},\n  url           = {https://arxiv.org/abs/2608.11650}\n}\n```",
+      "arxiv_ids": [
+        "2608.11650"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 31,
+      "topic_scores": {
+        "speech_models": 27
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "community likes 19"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mlboydaisuke/Stable-Audio-Open-Small-CoreAI",
+      "author": "mlboydaisuke",
+      "created_at": "2026-06-30",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "coreai-aimodel",
+        "core-ai",
+        "apple",
+        "on-device",
+        "text-to-audio",
+        "music-generation",
+        "stable-audio",
+        "diffusion",
+        "base_model:stabilityai/stable-audio-open-small",
+        "base_model:finetune:stabilityai/stable-audio-open-small",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/mlboydaisuke/Stable-Audio-Open-Small-CoreAI",
+      "card_text": "---\nlicense: other\nlicense_name: stability-ai-community\nlicense_link: https://huggingface.co/stabilityai/stable-audio-open-small/blob/main/LICENSE.md\ntags:\n- core-ai\n- apple\n- on-device\n- text-to-audio\n- music-generation\n- stable-audio\n- diffusion\nbase_model:\n- stabilityai/stable-audio-open-small\npipeline_tag: text-to-audio\n---\n\n# Stable Audio Open Small — Core AI (on-device music generation)\n\n**The model zoo's first MUSIC / AUDIO generation model for Apple Core AI.** Type a prompt, get ~11s\nof 44.1 kHz stereo audio — generated entirely **on-device** on Apple Silicon. A community port of\n[`stabilityai/stable-audio-open-small`](https://huggingface.co/stabilityai/stable-audio-open-small)\n(Stability AI + Arm) to Core AI.\n\nA latent **diffusion** text-to-audio model: a T5 text encoder conditions a DiT (diffusion transformer)\nthat denoises a latent over **8 rectified-flow steps**, then an Oobleck VAE decodes the latent to a\nwaveform. Distilled (ARC) for few-step generation, so it's fast.\n\n<!-- gen-cards:use-it begin id=stable-audio-open-small (managed by scripts/gen-cards — edit cards.json / QuickStart.swift, not this block) -->\n![Stable Audio Open Small demo](https://huggingface.co/mlboydaisuke/Stable-Audio-Open-Small-CoreAI/resolve/main/demo.gif)\n*Stable Audio Open Small on iPhone 17 Pro — the zoo's coreai-audio app, 12 s of audio in ~1 s.*\n\n## Use it\n\n⚡ **One line** — this model is the default behind the kit's task op\n(`import CoreAIOps`; no session, no model plumbing, downloads on first use):\n\n```swift\nlet audio = try await CoreAI.compose(prompt)\n```\n\nTwenty ops, one shape — [Cookbook](https://github.com/john-rocky/coreai-kit/blob/main/docs/COOKBOOK.md).\n\n▶️ **Run it (source)** — the [Music runner](https://github.com/john-rocky/coreai-kit/tree/main/Examples/Music)\n(GUI + CLI, one app for every text-to-music model in the catalog):\n\n```bash\ngit clone https://github.com/john-rocky/coreai-kit\nopen coreai-kit/Examples/Music/Music.xcodeproj\n# → Run, then pick \"Stable Audio Open Small\" in the model picker\n\n# agents / headless (macOS):\ncd coreai-kit/Examples/Music\nswift run music-cli --model stable-audio-open-small --prompt \"128 BPM tech house drum loop\" --output loop.wav\n```\n\n💻 **Build with it** — complete; the glue is kit API, copy-paste runs:\n\n```swift\nimport CoreAIKit\n\nlet musician = try await KitMusician(catalog: \"stable-audio-open-small\")\nlet audio = try await musician.generate(prompt)\n// audio.samples: 44.1 kHz stereo (planar L/R) — play it or write a WAV\n```\n\nThe take-home is [`Examples/Music/Sources/QuickStart.swift`](https://github.com/john-rocky/coreai-kit/blob/main/Examples/Music/Sources/QuickStart.swift)\n— this exact code as one typed function, no UI; the CLI is an argument shell over it, and\nthe GUI drives the same `KitMusician(catalog:)` and plays the result.\nLength? `generate(_:seconds:)` up to the model's ~11 s window. The WAV container is your\napp's territory (the runner ships a 30-line writer with planar-stereo support).\n\n**Integration checklist**\n\n- SPM: `https://github.com/john-rocky/coreai-kit` → product **CoreAIKit**\n- Info.plist: none needed\n- Entitlements: none needed (macOS)\n- First run downloads the model — 1.1 GB (Mac) — then it loads from the\n  local cache (Application Support; progress via the `downloadProgress` callback)\n- Measure in Release — Debug is ~3× slower on per-token host work\n<!-- gen-cards:use-it end -->\n\n## What's in the bundle (`macos/`)\n\nThree Core AI `.aimodel` bundles + a tiny host sampler loop:\n\n| bundle | role | I/O |\n|---|---|---|\n| `sa_cond_fp16b` | T5-base encoder + number conditioner | `input_ids[1,64], attention_mask[1,64], seconds_norm[1] → cross_attn_cond[1,65,768], global_embed[1,768], cond_mask[1,65]` |\n| `sa_dit_fp16` | diffusion transformer (run 8×) | `x[1,64,256], t[1], cross_attn_cond, global_embed, cross_attn_cond_mask → v[1,64,256]` |\n| `sa_vae_fp16` | Oobleck VAE decoder | `latent[1,64,256] → audio[1,2,524288]` |\n\n**Host loop** (`StableAudioRunner`): tokenize (T5, `t5_tokenizer/`) → conditioner → start from Gaussian\nnoise → 8-step rectified-flow euler `x = x + (t_next − t)·v` over the fixed schedule\n`[1.0, .9944, .9845, .9579, .8909, .7455, .5125, .2739] → 0` → VAE decode → 44.1 kHz stereo wav.\nNo KV cache, no CFG (cfg_scale 1.0 — the model is ARC-distilled).\n\n## Performance (M4 Max, GPU)\n\n| metric | value |\n|---|---|\n| 8-step DiT | ~200 ms (25 ms/step) |\n| VAE decode | ~185 ms |\n| **total** | **~0.4 s for ~11.9 s of audio (~30× real-time)** |\n| size | fp16, ~1.0 GB (DiT 651M + cond 210M + VAE 149M) |\n\nNumerics: each bundle engine-gated vs the reference at cos ≥ 0.9999; full pipeline reproduces the\nreference audio exactly.\n\n## Roadmap\n\n- iPhone (h18p) build — bundles AOT-compile; device RTF pending\n- int8 (further size cut)\n- a music-generation tab in the zoo app\n\n## Credits & license\n\nA community **Core AI conversion** — all credit to **Stability AI** (and Arm) for\n[Stable Audio Open Small](https://huggingface.co/stabilityai/stable-audio-open-small); T5 text encoder\nby Google. This bundle is governed by the **[Stability AI Community License](https://huggingface.co/stabilityai/stable-audio-open-small/blob/main/LICENSE.md)**\n(free for non-commercial use and for commercial use under \\$1M annual revenue; review the license\nbefore use). No retraining — conversion only.\n\nPart of the [Core AI model zoo](https://github.com/john-rocky/coreai-model-zoo).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "stabilityai/stable-audio-open-small"
+      ],
+      "variants": [],
+      "score": 31,
+      "topic_scores": {
+        "generative_music_audio": 30
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, audio generation, text-to-audio (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "YJX-Xiaomi/ControlFoley",
+      "author": "YJX-Xiaomi",
+      "created_at": "2026-04-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "text-video-to-audio",
+        "text-controlled-video-to-audio",
+        "audio-controlled-video-to-audio",
+        "audio-generation",
+        "text-to-audio",
+        "en",
+        "arxiv:2604.15086",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 287,
+      "likes": 15,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/YJX-Xiaomi/ControlFoley",
+      "card_text": "",
+      "arxiv_ids": [
+        "2604.15086"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "generative_music_audio": 13,
+        "audio_understanding_reasoning": 10
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio (pipeline tag)",
+        "Audio Understanding & Reasoning: audio-text",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "shyngys879/KazakhTTS-OmniVoice",
+      "author": "shyngys879",
+      "created_at": "2026-07-09",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "kazakh",
+        "kazakhtts2",
+        "voice-cloning",
+        "voice-design",
+        "speech-synthesis",
+        "multilingual",
+        "low-resource-languages",
+        "kk",
+        "dataset:ai4kazakh/ISSAI_KazakhTTS2",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:finetune:k2-fsa/OmniVoice",
+        "region:us"
+      ],
+      "downloads": 2942,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/shyngys879/KazakhTTS-OmniVoice",
+      "card_text": "---\nlanguage:\n- kk\ntags:\n- text-to-speech\n- tts\n- kazakh\n- omnivoice\n- kazakhtts2\n- voice-cloning\n- voice-design\n- speech-synthesis\n- multilingual\n- low-resource-languages\nbase_model: k2-fsa/OmniVoice\npipeline_tag: text-to-speech\nlibrary_name: omnivoice\ndatasets:\n- ai4kazakh/ISSAI_KazakhTTS2\n---\n\n# KazakhTTS-OmniVoice\n\n**KazakhTTS-OmniVoice** is a Kazakh text-to-speech model fine-tuned from [`k2-fsa/OmniVoice`](https://huggingface.co/k2-fsa/OmniVoice).\n\nThe model is designed for natural Kazakh speech synthesis and supports controllable voice attributes through OmniVoice's voice design interface, including gender, age-style prompts, and pitch-style prompts.\n\nThis checkpoint was fine-tuned specifically for the Kazakh language using a mixture of real Kazakh TTS data and synthetic controlled voice-design data.\n\n## Training Data\n\nKazakhTTS-OmniVoice was fine-tuned using a mixture of real Kazakh speech data and synthetic controlled voice-design data.\n\nThe main real speech component comes from **ISSAI_KazakhTTS2**, a Kazakh text-to-speech dataset used to improve pronunciation, rhythm, and naturalness for Kazakh speech synthesis.\n\nThe synthetic component was generated to improve controllability for speaker attributes such as gender, age-style prompts, and pitch-style prompts.\n\nApproximate fine-tuning mixture:\n\n- **56% real KazakhTTS2 data**\n- **44% synthetic controlled data**\n\nSynthetic controlled dataset:\n\n- **10,800 generated Kazakh samples**\n- **18 control categories**\n- **600 samples per category**\n- Synthetic repeat during training: **13**\n\nThe synthetic data was generated using a small number of stable reference voices per category, with many Kazakh target texts per voice. This was done to reduce speaker memorization while preserving consistent control behavior.\n\nThe original KazakhTTS2 dataset is not included in this repository. This repository only contains the fine-tuned model checkpoint and example audio generated by the model.\n\n## Audio Examples\n\n### Female teenager\n\n**Text:**  \nМен қазақша дауыс моделін тексеріп жатырмын.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/female_teenager.wav\"></audio>\n\n### Female elderly, auto pitch\n\n**Text:**  \nҚайырлы күн! Бүгін біз қазақ тіліндегі мәтінді дыбыстау сапасын тексеріп жатырмыз.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/female_elderly.wav\"></audio>\n\n### Female middle-aged\n\n**Text:**  \nСәлеметсіз бе! Сіздің өтінішіңіз қабылданды. Біздің маман сізге жақын арада хабарласады.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/female_middle_aged.wav\"></audio>\n\n### Male child\n\n**Text:**  \nСәлем! Мен қазақша сөйлей аламын.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/male_child.wav\"></audio>\n\n### Male middle-aged\n\n**Text:**  \nҚазақстанда жасанды интеллект пен сөйлеу технологиялары қарқынды дамып келеді.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/male_middle_aged.wav\"></audio>\n\n### Female low pitch\n\n**Text:**  \nБұл қазақша мәтінді дыбыстау мысалы.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/female_low_pitch.wav\"></audio>\n\n### Female high pitch\n\n**Text:**  \nБұл қазақша мәтінді дыбыстау мысалы.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/female_high_pitch.wav\"></audio>\n\n### Male low pitch\n\n**Text:**  \nБұл қазақша мәтінді дыбыстау мысалы.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/male_low_pitch.wav\"></audio>\n\n### Male high pitch\n\n**Text:**  \nБұл қазақша мәтінді дыбыстау мысалы.\n\n<audio controls src=\"https://huggingface.co/shyngys879/KazakhTTS-OmniVoice/resolve/main/examples/male_high_pitch.wav\"></audio>\n\n\n## Usage\n\nThis model is an OmniVoice checkpoint and should be used with the `omnivoice` Python library.\n\nInstall dependencies:\n\n```bash\npip install omnivoice soundfile torch\n```\n\n### Python API\n\n```python\nfrom omnivoice import OmniVoice\nimport soundfile as sf\nimport torch\n\nmodel = OmniVoice.from_pretrained(\n    \"shyngys879/KazakhTTS-OmniVoice\",\n    device_map=\"cuda:0\",\n    dtype=torch.float16,\n)\n\ntext = \"Бүгін біз жаңа қазақша дауыс моделін тексеріп жатырмыз. Дауыс табиғи, анық және түсінікті болуы керек.\"\n\naudio = model.generate(\n    text=text,\n    language=\"Kazakh\",\n)\n\nsf.write(\"kazakh_tts_output.wav\", audio[0], 24000)\n```\n\n### Voice Cloning Example\n\n```python\nfrom omnivoice import OmniVoice\nimport soundfile as sf\nimport torch\n\nmodel = OmniVoice.from_pretrained(\n    \"shyngys879/KazakhTTS-OmniVoice\",\n    device_map=\"cuda:0\",\n    dtype=torch.float16,\n)\n\naudio = model.generate(\n    text=\"Бүгін біз қазақша дауыс синтезін тексеріп жатырмыз.\",\n    language=\"Kazakh\",\n    ref_audio=\"reference.wav\",\n    ref_text=\"Бұл reference аудиода айтылған мәтін.\",\n)\n\nsf.write(\"kazakh_cloned_voice.wav\", audio[0], 24000)\n```\n\n### Download Locally\n\n```python\nfrom huggingface_hub import snapshot_download\n\nmodel_dir = snapshot_download(\n    repo_id=\"shyngys879/KazakhTTS-OmniVoice\",\n    local_dir=\"KazakhTTS-OmniVoice\",\n)\n\nprint(model_dir)\n```\n\nThen load from the local folder:\n\n```python\nfrom omnivoice import OmniVoice\nimport soundfile as sf\nimport torch\n\nmodel = OmniVoice.from_pretrained(\n    \"KazakhTTS-OmniVoice\",\n    device_map=\"cuda:0\",\n    dtype=torch.float16,\n)\n\naudio = model.generate(\n    text=\"Сәлем! Бұл қазақша мәтінді дыбыстау мысалы.\",\n    language=\"Kazakh\",\n)\n\nsf.write(\"out.wav\", audio[0], 24000)\n```\n\n\n## Control Categories\n\nThe model was trained with the following controllable voice attributes:\n\n### Gender\n\n- Male\n- Female\n\n### Age-style prompts\n\n- Child\n- Teenager\n- Young Adult\n- Middle-aged\n- Elderly\n\n### Pitch-style prompts\n\n- Low Pitch\n- Moderate Pitch\n- High Pitch\n\n---\n\n## Contact and Model Use\n\nFor commercial deployment, research collaboration on your organization's data, please contact:\n\n**Shyngys Sovetkhan**  \n**Email:** [shyngyssovetkhan0@gmail.com](mailto:shyngyssovetkhan0@gmail.com)\n\nIf your company or organization uses this model, has evaluated it, or has found it useful, I would greatly appreciate a brief official confirmation letter describing the use case or evaluation results. Such documentation helps demonstrate the model's real-world impact in my university applications. The letter can be sent to the email address above.\n\n",
+      "arxiv_ids": [],
+      "datasets": [
+        "ai4kazakh/ISSAI_KazakhTTS2"
+      ],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 22,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "aidanakarib/s2s-tur2kaz",
+      "author": "aidanakarib",
+      "created_at": "2026-08-12",
+      "last_modified": "2026-08-12",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "speech-to-speech-translation",
+        "s2st",
+        "turkic-languages",
+        "audio-to-audio",
+        "kk",
+        "tr",
+        "tt",
+        "uz",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/aidanakarib/s2s-tur2kaz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 21,
+      "topic_scores": {
+        "speech_models": 20
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech translation, speech-to-speech",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "madoss/VoxCPM2-MOS",
+      "author": "madoss",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "multilingual",
+        "voice-cloning",
+        "voice-design",
+        "diffusion",
+        "audio",
+        "zh",
+        "en",
+        "ar",
+        "my",
+        "da",
+        "nl",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "he",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lo",
+        "ms",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sw",
+        "sv",
+        "tl",
+        "th",
+        "tr",
+        "vi",
+        "mos",
+        "arxiv:2509.24650",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "apache-2.0",
+      "gated": true,
+      "url": "https://huggingface.co/madoss/VoxCPM2-MOS",
+      "card_text": "",
+      "arxiv_ids": [
+        "2509.24650"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Splintir/speecht5_tts-pld-hil-v2",
+      "author": "Splintir",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "speecht5",
+        "text-to-audio",
+        "text-to-speech",
+        "philippines",
+        "philippine-languages",
+        "hil",
+        "dataset:sapinsapin/pld",
+        "base_model:sapinsapin/speecht5_tts-pld-hil",
+        "base_model:finetune:sapinsapin/speecht5_tts-pld-hil",
+        "license:mit",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Splintir/speecht5_tts-pld-hil-v2",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "sapinsapin/pld"
+      ],
+      "base_models": [
+        "sapinsapin/speecht5_tts-pld-hil"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "stabilityai/stable-audio-3-optimized",
+      "author": "stabilityai",
+      "created_at": "2026-05-18",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "stable-audio-3",
+        "tflite",
+        "onnx",
+        "audio-generation",
+        "music",
+        "sound-effects",
+        "diffusion",
+        "text-to-audio",
+        "en",
+        "arxiv:2605.17991",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 10290,
+      "likes": 31,
+      "trending_score": 0.0,
+      "library_name": "stable-audio-3",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/stabilityai/stable-audio-3-optimized",
+      "card_text": "---\nlanguage:\n- en\nlibrary_name: stable-audio-3\nlicense: other\nlicense_name: stable-audio-community\nlicense_link: LICENSE\npipeline_tag: text-to-audio\ntags:\n- audio-generation\n- music\n- sound-effects\n- diffusion\n---\n\n# Stable Audio 3 Optimized\n\n> **Note:** This repository contains experimental checkpoints optimised for acceleration on specific hardware. For standard checkpoints, please use [Stable Audio 3 Medium](https://huggingface.co/stabilityai/stable-audio-3-medium) instead.\n\nPlease note: For commercial use, please refer to [https://stability.ai/license](https://stability.ai/license)\n\n## Model Description\n`Stable Audio 3` is a family of fast latent diffusion models (small, medium, large) for variable length audio generation and editing. Since our models can generate several minutes of audio,\nvariable-length generations are key to avoid the cost of producing full-length generations for short\nsounds. We also support inpainting, enabling targeted audio editing and the continuation of short\nrecordings. Our latent diffusion models operate on top of a novel semantic-acoustic autoencoder that\nprojects audio into a compact latent space, enabling efficient diffusion-based generation while preserving audio fidelity and encouraging semantic structure in the latent. Finally, we run adversarial\npost-training to both accelerate inference and improve generation quality, reducing the number of inference steps while improving fidelity and prompt adherence. Stable Audio 3 models are trained on\nlicensed and Creative Commons data to generate music and sounds in less than a 2s on an H200 GPU\nand less than a few seconds on a MacBook Pro M4. We release the weights of small and medium,\nthat can run on consumer-grade hardware, together with their training and inference pipeline.\n\n## Usage\n\nThis model can be used with:\n1. the [`stable-audio-3`](https://github.com/Stability-AI/stable-audio-3) inference and fine-tuning library\n2. the [`stable-audio-tools`](https://github.com/Stability-AI/stable-audio-tools) research library\n\n\n### Using with `stable-audio-3`\n```python\nfrom stable_audio_3 import StableAudioModel\n\nmodel = StableAudioModel.from_pretrained(\"medium\")\naudio = model.generate(\n    prompt=(\n        \"House music that encapsulates the feeling of being at a festival \"\n        \"in the sunny weather with all your friends 124 BPM\"\n    ),\n    duration=180\n)\n```\n\n### Using with `stable-audio-tools`\n```python\nimport torch\nimport torchaudio\nfrom einops import rearrange\nfrom stable_audio_tools import get_pretrained_model\nfrom stable_audio_tools.inference.generation import generate_diffusion_cond_inpaint\n\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\nif device == \"cuda\":\n  model_half = True\n\n# Download model\nmodel, model_config = get_pretrained_model(\"stabilityai/stable-audio-3-medium\")\nsample_rate = model_config[\"sample_rate\"]\nsample_size = model_config[\"sample_size\"]\n\nmodel = model.to(device)\nif model_half:\n  model = model.to(torch.float16)\n# Set up text and timing conditioning\nconditioning = [{\n    \"prompt\": (\n        \"A dream-like Synthpop instrumental that would accompany \"\n        \"a dream-sequence in a surrealist movie 120 BPM\"\n    ),\n    \"seconds_total\": 380\n}]\n\n# Generate stereo audio\noutput = generate_diffusion_cond_inpaint(\n    model,\n    steps=8,\n    cfg_scale=1.0,\n    conditioning=conditioning,\n    sample_size=sample_size,\n    sampler_type=\"pingpong\",\n    device=device\n)\n\n# Rearrange audio batch to a single sequence\noutput = rearrange(output, \"b d n -> d (b n)\")\n\n# Peak normalize, clip, convert to int16, and save to file\noutput = output.to(torch.float32).div(torch.max(torch.abs(output))).clamp(-1, 1).mul(32767).to(torch.int16).cpu()\ntorchaudio.save(\"output.wav\", output, sample_rate)\n```\n\n\n## Model Details\n* **Model type**: `Stable Audio 3` is a latent diffusion model based on a transformer architecture.\n* **Language(s)**: English\n* **License**: [Stability AI Community License](https://stability.ai/license).\n* **Research Paper**: [https://arxiv.org/abs/2605.17991](https://arxiv.org/abs/2605.17991)\n\nWe use a publicly available pre-trained T5Gemma model ([t5gemma-b-b-ul2](https://huggingface.co/google/t5gemma-b-b-ul2)) for text conditioning. T5Gemma is redistributed under the [Gemma Terms of Use](LICENSE_GEMMA.md).\n\n## Training dataset\n\n### Datasets Used\nOur dataset consists of 1,278,902 audio recordings, where 806,284 recordings are licensed from [AudioSparx](https://www.audiosparx.com/) and a further 472,618 are from [Freesound](https://freesound.org/). \nThe Freesound portion consists of recordings licensed under CC-0, CC-BY, or CCSampling+. To ensure no copyrighted content was present in the Freesound data, music recordings were identified\nusing the PANNs [89] tagger. We flagged audio that activated music-related tags for at least 30s (threshold of 0.15),\nthat was sent to a trusted content detection company to verify the absence of copyrighted material. All identified copyrighted content was removed. After filtering, the Freesound part includes 266,324 CC-0, 194,840 CC-BY, and 11,454\nCC-Sampling+ recordings. The same subset of Freesound audio we used to train Stable Audio Open: https://info.stability.ai/attributions.",
+      "arxiv_ids": [
+        "2605.17991"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license other",
+        "community likes 31"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "souba67/mms-tts-ind-ONNX",
+      "author": "souba67",
+      "created_at": "2026-08-11",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers.js",
+        "onnx",
+        "vits",
+        "text-to-audio",
+        "tts",
+        "mms",
+        "ind",
+        "text-to-speech",
+        "base_model:facebook/mms-tts-ind",
+        "base_model:quantized:facebook/mms-tts-ind",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 59,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers.js",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/souba67/mms-tts-ind-ONNX",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/mms-tts-ind"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "souba67/mms-tts-eng-ONNX",
+      "author": "souba67",
+      "created_at": "2026-08-11",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers.js",
+        "onnx",
+        "vits",
+        "text-to-audio",
+        "tts",
+        "mms",
+        "eng",
+        "text-to-speech",
+        "base_model:facebook/mms-tts-eng",
+        "base_model:quantized:facebook/mms-tts-eng",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 57,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers.js",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/souba67/mms-tts-eng-ONNX",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/mms-tts-eng"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "souba67/mms-tts-sun-ONNX",
+      "author": "souba67",
+      "created_at": "2026-08-11",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers.js",
+        "onnx",
+        "vits",
+        "text-to-audio",
+        "tts",
+        "mms",
+        "sun",
+        "text-to-speech",
+        "base_model:facebook/mms-tts-sun",
+        "base_model:quantized:facebook/mms-tts-sun",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 53,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers.js",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/souba67/mms-tts-sun-ONNX",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/mms-tts-sun"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "gheero-Leyu/amharic-omnivoice-tts",
+      "author": "gheero-Leyu",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "amharic",
+        "discrete-diffusion",
+        "low-resource-language",
+        "african-nlp",
+        "am",
+        "en",
+        "zh",
+        "dataset:google/WaxalNLP",
+        "dataset:gheero-Leyu/leyu-amharic-addis-ababa-dialect",
+        "dataset:surafelabebe/amharic_clear_audio_tts",
+        "dataset:chappM/amharic-bdu-asr",
+        "arxiv:2604.00688",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:finetune:k2-fsa/OmniVoice",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 2,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/gheero-Leyu/amharic-omnivoice-tts",
+      "card_text": "---\nlicense: apache-2.0\nlanguage: [am, en, zh]\ntags: [text-to-speech, tts, voice-cloning, amharic, omnivoice, discrete-diffusion, low-resource-language, african-nlp]\nbase_model: k2-fsa/OmniVoice\nlibrary_name: omnivoice\npipeline_tag: text-to-speech\ndatasets: [google/WaxalNLP, gheero-Leyu/leyu-amharic-addis-ababa-dialect, surafelabebe/amharic_clear_audio_tts, chappM/amharic-bdu-asr]\n---\n\n# OmniVoice Amharic — Open Voice AI for 60M Speakers\n\n> **Part of [Voices For All](https://huggingface.co/african-low-resource)** — an open initiative to build speech AI for every language, starting with those left behind by Big Tech.\n\nThis is the highest-quality open Amharic TTS model available today. It generates natural, expressive speech from text and can clone any speaker's voice from a 10-second audio sample.\n\n---\n\n## 🚀 Quick Try (No Install)\n\n**Live Demo**: [Try it in your browser →](https://huggingface.co/spaces/demeleww/omnivoice-amharic-demo)\n\n---\n\n## 📊 At a Glance\n\n| | |\n|---|---|\n| **Languages** | Amharic (primary), English, Chinese (base model) |\n| **Architecture** | Non-autoregressive discrete diffusion |\n| **Parameters** | 612.6M (Qwen3-0.6B + HiggsAudioV2, 8 codebooks) |\n| **Training data** | ~81,731 samples / ~331 hours |\n| **Best loss** | **3.9518** (step 10,000 / 12,000) |\n| **License** | Apache 2.0 |\n| **Inference cost** | Runs on free Google Colab T4 (~3GB VRAM) |\n| **Voice cloning** | Zero-shot, 10s reference audio |\n\n---\n\n## 🎯 What Makes This Special\n\n### 1. Actually Sounds Like Amharic\nMost \"multilingual\" TTS models (MMS, XTTS) produce Amharic that sounds robotic or mispronounces ejective consonants (ጠ, ጰ, ጸ, ፀ, ቸ, ጨ). This model was trained **exclusively on Amharic audio** and preserves:\n\n- Correct ejective / glottalic consonant articulation\n- Natural prosody and rhythm (not English rhythm overlaid on Amharic words)\n- Gemination (double consonants: ሀበተ vs ሀብቴ)\n- Pitch patterns for questions vs statements\n\n### 2. Voice Cloning Works\nGive it 10 seconds of any Amharic speaker and it will synthesize new sentences in that voice. Tested on:\n- Male/female voices\n- Formal news-reading style\n- Casual conversational style\n- Different Ethiopian dialects (Addis Ababa, Gondar, Wollo)\n\n### 3. Open Everything\n- ✅ Open weights (Apache 2.0)\n- ✅ Open training code\n- ✅ Open datasets (or documented sources)\n- ✅ Open benchmarks (we publish MOS scores)\n- ✅ No API keys, no cloud lock-in\n\n---\n\n## 🛠️ Quick Start — Colab\n\n[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/#create=true)\n\n```python\n# Cell 1: Install\n!pip install -q omnivoice soundfile\n\n# Cell 2: Load model\nimport torch\nfrom omnivoice import OmniVoice, OmniVoiceGenerationConfig\n\nmodel = OmniVoice.from_pretrained(\n    \"african-low-resource/omnivoice-amharic\",\n    device_map=\"cuda:0\",\n    dtype=torch.float16,\n)\n\n# Cell 3: Generate speech\ntext = \"ሰላም፣ እንኳን ደህና መጣችሁ። ይህ የአማርኛ ንግግር ሙከራ ነው።\"\naudio = model.generate(\n    text=text,\n    language=\"Amharic\",\n    generation_config=OmniVoiceGenerationConfig(num_step=32, guidance_scale=2.0),\n)\n\nimport soundfile as sf\nsf.write(\"output.wav\", audio[0], 24000)\nprint(\"✅ Saved to output.wav\")\n```\n\n### Voice Cloning\n```python\n# Upload a 10-second reference WAV\nprompt = model.create_voice_clone_prompt(ref_audio=\"speaker.wav\", ref_text=None)\n\naudio = model.generate(\n    text=\"ዛሬ ቀን ጥሩ ነው።\",\n    language=\"Amharic\",\n    voice_clone_prompt=prompt,\n    generation_config=OmniVoiceGenerationConfig(num_step=32, guidance_scale=2.0),\n)\nsf.write(\"cloned.wav\", audio[0], 24000)\n```\n\n---\n\n## 📈 Training Details\n\n| Parameter | Value |\n|-----------|-------|\n| Base model | [k2-fsa/OmniVoice](https://huggingface.co/k2-fsa/OmniVoice) |\n| Backbone | Qwen3-0.6B (636M params) |\n| Audio tokenizer | HiggsAudioV2 (8 codebooks, 1025 vocab) |\n| Learning rate | 2e-5 |\n| LR schedule | Cosine |\n| Max steps | 12,000 |\n| Epochs | ~10 |\n| Batch tokens | 28,672 |\n| Precision | bf16 |\n| Codebook weights | [8, 8, 6, 6, 4, 4, 2, 2] |\n| **Best loss** | **3.9518 @ step 10,000** |\n\n### Datasets\n\n| Dataset | Hours | Role |\n|---------|-------|------|\n| [google/WaxalNLP](https://huggingface.co/datasets/google/WaxalNLP) | ~200h | Core corpus |\n| [gheero-Leyu/leyu-amharic-addis-ababa-dialect](https://huggingface.co/datasets/gheero-Leyu/leyu-amharic-addis-ababa-dialect) | ~50h | Dialect diversity |\n| [surafelabebe/amharic_clear_audio_tts](https://huggingface.co/datasets/surafelabebe/amharic_clear_audio_tts) | ~40h | Clean TTS data |\n| [chappM/amharic-bdu-asr](https://huggingface.co/datasets/chappM/amharic-bdu-asr) | ~41h | ASR-aligned quality |\n| **Total** | **~331h** | |\n\n### Training History\n\n| Run | Steps | Best Loss | Notes |\n|-----|-------|-----------|-------|\n| 1 | 0→1,500 | ~4.15 | Init from v3 |\n| 2 | 1,500→6,000 | 3.9994 (step 4,190) | Storage issue lost checkpoints |\n| 3 | 2,700→12,000 | **3.9518 (step 10,000)** | Final best |\n\n---\n\n## 🧪 Evaluation\n\nWe evaluate on a held-out test set (10% of combined data, never seen in training).\n\n### Objective Metrics\n\n| Metric | Value | Comparison (MMS-TTS-amh) |\n|--------|-------|--------------------------|\n| Mel-Cepstral Distortion (MCD) | TBD | TBD |\n| F0 RMSE | TBD | TBD |\n| Character Error Rate (ASR-back) | TBD | TBD |\n\n### Subjective Metrics (MOS)\n\n| Criterion | Score (1-5) | N evaluators |\n|-----------|-------------|--------------|\n| Naturalness | TBD | TBD |\n| Speaker similarity (cloning) | TBD | TBD |\n| Ejective consonant accuracy | TBD | TBD |\n| Prosody / rhythm | TBD | TBD |\n\n> *Subjective evaluation in progress. Results will be published here and in our benchmark repo.*\n\n---\n\n## 🔮 Roadmap\n\nThis model is **Phase 1** of a larger pan-African initiative:\n\n- [x] **Amharic** (East Africa, 60M speakers) — TTS + voice cloning ✅\n- [ ] **Wolof** (West Africa, 12M speakers) — TTS + voice cloning (Q3 2026)\n- [ ] **Hausa** (West Africa, 90M speakers) — TTS (Q4 2026)\n- [ ] **Swahili** (East Africa, 200M speakers) — TTS + ASR (Q1 2027)\n- [ ] **Somali** (Horn of Africa, 20M speakers) — TTS (Q2 2027)\n- [ ] Self-service fine-tuning toolkit for any language with 50h+ audio\n\nFollow [Voices For All](https://huggingface.co/african-low-resource) for updates.\n\n---\n\n## ⚠️ Limitations & Biases\n\n1. **Gender representation**: Training data skews male (65%). Female voices may sound less natural.\n2. **Dialect coverage**: Heavy Addis Ababa bias. Rural Ethiopian accents (Tigray, Harar, Sidama) are underrepresented.\n3. **Code-mixing**: Switching mid-sentence between Amharic and English is unpredictable.\n4. **Numerals/dates**: Amharic calendar dates and large numbers sometimes mispronounce.\n5. **Emotional range**: Neutral/news-reading style only. No whisper, shouting, or singing.\n\n**We actively seek more diverse training data.** If you have Amharic audio recordings (any dialect, any speaker), contact us.\n\n---\n\n## 🤝 Citation\n\n```bibtex\n@software{omnivoice_amharic_2026,\n  author = {demeleww and Voices For All},\n  title = {OmniVoice Amharic: Open Voice AI for 60M Speakers},\n  year = {2026},\n  url = {https://huggingface.co/african-low-resource/omnivoice-amharic},\n  license = {Apache-2.0}\n}\n```\n\nBase model:\n```bibtex\n@article{omnivoice2026,\n  title={OmniVoice: High-Quality Voice Cloning TTS for 600+ Languages},\n  journal={arXiv preprint arXiv:2604.00688},\n  year={2026}\n}\n```\n\n---\n\n## 📬 Contact\n\n- **Organization**: [Voices For All](https://huggingface.co/african-low-resource)\n- **Lead**: [demeleww](https://huggingface.co/demeleww)\n- **Issues**: Open a GitHub issue\n- **Collaboration**: sowwen0@gmail.com\n\n---\n\n*Built with ❤️ for the 60M+ Amharic speakers who deserve a voice in AI.*\n",
+      "arxiv_ids": [
+        "2604.00688"
+      ],
+      "datasets": [
+        "google/WaxalNLP",
+        "gheero-Leyu/leyu-amharic-addis-ababa-dialect",
+        "surafelabebe/amharic_clear_audio_tts",
+        "chappM/amharic-bdu-asr"
+      ],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "niobures/VoiceTut-TTS",
+      "author": "niobures",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "egyptian-arabic",
+        "arabic",
+        "code-switching",
+        "voice-cloning",
+        "ar",
+        "arz",
+        "en",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:finetune:k2-fsa/OmniVoice",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/niobures/VoiceTut-TTS",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- ar\n- arz\n- en\nlibrary_name: omnivoice\npipeline_tag: text-to-speech\ntags:\n- text-to-speech\n- tts\n- egyptian-arabic\n- arabic\n- code-switching\n- voice-cloning\n- omnivoice\nbase_model:\n- k2-fsa/OmniVoice\n---\n\n<div align=\"center\">\n\n<img src=\"https://raw.githubusercontent.com/MohammedAly22/VoiceTuT-TTS/main/assets/VoiceTut-TTS-Banner.png\" alt=\"VoiceTut-TTS\" width=\"100%\" />\n\n# 𓋹 VoiceTut-TTS\n\n**An Open-Source Text-to-Speech Model for Egyptian Arabic & Code-Switching**\n\n[![🤗 Model](https://img.shields.io/badge/🤗%20HuggingFace-Model-yellow)](https://huggingface.co/mohammedaly22/VoiceTut-TTS)\n[![🤗 Space](https://img.shields.io/badge/🤗%20Space-Demo-blue)](https://huggingface.co/spaces/mohammedaly22/VoiceTut-TTS)\n[![🎧 Samples](https://img.shields.io/badge/🎧%20Audio-Demos-ff9800)](https://mohammedaly22.github.io/VoiceTuT-TTS/)\n[![PyPI](https://img.shields.io/pypi/v/voicetut-tts?color=blue&label=PyPI)](https://pypi.org/project/voicetut-tts/)\n[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github)](https://github.com/MohammedAly22/VoiceTuT-TTS)\n[![Base](https://img.shields.io/badge/Base-OmniVoice-purple)](https://github.com/k2-fsa/OmniVoice)\n[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://github.com/MohammedAly22/VoiceTuT-TTS/blob/main/LICENSE)\n\nVoiceTut-TTS is an Egyptian-Arabic text-to-speech model fine-tuned from [OmniVoice](https://github.com/k2-fsa/OmniVoice) on ~380 hours of Egyptian podcast speech. It produces natural Egyptian speech with seamless **Arabic ↔ English code-switching**, ships **17 built-in studio voices**, supports **zero-shot voice cloning**, and includes a robust Egyptian-Arabic **text normalization** pipeline plus **true streaming** for long text.\n\n</div>\n\n> **Why \"VoiceTut\"?** *Tut* — after the boy-king **Tutankhamun** (توت عنخ آمون) — anchors the model in Egyptian identity, just as our companion ASR model **[QwenCleo-ASR](https://github.com/MohammedAly22/qwencleo-asr)** is named after **Cleopatra**. Together they form an Egyptian speech stack: **Cleo listens, Tut speaks.** 🎙️🗣️\n\n## 🔗 Links\n\n- 🎧 **Audio demo (VoiceTut vs. base OmniVoice):** https://mohammedaly22.github.io/VoiceTuT-TTS/\n- 🚀 **Interactive Space:** https://huggingface.co/spaces/mohammedaly22/VoiceTut-TTS\n- 💻 **GitHub (code, notebooks):** https://github.com/MohammedAly22/VoiceTuT-TTS\n- 📦 **PyPI:** https://pypi.org/project/voicetut-tts/\n\n## ✨ Features\n\n- 🎯 **Egyptian-first** — fine-tuned specifically on Egyptian Arabic, not generic MSA.\n- 🔀 **Code-switching** — handles real Arabic + English mixed speech (`عندي meeting بكرة`).\n- 🗣️ **17 built-in voices** — male & female studio speakers, each with style tags.\n- 🧬 **Zero-shot cloning** — clone any voice from a few seconds of reference audio.\n- 🔢 **Robust normalization** — numbers, dates, times, currencies, phones, emails, URLs, abbreviations + diacritics & name dictionaries.\n- ⚡ **True streaming** — long text is split into sentences and yielded as audio chunks.\n\n## 📦 Installation\n\n```bash\n# PyTorch matching your CUDA (see https://pytorch.org)\npip install torch --index-url https://download.pytorch.org/whl/cu121\n# OmniVoice backbone (not on PyPI — install from GitHub)\npip install git+https://github.com/k2-fsa/OmniVoice.git\npip install voicetut-tts\n```\n\n## 🚀 Usage\n\n```python\nfrom voicetut_tts import VoiceTutTTS\n\ntts = VoiceTutTTS.from_pretrained(\"mohammedaly22/VoiceTut-TTS\")\n\n# 1) Built-in speaker\ntts.synthesize(\"ازيك عامل ايه النهاردة؟\", speaker=\"Mohamed\", output=\"out.wav\")\n\n# 2) Zero-shot voice cloning\ntts.synthesize(\"النهارده الجو حلو اوي\",\n               ref_audio=\"my_voice.wav\", ref_text=\"ده الصوت بتاعي\", output=\"clone.wav\")\n\n# 3) Code-switching + generation params\ntts.synthesize(\"عندي meeting الساعة 3:30 ومعايا ال presentation\",\n               speaker=\"Asmaa\", num_step=48, guidance_scale=2.5, speed=1.05, output=\"cs.wav\")\n```\n\nStreaming long text:\n\n```python\nfor sr, chunk in tts.stream(long_paragraph, speaker=\"Sayed\"):\n    play(chunk)                    # plays each sentence as it's generated\ntts.synthesize_long(long_paragraph, \"long.wav\", speaker=\"Sayed\")\n```\n\n## 🗣️ Built-in Voices\n\n| | Male | Female |\n|---|---|---|\n| Names | Abdelrahman, Abdullah, Kamal, Hossam, Mohamed, Omar, Sayed, Zaki, Aly, Essam, Ahmed | Asmaa, Esraa, Hanan, Sarah, Yasmin, Omnia |\n\nEach voice ships with a reference clip + Arabic style tags (e.g. `شبابي`, `حيوي`, `هادي`). Browse and listen in the [Space](https://huggingface.co/spaces/mohammedaly22/VoiceTut-TTS).\n\n\n## 📊 Performance\n\n> Measured on a single **NVIDIA T4 (Colab)**, `float16`, `num_step=32`. Reproduce with [`examples/04_evaluation.ipynb`](https://github.com/MohammedAly22/VoiceTuT-TTS/blob/main/examples/04_evaluation.ipynb).\n\n| Metric | Value |\n|---|---|\n| Real-time factor (RTF, mean) | **1.13×** |\n| RTF (best) | **0.49×** |\n| Time-to-first-audio (streaming) | **1.68 s** |\n| Peak VRAM (fp16) | **2.93 GB** |\n| WER — Egyptian Arabic | **0.40** |\n| WER — English | **0.07** |\n| Speaker similarity (cloning, cosine) | **0.83** |\n| Naturalness (UTMOS, 1–5) | **3.47** |\n| Sampling rate | 24 kHz |\n\n> On A100 / H100 expect markedly lower RTF and TTFA.\n\n## 🏗️ Training\n\n- **Base model:** [k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice) (Qwen3-0.6B text backbone + Higgs audio tokenizer)\n- **Data:** ~380 h Egyptian-Arabic YouTube podcasts (`language_id = arz`)\n- **Steps:** 20,000 · **LR:** 3e-5 · **bf16**\n\n## ⚠️ Responsible Use\n\nVoice cloning is provided to enable **beneficial** use cases — voice assistants, accessibility,\neducational and creative content. **Do not** use it to impersonate real people, produce deceptive\nor misleading audio, or harm, harass, or defraud anyone. Always obtain consent before cloning a\nreal person's voice, and disclose synthetic audio where appropriate.\n\n## 📜 License & Citation\n\nApache-2.0.\n\n```bibtex\n@software{voicetut_tts_2026,\n  author  = {Mohammed Aly},\n  title   = {VoiceTut-TTS: Egyptian Arabic & Code-Switching Text-to-Speech},\n  year    = {2026},\n  url     = {https://github.com/MohammedAly22/VoiceTuT-TTS},\n  note    = {Fine-tuned from OmniVoice}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Richasy/IndexTTS-2.5-GGUF",
+      "author": "Richasy",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audio.cpp",
+        "gguf",
+        "text-to-speech",
+        "voice-cloning",
+        "multilingual",
+        "emotion-controllable",
+        "zh",
+        "en",
+        "ja",
+        "es",
+        "ar",
+        "base_model:IndexTeam/IndexTTS-2.5",
+        "base_model:quantized:IndexTeam/IndexTTS-2.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "audio.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Richasy/IndexTTS-2.5-GGUF",
+      "card_text": "---\r\nlicense: other\r\nlicense_name: bilibili-model-license\r\nlicense_link: https://github.com/index-tts/index-tts/blob/a371df7d0746a0ae7fdf075798b6b04e34a0132e/LICENSE_ZH.txt\r\nlibrary_name: audio.cpp\r\npipeline_tag: text-to-speech\r\nbase_model:\r\n  - IndexTeam/IndexTTS-2.5\r\nbase_model_relation: quantized\r\nlanguage:\r\n  - zh\r\n  - en\r\n  - ja\r\n  - es\r\n  - ar\r\ntags:\r\n  - gguf\r\n  - audio.cpp\r\n  - text-to-speech\r\n  - voice-cloning\r\n  - multilingual\r\n  - emotion-controllable\r\n---\r\n\r\n# IndexTTS 2.5 original-dtype GGUF\r\n\r\nThis repository contains one original-dtype standalone GGUF converted from the official\r\n[`IndexTeam/IndexTTS-2.5`](https://huggingface.co/IndexTeam/IndexTTS-2.5) snapshot for use with\r\n[`audio.cpp`](https://github.com/0xShug0/audio.cpp) release 0.6 and Rodel.Inference.\r\n\r\nIt is a derivative work, not an official IndexTeam or bilibili release. Read the governing\r\n[Chinese license](LICENSE_ZH.txt), its [English translation](LICENSE), [NOTICE](NOTICE), and\r\n[third-party notices](THIRD_PARTY_NOTICES.md) before downloading or using it.\r\n\r\n## Artifact\r\n\r\n| File | Bytes | SHA-256 |\r\n|---|---:|---|\r\n| `IndexTTS2.5-GGUF/index-tts2_5-orig.gguf` | 7,885,093,568 | `07e9bfe77bd42b6e67b8e5a39b365635f7198951281990cb49f322ef546cb9b4` |\r\n\r\nNo quantized package is published here. The first release deliberately keeps every tensor in its\r\noriginal dtype so quality can be measured before adding another approximation.\r\n\r\n## Reproducible conversion\r\n\r\nSources:\r\n\r\n- model: `IndexTeam/IndexTTS-2.5@c39ce5ba981572cb187443877ff559dfb246ce63`\r\n- converter: `0xShug0/audio.cpp@bb15edd78b56e035967e0eb999a6b28a62337db4`\r\n- Wav2Vec2-BERT: `facebook/w2v-bert-2.0@da985ba0987f70aaeb84a80f2851cfac8c697a7b`\r\n- CAMPPlus: `funasr/campplus@e4b6ede7ce16997aff4ae69fbca1f0175e2afede`\r\n- BigVGAN: `nvidia/bigvgan_v2_22khz_80band_256x@633ff708ed5b74903e86ff1298cf4a98e921c513`\r\n\r\nThe source LFS files were checked against the SHA-256 values published by Hugging Face. The\r\nconverter was built from the release source with MSVC 19.51, `/utf-8`, CPU-only GGML, and only the\r\n`index_tts2` model target.\r\n\r\n```powershell\r\npython tools/convert_index_tts2_5.py `\r\n  --model-dir C:\\path\\to\\IndexTTS-2.5 `\r\n  --output-dir C:\\path\\to\\staging `\r\n  --run-converter C:\\path\\to\\audiocpp_gguf.exe `\r\n  --type orig\r\n```\r\n\r\n`audiocpp_gguf --inspect` reports 3,790 tensors, all ten required namespaces, embedded sidecars,\r\nembedded model spec, and family `index_tts2`. A raw tensor comparison against audio.cpp's\r\noriginal-dtype package found 3,790 equal tensors and zero differences. The whole-file SHA-256 is\r\ndifferent because unordered JSON object keys in the embedded model spec were serialized in a\r\ndifferent order by the Windows build; tensor content is identical.\r\n\r\nThe machine-readable conversion and governance contract is\r\n[`rin-audio-model.json`](rin-audio-model.json).\r\n\r\n## Rodel.Inference\r\n\r\nThe first download requires explicit acceptance of the attached model license:\r\n\r\n```powershell\r\nrin speak hf:Richasy/IndexTTS-2.5-GGUF `\r\n  \"这是一段平静而温暖的语音。\" `\r\n  --language zh `\r\n  --voice-ref voice.wav `\r\n  --instructions \"平静而温暖\" `\r\n  --accept-license `\r\n  --play\r\n```\r\n\r\nThe model requires a reference WAV and an explicit `zh`, `en`, `ja`, `es`, or `ar` language. It\r\ndoes not consume a reference transcript. Instructions are mapped to emotion text.\r\n\r\n## Known limitations\r\n\r\n- audio.cpp does not fully port the official WeText and Japanese normalization pipeline. Numeric\r\n  expressions, percentages, fractions and dates require preprocessing; Rodel refuses numeric\r\n  notation instead of producing a known-wrong reading.\r\n- audio.cpp PR 210 records an unresolved Japanese repetition-penalty parity question.\r\n- The official IndexTTS tracker contains reports of weaker timbre, emotion and prosody in 2.5 than\r\n  in 2.0. A structurally correct GGUF is not itself a quality claim.\r\n- Streaming audio, duration control, emotion reference audio and eight-dimensional emotion vectors\r\n  are not part of the initial Rodel integration.\r\n\r\n## Measured Rodel validation\r\n\r\nThe package was acquired from the public Hub through Rodel's immutable tree and digest path, then\r\nrun with the verified audio.cpp 0.6 CUDA profile + runtime bundle:\r\n\r\n- 22.05 kHz mono PCM16 WAV, with no native worker left after private or daemon shutdown;\r\n- Chinese sample: 2.71 seconds generated in 1.89 seconds, RTF 0.699;\r\n- warm attached request: RTF 0.452;\r\n- 6,300 English characters: 265.01 seconds generated in 52.60 seconds, RTF 0.198;\r\n- independent Whisper large-v3-turbo transcription: exact zh/en/es, 0.947 normalized-character\r\n  similarity for ar and 0.909 for ja.\r\n\r\nThese measurements prove the package, explicit language routing and intelligibility, not voice\r\nidentity or emotion quality. Those still require speaker-similarity measurement and human\r\nlistening.\r\n\r\n## License\r\n\r\nThis repository is governed by the attached bilibili Model Use License. `LICENSE_ZH.txt` is the\r\ngoverning Chinese text; `LICENSE` is the English translation. Distribution must retain both, the\r\nderivative disclaimer, and the files under `THIRD_PARTY_LICENSES/`, and must bind downstream\r\nrecipients to the same terms. Separate authorization is required above 100 million monthly active\r\nusers or RMB 100 million annual revenue under the Chinese terms.\r\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "IndexTeam/IndexTTS-2.5"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "rahulrachuri/pocket-tts-coreai",
+      "author": "rahulrachuri",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "coreai",
+        "text-to-speech",
+        "core-ai",
+        "ios",
+        "apple",
+        "kyutai",
+        "mimi",
+        "base_model:kyutai/pocket-tts-without-voice-cloning",
+        "base_model:finetune:kyutai/pocket-tts-without-voice-cloning",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "coreai",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/rahulrachuri/pocket-tts-coreai",
+      "card_text": "---\nlicense: cc-by-4.0\nbase_model: kyutai/pocket-tts-without-voice-cloning\ntags:\n  - text-to-speech\n  - core-ai\n  - ios\n  - apple\n  - kyutai\n  - mimi\nlibrary_name: coreai\npipeline_tag: text-to-speech\n---\n\n# pocket-tts for Apple Core AI\n\nConverted Core AI bundles for Kyutai's [pocket-tts](https://huggingface.co/kyutai/pocket-tts-without-voice-cloning),\nrunning fully on-device on iPhone and Apple silicon Macs. Paired with the Swift host at\n[RahulRachuri/pocket-tts-swift](https://github.com/RahulRachuri/pocket-tts-swift).\n\nSource checkpoint: `kyutai/pocket-tts-without-voice-cloning`, revision\n`e041936c75475d350b405bc870bcf7c22da4e9e6`.\n\n## Performance\n\niPhone 17 Pro Max (`iPhone18,2`, A19 Pro), iOS 27.0, Release build, charging, thermal\nnominal. 148-word paragraph, one warmup and three timed runs, model load excluded.\n\n| config | RTF median | ×realtime | peak RSS | load |\n|---|---:|---:|---:|---:|\n| fp16 gpu | 0.1281 | **7.8×** | 169 MB | 0.4 s |\n| fp32 gpu | 0.1646 | 6.1× | 202 MB | 0.7 s |\n\nFor reference, on the same phone the Core ML route\n([FluidInference/pocket-tts-coreml](https://huggingface.co/FluidInference/pocket-tts-coreml)\nthrough FluidAudio SDK 0.15.5 at its shipping defaults) measures RTF 0.399, or 2.51×\nrealtime, on a length-matched passage.\n\n## Accuracy\n\nGated against the PyTorch fp32 oracle rather than judged by ear.\n\n- End-to-end oracle prompt, device GPU: cos 1.000000, max|Δ| 4.3e−5, framing identical.\n- Per-graph transfer under `cpuOnly`, device versus M4 Pro: bit-identical, max|Δ| = 0\n  across all eight dumps.\n- ASR round trip: 0.00% WER on the oracle prompt, 1.38% on the 148-word paragraph,\n  2.45% on a 163-word, 47-second passage.\n\n## Contents\n\n| bundle | precision | notes |\n|---|---|---|\n| `flowlm_float32_s512` | fp32 | flow-LM, multifunction (`prefill` + `step`), in-graph state |\n| `flowlm_float16_s512` | fp16 | same, half precision |\n| `flow_decoder_float32_lsd1` | fp32 | flow head |\n| `flow_decoder_float16_lsd1` | fp16 | same, half precision |\n| `mimi_decoder_float32_ring272_outer_q_gs` | fp32 | Mimi decoder, quantizer folded, in-graph ring state |\n\nThese are JIT `.aimodel` bundles. For iOS, compile them AOT with\n`--expect-frequent-reshapes` omitted, since every shape here is static.\n\nThe model weights themselves are not mirrored here. The Swift host loads\n`model.safetensors`, `tokenizer.model`, and `embeddings/<voice>.safetensors` directly\nfrom Kyutai's checkpoint, which is ungated. Fetch it with `huggingface_hub` at the\nrevision above.\n\n## Requirements\n\nExported with `coreai-core` 1.0.0b2. Bundles built with earlier versions are rejected by\nthe Xcode 27 loader, and the export gives no warning when it happens.\n\n## Licence and attribution\n\nThe converted bundles inherit **CC-BY-4.0** from the upstream model and require\nattribution to Kyutai. The conversion scripts and Swift host are Apache-2.0, in the\nGitHub repository linked above.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "kyutai/pocket-tts-without-voice-cloning"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "lemuriandezapada/MOSS-TTS-Local-Transformer-v1.5-awq-int4",
+      "author": "lemuriandezapada",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "moss_tts_local",
+        "feature-extraction",
+        "text-to-speech",
+        "voice-cloning",
+        "streaming",
+        "moss-tts",
+        "awq",
+        "int4",
+        "custom_code",
+        "en",
+        "zh",
+        "ja",
+        "multilingual",
+        "base_model:OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5",
+        "base_model:quantized:OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5",
+        "license:apache-2.0",
+        "4-bit",
+        "region:us"
+      ],
+      "downloads": 5,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/lemuriandezapada/MOSS-TTS-Local-Transformer-v1.5-awq-int4",
+      "card_text": "---\nlanguage:\n- en\n- zh\n- ja\n- multilingual\nlicense: apache-2.0\npipeline_tag: text-to-speech\nlibrary_name: transformers\nbase_model: OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5\ntags:\n- text-to-speech\n- voice-cloning\n- streaming\n- moss-tts\n- awq\n- int4\n---\n\n# MOSS-TTS-Local-Transformer-v1.5 AWQ INT4\n\n4-bit AWQ quantization of\n[OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5)\n(the 4B streaming member of the MOSS-TTS v1.5 family, 48 kHz):\n**8.5 GB → 3.7 GB**, quality parity on ASR round-trip evaluation.\n\n## Method\n\n- The Qwen3-4B backbone (`transformer.*`) was extracted as a standard\n  `Qwen3ForCausalLM` (the checkpoint's `text_lm_head.weight` standing in as\n  `lm_head` for calibration), quantized with AutoAWQ 0.2.9 (GEMM, 4-bit,\n  group size 128, zero-point, pileval text calibration), and re-injected into\n  the original layout with the `transformer.` prefix restored.\n- Everything audio-specific stays untouched in the original dtype: the 12\n  per-codebook `audio_embeddings` and `audio_lm_heads`, the 1-layer GPT-style\n  `local_transformer` (depth transformer), `local_text_lm_head`,\n  `text_lm_head`, `embed_tokens`, and all norms — declared in\n  `quantization_config.modules_to_not_convert`.\n- The codec (`OpenMOSS-Team/MOSS-Audio-Tokenizer-v2`) is a separate repo and\n  unaffected.\n- `torch_dtype: float16` (AWQ GEMM kernels; vLLM's awq_marlin path on Hopper\n  takes it from here).\n\n## Validation (dual-ASR round-trip CER, worst of two judges; same texts/references as the fp16 A/B)\n\n| case | AWQ int4 | fp16 original |\n|---|---|---|\n| English | 0.000, 0.000 | 0.000, 0.000 |\n| Japanese | median 0.091 (5 takes, 0.061–0.273) | median 0.061 (5 takes, 0.061–2.30, incl. one runaway take) |\n| code-switched JA/EN | 0.46, 0.49 | 0.57, 0.73 |\n\nSpeaker-embedding similarity to the reference voice: +0.82–0.87 (AWQ) vs\n+0.82–0.87 (fp16).\n\n## Serving\n\nLoads in [vllm-omni](https://github.com/vllm-project/vllm-omni) through the\nregistered `MossTTSLocalModel` architecture: the talker builds its backbone\nfrom vLLM's native `Qwen3Model`, so the AWQ weights go through the exact same\nloader path as any stock AWQ Qwen3 checkpoint — no patches. Two stages\n(talker + codec); real streaming via `stream_format=audio` (the streamed WAV\nis 48 kHz stereo — downmix or handle both channels client-side).\n\nWeight footprint drops ~8 GB → ~2.8 GB. To see that saving on nvidia-smi, pin\nthe KV pool instead of letting a `gpu_memory_utilization` fraction size it\n(vLLM fills whatever the fraction allows): a per-stage\n`engine_extras: {kv_cache_memory_bytes: 2684354560}` (4 seqs × 4096 tokens at\nbf16) lands the talker stage at ~7.6 GB — ~15.9 GB total with the codec stage,\nvs ~28.5 GB for the bf16 original.\n\n## Upstream references\n\n- [OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5)\n- [OpenMOSS-Team/MOSS-Audio-Tokenizer-v2](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-v2)\n- Sibling export: [lemuriandezapada/MOSS-TTS-v1.5-awq-int4](https://huggingface.co/lemuriandezapada/MOSS-TTS-v1.5-awq-int4) (the 8B, served on sglang-omni)\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mimba/moss-tts-nano-plt",
+      "author": "mimba",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-13",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "text-to-speech",
+        "malagasy",
+        "plt",
+        "voice-cloning",
+        "cpu",
+        "base_model:OpenMOSS-Team/MOSS-TTS-Nano-100M",
+        "base_model:quantized:OpenMOSS-Team/MOSS-TTS-Nano-100M",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/mimba/moss-tts-nano-plt",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "OpenMOSS-Team/MOSS-TTS-Nano"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mikoy92/MiniMax-Music3-MLX",
+      "author": "mikoy92",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "mlx",
+        "diffusers",
+        "safetensors",
+        "apple-silicon",
+        "music-generation",
+        "minimax",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:finetune:MiniMaxAI/MiniMax-Music3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/mikoy92/MiniMax-Music3-MLX",
+      "card_text": "---\nlicense: other\nlicense_name: minimax-music3-community\nlicense_link: https://huggingface.co/MiniMaxAI/MiniMax-Music3\nbase_model: MiniMaxAI/MiniMax-Music3\nlibrary_name: mlx\npipeline_tag: text-to-audio\ntags:\n  - mlx\n  - apple-silicon\n  - music-generation\n  - minimax\n---\n\n# MiniMax Music 3 — MLX\n\nConverted [MiniMaxAI/MiniMax-Music3](https://huggingface.co/MiniMaxAI/MiniMax-Music3) weights for Apple Silicon via [mikolaj92/minimax-music3-mlx](https://github.com/mikolaj92/minimax-music3-mlx).\n\nThis is a layout remap (PyTorch conv kernels → MLX, weight-norm fused, bf16). It is not a fine-tune.\n\nAll variants: [MiniMax Music 3 MLX collection](https://huggingface.co/collections/mikoy92/minimax-music-3-mlx-6a7eb2a8e09d246e6d029fad)\n\n| Precision | Repo | Size |\n|---|---|---|\n| bf16 | [mikoy92/MiniMax-Music3-MLX](https://huggingface.co/mikoy92/MiniMax-Music3-MLX) | ~23.5 GB |\n| 8-bit | [mikoy92/MiniMax-Music3-MLX-8bit](https://huggingface.co/mikoy92/MiniMax-Music3-MLX-8bit) | ~12 GB |\n| 6-bit | [mikoy92/MiniMax-Music3-MLX-6bit](https://huggingface.co/mikoy92/MiniMax-Music3-MLX-6bit) | ~10 GB |\n| 4-bit | [mikoy92/MiniMax-Music3-MLX-4bit](https://huggingface.co/mikoy92/MiniMax-Music3-MLX-4bit) | ~7 GB |\n\n## Use\n\n```bash\ngit clone https://github.com/mikolaj92/minimax-music3-mlx\ncd minimax-music3-mlx\nuv venv --python 3.12 .venv\nsource .venv/bin/activate\nuv pip install -e .\n\nhf download mikoy92/MiniMax-Music3-MLX --local-dir ./weights/mlx\n\npython -m minimax_music3_mlx.generate \\\n  --weights ./weights/mlx \\\n  --lyrics $'[verse]\\n...\\n[chorus]\\n...' \\\n  --prompt \"Genre: acoustic pop. BPM: 96. Warm female vocal.\" \\\n  --duration 30 \\\n  --steps 30 \\\n  --output song.wav\n```\n\n## License\n\nWeights remain under the [MiniMax-Music3 Community License](https://huggingface.co/MiniMaxAI/MiniMax-Music3) (Copyright 2026 MiniMax). Inference code in the GitHub repo is Apache-2.0.\n\nCommercial products that ship the model must display “MiniMax-Music3”. Yearly revenue above USD 20M needs a separate MiniMax authorization (`api@minimax.io`).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mlboydaisuke/Qwen2.5-Omni-3B-Audio-CoreAI",
+      "author": "mlboydaisuke",
+      "created_at": "2026-06-19",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "coreai",
+        "coreai-aimodel",
+        "core-ai",
+        "audio",
+        "audio-understanding",
+        "on-device",
+        "apple",
+        "qwen2.5-omni",
+        "audio-text-to-text",
+        "base_model:Qwen/Qwen2.5-Omni-3B",
+        "base_model:finetune:Qwen/Qwen2.5-Omni-3B",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "coreai",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/mlboydaisuke/Qwen2.5-Omni-3B-Audio-CoreAI",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: Qwen/Qwen2.5-Omni-3B\ntags:\n- core-ai\n- coreai\n- audio\n- audio-understanding\n- on-device\n- apple\n- qwen2.5-omni\nlibrary_name: coreai\npipeline_tag: audio-text-to-text\n---\n\n# Qwen2.5-Omni-3B Audio Understanding — Core AI\n\n[Qwen2.5-Omni-3B](https://huggingface.co/Qwen/Qwen2.5-Omni-3B)'s **Thinker** converted to Apple\n**Core AI** (`.aimodel` / `.aimodelc`, iOS 27 / macOS 27) for **on-device audio *understanding*** —\nthe model describes the **sounds** it hears (events, texture, emotion, music), it is **not** a\ntranscriber. *\"I hear a loud hissing sound.\"* · *\"…a continuous sine wave sound.\"* · *\"…a series of\nbeeps.\"*\n\nPart of the [CoreAI-Model-Zoo](https://github.com/john-rocky/coreai-model-zoo). **Device-verified on\niPhone 17 Pro (A19 Pro) and M4 Max.**\n\n<!-- gen-cards:use-it begin id=qwen2.5-omni-3b-audio (managed by scripts/gen-cards — edit cards.json / QuickStart.swift, not this block) -->\n## Use it\n\n⚡ **One line** — this model is the default behind the kit's task op\n(`import CoreAIOps`; no session, no model plumbing, downloads on first use):\n\n```swift\nlet scene = try await CoreAI.describeAudio(audioURL)\n```\n\nTwenty ops, one shape — [Cookbook](https://github.com/john-rocky/coreai-kit/blob/main/docs/COOKBOOK.md).\n\n▶️ **Run it (source)** — the [AudioChat runner](https://github.com/john-rocky/coreai-kit/tree/main/Examples/AudioChat)\n(GUI + CLI, one app for every audio-understanding model in the catalog):\n\n```bash\ngit clone https://github.com/john-rocky/coreai-kit\nopen coreai-kit/Examples/AudioChat/AudioChat.xcodeproj\n# → Run, then pick \"Qwen2.5-Omni 3B Audio\" in the model picker\n\n# agents / headless (macOS):\ncd coreai-kit/Examples/AudioChat\nswift run audiochat-cli --model qwen2.5-omni-3b-audio --audio sample.wav --prompt \"What do you hear?\"\n```\n\n💻 **Build with it** — complete; the glue is kit API, copy-paste runs:\n\n```swift\nimport CoreAIKit\nimport FoundationModels\n\nlet audio = try await KitAudioModel(catalog: \"qwen2.5-omni-3b-audio\")\ntry await audio.attach(samples: AudioFile.pcm16kMono(audioURL))  // clip → encoder buffer\nlet session = LanguageModelSession(model: audio)\nlet reply = try await session.respond(to: question)\n// reply.content: what the model heard, described fully on-device\n```\n\nThe take-home is [`Examples/AudioChat/Sources/QuickStart.swift`](https://github.com/john-rocky/coreai-kit/blob/main/Examples/AudioChat/Sources/QuickStart.swift)\n— this exact code as one typed function, no UI; the CLI is an argument shell over it, and\nthe GUI drives the same `KitAudioModel(catalog:)` behind a `LanguageModelSession`.\nLive mic? `MicRecorder` (kit API) captures 16 kHz mono `[Float]` — attach that instead.\nOne clip per session; attach a new clip to ask about different audio.\n\n**Integration checklist**\n\n- SPM: `https://github.com/john-rocky/coreai-kit` → product **CoreAIKit**\n- Info.plist: `NSMicrophoneUsageDescription` — only if you record\n- Entitlements: none needed (macOS)\n- First run downloads the model — 5.5 GB (Mac) — then it loads from the\n  local cache (Application Support; progress via the `downloadProgress` callback)\n- Measure in Release — Debug is ~3× slower on per-token host work\n<!-- gen-cards:use-it end -->\n\n## What's here\n\nTwo models, run as a pair on the **coreai-pipelined** GPU engine:\n\n| path | what | size |\n|---|---|---|\n| `gpu-pipelined/qwen2_5_omni_3b_thinker_int8lin_n750_s1/` | text decoder (Qwen2.5-3B int8lin, S=1) — **macOS** | 3.9 GB |\n| `gpu-pipelined/qwen2_5_omni_3b_audio_encoder_fp16_k15.aimodel/` | Whisper-style audio encoder (fp16, K=15 ≈ 30 s) — both platforms | 1.2 GB |\n| `ios/qwen2_5_omni_3b_thinker_n750_ios/` | text decoder **AOT** (`.aimodelc`, iPhone 17 Pro / h18p) | 4.5 GB |\n\nThe decoder's audio embeds ride **one static-input buffer** (`audio_embeds [750,2048]`); the prompt's\n`<|AUDIO|>` placeholders carry extension ids `vocab + slot` the graph gathers. TMRoPE collapses to\n1-D for audio+text, so positions are engine-native (no rope-shift inputs). iPhone uses the **AOT**\ndecoder so the 3.9 GB graph dodges the on-device JIT jetsam; the AOT weights mmap as clean pages, so\nit loads comfortably (≈5.9 GB headroom after load on a 12 GB device, with the\n`increased-memory-limit` entitlement).\n\n## Use it\n\nThe [`coreai-audio`](https://github.com/john-rocky/coreai-model-zoo/tree/main/apps/coreai-audio) app\n(record from the mic / choose a file / demo clip → \"what do you hear?\"), or\n[CoreAIKit](https://github.com/john-rocky/coreai-kit):\n\n```swift\nlet model = try await KitAudioModel(model: .qwen2_5Omni3B)   // downloads decoder + encoder\ntry await model.attach(samples: pcm16kMono)                  // mel → encoder → static buffer\nlet answer = try await LanguageModelSession(model: model).respond(to: \"What do you hear?\")\n```\n\nThe 16 kHz log-mel front end is Whisper-large-v3 (Accelerate/vDSP), bit-exact with the HF feature\nextractor (gated cos 1.0). Any clip is decoded to 16 kHz mono, ≤ ~30 s.\n\n## Conversion / numerics\n\nConversion code + gates:\n[`conversion`](https://github.com/john-rocky/coreai-model-zoo) (`export_qwen2_5_omni_thinker.py` /\n`export_qwen2_5_omni_audio.py`). Decoder int8lin gates top-1-exact vs the fp32 HF oracle; the\nencoder static rework is cos 1.0 vs eager (GPU 0.99999); the Swift vDSP mel is cos 1.0 vs the HF\nextractor. iPhone greedy matches the Mac content (white-noise → \"I hear a loud hissing sound.\").\n\n## License\n\nApache-2.0 (inherits [Qwen2.5-Omni-3B](https://huggingface.co/Qwen/Qwen2.5-Omni-3B)). A community\nconversion — not affiliated with Alibaba or Apple.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen2.5-Omni-3B"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "audio_understanding_reasoning": 12
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio understanding, audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "MatheusMarquesEiras/gpt-sovits-ptbr-base",
+      "author": "MatheusMarquesEiras",
+      "created_at": "2026-08-13",
+      "last_modified": "2026-08-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "tts",
+        "gpt-sovits",
+        "portuguese",
+        "portugues",
+        "pt-br",
+        "brazilian-portuguese",
+        "portugues-brasileiro",
+        "speech-synthesis",
+        "sintese-de-voz",
+        "espeak-ng",
+        "experimental",
+        "work-in-progress",
+        "pt",
+        "dataset:Edresson/TTS-Portuguese-Corpus",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/MatheusMarquesEiras/gpt-sovits-ptbr-base",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "Edresson/TTS-Portuguese-Corpus"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
