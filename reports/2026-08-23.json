@@ -1,0 +1,1509 @@
+{
+  "generated_at": "2026-08-23",
+  "window_start": "2026-08-16",
+  "source_counts": {
+    "arxiv": 43,
+    "semantic_scholar": 55
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "db449792eae4a4e3cc8a4eea9c1a9711c968a5c2",
+      "title": "Offline Real-Time Multilingual Broadcasting Using WebRTC and Local AI Services: Architecture, Performance, and Institutional Evaluation",
+      "abstract": "Real-time multilingual communication (RTMC) is increasingly important in academic, governmental, defense, and clinical settings, where cloud-based speech processing may raise privacy, data sovereignty, connectivity, and cost concerns. This study presents Yapzek Stream, a fully offline multilingual broadcasting and speech-translation platform that performs speech recognition, translation, and text-to-speech synthesis within institution-owned infrastructure. The system integrates Web Real-Time Communication (WebRTC)-based broadcasting with locally hosted artificial intelligence (AI) services and provides multilingual audio delivery, browser-based access, recording, transcript and subtitle export, and institutional authentication. The platform was evaluated through an implementation-oriented analysis and a university pilot involving two live sessions with 10 and 50 participants and 12 semi-structured interviews. Estimated end-to-end processing latency was 1.8–4.1 s, while pilot observations ranged from approximately 2 s for short utterances to 4.5–5 s for longer speech. The results indicate the feasibility of offline multilingual broadcasting for privacy-preserving and institution-controlled communication. Deployment-specific accuracy and translation evaluation, controlled scalability and GPU-utilization measurements, robustness testing, and larger-scale user-acceptance studies remain for future work.",
+      "authors": [
+        "Erhan Dönmez",
+        "Hakan Aydın"
+      ],
+      "published": "2026-08-19",
+      "updated": "2026-08-19",
+      "url": "https://www.semanticscholar.org/paper/db449792eae4a4e3cc8a4eea9c1a9711c968a5c2",
+      "pdf_url": "https://doi.org/10.3390/electronics15163715",
+      "doi": "10.3390/electronics15163715",
+      "venue": "Electronics",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 9,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "f6a71dfbb8f43f7519aa382291a0a323aa9aba8d",
+      "title": "Codebook refinement transformer: post-retrieval correction for neural codec voice conversion",
+      "abstract": "We propose the Codebook Refinement Transformer (CRT), a non-autoregressive model that improves retrieval-based voice conversion on discrete neural audio codec tokens. CRT operates on the Mimi codec’s hierarchical residual vector quantized (RVQ) token space using a Conformer backbone with Feature-wise Linear Modulation (FiLM) speaker conditioning, trained with inference-matched FAISS corruption. We introduce confidence-selective decoding: CRT predictions override retrieved tokens only when softmax confidence exceeds a threshold. On a 100-pair zero-shot evaluation across VCTK speakers, CRT improves Mel Cepstral Distortion over the FAISS retrieval baseline (102.6 ± 15.1 vs. 103.3 ± 16.3) while achieving higher speaker embedding cosine similarity than kNN-VC (0.816 vs. 0.796) and reducing word error rate by 46% relative to the FAISS baseline (13.5% vs. 25.0%). CRT achieves real-time processing (RTF 0.90x on A100) with the neural network forward pass consuming only 8% of total latency. CRT’s token-to-token architecture integrates natively with codec-based speech systems, requiring no external vocoders or format conversion.",
+      "authors": [
+        "Q. Nguyen",
+        "Duc Tran",
+        "D. Phan",
+        "Pavel Padernob",
+        "Lung Vu"
+      ],
+      "published": "2026-08-18",
+      "updated": "2026-08-18",
+      "url": "https://www.semanticscholar.org/paper/f6a71dfbb8f43f7519aa382291a0a323aa9aba8d",
+      "pdf_url": "",
+      "doi": "10.1117/12.3120629",
+      "venue": "International Conference on Advanced Sensing and Intelligent Systems",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 6,
+      "topic_scores": {
+        "generative_music_audio": 6
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: neural audio codec"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "Kaousheik/tempo-sft-stage1-2",
+      "author": "Kaousheik",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "audioflamingo3",
+        "text2text-generation",
+        "audio",
+        "audio-language-model",
+        "timestamping",
+        "temporal-grounding",
+        "speech-recognition",
+        "speaker-diarization",
+        "dense-audio-captioning",
+        "music-captioning",
+        "audio-text-to-text",
+        "en",
+        "dataset:Kaousheik/tempo",
+        "base_model:nvidia/audio-flamingo-3",
+        "base_model:finetune:nvidia/audio-flamingo-3",
+        "license:other",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 346,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Kaousheik/tempo-sft-stage1-2",
+      "card_text": "---\nlicense: other\nlicense_name: nvidia-research-only\nlicense_link: https://huggingface.co/nvidia/audio-flamingo-3\nbase_model: nvidia/audio-flamingo-3\nlibrary_name: transformers\ntags:\n- audio\n- audio-language-model\n- timestamping\n- temporal-grounding\n- speech-recognition\n- speaker-diarization\n- dense-audio-captioning\n- music-captioning\ndatasets:\n- Kaousheik/tempo\nlanguage:\n- en\npipeline_tag: audio-text-to-text\n---\n\n# TEMPO — Table 2 — SFT (Ours) - Stage 1 + 2\n\n**[Paper](https://arxiv.org/abs/XXXX.XXXXX)**  ·  **[All artifacts](https://huggingface.co/collections/Kaousheik/tempo-6a8a96ced2752994aa9034e2)**  ·  **[Dataset](https://huggingface.co/datasets/Kaousheik/tempo)**\n\n## Description\n\nFull SFT recipe: Stage 1 synthetic then Stage 2 real (2 epochs @ lr 5e-5). The main SFT model.\n\nTEMPO is the first unified large audio-language model for timestamping across\n**speech, sound and music**. A single decoder handles all five tasks, emitting text\ninterleaved with timestamp tokens and distinguished only by a task tag in the prompt.\nThree components make it work: **atomic timestamp tokens** (~601 dedicated tokens at\n0.1 s resolution, so a timestamp is one categorical decision rather than several BPE\nfragments), a **time-aware multi-modal projector** injecting sinusoidal wall-clock\nencodings into frame embeddings, and a **distance-aware Gaussian loss** that gives\npartial credit to near misses instead of penalising every wrong timestamp equally.\n\n## Best for\n\n- Assigning **who spoke what, and when** in meetings and conversational audio\n- Localising a **natural-language query** to a time interval in an audio stream\n- **Dense captioning** — segmenting a recording and describing each event with boundaries\n- **Timestamped music analysis** — chord spans, tempo changes, instrument entries/exits\n\n## This checkpoint\n\n`Table 2 — SFT (Ours) - Stage 1 + 2` — reported results:\n\n`ASR MAE 0.77 / mIoU 63.8 / WER 44.7 · DER 25.4 · dense-cap eF1 58.5 · grounding F1 46.2`\n\nThis variant **uses** the time-aware projector, so `time_proj.pt` is included and must be loaded.\n\n## TEMPO variants\n\n| checkpoint | paper row | notes |\n|---|---|---|\n| [`tempo-rl-multitask`](https://huggingface.co/Kaousheik/tempo-rl-multitask) | Table 2 — SFT + Multi-task RL | Best overall. GRPO over all five tasks jointly. |\n| [`tempo-sft-stage1-2`](https://huggingface.co/Kaousheik/tempo-sft-stage1-2) ← *this model* | Table 2 — SFT (Ours) Stage 1+2 | Full SFT recipe, no RL. |\n| [`tempo-sft-stage1`](https://huggingface.co/Kaousheik/tempo-sft-stage1) | Table 2 — SFT (Ours) Stage 1 | Synthetic calibration only. |\n| [`tempo-sft-stage2-realonly`](https://huggingface.co/Kaousheik/tempo-sft-stage2-realonly) | Table 2 — SFT (Ours) Stage 2 | Real data only, no curriculum. |\n| [`tempo-rl-singletask-music`](https://huggingface.co/Kaousheik/tempo-rl-singletask-music) | Table 2 — SFT + Single-task RL | GRPO on music captioning alone. |\n| [`tempo-ablation-both`](https://huggingface.co/Kaousheik/tempo-ablation-both) | Table 3 — + Both (Ours) | Gaussian loss + time-aware projector. |\n| [`tempo-ablation-loss`](https://huggingface.co/Kaousheik/tempo-ablation-loss) | Table 3 — + Loss | Gaussian timestamp loss only. |\n| [`tempo-ablation-projector`](https://huggingface.co/Kaousheik/tempo-ablation-projector) | Table 3 — + Projector | Time-aware projector only. |\n| [`tempo-ablation-naive`](https://huggingface.co/Kaousheik/tempo-ablation-naive) | Table 3 — Naive | Neither component. |\n\nPlus the training and evaluation data: **[`Kaousheik/tempo`](https://huggingface.co/datasets/Kaousheik/tempo)** — five task\nconfigs with splits `synthetic_stage1` / `sft_stage2` / `rl` / `val` / `evaluation`.\n\n## Usage\n\n```python\nimport torch\nfrom transformers import AutoProcessor, AutoModelForCausalLM\n\nrepo = \"Kaousheik/tempo-sft-stage1-2\"\nprocessor = AutoProcessor.from_pretrained(repo)\nmodel = AutoModelForCausalLM.from_pretrained(repo, torch_dtype=torch.bfloat16, device_map=\"auto\")\n\n# REQUIRED: the time-aware projector lives outside the transformer checkpoint.\n# Skipping this silently falls back to the stock AF3 projector and degrades timestamps.\nfrom huggingface_hub import hf_hub_download\nsd = torch.load(hf_hub_download(repo, \"time_proj.pt\"), map_location=\"cpu\")\nmodel.load_time_projector(sd)   # adapt to your loading code\n```\n\nPrompt with the task tag for the behaviour you want:\n\n| task | prompt tag | answer shape |\n|---|---|---|\n| multi-speaker ASR | `[speech:asr]` | `<\\|t0\\|> transcript <\\|t1\\|>` per utterance |\n| speaker diarization | `[speech:diar]` | `<\\|t0\\|> Speaker N <\\|t1\\|>` per turn |\n| audio temporal grounding | `[audio:ground]` | `<\\|t0\\|> to <\\|t1\\|>` per interval |\n| dense audio captioning | `[audio:caption]` | `<\\|t0\\|> caption <\\|t1\\|>` per event |\n| timestamped music captioning | `[audio:music]` | `[instrument]` / `[tempo]` / `[chord]` / `[stats]` spans |\n\nTimestamps are emitted as atomic tokens `<|0.0|>` … `<|60.0|>` at 0.1 s resolution.\n\n## Evaluation\n\nHeld-out benchmark of 10,521 question–answer pairs over six corpora. WER and DER are\npercentages (lower is better); mIoU is the symmetric harmonic mean of recall- and\nprecision-side mean-best-IoU, so over-prediction cannot inflate it.\n\n| model | WER ↓ | ASR mIoU ↑ | DER ↓ | diar mIoU ↑ | dense eF1 ↑ | ground F1 ↑ |\n|---|---|---|---|---|---|---|\n| Audio Flamingo 3 | 209.7 | 19.4 | 103.2 | 2.9 | 3.8 | 3.3 |\n| Audio Flamingo Next | 115.4 | 11.5 | 106.9 | 12.4 | 11.6 | 3.6 |\n| Qwen3-Omni | 69.7 | 31.6 | 44.2 | 44.4 | 57.9 | 47.4 |\n| TimeAudio | – | – | – | – | 43.6 | 40.1 |\n| TEMPO SFT Stage 1+2 | 44.7 | 63.8 | 25.4 | 70.5 | 58.5 | 46.2 |\n| **TEMPO SFT + Multi-task RL** | **43.5** | **65.8** | **25.4** | **71.1** | **59.3** | **46.5** |\n\n## Training summary\n\nBuilt on **Audio Flamingo 3** — frozen Whisper-large audio encoder (~0.6B) + Qwen2-7B,\njoined by a two-layer MLP projector. Three stages:\n\n| stage | data | recipe |\n|---|---|---|\n| Stage 1 SFT | 51,512 synthetic | 2 epochs, lr 1e-4, LoRA r=128 α=256 |\n| Stage 2 SFT | 32,726 real | 2 epochs, lr 5e-5, from the merged Stage 1 checkpoint |\n| GRPO | ~35K | 1,000 steps, lr 1e-5, LoRA r=256 α=512, 8 completions/prompt, KL β=0.01 |\n\nRewards for GRPO are the evaluation metrics themselves, bounded in [0, 1] and gated by\na format check, so maximising reward and improving evaluation performance are aligned.\nTrained on NVIDIA A6000s; the audio encoder stays frozen throughout.\n\n## Limitations\n\n- English only; timestamps are capped at **60 s** by the token vocabulary, so longer\n  audio must be chunked.\n- Multi-speaker ASR remains hard in absolute terms (WER 43.5%) — useful for alignment,\n  not a drop-in replacement for a dedicated ASR system.\n- Chord F1 is low in absolute terms; music captioning is best treated as approximate.\n- Speaker labels are consistent within a clip but arbitrary across clips.\n- **CHiME-6 is excluded** from the released dataset (its licence forbids\n  redistribution), so the public data is smaller than what the paper trained on.\n\n## Licence\n\nDerived from **Audio Flamingo 3**, released by NVIDIA under a **research-only**\nlicence, which governs this checkpoint. **Non-commercial academic research only.**\nTraining corpora carry their own terms: CC BY 4.0 for AMI, ICSI, AudioSet Strong,\nTACOS, Slakh2100 and LibriSpeech; CC BY-NC 3.0 for ESC-50.\n\n## Citation\n\n```bibtex\n@inproceedings{tempo,\n  title     = {TEMPO: Temporally-grounded Multi-task Post-training for Large Audio-Language Models},\n  author    = {TODO},\n  booktitle = {TODO},\n  year      = {2026}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [
+        "Kaousheik/tempo"
+      ],
+      "base_models": [
+        "nvidia/audio-flamingo-3"
+      ],
+      "variants": [
+        "Kaousheik/tempo-sft-stage1",
+        "Kaousheik/tempo-sft-stage2-realonly",
+        "Kaousheik/tempo-ablation-both",
+        "Kaousheik/tempo-rl-singletask-music",
+        "Kaousheik/tempo-ablation-projector",
+        "Kaousheik/tempo-rl-multitask",
+        "Kaousheik/tempo-ablation-loss",
+        "Kaousheik/tempo-ablation-naive"
+      ],
+      "score": 39,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "audio_understanding_reasoning": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model",
+        "Audio Understanding & Reasoning: audio captioning, audio-text (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ntc-ai/minimax-music3-concept-sliders",
+      "author": "ntc-ai",
+      "created_at": "2026-08-16",
+      "last_modified": "2026-08-22",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "music",
+        "text-to-music",
+        "lora",
+        "concept-sliders",
+        "minimax-music-3",
+        "text-to-audio",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 9,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/ntc-ai/minimax-music3-concept-sliders",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music-3"
+      ],
+      "variants": [],
+      "score": 32,
+      "topic_scores": {
+        "generative_music_audio": 31
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, text-to-audio (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "YJX-Xiaomi/ControlFoley",
+      "author": "YJX-Xiaomi",
+      "created_at": "2026-04-13",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "text-video-to-audio",
+        "text-controlled-video-to-audio",
+        "audio-controlled-video-to-audio",
+        "audio-generation",
+        "text-to-audio",
+        "en",
+        "arxiv:2604.15086",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 94,
+      "likes": 19,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/YJX-Xiaomi/ControlFoley",
+      "card_text": "",
+      "arxiv_ids": [
+        "2604.15086"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "generative_music_audio": 13,
+        "audio_understanding_reasoning": 10
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio (pipeline tag)",
+        "Audio Understanding & Reasoning: audio-text",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-GTFT-M0v2",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-GTFT-M0v2",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-GTFT-M0v2\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-M10",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-M10",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-M10\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-M9",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-M9",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-M9\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-M22",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-M22",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-M22\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-M21",
+      "author": "ga642381",
+      "created_at": "2026-08-20",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-M21",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-M21\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-A2",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-A2",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-A2\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-A1",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-A1",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-A1\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-T3",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-T3",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-T3\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-T1",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-T1",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-T1\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-L5",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-L5",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-L5\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-L4",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-L4",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-L4\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-L3",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-L3",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-L3\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-L2",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-L2",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-L2\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-C2",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "feature-extraction",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-C2",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-C2\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-C1",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "feature-extraction",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-C1",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-C1\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-C2-ep1",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "feature-extraction",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-C2-ep1",
+      "card_text": "---\nlibrary_name: transformers\nlicense: cc-by-nc-4.0\ntags:\n- speech\n- audio\n- full-duplex\n- speech-to-speech\npipeline_tag: audio-to-audio\n---\n\n# Mercury-C2-ep1\n\nA full-duplex speech-to-speech model fine-tuned for time-aware conversation.\nReleased under a codename while the associated paper is under anonymous review.\n\n## What this checkpoint is\n\nSee the fd-tico ablation series.\n\nTrained for 2 epochs on 4,440 self-generated full-duplex dialogues whose word\ntimestamps come from forced alignment of the rendered audio (not from the\nmodel's own decision frames).\n\n## Reported measurements\n\nText/audio consistency on 100 held-out dialogues — does the produced audio\nactually say what the text-decision stream decided? Both sides come from the\nmodel's own artifacts; no reference transcript is involved.\n\n| | this checkpoint | untuned base |\n|---|---|---|\n| character-level consistency (mean / median) | — | 92.6% / 96.2% |\n| word-level recall | — | 79.1% |\n| severe mismatch (<50%) | — | 6/100 |\n| text emission rate | — tok/s | 2.5 tok/s |\n\nFrames are 80 ms (12.5 fps), audio is 24 kHz.\n\n## Attribution and licence\n\nDerived from a publicly available full-duplex speech model released under\nCC-BY-NC-4.0. This checkpoint inherits that licence: **non-commercial use only**.\nThe base model's name and full attribution are withheld only for the duration of\nanonymous review and will be added here once the associated paper is\nde-anonymised.\n\n## Not included\n\nTraining code, data, and evaluation scripts are withheld during anonymous review.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ga642381/Mercury-C1-ep1",
+      "author": "ga642381",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "raon_duplex",
+        "feature-extraction",
+        "speech",
+        "audio",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "custom_code",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ga642381/Mercury-C1-ep1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "silma-ai/silma-tts",
+      "author": "silma-ai",
+      "created_at": "2026-03-13",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "speech",
+        "speech-generation",
+        "voice-cloning",
+        "tts",
+        "en",
+        "ar",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 335,
+      "likes": 26,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/silma-ai/silma-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 26,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0",
+        "community likes 26"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Emerald7664/chatterbox-turbo-ONNX",
+      "author": "Emerald7664",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "chatterbox",
+        "text-to-speech",
+        "speech",
+        "speech-generation",
+        "voice-cloning",
+        "en",
+        "base_model:ResembleAI/chatterbox-turbo",
+        "base_model:quantized:ResembleAI/chatterbox-turbo",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 7,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Emerald7664/chatterbox-turbo-ONNX",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox-turbo"
+      ],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Emerald7664/chatterbox-multilingual-ONNX",
+      "author": "Emerald7664",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox",
+        "onnx",
+        "text-to-speech",
+        "speech",
+        "speech-generation",
+        "voice-cloning",
+        "multilingual-tts",
+        "ar",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "he",
+        "hi",
+        "it",
+        "ja",
+        "ko",
+        "ms",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "sw",
+        "tr",
+        "zh",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:quantized:ResembleAI/chatterbox",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 5,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "chatterbox",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Emerald7664/chatterbox-multilingual-ONNX",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "laion/moss-tts-local-transformer-4.55b-voice-acting-v2-sft",
+      "author": "laion",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "moss_tts_local",
+        "feature-extraction",
+        "text-to-speech",
+        "voice-acting",
+        "speech-synthesis",
+        "moss",
+        "emotion",
+        "voice-cloning",
+        "custom_code",
+        "en",
+        "de",
+        "dataset:laion/laion-voice-profiles-sft",
+        "dataset:laion/tts-realspeech-sft-en-de",
+        "base_model:laion/moss-tts-local-transformer-4.55b-voice-acting-v2",
+        "base_model:finetune:laion/moss-tts-local-transformer-4.55b-voice-acting-v2",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/laion/moss-tts-local-transformer-4.55b-voice-acting-v2-sft",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "TTS-AGI/moss-voice-profile-references",
+        "laion/laion-voice-profiles-sft",
+        "laion/tts-realspeech-sft-en-de"
+      ],
+      "base_models": [
+        "laion/moss-tts-local-transformer-4.55b-voice-acting-v2"
+      ],
+      "variants": [
+        "laion/moss-voice-profile-loras-500"
+      ],
+      "score": 23,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "loudreader/loudr-1",
+      "author": "loudreader",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "loudkit",
+        "coreml",
+        "onnx",
+        "text-to-speech",
+        "voice-cloning",
+        "on-device",
+        "en",
+        "es",
+        "de",
+        "pt",
+        "fr",
+        "it",
+        "pl",
+        "nl",
+        "sv",
+        "da",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:quantized:ResembleAI/chatterbox",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 6,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "loudkit",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/loudreader/loudr-1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "0penAGI/0MGE",
+      "author": "0penAGI",
+      "created_at": "2026-08-21",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "0mge",
+        "audio",
+        "music-generation",
+        "generative-audio",
+        "granular-synthesis",
+        "neural-network",
+        "sound-design",
+        "drone-synthesis",
+        "texture-generation",
+        "spectral-analysis",
+        "local-ai",
+        "open-source",
+        "pytorch",
+        "transformer",
+        "signal-processing",
+        "text-to-audio",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "0mge",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/0penAGI/0MGE",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Danny-Dasilva/inflect-kokoro-voices",
+      "author": "Danny-Dasilva",
+      "created_at": "2026-08-04",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "vits",
+        "pytorch",
+        "24khz",
+        "kokoro",
+        "synthetic-data",
+        "edge-ai",
+        "voice-pack",
+        "en",
+        "base_model:owensong/Inflect-Micro-v2",
+        "base_model:finetune:owensong/Inflect-Micro-v2",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Danny-Dasilva/inflect-kokoro-voices",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "owensong/Inflect-Micro-v2"
+      ],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "umiyosh/atodekiku-supertonic-3",
+      "author": "umiyosh",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "supertonic",
+        "onnx",
+        "text-to-speech",
+        "speech-synthesis",
+        "tts",
+        "multilingual",
+        "on-device",
+        "atodekiku-mirror",
+        "en",
+        "ko",
+        "ja",
+        "ar",
+        "bg",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "es",
+        "et",
+        "fi",
+        "fr",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "it",
+        "lt",
+        "lv",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sv",
+        "tr",
+        "uk",
+        "vi",
+        "license:openrail",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "supertonic",
+      "license": "openrail",
+      "gated": false,
+      "url": "https://huggingface.co/umiyosh/atodekiku-supertonic-3",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license openrail"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "agbalu/Matoub-82M",
+      "author": "agbalu",
+      "created_at": "2026-08-20",
+      "last_modified": "2026-08-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "matoub",
+        "feature-extraction",
+        "kabyle",
+        "taqbaylit",
+        "berber",
+        "amazigh",
+        "text-to-speech",
+        "speech-synthesis",
+        "styletts2",
+        "low-resource",
+        "custom_code",
+        "kab",
+        "base_model:hexgrad/Kokoro-82M",
+        "base_model:finetune:hexgrad/Kokoro-82M",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 8,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/agbalu/Matoub-82M",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "hexgrad/Kokoro-82M"
+      ],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
