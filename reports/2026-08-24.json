@@ -1,0 +1,1212 @@
+{
+  "generated_at": "2026-08-24",
+  "window_start": "2026-08-17",
+  "source_counts": {
+    "arxiv": 47,
+    "semantic_scholar": 51
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "3de1887f6ca13d39ebe80d50315d488324e29d8a",
+      "title": "Automatic speech recognition underperforms with diverse accents as measured by Word Error Rate and a semantic similarity measure.",
+      "abstract": "",
+      "authors": [
+        "Andrea Urqueta Alfaro",
+        "Karina A. Roundtree",
+        "Mark S. Pfaff",
+        "Nathan Bos",
+        "J. D. Edell",
+        "Ronna Ten-Brink"
+      ],
+      "published": "2026-08-22",
+      "updated": "2026-08-22",
+      "url": "https://www.semanticscholar.org/paper/3de1887f6ca13d39ebe80d50315d488324e29d8a",
+      "pdf_url": "",
+      "doi": "10.1080/17483107.2026.2716598",
+      "venue": "Disability and Rehabilitation: Assistive Technology",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 6,
+      "topic_scores": {
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.20822",
+      "title": "Interaction Effects Between Learner Characteristics and Dialogue Format in TTS Dialogue-Based Lessons",
+      "abstract": "This study examined how learner characteristics affect motivation, learning outcomes, and overall evaluation in three types of dialogue-based lessons---(1) teacher--student, (2) student--student, and (3) teacher--teacher---generated using a large language model (LLM) and Text-to-Speech (TTS) technology. In particular, we focused on the interaction effects between dialogue format and learners' experiential learning style (the Concrete Experience factor, CE; and the factor of active experimentation through reflective observation and abstract conceptualization, RCE) and critical thinking disposition. Using a repeated-measures design with 222 first-year high school students, we analyzed the data with linear mixed-effects models. The results showed a significant interaction between learner characteristics and dialogue format for ARCS-based motivation. Specifically, the effect of the CE factor on motivation was more strongly positive in the teacher--teacher format than in the teacher--student format, whereas the positive effect of the RCE factor was relatively weaker in the teacher--teacher format. For learning outcomes, the interactions between dialogue format and both the CE and RCE factors showed a trend toward significance. No significant interaction emerged for overall evaluation; however, the overall evaluation of the teacher--teacher format was significantly lower than that of the teacher--student format, a pattern that diverged from the positive effect observed for motivation. These results suggest that dialogue format should be selected according to learner characteristics in TTS dialogue-based lessons. Because the effect sizes of the significant interactions were all small to medium, however, the findings of this study should be regarded as preliminary evidence for the design of personalized learning.",
+      "authors": [
+        "Fumie Watanabe",
+        "Tota Suko",
+        "Takashi Ishida",
+        "Yuko Kuma",
+        "Manabu Kobayashi",
+        "Shigeichi Hirasawa",
+        "Gendo Kumoi"
+      ],
+      "published": "2026-08-21",
+      "updated": "2026-08-21",
+      "url": "https://arxiv.org/abs/2608.20822",
+      "pdf_url": "https://arxiv.org/pdf/2608.20822v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.CY"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 6,
+      "topic_scores": {
+        "speech_models": 5
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "taoyy/CosyVoice2-0.5B",
+      "author": "taoyy",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "cosyvoice",
+        "onnx",
+        "safetensors",
+        "text-to-speech",
+        "audio",
+        "tts",
+        "voice-cloning",
+        "zero-shot",
+        "fun-audio-llm",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "yue",
+        "arxiv:2412.10117",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 36,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "cosyvoice",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/taoyy/CosyVoice2-0.5B",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n  - zh\n  - en\n  - ja\n  - ko\n  - yue\ntags:\n  - text-to-speech\n  - audio\n  - tts\n  - cosyvoice\n  - voice-cloning\n  - zero-shot\n  - fun-audio-llm\npipeline_tag: text-to-speech\n---\n\n# CosyVoice2-0.5B\n\nCosyVoice 2.0 是基于大语言模型（LLM）的可流式语音合成（TTS）系统，支持多语言、零样本语音复刻、跨语种复刻与自然语言控制。\n\n- 官方仓库：[FunAudioLLM/CosyVoice](https://github.com/FunAudioLLM/CosyVoice)\n- 原始模型：[FunAudioLLM/CosyVoice2-0.5B](https://huggingface.co/FunAudioLLM/CosyVoice2-0.5B)\n- 论文：[CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models](https://arxiv.org/abs/2412.10117)\n\n## 特性\n\n- 零样本语音复刻（3 秒参考音频即可克隆音色）\n- 跨语种 / 跨方言合成\n- 自然语言控制（instruct 控制语速、情绪、方言等）\n- 流式推理，延迟低至 150ms\n\n## 使用方式\n\n需要配合 [CosyVoice](https://github.com/FunAudioLLM/CosyVoice) 官方代码使用。\n\n```bash\ngit clone --recursive https://github.com/FunAudioLLM/CosyVoice.git\ncd CosyVoice\npip install -r requirements.txt\n```\n\n下载本模型：\n\n```python\nfrom modelscope import snapshot_download\nsnapshot_download('taoyy/CosyVoice2-0.5B', local_dir='pretrained_models/CosyVoice2-0.5B')\n```\n\n或使用 Hugging Face：\n\n```python\nfrom huggingface_hub import snapshot_download\nsnapshot_download('taoyy/CosyVoice2-0.5B', local_dir='pretrained_models/CosyVoice2-0.5B')\n```\n\n推理示例：\n\n```python\nimport sys\nsys.path.append('third_party/Matcha-TTS')\nfrom cosyvoice.cli.cosyvoice import AutoModel\nimport torchaudio\n\ncosyvoice = AutoModel(model_dir='pretrained_models/CosyVoice2-0.5B')\n\n# 零样本复刻\nfor i, j in enumerate(cosyvoice.inference_zero_shot(\n        '收到好友从远方寄来的生日礼物，那份意外的惊喜与深深的祝福让我心中充满了甜蜜的快乐。',\n        '希望你以后能够做的比我还好呦。',\n        './asset/zero_shot_prompt.wav')):\n    torchaudio.save('zero_shot_{}.wav'.format(i), j['tts_speech'], cosyvoice.sample_rate)\n```\n\n## 引用\n\n```bibtex\n@article{du2024cosyvoice,\n  title={Cosyvoice 2: Scalable streaming speech synthesis with large language models},\n  author={Du, Zhihao and Wang, Yuxuan and Chen, Qian and Shi, Xian and Lv, Xiang and Zhao, Tianyu and Gao, Zhifu and Yang, Yexin and Gao, Changfeng and Wang, Hui and others},\n  journal={arXiv preprint arXiv:2412.10117},\n  year={2024}\n}\n```\n\n## 免责声明\n\n本模型仅用于学术研究与技术演示。\n",
+      "arxiv_ids": [
+        "2412.10117"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 35,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "laion/moss-tts-local-transformer-4.55b-voice-acting-v2-sft-dpo",
+      "author": "laion",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "moss_tts_local",
+        "feature-extraction",
+        "text-to-speech",
+        "voice-acting",
+        "speech-synthesis",
+        "moss",
+        "emotion",
+        "voice-cloning",
+        "dpo",
+        "custom_code",
+        "en",
+        "de",
+        "dataset:laion/laion-voice-profiles-sft",
+        "dataset:laion/tts-realspeech-sft-en-de",
+        "dataset:laion/laion-voice-profiles-dpo",
+        "dataset:laion/tts-realspeech-dpo-en-de",
+        "base_model:laion/moss-tts-local-transformer-4.55b-voice-acting-v2-sft",
+        "base_model:finetune:laion/moss-tts-local-transformer-4.55b-voice-acting-v2-sft",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 21,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/laion/moss-tts-local-transformer-4.55b-voice-acting-v2-sft-dpo",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "laion/laion-voice-profiles-dpo",
+        "laion/laion-voice-profiles-sft",
+        "laion/tts-realspeech-dpo-en-de",
+        "laion/tts-realspeech-sft-en-de"
+      ],
+      "base_models": [
+        "laion/moss-tts-local-transformer-4.55b-voice-acting-v2-sft"
+      ],
+      "variants": [
+        "laion/moss-tts-local-transformer-4.55b-voice-acting-v2-dpo-lora"
+      ],
+      "score": 23,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ModelsLab/midashenglm-gen-wer-lora",
+      "author": "ModelsLab",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "peft",
+        "safetensors",
+        "audio-generation",
+        "text-to-audio",
+        "lora",
+        "flow-matching",
+        "dataset:mythicinfinity/libritts_r",
+        "dataset:mispeech/MECAT-Caption",
+        "arxiv:2608.11804",
+        "base_model:mispeech/midashenglm-gen",
+        "base_model:adapter:mispeech/midashenglm-gen",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 74,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "peft",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/ModelsLab/midashenglm-gen-wer-lora",
+      "card_text": "",
+      "arxiv_ids": [
+        "2608.11804"
+      ],
+      "datasets": [
+        "mythicinfinity/libritts_r",
+        "mispeech/MECAT-Caption"
+      ],
+      "base_models": [
+        "mispeech/midashenglm-gen"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "xennonf4/pocket-tts-onnx",
+      "author": "xennonf4",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts-onnx",
+        "onnx",
+        "tts",
+        "voice-cloning",
+        "onnxruntime",
+        "text-to-speech",
+        "en",
+        "de",
+        "fr",
+        "it",
+        "pt",
+        "es",
+        "base_model:kyutai/pocket-tts",
+        "base_model:quantized:kyutai/pocket-tts",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts-onnx",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/xennonf4/pocket-tts-onnx",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "gabar-tech/chatterbox-afaan-oromo",
+      "author": "gabar-tech",
+      "created_at": "2026-08-17",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "peft",
+        "safetensors",
+        "text-to-speech",
+        "oromo",
+        "afaan-oromo",
+        "ethiopia",
+        "lora",
+        "voice-cloning",
+        "chatterbox",
+        "om",
+        "dataset:google/WaxalNLP",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:adapter:ResembleAI/chatterbox",
+        "license:cc-by-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "peft",
+      "license": "cc-by-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/gabar-tech/chatterbox-afaan-oromo",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "google/WaxalNLP",
+        "mozilla-foundation/common_voice_25_0"
+      ],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [
+        "gabar-tech/chatterbox-amharic"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "loudreader/loudr-1",
+      "author": "loudreader",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "loudkit",
+        "coreml",
+        "onnx",
+        "text-to-speech",
+        "voice-cloning",
+        "on-device",
+        "en",
+        "es",
+        "de",
+        "pt",
+        "fr",
+        "it",
+        "pl",
+        "nl",
+        "sv",
+        "da",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:finetune:ResembleAI/chatterbox",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 44,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "loudkit",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/loudreader/loudr-1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "gabar-tech/cosyvoice2-amharic",
+      "author": "gabar-tech",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "cosyvoice",
+        "text-to-speech",
+        "amharic",
+        "ethiopia",
+        "voice-cloning",
+        "am",
+        "dataset:google/WaxalNLP",
+        "dataset:mozilla-foundation/common_voice_25_0",
+        "base_model:FunAudioLLM/CosyVoice2-0.5B",
+        "base_model:finetune:FunAudioLLM/CosyVoice2-0.5B",
+        "license:cc-by-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 16,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "cosyvoice",
+      "license": "cc-by-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/gabar-tech/cosyvoice2-amharic",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "google/WaxalNLP",
+        "mozilla-foundation/common_voice_25_0"
+      ],
+      "base_models": [
+        "FunAudioLLM/CosyVoice2-0.5B"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "suliniacats/Audio8-TTS-Preview-0.1b",
+      "author": "suliniacats",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arktts",
+        "feature-extraction",
+        "audio",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot",
+        "multilingual",
+        "custom_code",
+        "zh",
+        "en",
+        "de",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 11,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/suliniacats/Audio8-TTS-Preview-0.1b",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Anadilorg/Anadil_Kurmanji_TTS",
+      "author": "Anadilorg",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "audio",
+        "kurmanji",
+        "kurdish",
+        "kurmancî",
+        "kmr",
+        "lora",
+        "low-resource",
+        "endangered-languages",
+        "turkey",
+        "tr",
+        "arxiv:2106.09685",
+        "base_model:openbmb/VoxCPM2",
+        "base_model:adapter:openbmb/VoxCPM2",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 19,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Anadilorg/Anadil_Kurmanji_TTS",
+      "card_text": "",
+      "arxiv_ids": [
+        "2106.09685"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openbmb/VoxCPM2"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "NYCU-MLLab/Temporal-Coupled-Flow-Matching-for-Speech-Continuation",
+      "author": "NYCU-MLLab",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "pytorch",
+        "speech-continuation",
+        "flow-matching",
+        "spoken-language-model",
+        "temporal-coupling",
+        "lora",
+        "audio-to-audio",
+        "en",
+        "dataset:openslr/librispeech_asr",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/NYCU-MLLab/Temporal-Coupled-Flow-Matching-for-Speech-Continuation",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "openslr/librispeech_asr"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "audio_language_models": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: spoken language model"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "JoyBoyuuu/Temporal-Coupled-Flow-Matching-for-Speech-Continuation",
+      "author": "JoyBoyuuu",
+      "created_at": "2026-08-17",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "pytorch",
+        "speech-continuation",
+        "flow-matching",
+        "spoken-language-model",
+        "temporal-coupling",
+        "lora",
+        "audio-to-audio",
+        "en",
+        "dataset:openslr/librispeech_asr",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/JoyBoyuuu/Temporal-Coupled-Flow-Matching-for-Speech-Continuation",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "openslr/librispeech_asr"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "audio_language_models": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: spoken language model"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "simaai/whisper-small-a16w8",
+      "author": "simaai",
+      "created_at": "2025-08-08",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "llima",
+        "whisper",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-translation",
+        "embedded",
+        "sima",
+        "modalix",
+        "a16w8",
+        "en",
+        "zh",
+        "de",
+        "es",
+        "ru",
+        "ko",
+        "fr",
+        "ja",
+        "pt",
+        "tr",
+        "pl",
+        "ca",
+        "nl",
+        "ar",
+        "sv",
+        "it",
+        "id",
+        "hi",
+        "fi",
+        "vi",
+        "he",
+        "uk",
+        "el",
+        "ms",
+        "cs",
+        "ro",
+        "da",
+        "hu",
+        "ta",
+        "no",
+        "th",
+        "ur",
+        "hr",
+        "bg",
+        "lt",
+        "la",
+        "mi",
+        "ml",
+        "cy",
+        "sk",
+        "te",
+        "fa",
+        "lv",
+        "bn",
+        "sr",
+        "az",
+        "sl",
+        "kn",
+        "et",
+        "mk",
+        "br",
+        "eu",
+        "is",
+        "hy",
+        "ne",
+        "mn",
+        "bs",
+        "kk",
+        "sq",
+        "sw",
+        "gl",
+        "mr",
+        "pa",
+        "si",
+        "km",
+        "sn",
+        "yo",
+        "so",
+        "af",
+        "oc",
+        "ka",
+        "be",
+        "tg",
+        "sd",
+        "gu",
+        "am",
+        "yi",
+        "lo",
+        "uz",
+        "fo",
+        "ht",
+        "ps",
+        "tk",
+        "nn",
+        "mt",
+        "sa",
+        "lb",
+        "my",
+        "bo",
+        "tl",
+        "mg",
+        "as",
+        "tt",
+        "haw",
+        "ln",
+        "ha",
+        "ba",
+        "jw",
+        "su",
+        "arxiv:2212.04356",
+        "base_model:openai/whisper-small",
+        "base_model:quantized:openai/whisper-small",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "llima",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/simaai/whisper-small-a16w8",
+      "card_text": "",
+      "arxiv_ids": [
+        "2212.04356"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openai/whisper-small"
+      ],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "simaai/whisper-medium-a16w8",
+      "author": "simaai",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "llima",
+        "whisper",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-translation",
+        "embedded",
+        "sima",
+        "modalix",
+        "a16w8",
+        "en",
+        "zh",
+        "de",
+        "es",
+        "ru",
+        "ko",
+        "fr",
+        "ja",
+        "pt",
+        "tr",
+        "pl",
+        "ca",
+        "nl",
+        "ar",
+        "sv",
+        "it",
+        "id",
+        "hi",
+        "fi",
+        "vi",
+        "he",
+        "uk",
+        "el",
+        "ms",
+        "cs",
+        "ro",
+        "da",
+        "hu",
+        "ta",
+        "no",
+        "th",
+        "ur",
+        "hr",
+        "bg",
+        "lt",
+        "la",
+        "mi",
+        "ml",
+        "cy",
+        "sk",
+        "te",
+        "fa",
+        "lv",
+        "bn",
+        "sr",
+        "az",
+        "sl",
+        "kn",
+        "et",
+        "mk",
+        "br",
+        "eu",
+        "is",
+        "hy",
+        "ne",
+        "mn",
+        "bs",
+        "kk",
+        "sq",
+        "sw",
+        "gl",
+        "mr",
+        "pa",
+        "si",
+        "km",
+        "sn",
+        "yo",
+        "so",
+        "af",
+        "oc",
+        "ka",
+        "be",
+        "tg",
+        "sd",
+        "gu",
+        "am",
+        "yi",
+        "lo",
+        "uz",
+        "fo",
+        "ht",
+        "ps",
+        "tk",
+        "nn",
+        "mt",
+        "sa",
+        "lb",
+        "my",
+        "bo",
+        "tl",
+        "mg",
+        "as",
+        "tt",
+        "haw",
+        "ln",
+        "ha",
+        "ba",
+        "jw",
+        "su",
+        "arxiv:2212.04356",
+        "base_model:openai/whisper-medium",
+        "base_model:quantized:openai/whisper-medium",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "llima",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/simaai/whisper-medium-a16w8",
+      "card_text": "",
+      "arxiv_ids": [
+        "2212.04356"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openai/whisper-medium"
+      ],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Danny-Dasilva/inflect-kokoro-voices",
+      "author": "Danny-Dasilva",
+      "created_at": "2026-08-04",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "vits",
+        "pytorch",
+        "24khz",
+        "kokoro",
+        "synthetic-data",
+        "edge-ai",
+        "voice-pack",
+        "en",
+        "base_model:owensong/Inflect-Micro-v2",
+        "base_model:finetune:owensong/Inflect-Micro-v2",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Danny-Dasilva/inflect-kokoro-voices",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "owensong/Inflect-Micro-v2"
+      ],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "toiar/Rynsan-TTS",
+      "author": "toiar",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "omnivoice",
+        "text-to-speech",
+        "tts",
+        "speech",
+        "low-resource",
+        "multilingual",
+        "northeast-india",
+        "meghalaya",
+        "khasi",
+        "garo",
+        "pnar",
+        "english",
+        "hindi",
+        "speech-synthesis",
+        "indigenous-languages",
+        "kha",
+        "grt",
+        "pbv",
+        "en",
+        "hi",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 17,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/toiar/Rynsan-TTS",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "NYCU-MLLab/Bidirectional_ASR-TTS_Flow_Matching",
+      "author": "NYCU-MLLab",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pytorch",
+        "bidirectional-flow-matching",
+        "text-to-image",
+        "image-to-text",
+        "text-to-speech",
+        "automatic-speech-recognition",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/NYCU-MLLab/Bidirectional_ASR-TTS_Flow_Matching",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 8,
+      "topic_scores": {
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "speaklar/speaklar_stt_bn_fastconformer",
+      "author": "speaklar",
+      "created_at": "2026-02-26",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "nemo",
+        "ASR",
+        "Automatic Speech Recognition",
+        "Bangla ASR",
+        "Bengali ASR",
+        "bn asr",
+        "Bangla fastconformer",
+        "automatic-speech-recognition",
+        "bn",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 1,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "nemo",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/speaklar/speaklar_stt_bn_fastconformer",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 7,
+      "topic_scores": {
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "RKB109/audio-event-triage-20260823-model",
+      "author": "RKB109",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-23",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "custom",
+        "synthetic-data",
+        "transparent-baseline",
+        "audio-ml",
+        "audio-classification",
+        "automatic-speech-recognition",
+        "feature-extraction",
+        "audio-to-audio",
+        "dataset:RKB109/audio-event-triage-20260823-dataset",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "custom",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/RKB109/audio-event-triage-20260823-model",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "RKB109/audio-event-triage-20260823-dataset"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 7,
+      "topic_scores": {
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "declares license mit"
+      ],
+      "is_new": true
+    }
+  ]
+}
