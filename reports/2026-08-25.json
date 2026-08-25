@@ -1,0 +1,2248 @@
+{
+  "generated_at": "2026-08-25",
+  "window_start": "2026-08-18",
+  "source_counts": {
+    "arxiv": 48,
+    "semantic_scholar": 50
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "arxiv",
+      "source_id": "2608.22236",
+      "title": "MRMAD: A Multi-Round Multi-Audio Benchmark for Evaluating Acoustic Degradation Perception in Large Audio-Language Models",
+      "abstract": "Large audio-language models (LALMs) have shown promising progress in understanding speech, music, and general sound events, yet their ability to reason about how audio signals are degraded remains underexplored. Existing benchmarks primarily evaluate semantic understanding, event recognition, or high-level audio reasoning, leaving a basic question unanswered: Do LALMs understand the differences in audio quality? We introduce MRMAD, a Multi-Round Multi-Audio Degradation benchmark for evaluating audio degradation perception and understanding in LALMs. MRMAD spans speech, music, and sound, and frames evaluation as multi-turn dialogues over multiple audio inputs, requiring models to identify degradation types, compare severity, and perceive corruption changes across turns. Unlike current single-turn audio-language benchmarks, MRMAD evaluates whether LALMs can maintain consistent degradation hypotheses with new evidence and explain low-level acoustic phenomena in natural language. Through a systematic evaluation of 18 representative LALMs from non-thinking to reasoning and Omni models, we find that current models often recognize coarse content while failing to diagnose, compare, or reason about degradations reliably. MRMAD reveals an important yet overlooked aspect of audio-language understanding and provides a diagnostic foundation for building future LALMs that are robust to real-world acoustic conditions.",
+      "authors": [
+        "Yize Li",
+        "Ningyuan Yang",
+        "Sile Yin",
+        "Sindhuja Thogarrati",
+        "Sung-En Chang",
+        "Andrew C. Singer",
+        "Xue Lin",
+        "Chuan-Che Huang",
+        "Shuo Zhang"
+      ],
+      "published": "2026-08-23",
+      "updated": "2026-08-23",
+      "url": "https://arxiv.org/abs/2608.22236",
+      "pdf_url": "https://arxiv.org/pdf/2608.22236v1",
+      "doi": "",
+      "venue": "EMNLP 2026",
+      "categories": [
+        "cs.SD",
+        "cs.LG",
+        "eess.AS"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 24,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 7,
+        "evaluation_alignment_safety": 10
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model",
+        "Evaluation, Alignment, Safety & Copyright: audio benchmark",
+        "Audio Understanding & Reasoning: audio reasoning"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.23437",
+      "title": "AT-ADD: A Benchmark and Challenge for Robust and All-Type Audio Deepfake Detection",
+      "abstract": "Recent audio generation models can synthesize high-fidelity speech, environmental sound, singing voice, and music, creating new risks for multimedia trust. Existing audio deepfake detection (ADD) benchmarks remain predominantly speech-centric and often underrepresent realistic channel variation and diverse audio types. This paper presents AT-ADD, a large-scale benchmark and challenge designed to evaluate both robust speech deepfake detection and all-type audio deepfake detection. Track 1 evaluates binary speech detection under unseen generators, diverse recording conditions, signal perturbations, and replay effects. Track 2 evaluates type-agnostic real/fake detection over speech, sound, singing, and music when the audio type is unknown at test time. We detail the dataset construction, evaluation protocol, and reproducible baselines, and analyze the final systems submitted to the ACM Multimedia 2026 Grand Challenge. The strongest official baseline obtains 76.73% and 79.47% Macro-F1 on the Track 1 and Track 2 evaluation sets, respectively, whereas the winning challenge systems reach 90.71% and 96.10%. Beyond aggregate rankings, sample-level analysis of the top five submissions examines generator- and type-level difficulty, cross-system error complementarity, and ranking stability. The results show that large-scale self-supervised representations, condition-aware augmentation, multi-crop inference, and structured fusion or routing are central to generalization, while generator-specific robustness and consistent performance across diverse audio types remain unresolved.",
+      "authors": [
+        "Yuankun Xie",
+        "Haonan Cheng",
+        "Jiayi Zhou",
+        "Xiaoxuan Guo",
+        "Tao Wang",
+        "Changhao Zhang",
+        "Jian Liu",
+        "Weiqiang Wang",
+        "Ruibo Fu",
+        "Xiaopeng Wang",
+        "Hengyan Huang",
+        "Xiaoying Huang",
+        "Long Ye",
+        "Guangtao Zhai"
+      ],
+      "published": "2026-08-24",
+      "updated": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23437",
+      "pdf_url": "https://arxiv.org/pdf/2608.23437v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 23,
+      "topic_scores": {
+        "generative_music_audio": 5,
+        "evaluation_alignment_safety": 18
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake, speech deepfake",
+        "Generative Music & Audio: audio generation"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.22796",
+      "title": "DiaScriber: A Speech LLM for Joint Diarization and Transcription in Multi-Speaker Scenarios",
+      "abstract": "Multi-speaker automatic speech recognition (MSASR) aims to jointly predict content transcriptions, speaker identities, and timestamps, thereby addressing the key question of \"who spoke what and when\" and holds substantial practical value in real-world multi-speaker scenarios. However, MSASR still encounters considerable challenges in the presence of fast turn transitions, overlapping speech, and complex, diverse multi-speaker scenarios. In this work, we propose DiaScriber, an end-to-end multi-speaker diarization and transcription model built on a speech large language model. We first construct diverse data pipelines to cover a wide variety of multi-speaker scenarios and their complexities, including validation and refinement, turn-transition and overlapping-speech simulation, and multimodal annotation. Furthermore, DiaScriber is developed based on the pretrained version of Qwen3.5-Omni through a three-stage training strategy involving continual pretraining, supervised fine-tuning, and reinforcement learning. Experiments show that DiaScriber achieves superior performance over comparison methods across extensive multi-speaker scenario test sets and demonstrates outstanding generalization ability in unseen multi-speaker scenarios.",
+      "authors": [
+        "Bingshen Mu",
+        "Xian Shi",
+        "Xiong Wang",
+        "Zhifang Guo",
+        "Ting He",
+        "Xize Cheng",
+        "Yu Xi",
+        "Jin Xu",
+        "Lei Xie"
+      ],
+      "published": "2026-08-24",
+      "updated": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.22796",
+      "pdf_url": "https://arxiv.org/pdf/2608.22796v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 17,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 3
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.22704",
+      "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
+      "abstract": "Long-form audio inputs make the KV cache the dominant memory cost of speech LLMs. Prefill-only KV compression methods permanently discard audio KV positions once evicted, with no pathway to recover them during decoding. We show this is fragile on long-form audio: prefill attention concentrates near the audio start (an attention-sink effect), while decode-time attention distributes broadly, and the two rankings overlap weakly. We propose WnW (Waxing-and-Waning KV cache), which classifies KV-heads into anchor, tidal, and fixed roles via offline calibration. Anchor heads remain on GPU and serve as a decode-time importance observer; tidal heads keep a CPU-resident complement that is recalled chunk-by-chunk based on aggregated anchor-head scores; fixed heads keep only an on-GPU subset, with the rest permanently discarded. On LibriSpeech-Long with two 3B backbones (Voxtral-mini-3b and Qwen2.5-Omni-3B), WnW preserves near-Full-Cache accuracy while keeping only 20% of audio tokens on GPU, where prefill-only baselines fail to terminate. Results generalize across language, task, and domain shifts, and CPU-GPU recall adds little decode-time overhead in our measurements.",
+      "authors": [
+        "Yiming Yao",
+        "Chenyang Lyu",
+        "Xuanfan Ni",
+        "Longyue Wang",
+        "Weihua Luo",
+        "Yazheng Yang",
+        "Jinsong Su"
+      ],
+      "published": "2026-08-24",
+      "updated": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.22704",
+      "pdf_url": "https://arxiv.org/pdf/2608.22704v1",
+      "doi": "",
+      "venue": "Accepted at EMNLP 2026 Main Conference. 8 pages, 5 figures",
+      "categories": [
+        "cs.CL",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "audio_language_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.22908",
+      "title": "Do Spoken Language Models Hear Speech as They Read Text? Bridging Structural Gaps Between Speech and Text",
+      "abstract": "Spoken Language Models (SLMs) generate textual responses directly from speech, offering an alternative to cascaded systems. Despite recent advances, existing SLMs still exhibit weaker instruction-following behavior and limited generalization across diverse tasks compared to text-based language models. Our analysis shows that speech and text representations in current SLMs remain weakly aligned despite strong downstream performance, indicating that structural differences between continuous, temporally varying speech and discrete text remain insufficiently addressed. To address this, we propose a simple framework that decouples length mismatch from semantic alignment and encourages closer correspondence between speech and text representations. Experiments across multiple benchmarks demonstrate competitive performance against strong baselines, underscoring the importance of explicitly addressing structural differences between speech and text in SLM training. Our code is publicly available at https://github.com/jaykim9870/Do_SLMs_Hear_Speech_as_They_Read_Text.",
+      "authors": [
+        "Hyeonyu Kim",
+        "Hwayeon Kim",
+        "Youngwon Choi",
+        "Myeongkyun Cho",
+        "Huu-Kim Nguyen"
+      ],
+      "published": "2026-08-24",
+      "updated": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.22908",
+      "pdf_url": "https://arxiv.org/pdf/2608.22908v1",
+      "doi": "",
+      "venue": "Accepted to EMNLP 2026 Findings",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "code_urls": [
+        "https://github.com/jaykim9870/Do_SLMs_Hear_Speech_as_They_Read_Text"
+      ],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "audio_language_models": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: spoken language model",
+        "has open-source code link"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.22186",
+      "title": "AudioNoisePrints: Model-free audio watermarking using spatial correlation in flow matching TTS",
+      "abstract": "We present AudioNoisePrints, a training-free watermarking pipeline for flow matching and diffusion TTS models, which requires minimal extra computation during inference and does not require retraining the TTS model or reducing the generation quality. We exploited the fact that there are strong correlations between the initial Gaussian noises and the generated outputs in diffusion and flow matching models, such that a simple cosine correlation between the initial noise and the generated output can be used to perform watermaking. Moreover, we train a lightweight detector on top for more aggressive augmentations. Our method outperforms AudioSeal, a strong baseline for audio watermarking under strong augmentations. We experimented on F5TTS and other TTS and vocoder models, and concluded that they all exhibit similar spatial correlation properties, suggesting our watermarking scheme can be used for more flow-matching TTS models and even vocoders in the future.",
+      "authors": [
+        "Timothy Tin-Long",
+        "Jian Zhu",
+        "Aidan Pine",
+        "Mengzhe Geng"
+      ],
+      "published": "2026-08-23",
+      "updated": "2026-08-23",
+      "url": "https://arxiv.org/abs/2608.22186",
+      "pdf_url": "https://arxiv.org/pdf/2608.22186v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.SD",
+        "cs.CL"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "evaluation_alignment_safety": 14
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio watermarking"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.21678",
+      "title": "MusPyExpress: Extending MusPy with Enhanced Expression Text Support",
+      "abstract": "Current work in modeling symbolic music primarily relies on representations extracted from MIDI-like data. While such formats allow for modeling symbolic music as sequences of notes, they omit the large space of symbolic annotations common in western sheet music broadly known as expression text, such as tempo or dynamics, which specify time- and velocity-dependent controls on the musical composition and performance. To alleviate this gap, we present MusPyExpress, an extension to the popular symbolic music processing library MusPy that enables the extraction of expression text along with symbolic music for downstream modeling. Utilizing this extension, we parse the PDMX dataset to illustrate the wealth of expression text available in MusicXML datasets. Additionally, we introduce multiple generative tasks, including joint expression-note generation, expression-conditioned music generation, and expression tagging, that take advantage of this additional notational information.",
+      "authors": [
+        "Phillip Long",
+        "Hao-Wen Dong",
+        "Julian McAuley",
+        "Zachary Novack"
+      ],
+      "published": "2026-08-21",
+      "updated": "2026-08-21",
+      "url": "https://arxiv.org/abs/2608.21678",
+      "pdf_url": "https://arxiv.org/pdf/2608.21678v1",
+      "doi": "",
+      "venue": "Accepted at NeurIPS 2025 Workshop on AI for Music: Where Creativity Meets Computation; 10 pages, 6 figures",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "music_foundation_models": 4,
+        "generative_music_audio": 5
+      },
+      "matched_topics": [
+        "Music Foundation Models & Representations",
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation",
+        "Music Foundation Models & Representations: symbolic music",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.23092",
+      "title": "Reasoning-Oriented Post-Training and Inference-Time LoRA Rescaling for Audio-Dependent Question Answering",
+      "abstract": "Audio-Dependent Question Answering (ADQA) requires Large Audio-Language Models (LALMs) to answer questions whose correct answers depend on the given audio content. Successful ADQA requires accurate audio perception, identification of question-relevant evidence, and cross-modal reasoning. Using the official ADQA dataset of DCASE 2026 Task 5, we investigate reasoning-oriented post-training with Low-Rank Adaptation (LoRA) and inference-time LoRA rescaling for both Qwen2.5-Omni and MOSS-Audio-8B-Thinking. We introduce a structured Chain-of-Thought (CoT) framework that decomposes the reasoning process into question analysis, question type, audio evidence, and reasoning. We then analyze how task-specific LoRA adaptation affects the two backbones and further explore inference-time rescaling of trained LoRA adapters. Experiments on the development set reveal markedly backbone-dependent behavior: post-training improves the Qwen-based systems but substantially degrades MOSS-Audio under our supervised fine-tuning configuration. Moderate LoRA rescaling further improves the best Qwen system's top-1 accuracy from 58.93% to 61.05% and partially restores the performance of the fine-tuned MOSS-Audio models, while the best MOSS-Audio system achieves 67.70% top-1 accuracy. Our submitted systems ranked third overall and second among lightweight systems under 10B parameters in the challenge.",
+      "authors": [
+        "Weiteng Hu",
+        "Yin Cao",
+        "Jun Yang"
+      ],
+      "published": "2026-08-24",
+      "updated": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23092",
+      "pdf_url": "https://arxiv.org/pdf/2608.23092v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "audio_language_models": 7
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2608.21176",
+      "title": "DAMOS: Learning Distortion-Aware Speech Quality Assessment through Explicit Distortion Localization",
+      "abstract": "Automatic speech quality assessment aims to predict Mean Opinion Scores (MOS) consistent with human subjective perception and is essential for evaluating speech generation, enhancement, and communication systems. For speech signals, especially synthetic speech, distortions often occur locally, and overall perceptual quality is usually dominated by a small number of perceptually salient distortion regions. However, most existing methods are primarily optimized with utterance-level MOS, which provides only coarse-grained supervision and offer no explicit indication of where perceptually important distortions occur. To address this limitation, we introduce explicit distortion localization as auxiliary knowledge for speech quality assessment. We construct the first partially distorted speech dataset with frame-level distortion annotations and train a localization model to generate distortion cues. Building on these cues, we propose DAMOS, a distortion-aware speech quality assessment framework that integrates localization information into the MOS prediction pipeline. Experiments on multiple public benchmarks demonstrate that DAMOS consistently outperforms existing methods and exhibits strong cross-dataset generalization, validating the effectiveness of explicit distortion localization for speech quality assessment.",
+      "authors": [
+        "Naiyuan Li",
+        "Li Dong",
+        "Diqun Yan"
+      ],
+      "published": "2026-08-21",
+      "updated": "2026-08-21",
+      "url": "https://arxiv.org/abs/2608.21176",
+      "pdf_url": "https://arxiv.org/pdf/2608.21176v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.AI",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 6,
+      "topic_scores": {
+        "speech_models": 5
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "hyung778/minimax-music3-webgpu",
+      "author": "hyung778",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "onnx",
+        "music-generation",
+        "text-to-music",
+        "webgpu",
+        "browser",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:quantized:MiniMaxAI/MiniMax-Music3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/hyung778/minimax-music3-webgpu",
+      "card_text": "---\nlicense: other\nlicense_name: minimax-music3-community-license\nlicense_link: LICENSE\nbase_model: MiniMaxAI/MiniMax-Music3\nbase_model_relation: quantized\npipeline_tag: text-to-audio\ntags:\n  - music-generation\n  - text-to-music\n  - webgpu\n  - onnx\n  - browser\ninference: false\n---\n\n# MiniMax Music 3 WebGPU artifacts\n\nConverted browser artifacts for [MiniMax Music 3 WebGPU](https://github.com/LI-NA/minimax-music3-webgpu), a local music\ngeneration demo that runs the official [`MiniMaxAI/MiniMax-Music3`](https://huggingface.co/MiniMaxAI/MiniMax-Music3)\ncheckpoint on WebGPU in your browser.\n\nThe demo is available at <https://li-na.github.io/minimax-music3-webgpu/>. After the one-time model download, every\ngeneration happens entirely inside the browser. Prompts, lyrics, and generated audio are never sent to any server.\n\n> MiniMax Music 3 WebGPU is a community project unaffiliated with MiniMax and is neither sponsored nor endorsed by them.\n\n## Contents\n\nThis repository holds the `music-variable` release. `manifest.json` at the repository root lists every artifact with its\nbyte length and SHA-256; the application reads it first and resolves every other path relative to it, so the layout has\nto stay intact.\n\n| Path            |         Bytes | Files | Stage                                                       |\n| --------------- | ------------: | ----: | ----------------------------------------------------------- |\n| `global/`       | 5,694,616,196 |    54 | Semantic decoder, reduced head, embedding shards, tokenizer |\n| `flow/`         | 1,377,818,234 |    12 | Flow-matching transformer                                   |\n| `rvq/`          | 1,292,007,411 |    14 | RVQ depth decoder, feedback network, embedding              |\n| `vocoder/`      |   108,383,113 |     2 | Vocoder                                                     |\n| `condition/`    |    50,336,945 |     2 | Condition encoder                                           |\n| `manifest.json` |        36,224 |     1 | Release descriptor                                          |\n\nTotal: 8,523,198,123 bytes across 85 files. Every artifact is verified against its manifest SHA-256 after download, so\nthe CDN does not have to be trusted.\n\n## Conversion\n\n| Item                | Value                                                               |\n| ------------------- | ------------------------------------------------------------------- |\n| Source checkpoint   | `MiniMaxAI/MiniMax-Music3` at `fbdf52f`                             |\n| `diffusers`         | `3681e65`                                                           |\n| Weight quantization | 4-bit block-wise, block size 32, symmetric, accuracy level 4        |\n| Flow exceptions     | `time_proj.weight` and `proj_out.weight` stay FP16 `MatMul` weights |\n| Convolutions        | `float16`                                                           |\n| Snake activations   | `blocks.0.snake1` and `blocks.1.snake1` in FP32                     |\n| Runtime             | ONNX Runtime Web on the WebGPU execution provider                   |\n\nThe conversion pipeline lives in the application repository under `tools/converter`.\n\n## Requirements\n\n| Item       | Requirement                                                                 |\n| ---------- | --------------------------------------------------------------------------- |\n| Browser    | Desktop Chromium (Chrome 151 or later) with WebGPU and `shader-f16` support |\n| GPU memory | 12 GB of VRAM for workloads up to one minute, 16 GB for the full capacity   |\n| Storage    | About 8 GiB of browser storage for the model cache                          |\n\nThe VRAM guidance was measured on the preserved block-size-128 release and is for reference only. Memory and\nlonger-duration timing measurements for this release are still pending; its five-second generation gate passes.\n\n## Usage\n\nOpen the hosted demo, or point your own build at this repository by pinning the manifest to a commit:\n\n```\nVITE_MINIMAX_MANIFEST_URL=https://huggingface.co/hyung778/minimax-music3-webgpu/resolve/<commit-sha>/manifest.json\n```\n\nPin a commit rather than `main`. A build that follows a branch would pick up a different set of weights the moment this\nrepository is updated.\n\n## License\n\nThe MiniMax Music 3 model is distributed as open weights under the\n[MiniMax-Music3 Community License](LICENSE), which is not an OSI open-source license. These converted artifacts retain\nthat license and its notices. Use of the artifacts and of generated audio is subject to the license terms, including its\nAcceptable Use Policy, and generated audio distributed publicly must be clearly disclosed as AI-generated.\n\nMiniMax Music 3 and related assets are the property of MiniMax.\n\nThe application code is licensed separately under\n[MIT](https://github.com/LI-NA/minimax-music3-webgpu/blob/master/LICENSE).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ntc-ai/minimax-music3-concept-sliders",
+      "author": "ntc-ai",
+      "created_at": "2026-08-16",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "music",
+        "text-to-music",
+        "lora",
+        "concept-sliders",
+        "minimax-music-3",
+        "text-to-audio",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 10,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/ntc-ai/minimax-music3-concept-sliders",
+      "card_text": "---\nlicense: mit\nbase_model: MiniMaxAI/MiniMax-Music-3\ntags:\n  - music\n  - text-to-music\n  - lora\n  - concept-sliders\n  - minimax-music-3\nlibrary_name: diffusers\npipeline_tag: text-to-audio\nwidget:\n  - text: \"Same prompt and lyrics. Energy slider −1 then +1. v9 language-model half.\"\n    example_title: \"Energy −1 then +1\"\n    output:\n      url: samples/demo/energy-ab.mp3\n  - text: \"Same prompt and lyrics. Energy slider −2 then +2. v9 language-model half.\"\n    example_title: \"Energy −2 then +2\"\n    output:\n      url: samples/demo/energy-ab-2.mp3\n  - text: \"Same prompt and lyrics. Gender slider −1 then +1. v9 language-model half.\"\n    example_title: \"Gender −1 then +1\"\n    output:\n      url: samples/demo/gender-ab.mp3\n  - text: \"Same prompt and lyrics. Gender slider −2 then +2. v9 language-model half.\"\n    example_title: \"Gender −2 then +2\"\n    output:\n      url: samples/demo/gender-ab-2.mp3\n  - text: \"Same prompt and lyrics. Distortion slider −1 then +1. v9 language-model half.\"\n    example_title: \"Distortion −1 then +1\"\n    output:\n      url: samples/demo/distortion-ab.mp3\n  - text: \"Same prompt and lyrics. Distortion slider −2 then +2. v9 language-model half.\"\n    example_title: \"Distortion −2 then +2\"\n    output:\n      url: samples/demo/distortion-ab-2.mp3\n  - text: \"Same prompt and lyrics. Joy slider −1 then +1. v9 language-model half.\"\n    example_title: \"Joy −1 then +1\"\n    output:\n      url: samples/demo/joy-ab.mp3\n  - text: \"Same prompt and lyrics. Joy slider −2 then +2. v9 language-model half.\"\n    example_title: \"Joy −2 then +2\"\n    output:\n      url: samples/demo/joy-ab-2.mp3\n---\n\n# MiniMax Music 3 concept sliders\n\nBipolar LoRA sliders for [MiniMax Music 3](https://huggingface.co/MiniMaxAI/MiniMax-Music-3).\nOne scalar moves one musical property while the prompt stays fixed: `0` is off,\n`+2` leans one way, `−2` the other.\n\n**Current studio catalog is v9, language-model only.** Each shipped file is\n`weights/<axis>-lm-v9/<axis>-lm-v9_last.safetensors` (unit-normalized, drop in at\nstrength 1). Transformer halves from earlier waves stay in `weights/` for\ncomparison but are not in the catalog — they failed the render-gain gate\n(loud/silent). Space is the exception: reverb is a rendering property, so\n`space-tf-v6` remains the only transformer slider.\n\n## Listen (v9)\n\nSame prompt, same lyrics, same seed. Only the LoRA scale changes. Player clips\nare v9 at ±1 (one trained unit) and ±2.\n\nThe inference widget at the top of this page plays the same clips.\n\n### Energy — quiet ↔ loud\n\n**−1 quiet**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/energy-quiet.mp3\" type=\"audio/mpeg\"></audio>\n\n**+1 loud**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/energy-loud.mp3\" type=\"audio/mpeg\"></audio>\n\n**−2 quiet**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/energy-quiet-2.mp3\" type=\"audio/mpeg\"></audio>\n\n**+2 loud**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/energy-loud-2.mp3\" type=\"audio/mpeg\"></audio>\n\n### Gender — male ↔ female\n\n**−1 male**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/gender-male.mp3\" type=\"audio/mpeg\"></audio>\n\n**+1 female**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/gender-female.mp3\" type=\"audio/mpeg\"></audio>\n\n**−2 male**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/gender-male-2.mp3\" type=\"audio/mpeg\"></audio>\n\n**+2 female**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/gender-female-2.mp3\" type=\"audio/mpeg\"></audio>\n\n### Distortion — acoustic ↔ metal\n\n**−1 acoustic**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/distortion-acoustic.mp3\" type=\"audio/mpeg\"></audio>\n\n**+1 metal**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/distortion-metal.mp3\" type=\"audio/mpeg\"></audio>\n\n**−2 acoustic**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/distortion-acoustic-2.mp3\" type=\"audio/mpeg\"></audio>\n\n**+2 metal**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/distortion-metal-2.mp3\" type=\"audio/mpeg\"></audio>\n\n### Joy — somber ↔ joy\n\n**−1 somber**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/joy-somber.mp3\" type=\"audio/mpeg\"></audio>\n\n**+1 joy**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/joy-joy.mp3\" type=\"audio/mpeg\"></audio>\n\n**−2 somber**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/joy-somber-2.mp3\" type=\"audio/mpeg\"></audio>\n\n**+2 joy**\n\n<audio controls preload=\"none\"><source src=\"https://huggingface.co/ntc-ai/minimax-music3-concept-sliders/resolve/main/samples/demo/joy-joy-2.mp3\" type=\"audio/mpeg\"></audio>\n\nFull ±2 ladders (plus the no-slider REF captions) live under\n[`samples/v9-ritual/`](samples/v9-ritual/). Every shipped v9 axis is there:\nenergy, gender, distortion, joy, breath, grit, hurt, rapslow, rhyme, sexy,\ntempo, tender, triphop, yearn.\n\nEarlier v3/v4 ladders stay on the repo so you can A/B generations:\n[`samples/energy-v3-shipped-20s/`](samples/energy-v3-shipped-20s/),\n[`samples/gender-v3-ballad-20s/`](samples/gender-v3-ballad-20s/),\n[`samples/rhyme-v4-lm-20s/`](samples/rhyme-v4-lm-20s/),\n[`samples/triphop-v4-shipped-20s/`](samples/triphop-v4-shipped-20s/).\nStart with v9.\n\nTraining code: [ntc-ai/sliders-conceptmod](https://github.com/ntc-ai/sliders-conceptmod)\n(`conceptmod/textsliders/train_lm_slider_music3.py`).\n\n## v9 objective\n\nv9 is a LoRA on `Qwen3Attention`. The input is always the **neutral caption**.\nAt LoRA scale ±1 the prompt-last hidden `h(s)` is pulled toward a target built\nfrom the frozen model's encodes of the positive / negative / neutral captions.\n\nRaw positive and negative encodes share a large common component versus\nneutral. Matching them directly makes +1 and −1 point the same way. v9\nantisymmetrizes first:\n\n$$\na = \\frac{1}{2}(h_{+} - h_{-}),\\qquad t_{\\pm} = h_{0} \\pm a\n$$\n\nThat is `--target_mode symmetric` (`common_beta = 0`). The main pole loss is\nMSE on those last hiddens (or KL on the semantic-code softmax they emit):\n\n$$\n\\mathcal{L}_{\\mathrm{pole}} = \\mathrm{MSE}\\bigl(h(+1), t_{+}\\bigr) + \\mathrm{MSE}\\bigl(h(-1), t_{-}\\bigr)\n$$\n\nA second term, `--anchor_weight 0.3`, leashes each pole toward a blend of the\nsynthetic target and the **real** caption encode, so a perfect fit cannot leave\nthe frozen manifold:\n\n$$\n\\mathrm{anchor}_{\\pm} = (1-\\kappa)(h_{0} \\pm a) + \\kappa\\, h_{\\pm}\n$$\n\nkappa is closed-form from the pair's own geometry. Let\n\n$$\nr = \\cos(h_{+}-h_{0},\\, h_{-}-h_{0}),\\qquad \\rho^{2} = \\frac{1-r}{1+r}\n$$\n\nA perfect fit on the blend realizes\n\n$$\n\\cos(d_{+}, d_{-}) = \\frac{\\kappa^{2} - \\rho^{2}}{\\kappa^{2} + \\rho^{2}}\n$$\n\n`--anchor_autocal --leakage_floor -0.9` solves for the largest kappa in [0, 1]\nsuch that even a perfect fit stays at or below that cosine (more negative is\nmore antisymmetric):\n\n$$\n\\kappa = \\sqrt{\\rho^{2} \\frac{1+\\mathrm{floor}}{1-\\mathrm{floor}}}\n$$\n\n`--endreg_weight 1.0` teacher-forces the LoRA'd LM over a frozen base\ncomposition and penalizes drift of the stop margin. The slider may move the\nmusical plan; it must not move the stop decision:\n\n$$\nm = \\mathrm{logit}(\\texttt{audio\\_end}) - \\mathrm{logsumexp}(\\text{semantic band})\n$$\n\nFlags, all now trainer defaults:\n\n```\n--symmetric --anchor_weight 0.3 --anchor_autocal --leakage_floor -0.9 --endreg_weight 1.0\n```\n\nSame math, with the listen ladders, is in [`samples/README.md`](samples/README.md).\n\n## Catalog\n\n| slider | poles | file |\n|---|---|---|\n| gender | male ↔ female | `weights/gender-lm-v9/` |\n| energy | quiet ↔ loud | `weights/energy-lm-v9/` |\n| distortion | acoustic ↔ metal | `weights/distortion-lm-v9/` |\n| tempo | slow ↔ fast | `weights/tempo-lm-v9/` |\n| rapslow | slow sung ↔ rap | `weights/rapslow-lm-v9/` |\n| triphop | pop ↔ trip-hop | `weights/triphop-lm-v9/` |\n| breath | clean ↔ breathy | `weights/breath-lm-v9/` |\n| sexy | plain ↔ sexy | `weights/sexy-lm-v9/` |\n| tender | fierce ↔ tender | `weights/tender-lm-v9/` |\n| grit | smooth ↔ grit | `weights/grit-lm-v9/` |\n| joy | somber ↔ joy | `weights/joy-lm-v9/` |\n| yearn | content ↔ yearning | `weights/yearn-lm-v9/` |\n| hurt | composed ↔ hurt | `weights/hurt-lm-v9/` |\n| rhyme | prose ↔ rhyme | `weights/rhyme-lm-v9/` |\n| live | studio ↔ live | `weights/live-lm-v6b/` (no v9 pair yet) |\n| dust | glossy ↔ dusty | `weights/dust-lm-v1-faithful-kl-pole03/` |\n| space | dry ↔ wet | `weights/space-tf-v6/` (transformer; reverb) |\n\nv3/v4/v6 checkpoints remain under `weights/` for comparison.\n\n## Which stage a slider attaches to\n\nMiniMax Music 3 generates in two stages:\n\n1. A **Qwen3 language model** writes a plan — who is singing, melody, rhythm, arrangement.\n2. A **flow transformer** renders that plan — timbre, loudness, tone, space.\n\nv9 attaches to stage 1. A transformer LoRA cannot rewrite the plan; when it is\ntrained to fake a caption swap in velocity space it distils into a compounding\ngain term (loud / silent). That is why the catalog is LM-only except space.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music-3"
+      ],
+      "variants": [],
+      "score": 33,
+      "topic_scores": {
+        "generative_music_audio": 31
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, text-to-audio (pipeline tag)",
+        "declares license mit",
+        "community likes 10"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mlboydaisuke/Stable-Audio-Open-Small-CoreAI",
+      "author": "mlboydaisuke",
+      "created_at": "2026-06-30",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "coreai-aimodel",
+        "core-ai",
+        "apple",
+        "on-device",
+        "text-to-audio",
+        "music-generation",
+        "stable-audio",
+        "diffusion",
+        "base_model:stabilityai/stable-audio-open-small",
+        "base_model:finetune:stabilityai/stable-audio-open-small",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 18,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/mlboydaisuke/Stable-Audio-Open-Small-CoreAI",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "stabilityai/stable-audio-open-small"
+      ],
+      "variants": [],
+      "score": 26,
+      "topic_scores": {
+        "generative_music_audio": 25
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag), audio diffusion",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "audio-cpp/audio.cpp-gguf",
+      "author": "audio-cpp",
+      "created_at": "2026-07-14",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audio.cpp",
+        "gguf",
+        "quantized",
+        "text-to-speech",
+        "automatic-speech-recognition",
+        "voice-conversion",
+        "text-to-audio",
+        "audio-to-audio",
+        "source-separation",
+        "speaker-diarization",
+        "speech",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:quantized:ACE-Step/Ace-Step1.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 984117,
+      "likes": 65,
+      "trending_score": 0.0,
+      "library_name": "audio.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/audio-cpp/audio.cpp-gguf",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-H3",
+        "ACE-Step/Ace-Step1.5",
+        "ACE-Step/acestep-v15-base",
+        "Aratako/Irodori-TTS-500M-v3",
+        "Aratako/Irodori-TTS-600M-v3-VoiceDesign",
+        "Aratako/Irodori-TTS-v4.1-Small",
+        "Aratako/MioCodec-25Hz-44.1kHz-v2",
+        "Aratako/MioTTS-1.7B",
+        "Aratako/Semantic-DACVAE-Japanese-32dim",
+        "Banafo/Kroko-ASR",
+        "dots-studio/dots.tts-mf",
+        "dots-studio/dots.tts-soar",
+        "fishaudio/s2-pro",
+        "FunAudioLLM/Fun-ASR-Nano-2512-hf",
+        "HeartMuLa/HeartCodec-oss-20260123",
+        "HeartMuLa/HeartMuLa-oss-3B",
+        "HeartMuLa/HeartMuLaGen",
+        "IndexTeam/IndexTTS-2",
+        "IndexTeam/IndexTTS-2.5",
+        "ASLP-lab/MeanVC2",
+        "OpenBMB/VoxCPM2",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2",
+        "OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5",
+        "OpenMOSS-Team/MOSS-TTS-Nano-100M",
+        "Qwen/Qwen3-ASR-0.6B",
+        "Qwen/Qwen3-ASR-1.7B-hf",
+        "Qwen/Qwen3-ForcedAligner-0.6B",
+        "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "Qwen/Qwen3-TTS-Tokenizer-12Hz",
+        "ResembleAI/chatterbox",
+        "RMSnow/Vevo2",
+        "bosonai/higgs-audio-v3-stt",
+        "bosonai/higgs-audio-v3-tts-4b",
+        "k2-fsa/OmniVoice",
+        "kyutai/pocket-tts",
+        "llm-jp/llm-jp-3-150m",
+        "microsoft/VibeVoice-1.5B",
+        "microsoft/VibeVoice-ASR",
+        "mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "mlx-community/SeedVC-MLX",
+        "mlx-community/mel-roformer-mlx",
+        "mlx-community/supertonic-3-mlx",
+        "mlx-community/wavlm-base-plus-mlx",
+        "MuScriptor/muscriptor-small",
+        "neuphonic/neutts-2e",
+        "syvai/hviske-v5.3",
+        "nvidia/diar_sortformer_4spk-v1",
+        "nvidia/magpie_tts_multilingual_357m",
+        "nvidia/nemotron-3.5-asr-streaming-0.6b",
+        "nvidia/parakeet-tdt-0.6b-v3",
+        "nvidia/personaplex-7b-v1",
+        "owensong/Inflect-Micro-v2",
+        "stabilityai/stable-audio-3-medium",
+        "stabilityai/stable-audio-3-small-music",
+        "stabilityai/stable-audio-3-small-sfx"
+      ],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition",
+        "declares license other",
+        "community likes 65"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kerasformers/granite_speech_3_3_2b",
+      "author": "kerasformers",
+      "created_at": "2026-07-30",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "kerasformers",
+        "keras",
+        "granite-speech",
+        "speech-llm",
+        "automatic-speech-recognition",
+        "audio",
+        "arxiv:2505.08699",
+        "pytorch",
+        "jax",
+        "tf",
+        "base_model:ibm-granite/granite-speech-3.3-2b",
+        "base_model:finetune:ibm-granite/granite-speech-3.3-2b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1150,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "kerasformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/kerasformers/granite_speech_3_3_2b",
+      "card_text": "---\npipeline_tag: automatic-speech-recognition\nlicense: apache-2.0\nbase_model: ibm-granite/granite-speech-3.3-2b\nlibrary_name: kerasformers\ntags:\n- keras\n- kerasformers\n- granite-speech\n- speech-llm\n- automatic-speech-recognition\n- audio\n- arxiv:2505.08699\n- pytorch\n- jax\n- tf\n---\n\n## ***See [our collection](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80) for all versions of Granite Speech.***\n\n# Run Granite Speech with Keras 3: JAX, PyTorch, or TensorFlow\n\n[![GitHub](https://img.shields.io/badge/GitHub-KerasFormers-black?logo=github)](https://github.com/IMvision12/KerasFormers) [![Docs](https://img.shields.io/badge/Docs-Granite%20Speech-blue)](https://imvision12.github.io/KerasFormers/granite_speech/) [![Collection](https://img.shields.io/badge/HF-Granite%20Speech%20collection-yellow)](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80)\n\n# kerasformers/granite_speech_3_3_2b\n\nPaper: [Granite-speech: open-source speech-aware LLMs with strong English ASR capabilities (arXiv:2505.08699)](https://arxiv.org/abs/2505.08699) · [HF Papers](https://huggingface.co/papers/2505.08699)\n\nGranite Speech is a **speech-aware LLM**, not ASR with an LM bolted on. A conformer CTC encoder and BLIP-2 style Q-Former turn mel features into audio embeddings that fill `<|audio|>` placeholders in a Granite decoder. You ask for a transcript, a summary, or an answer in ordinary English; text-only mode keeps the plain Granite decoder.\n\nFor more details on the model, please go to the upstream [model card](https://huggingface.co/ibm-granite/granite-speech-3.3-2b).\n\nPure-**Keras 3** conversion of [`ibm-granite/granite-speech-3.3-2b`](https://huggingface.co/ibm-granite/granite-speech-3.3-2b) for [kerasformers](https://github.com/IMvision12/KerasFormers). One implementation runs unmodified on **TensorFlow / Torch / JAX**.\n\nThis is a **speech LLM** checkpoint (`GraniteSpeechConditionalGenerate`, Granite 3.3 2B). Prefer `load_dtype=\"bfloat16\"`.\n\n## ✨ Quick start\n\n```python\nimport os\nos.environ[\"KERAS_BACKEND\"] = \"torch\"  # or \"jax\" / \"tensorflow\"\n\nimport keras\nimport numpy as np\nimport soundfile as sf\nfrom kerasformers.models.granite_speech import (\n    GraniteSpeechConditionalGenerate,\n    GraniteSpeechProcessor,\n)\n\nmodel = GraniteSpeechConditionalGenerate.from_weights(\n    \"kerasformers/granite_speech_3_3_2b\", load_dtype=\"bfloat16\"\n)\nprocessor = GraniteSpeechProcessor.from_weights(\"kerasformers/granite_speech_3_3_2b\")\n\naudio, sr = sf.read(\"your_audio.wav\", dtype=\"float32\")  # 16 kHz mono\n\n# Ask in words: same audio + different instruction => different answer.\nconversation = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"audio\"},\n            {\n                \"type\": \"text\",\n                \"text\": \"can you transcribe the speech into a written format?\",\n            },\n        ],\n    }\n]\n\ninputs = processor(conversation=conversation, audio=audio, sampling_rate=sr)\nout = model.generate(**inputs, max_new_tokens=64)\nids = np.asarray(keras.ops.convert_to_numpy(out))[0].tolist()\nprint(repr(processor.tokenizer.decode(ids)))\n```\n\nLoad any Granite Speech variant the same way with `from_weights(\"kerasformers/<variant>\")`:\n\n| Variant | Hub | Notes |\n|---|---|---|\n| `granite_speech_3_3_2b` | [`kerasformers/granite_speech_3_3_2b`](https://huggingface.co/kerasformers/granite_speech_3_3_2b) | Granite 3.3 2B |\n| `granite_speech_3_3_8b` | [`kerasformers/granite_speech_3_3_8b`](https://huggingface.co/kerasformers/granite_speech_3_3_8b) | Granite 3.3 8B |\n| `granite_speech_4_1_2b` | [`kerasformers/granite_speech_4_1_2b`](https://huggingface.co/kerasformers/granite_speech_4_1_2b) | Granite 4.1 2B |\n| `granite_4_0_1b_speech` | [`kerasformers/granite_4_0_1b_speech`](https://huggingface.co/kerasformers/granite_4_0_1b_speech) | Granite 4.0 1B |\n\n## Tips\n\n- Set `KERAS_BACKEND` **before** importing Keras / kerasformers.\n- Pass audio via `audio=` + `sampling_rate=`; put only an `{\"type\": \"audio\"}` marker in the conversation.\n- Drop audio for text-only chat; the audio LoRA stays off.\n- See [Granite Speech docs](https://imvision12.github.io/KerasFormers/granite_speech/) and [Loading Weights](https://imvision12.github.io/KerasFormers/loading_weights/).\n- Community / upstream safetensors still work via the `hf:` prefix, e.g. `GraniteSpeechConditionalGenerate.from_weights(\"hf:ibm-granite/granite-speech-3.3-2b\")`.\n\n## Special Thanks\n\nA huge thank you to the IBM Granite authors for creating and releasing these models.\n\nLicense: Apache 2.0.\n",
+      "arxiv_ids": [
+        "2505.08699"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-3.3-2b"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kerasformers/granite_speech_4_1_2b",
+      "author": "kerasformers",
+      "created_at": "2026-07-30",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "kerasformers",
+        "keras",
+        "granite-speech",
+        "speech-llm",
+        "automatic-speech-recognition",
+        "audio",
+        "arxiv:2505.08699",
+        "pytorch",
+        "jax",
+        "tf",
+        "base_model:ibm-granite/granite-speech-4.1-2b",
+        "base_model:finetune:ibm-granite/granite-speech-4.1-2b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 125,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "kerasformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/kerasformers/granite_speech_4_1_2b",
+      "card_text": "---\npipeline_tag: automatic-speech-recognition\nlicense: apache-2.0\nbase_model: ibm-granite/granite-speech-4.1-2b\nlibrary_name: kerasformers\ntags:\n- keras\n- kerasformers\n- granite-speech\n- speech-llm\n- automatic-speech-recognition\n- audio\n- arxiv:2505.08699\n- pytorch\n- jax\n- tf\n---\n\n## ***See [our collection](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80) for all versions of Granite Speech.***\n\n# Run Granite Speech with Keras 3: JAX, PyTorch, or TensorFlow\n\n[![GitHub](https://img.shields.io/badge/GitHub-KerasFormers-black?logo=github)](https://github.com/IMvision12/KerasFormers) [![Docs](https://img.shields.io/badge/Docs-Granite%20Speech-blue)](https://imvision12.github.io/KerasFormers/granite_speech/) [![Collection](https://img.shields.io/badge/HF-Granite%20Speech%20collection-yellow)](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80)\n\n# kerasformers/granite_speech_4_1_2b\n\nPaper: [Granite-speech: open-source speech-aware LLMs with strong English ASR capabilities (arXiv:2505.08699)](https://arxiv.org/abs/2505.08699) · [HF Papers](https://huggingface.co/papers/2505.08699)\n\nGranite Speech is a **speech-aware LLM**, not ASR with an LM bolted on. A conformer CTC encoder and BLIP-2 style Q-Former turn mel features into audio embeddings that fill `<|audio|>` placeholders in a Granite decoder. You ask for a transcript, a summary, or an answer in ordinary English; text-only mode keeps the plain Granite decoder.\n\nFor more details on the model, please go to the upstream [model card](https://huggingface.co/ibm-granite/granite-speech-4.1-2b).\n\nPure-**Keras 3** conversion of [`ibm-granite/granite-speech-4.1-2b`](https://huggingface.co/ibm-granite/granite-speech-4.1-2b) for [kerasformers](https://github.com/IMvision12/KerasFormers). One implementation runs unmodified on **TensorFlow / Torch / JAX**.\n\nThis is a **speech LLM** checkpoint (`GraniteSpeechConditionalGenerate`, Granite 4.1 2B). Prefer `load_dtype=\"bfloat16\"`.\n\n## ✨ Quick start\n\n```python\nimport os\nos.environ[\"KERAS_BACKEND\"] = \"torch\"  # or \"jax\" / \"tensorflow\"\n\nimport keras\nimport numpy as np\nimport soundfile as sf\nfrom kerasformers.models.granite_speech import (\n    GraniteSpeechConditionalGenerate,\n    GraniteSpeechProcessor,\n)\n\nmodel = GraniteSpeechConditionalGenerate.from_weights(\n    \"kerasformers/granite_speech_4_1_2b\", load_dtype=\"bfloat16\"\n)\nprocessor = GraniteSpeechProcessor.from_weights(\"kerasformers/granite_speech_4_1_2b\")\n\naudio, sr = sf.read(\"your_audio.wav\", dtype=\"float32\")  # 16 kHz mono\n\n# Ask in words: same audio + different instruction => different answer.\nconversation = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"audio\"},\n            {\n                \"type\": \"text\",\n                \"text\": \"can you transcribe the speech into a written format?\",\n            },\n        ],\n    }\n]\n\ninputs = processor(conversation=conversation, audio=audio, sampling_rate=sr)\nout = model.generate(**inputs, max_new_tokens=64)\nids = np.asarray(keras.ops.convert_to_numpy(out))[0].tolist()\nprint(repr(processor.tokenizer.decode(ids)))\n```\n\nLoad any Granite Speech variant the same way with `from_weights(\"kerasformers/<variant>\")`:\n\n| Variant | Hub | Notes |\n|---|---|---|\n| `granite_speech_3_3_2b` | [`kerasformers/granite_speech_3_3_2b`](https://huggingface.co/kerasformers/granite_speech_3_3_2b) | Granite 3.3 2B |\n| `granite_speech_3_3_8b` | [`kerasformers/granite_speech_3_3_8b`](https://huggingface.co/kerasformers/granite_speech_3_3_8b) | Granite 3.3 8B |\n| `granite_speech_4_1_2b` | [`kerasformers/granite_speech_4_1_2b`](https://huggingface.co/kerasformers/granite_speech_4_1_2b) | Granite 4.1 2B |\n| `granite_4_0_1b_speech` | [`kerasformers/granite_4_0_1b_speech`](https://huggingface.co/kerasformers/granite_4_0_1b_speech) | Granite 4.0 1B |\n\n## Tips\n\n- Set `KERAS_BACKEND` **before** importing Keras / kerasformers.\n- Pass audio via `audio=` + `sampling_rate=`; put only an `{\"type\": \"audio\"}` marker in the conversation.\n- Drop audio for text-only chat; the audio LoRA stays off.\n- See [Granite Speech docs](https://imvision12.github.io/KerasFormers/granite_speech/) and [Loading Weights](https://imvision12.github.io/KerasFormers/loading_weights/).\n- Community / upstream safetensors still work via the `hf:` prefix, e.g. `GraniteSpeechConditionalGenerate.from_weights(\"hf:ibm-granite/granite-speech-4.1-2b\")`.\n\n## Special Thanks\n\nA huge thank you to the IBM Granite authors for creating and releasing these models.\n\nLicense: Apache 2.0.\n",
+      "arxiv_ids": [
+        "2505.08699"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-4.1-2b"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kerasformers/granite_4_0_1b_speech",
+      "author": "kerasformers",
+      "created_at": "2026-07-30",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "kerasformers",
+        "keras",
+        "granite-speech",
+        "speech-llm",
+        "automatic-speech-recognition",
+        "audio",
+        "arxiv:2505.08699",
+        "pytorch",
+        "jax",
+        "tf",
+        "base_model:ibm-granite/granite-4.0-1b-speech",
+        "base_model:finetune:ibm-granite/granite-4.0-1b-speech",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 63,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "kerasformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/kerasformers/granite_4_0_1b_speech",
+      "card_text": "---\npipeline_tag: automatic-speech-recognition\nlicense: apache-2.0\nbase_model: ibm-granite/granite-4.0-1b-speech\nlibrary_name: kerasformers\ntags:\n- keras\n- kerasformers\n- granite-speech\n- speech-llm\n- automatic-speech-recognition\n- audio\n- arxiv:2505.08699\n- pytorch\n- jax\n- tf\n---\n\n## ***See [our collection](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80) for all versions of Granite Speech.***\n\n# Run Granite Speech with Keras 3: JAX, PyTorch, or TensorFlow\n\n[![GitHub](https://img.shields.io/badge/GitHub-KerasFormers-black?logo=github)](https://github.com/IMvision12/KerasFormers) [![Docs](https://img.shields.io/badge/Docs-Granite%20Speech-blue)](https://imvision12.github.io/KerasFormers/granite_speech/) [![Collection](https://img.shields.io/badge/HF-Granite%20Speech%20collection-yellow)](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80)\n\n# kerasformers/granite_4_0_1b_speech\n\nPaper: [Granite-speech: open-source speech-aware LLMs with strong English ASR capabilities (arXiv:2505.08699)](https://arxiv.org/abs/2505.08699) · [HF Papers](https://huggingface.co/papers/2505.08699)\n\nGranite Speech is a **speech-aware LLM**, not ASR with an LM bolted on. A conformer CTC encoder and BLIP-2 style Q-Former turn mel features into audio embeddings that fill `<|audio|>` placeholders in a Granite decoder. You ask for a transcript, a summary, or an answer in ordinary English; text-only mode keeps the plain Granite decoder.\n\nFor more details on the model, please go to the upstream [model card](https://huggingface.co/ibm-granite/granite-4.0-1b-speech).\n\nPure-**Keras 3** conversion of [`ibm-granite/granite-4.0-1b-speech`](https://huggingface.co/ibm-granite/granite-4.0-1b-speech) for [kerasformers](https://github.com/IMvision12/KerasFormers). One implementation runs unmodified on **TensorFlow / Torch / JAX**.\n\nThis is a **speech LLM** checkpoint (`GraniteSpeechConditionalGenerate`, Granite 4.0 1B). Prefer `load_dtype=\"bfloat16\"`.\n\n## ✨ Quick start\n\n```python\nimport os\nos.environ[\"KERAS_BACKEND\"] = \"torch\"  # or \"jax\" / \"tensorflow\"\n\nimport keras\nimport numpy as np\nimport soundfile as sf\nfrom kerasformers.models.granite_speech import (\n    GraniteSpeechConditionalGenerate,\n    GraniteSpeechProcessor,\n)\n\nmodel = GraniteSpeechConditionalGenerate.from_weights(\n    \"kerasformers/granite_4_0_1b_speech\", load_dtype=\"bfloat16\"\n)\nprocessor = GraniteSpeechProcessor.from_weights(\"kerasformers/granite_4_0_1b_speech\")\n\naudio, sr = sf.read(\"your_audio.wav\", dtype=\"float32\")  # 16 kHz mono\n\n# Ask in words: same audio + different instruction => different answer.\nconversation = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"audio\"},\n            {\n                \"type\": \"text\",\n                \"text\": \"can you transcribe the speech into a written format?\",\n            },\n        ],\n    }\n]\n\ninputs = processor(conversation=conversation, audio=audio, sampling_rate=sr)\nout = model.generate(**inputs, max_new_tokens=64)\nids = np.asarray(keras.ops.convert_to_numpy(out))[0].tolist()\nprint(repr(processor.tokenizer.decode(ids)))\n```\n\nLoad any Granite Speech variant the same way with `from_weights(\"kerasformers/<variant>\")`:\n\n| Variant | Hub | Notes |\n|---|---|---|\n| `granite_speech_3_3_2b` | [`kerasformers/granite_speech_3_3_2b`](https://huggingface.co/kerasformers/granite_speech_3_3_2b) | Granite 3.3 2B |\n| `granite_speech_3_3_8b` | [`kerasformers/granite_speech_3_3_8b`](https://huggingface.co/kerasformers/granite_speech_3_3_8b) | Granite 3.3 8B |\n| `granite_speech_4_1_2b` | [`kerasformers/granite_speech_4_1_2b`](https://huggingface.co/kerasformers/granite_speech_4_1_2b) | Granite 4.1 2B |\n| `granite_4_0_1b_speech` | [`kerasformers/granite_4_0_1b_speech`](https://huggingface.co/kerasformers/granite_4_0_1b_speech) | Granite 4.0 1B |\n\n## Tips\n\n- Set `KERAS_BACKEND` **before** importing Keras / kerasformers.\n- Pass audio via `audio=` + `sampling_rate=`; put only an `{\"type\": \"audio\"}` marker in the conversation.\n- Drop audio for text-only chat; the audio LoRA stays off.\n- See [Granite Speech docs](https://imvision12.github.io/KerasFormers/granite_speech/) and [Loading Weights](https://imvision12.github.io/KerasFormers/loading_weights/).\n- Community / upstream safetensors still work via the `hf:` prefix, e.g. `GraniteSpeechConditionalGenerate.from_weights(\"hf:ibm-granite/granite-4.0-1b-speech\")`.\n\n## Special Thanks\n\nA huge thank you to the IBM Granite authors for creating and releasing these models.\n\nLicense: Apache 2.0.\n",
+      "arxiv_ids": [
+        "2505.08699"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-4.0-1b-speech"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kerasformers/granite_speech_4_1_2b_plus",
+      "author": "kerasformers",
+      "created_at": "2026-07-30",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "kerasformers",
+        "keras",
+        "granite-speech-plus",
+        "speech-llm",
+        "automatic-speech-recognition",
+        "audio",
+        "arxiv:2505.08699",
+        "pytorch",
+        "jax",
+        "tf",
+        "base_model:ibm-granite/granite-speech-4.1-2b-plus",
+        "base_model:finetune:ibm-granite/granite-speech-4.1-2b-plus",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 60,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "kerasformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/kerasformers/granite_speech_4_1_2b_plus",
+      "card_text": "---\npipeline_tag: automatic-speech-recognition\nlicense: apache-2.0\nbase_model: ibm-granite/granite-speech-4.1-2b-plus\nlibrary_name: kerasformers\ntags:\n- keras\n- kerasformers\n- granite-speech-plus\n- speech-llm\n- automatic-speech-recognition\n- audio\n- arxiv:2505.08699\n- pytorch\n- jax\n- tf\n---\n\n## ***See [our collection](https://huggingface.co/collections/kerasformers/granite-speech-plus-6a6ad56beba18c3ae0513a62) for all versions of Granite Speech Plus.***\n\n# Run Granite Speech Plus with Keras 3: JAX, PyTorch, or TensorFlow\n\n[![GitHub](https://img.shields.io/badge/GitHub-KerasFormers-black?logo=github)](https://github.com/IMvision12/KerasFormers) [![Docs](https://img.shields.io/badge/Docs-Granite%20Speech%20Plus-blue)](https://imvision12.github.io/KerasFormers/granite_speech_plus/) [![Collection](https://img.shields.io/badge/HF-Granite%20Speech%20Plus%20collection-yellow)](https://huggingface.co/collections/kerasformers/granite-speech-plus-6a6ad56beba18c3ae0513a62)\n\n# kerasformers/granite_speech_4_1_2b_plus\n\nPaper: [Granite-speech: open-source speech-aware LLMs with strong English ASR capabilities (arXiv:2505.08699)](https://arxiv.org/abs/2505.08699) · [HF Papers](https://huggingface.co/papers/2505.08699)\n\nGranite Speech Plus is the **Granite 4.0-based** speech-aware LLM successor to Granite Speech: a conformer CTC encoder and Q-Former projector feed audio embeddings into `<|audio|>` slots of a Granite decoder. You ask for what you want in words (transcribe, summarize, answer). LoRA is fully merged; no adapter toggle.\n\nFor more details on the model, please go to the upstream [model card](https://huggingface.co/ibm-granite/granite-speech-4.1-2b-plus).\n\nPure-**Keras 3** conversion of [`ibm-granite/granite-speech-4.1-2b-plus`](https://huggingface.co/ibm-granite/granite-speech-4.1-2b-plus) for [kerasformers](https://github.com/IMvision12/KerasFormers). One implementation runs unmodified on **TensorFlow / Torch / JAX**.\n\nThis is a **speech LLM** checkpoint (`GraniteSpeechPlusConditionalGenerate`) on **Granite 4.0 2B**. Prefer `load_dtype=\"bfloat16\"`.\n\n## ✨ Quick start\n\n```python\nimport os\nos.environ[\"KERAS_BACKEND\"] = \"torch\"  # or \"jax\" / \"tensorflow\"\n\nimport keras\nimport numpy as np\nimport soundfile as sf\nfrom kerasformers.models.granite_speech_plus import (\n    GraniteSpeechPlusConditionalGenerate,\n    GraniteSpeechPlusProcessor,\n)\n\nmodel = GraniteSpeechPlusConditionalGenerate.from_weights(\n    \"kerasformers/granite_speech_4_1_2b_plus\", load_dtype=\"bfloat16\"\n)\nprocessor = GraniteSpeechPlusProcessor.from_weights(\"kerasformers/granite_speech_4_1_2b_plus\")\n\naudio, sr = sf.read(\"your_audio.wav\", dtype=\"float32\")  # 16 kHz mono\n\n# Instruction in words: this is a speech LLM, not fixed-task ASR.\nconversation = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"audio\"},\n            {\n                \"type\": \"text\",\n                \"text\": \"can you transcribe the speech into a written format?\",\n            },\n        ],\n    }\n]\n\ninputs = processor(conversation=conversation, audio=audio, sampling_rate=sr)\nout = model.generate(**inputs, max_new_tokens=64)\nids = np.asarray(keras.ops.convert_to_numpy(out))[0].tolist()\nprint(repr(processor.tokenizer.decode(ids)))\n```\n\nLoad any Granite Speech Plus variant the same way with `from_weights(\"kerasformers/<variant>\")`:\n\n| Variant | Hub | Base LLM |\n|---|---|---|\n| `granite_speech_4_1_2b_plus` | [`kerasformers/granite_speech_4_1_2b_plus`](https://huggingface.co/kerasformers/granite_speech_4_1_2b_plus) | Granite 4.0 2B |\n\n## Tips\n\n- Set `KERAS_BACKEND` **before** importing Keras / kerasformers.\n- Pass audio via `audio=` + `sampling_rate=`; put only an `{\"type\": \"audio\"}` marker in the conversation (do not embed the waveform).\n- Change the text instruction to get a different answer over the same clip.\n- See [Granite Speech Plus docs](https://imvision12.github.io/KerasFormers/granite_speech_plus/) and [Loading Weights](https://imvision12.github.io/KerasFormers/loading_weights/).\n- Community / upstream safetensors still work via the `hf:` prefix, e.g. `GraniteSpeechPlusConditionalGenerate.from_weights(\"hf:ibm-granite/granite-speech-4.1-2b-plus\")`.\n\n## Special Thanks\n\nA huge thank you to the IBM Granite authors for creating and releasing these models.\n\nLicense: Apache 2.0.\n",
+      "arxiv_ids": [
+        "2505.08699"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-4.1-2b-plus"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kerasformers/granite_speech_3_3_8b",
+      "author": "kerasformers",
+      "created_at": "2026-07-30",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "kerasformers",
+        "keras",
+        "granite-speech",
+        "speech-llm",
+        "automatic-speech-recognition",
+        "audio",
+        "arxiv:2505.08699",
+        "pytorch",
+        "jax",
+        "tf",
+        "base_model:ibm-granite/granite-speech-3.3-8b",
+        "base_model:finetune:ibm-granite/granite-speech-3.3-8b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 51,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "kerasformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/kerasformers/granite_speech_3_3_8b",
+      "card_text": "---\npipeline_tag: automatic-speech-recognition\nlicense: apache-2.0\nbase_model: ibm-granite/granite-speech-3.3-8b\nlibrary_name: kerasformers\ntags:\n- keras\n- kerasformers\n- granite-speech\n- speech-llm\n- automatic-speech-recognition\n- audio\n- arxiv:2505.08699\n- pytorch\n- jax\n- tf\n---\n\n## ***See [our collection](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80) for all versions of Granite Speech.***\n\n# Run Granite Speech with Keras 3: JAX, PyTorch, or TensorFlow\n\n[![GitHub](https://img.shields.io/badge/GitHub-KerasFormers-black?logo=github)](https://github.com/IMvision12/KerasFormers) [![Docs](https://img.shields.io/badge/Docs-Granite%20Speech-blue)](https://imvision12.github.io/KerasFormers/granite_speech/) [![Collection](https://img.shields.io/badge/HF-Granite%20Speech%20collection-yellow)](https://huggingface.co/collections/kerasformers/granite-speech-6a6acdf4f0b41a3dbfce1d80)\n\n# kerasformers/granite_speech_3_3_8b\n\nPaper: [Granite-speech: open-source speech-aware LLMs with strong English ASR capabilities (arXiv:2505.08699)](https://arxiv.org/abs/2505.08699) · [HF Papers](https://huggingface.co/papers/2505.08699)\n\nGranite Speech is a **speech-aware LLM**, not ASR with an LM bolted on. A conformer CTC encoder and BLIP-2 style Q-Former turn mel features into audio embeddings that fill `<|audio|>` placeholders in a Granite decoder. You ask for a transcript, a summary, or an answer in ordinary English; text-only mode keeps the plain Granite decoder.\n\nFor more details on the model, please go to the upstream [model card](https://huggingface.co/ibm-granite/granite-speech-3.3-8b).\n\nPure-**Keras 3** conversion of [`ibm-granite/granite-speech-3.3-8b`](https://huggingface.co/ibm-granite/granite-speech-3.3-8b) for [kerasformers](https://github.com/IMvision12/KerasFormers). One implementation runs unmodified on **TensorFlow / Torch / JAX**.\n\nThis is a **speech LLM** checkpoint (`GraniteSpeechConditionalGenerate`, Granite 3.3 8B). Prefer `load_dtype=\"bfloat16\"`.\n\n## ✨ Quick start\n\n```python\nimport os\nos.environ[\"KERAS_BACKEND\"] = \"torch\"  # or \"jax\" / \"tensorflow\"\n\nimport keras\nimport numpy as np\nimport soundfile as sf\nfrom kerasformers.models.granite_speech import (\n    GraniteSpeechConditionalGenerate,\n    GraniteSpeechProcessor,\n)\n\nmodel = GraniteSpeechConditionalGenerate.from_weights(\n    \"kerasformers/granite_speech_3_3_8b\", load_dtype=\"bfloat16\"\n)\nprocessor = GraniteSpeechProcessor.from_weights(\"kerasformers/granite_speech_3_3_8b\")\n\naudio, sr = sf.read(\"your_audio.wav\", dtype=\"float32\")  # 16 kHz mono\n\n# Ask in words: same audio + different instruction => different answer.\nconversation = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"audio\"},\n            {\n                \"type\": \"text\",\n                \"text\": \"can you transcribe the speech into a written format?\",\n            },\n        ],\n    }\n]\n\ninputs = processor(conversation=conversation, audio=audio, sampling_rate=sr)\nout = model.generate(**inputs, max_new_tokens=64)\nids = np.asarray(keras.ops.convert_to_numpy(out))[0].tolist()\nprint(repr(processor.tokenizer.decode(ids)))\n```\n\nLoad any Granite Speech variant the same way with `from_weights(\"kerasformers/<variant>\")`:\n\n| Variant | Hub | Notes |\n|---|---|---|\n| `granite_speech_3_3_2b` | [`kerasformers/granite_speech_3_3_2b`](https://huggingface.co/kerasformers/granite_speech_3_3_2b) | Granite 3.3 2B |\n| `granite_speech_3_3_8b` | [`kerasformers/granite_speech_3_3_8b`](https://huggingface.co/kerasformers/granite_speech_3_3_8b) | Granite 3.3 8B |\n| `granite_speech_4_1_2b` | [`kerasformers/granite_speech_4_1_2b`](https://huggingface.co/kerasformers/granite_speech_4_1_2b) | Granite 4.1 2B |\n| `granite_4_0_1b_speech` | [`kerasformers/granite_4_0_1b_speech`](https://huggingface.co/kerasformers/granite_4_0_1b_speech) | Granite 4.0 1B |\n\n## Tips\n\n- Set `KERAS_BACKEND` **before** importing Keras / kerasformers.\n- Pass audio via `audio=` + `sampling_rate=`; put only an `{\"type\": \"audio\"}` marker in the conversation.\n- Drop audio for text-only chat; the audio LoRA stays off.\n- See [Granite Speech docs](https://imvision12.github.io/KerasFormers/granite_speech/) and [Loading Weights](https://imvision12.github.io/KerasFormers/loading_weights/).\n- Community / upstream safetensors still work via the `hf:` prefix, e.g. `GraniteSpeechConditionalGenerate.from_weights(\"hf:ibm-granite/granite-speech-3.3-8b\")`.\n\n## Special Thanks\n\nA huge thank you to the IBM Granite authors for creating and releasing these models.\n\nLicense: Apache 2.0.\n",
+      "arxiv_ids": [
+        "2505.08699"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-3.3-8b"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "TalTechNLP/Voxtral-Mini-3B-2507-estonian",
+      "author": "TalTechNLP",
+      "created_at": "2026-08-25",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "voxtral",
+        "automatic-speech-recognition",
+        "audio",
+        "speech",
+        "estonian",
+        "transcription",
+        "translation",
+        "audio-understanding",
+        "full-finetune",
+        "et",
+        "en",
+        "base_model:mistralai/Voxtral-Mini-3B-2507",
+        "base_model:finetune:mistralai/Voxtral-Mini-3B-2507",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/TalTechNLP/Voxtral-Mini-3B-2507-estonian",
+      "card_text": "---\nlibrary_name: transformers\nlicense: apache-2.0\nbase_model: mistralai/Voxtral-Mini-3B-2507\nlanguage:\n  - et\n  - en\npipeline_tag: automatic-speech-recognition\ntags:\n  - audio\n  - speech\n  - voxtral\n  - estonian\n  - transcription\n  - translation\n  - audio-understanding\n  - full-finetune\n---\n\n# Voxtral Mini 3B 2507 Estonian\n\nThis model is a full-parameter fine-tune of\n[`mistralai/Voxtral-Mini-3B-2507`](https://huggingface.co/mistralai/Voxtral-Mini-3B-2507)\nfor Estonian speech recognition and audio understanding. It was trained on a\nmixture of transcription, subtitle and stenogram generation, news writing,\nspeech translation, summarization, and question-answering tasks.\n\n\n## Model details\n\n| Property | Value |\n|---|---|\n| Base model | `mistralai/Voxtral-Mini-3B-2507` |\n| Architecture | `VoxtralForConditionalGeneration` |\n| Primary language | Estonian (`et/est`) |\n| Additional output language | English (`en`) |\n| Fine-tuning method | Full-parameter supervised fine-tuning |\n| Selected checkpoint | 4,500 steps |\n| Weight precision | bfloat16 |\n| License | Apache 2.0, following the base model |\n\n## Intended uses\n\nThe model is intended for research and development involving Estonian speech,\nincluding:\n\n- verbatim automatic speech recognition;\n- readable subtitle and parliamentary stenogram generation;\n- summaries and news stories based on broadcast audio;\n- answering questions about spoken content; and\n- translation of Estonian speech into English.\n\nThe output style depends on the instruction. Prompts should state the desired\ntask and format explicitly. This is not a certified system for legal,\nmedical, safety-critical, or high-stakes transcription.\n\n## Usage with Transformers\n\nThe following example uses the selected local checkpoint for Estonian\ntranscription:\n\n```python\nimport torch\nfrom transformers import AutoProcessor, VoxtralForConditionalGeneration\n\nmodel_id = \"exp/models/voxtral-mini-3b-2507-full/1c/checkpoint-4500\"\ndevice = \"cuda\"\n\nprocessor = AutoProcessor.from_pretrained(model_id)\nmodel = VoxtralForConditionalGeneration.from_pretrained(\n    model_id,\n    dtype=torch.bfloat16,\n    attn_implementation=\"sdpa\",\n    low_cpu_mem_usage=True,\n).to(device)\nmodel.eval()\n\ninputs = processor.apply_transcription_request(\n    language=\"et\",\n    audio=\"example.wav\",\n    model_id=model_id,\n    return_tensors=\"pt\",\n)\ninputs = {\n    key: value.to(device=device, dtype=torch.bfloat16)\n    if value.is_floating_point()\n    else value.to(device)\n    for key, value in inputs.items()\n}\n\nwith torch.inference_mode():\n    output_ids = model.generate(**inputs, do_sample=False, max_new_tokens=8192)\n\nprompt_length = inputs[\"input_ids\"].shape[1]\ntext = processor.batch_decode(\n    output_ids[:, prompt_length:], skip_special_tokens=True\n)[0]\nprint(text.strip())\n```\n\nUse 16 kHz mono audio where possible. For long recordings, segmenting at\nnatural speech boundaries is recommended.\n\n## Training data\n\nThe training data was combined from seven task datasets. \n\n| Task | Input | Retained | Filtered out |\n|---|---:|---:|---:|\n|  Verbatim Estonian ASR | 13,434 | 12,972 | 462 |\n|  Edited broadcast subtitles | 5,639 | 5,412 | 227 |\n| Estonian news stories from audio | 50,000 | 49,998 | 2 |\n|  English news stories from Estonian audio | 10,000 | 9,999 | 1 |\n|  Broadcast summarization and structured extraction | 49,803 | 49,797 | 6 |\n|  Questions about broadcast audio | 10,000 | 5,264 | 4,736 |\n|  Edited parliamentary stenograms | 17,556 | 15,955 | 1,601 |\n| **Total**  | **156,432** | **149,397** | **7,035** |\n\nOf the 7,035 filtered examples, 5,500 exceeded the task-specific audio-duration\nlimit and 1,535 exceeded the maximum combined audio/text sequence length.\nTranscription examples were limited to 30 minutes and audio-understanding\nexamples to 40 minutes. The final prepared manifest used a maximum sequence\nlength of 28,000 tokens.\n\nCombined sequence lengths in the retained manifest were:\n\n| Statistic | Tokens |\n|---|---:|\n| Minimum | 419 |\n| Median | 6,845 |\n| 90th percentile | 19,163 |\n| 95th percentile | 19,734 |\n| 99th percentile | 24,925 |\n| Maximum | 27,999 |\n\nSome  instructions and\nanswers in trainining data and the English news-story targets were generated with\n`google/gemini-3.1-flash-lite`. Consequently, the training targets may contain\nerrors or stylistic biases inherited from that model.\n\nThe source collections include ERR broadcasts and subtitles, an Estonian ASR\nmanifest, ERR news video/audio and article text, Päevakaja programmes,\nRiigikogu recordings and stenograms, and\n[`TalTechNLP/qa_broadcast_conv_et`](https://huggingface.co/datasets/TalTechNLP/qa_broadcast_conv_et).\nUsers are responsible for checking the terms, copyright, privacy constraints,\nand permitted uses of the underlying data for their application.\n\n## Training procedure\n\nTraining used four NVIDIA A100-SXM4 80 GB GPUs. The per-device batch size was\n1 with 8 gradient-accumulation steps, giving an effective global batch size of\n32. Both the audio encoder and aligner were unfrozen.\n\n| Hyperparameter | Value |\n|---|---|\n| Maximum training steps | 6,000 |\n| Selected checkpoint step | 4,500 |\n| Effective global batch size | 32 |\n| Optimizer | Fused AdamW |\n| Learning rate | `5e-5` |\n| Adam betas | `(0.9, 0.95)` |\n| Adam epsilon | `1e-8` |\n| Weight decay | `0.01` |\n| Maximum gradient norm | `1.0` |\n| Scheduler | Cosine |\n| Warmup ratio | `0.03` |\n| Training precision | bfloat16 with TF32 enabled |\n| Gradient checkpointing | Enabled for language and vision/audio components |\n| Sequence packing | Disabled |\n| Truncation strategy | Delete over-length examples |\n| Evaluation/save interval | 500 steps |\n| Random and data seeds | 13 |\n\nThe run was resumed from checkpoints during development, and the configured\nmaximum sequence length was reduced from 32,768 to 30,000 and finally 28,000.\nThe data statistics above describe the final prepared 28,000-token manifest;\nthey should not be interpreted as an exact record of the manifest state at\nevery earlier resumed stage.\n\n## Evaluation\n\nCheckpoints were ranked by word error rate on an internal held-out Estonian ASR\nset. Generation used greedy decoding (`temperature=0`) with up to 8,192 new\ntokens.\n\n| Checkpoint | WER | Reference words |\n|---:|---:|---:|\n| **4,500** | **5.05%** | 9,085 |\n\nThe validation set contains only 10 recordings. These figures are useful for\ncheckpoint selection but should not be treated as a broad estimate of Estonian\nASR quality or as directly comparable with public benchmark results.\n\n## Toolkits and environment\n\nThe recorded environment for the final training stage included:\n\n| Toolkit | Version or role |\n|---|---|\n| ms-swift | 4.4.2; supervised fine-tuning and evaluation loop |\n| Transformers | 4.57.6; Voxtral model and processor |\n| PyTorch | 2.10.0 |\n| Datasets | 3.6.0 |\n| Accelerate | 1.12.0 |\n| Mistral Common | 1.11.7 |\n| kaldiio | 2.18.1; reading FLAC `ark` audio |\n| SoundFile | 0.13.1 |\n| Safetensors | 0.7.0 |\n| Weights & Biases | 0.27.2; experiment tracking |\n| CUDA | 13.2 |\n| Slurm | Distributed job launch and resource allocation |\n\nA local ms-swift plugin supplied Voxtral dataset integration and support for\nthe repository's `ark:<path>:<offset>` audio references.\n\n## Limitations\n\n- The model can hallucinate, omit, repeat, or incorrectly normalize speech.\n- Performance may degrade for dialects, code-switching, overlapping speakers,\n  noise, distant microphones, music, or domains underrepresented in training.\n- The English outputs were trained on machine-generated references and may\n  inherit translation errors.\n- Generated summaries and answers are not guaranteed to be factually faithful\n  to the recording.\n- Training data may contain personal names, opinions, and other information\n  present in public broadcasts or parliamentary speech. Outputs should be\n  reviewed before publication or consequential use.\n\n## Acknowledgements\n\nThe model builds on Mistral AI's\n[`Voxtral Mini 3B 2507`](https://huggingface.co/mistralai/Voxtral-Mini-3B-2507).\nSee the upstream model card for architecture details, original capabilities,\nusage requirements, and base-model limitations.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "mistralai/Voxtral-Mini-3B-2507"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_understanding_reasoning": 10,
+        "speech_models": 7
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio understanding",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition, speech translation",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "stabilityai/stable-audio-3-optimized",
+      "author": "stabilityai",
+      "created_at": "2026-05-18",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "stable-audio-3",
+        "tflite",
+        "onnx",
+        "audio-generation",
+        "music",
+        "sound-effects",
+        "diffusion",
+        "text-to-audio",
+        "en",
+        "arxiv:2605.17991",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 13017,
+      "likes": 37,
+      "trending_score": 0.0,
+      "library_name": "stable-audio-3",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/stabilityai/stable-audio-3-optimized",
+      "card_text": "",
+      "arxiv_ids": [
+        "2605.17991"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license other",
+        "community likes 37"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "FlexiSLM/FlexiSLM-7B-Stage2",
+      "author": "FlexiSLM",
+      "created_at": "2026-08-20",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "parallel_s2s",
+        "text-generation",
+        "speech",
+        "spoken-language-model",
+        "audio",
+        "tts",
+        "asr",
+        "flexislm",
+        "text-to-speech",
+        "arxiv:2606.31247",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 37,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/FlexiSLM/FlexiSLM-7B-Stage2",
+      "card_text": "",
+      "arxiv_ids": [
+        "2606.31247"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "audio_language_models": 12,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: spoken language model",
+        "model card links an arXiv paper",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "OPPOer/CuteTTS-distill",
+      "author": "OPPOer",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "cutetts",
+        "text-to-speech",
+        "voice-cloning",
+        "en",
+        "zh",
+        "fr",
+        "de",
+        "es",
+        "arxiv:2608.08638",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 14,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/OPPOer/CuteTTS-distill",
+      "card_text": "",
+      "arxiv_ids": [
+        "2608.08638"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "OPPOer/CuteTTS",
+      "author": "OPPOer",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "cutetts",
+        "text-to-speech",
+        "voice-cloning",
+        "en",
+        "zh",
+        "fr",
+        "de",
+        "es",
+        "arxiv:2608.08638",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 13,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/OPPOer/CuteTTS",
+      "card_text": "",
+      "arxiv_ids": [
+        "2608.08638"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "taoyy/CosyVoice2-0.5B",
+      "author": "taoyy",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "onnx",
+        "safetensors",
+        "text-to-speech",
+        "TTS",
+        "CosyVoice",
+        "zero-shot",
+        "voice-cloning",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "arxiv:2505.17589",
+        "arxiv:2412.10117",
+        "arxiv:2407.05407",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 36,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/taoyy/CosyVoice2-0.5B",
+      "card_text": "",
+      "arxiv_ids": [
+        "2505.17589",
+        "2412.10117",
+        "2407.05407"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "sharrnah/IndexTTS-2.5-German",
+      "author": "sharrnah",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "indextts",
+        "indextts-2.5",
+        "text-to-speech",
+        "tts",
+        "german",
+        "voice-cloning",
+        "zero-shot",
+        "single-generation",
+        "de",
+        "dataset:facebook/multilingual_librispeech",
+        "dataset:amphion/Emilia-Dataset",
+        "arxiv:2601.03888",
+        "base_model:IndexTeam/IndexTTS-2.5",
+        "base_model:finetune:IndexTeam/IndexTTS-2.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "indextts",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/sharrnah/IndexTTS-2.5-German",
+      "card_text": "",
+      "arxiv_ids": [
+        "2601.03888"
+      ],
+      "datasets": [
+        "facebook/multilingual_librispeech",
+        "amphion/Emilia-Dataset"
+      ],
+      "base_models": [
+        "IndexTeam/IndexTTS-2.5"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ModelsLab/midashenglm-gen-wer-lora",
+      "author": "ModelsLab",
+      "created_at": "2026-08-23",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "peft",
+        "safetensors",
+        "audio-generation",
+        "text-to-audio",
+        "lora",
+        "flow-matching",
+        "dataset:mythicinfinity/libritts_r",
+        "dataset:mispeech/MECAT-Caption",
+        "arxiv:2608.11804",
+        "base_model:mispeech/midashenglm-gen",
+        "base_model:adapter:mispeech/midashenglm-gen",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 264,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "peft",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/ModelsLab/midashenglm-gen-wer-lora",
+      "card_text": "",
+      "arxiv_ids": [
+        "2608.11804"
+      ],
+      "datasets": [
+        "mythicinfinity/libritts_r",
+        "mispeech/MECAT-Caption"
+      ],
+      "base_models": [
+        "mispeech/midashenglm-gen"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "loudreader/loudr-1",
+      "author": "loudreader",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "loudkit",
+        "coreml",
+        "onnx",
+        "text-to-speech",
+        "voice-cloning",
+        "on-device",
+        "en",
+        "es",
+        "de",
+        "pt",
+        "fr",
+        "it",
+        "pl",
+        "nl",
+        "sv",
+        "da",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 45,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "loudkit",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/loudreader/loudr-1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "telecomadm1145/Kiseki-TTS-1.1",
+      "author": "telecomadm1145",
+      "created_at": "2026-08-20",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "mamba2_s2s",
+        "text2text-generation",
+        "text-to-speech",
+        "mamba2",
+        "state-space-model",
+        "japanese",
+        "neural-audio-codec",
+        "custom_code",
+        "ja",
+        "dataset:telecomadm1145/test14",
+        "dataset:telecomadm1145/test13",
+        "base_model:telecomadm1145/Kiseki-1.1-0.3B",
+        "base_model:finetune:telecomadm1145/Kiseki-1.1-0.3B",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 38,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/telecomadm1145/Kiseki-TTS-1.1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "telecomadm1145/test14",
+        "telecomadm1145/test13"
+      ],
+      "base_models": [
+        "telecomadm1145/Kiseki-1.1-0.3B"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "generative_music_audio": 12,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: neural audio codec",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "maanka2/Audio8-TTS-Preview-0.1b-Pruned",
+      "author": "maanka2",
+      "created_at": "2026-08-25",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arktts",
+        "feature-extraction",
+        "audio",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot",
+        "multilingual",
+        "custom_code",
+        "zh",
+        "en",
+        "de",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/maanka2/Audio8-TTS-Preview-0.1b-Pruned",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "maanka2/Audio8-TTS-Preview-0.1b",
+      "author": "maanka2",
+      "created_at": "2026-08-25",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arktts",
+        "feature-extraction",
+        "audio",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot",
+        "multilingual",
+        "custom_code",
+        "zh",
+        "en",
+        "de",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/maanka2/Audio8-TTS-Preview-0.1b",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "xingguangcuican6666/arona-sovits",
+      "author": "xingguangcuican6666",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gpt-sovits",
+        "text-to-speech",
+        "tts",
+        "arona",
+        "blue-archive",
+        "voice-cloning",
+        "chinese",
+        "japanese",
+        "multilingual",
+        "zh",
+        "ja",
+        "en",
+        "license:gpl-3.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "gpt-sovits",
+      "license": "gpl-3.0",
+      "gated": false,
+      "url": "https://huggingface.co/xingguangcuican6666/arona-sovits",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license gpl-3.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "notmax123/Fish-Audio-S2-Pro-He",
+      "author": "notmax123",
+      "created_at": "2026-08-14",
+      "last_modified": "2026-08-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "fish-speech",
+        "fish_qwen3_omni",
+        "text-to-speech",
+        "tts",
+        "hebrew",
+        "s2-pro",
+        "lora",
+        "voice-cloning",
+        "he",
+        "en",
+        "base_model:fishaudio/s2-pro",
+        "base_model:adapter:fishaudio/s2-pro",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 83,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "fish-speech",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/notmax123/Fish-Audio-S2-Pro-He",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/s2-pro"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mlboydaisuke/Qwen2.5-Omni-3B-Audio-CoreAI",
+      "author": "mlboydaisuke",
+      "created_at": "2026-06-19",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "coreai",
+        "coreai-aimodel",
+        "core-ai",
+        "audio",
+        "audio-understanding",
+        "on-device",
+        "apple",
+        "qwen2.5-omni",
+        "audio-text-to-text",
+        "base_model:Qwen/Qwen2.5-Omni-3B",
+        "base_model:finetune:Qwen/Qwen2.5-Omni-3B",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 546,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "coreai",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/mlboydaisuke/Qwen2.5-Omni-3B-Audio-CoreAI",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen2.5-Omni-3B"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "audio_understanding_reasoning": 12
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio understanding, audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "florianvoss/whisper-large-v3-turbo-a16w8",
+      "author": "florianvoss",
+      "created_at": "2026-08-25",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "llima",
+        "whisper",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-translation",
+        "embedded",
+        "sima",
+        "modalix",
+        "a16w8",
+        "en",
+        "zh",
+        "de",
+        "es",
+        "ru",
+        "ko",
+        "fr",
+        "ja",
+        "pt",
+        "tr",
+        "pl",
+        "ca",
+        "nl",
+        "ar",
+        "sv",
+        "it",
+        "id",
+        "hi",
+        "fi",
+        "vi",
+        "he",
+        "uk",
+        "el",
+        "ms",
+        "cs",
+        "ro",
+        "da",
+        "hu",
+        "ta",
+        "no",
+        "th",
+        "ur",
+        "hr",
+        "bg",
+        "lt",
+        "la",
+        "mi",
+        "ml",
+        "cy",
+        "sk",
+        "te",
+        "fa",
+        "lv",
+        "bn",
+        "sr",
+        "az",
+        "sl",
+        "kn",
+        "et",
+        "mk",
+        "br",
+        "eu",
+        "is",
+        "hy",
+        "ne",
+        "mn",
+        "bs",
+        "kk",
+        "sq",
+        "sw",
+        "gl",
+        "mr",
+        "pa",
+        "si",
+        "km",
+        "sn",
+        "yo",
+        "so",
+        "af",
+        "oc",
+        "ka",
+        "be",
+        "tg",
+        "sd",
+        "gu",
+        "am",
+        "yi",
+        "lo",
+        "uz",
+        "fo",
+        "ht",
+        "ps",
+        "tk",
+        "nn",
+        "mt",
+        "sa",
+        "lb",
+        "my",
+        "bo",
+        "tl",
+        "mg",
+        "as",
+        "tt",
+        "haw",
+        "ln",
+        "ha",
+        "ba",
+        "jw",
+        "su",
+        "yue",
+        "arxiv:2212.04356",
+        "base_model:openai/whisper-large-v3-turbo",
+        "base_model:quantized:openai/whisper-large-v3-turbo",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "llima",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/florianvoss/whisper-large-v3-turbo-a16w8",
+      "card_text": "",
+      "arxiv_ids": [
+        "2212.04356"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openai/whisper-large-v3-turbo"
+      ],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "florianvoss/whisper-medium-a16w8",
+      "author": "florianvoss",
+      "created_at": "2026-08-24",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "llima",
+        "whisper",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-translation",
+        "embedded",
+        "sima",
+        "modalix",
+        "a16w8",
+        "en",
+        "zh",
+        "de",
+        "es",
+        "ru",
+        "ko",
+        "fr",
+        "ja",
+        "pt",
+        "tr",
+        "pl",
+        "ca",
+        "nl",
+        "ar",
+        "sv",
+        "it",
+        "id",
+        "hi",
+        "fi",
+        "vi",
+        "he",
+        "uk",
+        "el",
+        "ms",
+        "cs",
+        "ro",
+        "da",
+        "hu",
+        "ta",
+        "no",
+        "th",
+        "ur",
+        "hr",
+        "bg",
+        "lt",
+        "la",
+        "mi",
+        "ml",
+        "cy",
+        "sk",
+        "te",
+        "fa",
+        "lv",
+        "bn",
+        "sr",
+        "az",
+        "sl",
+        "kn",
+        "et",
+        "mk",
+        "br",
+        "eu",
+        "is",
+        "hy",
+        "ne",
+        "mn",
+        "bs",
+        "kk",
+        "sq",
+        "sw",
+        "gl",
+        "mr",
+        "pa",
+        "si",
+        "km",
+        "sn",
+        "yo",
+        "so",
+        "af",
+        "oc",
+        "ka",
+        "be",
+        "tg",
+        "sd",
+        "gu",
+        "am",
+        "yi",
+        "lo",
+        "uz",
+        "fo",
+        "ht",
+        "ps",
+        "tk",
+        "nn",
+        "mt",
+        "sa",
+        "lb",
+        "my",
+        "bo",
+        "tl",
+        "mg",
+        "as",
+        "tt",
+        "haw",
+        "ln",
+        "ha",
+        "ba",
+        "jw",
+        "su",
+        "arxiv:2212.04356",
+        "base_model:openai/whisper-medium",
+        "base_model:quantized:openai/whisper-medium",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "llima",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/florianvoss/whisper-medium-a16w8",
+      "card_text": "",
+      "arxiv_ids": [
+        "2212.04356"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openai/whisper-medium"
+      ],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "florianvoss/whisper-small-a16w8",
+      "author": "florianvoss",
+      "created_at": "2026-07-29",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "llima",
+        "whisper",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-translation",
+        "embedded",
+        "sima",
+        "modalix",
+        "a16w8",
+        "en",
+        "zh",
+        "de",
+        "es",
+        "ru",
+        "ko",
+        "fr",
+        "ja",
+        "pt",
+        "tr",
+        "pl",
+        "ca",
+        "nl",
+        "ar",
+        "sv",
+        "it",
+        "id",
+        "hi",
+        "fi",
+        "vi",
+        "he",
+        "uk",
+        "el",
+        "ms",
+        "cs",
+        "ro",
+        "da",
+        "hu",
+        "ta",
+        "no",
+        "th",
+        "ur",
+        "hr",
+        "bg",
+        "lt",
+        "la",
+        "mi",
+        "ml",
+        "cy",
+        "sk",
+        "te",
+        "fa",
+        "lv",
+        "bn",
+        "sr",
+        "az",
+        "sl",
+        "kn",
+        "et",
+        "mk",
+        "br",
+        "eu",
+        "is",
+        "hy",
+        "ne",
+        "mn",
+        "bs",
+        "kk",
+        "sq",
+        "sw",
+        "gl",
+        "mr",
+        "pa",
+        "si",
+        "km",
+        "sn",
+        "yo",
+        "so",
+        "af",
+        "oc",
+        "ka",
+        "be",
+        "tg",
+        "sd",
+        "gu",
+        "am",
+        "yi",
+        "lo",
+        "uz",
+        "fo",
+        "ht",
+        "ps",
+        "tk",
+        "nn",
+        "mt",
+        "sa",
+        "lb",
+        "my",
+        "bo",
+        "tl",
+        "mg",
+        "as",
+        "tt",
+        "haw",
+        "ln",
+        "ha",
+        "ba",
+        "jw",
+        "su",
+        "arxiv:2212.04356",
+        "base_model:openai/whisper-small",
+        "base_model:quantized:openai/whisper-small",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "llima",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/florianvoss/whisper-small-a16w8",
+      "card_text": "",
+      "arxiv_ids": [
+        "2212.04356"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openai/whisper-small"
+      ],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "okestro-ai-lab/FastSLM",
+      "author": "okestro-ai-lab",
+      "created_at": "2025-10-27",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "fastslm",
+        "feature-extraction",
+        "audio",
+        "text-generation",
+        "audio-text-to-text",
+        "custom_code",
+        "en",
+        "ko",
+        "base_model:Qwen/Qwen3-4B",
+        "base_model:finetune:Qwen/Qwen3-4B",
+        "license:apache-2.0",
+        "eval-results",
+        "region:us"
+      ],
+      "downloads": 285,
+      "likes": 4,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/okestro-ai-lab/FastSLM",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-4B"
+      ],
+      "variants": [
+        "okestro-ai-lab/FastSLM-ASR"
+      ],
+      "score": 11,
+      "topic_scores": {
+        "audio_understanding_reasoning": 10
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio-text",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Imbatmann/matcha-tts-nepali-single-v1",
+      "author": "Imbatmann",
+      "created_at": "2026-08-25",
+      "last_modified": "2026-08-25",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "matcha-tts",
+        "text-to-speech",
+        "tts",
+        "nepali",
+        "devanagari",
+        "single-speaker",
+        "flow-matching",
+        "hifi-gan",
+        "speech-synthesis",
+        "ne",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "matcha-tts",
+      "license": "cc-by-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/Imbatmann/matcha-tts-nepali-single-v1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
