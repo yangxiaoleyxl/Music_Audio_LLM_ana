@@ -1,0 +1,697 @@
+{
+  "generated_at": "2026-08-30",
+  "window_start": "2026-08-23",
+  "source_counts": {
+    "arxiv": 64,
+    "semantic_scholar": 76
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "665d94d1acf90206b4374830b93a03ac3588f820",
+      "title": "C-MCSS-Mamba: Counterfactual Mechanism-Contrastive Selective Scan Within Mamba for Block-Causal Speech Deepfake Detection",
+      "abstract": "Speech deepfake detection (SDD) is commonly formulated as offline utterance-level binary classification, which limits early decisions in streaming communication and provides little mechanism-level evidence for a spoofing prediction. We propose C-MCSS-Mamba, a block-causal SDD framework that processes fixed-duration audio blocks with a partially fine-tuned XLS-R frontend and carries detection states across blocks through Mamba. Its selective scan is replaced by the proposed Counterfactual Mechanism-Contrastive Selective Scan (C-MCSS), which maintains shared, text-to-speech (TTS), and voice conversion (VC) states. Frame-level TTS/VC hypotheses directly modulate state update, retention, and forgetting. A Causal Counterfactual Evidence Reliability Module (C-CERM) further suppresses transient mechanism evidence through a recurrent reliability state that adaptively regulates these dynamics. Model-internal TTS/VC evidence is obtained by counterfactually disabling the corresponding recurrent state and measuring the resulting spoof-logit decrease. The model produces prefix-level spoof decisions and contribution-based state-dependence measures; these measures only characterize the model’s internal decision process, and do not identify the physical speech generation process of an individual sample. A joint objective combines detection, early-prefix, mechanism, contrastive, and intervention supervision. Experiments demonstrate competitive detection performance, achieving 0.47% EER on the ASVspoof 2019 LA evaluation set while maintaining effectiveness across four cross-dataset benchmarks.",
+      "authors": [
+        "Gao-Peng Zhang",
+        "Shi-Dong Liu",
+        "Deng-Tao Zhang",
+        "Liang Tang"
+      ],
+      "published": "2026-08-24",
+      "updated": "2026-08-24",
+      "url": "https://www.semanticscholar.org/paper/665d94d1acf90206b4374830b93a03ac3588f820",
+      "pdf_url": "https://doi.org/10.3390/app16178413",
+      "doi": "10.3390/app16178413",
+      "venue": "Applied Sciences",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 22,
+      "topic_scores": {
+        "speech_models": 10,
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: speech deepfake",
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "Zidane29/MiniMax-Music3",
+      "author": "Zidane29",
+      "created_at": "2026-08-30",
+      "last_modified": "2026-08-30",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "minimax_music3",
+        "music-generation",
+        "text-to-music",
+        "pytorch",
+        "sglang-omni",
+        "text-to-audio",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Zidane29/MiniMax-Music3",
+      "card_text": "---\nlibrary_name: diffusers\npipeline_tag: text-to-audio\ntags:\n  - music-generation\n  - text-to-music\n  - pytorch\n  - sglang-omni\n---\n\n<div align=\"center\">\n  <img width=\"100%\" src=\"figures/Music3.png\" alt=\"MiniMax\">\n</div>\n<p align=\"center\">\n  <a href=\"https://agent.minimax.io/\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Agent-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Agent\"></a>\n  <a href=\"https://platform.minimax.io/docs/guides/text-generation\" target=\"_blank\"><img src=\"https://img.shields.io/badge/API-FF6C37?logo=minimax&logoColor=white\" alt=\"API\"></a>\n  <a href=\"https://www.minimax.io\" target=\"_blank\"><img src=\"https://img.shields.io/badge/MiniMax%20Website-FF6C37?logo=minimax&logoColor=white\" alt=\"MiniMax Website\"></a>\n  <br>\n  <a href=\"https://modelscope.cn/organization/minimax\" target=\"_blank\" rel=\"noopener noreferrer\"><img alt=\"ModelScope MiniMax AI\" src=\"https://img.shields.io/badge/ModelScope-MiniMax%20AI-white?labelColor=%23EF3D5D\"></a>\n  <a href=\"https://platform.minimaxi.com/docs/faq/contact-us\" target=\"_blank\"><img src=\"https://img.shields.io/badge/WeChat-07C160?logo=wechat&logoColor=white\" alt=\"WeChat\"></a>\n  <a href=\"https://discord.com/invite/DPC4AHFCBw\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white\" alt=\"Discord\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black\" alt=\"Hugging Face\"></a>\n  <a href=\"https://github.com/MiniMax-AI/MiniMax-Music3\" target=\"_blank\"><img src=\"https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white\" alt=\"GitHub\"></a>\n  <a href=\"https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/LICENSE\" target=\"_blank\"><img src=\"https://img.shields.io/badge/LICENSE-4CAF50?logo=creativecommons&logoColor=white\" alt=\"LICENSE\"></a>\n</p>\n\n# MiniMax Music 3\n\n**MiniMax Music 3** is a high-performance music generation model for creating complete songs up to **five minutes** long. Conditioned on lyrics and a detailed music description, it generates structurally coherent songs with expressive vocals, evolving arrangements, and stable long-form audio quality.\n\nMiniMax Music 3 combines an **8B Global LLM** for long-range musical structure, a **0.6B Local LLM** for frame-level acoustic detail, and a continuous hidden-state synthesis system based on **Flow Matching** and **Flow-VAE**. The model produces 32 kHz, 16-bit stereo WAV audio.\n## Demo\n\nExplore music generation examples on the [MiniMax Music 3 Demo](https://minimax-ai.github.io/music3-demo/).\n\n<p align=\"center\">\n  <img width=\"100%\" src=\"figures/music3.0-Architecture-Diagram.png\">\n</p>\n\n## Complete Songs with Long-Range Coherence\n\nMiniMax Music 3 natively supports full-song generation up to five minutes. The model maintains musical themes, rhythm, vocal identity, and arrangement progression across long sequences, enabling complete structures such as intro, verse, pre-chorus, chorus, bridge, instrumental break, and outro.\n\n## Fine-Grained Music Control\n\nThe model accepts two complementary inputs:\n\n- **Lyrics** define the words to be sung and may include explicit section tags such as `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Post-Chorus]`, `[Bridge]`, `[Instrumental]`, `[Solo]`, and `[Outro]`.\n- **Music description** defines the musical style, emotional progression, vocal performance, instrumentation, arrangement, and production profile.\n\nFor precise control, we recommend using a Structured Caption with three sections:\n\n- **Global Metadata**: genre, subgenre, BPM, key, scale, emotional progression, listening scenario, and production profile.\n- **Vocal Details**: vocal gender, timbre, performance style, harmony, backing vocals, and vocal effects.\n- **Arrangement**: primary and secondary instruments, section-level instrument evolution, groove, bass, percussion, textures, and spatial effects.\n\nThis representation allows the model to follow not only a global style, but also the musical development of the song over time.\n\n## Hybrid-LM\n\nMiniMax Music 3 uses a hierarchical autoregressive architecture that separates global musical modeling from local acoustic modeling.\n\n- The **Global LLM (8B)** predicts the first RVQ codebook frame by frame and models the song's long-range semantic and structural progression.\n- The **Local LLM (0.6B)** predicts the remaining acoustic codebooks within each frame and restores fine-grained acoustic information.\n\nThe Global LLM is initialized from Qwen3-8B. During training, its embedding and output layers are first adapted to semantic music tokens. The Global and Local LLMs are then jointly trained to model all RVQ codebooks.\n\n## Continuous Hidden-State Synthesis\n\nInstead of decoding only from discrete RVQ tokens, the synthesis module fuses the final hidden states of the Global and Local LLMs. These continuous representations preserve richer acoustic information for vocal articulation, instrumental texture, and temporal continuity.\n\nThe synthesis path is:\n\n```text\nGlobal and Local LLM hidden states\n                ↓\n       Hidden-state fusion\n                ↓\n     Flow Matching (2.4B)\n                ↓\n        Flow-VAE latent\n                ↓\n    Flow-VAE Decoder (123M)\n                ↓\n       32 kHz stereo audio\n```\n\nThe Flow-VAE architecture is adapted from MiniMax Speech and retrained for the dynamic range and spectral characteristics of music.\n\n## Music Tokenizer\n\nThe training tokenizer uses eight layers of Residual Vector Quantization (RVQ):\n\n- The first semantic codebook contains **16,384** entries and captures the core musical semantics and structure.\n- The remaining seven acoustic codebooks contain **1,024** entries each and represent residual acoustic details.\n\nTraining first optimizes the semantic codebook, then jointly trains all eight codebooks. At inference time, waveform synthesis uses the fused LLM hidden states and does not require the discrete tokenizer decoder.\n\n## How to Use\n\nMiniMax Music 3 is supported by [SGLang-Omni](https://github.com/sgl-project/sglang-omni). Follow the official [installation guide](https://sgl-project.github.io/sglang-omni/get_started/installation.html) to prepare the runtime environment.\n\n### Download the Model\n\n```bash\nhf download MiniMaxAI/MiniMax-Music3 --local-dir /path/to/minimax_ttm\n```\n\nWe recommend the following inference frameworks to serve the model:\n\n- [SGLang](https://docs.sglang.io/) \\- see [cookbook](https://sgl-project.github.io/sglang-omni/cookbook/minimax_music3.html) \n\n- [diffusers](https://github.com/huggingface/diffusers) \\- see [diffusers docs](https://github.com/huggingface/diffusers/blob/minimax-music3-integration/docs/source/en/api/pipelines/minimax_music3.md)\n\n- [ComfyUI](https://github.com/Comfy-Org/ComfyUI) see [comfyUI tutorials](https://docs.comfy.org/tutorials/audio/minimax/minimax-music-3)\n\n\n### Serve with SGLang-Omni\n\n```bash\nsgl-omni serve --model-path MiniMaxAI/MiniMax-Music3 --port 8000\n```\n\n### Generate Music\n\nThe service uses the shared speech API. Put the lyrics in `input` and the music description in `instructions`. Put lyric structure tags such as `[Verse]` and `[Chorus]` on their own lines.\n\n```bash\ncurl http://127.0.0.1:8000/v1/audio/speech \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"model\": \"MiniMaxAI/MiniMax-Music3\",\n    \"input\": \"[Verse]\\nMorning light filtering through the pine\\n[Chorus]\\nSoftly the world begins to breathe\",\n    \"instructions\": \"A warm acoustic pop song with intimate female vocals, fingerpicked guitar, soft piano, and a gradual emotional build into a wide final chorus.\",\n    \"response_format\": \"wav\",\n    \"seed\": 7,\n    \"max_new_tokens\": 750,\n    \"stream\": false\n  }' \\\n  --output minimax_music3.wav\n```\n\n`max_new_tokens` sets the maximum number of audio frames at 25 frames per second. Generation may finish before this limit when the model emits an end-of-audio token. The response is a 32 kHz, 16-bit stereo WAV file.\n\n### Reproducible Example\n\nThe following end-to-end example contains the complete lyrics, music description, and generation parameters used to produce the reference audio.\n\n| Use case | Request | Result |\n|---|---|---|\n| Text-to-music | [View script](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/scripts/end_to_end/minimax_ttm_test.py) | [minimax_ttm.wav](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/assets/minimax_ttm.wav) |\n\n## 🧨 Diffusers\n\nMiniMax Music 3 is available as a [diffusers](https://github.com/huggingface/diffusers) modular pipeline. Until [huggingface/diffusers#14456](https://github.com/huggingface/diffusers/pull/14456) is merged, install diffusers from the PR commit:\n\nThe snippet below fits 24GB+ VRAM GPUs\n\n```bash\npip install git+https://github.com/huggingface/diffusers@dafe3733fcfdbf3c48915fe77be3aef65b5d6a2d transformers accelerate soundfile\n```\n\n```python\nimport soundfile as sf\nimport torch\nfrom diffusers import ModularPipeline\n\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\")\npipe.load_components(dtype=torch.bfloat16)\npipe.to(\"cuda\")\n\nlyrics = \"\"\"[verse]\nMorning light filtering through the pine\nEvery quiet street is yours and mine\n[chorus]\nSoftly the world begins to breathe\"\"\"\n\nprompt = (\n    \"Genre: acoustic pop. BPM: 96. Key: C major. Warm and intimate, building gently into the chorus. \"\n    \"Vocals: soft female lead, close and breathy, light stacked harmonies in the chorus. \"\n    \"Arrangement: fingerpicked guitar and soft piano; brushed drums and upright bass enter in the chorus.\"\n)\n\naudio = pipe(\n    prompt=prompt,\n    lyrics=lyrics,\n    audio_duration=60.0,\n    generator=torch.Generator(\"cuda\").manual_seed(7),\n    output=\"audios\",\n)[0]\n\nsf.write(\"song.wav\", audio.T.float().cpu().numpy(), pipe.sampling_rate)\n```\n\n### Low VRAM\n\nThe full precision fits under 24GB of VRAM. With automatic CPU offloading, generation takes in ~22 GB; additionally streaming the language model layer by layer makes it fit even 8 GB video cards:\n\n```python\nimport torch\nfrom diffusers import ComponentsManager, ModularPipeline\nfrom diffusers.hooks import apply_group_offloading\n\nmanager = ComponentsManager()\nmanager.enable_auto_cpu_offload(device=\"cuda\")\npipe = ModularPipeline.from_pretrained(\"MiniMaxAI/MiniMax-Music3\", components_manager=manager)\npipe.load_components(dtype=torch.bfloat16)\n\n# Only needed below ~22 GB of VRAM — slower, but fits in 8 GB.\napply_group_offloading(\n    pipe.language_model, onload_device=torch.device(\"cuda\"), offload_type=\"leaf_level\", use_stream=True\n)\n\n\n```\n\n## Prompt Enhancement\n\nA concise natural-language description can be used directly. For richer prompts and more precise control, use the provided [`music-caption-rewriter`](https://github.com/MiniMax-AI/MiniMax-Music3/tree/main/skills/music-caption-rewriter) skill to expand it into a Structured Caption containing `Global Metadata`, `Vocal Details`, and `Arrangement`. The skill preserves musical instructions attached to lyric section tags in the arrangement description while keeping the lyric text in the lyrics input.\n\n```bash\nnpx skills add MiniMax-AI/MiniMax-Music3 --skill music-caption-rewriter\n```\n\n## Limitations\n\n- Inference requires CUDA.\n- Only non-streaming generation is currently supported.\n- The tokenized text prompt is limited to 5,000 tokens.\n- Audio generation is limited to 9,000 acoustic frames.\n- Section tags and music descriptions provide generative control rather than strict symbolic guarantees. The generated tempo, key, instrumentation, lyrics, and song structure may not always match every requested detail exactly.\n\n## Contact Us\n\nContact us at [model@minimax.io](mailto:model@minimax.io).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 46,
+      "topic_scores": {
+        "generative_music_audio": 46
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "snkii/Sori-1B",
+      "author": "snkii",
+      "created_at": "2026-08-28",
+      "last_modified": "2026-08-30",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "sori",
+        "feature-extraction",
+        "audio",
+        "audio-language-model",
+        "audio-understanding",
+        "multiple-choice",
+        "captioning",
+        "asr",
+        "from-scratch",
+        "audio-text-to-text",
+        "custom_code",
+        "en",
+        "base_model:nvidia/audio-flamingo-next-hf",
+        "base_model:finetune:nvidia/audio-flamingo-next-hf",
+        "license:other",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 96,
+      "likes": 7,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/snkii/Sori-1B",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "nvidia/audio-flamingo-next-hf"
+      ],
+      "variants": [],
+      "score": 39,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "audio_understanding_reasoning": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model",
+        "Audio Understanding & Reasoning: audio understanding, audio-text (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "theoracleguy/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+      "author": "theoracleguy",
+      "created_at": "2026-08-30",
+      "last_modified": "2026-08-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx-audio",
+        "safetensors",
+        "qwen3_tts",
+        "mlx",
+        "text-to-speech",
+        "speech",
+        "speech generation",
+        "voice cloning",
+        "tts",
+        "license:apache-2.0",
+        "4-bit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx-audio",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/theoracleguy/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [
+        "theoracleguy/Qwen3-TTS-12Hz-1.7B-Base-bf16"
+      ],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "zeroweight-ai/ZeroTTS",
+      "author": "zeroweight-ai",
+      "created_at": "2026-08-15",
+      "last_modified": "2026-08-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "text-to-speech",
+        "tts",
+        "vietnamese",
+        "onnxruntime",
+        "zero-shot",
+        "speech-synthesis",
+        "voice-cloning",
+        "vietnamese-tts",
+        "tieng-viet",
+        "vi",
+        "arxiv:2602.10934",
+        "license:mit",
+        "model-index",
+        "region:us"
+      ],
+      "downloads": 646,
+      "likes": 3,
+      "trending_score": 0.0,
+      "library_name": "onnx",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/zeroweight-ai/ZeroTTS",
+      "card_text": "",
+      "arxiv_ids": [
+        "2602.10934"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "aufklarer/Sidon-CoreML",
+      "author": "aufklarer",
+      "created_at": "2026-06-14",
+      "last_modified": "2026-08-30",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "coreml",
+        "sidon",
+        "speech-restoration",
+        "dereverberation",
+        "speech-enhancement",
+        "voice-cloning",
+        "on-device",
+        "audio-to-audio",
+        "multilingual",
+        "arxiv:2509.17052",
+        "base_model:sarulab-speech/sidon-v0.1",
+        "base_model:quantized:sarulab-speech/sidon-v0.1",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 2262,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "coreml",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/aufklarer/Sidon-CoreML",
+      "card_text": "",
+      "arxiv_ids": [
+        "2509.17052"
+      ],
+      "datasets": [],
+      "base_models": [
+        "sarulab-speech/sidon-v0.1"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "telecomadm1145/Kiseki-TTS-1.2",
+      "author": "telecomadm1145",
+      "created_at": "2026-08-29",
+      "last_modified": "2026-08-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "mamba2_s2s",
+        "text2text-generation",
+        "text-to-speech",
+        "mamba2",
+        "state-space-model",
+        "japanese",
+        "neural-audio-codec",
+        "custom_code",
+        "ja",
+        "dataset:telecomadm1145/test14",
+        "dataset:telecomadm1145/test13",
+        "base_model:telecomadm1145/Kiseki-1.1-0.3B",
+        "base_model:finetune:telecomadm1145/Kiseki-1.1-0.3B",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 15,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/telecomadm1145/Kiseki-TTS-1.2",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "telecomadm1145/test14",
+        "telecomadm1145/test13"
+      ],
+      "base_models": [
+        "telecomadm1145/Kiseki-1.1-0.3B"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "generative_music_audio": 12,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: neural audio codec",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "smcleod/Breeze-TTS-2-int8",
+      "author": "smcleod",
+      "created_at": "2026-08-30",
+      "last_modified": "2026-08-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pytorch",
+        "safetensors",
+        "breeze",
+        "text-to-speech",
+        "voice-cloning",
+        "quantized",
+        "int8",
+        "torchao",
+        "en",
+        "base_model:BreezeBlue/Breeze-TTS-2",
+        "base_model:quantized:BreezeBlue/Breeze-TTS-2",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/smcleod/Breeze-TTS-2-int8",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "BreezeBlue/Breeze-TTS-2"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "AMAImedia/NOESIS-Talker-Combo-LLM2-ASR2-BF16",
+      "author": "AMAImedia",
+      "created_at": "2026-08-27",
+      "last_modified": "2026-08-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "qwen3_tts",
+        "qwen3-tts",
+        "qwen3-omni",
+        "talker",
+        "voice-cloning",
+        "zero-shot-voice-cloning",
+        "text-to-speech",
+        "112-languages",
+        "multilingual",
+        "lora-adapters",
+        "noesis",
+        "noesis-dhcf-fno",
+        "amaimedia",
+        "production-bundle",
+        "bf16",
+        "voice-router-swap",
+        "r-talker-112lang-per-family-swap-not-merge",
+        "r-voice-router-swap-not-merge",
+        "r-apache-clean",
+        "af",
+        "am",
+        "ar",
+        "as",
+        "ast",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "bs",
+        "ca",
+        "ceb",
+        "ckb",
+        "cs",
+        "cy",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "ff",
+        "fi",
+        "fil",
+        "fr",
+        "ga",
+        "gl",
+        "gn",
+        "gu",
+        "ha",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "hy",
+        "id",
+        "ig",
+        "is",
+        "it",
+        "ja",
+        "jv",
+        "ka",
+        "kam",
+        "kea",
+        "kk",
+        "km",
+        "kmr",
+        "kn",
+        "ko",
+        "ky",
+        "lb",
+        "lg",
+        "ln",
+        "lo",
+        "luo",
+        "lv",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mr",
+        "ms",
+        "mt",
+        "mvy",
+        "my",
+        "lt",
+        "ne",
+        "nl",
+        "no",
+        "nso",
+        "ny",
+        "oc",
+        "om",
+        "or",
+        "pa",
+        "pl",
+        "ps",
+        "pt",
+        "qxp",
+        "ro",
+        "ru",
+        "rw",
+        "sd",
+        "sk",
+        "skr",
+        "sl",
+        "sn",
+        "so",
+        "sr",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "ti",
+        "tk",
+        "tr",
+        "ug",
+        "uk",
+        "umb",
+        "ur",
+        "uz",
+        "vi",
+        "wo",
+        "xh",
+        "yo",
+        "yue",
+        "zh",
+        "zu",
+        "base_model:FINAL-Bench/Darwin-TTS-1.7B-Cross",
+        "base_model:finetune:FINAL-Bench/Darwin-TTS-1.7B-Cross",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 44,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/AMAImedia/NOESIS-Talker-Combo-LLM2-ASR2-BF16",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-1.7B",
+        "Qwen/Qwen3-ASR-1.7B-hf",
+        "FINAL-Bench/Darwin-TTS-1.7B-Cross"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Guile/sopro-v2-turbo",
+      "author": "Guile",
+      "created_at": "2026-08-29",
+      "last_modified": "2026-08-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "sopro",
+        "safetensors",
+        "tts",
+        "voice-cloning",
+        "streaming",
+        "on-device",
+        "text-to-speech",
+        "en",
+        "pt",
+        "fr",
+        "de",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 14,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "sopro",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Guile/sopro-v2-turbo",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "saymynameX1/supertonic-3",
+      "author": "saymynameX1",
+      "created_at": "2026-08-30",
+      "last_modified": "2026-08-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "supertonic",
+        "onnx",
+        "text-to-speech",
+        "speech-synthesis",
+        "tts",
+        "multilingual",
+        "on-device",
+        "en",
+        "ko",
+        "ja",
+        "ar",
+        "bg",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "es",
+        "et",
+        "fi",
+        "fr",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "it",
+        "lt",
+        "lv",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sv",
+        "tr",
+        "uk",
+        "vi",
+        "license:openrail",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "supertonic",
+      "license": "openrail",
+      "gated": false,
+      "url": "https://huggingface.co/saymynameX1/supertonic-3",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license openrail"
+      ],
+      "is_new": true
+    }
+  ]
+}
