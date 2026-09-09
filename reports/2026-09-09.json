@@ -1,0 +1,2166 @@
+{
+  "generated_at": "2026-09-09",
+  "window_start": "2026-09-02",
+  "source_counts": {
+    "arxiv": 71,
+    "semantic_scholar": 21
+  },
+  "errors": [
+    "Semantic Scholar / Audio Understanding & Reasoning: HTTP Error 429: ",
+    "Semantic Scholar / Evaluation, Alignment, Safety & Copyright: HTTP Error 429: "
+  ],
+  "papers": [
+    {
+      "source": "arxiv",
+      "source_id": "2609.07286",
+      "title": "TAD: Token-Adaptive Contrastive Decoding with Confidence-Guided Gating for Hallucination Mitigation in Large Audio-Language Models",
+      "abstract": "Large audio-language models (LALMs) can hallucinate audio objects, answering \"yes\" to absent sound events, thus undermining reliability in audio question answering. We propose Token-Adaptive Decoding (TAD), a training-free strategy for hallucination mitigation that grounds the initial yes/no decision by contrasting logits under real audio with a matched silent reference. TAD introduces a token-adaptive, confidence-guided gate that is decision-critical at the first decoding step and class-conditional on affirmative tokens, using the audio-silent margin to avoid overcorrection when evidence is weak or already sufficient. Experiments on AudioCaps-Hallucination show that, relative to Audio-Aware Decoding (AAD), a contrastive baseline with fixed contrast strength, TAD improves F1 for Qwen2 by 0.059 to 0.117 across Popular, Adversarial, and Random splits, and for Gemma by 0.025 to 0.064, while on Clotho-AQA it raises F1 from 0.810 to 0.816 on Qwen2 and remains comparable to AAD on Gemma.",
+      "authors": [
+        "Heyu Chang",
+        "Nianwen Si",
+        "Hao Zhang",
+        "Wenlin Zhang",
+        "Dan Qu"
+      ],
+      "published": "2026-09-07",
+      "updated": "2026-09-07",
+      "url": "https://arxiv.org/abs/2609.07286",
+      "pdf_url": "https://arxiv.org/pdf/2609.07286v1",
+      "doi": "",
+      "venue": "Accepted to Interspeech 2026",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 21,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 7
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model",
+        "Audio Understanding & Reasoning: audio question answering"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.08948",
+      "title": "Disentangled Global-Local Feature Learning with E-Branchformer for Audio Deepfake Detection",
+      "abstract": "The rapid advancement of voice synthesis technologies such as text-to-speech and voice conversion poses significant threats to speech-based authentication systems, necessitating robust deepfake detection methods. In this work, we propose a novel E-Branchformer-based architecture that effectively leverages self-supervised speech representations for audio deepfake detection. Our model employs parallel branches to simultaneously capture global contextual dependencies through multi-head self-attention and local temporal patterns through convolutional processing. To enhance discriminative capability, we integrate depthwise convolution and Squeeze-and-Excitation modules that enrich the classification token with refined patch token information after feature merging. Extensive experiments on ASVspoof 2021 LA, DF, and In-the-Wild datasets demonstrate state-of-the-art performance with equal error rates of 0.88%, 1.85%, and 6.30% respectively, substantially outperforming existing methods. Comprehensive ablation studies validate that the dual-branch architecture provides complementary discriminative information, Squeeze-and-Excitation Aggregation significantly improves SSL feature integration, and the combination of DWConv and SE modules is critical for effective class token enhancement. The superior performance on real-world scenarios demonstrates strong generalization capability to diverse acoustic conditions and unseen spoofing attacks.",
+      "authors": [
+        "Phuong Tuan Dat",
+        "Ho Bao Thu",
+        "Nguyen Tran Trung",
+        "Pham Viet Hoang",
+        "Nguyen Thi Thu Trang"
+      ],
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08948",
+      "pdf_url": "https://arxiv.org/pdf/2609.08948v1",
+      "doi": "",
+      "venue": "Accepted to SALMA Workshop @ EMNLP 2026",
+      "categories": [
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 5,
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "Speech Generation, Recognition & Dialogue: text-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.06991",
+      "title": "AV-SafetyBench: A Safety Benchmark for Text-to-Audio-Video Generation",
+      "abstract": "Recent text-to-audio-video (T2AV) models jointly generate video, speech, sound effects, and ambience from a single text prompt. This capability poses new challenges for safety evaluation, as unsafe content may be conveyed through the audio track or arise only when the visual and audio tracks are interpreted jointly. Existing safety benchmarks largely focus on either generated video or generated audio in isolation and are therefore not designed to capture these risks. To close this gap, we introduce AV-SafetyBench, the first safety benchmark developed specifically for T2AV generation. AV-SafetyBench comprises a four-axis, 13-category taxonomy and 5,200 manually reviewed prompts that specify visual scenes, speech, and non-speech audio. Our evaluation protocol assesses each output under three views: Full-AV, Video-Only, and Audio-Only. It then uses the Video-Only and Audio-Only judgments to assign Full-AV unsafe outputs to one of four risk sources: Video-Only, Audio-Only, AV-Both, or AV-Joint. We evaluate five open-source T2AV models and validate the automated Full-AV judgments against human annotations. Across the five models, Full-AV Unsafe Rates range from 25.1% to 49.4%. Beyond these aggregate rates, risk-source analysis reveals that, for four of the five models, Audio-Only and AV-Joint cases-unsafe outputs missed by video-only evaluation-account for 41.6-48.3% of Full-AV unsafe outputs for which a risk source could be assigned. In the Cross-Modal Harm Emergence category, AV-Joint accounts for 87.5% of unsafe outputs withan assigned risk source. Together, these findings demonstrate the value of AV-SafetyBench for evaluating T2AV safety across the visual and audio modalities and their interaction.",
+      "authors": [
+        "Suah Choi",
+        "Tae-Young Lee",
+        "Gyeong-Moon Park"
+      ],
+      "published": "2026-09-07",
+      "updated": "2026-09-07",
+      "url": "https://arxiv.org/abs/2609.06991",
+      "pdf_url": "https://arxiv.org/pdf/2609.06991v1",
+      "doi": "",
+      "venue": "34 pages, 19 figures, 17 tables",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 14
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "c4f56aec3baba827f04ed7139c32ef96642ff752",
+      "title": "Linguistic Foundations for Constructing Speech Synthesis in the Kazakh Language",
+      "abstract": "The article is devoted to the problem of correctly recognizing and pronouncing, in accordance with orthoepic norms, shortened words and abbreviations, numerical symbols, mathematical operations, formulas, and conventional signs within the Kazakh-language text-to-speech system. The main objective of the study is to identify the linguistic features of fully expanding shortened words and abbreviations in texts processed by the speech synthesis system, as well as of representing mathematical expressions in written form, and on this basis to develop a linguistic resource that ensures natural, consistent, and realistic synthesized speech in Kazakh. The article clarifies the distinction between shortened words and abbreviations and proposes several approaches to incorporating them into a speech synthesis program. In particular, it describes methods such as compiling comprehensive lists of shortened forms from domain-specific texts, presenting shortened and full variants in parallel, and preserving internationally established abbreviations in their original forms. The article also provides a dedicated phonetic transcription of shortened words and demonstrates their pronunciation in compliance with orthoepic norms. The article presents model examples of attaching suffixes to shortened words, numerical symbols, and conventional signs in accordance with the vowel harmony rules of the Kazakh language. It is demonstrated that presenting both written and spoken variants of numerical symbols, arithmetic operations, fractions, and complex numbers increases the intelligibility of synthesized text. Furthermore, the parallel use of symbolic representations and established names of chemical elements and formulas is shown to enhance the naturalness of speech synthesis.",
+      "authors": [],
+      "published": "2026-09-02",
+      "updated": "2026-09-02",
+      "url": "https://www.semanticscholar.org/paper/c4f56aec3baba827f04ed7139c32ef96642ff752",
+      "pdf_url": "https://jltr.academypublication.com/index.php/jltr/article/download/13486/11517",
+      "doi": "10.17507/jltr.1705.29",
+      "venue": "Journal of Language Teaching and Research",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 13
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.08390",
+      "title": "Noise Adaptive Streaming Audio-Visual Speech Token Enhancement for Robust Full-Duplex Spoken Dialogue Models",
+      "abstract": "Full-duplex spoken dialogue systems enable simultaneous listening and speaking, but their audio-only perception often fails under background noise and overlapping speech, leading to incoherent responses. Recent audio-visual dialogue approaches show that incorporating visual cues such as lip movements improve robustness under audio corruption. However, existing approaches often adapt the large speech dialogue model itself to process visual input, requiring costly multimodal training. We propose AV-STE, a modular streaming audio-visual front-end that restores corrupted semantic speech tokens from noisy audio and lip video before they reach the speech LLM. The downstream dialogue model remains entirely frozen, preserving its pretrained conversational capabilities. When integrated with frozen Moshi, AV-STE improves average GPT-4o-judged response coherence from 1.42 to 1.91 under same-dataset speaker interference while largely preserving turn-taking behavior. Gains also transfer to out-of-domain Seamless Interaction.",
+      "authors": [
+        "Bella Godiva",
+        "Yeonju Kim",
+        "Yong Man Ro"
+      ],
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08390",
+      "pdf_url": "https://arxiv.org/pdf/2609.08390v1",
+      "doi": "",
+      "venue": "Accepted to EMNLP 2026",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 12,
+      "topic_scores": {
+        "audio_language_models": 7,
+        "speech_models": 5
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "Speech Generation, Recognition & Dialogue: speech dialogue"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.08899",
+      "title": "From Scores to Evidence: Auditable Decisions Can Improve Speech Deepfake Detection",
+      "abstract": "Speech deepfakes can mimic a speaker's voice convincingly enough to deceive listeners and automated systems. This has driven strong progress in speech deepfake detection, but most detectors still end with one score per utterance. That score is useful for ranking systems, yet it says little about why a borderline item should be trusted, deferred, or reviewed. Two utterances can fall in the same score band for different reasons, for example because passive and retrieval evidence disagree or because the keyed probe is unavailable. We ask whether the final decision can remain scalar without discarding that provenance. We answer this question with an auditable decision record that carries four aligned cues into a late calibration step: a passive detector score, a conditional keyed-probe score on a marked derivative, retrieval support, and a speaker-profile margin, together with explicit disagreement coordinates. On the 4,080-example ASVspoof 5 Track 1 matched subset, the fixed retrieval-augmented rule improves on retrieval-only evidence, from 15.84 percent to 11.91 percent EER, and late calibration over the full record reaches 8.43 percent EER. At a 33.75 percent review budget, the exposed cue union covers 82.85 percent of the calibrated model's errors. The best passive WavLM run still reaches 6.71 percent EER, so we do not present the decision record as a stronger standalone detector. Its contribution is to preserve the evidence behind each surfaced utterance while still producing one operating score for thresholding and review.",
+      "authors": [
+        "Mengzhe Geng",
+        "Yujia Lu",
+        "Patrick Littell",
+        "Manuela Kunz",
+        "Xie Chen"
+      ],
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08899",
+      "pdf_url": "https://arxiv.org/pdf/2609.08899v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 12,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: speech deepfake"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.08936",
+      "title": "AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing",
+      "abstract": "We introduce AuK, an open-source foundational model that unifies speech generation and editing through a common interface of natural-language instructions and audio context. To support this broad capability set, we construct approximately 3.03 billion instruction--audio instances and 1.95 million hours of effective supervision across five task families: speech generation, content editing, enhancement and separation, paralinguistic editing, and acoustic editing. AuK combines a multimodal large language model for semantic conditioning, an VAE jointly trained on speech, general audio, and music for acoustic conditioning, and a hybrid rectified-flow Transformer that performs dual-stream MMDiT blocks followed by unified single-stream DiT blocks for generation. Training begins with generation-only warm-up and proceeds to joint generation--editing pre-training. We then apply complementary post-training strategies: human-feedback preference optimization for open-ended editing and reward-based reinforcement learning for speech generation. To reduce inference cost, we further distill the model with consistency initialization and task-routed Decoupled DMD. The resulting AuK-Flash performs 4-step inference without classifier-free guidance and achieves a 4.5 wall-clock speedup over the full model under matched conditions. Experiments demonstrate leading performance on zero-shot and instruction-controlled speech generation and general instruction-guided editing, while remaining competitive on signal-level restoration tasks. We release both the source code and model weights to support reproducibility and further research.",
+      "authors": [
+        "Ziyang Ma",
+        "Zhikang Niu",
+        "Wenming Tu",
+        "Tianrui Wang",
+        "Ruiqi Yan",
+        "Junxi Liu",
+        "Yanru Huo",
+        "Nickk Huang",
+        "Yang Liu",
+        "Qicong Xie",
+        "Zeyu Xie",
+        "Hui Wang",
+        "Haitao Li",
+        "Zixuan Jiang",
+        "Yalin Li",
+        "Jie Fang",
+        "Yifan Duan",
+        "Zeyue Tian",
+        "Guangzheng Li",
+        "Haina Zhu",
+        "Shuyi Wang",
+        "Jinwen Wang",
+        "Mingyu Cui",
+        "Tian Tan",
+        "Auden",
+        "Sen Liang",
+        "Steve Yves",
+        "Shan Yang",
+        "Liefeng Bo",
+        "Zilong Zheng",
+        "Kai Yu",
+        "Eng-Siong Chng",
+        "Xie Chen"
+      ],
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08936",
+      "pdf_url": "https://arxiv.org/pdf/2609.08936v1",
+      "doi": "",
+      "venue": "Open-source at https://github.com/Tencent-Hunyuan/AuK",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "cs.MM"
+      ],
+      "code_urls": [
+        "https://github.com/Tencent-Hunyuan/AuK"
+      ],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation",
+        "has open-source code link"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.07968",
+      "title": "Reasoning Beyond Transcription: Audio Language Models on Child Stuttering Speech",
+      "abstract": "Child speech differs from adult speech in acoustics, prosody, and linguistic structures. Speech disfluencies (such as repetitions) further challenge automatic understanding. While Audio Language Models (ALMs) show strong semantic reasoning from speech audio, their ability to reason about disfluent child speech in mixed-speaker settings remains unexplored. We investigate this through two tasks: child-focused semantic summarization and speech entailment. Experiments use recordings of children who stutter in mixed speaker interviews without explicit speaker separation. Models are instruction-guided to focus on the child, preserve clinically relevant disfluencies, and avoid adult-speech leakage. Evaluation combines LLM-based judges and reference-based metrics, anchored by transcript-oracle baselines to isolate errors. Results show that while ALMs extract high-level meaning from stuttered speech, reasoning degrades significantly with increased",
+      "authors": [
+        "Chibuzor Okocha",
+        "Christan Grant",
+        "Zoey Liu"
+      ],
+      "published": "2026-09-07",
+      "updated": "2026-09-07",
+      "url": "https://arxiv.org/abs/2609.07968",
+      "pdf_url": "https://arxiv.org/pdf/2609.07968v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.CL"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 12,
+      "topic_scores": {
+        "audio_language_models": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.03584",
+      "title": "Local Chord Corruption Is Not Recognizer Replay: Structure-Matched Calibration for Chord-Conditioned Generation",
+      "abstract": "Synthetic chord substitutions offer controlled tests of music generation, but their effects can differ from those of a complete recognized chord sequence. We propose structure-matched calibration, which constructs synthetic chord sequences that preserve the locations and harmonic relations of recognizer-induced changes. Paired generation measures how closely these sequences reproduce the response to complete recognizer replay. On 29 of 30 MUSDB18-HQ songs, central four-second tritone corruption produces a larger target response than complete recognizer replay. On 24 held-out MoisesDB songs, structure matching reduces response distance to replay by 81% for MIDI-SAG and 77% for MusicGen-Chord. Distance to replay decreases on every song in both models. Joint matching also brings output chord sequences closer to replay than either temporal or relational matching alone. Calibration extends to AccoMontage's native beat-based interface, improving 23 of 24 songs. These results establish a method for making synthetic chord tests representative of recognized harmony, while distinguishing response magnitude from the harmonic structure of generated music.",
+      "authors": [
+        "Weiwen Huang"
+      ],
+      "published": "2026-09-03",
+      "updated": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.03584",
+      "pdf_url": "https://arxiv.org/pdf/2609.03584v2",
+      "doi": "",
+      "venue": "5 pages, 2 figures, 2 tables. Code: https://github.com/Viwennnnnn/local-chord-corruption-replay",
+      "categories": [
+        "cs.SD",
+        "cs.MM"
+      ],
+      "code_urls": [
+        "https://github.com/Viwennnnnn/local-chord-corruption-replay"
+      ],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 12,
+      "topic_scores": {
+        "generative_music_audio": 10
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, musicgen",
+        "has open-source code link"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.08703",
+      "title": "TontaubeV1: Streaming Text-to-Speech with Hierarchical Codec Modeling and Bounded Context",
+      "abstract": "Text-to-speech systems often face a trade-off between natural prosody and efficient inference: higher perceptual quality typically comes at increased computational cost and latency. We present TontaubeV1, a model that preserves natural prosody while enabling streaming from a single consumer GPU. Speech is encoded by the hierarchical DualCodec representation at 12.5 Hz, which separates a semantic stream from successive acoustic refinements. Our design assumes that prosodic structure is largely established when the semantic stream is generated, and allocates capacity accordingly: a Qwen3-1.7B-derived transformer predicts that stream and thereby the utterance duration, while three progressively smaller Qwen3-0.6B-derived transformers each add one acoustic refinement. Text is tokenized per character rather than by subword. Paired text and audio markers at shared positions support long-form generation with bounded context, and overlapping DualCodec reconstructions are mapped into the VibeVoice acoustic latent space and decoded causally, enabling streaming despite DualCodec's noncausal decoder. The model accepts up to one minute of reference audio for voice conditioning and is designed primarily for English and German, with additional multilingual support. The four predictors total 2.9B parameters; on a single RTX 5090 the streaming path reaches approximately 200 ms to first audio. In separate non-streaming measurements, the end-to-end real-time factor (RTF) is 0.08 for one input and the aggregate RTF is 0.02 across eight concurrent inputs. On our LLM-as-a-judge audiobook-reading benchmark, TontaubeV1 matches ElevenLabs Flash v2.5 and outperforms Fish Audio S2 Pro, the April 2026 Gradium API, and Cartesia Sonic 3 on prosody. The model weights are released on Hugging Face under the Tontaube Community Model License 1.0.",
+      "authors": [
+        "Fritz Cremer",
+        "Jonathan Cremer"
+      ],
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08703",
+      "pdf_url": "https://arxiv.org/pdf/2609.08703v1",
+      "doi": "",
+      "venue": "13 pages, 2 figures, 2 tables. Both authors contributed equally",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.08171",
+      "title": "EviSI: An Evaluation Agent for Simultaneous Interpreting",
+      "abstract": "Simultaneous speech-to-speech translation requires understanding, translation and spoken delivery while the source stream continues. To support timely delivery and limit accumulated delay, systems adopt reformulation and summarization, which can preserve meaning while departing from written references. BLEU and COMET may not reliably distinguish such variation from semantic loss. We introduce EviSI, a large language model evaluation agent adapting the error analysis and penalty principles of Multidimensional Quality Metrics (MQM). It constructs shared source evidence, assesses semantic fidelity and oral expression, reconciles overlapping errors and scores deterministically. EviSI recovers the aggregate human system ranking for English to Chinese. Mean Kendall agreement with human system rankings within corpora reaches 0.707 for English to Chinese and 0.467 for Chinese to English, exceeding evaluated baselines. An extension across five directions shows positive concordance with COMET without human ratings. Individual output agreement with humans remains mixed.",
+      "authors": [
+        "Ben Yan",
+        "Zongyao Li",
+        "Daimeng Wei",
+        "Weidong Liu",
+        "Huan Zhao",
+        "Chong Li",
+        "Yaode Wang",
+        "Yuzhe Shang"
+      ],
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08171",
+      "pdf_url": "https://arxiv.org/pdf/2609.08171v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.CL"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech translation, speech-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.06044",
+      "title": "Art2Song: Enhancing Visual Art Appreciation with Contextual Music Generation",
+      "abstract": "Art2Song is a conceptual framework that expresses artworks as sound by separating Non-Visual Context, which is difficult to perceive from the image alone, from Visual Evidence. Visual Evidence, such as objects, colors, and spatial composition, is transformed into Lyrics, while the Contextual Mood derived from the historical and art-historical context in the museum's artwork description is reflected in the background soundtrack. Rather than describing artworks textually, Art2Song aims to explore the possibility of a new mode of art appreciation in which viewers experience hidden stories and emotional context through music. As future interaction directions, we plan an Emotional Layer Blending Slider interface and a structured, traceable song-generation scenario, presenting the possibility that users can explore the relationship between Visual Evidence and Contextual Mood.",
+      "authors": [
+        "Sungeun Jo",
+        "Myung Jin",
+        "Kim",
+        "Chi Yoon Jeong"
+      ],
+      "published": "2026-09-05",
+      "updated": "2026-09-05",
+      "url": "https://arxiv.org/abs/2609.06044",
+      "pdf_url": "https://arxiv.org/pdf/2609.06044v1",
+      "doi": "10.1145/3830397.3841791",
+      "venue": "3 pages, 1 figure, To appear in the Adjunct Proceedings of the 39th Annual ACM Symposium on User Interface Software and Technology (UIST Adjunct '26)",
+      "categories": [
+        "cs.HC"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "generative_music_audio": 10
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.05592",
+      "title": "What Did I Just Say? Self-Listening for Full-Duplex Speech Models",
+      "abstract": "Full-duplex spoken language models can listen and speak simultaneously, enabling them to handle interruptions and backchannels in human conversation. However, text generation, speech synthesis, and audio playback proceed asynchronously. As a result, what a model believes it has said may not match what has actually been played to the user. We refer to the problem of recovering from an interruption while remaining aware of the model's realized speech as anchor interruption. To address this problem, we propose Self-Listening, a full-duplex modeling approach that interleaves user speech, model text, and the model's played speech. By feeding the realized speech output back to the model as an input stream, self-listening grounds interruption recovery in what the user has actually heard. We further introduce AnchorSpeech, a collection with homogeneous training and test splits for tracking which items of structured ordered responses have actually been spoken. AnchorSpeech-test evaluates whether a model can respond consistently with the last completed item before an interruption. Experiments show that, compared with full-duplex baselines, models equipped with self-listening mechanism achieve better anchoring performance.",
+      "authors": [
+        "Xuanning Zhou",
+        "Junyi Ao",
+        "Xiaotong Liu",
+        "Tom Ko",
+        "Benyou Wang",
+        "Haizhou Li"
+      ],
+      "published": "2026-09-04",
+      "updated": "2026-09-04",
+      "url": "https://arxiv.org/abs/2609.05592",
+      "pdf_url": "https://arxiv.org/pdf/2609.05592v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "audio_language_models": 6,
+        "speech_models": 4
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: spoken language model",
+        "Speech Generation, Recognition & Dialogue: speech synthesis"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2609.07200",
+      "title": "KABURI-TTS: Phoneme-Keyed Activity-conditioned Bi-channel Utterance Rendering for Interaction",
+      "abstract": "Realizing full-duplex spoken dialogue requires large amounts of two-channel, one-speaker-per-channel conversational speech data. Although conversational text-to-speech (TTS) engines have been developed, they are not necessarily robust to two-party simultaneous phenomena such as backchannels, interruptions, and overlaps that occur while the interlocutor is speaking. In this work, aiming at conversational speech synthesis that reproduces human-like overlap, we propose KABURI-TTS. KABURI-TTS takes a per-speaker phoneme raster as input and renders the speech of the two speakers on separate channels, conditioned on the per-frame phonemes and the voice activity derived from them. Because the phoneme raster is supplied by a separate module, the proposed method enables controllable generation of one-speaker-per-channel, two-party spoken dialogue. A user evaluation shows that, compared with strong baselines, the proposed method attains higher naturalness at both the utterance and the interaction level. Furthermore, an analysis of voice activity confirms that the proposed method produces more overlap and more frequent turn-taking.",
+      "authors": [
+        "Ryuichiro Higashinaka",
+        "Shinnosuke Takamichi",
+        "Tetsuji Ogawa"
+      ],
+      "published": "2026-09-07",
+      "updated": "2026-09-07",
+      "url": "https://arxiv.org/abs/2609.07200",
+      "pdf_url": "https://arxiv.org/pdf/2609.07200v1",
+      "doi": "",
+      "venue": "Accepted at APSIPA ASC 2026",
+      "categories": [
+        "cs.SD",
+        "cs.CL"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 9,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "Maxilicious20/Instrumenta-1",
+      "author": "Maxilicious20",
+      "created_at": "2026-09-05",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "text-to-music",
+        "music-generation",
+        "encodec",
+        "transformer",
+        "pytorch",
+        "text-to-audio",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Maxilicious20/Instrumenta-1",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- en\npipeline_tag: text-to-audio\ntags:\n- text-to-music\n- music-generation\n- encodec\n- transformer\n- pytorch\n---\n\n# Instrumenta\n\nInstrumenta is a small text-to-music model trained from scratch on a single consumer GPU (RTX 4060, 8GB VRAM). It generates short instrumental audio clips from text prompts describing genre, mood, key, tempo, and instrumentation.\n\nThis is a hobby/personal project, not a research release or a commercial product. It is shared as-is.\n\n## Model summary\n\n- **Architecture:** autoregressive Transformer decoder over EnCodec discrete audio tokens, using a delay pattern across codebooks (MusicGen-style) and cross-attention to a frozen T5 text encoder for prompt conditioning.\n- **Audio tokenizer:** pretrained EnCodec (frozen, used only to tokenize/detokenize audio — not fine-tuned).\n- **Text encoder:** T5-small (frozen).\n- **Trainable parameters:** ~30M (the Transformer decoder only; EnCodec and T5 are frozen and not counted).\n- **Model dimensions:** 448 embedding dim, 8 attention heads, 8 layers.\n- **Codebooks:** 4 (from EnCodec), 1024 tokens per codebook vocabulary.\n- **Sample rate:** 24 kHz.\n- **Output length:** 10-second clips (750 frames at 75 frames/sec).\n- **Conditioning:** free-text prompt, with classifier-free guidance (CFG) supported at inference time.\n\n## Training data\n\nTrained on a personal/self-assembled dataset of roughly 10,000 short instrumental audio clips with paired text captions (genre, mood, key, tempo, instrumentation), plus a small held-out validation split. The dataset is not publicly released alongside this model.\n\nBecause the dataset is on the small side for training a generative audio model from scratch, expect more variance and less fidelity than larger models trained on much bigger datasets (e.g. MusicGen, Stable Audio). This project intentionally traded dataset/model scale for something trainable end-to-end on a single 8GB GPU.\n\n## Training procedure\n\n- **Phase 1:** trained from scratch for 150 epochs on the full dataset.\n- **Phase 2 (fine-tune):** continued training for a further ~230 epochs at a reduced learning rate, starting from the Phase 1 checkpoint, to further reduce validation loss. Both phases used the same dataset, architecture, and tokenization pipeline — Phase 2 did not introduce new data or change the model architecture.\n- **Precision:** mixed precision (FP16 autocast + gradient scaling) for the trainable Transformer; EnCodec and T5 run in their pretrained precision.\n- **Hardware:** single NVIDIA RTX 4060 (8GB VRAM).\n\nNo objective benchmark scores (e.g. FAD, CLAP score) have been computed for this model yet. Any quality claims below are based on informal listening, not a scored evaluation.\n\n## Files in this repository\n\n| File | Description |\n|---|---|\n| `instrumenta_best.pt` | Checkpoint with the lowest validation loss reached during training. |\n| `instrumenta_last.pt` | Final checkpoint at the end of training (last completed epoch). |\n\nBoth checkpoints are full training checkpoints — in addition to model weights, they also contain optimizer/scaler state, epoch/step counters, and the training config, so they can be used to resume training as well as for inference.\n\nTo use only the model weights for inference, load the `\"model\"` key from the checkpoint dictionary.\n\n## Usage\n\nThis repository contains only weights, not a packaged inference pipeline. To generate audio you need the accompanying model code (Transformer architecture, delay-pattern encode/decode, EnCodec + T5 loading) — this model is not yet wrapped for the `transformers`/`diffusers` `pipeline()` API.\n\n```python\nimport torch\n\ncheckpoint = torch.load(\"instrumenta_best.pt\", map_location=\"cpu\")\nmodel_state_dict = checkpoint[\"model\"]\nconfig = checkpoint[\"config\"]  # training configuration used for this checkpoint\n```\n\nLoad `model_state_dict` into the matching model architecture from the training code, then use it together with the frozen EnCodec and T5-small encoders to condition on a text prompt and autoregressively generate audio tokens, which EnCodec decodes back into a waveform.\n\n### Example prompts the model was trained on\n\nPrompts describe genre/mood, key, tempo, and instrumentation, e.g.:\n\n> \"a punchy dark instrumental arrangement, ambient-style, in D minor, 86 bpm, no vocals\"\n\n## Limitations\n\n- **Small training dataset.** ~10k clips is modest for training a generative audio model from scratch; expect inconsistent quality across prompts, and weaker performance on prompt combinations underrepresented in training.\n- **Short, fixed output length.** Generates fixed 10-second clips; no long-form structure (intro/verse/chorus) is modeled.\n- **No formal evaluation.** No FAD/CLAP/KL scores or human evaluation have been run. Quality assessment so far is informal listening only.\n- **English-language prompts only** (T5-small was used as-is, not fine-tuned on non-English captions).\n- **Not intended for production or commercial use** without further evaluation.\n\n## License\n\nApache 2.0. Note that this model was built using pretrained EnCodec and T5-small as frozen components at both training and inference time — check their respective licenses if redistributing a pipeline that includes them.\n\n## Acknowledgements\n\nBuilt on top of pretrained [EnCodec](https://huggingface.co/facebook/encodec_24khz) (audio tokenizer) and [T5-small](https://huggingface.co/google-t5/t5-small) (text encoder), both used frozen. Architecture inspired by MusicGen-style delay-pattern autoregressive audio generation.",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 52,
+      "topic_scores": {
+        "generative_music_audio": 51
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "snkii/Sori-1B",
+      "author": "snkii",
+      "created_at": "2026-08-28",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "sorilm",
+        "text-generation",
+        "audio",
+        "audio-language-model",
+        "audio-understanding",
+        "python-interpreter",
+        "multiple-choice",
+        "captioning",
+        "asr",
+        "audio-text-to-text",
+        "custom_code",
+        "en",
+        "base_model:HuggingFaceTB/SmolLM2-360M",
+        "base_model:merge:HuggingFaceTB/SmolLM2-360M",
+        "base_model:nvidia/audio-flamingo-next-hf",
+        "base_model:merge:nvidia/audio-flamingo-next-hf",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 392,
+      "likes": 27,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/snkii/Sori-1B",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "nvidia/audio-flamingo-next-hf",
+        "HuggingFaceTB/SmolLM2-360M"
+      ],
+      "variants": [],
+      "score": 40,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "audio_understanding_reasoning": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model",
+        "Audio Understanding & Reasoning: audio understanding, audio-text (pipeline tag)",
+        "declares license other",
+        "community likes 27"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "tencent/AuK-Flash",
+      "author": "tencent",
+      "created_at": "2026-08-21",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "speech",
+        "text-to-speech",
+        "zero-shot-tts",
+        "voice-cloning",
+        "speech-generation",
+        "speech-editing",
+        "speech-enhancement",
+        "source-separation",
+        "speech-separation",
+        "instruction-guided",
+        "diffusion",
+        "distillation",
+        "few-step-inference",
+        "zh",
+        "en",
+        "arxiv:2609.08936",
+        "base_model:tencent/AuK",
+        "base_model:finetune:tencent/AuK",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 30,
+      "likes": 15,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/tencent/AuK-Flash",
+      "card_text": "---\nlicense: mit\nlanguage:\n- zh\n- en\npipeline_tag: text-to-speech\ntags:\n- speech\n- text-to-speech\n- zero-shot-tts\n- voice-cloning\n- speech-generation\n- speech-editing\n- speech-enhancement\n- source-separation\n- speech-separation\n- instruction-guided\n- diffusion\n- distillation\n- few-step-inference\nbase_model: tencent/AuK\n---\n\n<div align=\"center\">\n\n# AuK-Flash: Fast 4-Step Speech Generation and Editing\n\n[![Website](https://img.shields.io/badge/🌐_Website-AuK-1a73e8)](https://auk-project.github.io/)\n[![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github)](https://github.com/Tencent-Hunyuan/AuK)\n[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b5212f)](https://arxiv.org/abs/2609.08936)\n[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-Demo-ffbd45)](https://huggingface.co/spaces/tencent/AuK)\n[![ModelScope](https://img.shields.io/badge/🤖_ModelScope-Demo-624aff)](https://modelscope.cn/studios/Tencent-Hunyuan/AuK)\n\n</div>\n\n## News\n\n- **[2026/09/09]** 🎉 **AuK** is now open-source. Code and model weights are publicly available. Try it on the [🤗 Demo Space](https://huggingface.co/spaces/tencent/AuK) or the [🤖 ModelScope Space](https://modelscope.cn/studios/Tencent-Hunyuan/AuK)!\n\n## Contents\n\n- [News](#news)\n- [Introduction](#introduction)\n- [Performance](#performance)\n- [Model Architecture](#model-architecture)\n- [Supported Tasks](#supported-tasks)\n- [Download the weights](#download-the-weights)\n- [Citation](#citation)\n- [License](#license)\n\n## Introduction\n\n**AuK** is a 1.5B foundation model for speech generation and editing. Trained on millions of hours of diverse audio data, AuK supports zero-shot and\ninstruction-based TTS, content and acoustic editing, paralinguistic editing,\nspeech enhancement, and source separation through a unified natural-language\ninstruction interface. AuK has two variants:\n\n| Model | Description | Weight |\n| --- | --- | --- |\n| AuK | Base model for high-quality generation | 🤗 [Hugging Face](https://huggingface.co/tencent/AuK) · 🤖 [ModelScope](https://modelscope.cn/models/Tencent-Hunyuan/AuK) |\n| AuK-Flash | Distilled model for fast 4-step inference | 🤗 [Hugging Face](https://huggingface.co/tencent/AuK-Flash) · 🤖 [ModelScope](https://modelscope.cn/models/Tencent-Hunyuan/AuK-Flash) |\n\nThis repository contains the official weights for **AuK-Flash, the distilled variant with fast 4-step inference**.\n\n## Performance\n\n![AuK performance across speech generation, editing, enhancement, and separation benchmarks](assets/performance.png)\n\n## Model Architecture\n\n![Model Architecture](assets/arch.png)\n\n## Supported Tasks\n\nAuK exposes every task through the same natural-language instruction interface. The table below groups the supported tasks by category, with a short description and a link to its section in the [Cookbook](https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md), which provides instruction templates plus CLI and Python examples.\n\n<table>\n  <thead>\n    <tr>\n      <th>Category</th>\n      <th>Task</th>\n      <th>Description</th>\n      <th>Cookbook</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td rowspan=\"2\">Speech Generation</td>\n      <td>Zero-shot TTS</td>\n      <td>Speak the target text in the voice of the reference audio.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#11-zero-shot-tts\">Zero-shot TTS</a></td>\n    </tr>\n    <tr>\n      <td>Instruct TTS</td>\n      <td>Generate speech from a voice description alone — no reference audio.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#12-instruct-tts\">Instruct TTS</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"2\">Content Editing</td>\n      <td>Speech Content Editing</td>\n      <td>Rewrite <em>what is said</em> — replace, insert, or remove text.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#21-speech-content-editing\">Speech Content Editing</a></td>\n    </tr>\n    <tr>\n      <td>Lyric Editing</td>\n      <td>Rewrite lyrics in a singing recording while preserving the melody and voice.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#22-lyric-editing\">Lyric Editing</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"3\">Acoustic Editing</td>\n      <td>Pitch Editing</td>\n      <td>Raise or lower the pitch by semitones.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#31-pitch-editing\">Pitch Editing</a></td>\n    </tr>\n    <tr>\n      <td>Speed Editing</td>\n      <td>Adjust the speaking rate; output length scales with the speed factor.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#32-speed-editing\">Speed Editing</a></td>\n    </tr>\n    <tr>\n      <td>Volume Editing</td>\n      <td>Raise or lower the volume by decibels.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#33-volume-editing\">Volume Editing</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"5\">Paralinguistic Editing</td>\n      <td>Emotion</td>\n      <td>Change the emotion while preserving content and voice.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#41-emotion\">Emotion</a></td>\n    </tr>\n    <tr>\n      <td>Timbre</td>\n      <td>Change the timbre to a description while keeping the content unchanged.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#42-timbre\">Timbre</a></td>\n    </tr>\n    <tr>\n      <td>De-accent</td>\n      <td>Remove a regional accent while preserving the speaker's voice and content.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#43-de-accent\">De-accent</a></td>\n    </tr>\n    <tr>\n      <td>Nonverbal Editing</td>\n      <td>Remove or add nonverbal sounds such as breaths, laughs, or coughs.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#44-nonverbal-editing\">Nonverbal Editing</a></td>\n    </tr>\n    <tr>\n      <td>Whisper Conversion</td>\n      <td>Convert between normal speech and whisper while preserving speaker and content.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#45-whisper-conversion\">Whisper Conversion</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"4\">Enhancement &amp; Separation</td>\n      <td>Speech Enhancement</td>\n      <td>Denoise, dereverberate, or restore natural, clear speech.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#51-speech-enhancement\">Speech Enhancement</a></td>\n    </tr>\n    <tr>\n      <td>Speech Separation</td>\n      <td>Keep one speaker by talking order and remove the others.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#52-speech-separation\">Speech Separation</a></td>\n    </tr>\n    <tr>\n      <td>Music Separation</td>\n      <td>Extract the singing voice from a mix, or keep all human voices.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#53-music-separation\">Music Separation</a></td>\n    </tr>\n    <tr>\n      <td>Target Speaker Extraction</td>\n      <td>Keep the target speaker identified by <em>what they say</em>.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#54-target-speaker-extraction\">Target Speaker Extraction</a></td>\n    </tr>\n  </tbody>\n</table>\n\n## Download the weights\n**🤗 HuggingFace**\n\n```bash\npip install -U \"huggingface_hub[cli]\"\n\n# AuK-Base\nhf download tencent/AuK --local-dir ./ckpts/AuK\n\n# AuK-Flash (4-step distilled) \nhf download tencent/AuK-Flash --local-dir ./ckpts/AuK-Flash\n\n# MLLM Encoder\nhf download Qwen/Qwen2.5-Omni-3B  --local-dir ./ckpts/Qwen2.5-Omni-3B\n```\n\n**🤖 ModelScope**\n\n```bash\npip install -U modelscope\n\n# AuK-Base\nmodelscope download --model Tencent-Hunyuan/AuK --local_dir ./ckpts/AuK\n\n# AuK-Flash (4-step distilled)\nmodelscope download --model Tencent-Hunyuan/AuK-Flash  --local_dir ./ckpts/AuK-Flash\n\n# MLLM Encoder\nmodelscope download --model Qwen/Qwen2.5-Omni-3B --local_dir ./ckpts/Qwen2.5-Omni-3B\n```\n\nThe expected directory structure is:\n\n```text\nckpts/\n├── AuK/\n├── AuK-Flash/          # optional\n└── Qwen2.5-Omni-3B/\n```\n\nThe model checkpoint contains the diffusion transformer and layer-fusion weights. The MLLM encoder and VAE are loaded from separate files at runtime, so missing `text_encoder.*` keys during checkpoint loading are expected.\n\nFor installation, inference, Gradio, ComfyUI, and fine-tuning, see the [GitHub README](https://github.com/Tencent-Hunyuan/AuK#quick-start) and [Cookbook](https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md).\n\n## Citation\n\nResearch using AuK can cite the following entry:\n\n```bibtex\n@misc{ma2026auktechnicalreportopensource,\n  title={AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing},\n  author={Ziyang Ma and Zhikang Niu and Wenming Tu and Tianrui Wang and Ruiqi Yan and Junxi Liu and Yanru Huo and Nickk Huang and Yang Liu and Qicong Xie and Zeyu Xie and Hui Wang and Haitao Li and Zixuan Jiang and Yalin Li and Jie Fang and Yifan Duan and Zeyue Tian and Guangzheng Li and Haina Zhu and Shuyi Wang and Jinwen Wang and Mingyu Cui and Tian Tan and Auden and Sen Liang and Steve Yves and Shan Yang and Liefeng Bo and Zilong Zheng and Kai Yu and Eng-Siong Chng and Xie Chen},\n  year={2026},\n  eprint={2609.08936},\n  archivePrefix={arXiv},\n  primaryClass={cs.SD},\n  url={https://arxiv.org/abs/2609.08936},\n}\n```\n\n## License\n\nAuK is released under the **MIT License**. See [`LICENSE`](LICENSE) for the full terms.\n",
+      "arxiv_ids": [
+        "2609.08936"
+      ],
+      "datasets": [],
+      "base_models": [
+        "tencent/AuK"
+      ],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license mit",
+        "community likes 15"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "tencent/AuK",
+      "author": "tencent",
+      "created_at": "2026-08-18",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audio",
+        "speech",
+        "text-to-speech",
+        "zero-shot-tts",
+        "voice-cloning",
+        "speech-generation",
+        "speech-editing",
+        "speech-enhancement",
+        "source-separation",
+        "speech-separation",
+        "instruction-guided",
+        "diffusion",
+        "arxiv:2609.08936",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 30,
+      "likes": 13,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/tencent/AuK",
+      "card_text": "---\nlicense: mit\ntags:\n  - audio\n  - speech\n  - text-to-speech\n  - zero-shot-tts\n  - voice-cloning\n  - speech-generation\n  - speech-editing\n  - speech-enhancement\n  - source-separation\n  - speech-separation\n  - instruction-guided\n  - diffusion\n---\n\n<div align=\"center\">\n\n# AuK: An Open-Source Foundational Model for Speech Generation and Editing\n\n[![Website](https://img.shields.io/badge/🌐_Website-AuK-1a73e8)](https://auk-project.github.io/)\n[![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github)](https://github.com/Tencent-Hunyuan/AuK)\n[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b5212f)](https://arxiv.org/abs/2609.08936)\n[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-Demo-ffbd45)](https://huggingface.co/spaces/tencent/AuK)\n[![ModelScope](https://img.shields.io/badge/🤖_ModelScope-Demo-624aff)](https://modelscope.cn/studios/Tencent-Hunyuan/AuK)\n\n</div>\n\n## News\n\n- **[2026/09/09]** 🎉 **AuK** is now open-source. Code and model weights are publicly available. Try it on the [🤗 Demo Space](https://huggingface.co/spaces/tencent/AuK) or the [🤖 ModelScope Space](https://modelscope.cn/studios/Tencent-Hunyuan/AuK)!\n\n## Contents\n\n- [News](#news)\n- [Introduction](#introduction)\n- [Performance](#performance)\n- [Model Architecture](#model-architecture)\n- [Supported Tasks](#supported-tasks)\n- [Download the weights](#download-the-weights)\n- [Citation](#citation)\n- [License](#license)\n\n## Introduction\n\n**AuK** is a 1.5B foundation model for speech generation and editing. Trained on millions of hours of diverse audio data, AuK supports zero-shot and\ninstruction-based TTS, content and acoustic editing, paralinguistic editing,\nspeech enhancement, and source separation through a unified natural-language\ninstruction interface. AuK has two variants:\n\n| Model | Description | Weight |\n| --- | --- | --- |\n| AuK | Base model for high-quality generation | 🤗 [Hugging Face](https://huggingface.co/tencent/AuK) · 🤖 [ModelScope](https://modelscope.cn/models/Tencent-Hunyuan/AuK) |\n| AuK-Flash | Distilled model for fast 4-step inference | 🤗 [Hugging Face](https://huggingface.co/tencent/AuK-Flash) · 🤖 [ModelScope](https://modelscope.cn/models/Tencent-Hunyuan/AuK-Flash) |\n\nThis repository contains the official weights for **the AuK base model**.\n\n## Performance\n\n![AuK performance across speech generation, editing, enhancement, and separation benchmarks](assets/performance.png)\n\n## Model Architecture\n\n![Model Architecture](assets/arch.png)\n\n## Supported Tasks\n\nAuK exposes every task through the same natural-language instruction interface. The table below groups the supported tasks by category, with a short description and a link to its section in the [Cookbook](https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md), which provides instruction templates plus CLI and Python examples.\n\n<table>\n  <thead>\n    <tr>\n      <th>Category</th>\n      <th>Task</th>\n      <th>Description</th>\n      <th>Cookbook</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td rowspan=\"2\">Speech Generation</td>\n      <td>Zero-shot TTS</td>\n      <td>Speak the target text in the voice of the reference audio.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#11-zero-shot-tts\">Zero-shot TTS</a></td>\n    </tr>\n    <tr>\n      <td>Instruct TTS</td>\n      <td>Generate speech from a voice description alone — no reference audio.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#12-instruct-tts\">Instruct TTS</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"2\">Content Editing</td>\n      <td>Speech Content Editing</td>\n      <td>Rewrite <em>what is said</em> — replace, insert, or remove text.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#21-speech-content-editing\">Speech Content Editing</a></td>\n    </tr>\n    <tr>\n      <td>Lyric Editing</td>\n      <td>Rewrite lyrics in a singing recording while preserving the melody and voice.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#22-lyric-editing\">Lyric Editing</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"3\">Acoustic Editing</td>\n      <td>Pitch Editing</td>\n      <td>Raise or lower the pitch by semitones.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#31-pitch-editing\">Pitch Editing</a></td>\n    </tr>\n    <tr>\n      <td>Speed Editing</td>\n      <td>Adjust the speaking rate; output length scales with the speed factor.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#32-speed-editing\">Speed Editing</a></td>\n    </tr>\n    <tr>\n      <td>Volume Editing</td>\n      <td>Raise or lower the volume by decibels.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#33-volume-editing\">Volume Editing</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"5\">Paralinguistic Editing</td>\n      <td>Emotion</td>\n      <td>Change the emotion while preserving content and voice.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#41-emotion\">Emotion</a></td>\n    </tr>\n    <tr>\n      <td>Timbre</td>\n      <td>Change the timbre to a description while keeping the content unchanged.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#42-timbre\">Timbre</a></td>\n    </tr>\n    <tr>\n      <td>De-accent</td>\n      <td>Remove a regional accent while preserving the speaker's voice and content.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#43-de-accent\">De-accent</a></td>\n    </tr>\n    <tr>\n      <td>Nonverbal Editing</td>\n      <td>Remove or add nonverbal sounds such as breaths, laughs, or coughs.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#44-nonverbal-editing\">Nonverbal Editing</a></td>\n    </tr>\n    <tr>\n      <td>Whisper Conversion</td>\n      <td>Convert between normal speech and whisper while preserving speaker and content.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#45-whisper-conversion\">Whisper Conversion</a></td>\n    </tr>\n    <tr>\n      <td rowspan=\"4\">Enhancement &amp; Separation</td>\n      <td>Speech Enhancement</td>\n      <td>Denoise, dereverberate, or restore natural, clear speech.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#51-speech-enhancement\">Speech Enhancement</a></td>\n    </tr>\n    <tr>\n      <td>Speech Separation</td>\n      <td>Keep one speaker by talking order and remove the others.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#52-speech-separation\">Speech Separation</a></td>\n    </tr>\n    <tr>\n      <td>Music Separation</td>\n      <td>Extract the singing voice from a mix, or keep all human voices.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#53-music-separation\">Music Separation</a></td>\n    </tr>\n    <tr>\n      <td>Target Speaker Extraction</td>\n      <td>Keep the target speaker identified by <em>what they say</em>.</td>\n      <td><a href=\"https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md#54-target-speaker-extraction\">Target Speaker Extraction</a></td>\n    </tr>\n  </tbody>\n</table>\n\n## Download the weights\n**🤗 HuggingFace**\n\n```bash\npip install -U \"huggingface_hub[cli]\"\n\n# AuK-Base\nhf download tencent/AuK --local-dir ./ckpts/AuK\n\n# AuK-Flash (4-step distilled) \nhf download tencent/AuK-Flash --local-dir ./ckpts/AuK-Flash\n\n# MLLM Encoder\nhf download Qwen/Qwen2.5-Omni-3B  --local-dir ./ckpts/Qwen2.5-Omni-3B\n```\n\n**🤖 ModelScope**\n\n```bash\npip install -U modelscope\n\n# AuK-Base\nmodelscope download --model Tencent-Hunyuan/AuK --local_dir ./ckpts/AuK\n\n# AuK-Flash (4-step distilled)\nmodelscope download --model Tencent-Hunyuan/AuK-Flash  --local_dir ./ckpts/AuK-Flash\n\n# MLLM Encoder\nmodelscope download --model Qwen/Qwen2.5-Omni-3B --local_dir ./ckpts/Qwen2.5-Omni-3B\n```\n\nThe expected directory structure is:\n\n```text\nckpts/\n├── AuK/\n├── AuK-Flash/          # optional\n└── Qwen2.5-Omni-3B/\n```\n\nThe model checkpoint contains the diffusion transformer and layer-fusion weights. The MLLM encoder and VAE are loaded from separate files at runtime, so missing `text_encoder.*` keys during checkpoint loading are expected.\n\nFor installation, inference, Gradio, ComfyUI, and fine-tuning, see the [GitHub README](https://github.com/Tencent-Hunyuan/AuK#quick-start) and [Cookbook](https://github.com/Tencent-Hunyuan/AuK/blob/main/docs/COOKBOOK.md).\n\n## Citation\n\nResearch using AuK can cite the following entry:\n\n```bibtex\n@misc{ma2026auktechnicalreportopensource,\n  title={AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing},\n  author={Ziyang Ma and Zhikang Niu and Wenming Tu and Tianrui Wang and Ruiqi Yan and Junxi Liu and Yanru Huo and Nickk Huang and Yang Liu and Qicong Xie and Zeyu Xie and Hui Wang and Haitao Li and Zixuan Jiang and Yalin Li and Jie Fang and Yifan Duan and Zeyue Tian and Guangzheng Li and Haina Zhu and Shuyi Wang and Jinwen Wang and Mingyu Cui and Tian Tan and Auden and Sen Liang and Steve Yves and Shan Yang and Liefeng Bo and Zilong Zheng and Kai Yu and Eng-Siong Chng and Xie Chen},\n  year={2026},\n  eprint={2609.08936},\n  archivePrefix={arXiv},\n  primaryClass={cs.SD},\n  url={https://arxiv.org/abs/2609.08936},\n}\n```\n\n## License\n\nAuK is released under the **MIT License**. See [`LICENSE`](LICENSE) for the full terms.\n",
+      "arxiv_ids": [
+        "2609.08936"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license mit",
+        "community likes 13"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-512d_6p25hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-512d_6p25hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-512d_3p125hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-512d_3p125hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-512d_25p0hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-512d_25p0hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-512d_12p5hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-512d_12p5hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-256d_6p25hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-256d_6p25hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-256d_3p125hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-256d_3p125hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-256d_25p0hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-256d_25p0hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-256d_12p5hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-256d_12p5hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-128d_6p25hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-128d_6p25hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-128d_3p125hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-128d_3p125hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-128d_25p0hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-128d_25p0hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-128d_12p5hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-128d_12p5hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-1024d_6p25hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-1024d_6p25hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-1024d_3p125hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-1024d_3p125hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-1024d_25p0hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-1024d_25p0hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kuyhgnas/dacvae-1024d_12p5hz",
+      "author": "kuyhgnas",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "qwen3_5_ae",
+        "audio",
+        "automatic-speech-recognition",
+        "speech-language-model",
+        "dac-vae",
+        "ablation",
+        "custom_code",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/kuyhgnas/dacvae-1024d_12p5hz",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech language model, speech-language model",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "audio-cpp/audio.cpp-gguf",
+      "author": "audio-cpp",
+      "created_at": "2026-07-14",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audio.cpp",
+        "gguf",
+        "quantized",
+        "text-to-speech",
+        "automatic-speech-recognition",
+        "voice-conversion",
+        "text-to-audio",
+        "audio-to-audio",
+        "source-separation",
+        "speaker-diarization",
+        "speech",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:quantized:ACE-Step/Ace-Step1.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 2313604,
+      "likes": 109,
+      "trending_score": 0.0,
+      "library_name": "audio.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/audio-cpp/audio.cpp-gguf",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-H3",
+        "ACE-Step/Ace-Step1.5",
+        "ACE-Step/acestep-v15-base",
+        "Aratako/Irodori-TTS-500M-v3",
+        "Aratako/Irodori-TTS-600M-v3-VoiceDesign",
+        "Aratako/Irodori-TTS-v4.1-Small",
+        "Aratako/MioCodec-25Hz-44.1kHz-v2",
+        "Aratako/MioTTS-1.7B",
+        "Aratako/Semantic-DACVAE-Japanese-32dim",
+        "Banafo/Kroko-ASR",
+        "dots-studio/dots.tts-mf",
+        "dots-studio/dots.tts-soar",
+        "fishaudio/s2-pro",
+        "FunAudioLLM/Fun-ASR-Nano-2512-hf",
+        "HeartMuLa/HeartCodec-oss-20260123",
+        "HeartMuLa/HeartMuLa-oss-3B",
+        "HeartMuLa/HeartMuLaGen",
+        "IndexTeam/IndexTTS-2",
+        "IndexTeam/IndexTTS-2.5",
+        "ASLP-lab/MeanVC2",
+        "OpenBMB/VoxCPM2",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2",
+        "OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5",
+        "OpenMOSS-Team/MOSS-TTS-Nano-100M",
+        "Qwen/Qwen3-ASR-0.6B",
+        "Qwen/Qwen3-ASR-1.7B-hf",
+        "Qwen/Qwen3-ForcedAligner-0.6B",
+        "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "Qwen/Qwen3-TTS-Tokenizer-12Hz",
+        "ResembleAI/chatterbox",
+        "RMSnow/Vevo2",
+        "bosonai/higgs-audio-v3-stt",
+        "bosonai/higgs-audio-v3-tts-4b",
+        "k2-fsa/OmniVoice",
+        "kyutai/pocket-tts",
+        "llm-jp/llm-jp-3-150m",
+        "microsoft/VibeVoice-1.5B",
+        "microsoft/VibeVoice-ASR",
+        "mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "mlx-community/SeedVC-MLX",
+        "mlx-community/mel-roformer-mlx",
+        "mlx-community/supertonic-3-mlx",
+        "mlx-community/wavlm-base-plus-mlx",
+        "MuScriptor/muscriptor-small",
+        "neuphonic/neutts-2e",
+        "syvai/hviske-v5.3",
+        "nvidia/diar_sortformer_4spk-v1",
+        "nvidia/magpie_tts_multilingual_357m",
+        "nvidia/nemotron-3.5-asr-streaming-0.6b",
+        "nvidia/parakeet-tdt-0.6b-v3",
+        "nvidia/personaplex-7b-v1",
+        "owensong/Inflect-Micro-v2",
+        "stabilityai/stable-audio-3-medium",
+        "stabilityai/stable-audio-3-small-music",
+        "stabilityai/stable-audio-3-small-sfx"
+      ],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition",
+        "declares license other",
+        "community likes 109"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "freococo/F5-Myanmar-TTS",
+      "author": "freococo",
+      "created_at": "2026-09-05",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "f5-tts",
+        "safetensors",
+        "F5-TTS",
+        "text-to-speech",
+        "tts",
+        "burmese",
+        "myanmar",
+        "voice-cloning",
+        "flow-matching",
+        "mya",
+        "my",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 160,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "f5-tts",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/freococo/F5-Myanmar-TTS",
+      "card_text": "---\nlanguage:\n- my\nlicense: cc-by-nc-4.0\ntags:\n- text-to-speech\n- tts\n- burmese\n- myanmar\n- f5-tts\n- voice-cloning\n- flow-matching\n- mya\npipeline_tag: text-to-speech\n---\n\n# 🇲🇲 F5-TTS Burmese v2 (1,025,604 Updates Foundation Model)\n\nThe official **v2 release** of the F5-TTS (Flow-Matching Diffusion Transformer) Burmese speech foundation model, trained on **794.5+ hours of Burmese speech** across **36 full epochs (1,025,604 updates)**.\n\n> *\"They are fighting for people's freedom. I am fighting for the language's freedom.  \n> I just want to preserve their beautiful, lovely, and brave voices embedded in AI to last forever — marking the first time in history for a massive Burmese open-source TTS foundation model.\"*\n\n---\n\n## 🌟 What's New in v2\n- **Over 1 Million Updates:** Pushed training from 569,780 steps (v1) to **1,025,604 updates (36 epochs)** for significantly tighter phonetic alignment and tone clarity.\n- **50% Smaller Model (FP16):** Pruned weights down from 1.35 GB to **674 MB** for 2x faster downloads and lower GPU VRAM consumption.\n- **Production-Grade Zero-Shot Voice Cloning:** Natural conversational cadence, improved tone handling on conjuncts and Pāḷi loanwords, and zero cut-offs.\n- **Raw Checkpoints Available:** Intermediate checkpoints (`model_1020000.pt`, `model_1025000.pt`, and `model_last.pt`) are included under `checkpoints/` for developers wanting to continue fine-tuning.\n\n---\n\n## ⚡ Quickstart: Python Package (`f5-myanmar-tts`)\n\nThe easiest way to use this model is with the official PyPI package:\n\n```bash\npip install --upgrade f5-myanmar-tts\n```\n\n### Python (Just 3 lines):\n```python\nfrom f5_myanmar_tts import MyanmarTTS\n\n# Auto-downloads lightweight v2 FP16 model (~674MB) on first run\ntts = MyanmarTTS()\n\n# Generate Burmese speech\ntts.speak(\n    \"လူသားတွေ အားလုံးကို အယုတ်အလတ်အမြတ်မရွေး ချစ်ခင်လေးစားပါ\", \n    output_file=\"speech.wav\"\n)\n```\n\n### Voice Cloning (Clone any voice in 3–5 seconds):\n```python\ntts.speak(\n    text=\"ဒါကြောင့် အုံ့မှိုင်းနေတဲ့ ကောင်းကင်ကို အမိန့်ပေးပြီး မိုးကောင်းကင် တံခါးတွေကို ဖွင့်လိုက်တယ်\",\n    ref_audio=\"my_voice.wav\",\n    ref_text=\"အပြင် မသွားရလို့ စိတ်ညစ်နေပါတယ် မိုးတွေ တအား ရွာနေပါတယ်\",\n    output_file=\"cloned_speech.wav\"\n)\n```\n\n---\n\n## 📊 Model Specifications\n\n| Parameter | Specification |\n| :--- | :--- |\n| **Architecture** | Diffusion Transformer (DiT Base) |\n| **Parameters** | 337,138,310 (~337M) |\n| **Layers / Heads / Dim** | 22 layers, 16 heads, dim=1024, text_dim=512 |\n| **Training Steps** | **36 Epochs (1,025,604 updates)** |\n| **Training Audio** | **794.5+ Hours** Burmese Speech |\n| **Sampling Rate** | 24,000 Hz |\n| **Vocoder** | Vocos (24kHz Mel) |\n| **Vocabulary** | 2,626 Burmese & Pāḷi Unicode Tokens |\n| **Format** | Safetensors (674 MB FP16 Pruned EMA weights) |\n| **License** | Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0) |\n\n---\n\n## 🕊️ Dedication & Acknowledgements\n1. **GEMINI AI (Google):** Co-engineering partner through every line of code, architecture debugging, memory optimizations, and fine-tuning pipelines.\n2. **F5-TTS Research Team:** Yushen Chen and the creators of F5-TTS for open-sourcing this world-class flow-matching speech architecture.\n3. **The Brave Voices of Freedom:** National Unity Government (NUG), PVTV broadcasters, independent journalists, and creators whose voices form the backbone of this heritage preservation project.\n\n## 📜 License\nReleased under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license. Dedicated to free public research, language preservation, education, and open-source innovation.",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 22,
+      "topic_scores": {
+        "audio_language_models": 7,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "Audio & Speech Language Models: speech foundation model",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "elitexp/nepali-call-center-cosyvoice-experimental",
+      "author": "elitexp",
+      "created_at": "2026-09-09",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "cosyvoice",
+        "onnx",
+        "safetensors",
+        "text-to-speech",
+        "nepali",
+        "voice-cloning",
+        "zero-shot",
+        "experimental",
+        "ne",
+        "arxiv:2505.17589",
+        "base_model:FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+        "base_model:quantized:FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "cosyvoice",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/elitexp/nepali-call-center-cosyvoice-experimental",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: FunAudioLLM/Fun-CosyVoice3-0.5B-2512\nlanguage:\n- ne\npipeline_tag: text-to-speech\ntags:\n- cosyvoice\n- text-to-speech\n- nepali\n- voice-cloning\n- zero-shot\n- experimental\n---\n\n# Nepali Call Centre Tone — Experimental\n\nA fine-tune of [FunAudioLLM/Fun-CosyVoice3-0.5B-2512](https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512).\n\n> **Experimental.** Published to share a working Nepali adaptation and an\n> honest record of what did and did not transfer. Pronunciation is solid;\n> the call-centre register is partial — see *What it is good at, and what\n> it is not*. Not validated for production use.\n\nThe base model covers nine languages; **Nepali is not one of them**, and the\nreleased weights read Nepali text poorly. This fine-tune trains the LLM on\nNepali speech so that it does.\n\nOnly `llm.pt` differs from the base. Flow and the HiFT vocoder are unchanged and\nfrozen at 24 kHz — which means **voice timbre comes from the prompt clip you\nsupply at inference**, not from these weights. This is a *language and prosody*\nfine-tune, not a voice.\n\n## Quick start\n\nA one-file generator is included:\n\n```bash\ngit clone https://github.com/FunAudioLLM/CosyVoice.git\npip install -r CosyVoice/requirements.txt\n\n./generate.py --prompt samples/prompt.wav \\\n              --text \"नमस्कार, हाम्रो सेवामा हजुरलाई स्वागत छ।\" \\\n              --out output.wav          # or output.mp3\n```\n\n`samples/prompt.wav` can be as short as an 8.5 s reference clip. Swap in any 5-10 s\nrecording of a different voice and the output follows that voice instead —\nthe weights carry the language, not the speaker.\n\n`generate.py` defaults to the **call-centre style tag** — the register this\ncheckpoint was fine-tuned for. Pass `--neutral` for the plain tag, or\n`--instruct \"...<|endofprompt|>\"` for your own.\n\nIt also normalises the text (see below), reads long digit runs out\ndigit-by-digit, and synthesises sentence by sentence. Those are not\nconveniences; skipping them produces audibly wrong output with no error.\n\nFirst run downloads ~48 MB of text-frontend resources from ModelScope, so it\nneeds network once.\n\n## Usage\n\nLoad it exactly like the base model:\n\n```python\nfrom cosyvoice.cli.cosyvoice import CosyVoice3\n\ncv = CosyVoice3(\"path/to/this/repo\")\n\n# The style tag is the only channel register has into the model. This\n# checkpoint was fine-tuned with the call-centre tag on ~4,700 utterances;\n# the neutral tag (\"You are a helpful assistant.<|endofprompt|>\") leaves most\n# of that unused.\ninstruct = (\"You are a helpful assistant. Speak like a friendly Nepali \"\n            \"call-centre agent: warm, brisk, natural phrasing.<|endofprompt|>\")\ntext     = \"नमस्कार, हजुरलाई कसरी सहयोग गर्न सक्छु?\"\n\nfor out in cv.inference_instruct2(text, instruct, \"your_prompt.wav\",\n                                  stream=False, text_frontend=False):\n    audio = out[\"tts_speech\"]      # 24 kHz mono\n```\n\n`your_prompt.wav` is a few seconds of the voice you want. Anything from ~5–10 s\nof clean speech works.\n\n### Normalise your text first\n\nTwo rules, both learned the hard way:\n\n* **Map danda to a period.** Training text contains no `।` at all, so an\n  untouched danda reaches the tokenizer as a byte sequence the model has never\n  seen and gets voiced — it comes out as a spoken \"s\", not a pause.\n* **Strip ZWJ/ZWNJ (U+200D, U+200C).** Same reason. `पुर्‍याउन` typed with the\n  joiner matches nothing; the corpus only ever contains `पुर्याउन`.\n\n```python\ndef normalize(s):\n    for a, b in ((\"॥\", \".\"), (\"।\", \".\")):\n        s = s.replace(a, b)\n    return s.replace(\"‍\", \"\").replace(\"‌\", \"\")\n```\n\nSpell digit runs out in words too — phone numbers and amounts are otherwise read\nas one enormous cardinal.\n\n### Keep utterances short\n\nTrained on clips averaging ~3.5 s. Hand it a long paragraph and it produces a\nrushed run-on. Split on sentence boundaries and synthesise piece by piece.\n\n## Style tags\n\n| tag | when |\n|---|---|\n| `You are a helpful assistant. Speak like a friendly Nepali call-centre agent: warm, brisk, natural phrasing.<|endofprompt|>` | **default.** What the fine-tune was trained for |\n| `You are a helpful assistant.<|endofprompt|>` | neutral read, for contrast |\n\nThe tag must end in `<|endofprompt|>`. Timbre is unaffected by it — that comes\nfrom the prompt clip. What the tag moves is rate, pitch range and phrasing.\n\n## What it is good at, and what it is not\n\n**Good:** Nepali pronunciation. Measured character error rate of **0.294** when\ngenerated speech is transcribed back through a telephony codec — against a\n**0.307** floor measured by putting *human* speech through the same pipeline. It\nis at the measurement floor, not merely close to it.\n\n**Limited:** prosody control. The model was also trained toward a warm\ncall-centre register via an instruct tag. Speaking rate and pitch variation moved\nusefully (+16% rate, F0 spread 2.73 semitones against a 2.92 reference), but\n**breath-pause structure did not** — the training clips were single short\nsentences with almost no internal pauses, so the model never learned to place\nthem. Expect brisk, expressive, under-punctuated speech.\n\n## Evaluation\n\n| metric | this model | reference |\n|---|---|---|\n| CER through G.711 8 kHz | 0.294 | 0.307 (human speech, same ASR) |\n| speaking rate, tag on vs off | +16% | — |\n| F0 spread | 2.73 st | 2.92 st (target) |\n| pause density | did not transfer | 0.343 /s (target) |\n\n## Provenance\n\nExactly one file differs from the base model: `llm.pt`. `flow.pt`, `hift.pt`,\nthe ONNX front end and `cosyvoice3.yaml` are byte-identical to\n`FunAudioLLM/Fun-CosyVoice3-0.5B-2512`. Only the LLM is trained in this\npipeline.\n\nCheckpoint: `stageV:epoch_4_whole` — epoch 4 of a 5-epoch run. Note that epoch 4\nwas not that run's validation minimum (epoch 2 was); it was chosen as the most\nstrongly adapted checkpoint.\n\nTraining data: Nepali ASR corpora, plus call-centre style speech from several\nsources, both recorded and synthetic. The `apache-2.0` tag is inherited from\nthe base weights.\n\nNo prompt or reference clips are included. Timbre comes entirely from the clip\nyou supply, and the clips used in development are recordings of identifiable\npeople.\n\n## Citation\n\nBase model:\n\n```bibtex\n@article{cosyvoice3,\n  title={CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training},\n  journal={arXiv preprint arXiv:2505.17589},\n  year={2025}\n}\n```\n",
+      "arxiv_ids": [
+        "2505.17589"
+      ],
+      "datasets": [],
+      "base_models": [
+        "FunAudioLLM/Fun-CosyVoice3-0.5B-2512"
+      ],
+      "variants": [],
+      "score": 22,
+      "topic_scores": {
+        "speech_models": 19
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "loudreader/loudr-1",
+      "author": "loudreader",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "loudkit",
+        "coreml",
+        "onnx",
+        "text-to-speech",
+        "voice-cloning",
+        "on-device",
+        "en",
+        "es",
+        "de",
+        "pt",
+        "fr",
+        "it",
+        "pl",
+        "nl",
+        "sv",
+        "da",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 93,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "loudkit",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/loudreader/loudr-1",
+      "card_text": "---\nlicense: apache-2.0\nlibrary_name: loudkit\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - voice-cloning\n  - on-device\n  - coreml\nlanguage:\n  - en\n  - es\n  - de\n  - pt\n  - fr\n  - it\n  - pl\n  - nl\n  - sv\n  - da\n---\n\n<p align=\"center\">\n  <img src=\"https://huggingface.co/loudreader/loudr-1/resolve/main/logo.png\" alt=\"LoudKit\" width=\"640\">\n</p>\n\n# loudr-1\n\n**Natural-sounding text-to-speech with 28 voices, ten languages and voice\ncloning.**\n\nloudr-1 runs on your own hardware through\n[loudkit](https://github.com/loudreader/loudkit). Download it once and work offline\nfrom Python, Swift, Go, Rust or TypeScript with PyTorch, ONNX Runtime or CoreML.\n\nThese are the weights behind [LoudReader](https://loudreader.io), a reading app\nthat speaks articles, PDFs and books on device. They are published here so the\nengine can be used and checked on its own.\n\n[**Try it in the browser**](https://huggingface.co/spaces/jer3mi/loudkit) |\n[**Hear all 28 voices**](https://loudreader.github.io/loudkit/demo/) |\n[**Open in Colab**](https://colab.research.google.com/github/loudreader/loudkit/blob/main/notebooks/loudkit_quickstart.ipynb) |\n[**GitHub**](https://github.com/loudreader/loudkit) |\n[**Documentation**](https://loudreader.github.io/loudkit/)\n\n## Listen\n\n**Joe**\n\n<audio controls src=\"https://huggingface.co/loudreader/loudr-1/resolve/main/samples/joe.opus\"></audio>\n\n**Kathleen**\n\n<audio controls src=\"https://huggingface.co/loudreader/loudr-1/resolve/main/samples/kathleen.opus\"></audio>\n\nBoth voices read the same passage from *Alice's Adventures in Wonderland*.\n[Open the gallery](https://loudreader.github.io/loudkit/demo/) to compare every\nshipped voice with the enrollment reference used to create its profile.\n\n> English is the only language we could evaluate ourselves by ear. We do not\n> speak the other nine languages well enough to judge their naturalness\n> reliably. If you do, please listen and share what sounds good or wrong.\n> Feedback from native speakers is very welcome.\n\n## Start in Python\n\n```bash\npip install \"loudkit[torch,audio,hub]\"\n```\n\n```python\nimport loudkit as lk\n\nengine = lk.load(\"loudreader/loudr-1\")\nvoice = engine.voice(\"joe\")\n\nengine.synthesize(\"Hello from loudkit.\", voice, seed=7).save(\"hello.wav\")\n```\n\nThe first run downloads the 747 MB synthesis checkpoint and the voices. Later\nruns use the local cache. The same path from a shell is:\n\n```bash\nloudkit speak --checkpoint loudreader/loudr-1 --voice joe \\\n  \"Hello from loudkit.\" -o hello.wav\n```\n\nTo enroll a voice that you own or have permission to use:\n\n```python\nmine = lk.enroll(\"my-recording.wav\", \"loudreader/loudr-1\", name=\"my-voice\")\nmine.save(\"voices/my-voice.safetensors\")\n```\n\nThe reusable profile is about 150 KB. Install\n`loudkit[torch,audio,enroll,hub]` for enrollment.\n\nThe Swift, Go, Rust and TypeScript packages load the same repo id and fetch\nwhat they need themselves; the\n[README](https://github.com/loudreader/loudkit#the-same-in-swift-go-rust-and-typescript)\nshows each one.\n\n## What each runtime downloads\n\nThe repository contains every supported format. A download takes one runtime\nand leaves the rest behind. Add `--with-cloning` when the installation also\nneeds enrollment.\n\n| path | command |\n|---|---|\n| Python, synthesis | `loudkit download loudreader/loudr-1 --for torch` |\n| Python, with cloning | `--for torch --with-cloning` |\n| TypeScript, Go or Rust with ONNX Runtime | `--for onnx` |\n| ONNX Runtime, with cloning | `--for onnx --with-cloning` |\n| Swift or Python with CoreML | `--for coreml` |\n| CoreML, with cloning | `--for coreml --with-cloning` |\n\nDownload size depends on the model, backend and release revision. The\nsynthesis checkpoint is 747 MB; graph downloads also include backend-specific\nweights.\n\nSpeed depends on the hardware and the backend.\n[Benchmarks](https://loudreader.github.io/loudkit/benchmarks/) has the\nmeasured figures, the machines and the commands.\n\n## What ships\n\n| artefact | size | used by |\n|---|---:|---|\n| `loudr-1.safetensors` | 747 MB | synthesis |\n| `loudr-1-enrollment.safetensors` | 523 MB | PyTorch enrollment |\n| `ve.safetensors` | 5.7 MB | PyTorch enrollment |\n| `onnx/` | varies by model | synthesis and enrollment graphs |\n| `coreml/` | varies by model | native generation, rendering and enrollment packages |\n| `voices/` | 4.3 MB | 28 voice profiles |\n| `samples/` | 108 KB | the two players above |\n| `tokenizer.json` | 70 KB | text processing |\n\nSynthesis and enrollment are separate so users who only need speech generation\ndo not download the enrollment weights. What each graph under `onnx/` takes and\nreturns, and the order to call them in, is in\n[the graph signatures](design/onnx-graphs.md), which is what a runtime loudkit\nhas no port for needs. ONNX and CoreML use their own enrollment\ngraphs. Every download is checked against the release's `SHA256SUMS` before\nit is used.\n\n## Voices and consent\n\nThe release includes ten English profiles and two for each of Spanish, French,\nGerman, Italian, Polish, Portuguese, Dutch, Swedish and Danish.\n\nThe profiles were built from recordings donated for speech technology or from\nCC0 and CC-BY speech corpora. No scraped celebrity voices ship with the model.\n[The full roster](https://github.com/loudreader/loudkit/blob/main/VOICES.md) records\nthe source, licence and consent basis for every profile. The\n[voice gallery](https://loudreader.github.io/loudkit/demo/) provides a generated\nsample and enrollment preview for all 28.\n\nThe source enrollment WAVs are not redistributed in the model repository. Their\nhashes, construction notes and the hashes of every shipped profile and sample\nare recorded in\n[the roster record](https://github.com/loudreader/loudkit/blob/main/docs/voices/roster/provenance.json).\n\n## Model lineage\n\nloudr-1 is derived from\n[Chatterbox](https://github.com/resemble-ai/chatterbox), released by Resemble AI\nunder the MIT licence. We optimized it for faster local inference by profiling\nthe full synthesis path, changing the signal flow, separating synthesis from\nenrollment, and adjusting graph boundaries and device placement for PyTorch,\nONNX Runtime and CoreML.\n\nRelease gates compare the implementations, check output length and early end of\nspeech, and run ASR-based checks per measured language. These checks catch\nmechanical regressions. They do not replace listening by native speakers.\n\n## Reproducibility\n\nFor a fixed build, device and backend, the same text, voice and seed produce the\nsame waveform. Across devices or backends, loudkit checks the token stream and\nkeeps waveform differences inside measured correlation bands. Floating-point\nexecution means that waveforms are not promised to be byte-identical across\ndifferent runtimes.\n\nThe exact contract and current measurements are in the\n[identity contract](https://github.com/loudreader/loudkit/blob/main/docs/reference/IDENTITY-CONTRACT.md)\nand [measured parity report](https://loudreader.github.io/loudkit/parity-measured/).\n\n## Before you ship\n\n- Long passages are rendered in windows of about ten seconds. Sentence joins\n  can occasionally be audible.\n- Difficult punctuation, numbers and abbreviations can change pronunciation or\n  prosody.\n- Voice cloning requires consent. A recording being public does not grant\n  permission to clone the speaker.\n- Saved WAVs and server responses carry unsigned C2PA Content Credentials by\n  default, recording the model, voice, seed, backend and a hash of the audio\n  in a machine-readable form.\n\nRead [Responsible use](https://huggingface.co/loudreader/loudr-1/blob/main/RESPONSIBLE_USE.md)\nbefore exposing enrollment to other people.\n\n## Intended use\n\nloudr-1 is intended for local narration, accessibility, localisation, games,\nprototyping and speech research. It is not a voice-authentication system and\nmust not be used for deceptive impersonation.\n\n## Training data\n\nThe original Chatterbox training data is controlled by Resemble AI and is not\ndocumented by this project. The shipped voice profiles use recordings made or\nreleased for speech-technology use; their sources and licences are listed in\nthe public roster.\n\n## Licence\n\n[Apache-2.0](https://huggingface.co/loudreader/loudr-1/blob/main/LICENSE).\nUpstream attributions and component licences are listed in\n[NOTICE](https://huggingface.co/loudreader/loudr-1/blob/main/NOTICE).\n\n## Download sizes for 0.1.1\n\nApproximate decimal sizes for the release files; backend weights are included.\nCloning adds enrollment assets only when requested. Both models ship separate\nsynthesis and enrollment checkpoints.\n\n| Model | Torch | Torch + cloning | ONNX | ONNX + cloning | CoreML | CoreML + cloning |\n|---|---:|---:|---:|---:|---:|---:|\n| loudr-1 | 0.75 GB | 1.28 GB | 2.60 GB | 3.13 GB | 2.46 GB | 2.99 GB |\n| loudr-1-turbo | 0.72 GB | 1.25 GB | 2.44 GB | 2.97 GB | 2.44 GB | 2.97 GB |\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 20,
+      "topic_scores": {
+        "speech_models": 19
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "prime2070/kokoro-ninja",
+      "author": "prime2070",
+      "created_at": "2026-09-08",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "kokoro-ninja",
+        "onnx",
+        "text-to-speech",
+        "voice-cloning",
+        "zero-shot",
+        "vietnamese",
+        "multilingual",
+        "styletts2",
+        "vi",
+        "en",
+        "zh",
+        "fr",
+        "de",
+        "ja",
+        "ko",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "kokoro-ninja",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/prime2070/kokoro-ninja",
+      "card_text": "---\nlicense: cc-by-nc-sa-4.0\nlanguage:\n  - vi\n  - en\n  - zh\n  - fr\n  - de\n  - ja\n  - ko\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - voice-cloning\n  - zero-shot\n  - vietnamese\n  - multilingual\n  - styletts2\nlibrary_name: kokoro-ninja\n---\n\n# Kokoro Ninja 🥷 — fast multilingual zero-shot voice cloning\n\nClone a Vietnamese voice from a few seconds of audio at **18× realtime on a single GPU**.\nIt also speaks English, Chinese, French, German, Japanese and Korean — but cloning fidelity\noutside Vietnamese is measurably weaker, and the numbers below say so rather than claiming\nseven equal languages.\n\n[StyleTTS2](https://github.com/yl4579/StyleTTS2) + a\n[CAMPPlus](https://github.com/modelscope/3D-Speaker) speaker encoder. One non-autoregressive\nforward pass: no diffusion sampler, no autoregressive decode loop. Generation is deterministic.\n\n**Code:** https://github.com/primepake/kokoro-ninja  \n**Demo:** https://primepake.github.io/kokoro-ninja/\n\n## Usage\n\n```python\nimport soundfile as sf\nfrom kokoro_ninja import KokoroNinja\n\ntts = KokoroNinja.load(\n    checkpoint_path=\"kokoro-ninja-multilingual.pth\",\n    config_path=\"config_inference.yml\",\n    campplus_onnx_path=\"campplus/campplus.onnx\",\n    device=\"cuda:0\",\n)\n\nstyle = tts.compute_style(\"reference.wav\")     # 3-10s of the voice to clone\n\nfor lang, text in [\n    (\"vi\", \"Xin chào, đây là giọng nói được nhân bản.\"),\n    (\"en\", \"Hello, this is a cloned voice.\"),\n    (\"ja\", \"こんにちは、これはクローンされた声です。\"),\n]:\n    wav, sr = tts.synthesize(text=text, ref_s=style, language=lang)\n    sf.write(f\"out_{lang}.wav\", wav, sr)\n```\n\nOne reference clip carries the voice across every supported language.\n`compute_style()` is per-voice — compute once, reuse for every sentence.\n\n**Requires espeak-ng** (the phonemizer backend). Easiest correct install:\n`pip install espeakng-loader`, which bundles 1.52 with complete dictionaries. The model was\ntrained against 1.50, but we measured 1.50 vs 1.52 as producing identical phonemes on all 30\nVietnamese benchmark sentences and on en/fr/de/ja/ko.\n\nIf you build espeak from source, compile the dictionaries explicitly — a corrupt `en_dict`\nmakes espeak spell words out letter by letter (\"B-O-N-J-O-U-R\"), silently wrecking English,\nFrench and German. See the repo README.\n\n## Files\n\n| File | What it is |\n|---|---|\n| `kokoro-ninja-multilingual.pth` | the model (optimizer state stripped) |\n| `config_inference.yml` | inference config — resolves asset paths **relative to itself**, keep it beside `Utils/` and `campplus/` |\n| `campplus/campplus.onnx` | CAMPPlus speaker encoder |\n| `Utils/ASR`, `Utils/JDC`, `Utils/PLBERT` | text aligner, F0 extractor, PL-BERT encoder loaded at runtime |\n\n## Benchmarks\n\nOne NVIDIA L4, **105 held-out speakers**, identical references and sentences for every system.\nReferences are 3–10 s in both languages so they are comparable.\n\n### Vietnamese — all 65 VIVOS speakers, 130 utterances\n\n| System | RTF ↓ | ×realtime | SECS ↑ | clone% ↑ | UTMOSv2 ↑ | WER ↓ |\n|---|---|---|---|---|---|---|\n| **Kokoro Ninja** | **0.055** | **18.2×** | 0.909 | 87% | 2.623 | 3.6% |\n| omnivoice-vietnamese | 0.399 | 2.5× | 0.933 | 99% | **2.714** | **1.4%** |\n| VieNeu-TTS v3 Turbo | 0.736 | 1.4× | **0.934** | 99% | 2.516 | 3.9% |\n| *human recording* | — | — | *0.936* | *100%* | *2.860* | *1.6%* |\n\n**7.3× faster than omnivoice-vietnamese, 13.4× faster than VieNeu v3 Turbo** on the same GPU,\nand we edge out VieNeu Turbo on both intelligibility and naturalness. We lose on **speaker\nsimilarity**: 87% of the human ceiling versus their 99%. `clone%` rescales SECS between the\ncross-speaker floor (0.725 — two *different* speakers) and the human ceiling (0.936).\n\n### English — 40 LibriSpeech test-clean speakers, 80 utterances\n\n| System | RTF ↓ | ×realtime | SECS ↑ | clone% ↑ | UTMOSv2 ↑ | WER ↓ |\n|---|---|---|---|---|---|---|\n| **Kokoro Ninja** | **0.047** | **21.1×** | 0.706 | **9%** | 2.832 | 9.1% |\n| *human recording* | — | — | *0.960* | *100%* | *3.249* | *4.2%* |\n\n**English does not clone well.** Output is fast and broadly intelligible, but 9% of the usable\nsimilarity range (floor 0.681, ceiling 0.960) is barely above \"different speaker\" — the model\n*speaks* English, it does not reliably carry a voice into it. This is not an artifact of the\neval: matching the English reference-duration window to Vietnamese moved SECS by 0.001. Treat\nthe six non-Vietnamese languages as speech synthesis, not voice cloning, until this improves.\n\nRTF is full-utterance compute ÷ audio duration, **not** time-to-first-audio. SECS uses\nWavLM-base-plus-sv rather than CAMPPlus, since scoring with the encoder the model is\nconditioned on would flatter it. WER uses PhoWhisper for Vietnamese and Whisper for English.\nUTMOSv2 is nondeterministic (up to 0.08 between runs on identical audio) — treat small MOS gaps\nas noise; SECS and WER are exactly reproducible.\n\n## Always end your text with punctuation\n\nThe model is trained on sentence-final punctuation and is sensitive to it: text without a\nterminal mark tends to clip or run on at the end. `synthesize()` appends one when your text\nlacks it. Adding the missing period moved WER from 5.1% to 3.9% and MOS from 2.47 to 2.66 on an\nearlier run of this benchmark.\n\n## Training data\n\n| Corpus | Role | Licence |\n|---|---|---|\n| [viVoice](https://huggingface.co/datasets/capleaf/viVoice) | Vietnamese, ~1,000 h | CC-BY-NC-SA-4.0 |\n| [Emilia](https://huggingface.co/datasets/amphion/Emilia-Dataset) (subset) | multilingual | CC-BY-NC-4.0 |\n| internal corpus | Vietnamese | proprietary |\n\nBase checkpoint: StyleTTS2's LibriTTS model, adapted to the Vietnamese phoneme vocabulary and\nextended to the multilingual token set.\n\n## Licence — non-commercial\n\n**CC-BY-NC-SA-4.0.** This is inherited, not chosen: viVoice is CC-BY-NC-SA (NonCommercial\n*and* ShareAlike) and the Emilia subset is CC-BY-NC, so the strictest terms propagate to\nanything trained on them.\n\nYou **may** use these weights for research, evaluation and personal projects. You **may not**\nuse them in a commercial product, and derivatives must carry the same licence.\n\nThe [inference code](https://github.com/primepake/kokoro-ninja) is separately Apache-2.0.\n\n## Limitations\n\n- **Speaker similarity** trails the best autoregressive/codec models (see benchmarks).\n- **No text normalization** — expand numbers, dates and currency before synthesis. This is the\n  most common source of real-world errors and is not handled here.\n- Noisy or very short (<3 s) references degrade cloning; there is no built-in denoiser.\n- **Cloning fidelity outside Vietnamese is weak** (see the English table). Chinese, French,\n  German, Japanese and Korean are unmeasured; expect the same pattern.\n- **Japanese input must be kana** — espeak-ng reads hiragana and katakana but silently drops\n  kanji, so convert with pyopenjtalk/MeCab first. Every other language takes normal text.\n- 24 kHz output, no streaming.\n\n## Acknowledgements\n\n[StyleTTS2](https://github.com/yl4579/StyleTTS2) (Li et al.),\n[3D-Speaker / CAMPPlus](https://github.com/modelscope/3D-Speaker),\n[VIVOS](https://huggingface.co/datasets/AILAB-VNUHCM/vivos) for evaluation,\n[PhoWhisper](https://github.com/VinAIResearch/PhoWhisper) (VinAI) and\n[UTMOSv2](https://github.com/sarulab-speech/UTMOSv2) for scoring.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "FrankLiuDundun/voxcpm-finetune-lora",
+      "author": "FrankLiuDundun",
+      "created_at": "2026-09-04",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "multilingual",
+        "voice-cloning",
+        "voice-design",
+        "diffusion",
+        "audio",
+        "zh",
+        "en",
+        "ar",
+        "my",
+        "da",
+        "nl",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "he",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lo",
+        "ms",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sw",
+        "sv",
+        "tl",
+        "th",
+        "tr",
+        "vi",
+        "arxiv:2509.24650",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 11,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/FrankLiuDundun/voxcpm-finetune-lora",
+      "card_text": "",
+      "arxiv_ids": [
+        "2509.24650"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Serveurperso/OmniVoice-GGUF",
+      "author": "Serveurperso",
+      "created_at": "2026-04-27",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gguf",
+        "tts",
+        "text-to-speech",
+        "voice-cloning",
+        "voice-design",
+        "ggml",
+        "omnivoice",
+        "cpp",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "zh",
+        "ja",
+        "ko",
+        "ar",
+        "ru",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:quantized:k2-fsa/OmniVoice",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 139101,
+      "likes": 59,
+      "trending_score": 0.0,
+      "library_name": "gguf",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Serveurperso/OmniVoice-GGUF",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlicense_link: https://huggingface.co/k2-fsa/OmniVoice#license\nlibrary_name: gguf\npipeline_tag: text-to-speech\ntags:\n  - tts\n  - text-to-speech\n  - voice-cloning\n  - voice-design\n  - ggml\n  - gguf\n  - omnivoice\n  - cpp\nlanguage:\n  - en\n  - fr\n  - de\n  - es\n  - it\n  - pt\n  - zh\n  - ja\n  - ko\n  - ar\n  - ru\nbase_model: k2-fsa/OmniVoice\n---\n\n# OmniVoice GGUF\n\nGGUF weights for [omnivoice.cpp](https://github.com/ServeurpersoCom/omnivoice.cpp),\na C++17/GGML port of OmniVoice (k2-fsa/OmniVoice). Multilingual zero\nshot TTS, 646 languages, 24 kHz mono. Runs on CPU, CUDA, ROCm, Metal,\nVulkan.\n\n## Files\n\nTwo GGUFs load together :\n\n  omnivoice-base-{variant}.gguf       Qwen3 0.6B backbone, text -> tokens\n  omnivoice-tokenizer-{variant}.gguf  HuBERT + DAC + RVQ, tokens <-> 24 kHz audio\n\n| variant | base    | tokenizer | use case                       |\n|---------|---------|-----------|--------------------------------|\n| F32     | 2.46 GB | 734 MB    | reference, debug, conversion   |\n| BF16    | 1.23 GB | 373 MB    | source faithful, max precision |\n| Q8_0    | 656 MB  | 289 MB    | recommended default            |\n| Q4_K_M  | 407 MB  | 252 MB    | lowest VRAM                    |\n\n## Quick start\n\n```\ngit clone --recurse-submodules https://github.com/ServeurpersoCom/omnivoice.cpp.git\ncd omnivoice.cpp && ./buildcuda.sh\n\nmkdir -p models\nhuggingface-cli download Serveurperso/OmniVoice-GGUF \\\n    omnivoice-base-Q8_0.gguf omnivoice-tokenizer-Q8_0.gguf \\\n    --local-dir models\n\ncd examples\n./tts.sh        # voice design   -> tts.wav\n./clone.sh      # voice cloning  -> clone.wav\n```\n\n## Backends\n\nSet `GGML_BACKEND` to force a device, otherwise the runtime picks the\nbest one available.\n\n| value     | target                                       |\n|-----------|----------------------------------------------|\n| `CUDA0`   | NVIDIA GPU, fastest path on Ada / Blackwell  |\n| `Vulkan0` | Cross vendor GPU (AMD / Intel / NVIDIA)      |\n| `Metal`   | Apple Silicon GPU                            |\n| `CPU`     | CPU fallback, x86 variant auto selected      |\n\n## Quantization policy\n\nTokenizer GGUFs are not uniform quants. Three categories get a\ndedicated treatment :\n\n| tensor                                            | dtype across all variants |\n|---------------------------------------------------|---------------------------|\n| RVQ codebooks, fc, fc2, project_in / project_out  | F32                       |\n| Snake activation alpha                            | F32                       |\n| Conv kernels with non alignable rows (K=7,3,1)    | F16 (in Q* variants)      |\n\nSame fallback as llama.cpp `tensor_type_fallback` : F16 has no block\nsize and matches the runtime target dtype on every backend. The base\nLM (Qwen3 0.6B, hidden = 1024) has all dimensions divisible by 256 so\nthe fallback never triggers, the LM follows standard llama.cpp K-quant\nacross variants.\n\n## License\n\n  Upstream weights : OmniVoice by Xiaomi / k2-fsa, CC-BY-NC 4.0\n  Upstream code    : OmniVoice by Xiaomi / k2-fsa, Apache 2.0\n  Audio codec      : Higgs Audio v2 (bosonai/higgs-audio-v2-tokenizer), Apache 2.0\n  GGUF tooling     : omnivoice.cpp, MIT\n\nThe upstream code is Apache 2.0 but the pre-trained weights are CC-BY-NC\nbecause of constraints from the training data. These GGUF files are\nconversions of those weights and carry the same non commercial terms.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-4.0",
+        "community likes 59"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Serveurperso/Qwen3-TTS-GGUF",
+      "author": "Serveurperso",
+      "created_at": "2026-05-11",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gguf",
+        "tts",
+        "text-to-speech",
+        "voice-cloning",
+        "voice-design",
+        "mandarin-dialects",
+        "ggml",
+        "qwen",
+        "qwen3",
+        "qwen3-tts",
+        "cpp",
+        "zh",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "ja",
+        "ko",
+        "ru",
+        "ar",
+        "base_model:Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "base_model:quantized:Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 747297,
+      "likes": 40,
+      "trending_score": 0.0,
+      "library_name": "gguf",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Serveurperso/Qwen3-TTS-GGUF",
+      "card_text": "---\nlicense: apache-2.0\nlibrary_name: gguf\npipeline_tag: text-to-speech\ntags:\n  - tts\n  - text-to-speech\n  - voice-cloning\n  - voice-design\n  - mandarin-dialects\n  - ggml\n  - gguf\n  - qwen\n  - qwen3\n  - qwen3-tts\n  - cpp\nlanguage:\n  - zh\n  - en\n  - fr\n  - de\n  - es\n  - it\n  - pt\n  - ja\n  - ko\n  - ru\n  - ar\nbase_model:\n  - Qwen/Qwen3-TTS-Tokenizer-12Hz\n  - Qwen/Qwen3-TTS-12Hz-0.6B-Base\n  - Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice\n  - Qwen/Qwen3-TTS-12Hz-1.7B-Base\n  - Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\n  - Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign\n---\n\n# Qwen3-TTS GGUF\n\nGGUF weights for [qwentts.cpp](https://github.com/ServeurpersoCom/qwentts.cpp),\na C++17/GGML port of Qwen3-TTS 12 Hz (Qwen team, Alibaba). Multilingual\nzero shot TTS with named speakers and Mandarin dialects, 24 kHz mono.\nRuns on CPU, CUDA, Metal, Vulkan.\n\n## Files\n\nTwo GGUFs load together :\n\n  qwen-talker-{size}-{mode}-{variant}.gguf  Qwen3 LM + code predictor MTP head + optional speaker encoder, text -> 12 Hz codes\n  qwen-tokenizer-12hz-{variant}.gguf        SEANet + ConvNeXt + DAC v2 + RVQ, 12 Hz codes <-> 24 kHz audio\n\nThree modes are available across two talker sizes :\n\n| mode        | 0.6B | 1.7B | use case                                          |\n|-------------|------|------|---------------------------------------------------|\n| base        | yes  | yes  | zero shot TTS with named speakers and dialects    |\n| customvoice | yes  | yes  | zero shot voice cloning from a reference clip     |\n| voicedesign | no   | yes  | voice synthesis from attribute description        |\n\nThe tokenizer is shared across every talker.\n\n| variant | talker 0.6B | talker 1.7B | tokenizer | use case                       |\n|---------|-------------|-------------|-----------|--------------------------------|\n| F32     | 3.7 GB      | 7.7 GB      | 647 MB    | reference, debug, conversion   |\n| BF16    | 1.8 GB      | 3.9 GB      | 359 MB    | source faithful, max precision |\n| Q8_0    | 993 MB      | 2.1 GB      | 291 MB    | recommended default            |\n| Q4_K_M  | 629 MB      | 1.2 GB      | 255 MB    | lowest VRAM                    |\n\n## Quick start\n\n```\ngit clone --recurse-submodules https://github.com/ServeurpersoCom/qwentts.cpp.git\ncd qwentts.cpp && ./buildcuda.sh\nmkdir -p models\nhuggingface-cli download Serveurperso/Qwen3-TTS-GGUF \\\n    qwen-talker-1.7b-base-Q8_0.gguf qwen-tokenizer-12hz-Q8_0.gguf \\\n    --local-dir models\ncd examples\n./base.sh         # named speaker      -> base.wav\n./clone.sh        # voice cloning      -> clone.wav\n./customvoice.sh  # custom voice mode  -> customvoice.wav\n./tts.sh          # voice design       -> tts.wav\n```\n\n## Backends\n\nSet `GGML_BACKEND` to force a device, otherwise the runtime picks the\nbest one available.\n\n| value     | target                                       |\n|-----------|----------------------------------------------|\n| `CUDA0`   | NVIDIA GPU, fastest path on Ada / Blackwell  |\n| `Vulkan0` | Cross vendor GPU (AMD / Intel / NVIDIA)      |\n| `Metal`   | Apple Silicon GPU                            |\n| `CPU`     | CPU fallback, x86 variant auto selected      |\n\n## Quantization policy\n\nTokenizer GGUFs are not uniform quants. Three categories get a\ndedicated treatment :\n\n| tensor                                                       | dtype across all variants |\n|--------------------------------------------------------------|---------------------------|\n| RVQ codebooks, input_proj / output_proj, speaker encoder fc  | F32                       |\n| 1D tensors (gamma, biases, norms, snake alpha and beta)      | F32                       |\n| Conv kernels with non alignable rows (K=7,3,1)               | F16 in Q* variants        |\n\nConv kernel rows (K=7,3,1) never divide a K-quant block size, so the\nquantizer skips the Q* intermediates and lands on F16 directly. This\nis the last resort branch of llama.cpp's `tensor_type_fallback`\napplied unconditionally for these kernels. F16 has no block size and\nmatches the runtime target dtype on every backend. The talker LM\n(Qwen3 backbone, hidden divisible by 256) follows standard llama.cpp\nK-quant across variants. The code predictor MTP head and the speaker\nencoder live in the talker GGUF and share its quantization.\n\n## Evaluation\n\nAs of **September 9, 2026**, on Hugging Face's [Open TTS Leaderboard](https://huggingface.co/spaces/hf-audio/open_tts_leaderboard), Qwen3-TTS-GGUF ranks 🥇 **1st on TTFA** (time-to-first-audio) in the leaderboard's streaming benchmark — the fastest of any model to start producing audio in a single-request, streaming-mode setting.\n\n<p align=\"center\">\n  <img width=\"90%\" alt=\"Top 10 models by TTFA\" src=\"https://huggingface.co/datasets/bezzam/tts_leaderboard_screenshots/resolve/main/qwen-tts-gguf/ttfa.png\" />\n</p>\n\n## License\n\n  Upstream model : Qwen3-TTS by Alibaba / Qwen team, Apache 2.0\n  Audio codec    : Qwen3-TTS-Tokenizer-12Hz (Qwen team), Apache 2.0\n  GGUF tooling   : qwentts.cpp, MIT",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-TTS-Tokenizer-12Hz",
+        "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0",
+        "community likes 40"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Gander-Omni/Gander",
+      "author": "Gander-Omni",
+      "created_at": "2026-09-07",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "onnx",
+        "safetensors",
+        "multimodal",
+        "audio",
+        "video",
+        "conversational",
+        "full-duplex",
+        "function-calling",
+        "text-to-speech",
+        "gander",
+        "arxiv:2609.08977",
+        "base_model:openbmb/MiniCPM-o-4_5",
+        "base_model:quantized:openbmb/MiniCPM-o-4_5",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 8,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Gander-Omni/Gander",
+      "card_text": "",
+      "arxiv_ids": [
+        "2609.08977"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openbmb/MiniCPM-o-4_5"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "audio_understanding_reasoning": 10,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: multimodal audio",
+        "model card links an arXiv paper",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "loudreader/loudr-1-turbo",
+      "author": "loudreader",
+      "created_at": "2026-09-07",
+      "last_modified": "2026-09-09",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "loudkit",
+        "coreml",
+        "onnx",
+        "text-to-speech",
+        "voice-cloning",
+        "on-device",
+        "en",
+        "es",
+        "de",
+        "pt",
+        "fr",
+        "it",
+        "pl",
+        "nl",
+        "sv",
+        "da",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 8,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "loudkit",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/loudreader/loudr-1-turbo",
+      "card_text": "---\nlicense: apache-2.0\nlibrary_name: loudkit\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - voice-cloning\n  - on-device\nlanguage:\n  - en\n  - es\n  - de\n  - pt\n  - fr\n  - it\n  - pl\n  - nl\n  - sv\n  - da\n---\n\n<p align=\"center\">\n  <img src=\"https://huggingface.co/loudreader/loudr-1-turbo/resolve/main/logo.png\" alt=\"LoudKit\" width=\"640\">\n</p>\n\n# loudr-1-turbo\n\n**The faster of the two loudkit models. Same 28 voices, same ten\nlanguages, same API.**\n\nloudr-1-turbo is [loudr-1](https://huggingface.co/loudreader/loudr-1) with two\nchanges to how the audio is produced, and no change to how it is used:\n\n- the token generator writes **two speech tokens per forward** instead of one,\n  so a second of audio costs half as many;\n- the renderer turns those tokens into audio in **one** pass instead of\n  several.\n\nEverything else is loudr-1: the same voices, the same text handling, the same\nsampling, the same seeds.\n\n## Which one to pick\n\n**loudr-1** is the default. Pick it when you want the reference quality.\n\n**loudr-1-turbo** is faster on the same hardware, at a small cost in\nnaturalness that is easiest to hear on long, quiet or heavily punctuated\npassages. Pick it for interactive reading, where latency is what the listener\nnotices. Listen to both on your own text before choosing, and measure both on\nyour own hardware; the\n[benchmark page](https://loudreader.github.io/loudkit/benchmarks/) has the\ncommands.\n\n## Start in Python\n\n```bash\npip install \"loudkit[torch,audio,hub]\"\n```\n\n```python\nimport loudkit as lk\n\nengine = lk.load(\"loudreader/loudr-1-turbo\")\nvoice = engine.voice(\"joe\")\n\nengine.synthesize(\"Hello from loudkit.\", voice, seed=7).save(\"hello.wav\")\n```\n\nThat is the whole difference from loudr-1: one string. The same from a shell:\n\n```bash\nloudkit speak --checkpoint loudreader/loudr-1-turbo --voice joe \\\n  \"Hello from loudkit.\" -o hello.wav\n```\n\nTo enroll a voice that you own or have permission to use:\n\n```python\nmine = lk.enroll(\"my-recording.wav\", \"loudreader/loudr-1-turbo\", name=\"my-voice\")\nmine.save(\"voices/my-voice.safetensors\")\n```\n\nA voice profile is interchangeable between the two models: a profile enrolled\nagainst loudr-1 loads against loudr-1-turbo and the other way round.\n\n## Backends\n\nVersion 0.1.1 supports both models in Python, Swift, Go, Rust and TypeScript.\nPython offers PyTorch, ONNX Runtime and CoreML; Swift uses its native token\ngenerator with CoreML rendering, and Go, Rust and TypeScript use ONNX Runtime.\nChanging the model name keeps the same synthesis API and voice profile.\n\n## Download\n\n```bash\nloudkit download loudreader/loudr-1-turbo --for onnx\n```\n\nChoose `--for torch` or `--for coreml` for another backend. Add\n`--with-cloning` to prepare enrollment as well. Loading an existing voice\nprofile does not require enrollment assets. Prepare the chosen set once to\nuse it offline.\n\n## What ships\n\n| artefact | used by |\n|---|---|\n| `loudr-1-turbo.safetensors` | synthesis |\n| `loudr-1-enrollment.safetensors` and `ve.safetensors` | shared PyTorch enrollment |\n| `onnx/` | synthesis and enrollment through ONNX Runtime |\n| `coreml/` | synthesis and enrollment through CoreML |\n| `voices/` | 28 portable voice profiles |\n| `tokenizer.json` | text processing |\n| `samples/` | audio generated with this model |\n\nThe bundle uses the same canonical enrollment weights and graphs as loudr-1.\nClone once, then use the unchanged profile with either model. Exact file sizes\nand checksums are recorded in the bundle's `release.json` and `SHA256SUMS`.\n\n## Listen\n\nThese samples use this model, the named shipped voice and seed 7.\n\n<audio controls src=\"https://huggingface.co/loudreader/loudr-1-turbo/resolve/main/samples/joe.opus\"></audio>\n\n<audio controls src=\"https://huggingface.co/loudreader/loudr-1-turbo/resolve/main/samples/kathleen.opus\"></audio>\n\n## Voices and consent\n\nThe 28 profiles are the ones loudr-1 ships, unchanged: ten for English and\ntwo each for Spanish, French, German, Italian, Polish, Portuguese, Dutch, Swedish\nand Danish, built from recordings donated for speech technology or from CC0\nand CC-BY speech corpora. No scraped celebrity voices ship with the model.\n[The full roster](https://github.com/loudreader/loudkit/blob/main/VOICES.md)\nrecords the source, licence and consent basis for every profile.\n\n## Model lineage\n\nloudr-1-turbo is derived from loudr-1, which is derived from\n[Chatterbox](https://github.com/resemble-ai/chatterbox), released by Resemble\nAI under the MIT licence. The token generator is a student of loudr-1's,\ntrained to emit two tokens per forward; the renderer is loudr-1's, distilled\nto reach the same audio in one pass.\nThe licence chain is loudr-1's, unchanged, and is recorded in\n[NOTICE](https://huggingface.co/loudreader/loudr-1-turbo/blob/main/NOTICE).\n\nHow the two-token generator works is written up in\n[two-token decode](https://github.com/loudreader/loudkit/blob/main/docs/design/two-token-decode.md).\n\n## Reproducibility\n\nFor a fixed build, device and backend, the same text, voice and seed produce\nthe same waveform. loudr-1 and loudr-1-turbo are **different models**: the\nsame text, voice and seed give different audio on each, and a saved WAV\nrecords which one spoke. The contract is in the\n[identity contract](https://github.com/loudreader/loudkit/blob/main/docs/reference/IDENTITY-CONTRACT.md).\n\n## Before you ship\n\n- Long passages are rendered in windows of about ten seconds. Sentence joins\n  can occasionally be audible, and turbo joins a little more so than loudr-1.\n- Difficult punctuation, numbers and abbreviations can change pronunciation or\n  prosody.\n- Voice cloning requires consent. A recording being public does not grant\n  permission to clone the speaker.\n- Saved WAVs and server responses carry unsigned C2PA Content Credentials by\n  default, recording the model, voice, seed, backend and a hash of the audio\n  in a machine-readable form.\n\nRead [Responsible use](https://huggingface.co/loudreader/loudr-1-turbo/blob/main/RESPONSIBLE_USE.md)\nbefore exposing enrollment to other people.\n\n## Intended use\n\nloudr-1-turbo is intended for local narration, accessibility, localisation,\ngames, prototyping and speech research. It is not a voice-authentication\nsystem and must not be used for deceptive impersonation.\n\n## Training data\n\nThe original Chatterbox training data is controlled by Resemble AI and is not\ndocumented by this project. The shipped voice profiles use recordings made or\nreleased for speech-technology use; their sources and licences are listed in\nthe public roster.\n\n## Licence\n\n[Apache-2.0](https://huggingface.co/loudreader/loudr-1-turbo/blob/main/LICENSE).\nUpstream attributions and component licences are listed in\n[NOTICE](https://huggingface.co/loudreader/loudr-1-turbo/blob/main/NOTICE).\n\n## Download sizes for 0.1.1\n\nApproximate decimal sizes for the release files; backend weights are included.\nCloning adds enrollment assets only when requested. Both models ship separate\nsynthesis and enrollment checkpoints.\n\n| Model | Torch | Torch + cloning | ONNX | ONNX + cloning | CoreML | CoreML + cloning |\n|---|---:|---:|---:|---:|---:|---:|\n| loudr-1 | 0.75 GB | 1.28 GB | 2.60 GB | 3.13 GB | 2.46 GB | 2.99 GB |\n| loudr-1-turbo | 0.72 GB | 1.25 GB | 2.44 GB | 2.97 GB | 2.44 GB | 2.97 GB |\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
