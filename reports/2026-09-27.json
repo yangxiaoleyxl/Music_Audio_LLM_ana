@@ -1,0 +1,1737 @@
+{
+  "generated_at": "2026-09-27",
+  "window_start": "2026-09-20",
+  "source_counts": {
+    "arxiv": 0,
+    "semantic_scholar": 90
+  },
+  "errors": [
+    "arXiv: HTTP Error 406: Not Acceptable"
+  ],
+  "papers": [],
+  "models": [
+    {
+      "repo_id": "becausereasons/yue2-mltnt-militant-reggae",
+      "author": "becausereasons",
+      "created_at": "2026-09-17",
+      "last_modified": "2026-09-26",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "lora",
+        "yue2",
+        "music-generation",
+        "text-to-music",
+        "song-generation",
+        "reggae",
+        "roots-reggae",
+        "dancehall",
+        "steppers",
+        "comfyui",
+        "fs_audio",
+        "ai-toolkit",
+        "text-to-audio",
+        "en",
+        "jam",
+        "base_model:Comfy-Org/YuE2",
+        "base_model:adapter:Comfy-Org/YuE2",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 31,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/becausereasons/yue2-mltnt-militant-reggae",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "m-a-p/YuE2-3B",
+        "Comfy-Org/YuE2"
+      ],
+      "variants": [
+        "becausereasons/yue2-cnzn-canzone-italiana",
+        "becausereasons/yue2-chnsn-chanson-francaise"
+      ],
+      "score": 43,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license cc-by-nc-4.0",
+        "community likes 23"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "roman220220/ACE-Step1.5-sft-MLX-gptq-4bit",
+      "author": "roman220220",
+      "created_at": "2026-09-26",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "acestep",
+        "mlx",
+        "mlx-audio",
+        "ace-step",
+        "music-generation",
+        "text-to-music",
+        "apple-silicon",
+        "quantized",
+        "text-to-audio",
+        "custom_code",
+        "base_model:ACE-Step/acestep-v15-sft",
+        "base_model:finetune:ACE-Step/acestep-v15-sft",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 4,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/roman220220/ACE-Step1.5-sft-MLX-gptq-4bit",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/acestep-v15-sft"
+      ],
+      "variants": [
+        "roman220220/ACE-Step1.5-sft-MLX-8bit",
+        "roman220220/ACE-Step1.5-sft-MLX-bf16"
+      ],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Whisper-small-SmolLM3-3B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:HuggingFaceTB/SmolLM3-3B",
+        "base_model:finetune:HuggingFaceTB/SmolLM3-3B",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Whisper-small-SmolLM3-3B",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- HuggingFaceTB/SmolLM3-3B\n- openai/whisper-small\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Whisper-small-SmolLM3-3B\n\nA small **DuplexJev** connector: the Whisper-small encoder (frozen) feeds a frozen **SmolLM3-3B**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`openai/whisper-small`](https://huggingface.co/openai/whisper-small) |\n| LLM (frozen) | [`HuggingFaceTB/SmolLM3-3B`](https://huggingface.co/HuggingFaceTB/SmolLM3-3B) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 29.4 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 3193 M (encoder + LLM + connector) |\n| This variant | Content alignment only (R1–R2, transcript distillation). No paralinguistic training: gender and emotion are at chance. A starting point for your own decision fine-tuning. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Whisper-small-SmolLM3-3B\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"turn\", \"Has the user finished speaking?\", [\"finished\", \"not finished\"], lang=\"en\"),\n    Question(\"intent\", \"What does the user want?\", [\"climate\", \"media\", \"navigation\", \"phone\", \"chit-chat\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"turn\", \"用户说完了吗？\", [\"说完了\", \"还没说完\"], lang=\"zh\"),\n    Question(\"intent\", \"用户想做什么？\", [\"空调\", \"媒体\", \"导航\", \"电话\", \"闲聊\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\nThe connector was trained with SmolLM3's no-think format (an empty `<think></think>` block before the answer). The tokenizer in this repository carries that chat template; SmolLM3's default template adds a long system prompt with today's date and would not match.\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 38 | 40 |\n| qa100, SmolLM3-3B reading the transcript | 77 | – |\n| ZJU-ML (spoken QA, real + TTS) | 48 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 26.1 | – |\n| Gender, 800 real utterances | 52.9 | 58 |\n| Emotion, 4-way, 800 utterances | 30.1 | 29.2 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **37.4**,\nparalinguistics (mean of gender, emotion) **41.5**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 6.5 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 149 ms on one H200 (bf16, measured while the GPU was shared with a training job).\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**Apache-2.0** for the connector weights. Some training corpora (e.g. WenetSpeech, CoVoST 2) are licensed for non-commercial use only; check them before commercial use. The frozen models keep their own licences: SmolLM3-3B (Apache-2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "HuggingFaceTB/SmolLM3-3B",
+        "openai/whisper-small"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-Para-Whisper-small-SmolLM3-3B"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Whisper-small-Qwen3-4B-2507",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:Qwen/Qwen3-4B-Instruct-2507",
+        "base_model:finetune:Qwen/Qwen3-4B-Instruct-2507",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Whisper-small-Qwen3-4B-2507",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- Qwen/Qwen3-4B-Instruct-2507\n- openai/whisper-small\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Whisper-small-Qwen3-4B-2507\n\nA small **DuplexJev** connector: the Whisper-small encoder (frozen) feeds a frozen **Qwen3-4B-2507**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`openai/whisper-small`](https://huggingface.co/openai/whisper-small) |\n| LLM (frozen) | [`Qwen/Qwen3-4B-Instruct-2507`](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 30.4 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 4141 M (encoder + LLM + connector) |\n| This variant | Content alignment only (R1–R2, transcript distillation). No paralinguistic training: gender and emotion are at chance. A starting point for your own decision fine-tuning. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Whisper-small-Qwen3-4B-2507\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"turn\", \"Has the user finished speaking?\", [\"finished\", \"not finished\"], lang=\"en\"),\n    Question(\"intent\", \"What does the user want?\", [\"climate\", \"media\", \"navigation\", \"phone\", \"chit-chat\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"turn\", \"用户说完了吗？\", [\"说完了\", \"还没说完\"], lang=\"zh\"),\n    Question(\"intent\", \"用户想做什么？\", [\"空调\", \"媒体\", \"导航\", \"电话\", \"闲聊\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\n\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 53 | 61 |\n| qa100, Qwen3-4B-2507 reading the transcript | 84 | – |\n| ZJU-ML (spoken QA, real + TTS) | 51 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 56.5 | – |\n| Gender, 800 real utterances | 55.1 | 52.9 |\n| Emotion, 4-way, 800 utterances | 31 | 30.8 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **53.5**,\nparalinguistics (mean of gender, emotion) **43.0**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 5.2 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 145 ms on one H200 (bf16, measured while the GPU was shared with a training job).\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**Apache-2.0** for the connector weights. Some training corpora (e.g. WenetSpeech, CoVoST 2) are licensed for non-commercial use only; check them before commercial use. The frozen models keep their own licences: Qwen3-4B-2507 (Apache-2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-4B-Instruct-2507",
+        "openai/whisper-small"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-Para-Whisper-small-Qwen3-4B-2507"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Whisper-small-Falcon-H1-3B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:openai/whisper-small",
+        "base_model:finetune:openai/whisper-small",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Whisper-small-Falcon-H1-3B",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- tiiuae/Falcon-H1-3B-Instruct\n- openai/whisper-small\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Whisper-small-Falcon-H1-3B\n\nA small **DuplexJev** connector: the Whisper-small encoder (frozen) feeds a frozen **Falcon-H1-3B**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`openai/whisper-small`](https://huggingface.co/openai/whisper-small) |\n| LLM (frozen) | [`tiiuae/Falcon-H1-3B-Instruct`](https://huggingface.co/tiiuae/Falcon-H1-3B-Instruct) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 30.4 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 3268 M (encoder + LLM + connector) |\n| This variant | Content alignment only (R1–R2, transcript distillation). No paralinguistic training: gender and emotion are at chance. A starting point for your own decision fine-tuning. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Whisper-small-Falcon-H1-3B\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"turn\", \"Has the user finished speaking?\", [\"finished\", \"not finished\"], lang=\"en\"),\n    Question(\"intent\", \"What does the user want?\", [\"climate\", \"media\", \"navigation\", \"phone\", \"chit-chat\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"turn\", \"用户说完了吗？\", [\"说完了\", \"还没说完\"], lang=\"zh\"),\n    Question(\"intent\", \"用户想做什么？\", [\"空调\", \"媒体\", \"导航\", \"电话\", \"闲聊\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\n**Falcon-H1 is a hybrid attention + Mamba model.** Recurrent layers carry state along the sequence, so `duplexjev` (≥ 0.2.2) turns off prefix packing for it automatically (`mode=\"batch\"`: one row per question). For GPU speed install the Mamba kernels: `pip install mamba-ssm causal-conv1d` (they must be built for your torch/CUDA); without them transformers falls back to a slow reference path.\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 50 | 54 |\n| qa100, Falcon-H1-3B reading the transcript | 81 | – |\n| ZJU-ML (spoken QA, real + TTS) | 39 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 50.4 | – |\n| Gender, 800 real utterances | 49.5 | 52.2 |\n| Emotion, 4-way, 800 utterances | 28.7 | 29 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **46.5**,\nparalinguistics (mean of gender, emotion) **39.1**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 169.7 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 104 ms on one H200 (bf16, measured while the GPU was shared with a training job). Falcon-H1 is not CPU-friendly: without Mamba CPU kernels transformers uses a slow reference path, and each question needs its own row.\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**Apache-2.0** for the connector weights. Some training corpora (e.g. WenetSpeech, CoVoST 2) are licensed for non-commercial use only; check them before commercial use. The frozen models keep their own licences: Falcon-H1-3B (TII Falcon License 2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "tiiuae/Falcon-H1-3B-Instruct",
+        "openai/whisper-small"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-Para-Whisper-small-Falcon-H1-3B"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Whisper-small-Falcon-H1-1.5B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:openai/whisper-small",
+        "base_model:finetune:openai/whisper-small",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Whisper-small-Falcon-H1-1.5B",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- tiiuae/Falcon-H1-1.5B-Instruct\n- openai/whisper-small\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Whisper-small-Falcon-H1-1.5B\n\nA small **DuplexJev** connector: the Whisper-small encoder (frozen) feeds a frozen **Falcon-H1-1.5B**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`openai/whisper-small`](https://huggingface.co/openai/whisper-small) |\n| LLM (frozen) | [`tiiuae/Falcon-H1-1.5B-Instruct`](https://huggingface.co/tiiuae/Falcon-H1-1.5B-Instruct) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 29.4 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 1672 M (encoder + LLM + connector) |\n| This variant | Content alignment only (R1–R2, transcript distillation). No paralinguistic training: gender and emotion are at chance. A starting point for your own decision fine-tuning. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Whisper-small-Falcon-H1-1.5B\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"turn\", \"Has the user finished speaking?\", [\"finished\", \"not finished\"], lang=\"en\"),\n    Question(\"intent\", \"What does the user want?\", [\"climate\", \"media\", \"navigation\", \"phone\", \"chit-chat\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"turn\", \"用户说完了吗？\", [\"说完了\", \"还没说完\"], lang=\"zh\"),\n    Question(\"intent\", \"用户想做什么？\", [\"空调\", \"媒体\", \"导航\", \"电话\", \"闲聊\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\n**Falcon-H1 is a hybrid attention + Mamba model.** Recurrent layers carry state along the sequence, so `duplexjev` (≥ 0.2.2) turns off prefix packing for it automatically (`mode=\"batch\"`: one row per question). For GPU speed install the Mamba kernels: `pip install mamba-ssm causal-conv1d` (they must be built for your torch/CUDA); without them transformers falls back to a slow reference path.\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 50 | 49 |\n| qa100, Falcon-H1-1.5B reading the transcript | 73 | – |\n| ZJU-ML (spoken QA, real + TTS) | 34 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 31.9 | – |\n| Gender, 800 real utterances | 53.1 | 54.1 |\n| Emotion, 4-way, 800 utterances | 26.9 | 26.8 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **38.6**,\nparalinguistics (mean of gender, emotion) **40.0**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 85.3 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 187 ms on one H200 (bf16, measured while the GPU was shared with a training job). Falcon-H1 is not CPU-friendly: without Mamba CPU kernels transformers uses a slow reference path, and each question needs its own row.\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**Apache-2.0** for the connector weights. Some training corpora (e.g. WenetSpeech, CoVoST 2) are licensed for non-commercial use only; check them before commercial use. The frozen models keep their own licences: Falcon-H1-1.5B (TII Falcon License 2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "tiiuae/Falcon-H1-1.5B-Instruct",
+        "openai/whisper-small"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-Para-Whisper-small-Falcon-H1-1.5B"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-SmolLM3-3B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:HuggingFaceTB/SmolLM3-3B",
+        "base_model:finetune:HuggingFaceTB/SmolLM3-3B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-SmolLM3-3B",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- HuggingFaceTB/SmolLM3-3B\n- OpenMOSS-Team/MOSS-Transcribe-Diarize\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Para-MOSS-Transcribe-SmolLM3-3B\n\nA small **DuplexJev** connector: the MOSS-Transcribe-Diarize audio encoder (Whisper architecture, 24 layers, 307 M) (frozen) feeds a frozen **SmolLM3-3B**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder) |\n| LLM (frozen) | [`HuggingFaceTB/SmolLM3-3B`](https://huggingface.co/HuggingFaceTB/SmolLM3-3B) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 37.8 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 3420 M (encoder + LLM + connector) |\n| This variant | R2 connector + 4k steps of the four-task mixture (transcription, continuation, gender, emotion) under the mixed objective: transcript distillation for content samples, answer-token cross-entropy for decision samples (the paper's MIX-KD recipe). Hears speaker gender and four-way emotion. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-SmolLM3-3B\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"gender\", \"What is the perceived gender of the speaker?\", [\"female\", \"male\"], lang=\"en\"),\n    Question(\"emotion\", \"What is the speaker's emotional state?\", [\"neutral\", \"happy\", \"angry\", \"sad\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"gender\", \"说话人的性别是？\", [\"男性\", \"女性\"], lang=\"zh\"),\n    Question(\"emotion\", \"说话人当时的情绪状态是？\", [\"中性\", \"高兴\", \"生气\", \"伤心\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\nThe connector was trained with SmolLM3's no-think format (an empty `<think></think>` block before the answer). The tokenizer in this repository carries that chat template; SmolLM3's default template adds a long system prompt with today's date and would not match.\n\nThe encoder is the audio encoder of [MOSS-Transcribe-Diarize](https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize) (Apache-2.0), repackaged as a standard Whisper encoder in [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder).\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 33 | 41 |\n| qa100, SmolLM3-3B reading the transcript | 77 | – |\n| ZJU-ML (spoken QA, real + TTS) | 41 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 46.1 | – |\n| Gender, 800 real utterances | 97.9 | 97.8 |\n| Emotion, 4-way, 800 utterances | 84.6 | 85.9 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **40.0**,\nparalinguistics (mean of gender, emotion) **91.2**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 5.8 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 156 ms on one H200 (bf16, measured while the GPU was shared with a training job).\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16), then 4k steps of MIX-KD on content + gender (AISHELL-1, LibriSpeech) + emotion (ESD, CREMA-D).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**CC BY-NC 4.0, research use only** for the connector weights: trained on the ESD emotional speech corpus, which is licensed for research only, and on CREMA-D. Do not use it for commercial purposes. The frozen models keep their own licences: SmolLM3-3B (Apache-2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "HuggingFaceTB/SmolLM3-3B",
+        "OpenMOSS-Team/MOSS-Transcribe-Diarize"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-MOSS-Transcribe-SmolLM3-3B"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Qwen3-4B-2507",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "base_model:finetune:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Qwen3-4B-2507",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- Qwen/Qwen3-4B-Instruct-2507\n- OpenMOSS-Team/MOSS-Transcribe-Diarize\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Para-MOSS-Transcribe-Qwen3-4B-2507\n\nA small **DuplexJev** connector: the MOSS-Transcribe-Diarize audio encoder (Whisper architecture, 24 layers, 307 M) (frozen) feeds a frozen **Qwen3-4B-2507**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder) |\n| LLM (frozen) | [`Qwen/Qwen3-4B-Instruct-2507`](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 38.8 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 4368 M (encoder + LLM + connector) |\n| This variant | R2 connector + 4k steps of the four-task mixture (transcription, continuation, gender, emotion) under the mixed objective: transcript distillation for content samples, answer-token cross-entropy for decision samples (the paper's MIX-KD recipe). Hears speaker gender and four-way emotion. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Qwen3-4B-2507\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"gender\", \"What is the perceived gender of the speaker?\", [\"female\", \"male\"], lang=\"en\"),\n    Question(\"emotion\", \"What is the speaker's emotional state?\", [\"neutral\", \"happy\", \"angry\", \"sad\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"gender\", \"说话人的性别是？\", [\"男性\", \"女性\"], lang=\"zh\"),\n    Question(\"emotion\", \"说话人当时的情绪状态是？\", [\"中性\", \"高兴\", \"生气\", \"伤心\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\nThe encoder is the audio encoder of [MOSS-Transcribe-Diarize](https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize) (Apache-2.0), repackaged as a standard Whisper encoder in [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder).\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 61 | 63 |\n| qa100, Qwen3-4B-2507 reading the transcript | 84 | – |\n| ZJU-ML (spoken QA, real + TTS) | 42 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 45.8 | – |\n| Gender, 800 real utterances | 95.5 | 96.1 |\n| Emotion, 4-way, 800 utterances | 85.4 | 83.4 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **49.6**,\nparalinguistics (mean of gender, emotion) **90.5**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 6.2 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 154 ms on one H200 (bf16, measured while the GPU was shared with a training job).\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16), then 4k steps of MIX-KD on content + gender (AISHELL-1, LibriSpeech) + emotion (ESD, CREMA-D).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**CC BY-NC 4.0, research use only** for the connector weights: trained on the ESD emotional speech corpus, which is licensed for research only, and on CREMA-D. Do not use it for commercial purposes. The frozen models keep their own licences: Qwen3-4B-2507 (Apache-2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-4B-Instruct-2507",
+        "OpenMOSS-Team/MOSS-Transcribe-Diarize"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-MOSS-Transcribe-Qwen3-4B-2507"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-3B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "base_model:finetune:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-3B",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- tiiuae/Falcon-H1-3B-Instruct\n- OpenMOSS-Team/MOSS-Transcribe-Diarize\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-3B\n\nA small **DuplexJev** connector: the MOSS-Transcribe-Diarize audio encoder (Whisper architecture, 24 layers, 307 M) (frozen) feeds a frozen **Falcon-H1-3B**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder) |\n| LLM (frozen) | [`tiiuae/Falcon-H1-3B-Instruct`](https://huggingface.co/tiiuae/Falcon-H1-3B-Instruct) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 38.8 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 3495 M (encoder + LLM + connector) |\n| This variant | R2 connector + 4k steps of the four-task mixture (transcription, continuation, gender, emotion) under the mixed objective: transcript distillation for content samples, answer-token cross-entropy for decision samples (the paper's MIX-KD recipe). Hears speaker gender and four-way emotion. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-3B\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"gender\", \"What is the perceived gender of the speaker?\", [\"female\", \"male\"], lang=\"en\"),\n    Question(\"emotion\", \"What is the speaker's emotional state?\", [\"neutral\", \"happy\", \"angry\", \"sad\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"gender\", \"说话人的性别是？\", [\"男性\", \"女性\"], lang=\"zh\"),\n    Question(\"emotion\", \"说话人当时的情绪状态是？\", [\"中性\", \"高兴\", \"生气\", \"伤心\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\n**Falcon-H1 is a hybrid attention + Mamba model.** Recurrent layers carry state along the sequence, so `duplexjev` (≥ 0.2.2) turns off prefix packing for it automatically (`mode=\"batch\"`: one row per question). For GPU speed install the Mamba kernels: `pip install mamba-ssm causal-conv1d` (they must be built for your torch/CUDA); without them transformers falls back to a slow reference path.\n\nThe encoder is the audio encoder of [MOSS-Transcribe-Diarize](https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize) (Apache-2.0), repackaged as a standard Whisper encoder in [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder).\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 51 | 55 |\n| qa100, Falcon-H1-3B reading the transcript | 81 | – |\n| ZJU-ML (spoken QA, real + TTS) | 37 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 43.5 | – |\n| Gender, 800 real utterances | 98.1 | 98.2 |\n| Emotion, 4-way, 800 utterances | 85.1 | 84.1 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **43.8**,\nparalinguistics (mean of gender, emotion) **91.6**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 171.3 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 185 ms on one H200 (bf16, measured while the GPU was shared with a training job). Falcon-H1 is not CPU-friendly: without Mamba CPU kernels transformers uses a slow reference path, and each question needs its own row.\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16), then 4k steps of MIX-KD on content + gender (AISHELL-1, LibriSpeech) + emotion (ESD, CREMA-D).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**CC BY-NC 4.0, research use only** for the connector weights: trained on the ESD emotional speech corpus, which is licensed for research only, and on CREMA-D. Do not use it for commercial purposes. The frozen models keep their own licences: Falcon-H1-3B (TII Falcon License 2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "tiiuae/Falcon-H1-3B-Instruct",
+        "OpenMOSS-Team/MOSS-Transcribe-Diarize"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-MOSS-Transcribe-Falcon-H1-3B"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-1.5B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "ultravox",
+        "feature-extraction",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "edge",
+        "audio-text-to-text",
+        "custom_code",
+        "zh",
+        "en",
+        "base_model:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "base_model:finetune:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-1.5B",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nbase_model:\n- tiiuae/Falcon-H1-1.5B-Instruct\n- OpenMOSS-Team/MOSS-Transcribe-Diarize\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- edge\n- ultravox\n---\n\n# DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-1.5B\n\nA small **DuplexJev** connector: the MOSS-Transcribe-Diarize audio encoder (Whisper architecture, 24 layers, 307 M) (frozen) feeds a frozen **Falcon-H1-1.5B**, and every typed question is read as a\nsingle-token distribution over its options, with zero decode steps and many questions per forward pass. Trained with the\nsame recipe as the Qwen3-32B connectors released with the paper.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder) |\n| LLM (frozen) | [`tiiuae/Falcon-H1-1.5B-Instruct`](https://huggingface.co/tiiuae/Falcon-H1-1.5B-Instruct) |\n| Connector | last encoder layer → frame stacking + SwiGLU projector (B), 37.8 M trainable parameters |\n| Audio tokens | 50 Hz encoder frames, 8 stacked → 6.25 audio tokens/s |\n| Total parameters | 1900 M (encoder + LLM + connector) |\n| This variant | R2 connector + 4k steps of the four-task mixture (transcription, continuation, gender, emotion) under the mixed objective: transcript distillation for content samples, answer-token cross-entropy for decision samples (the paper's MIX-KD recipe). Hears speaker gender and four-way emotion. |\n\n## Quick start\n\n```bash\npip install \"duplexjev[speech]>=0.2.2\"\n```\n\n```python\nfrom duplexjev import Decider, Question\n\nd = Decider.from_pretrained(\"adventists-ai/DuplexJev-B-Para-MOSS-Transcribe-Falcon-H1-1.5B\")\n\nd.decide(\"utterance_en.wav\", [\n    Question(\"gender\", \"What is the perceived gender of the speaker?\", [\"female\", \"male\"], lang=\"en\"),\n    Question(\"emotion\", \"What is the speaker's emotional state?\", [\"neutral\", \"happy\", \"angry\", \"sad\"], lang=\"en\"),\n], lang=\"en\")\nd.decide(\"utterance_zh.wav\", [                            # Chinese speech: Chinese question and options\n    Question(\"gender\", \"说话人的性别是？\", [\"男性\", \"女性\"], lang=\"zh\"),\n    Question(\"emotion\", \"说话人当时的情绪状态是？\", [\"中性\", \"高兴\", \"生气\", \"伤心\"], lang=\"zh\"),\n], lang=\"zh\")\n```\n\n**Falcon-H1 is a hybrid attention + Mamba model.** Recurrent layers carry state along the sequence, so `duplexjev` (≥ 0.2.2) turns off prefix packing for it automatically (`mode=\"batch\"`: one row per question). For GPU speed install the Mamba kernels: `pip install mamba-ssm causal-conv1d` (they must be built for your torch/CUDA); without them transformers falls back to a slow reference path.\n\nThe encoder is the audio encoder of [MOSS-Transcribe-Diarize](https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize) (Apache-2.0), repackaged as a standard Whisper encoder in [`adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder`](https://huggingface.co/adventists-ai/MOSS-Transcribe-Diarize-Whisper-Encoder).\n\n## Results\n\n| Evaluation (%) | paper protocol | `duplexjev` 0.2.2 defaults |\n|---|---:|---:|\n| qa100 (spoken QA) | 44 | 46 |\n| qa100, Falcon-H1-1.5B reading the transcript | 73 | – |\n| ZJU-ML (spoken QA, real + TTS) | 38 | – |\n| Easy-Turn (4-way turn state, 800 clips) | 29.2 | – |\n| Gender, 800 real utterances | 94 | 91.6 |\n| Emotion, 4-way, 800 utterances | 84.6 | 83.8 |\n\nLeaderboard scores (see the [GitHub README](https://github.com/adventists-ai/duplexjev)): main language (mean of qa100, ZJU-ML, Easy-Turn) **37.1**,\nparalinguistics (mean of gender, emotion) **89.3**.\n\nPaper protocol: the evaluation prompts of the paper (single option order, one H200). `duplexjev` defaults: the package's\nown prompts with `lang` matched to the clip. Spoken QA with a small LLM is bounded by the LLM itself (see the\ntranscript-reading row); use these connectors for short decisions and speaker cues rather than open knowledge questions.\n\n**Latency** of one decision event (10 questions, one 4.5 s clip, `duplexjev` 0.2.2, plain PyTorch): 100.3 s on 8 CPU threads (Xeon Platinum 8558, fp32, not quantized); about 204 ms on one H200 (bf16, measured while the GPU was shared with a training job). Falcon-H1 is not CPU-friendly: without Mamba CPU kernels transformers uses a slow reference path, and each question needs its own row.\n\n## Training\n\nFrozen encoder and LLM; only the connector is trained: R1 and R2 transcript distillation on two disjoint 0.5 M-utterance\npacks of the Ultravox v0.6 mixture (32k steps each, global batch 16), then 4k steps of MIX-KD on content + gender (AISHELL-1, LibriSpeech) + emotion (ESD, CREMA-D).\nCode and scripts: [https://github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev).\n\n## Limitations\n\n- Evaluated on read or acted speech and small test sets (100–800 items); not on streaming input.\n- Small LLMs answer knowledge questions poorly even from the transcript.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n- The connector only works with the encoder and LLM listed above.\n\n## License\n\n**CC BY-NC 4.0, research use only** for the connector weights: trained on the ESD emotional speech corpus, which is licensed for research only, and on CREMA-D. Do not use it for commercial purposes. The frozen models keep their own licences: Falcon-H1-1.5B (TII Falcon License 2.0) and the encoder (Apache-2.0).\n\n## Citation\n\n```bibtex\n@inproceedings{jin2027duplexjev,\n  title     = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author    = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  booktitle = {Submitted to IEEE ICASSP},\n  year      = {2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "tiiuae/Falcon-H1-1.5B-Instruct",
+        "OpenMOSS-Team/MOSS-Transcribe-Diarize"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-B-MOSS-Transcribe-Falcon-H1-1.5B"
+      ],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "thealper2/midashenglm-0.6b-esc50",
+      "author": "thealper2",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "midashenglm",
+        "text-generation",
+        "audio",
+        "audio-language-model",
+        "environmental-sound",
+        "esc-50",
+        "lora",
+        "custom_code",
+        "audio-text-to-text",
+        "en",
+        "dataset:TigreGotico/ESC-50",
+        "base_model:mispeech/midashenglm-0.6b-fp32",
+        "base_model:adapter:mispeech/midashenglm-0.6b-fp32",
+        "license:cc-by-nc-3.0",
+        "model-index",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-3.0",
+      "gated": false,
+      "url": "https://huggingface.co/thealper2/midashenglm-0.6b-esc50",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "TigreGotico/ESC-50"
+      ],
+      "base_models": [
+        "mispeech/midashenglm-0.6b-fp32"
+      ],
+      "variants": [],
+      "score": 29,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-3.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "wujunjiehhs/strixAE",
+      "author": "wujunjiehhs",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2_audio",
+        "text2text-generation",
+        "audio",
+        "audio-reasoning",
+        "qwen2-audio",
+        "reinforcement-learning",
+        "grpo",
+        "audio-restoration",
+        "audio-text-to-text",
+        "en",
+        "zh",
+        "arxiv:2503.02318",
+        "base_model:zhifeixie/Audio-Reasoner",
+        "base_model:finetune:zhifeixie/Audio-Reasoner",
+        "license:mit",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/wujunjiehhs/strixAE",
+      "card_text": "",
+      "arxiv_ids": [
+        "2503.02318"
+      ],
+      "datasets": [],
+      "base_models": [
+        "zhifeixie/Audio-Reasoner"
+      ],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "audio_understanding_reasoning": 24
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio reasoning, audio-text",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "harfby/silma-tts",
+      "author": "harfby",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "speech",
+        "speech-generation",
+        "voice-cloning",
+        "tts",
+        "en",
+        "ar",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/harfby/silma-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "audio-cpp/audio.cpp-gguf",
+      "author": "audio-cpp",
+      "created_at": "2026-07-14",
+      "last_modified": "2026-09-26",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audio.cpp",
+        "gguf",
+        "quantized",
+        "text-to-speech",
+        "automatic-speech-recognition",
+        "voice-conversion",
+        "text-to-audio",
+        "audio-to-audio",
+        "source-separation",
+        "speaker-diarization",
+        "speech",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:quantized:ACE-Step/Ace-Step1.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 5253523,
+      "likes": 179,
+      "trending_score": 0.0,
+      "library_name": "audio.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/audio-cpp/audio.cpp-gguf",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-H3",
+        "ACE-Step/Ace-Step1.5",
+        "ACE-Step/acestep-v15-base",
+        "Aratako/Irodori-TTS-500M-v3",
+        "Aratako/Irodori-TTS-600M-v3-VoiceDesign",
+        "Aratako/Irodori-TTS-v4.1-Small",
+        "Aratako/MioCodec-25Hz-44.1kHz-v2",
+        "Aratako/MioTTS-1.7B",
+        "Aratako/Semantic-DACVAE-Japanese-32dim",
+        "Banafo/Kroko-ASR",
+        "dots-studio/dots.tts-mf",
+        "dots-studio/dots.tts-soar",
+        "fishaudio/s2-pro",
+        "FunAudioLLM/Fun-ASR-Nano-2512-hf",
+        "HeartMuLa/HeartCodec-oss-20260123",
+        "HeartMuLa/HeartMuLa-oss-3B",
+        "HeartMuLa/HeartMuLaGen",
+        "IndexTeam/IndexTTS-2",
+        "IndexTeam/IndexTTS-2.5",
+        "ASLP-lab/MeanVC2",
+        "OpenBMB/VoxCPM2",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano",
+        "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2",
+        "OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5",
+        "OpenMOSS-Team/MOSS-TTS-Nano-100M",
+        "Qwen/Qwen3-ASR-0.6B",
+        "Qwen/Qwen3-ASR-1.7B-hf",
+        "Qwen/Qwen3-ForcedAligner-0.6B",
+        "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "Qwen/Qwen3-TTS-Tokenizer-12Hz",
+        "ResembleAI/chatterbox",
+        "RMSnow/Vevo2",
+        "bosonai/higgs-audio-v3-stt",
+        "bosonai/higgs-audio-v3-tts-4b",
+        "k2-fsa/OmniVoice",
+        "kyutai/pocket-tts",
+        "llm-jp/llm-jp-3-150m",
+        "microsoft/VibeVoice-1.5B",
+        "microsoft/VibeVoice-ASR",
+        "mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "mlx-community/SeedVC-MLX",
+        "mlx-community/mel-roformer-mlx",
+        "mlx-community/supertonic-3-mlx",
+        "mlx-community/wavlm-base-plus-mlx",
+        "MuScriptor/muscriptor-small",
+        "neuphonic/neutts-2e",
+        "syvai/hviske-v5.3",
+        "nvidia/diar_sortformer_4spk-v1",
+        "nvidia/magpie_tts_multilingual_357m",
+        "nvidia/nemotron-3.5-asr-streaming-0.6b",
+        "nvidia/parakeet-tdt-0.6b-v3",
+        "nvidia/personaplex-7b-v1",
+        "owensong/Inflect-Micro-v2",
+        "stabilityai/stable-audio-3-medium",
+        "stabilityai/stable-audio-3-small-music",
+        "stabilityai/stable-audio-3-small-sfx"
+      ],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition",
+        "declares license other",
+        "community likes 179"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "handy-computer/granite-speech-4.1-2b-gguf",
+      "author": "handy-computer",
+      "created_at": "2026-05-17",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "granite",
+        "granite-speech",
+        "audio-llm",
+        "multilingual",
+        "automatic-speech-recognition",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "ja",
+        "arxiv:2310.02943",
+        "arxiv:2505.08699",
+        "arxiv:2603.11243",
+        "arxiv:2604.12398",
+        "arxiv:2604.22817",
+        "arxiv:2604.11269",
+        "arxiv:2603.08397",
+        "base_model:ibm-granite/granite-speech-4.1-2b",
+        "base_model:quantized:ibm-granite/granite-speech-4.1-2b",
+        "license:apache-2.0",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 33576,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/handy-computer/granite-speech-4.1-2b-gguf",
+      "card_text": "",
+      "arxiv_ids": [
+        "2310.02943",
+        "2505.08699",
+        "2603.11243",
+        "2604.12398",
+        "2604.22817",
+        "2604.11269",
+        "2603.08397"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-4.1-2b"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "handy-computer/granite-4.0-1b-speech-gguf",
+      "author": "handy-computer",
+      "created_at": "2026-05-17",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "granite",
+        "granite-speech",
+        "audio-llm",
+        "multilingual",
+        "automatic-speech-recognition",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "ja",
+        "arxiv:2505.08699",
+        "arxiv:2603.11243",
+        "base_model:ibm-granite/granite-4.0-1b-speech",
+        "base_model:quantized:ibm-granite/granite-4.0-1b-speech",
+        "license:apache-2.0",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 13985,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/handy-computer/granite-4.0-1b-speech-gguf",
+      "card_text": "",
+      "arxiv_ids": [
+        "2505.08699",
+        "2603.11243"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-4.0-1b-speech"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "handy-computer/granite-speech-4.1-2b-plus-gguf",
+      "author": "handy-computer",
+      "created_at": "2026-05-17",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "granite",
+        "granite-speech",
+        "audio-llm",
+        "multilingual",
+        "word-timestamps",
+        "diarization",
+        "automatic-speech-recognition",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "arxiv:2604.11269",
+        "arxiv:2604.22817",
+        "arxiv:2604.12398",
+        "arxiv:2505.08699",
+        "arxiv:2603.11243",
+        "arxiv:2603.08397",
+        "base_model:ibm-granite/granite-speech-4.1-2b-plus",
+        "base_model:quantized:ibm-granite/granite-speech-4.1-2b-plus",
+        "license:apache-2.0",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 11965,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/handy-computer/granite-speech-4.1-2b-plus-gguf",
+      "card_text": "",
+      "arxiv_ids": [
+        "2604.11269",
+        "2604.22817",
+        "2604.12398",
+        "2505.08699",
+        "2603.11243",
+        "2603.08397"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-4.1-2b-plus"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "handy-computer/moss-transcribe-diarize-gguf",
+      "author": "handy-computer",
+      "created_at": "2026-07-12",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "moss",
+        "audio-llm",
+        "whisper-encoder",
+        "qwen3",
+        "diarization",
+        "automatic-speech-recognition",
+        "en",
+        "zh",
+        "arxiv:2601.01554",
+        "base_model:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "base_model:quantized:OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "license:apache-2.0",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 9221,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/handy-computer/moss-transcribe-diarize-gguf",
+      "card_text": "",
+      "arxiv_ids": [
+        "2601.01554"
+      ],
+      "datasets": [],
+      "base_models": [
+        "OpenMOSS-Team/MOSS-Transcribe-Diarize"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "appautomaton/step-audio-editx-8bit-mlx",
+      "author": "appautomaton",
+      "created_at": "2026-04-11",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "step1",
+        "tts",
+        "speech",
+        "voice-cloning",
+        "audio-editing",
+        "step-audio",
+        "step-audio-editx",
+        "stepfun",
+        "quantized",
+        "int8",
+        "apple-silicon",
+        "bundled-components",
+        "text-to-speech",
+        "custom_code",
+        "en",
+        "zh",
+        "ja",
+        "ko",
+        "arxiv:2511.03601",
+        "base_model:stepfun-ai/Step-Audio-EditX",
+        "base_model:quantized:stepfun-ai/Step-Audio-EditX",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 150,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/appautomaton/step-audio-editx-8bit-mlx",
+      "card_text": "",
+      "arxiv_ids": [
+        "2511.03601"
+      ],
+      "datasets": [],
+      "base_models": [
+        "stepfun-ai/Step-Audio-EditX"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "tryzz889/pocket-tts-indonesian",
+      "author": "tryzz889",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "onnx",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "indonesian",
+        "bahasa-indonesia",
+        "voice-cloning",
+        "id",
+        "dataset:LEMAS-Project/LEMAS-Dataset-train",
+        "arxiv:2509.06926",
+        "base_model:kyutai/pocket-tts",
+        "base_model:quantized:kyutai/pocket-tts",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/tryzz889/pocket-tts-indonesian",
+      "card_text": "",
+      "arxiv_ids": [
+        "2509.06926"
+      ],
+      "datasets": [
+        "LEMAS-Project/LEMAS-Dataset-train"
+      ],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "drmhse/qwen3-tts-swahili",
+      "author": "drmhse",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "lora",
+        "swahili",
+        "kenyan-swahili",
+        "voice-cloning",
+        "sw",
+        "base_model:Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "base_model:adapter:Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "license:cc-by-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/drmhse/qwen3-tts-swahili",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Anushkatiwarii/voicebox-tts",
+      "author": "Anushkatiwarii",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox",
+        "text-to-speech",
+        "voice-cloning",
+        "hindi",
+        "text-to-video",
+        "ai-video",
+        "avatar-generation",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "chatterbox",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Anushkatiwarii/voicebox-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Serveurperso/pocket-tts-GGUF",
+      "author": "Serveurperso",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gguf",
+        "tts",
+        "text-to-speech",
+        "voice-cloning",
+        "streaming",
+        "ggml",
+        "pocket-tts",
+        "kyutai",
+        "cpp",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "nl",
+        "base_model:kyutai/pocket-tts",
+        "base_model:quantized:kyutai/pocket-tts",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "gguf",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Serveurperso/pocket-tts-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "appautomaton/fireredtts3-mlx",
+      "author": "appautomaton",
+      "created_at": "2026-09-05",
+      "last_modified": "2026-09-27",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx",
+        "mlx-speech",
+        "apple-silicon",
+        "text-to-speech",
+        "voice-cloning",
+        "multilingual",
+        "fireredtts3",
+        "bf16",
+        "ar",
+        "yue",
+        "zh",
+        "cs",
+        "nl",
+        "en",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "ko",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "es",
+        "th",
+        "tr",
+        "uk",
+        "vi",
+        "base_model:FireRedTeam/FireRedTTS3",
+        "base_model:finetune:FireRedTeam/FireRedTTS3",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/appautomaton/fireredtts3-mlx",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "FireRedTeam/FireRedTTS3"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ArtShtorm/Shtorm_PocketTTS_RU",
+      "author": "ArtShtorm",
+      "created_at": "2026-09-25",
+      "last_modified": "2026-09-26",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "safetensors",
+        "text-to-speech",
+        "russian",
+        "audiobook",
+        "voice-cloning",
+        "ru",
+        "base_model:kyutai/pocket-tts",
+        "base_model:finetune:kyutai/pocket-tts",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ArtShtorm/Shtorm_PocketTTS_RU",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "KitsuMate/chatterbox-multilingual-v3-onnx",
+      "author": "KitsuMate",
+      "created_at": "2026-09-19",
+      "last_modified": "2026-09-26",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnxruntime",
+        "onnx",
+        "chatterbox",
+        "multilingual",
+        "voice-cloning",
+        "text-to-speech",
+        "ar",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "he",
+        "hi",
+        "it",
+        "ja",
+        "ko",
+        "ms",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "sw",
+        "tr",
+        "zh",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:quantized:ResembleAI/chatterbox",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "onnxruntime",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/KitsuMate/chatterbox-multilingual-v3-onnx",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "KitsuMate/chatterbox-nano-v2-onnx",
+      "author": "KitsuMate",
+      "created_at": "2026-09-26",
+      "last_modified": "2026-09-26",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox",
+        "onnx",
+        "voice-cloning",
+        "text-to-speech",
+        "en",
+        "base_model:ResembleAI/chatterbox-nano",
+        "base_model:quantized:ResembleAI/chatterbox-nano",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 10,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "chatterbox",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/KitsuMate/chatterbox-nano-v2-onnx",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox-nano"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Andy004/jepa-q2d2",
+      "author": "Andy004",
+      "created_at": "2026-06-27",
+      "last_modified": "2026-09-26",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "pytorch",
+        "safetensors",
+        "speech-codec",
+        "neural-audio-codec",
+        "jepa",
+        "low-bitrate",
+        "speech",
+        "audio-to-audio",
+        "en",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 8,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Andy004/jepa-q2d2",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "generative_music_audio": 12
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: neural audio codec",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "hoskasii/base-model",
+      "author": "hoskasii",
+      "created_at": "2026-09-26",
+      "last_modified": "2026-09-26",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "koko-tts",
+        "text-to-speech",
+        "flow-matching",
+        "speech-synthesis",
+        "custom_code",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 21,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/hoskasii/base-model",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
