@@ -1,0 +1,1122 @@
+{
+  "generated_at": "2026-09-29",
+  "window_start": "2026-09-22",
+  "source_counts": {
+    "arxiv": 0,
+    "semantic_scholar": 60
+  },
+  "errors": [
+    "arXiv: HTTP Error 500: Internal Server Error",
+    "Semantic Scholar / Generative Music & Audio: HTTP Error 429: ",
+    "Semantic Scholar / Speech Generation, Recognition & Dialogue: HTTP Error 429: "
+  ],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "2609.31971",
+      "title": "Perceptually Motivated Alignment and Interpolation of Pitch-Aligned Time-Frequency Representations",
+      "abstract": "We propose a framework for the alignment and interpolation of pitch-aligned time-frequency representations. Building on the tonal interval vector, we introduce a series of extensions that reformulate it as an invertible operator, culminating in a new feature extractor that embeds perceptual consonance priors within a pitch-aligned representation. Accordingly, we develop methods for aligning and interpolating between musical structures. For alignment, we cast the problem as a permutation search under perceptually weighted distances, enabling robust matching without explicit key detection, which is inherently ambiguous in music information retrieval. For interpolation, we employ optimal transport to generate musically meaningful transitions between pitch distributions, proposing a circular formulation over the Circle of Fourths/Fifths to respect harmonic structure. Finally, we learn a low-dimensional geometric representation of scale structure aimed to factorize scale color and density. Experimental results demonstrate the effectiveness and musicality of the proposed methods. Together, our contributions provide a principled, purely signal processing approach to modeling pitch structure in audio and symbolic music signals.",
+      "authors": [
+        "Shahan C. Nercessian",
+        "Jeff Sontag",
+        "Alejandro Koretzky"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.31971",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "music_foundation_models": 7
+      },
+      "matched_topics": [
+        "Music Foundation Models & Representations"
+      ],
+      "reasons": [
+        "Music Foundation Models & Representations: music information retrieval, symbolic music"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "becausereasons/yue2-qtstrm-quiet-storm",
+      "author": "becausereasons",
+      "created_at": "2026-09-18",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "lora",
+        "yue2",
+        "music-generation",
+        "text-to-music",
+        "song-generation",
+        "rnb",
+        "soul",
+        "quiet-storm",
+        "sophisti-pop",
+        "slow-jam",
+        "female-vocals",
+        "comfyui",
+        "ai-toolkit",
+        "text-to-audio",
+        "en",
+        "base_model:Comfy-Org/YuE2",
+        "base_model:adapter:Comfy-Org/YuE2",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 6,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/becausereasons/yue2-qtstrm-quiet-storm",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "m-a-p/YuE2-3B",
+        "Comfy-Org/YuE2"
+      ],
+      "variants": [
+        "becausereasons/yue2-trbdr-folk-troubadour",
+        "becausereasons/yue2-cnzn-canzone-italiana"
+      ],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Modotte/AIRealNet-Audio",
+      "author": "Modotte",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "wav2vec2-dual-hypersphere",
+        "audio-classification",
+        "audio-deepfake",
+        "deepfake-detection",
+        "deepfake",
+        "voice-cloning",
+        "anti-spoofing",
+        "asvspoof",
+        "wav2vec2",
+        "speech",
+        "audio",
+        "synthetic-voice",
+        "voice-conversion",
+        "tts-detection",
+        "trust-and-safety",
+        "security",
+        "SoTA",
+        "Modotte",
+        "custom_code",
+        "multilingual",
+        "arxiv:2508.06248",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 54,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Modotte/AIRealNet-Audio",
+      "card_text": "",
+      "arxiv_ids": [
+        "2508.06248"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 12,
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning",
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Turtlemint-India/Hindi_Text_To_Speech",
+      "author": "Turtlemint-India",
+      "created_at": "2026-09-28",
+      "last_modified": "2026-09-28",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "f5-tts",
+        "hinglish",
+        "hindi",
+        "english",
+        "code-switching",
+        "voice-cloning",
+        "tts",
+        "fine-tuned",
+        "text-to-speech",
+        "hi",
+        "en",
+        "dataset:ujs/hinglish",
+        "base_model:SPRINGLab/F5-Hindi-24KHz",
+        "base_model:finetune:SPRINGLab/F5-Hindi-24KHz",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 21,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "f5-tts",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Turtlemint-India/Hindi_Text_To_Speech",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "ujs/hinglish"
+      ],
+      "base_models": [
+        "SPRINGLab/F5-Hindi-24KHz"
+      ],
+      "variants": [],
+      "score": 23,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech, voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "zeechimp/hv-multimodal-audio-text-v1",
+      "author": "zeechimp",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "hv-multimodal",
+        "hyperdimensional-computing",
+        "vector-symbolic-architecture",
+        "multimodal",
+        "audio-retrieval",
+        "tiny-models",
+        "cpu-only",
+        "audio-classification",
+        "en",
+        "license:apache-2.0",
+        "model-index",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "hv-multimodal",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/zeechimp/hv-multimodal-audio-text-v1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 21,
+      "topic_scores": {
+        "audio_understanding_reasoning": 20
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio-text, multimodal audio",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "zeromodels/granite_speech_4_1_2b_plus",
+      "author": "zeromodels",
+      "created_at": "2026-07-30",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "zeromodels",
+        "keras",
+        "granite-speech-plus",
+        "speech-llm",
+        "automatic-speech-recognition",
+        "audio",
+        "arxiv:2505.08699",
+        "pytorch",
+        "jax",
+        "tf",
+        "base_model:ibm-granite/granite-speech-4.1-2b-plus",
+        "base_model:finetune:ibm-granite/granite-speech-4.1-2b-plus",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 22,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "zeromodels",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/zeromodels/granite_speech_4_1_2b_plus",
+      "card_text": "",
+      "arxiv_ids": [
+        "2505.08699"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-4.1-2b-plus"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "m-a-p/YuE2-3B",
+      "author": "m-a-p",
+      "created_at": "2026-09-09",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "safetensors",
+        "yue2",
+        "arxiv:2609.33757",
+        "music-generation",
+        "symbolic-planning",
+        "agentic-editing",
+        "custom_code",
+        "text-to-audio",
+        "zh",
+        "en",
+        "arxiv:2503.08638",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 28824,
+      "likes": 1040,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/m-a-p/YuE2-3B",
+      "card_text": "",
+      "arxiv_ids": [
+        "2609.33757",
+        "2503.08638"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0",
+        "community likes 1040"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "dagogue671/speecht5_tts_voxpopuli_nl",
+      "author": "dagogue671",
+      "created_at": "2026-09-28",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "tensorboard",
+        "safetensors",
+        "speecht5",
+        "text-to-audio",
+        "text-to-speech",
+        "dutch",
+        "generated_from_trainer",
+        "nl",
+        "dataset:facebook/voxpopuli",
+        "base_model:microsoft/speecht5_tts",
+        "base_model:finetune:microsoft/speecht5_tts",
+        "license:mit",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 29,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/dagogue671/speecht5_tts_voxpopuli_nl",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "facebook/voxpopuli"
+      ],
+      "base_models": [
+        "microsoft/speecht5_tts"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Myomyomyat/VoxCPM2",
+      "author": "Myomyomyat",
+      "created_at": "2026-09-28",
+      "last_modified": "2026-09-28",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "multilingual",
+        "voice-cloning",
+        "voice-design",
+        "diffusion",
+        "audio",
+        "zh",
+        "en",
+        "ar",
+        "my",
+        "da",
+        "nl",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "he",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lo",
+        "ms",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sw",
+        "sv",
+        "tl",
+        "th",
+        "tr",
+        "vi",
+        "arxiv:2509.24650",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 9,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Myomyomyat/VoxCPM2",
+      "card_text": "",
+      "arxiv_ids": [
+        "2509.24650"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "AMAImedia/NOESIS-Qwen3-TTS-1.7B-Talker-Combo-LLM2-ASR2-BF16",
+      "author": "AMAImedia",
+      "created_at": "2026-08-27",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "qwen3_tts",
+        "qwen3-tts",
+        "qwen3-omni",
+        "talker",
+        "voice-cloning",
+        "zero-shot-voice-cloning",
+        "text-to-speech",
+        "112-languages",
+        "multilingual",
+        "lora-adapters",
+        "noesis",
+        "noesis-dhcf-fno",
+        "amaimedia",
+        "production-bundle",
+        "bf16",
+        "voice-router-swap",
+        "r-talker-112lang-per-family-swap-not-merge",
+        "r-voice-router-swap-not-merge",
+        "r-apache-clean",
+        "af",
+        "am",
+        "ar",
+        "as",
+        "ast",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "bs",
+        "ca",
+        "ceb",
+        "ckb",
+        "cs",
+        "cy",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "ff",
+        "fi",
+        "fil",
+        "fr",
+        "ga",
+        "gl",
+        "gn",
+        "gu",
+        "ha",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "hy",
+        "id",
+        "ig",
+        "is",
+        "it",
+        "ja",
+        "jv",
+        "ka",
+        "kam",
+        "kea",
+        "kk",
+        "km",
+        "kmr",
+        "kn",
+        "ko",
+        "ky",
+        "lb",
+        "lg",
+        "ln",
+        "lo",
+        "luo",
+        "lv",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mr",
+        "ms",
+        "mt",
+        "mvy",
+        "my",
+        "lt",
+        "ne",
+        "nl",
+        "no",
+        "nso",
+        "ny",
+        "oc",
+        "om",
+        "or",
+        "pa",
+        "pl",
+        "ps",
+        "pt",
+        "qxp",
+        "ro",
+        "ru",
+        "rw",
+        "sd",
+        "sk",
+        "skr",
+        "sl",
+        "sn",
+        "so",
+        "sr",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "ti",
+        "tk",
+        "tr",
+        "ug",
+        "uk",
+        "umb",
+        "ur",
+        "uz",
+        "vi",
+        "wo",
+        "xh",
+        "yo",
+        "yue",
+        "zh",
+        "zu",
+        "base_model:FINAL-Bench/Darwin-TTS-1.7B-Cross",
+        "base_model:finetune:FINAL-Bench/Darwin-TTS-1.7B-Cross",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1177,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/AMAImedia/NOESIS-Qwen3-TTS-1.7B-Talker-Combo-LLM2-ASR2-BF16",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-1.7B",
+        "Qwen/Qwen3-ASR-1.7B",
+        "FINAL-Bench/Darwin-TTS-1.7B-Cross"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "litert-community/Qwen3-TTS-12Hz-0.6B-Base",
+      "author": "litert-community",
+      "created_at": "2026-07-07",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "litert",
+        "tflite",
+        "text-to-speech",
+        "voice-cloning",
+        "on-device",
+        "en",
+        "zh",
+        "ja",
+        "ko",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "ru",
+        "base_model:Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "base_model:quantized:Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1091,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "litert",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/litert-community/Qwen3-TTS-12Hz-0.6B-Base",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-TTS-12Hz-0.6B-Base"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "VoiceHub/mytts-en",
+      "author": "VoiceHub",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "zero-shot",
+        "voice-cloning",
+        "flow-matching",
+        "diffusion",
+        "en",
+        "dataset:SynDataLab-EN/echo-clones-4m-en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/VoiceHub/mytts-en",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "SynDataLab-EN/echo-clones-4m-en"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mindlogicinc/context-spanning-7b",
+      "author": "mindlogicinc",
+      "created_at": "2026-09-02",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "contextspan",
+        "arxiv:2609.33443",
+        "full-duplex",
+        "spoken-dialogue",
+        "speech-to-speech",
+        "retrieval",
+        "retrieval-augmented-generation",
+        "tool-calling",
+        "context-spanning",
+        "moshi",
+        "personaplex",
+        "audio-to-audio",
+        "en",
+        "base_model:nvidia/personaplex-7b-v1",
+        "base_model:finetune:nvidia/personaplex-7b-v1",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "contextspan",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/mindlogicinc/context-spanning-7b",
+      "card_text": "",
+      "arxiv_ids": [
+        "2609.33443"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nvidia/personaplex-7b-v1"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "VoiceHub/dacvae-tts-en-experiments",
+      "author": "VoiceHub",
+      "created_at": "2026-09-27",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "voice-cloning",
+        "flow-matching",
+        "en",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/VoiceHub/dacvae-tts-en-experiments",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "roman220220/NemotronLabs-VoiceChat-11B-gptq-mlx-mixed",
+      "author": "roman220220",
+      "created_at": "2026-09-28",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "nemotron_voicechat",
+        "quantized",
+        "gptq",
+        "nemotron",
+        "audio",
+        "speech-to-speech",
+        "full-duplex",
+        "apple-silicon",
+        "audio-to-audio",
+        "en",
+        "base_model:nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+        "base_model:quantized:nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+        "license:other",
+        "4-bit",
+        "region:us"
+      ],
+      "downloads": 53,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/roman220220/NemotronLabs-VoiceChat-11B-gptq-mlx-mixed",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "nvidia/NVIDIA-NemotronLabs-VoiceChat-11B"
+      ],
+      "variants": [
+        "roman220220/NemotronLabs-VoiceChat-11B-gptq-mlx-3bit"
+      ],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "laion/Humaneness-Voice-Small",
+      "author": "laion",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "voice-acting",
+        "qwen3",
+        "moss-audio-tokenizer-v2",
+        "audio-generation",
+        "en",
+        "de",
+        "dataset:laion/tts-scaling-ladder-de-en",
+        "dataset:laion/humaneness-voice-small-acting-eval",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/laion/Humaneness-Voice-Small",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "laion/tts-scaling-ladder-de-en",
+        "laion/humaneness-voice-small-acting-eval"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "generative_music_audio": 10,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "good-tape/whisker-co-is-stage-a-nano",
+      "author": "good-tape",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "nano-cohere-transcribe",
+        "safetensors",
+        "cohere_asr",
+        "automatic-speech-recognition",
+        "cohere",
+        "icelandic",
+        "audio",
+        "custom_code",
+        "is",
+        "dataset:Aalto-Speech-Synthesis/icelandic_asr",
+        "dataset:google/fleurs",
+        "base_model:good-tape/whisker-co-is-stage-a",
+        "base_model:finetune:good-tape/whisker-co-is-stage-a",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "nano-cohere-transcribe",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/good-tape/whisker-co-is-stage-a-nano",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "Aalto-Speech-Synthesis/icelandic_asr",
+        "google/fleurs"
+      ],
+      "base_models": [
+        "good-tape/whisker-co-is-stage-a"
+      ],
+      "variants": [],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, automatic speech recognition (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "vers-project/vocal-intensity-conversion",
+      "author": "vers-project",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-09-29",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "safetensors",
+        "audio",
+        "speech",
+        "vocal-intensity",
+        "speech-synthesis",
+        "audio-to-audio",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/vers-project/vocal-intensity-conversion",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 9,
+      "topic_scores": {
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ldov/FireRedVAD",
+      "author": "ldov",
+      "created_at": "2026-09-28",
+      "last_modified": "2026-09-28",
+      "pipeline_tag": "voice-activity-detection",
+      "tags": [
+        "voice-activity-detection",
+        "speech-activity-detection",
+        "audio-event-detection",
+        "vad",
+        "aed",
+        "streaming",
+        "non-streaming",
+        "audio",
+        "automatic-speech-recognition",
+        "asr",
+        "en",
+        "zh",
+        "arxiv:2603.10420",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 8,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/ldov/FireRedVAD",
+      "card_text": "",
+      "arxiv_ids": [
+        "2603.10420"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 9,
+      "topic_scores": {
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
