@@ -1,0 +1,1104 @@
+{
+  "generated_at": "2026-10-03",
+  "window_start": "2026-09-26",
+  "source_counts": {
+    "arxiv": 0,
+    "semantic_scholar": 99
+  },
+  "errors": [
+    "arXiv: HTTP Error 500: Internal Server Error",
+    "Semantic Scholar / Evaluation, Alignment, Safety & Copyright: HTTP Error 429: "
+  ],
+  "papers": [],
+  "models": [
+    {
+      "repo_id": "takakhoo/audio-sliders",
+      "author": "takakhoo",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "music",
+        "text-to-music",
+        "lora",
+        "concept-sliders",
+        "ace-step",
+        "audio",
+        "text-to-audio",
+        "base_model:ACE-Step/acestep-v15-xl-turbo-diffusers",
+        "base_model:adapter:ACE-Step/acestep-v15-xl-turbo-diffusers",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/takakhoo/audio-sliders",
+      "card_text": "---\nlicense: mit\nbase_model: ACE-Step/acestep-v15-xl-turbo-diffusers\npipeline_tag: text-to-audio\ntags:\n- music\n- text-to-music\n- lora\n- concept-sliders\n- ace-step\n- audio\n---\n\n# Audio Sliders for ACE-Step 1.5 XL turbo\n\nThirty-five sliders for generated music. Each one is a rank-4 LoRA on the frozen ACE-Step 1.5 XL turbo transformer whose\nstrength is a number you set at sampling time. The prompt and the seed stay fixed and the same piece moves along one\naxis: sad to happy, solo to full ensemble, energetic to quiet and dreamy, electronic to jazz.\n\nEvery slider here was measured on 24 held-out prompts: does a property of the waveform follow the slider, does a second\nembedding model agree, how much of the piece survives, and do two quality predictors still rate the result as music.\nThe numbers below come from that evaluation. Sliders that failed it were left out.\n\n**[Live demo](https://takakhoo.github.io/audio-diffusion-control/)** · **[Code, results, and paper draft](https://github.com/takakhoo/audio-diffusion-control)** · **[Ten-minute listening test](https://takakhoo.github.io/audio-diffusion-control/listen.html)**\n\n![Four sliders sweeping across their range](https://raw.githubusercontent.com/takakhoo/audio-diffusion-control/main/results/demo/sliders.gif)\n\n## Listen\n\nOne prompt (\"mellow jazz piano trio, brushed drums\") and one seed per slider; only the slider position changes. Clips are loudness-matched.\n\n**Mood** (`text`): sad → happy\n\n- position -2: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/text_mood_m2.m4a\"></audio>\n- unsteered: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/text_mood_p0.m4a\"></audio>\n- position +2: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/text_mood_p2.m4a\"></audio>\n\n**Arousal** (`real-axes`): energetic and aggressive → quiet and dreamy\n\n- position -2: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes_arousal_m2.m4a\"></audio>\n- unsteered: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes_arousal_p0.m4a\"></audio>\n- position +1: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes_arousal_p1.m4a\"></audio>\n\n**Electronic to jazz** (`real-axes`): electronic → jazz\n\n- position -2: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes_jazz_electronic_m2.m4a\"></audio>\n- unsteered: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes_jazz_electronic_p0.m4a\"></audio>\n- position +2: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes_jazz_electronic_p2.m4a\"></audio>\n\n**Arousal** (`real-axes-sets`): energetic and aggressive → quiet and dreamy\n\n- position -1: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes-sets_arousal_m1.m4a\"></audio>\n- unsteered: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes-sets_arousal_p0.m4a\"></audio>\n- position +1: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/real-axes-sets_arousal_p1.m4a\"></audio>\n\n**Harmony** (`measured-sets`): simple harmony → rich harmony\n\n- position -1: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/measured-sets_harmony_m1.m4a\"></audio>\n- unsteered: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/measured-sets_harmony_p0.m4a\"></audio>\n- position +1: <audio controls src=\"https://huggingface.co/takakhoo/audio-sliders/resolve/main/samples/measured-sets_harmony_p1.m4a\"></audio>\n\n\n## What is in the repository\n\n### `ace-step-1.5-xl-turbo/text`: 12 named attributes, trained from a prompt pair\n\n| Slider | Low → high | Waveform descriptor follows (ρ) | MuQ-MuLan agrees (ρ) | Usable positions | Piece kept | Enjoyment at the ends (6.95 unsteered) |\n|---|---|---:|---:|---|---:|---:|\n| `mood` | sad → happy | 0.39 | 0.88 | -1 to +2 | 0.79 | 6.65 |\n| `ensemble` | solo → full ensemble | 0.60 | 0.77 | -1.5 to +2 | 0.80 | 6.56 |\n| `groove` | stiff → groovy | none assigned | 0.56 | -1.5 to +2 | 0.79 | 6.88 |\n| `harmony` | simple harmony → rich harmony | 0.41 | 0.73 | -1.5 to +2 | 0.83 | 6.64 |\n| `melody` | texture → melody | 0.48 | 0.89 | -1 to +2 | 0.80 | 6.47 |\n| `tension` | relaxed → tense | none assigned | 0.86 | -1.5 to +1 | 0.83 | 5.64 |\n| `brightness` | dark → bright | 0.97 | 0.80 | -1 to +2 | 0.74 | 6.04 |\n| `density` | sparse → dense | 0.78 | 0.86 | -0.5 to +2 | 0.84 | 6.09 |\n| `energy` | calm → intense | 0.91 | 0.90 | -1.5 to +1.5 | 0.64 | 6.42 |\n| `tempo` | slow → fast | 0.55 | 0.77 | -1 to +2 | 0.68 | 6.38 |\n| `electronic` | acoustic → electronic | none assigned | 0.79 | -2 to +2 | 0.65 | 6.79 |\n| `vintage` | modern → vintage | none assigned | 0.79 | -2 to +2 | 0.79 | 6.68 |\n\n### `ace-step-1.5-xl-turbo/real-axes`: axes found in real music, trained from the axis's own tags\n\nThe axes are independent components of MuQ-MuLan embeddings of 14,985 real recordings. Nobody chose them. The prompt pair for each slider is the set of tags at the two ends of its axis, and the output is scored by its projection on the axis, in standard deviations of real music.\n\n| Slider | Low → high | Follows the axis (ρ) | Ends ordered | Moved between -1 and +1 (std of real music) | Usable positions | Piece kept at ±1 |\n|---|---|---:|---:|---:|---|---:|\n| `arousal` | energetic and aggressive → quiet and dreamy | 0.91 | 100% | 1.85 | -2 to +1 | 0.80 |\n| `jazz_electronic` | electronic → jazz | 0.86 | 97% | 1.86 | -2 to +2 | 0.82 |\n| `piano_axis` | organ and rock → piano | 0.78 | 97% | 1.56 | -2 to +1 | 0.80 |\n| `strings_synth` | synthesizer and choir → guitars and strings | 0.80 | 97% | 1.78 | -0.5 to +2 | 0.73 |\n| `valence` | playful and happy → dark and distorted | 0.42 | 75% | 0.86 | -2 to +1 | 0.85 |\n\n### `ace-step-1.5-xl-turbo/real-axes-sets`: the same kind of axis, trained with no text\n\nTrained between the top and bottom 20% of the model's own clips along the axis (15,552 clips, 648 prompts). They move less than the prompt-pair versions, keep more of the piece, and hold quality level at both ends. **Use them between -1 and +1.**\n\n| Slider | Low → high | Follows the axis (ρ) | Ends ordered | Moved between -1 and +1 (std of real music) | Piece kept at ±1 |\n|---|---|---:|---:|---:|---:|\n| `acoustic_electronic` | studio electronic → acoustic and blues | 0.55 | 93% | 0.64 | 0.86 |\n| `arousal` | energetic and aggressive → quiet and dreamy | 0.82 | 99% | 1.19 | 0.84 |\n| `classical_funk` | funk and drums → classical and epic | 0.64 | 96% | 0.77 | 0.85 |\n| `jazz_electronic` | electronic → jazz | 0.61 | 94% | 0.61 | 0.87 |\n| `piano_axis` | organ and rock → piano | 0.63 | 96% | 0.75 | 0.87 |\n| `strings_synth` | synthesizer and choir → guitars and strings | 0.40 | 82% | 0.44 | 0.87 |\n| `valence` | playful and happy → dark and distorted | 0.50 | 93% | 0.62 | 0.87 |\n\n### `ace-step-1.5-xl-turbo/measured-sets`: a measurement turned into a slider, with no text\n\nClips sorted by a measurement, after removing what loudness, brightness, and predicted enjoyment explain. These are the selective sliders: selectivity is how far a slider moves its own measurement relative to the average bystander. **Use them between -1 and +1.**\n\n| Slider | Sorted by | Follows the measurement (ρ) | Ends ordered | Selectivity | Piece kept at ±1 |\n|---|---|---:|---:|---:|---:|\n| `energy` | flux | 0.83 | 99% | 3.8 | 0.85 |\n| `harmony` | harmonic change | 0.72 | 99% | 6.6 | 0.88 |\n| `density` | onset rate | 0.63 | 90% | 4.7 | 0.87 |\n| `ensemble` | pc | 0.60 | 94% | 2.4 | 0.86 |\n| `quality` | ce | 0.53 | 86% | 3.7 | 0.86 |\n\n### `ace-step-1.5-xl-turbo/graded`: trained with no text at graded positions, usable from -2 to +2\n\nThe set trainer above shows the slider only positions -1 and +1, and its sliders fall apart past ±1. These six were trained with every clip at its own position along the measurement or axis. They move slightly less inside ±1 and keep working out to ±2 with no loss on either quality predictor.\n\n| Slider | Low → high | Follows it, -2 to +2 (ρ) | Ends ordered | Piece kept at ±2 | Enjoyment at the ends |\n|---|---|---:|---:|---:|---:|\n| `energy` | calm → intense | 0.89 | 100% | 0.81 | 7.15 |\n| `harmony` | simple harmony → rich harmony | 0.60 | 92% | 0.85 | 7.11 |\n| `arousal` | energetic and aggressive → quiet and dreamy | 0.84 | 96% | 0.82 | 7.20 |\n| `valence` | playful and happy → dark and distorted | 0.50 | 82% | 0.85 | 7.13 |\n| `jazz_electronic` | electronic → jazz | 0.62 | 93% | 0.85 | 7.14 |\n| `piano_axis` | organ and rock → piano | 0.64 | 89% | 0.84 | 7.19 |\n\n`axes/` holds the direction vectors of the real-music axes, so new clips can be scored against them.\n\n## Use\n\n```bash\npip install \"audiosliders[model,demo] @ git+https://github.com/takakhoo/audio-diffusion-control\" audiobox_aesthetics\n```\n\nA page where you type a prompt and drag the sliders:\n\n```bash\npython -m audiosliders.server --sliders hf:ace-step-1.5-xl-turbo/text --backbone ace-turbo\n```\n\nFrom Python:\n\n```python\nimport soundfile as sf\nfrom audiosliders.backbone import load_backbone\nfrom audiosliders.hub import fetch\nfrom audiosliders.lora import SliderBank\n\nmodel = load_backbone(\"ace-turbo\")                    # downloads ACE-Step 1.5 XL turbo\nbank = SliderBank(model.dit)\nfolder = fetch(\"ace-step-1.5-xl-turbo/real-axes\")\nbank.load(\"arousal\", folder / \"arousal.safetensors\")\n\nfor position in (-2.0, 0.0, 1.0):\n    audio = model.generate([\"mellow jazz piano trio, brushed drums\"], [0], seconds=10,\n                           wrap=lambda p: bank.gated(p, {\"arousal\": position}))\n    sf.write(f\"arousal_{position:+.0f}.wav\", audio[0].T.cpu().numpy(), model.sample_rate)\n```\n\nPosition 0 is the unchanged model. Several sliders can be loaded and set together; their updates add.\n\n## Limits\n\n- No listening study has been run yet. Quality rests on two learned predictors (Audiobox Aesthetics and SongEval) and meaning on signal descriptors and two embedding models.\n- Sliders leak. Mood and melody also brighten the clip, and several raise loudness. The leakage table is in the repository.\n- The set-trained sliders stop working past ±1. A set-trained tempo slider and a tag-sorted mood slider did not work and are not included.\n- Trained and tested on ten-second instrumental clips. Six of the text sliders were also checked at thirty seconds.\n- The files use this project's own LoRA layout and are loaded with `audiosliders.lora.SliderBank`.\n\n## License and credit\n\nMIT, the same as ACE-Step 1.5. The training objective for the prompt-pair sliders is Concept Sliders (Gandikota et al., ECCV 2024), and the idea of discovering axes instead of naming them comes from SliderSpace (Gandikota et al., ICCV 2025).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/acestep-v15-xl-turbo-diffusers"
+      ],
+      "variants": [],
+      "score": 32,
+      "topic_scores": {
+        "generative_music_audio": 31
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, text-to-audio (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ElgekAI/SLED-TTS-Uyghur-UAS-0.2B",
+      "author": "ElgekAI",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "speech_llama",
+        "text-generation",
+        "text-to-speech",
+        "tts",
+        "uyghur",
+        "uas",
+        "voice-cloning",
+        "sled-tts",
+        "aopcode",
+        "ug",
+        "arxiv:2505.13181",
+        "base_model:ICTNLP/SLED-TTS-Libriheavy",
+        "base_model:finetune:ICTNLP/SLED-TTS-Libriheavy",
+        "license:mit",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/ElgekAI/SLED-TTS-Uyghur-UAS-0.2B",
+      "card_text": "",
+      "arxiv_ids": [
+        "2505.13181"
+      ],
+      "datasets": [],
+      "base_models": [
+        "ICTNLP/SLED-TTS-Libriheavy"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "samuel-vitorino/sopro-v2-turbo",
+      "author": "samuel-vitorino",
+      "created_at": "2026-08-25",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "sopro",
+        "safetensors",
+        "tts",
+        "voice-cloning",
+        "streaming",
+        "on-device",
+        "text-to-speech",
+        "en",
+        "pt",
+        "fr",
+        "de",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 27650,
+      "likes": 33,
+      "trending_score": 0.0,
+      "library_name": "sopro",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0",
+        "community likes 33"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "nomeda-lab/hag-shalaby-tts-0.5B-v0.1",
+      "author": "nomeda-lab",
+      "created_at": "2026-09-12",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "egyptian-arabic",
+        "arabic",
+        "voice-cloning",
+        "hag-shalaby",
+        "ar",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 6,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/nomeda-lab/hag-shalaby-tts-0.5B-v0.1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "VoiceHub/mytts-en",
+      "author": "VoiceHub",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mytts",
+        "safetensors",
+        "text-to-speech",
+        "zero-shot",
+        "flow-matching",
+        "english",
+        "voice-cloning",
+        "diffusion-transformer",
+        "dacvae",
+        "audioseal",
+        "en",
+        "dataset:SynDataLab-EN/echo-clones-4m-en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "mytts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/VoiceHub/mytts-en",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "SynDataLab-EN/echo-clones-4m-en"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kova-ai/kova-tts-1",
+      "author": "kova-ai",
+      "created_at": "2026-09-23",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "llama",
+        "voice-cloning",
+        "streaming",
+        "lora",
+        "text-to-speech",
+        "en",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 413,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/kova-ai/kova-tts-1",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "VoiceHub/DACFlow-EN-10k",
+      "author": "VoiceHub",
+      "created_at": "2026-09-30",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audioseal",
+        "safetensors",
+        "text-to-speech",
+        "zero-shot",
+        "voice-cloning",
+        "english",
+        "flow-matching",
+        "diffusion-transformer",
+        "dacvae",
+        "en",
+        "dataset:SynDataLab-EN/echo-clones-4m-en",
+        "dataset:VoiceHub/DACFlow-EN-10k-data",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "audioseal",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/VoiceHub/DACFlow-EN-10k",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "SynDataLab-EN/echo-clones-4m-en",
+        "VoiceHub/DACFlow-EN-10k-data"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "delebash/chatterbox-nano-GGUF",
+      "author": "delebash",
+      "created_at": "2026-10-03",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox",
+        "gguf",
+        "audio.cpp",
+        "text-to-speech",
+        "voice-cloning",
+        "en",
+        "base_model:ResembleAI/chatterbox-nano",
+        "base_model:quantized:ResembleAI/chatterbox-nano",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "chatterbox",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/delebash/chatterbox-nano-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox-nano"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "delebash/chatterbox-turbo-GGUF",
+      "author": "delebash",
+      "created_at": "2026-10-03",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox",
+        "gguf",
+        "audio.cpp",
+        "text-to-speech",
+        "voice-cloning",
+        "en",
+        "base_model:ResembleAI/chatterbox-turbo",
+        "base_model:quantized:ResembleAI/chatterbox-turbo",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "chatterbox",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/delebash/chatterbox-turbo-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox-turbo"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "kwokho1/wst-graph",
+      "author": "kwokho1",
+      "created_at": "2026-10-03",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "speech-deepfake-detection",
+        "audio-anti-spoofing",
+        "wavelet-scattering",
+        "audio-classification",
+        "arxiv:2609.29372",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/kwokho1/wst-graph",
+      "card_text": "",
+      "arxiv_ids": [
+        "2609.29372"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: speech deepfake",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "KittenML/kitten-tts-2",
+      "author": "KittenML",
+      "created_at": "2026-09-30",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "gguf",
+        "text-to-speech",
+        "voice-cloning",
+        "multilingual",
+        "license:other",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 130,
+      "likes": 5,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/KittenML/kitten-tts-2",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "samuelolubukun/xtts-v2-igbo-conversational",
+      "author": "samuelolubukun",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "tts",
+        "xtts-v2",
+        "coqui",
+        "voice-cloning",
+        "igbo",
+        "african-languages",
+        "conversational-tts",
+        "common-voice",
+        "ig",
+        "dataset:benjaminogbonna/nigerian_common_voice_dataset",
+        "dataset:multilingual-tts/open-bible",
+        "base_model:samuelolubukun/xtts-v2-igbo-openbible",
+        "base_model:finetune:samuelolubukun/xtts-v2-igbo-openbible",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 112,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/samuelolubukun/xtts-v2-igbo-conversational",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "benjaminogbonna/nigerian_common_voice_dataset",
+        "multilingual-tts/open-bible"
+      ],
+      "base_models": [
+        "samuelolubukun/xtts-v2-igbo-openbible"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "samuelolubukun/xtts-v2-yoruba-conversational",
+      "author": "samuelolubukun",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "tts",
+        "xtts-v2",
+        "coqui",
+        "voice-cloning",
+        "yoruba",
+        "african-languages",
+        "conversational-tts",
+        "common-voice",
+        "yo",
+        "dataset:benjaminogbonna/nigerian_common_voice_dataset",
+        "dataset:multilingual-tts/open-bible",
+        "base_model:samuelolubukun/xtts-v2-yoruba-openbible",
+        "base_model:finetune:samuelolubukun/xtts-v2-yoruba-openbible",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 105,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/samuelolubukun/xtts-v2-yoruba-conversational",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "benjaminogbonna/nigerian_common_voice_dataset",
+        "multilingual-tts/open-bible"
+      ],
+      "base_models": [
+        "samuelolubukun/xtts-v2-yoruba-openbible"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "eigenhand/Articulatio-DE-Stream-TTS-v1.5-GGUF",
+      "author": "eigenhand",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gguf",
+        "text-to-speech",
+        "german",
+        "voice-cloning",
+        "streaming",
+        "de",
+        "en",
+        "base_model:eigenhand/Articulatio-DE-Stream-TTS-v1.5",
+        "base_model:quantized:eigenhand/Articulatio-DE-Stream-TTS-v1.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 97,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/eigenhand/Articulatio-DE-Stream-TTS-v1.5-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "eigenhand/Articulatio-DE-Stream-TTS-v1.5"
+      ],
+      "variants": [
+        "eigenhand/Articulatio-DE-Stream-TTS-v1.5-MLX"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "samuelolubukun/xtts-v2-hausa-conversational",
+      "author": "samuelolubukun",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "tts",
+        "xtts-v2",
+        "coqui",
+        "voice-cloning",
+        "hausa",
+        "african-languages",
+        "conversational-tts",
+        "common-voice",
+        "ha",
+        "dataset:benjaminogbonna/nigerian_common_voice_dataset",
+        "dataset:multilingual-tts/open-bible",
+        "base_model:samuelolubukun/xtts-v2-hausa-openbible",
+        "base_model:finetune:samuelolubukun/xtts-v2-hausa-openbible",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 66,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/samuelolubukun/xtts-v2-hausa-conversational",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "benjaminogbonna/nigerian_common_voice_dataset",
+        "multilingual-tts/open-bible"
+      ],
+      "base_models": [
+        "samuelolubukun/xtts-v2-hausa-openbible"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ling0322/libwaifu-cosyvoice-3",
+      "author": "ling0322",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "libwaifu",
+        "cosyvoice3",
+        "text-to-speech",
+        "voice-cloning",
+        "zh",
+        "en",
+        "fr",
+        "es",
+        "ja",
+        "ko",
+        "it",
+        "ru",
+        "de",
+        "base_model:FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+        "base_model:finetune:FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/ling0322/libwaifu-cosyvoice-3",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+        "funasr/campplus"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ElgekAI/SLED-TTS-Uyghur-UAS-0.2B-ONNX",
+      "author": "ElgekAI",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "text-to-speech",
+        "tts",
+        "uyghur",
+        "uas",
+        "voice-cloning",
+        "sled-tts",
+        "onnxruntime",
+        "int8",
+        "aopcode",
+        "ug",
+        "base_model:ElgekAI/SLED-TTS-Uyghur-UAS-0.2B",
+        "base_model:quantized:ElgekAI/SLED-TTS-Uyghur-UAS-0.2B",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/ElgekAI/SLED-TTS-Uyghur-UAS-0.2B-ONNX",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "sayiwen/AopCode-SLED-TTS-Uyghur-UAS-0.2B"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "IOTEverythin/voxi-duo-en-in-v2",
+      "author": "IOTEverythin",
+      "created_at": "2026-09-30",
+      "last_modified": "2026-10-01",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "moshi",
+        "lora",
+        "speech-to-speech",
+        "full-duplex",
+        "indian-english",
+        "voice-agent",
+        "research-prototype",
+        "audio-to-audio",
+        "en",
+        "dataset:IOTEverythin/voxi-duo-synth",
+        "dataset:IOTEverythin/voxi-duo-benchmark",
+        "arxiv:2410.00037",
+        "arxiv:2406.14875",
+        "base_model:kyutai/moshiko-pytorch-bf16",
+        "base_model:adapter:kyutai/moshiko-pytorch-bf16",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "moshi",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/IOTEverythin/voxi-duo-en-in-v2",
+      "card_text": "",
+      "arxiv_ids": [
+        "2406.14875",
+        "2410.00037"
+      ],
+      "datasets": [
+        "IOTEverythin/voxi-duo-benchmark",
+        "IOTEverythin/voxi-duo-synth"
+      ],
+      "base_models": [
+        "kyutai/moshiko-pytorch-bf16"
+      ],
+      "variants": [
+        "IOTEverythin/voxi-duo-en-in"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "model card links an arXiv paper",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Kremon96/bigvgan_v2_44khz_128band_512x",
+      "author": "Kremon96",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "PyTorch",
+        "neural-vocoder",
+        "audio-generation",
+        "audio-to-audio",
+        "arxiv:2206.04658",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 16,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "PyTorch",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Kremon96/bigvgan_v2_44khz_128band_512x",
+      "card_text": "",
+      "arxiv_ids": [
+        "2206.04658"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "generative_music_audio": 10
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "notmax123/blue-codec",
+      "author": "notmax123",
+      "created_at": "2026-04-09",
+      "last_modified": "2026-10-03",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "text-to-speech",
+        "speech-synthesis",
+        "autoencoder",
+        "audio",
+        "onnx",
+        "multilingual",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/notmax123/blue-codec",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "leok7v/supertonic",
+      "author": "leok7v",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "speech-synthesis",
+        "tts",
+        "multilingual",
+        "on-device",
+        "safetensors",
+        "en",
+        "ko",
+        "ja",
+        "ar",
+        "bg",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "es",
+        "et",
+        "fi",
+        "fr",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "it",
+        "lt",
+        "lv",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sv",
+        "tr",
+        "uk",
+        "vi",
+        "base_model:Supertone/supertonic-3",
+        "base_model:quantized:Supertone/supertonic-3",
+        "license:openrail",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "openrail",
+      "gated": false,
+      "url": "https://huggingface.co/leok7v/supertonic",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Supertone/supertonic-3"
+      ],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license openrail"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "RKB109/audio-event-triage-20261002-model",
+      "author": "RKB109",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-02",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "custom",
+        "synthetic-data",
+        "transparent-baseline",
+        "audio-ml",
+        "audio-classification",
+        "automatic-speech-recognition",
+        "feature-extraction",
+        "audio-to-audio",
+        "dataset:RKB109/audio-event-triage-20261002-dataset",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "custom",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/RKB109/audio-event-triage-20261002-model",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "RKB109/audio-event-triage-20261002-dataset"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 7,
+      "topic_scores": {
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "declares license mit"
+      ],
+      "is_new": true
+    }
+  ]
+}
