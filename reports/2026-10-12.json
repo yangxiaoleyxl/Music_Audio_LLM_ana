@@ -1,0 +1,996 @@
+{
+  "generated_at": "2026-10-12",
+  "window_start": "2026-10-05",
+  "source_counts": {
+    "arxiv": 0,
+    "semantic_scholar": 42
+  },
+  "errors": [
+    "arXiv: HTTP Error 500: Internal Server Error",
+    "Semantic Scholar / Audio & Speech Language Models: HTTP Error 429: ",
+    "Semantic Scholar / Music Foundation Models & Representations: HTTP Error 429: ",
+    "Semantic Scholar / Generative Music & Audio: HTTP Error 429: "
+  ],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13081",
+      "title": "SWEAR: Section-Wise Efficient Audio Reasoning via Self-Rated Difficulty",
+      "abstract": "Recent work on large audio-language models (LALMs) explores adaptive reasoning to balance accuracy and efficiency. However, existing approaches often rely on coarse-grained difficulty estimation, overlooking the diverse factors that determine reasoning effort. We address this limitation by deriving five-dimensional difficulty scores and compressed reasoning traces from complementary offline assessments. Based on this characterization, we propose SWEAR, a difficulty-aware reasoning framework that learns difficulty signals during supervised fine-tuning and uses reinforcement learning to adapt reasoning allocation across reasoning stages. Experiments on MMAU-test-mini and MMAR show that SWEAR improves accuracy while substantially reducing generated tokens, shortening reasoning for easy instances without sacrificing performance on difficult ones.",
+      "authors": [
+        "Yixuan Li",
+        "Ming-Hao Lv",
+        "Xue-Nan Xu",
+        "Zi-Hao Zheng",
+        "Meng-Yue Wu"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13081",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 21,
+      "topic_scores": {
+        "audio_language_models": 7,
+        "audio_understanding_reasoning": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio reasoning",
+        "Audio & Speech Language Models: audio-language model"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13662",
+      "title": "Enhancing Speech Recognition Through Text-to-Speech and Voice Conversion Augmentation",
+      "abstract": "Given the challenges associated with obtaining large volumes of real-world audio, the advancement of Automatic Speech Recognition (ASR) systems increasingly depends on synthetic data. This study focuses on the call center-banking domain, providing a targeted analysis of ASR models in this context. We evaluate real and synthetic datasets, using Word Error Rate (WER) and Character Error Rate (CER) as metrics, and employ a speech quality model to assess the impact on ASR performance. Our research compares Text-to-Speech (TTS) and advanced voice conversion methods, including KNNVC, Seed-VC, and Vec2Wav2, revealing significant improvements in speech quality and ASR accuracy, particularly with Seed-VC. Additionally, our domain-specific experimentation provides insight into the unique challenges and opportunities that arise when applying ASR technologies to industry-relevant settings. This highlights the potential of voice conversion technologies to enhance ASR systems, guiding future research in diverse linguistic scenarios, and paving the way for the broader application of ASR innovations across various fields.",
+      "authors": [
+        "Yunus Emre Ozkose",
+        "Ali Haznedaroglu"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13662",
+      "pdf_url": "",
+      "doi": "10.1007/978-3-032-07959-6_4",
+      "venue": "International Conference on Speech and Computer",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 13
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech, automatic speech recognition"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13506",
+      "title": "Lossless Inference Acceleration for ASR via EAGLE-Style Speculative Decoding",
+      "abstract": "Autoregressive Transformer and Conformer models have achieved state-of-the-art performance in automatic speech recognition (ASR). However, their sequential token generation mechanism imposes a significant bottleneck during decoding, resulting in substantial inference latency. While speculative decoding has emerged as a promising lossless acceleration technique, existing ASR-oriented approaches either suffer from low draft acceptance rates due to suboptimal draft quality or rely on specially designed external draft models, which limit their generality and practicality. To overcome these limitations, we propose EAGLE-ASR, a novel framework that accelerates ASR inference via EAGLE-style speculative decoding while strictly preserving lossless output quality. Specifically, we introduce Speech-Draft, a lightweight autoregressive module that serves as a universal draft model by jointly leveraging encoder acoustic features and hierarchical decoder representations from the target ASR model. Furthermore, we adopt a multi-step generation strategy with self-distilled data to train the Speech-Draft, enabling it to better approximate the target model's output distribution and maintain causal consistency during multi-token generation. Extensive experiments on representative Whisper and Conformer AED models demonstrate that EAGLE-ASR achieves significant lossless speedups of up to $1.9\\times$ and $2.4\\times$, respectively, consistently outperforming existing speculative decoding baselines for ASR. Our proposed framework further generalizes effectively to multilingual ASR and speech translation tasks, establishing EAGLE-ASR as a practical and universally applicable solution for accelerating modern ASR systems without compromising recognition accuracy.",
+      "authors": [
+        "Sen-Yao Zhang",
+        "Xiang-Hu Yue",
+        "Yi-Ming Chen",
+        "Wen-Huan Lu",
+        "Jian-Guo Wei",
+        "Hai-Zhou Li"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13506",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "speech_models": 7
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition, speech translation"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "Anadilorg/Anadil_Kazakh_TTS",
+      "author": "Anadilorg",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "voice-cloning",
+        "zero-shot-tts",
+        "audio",
+        "kazakh",
+        "kazakça",
+        "kazak-türkçesi",
+        "қазақ-тілі",
+        "turkic",
+        "türki-diller",
+        "lora",
+        "low-resource",
+        "open-source",
+        "anadil",
+        "kk",
+        "arxiv:2106.09685",
+        "base_model:openbmb/VoxCPM2",
+        "base_model:adapter:openbmb/VoxCPM2",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS",
+      "card_text": "---\nlicense: mit\nlanguage:\n- kk\nlibrary_name: voxcpm\npipeline_tag: text-to-speech\nbase_model: openbmb/VoxCPM2\nbase_model_relation: adapter\ntags:\n- text-to-speech\n- tts\n- speech-synthesis\n- voice-cloning\n- zero-shot-tts\n- audio\n- kazakh\n- kazakça\n- kazak-türkçesi\n- қазақ-тілі\n- turkic\n- türki-diller\n- voxcpm\n- lora\n- low-resource\n- open-source\n- anadil\n---\n\n<div align=\"center\">\n\n# 🎙️ AnadilKazakhTTS\n\n### Қазақ тілі · Kazakça · Kazakh — Text-to-Speech\n\n**Metinden sese (TTS) · Open-source text-to-speech**\n\n[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)\n[![Base: VoxCPM2](https://img.shields.io/badge/Base-VoxCPM2-blue.svg)](https://huggingface.co/openbmb/VoxCPM2)\n[![Method: LoRA](https://img.shields.io/badge/Method-LoRA-orange.svg)](https://huggingface.co/papers/2106.09685)\n[![Language: kaz](https://img.shields.io/badge/Language-Kazakh%20(kaz)-lightgrey.svg)](https://huggingface.co/Anadilorg)\n[![Anadil.org](https://img.shields.io/badge/Anadil-.org-823b18.svg)](https://anadil.org)\n\n</div>\n\n---\n\n**🇹🇷** **AnadilKazakhTTS**, [openbmb/VoxCPM2](https://huggingface.co/openbmb/VoxCPM2) temel modeli üzerine **LoRA** ile ince ayar yapılmış, **Kazakça (Қазақ тілі, ISO 639-3: `kaz`)** için açık kaynak bir **metinden sese (text-to-speech, ses sentezi)** modelidir. Mozilla Common Voice 26.0 verisinden türetilen **1.884 segmentlik**, tek konuşmacılı bir veri setiyle eğitilmiştir. Kısa bir referans ses klibiyle farklı sesleri de taklit edebilir (ses klonlama).\n\n**🇬🇧** **AnadilKazakhTTS** is an open-source **text-to-speech (TTS, speech synthesis)** LoRA adapter for **Kazakh (Қазақ тілі, ISO 639-3 `kaz`)**, fine-tuned on [openbmb/VoxCPM2](https://huggingface.co/openbmb/VoxCPM2) with **1,884 single-speaker utterances** derived from Mozilla Common Voice 26.0. With a short reference clip it can also approximate other voices (zero-shot voice cloning).\n\n> Kazakça, Kazakistan'da ve çevresinde ~13 milyon kişi tarafından konuşulan bir Kıpçak grubu Türkî dildir. *Kazakh is a Kipchak-group Turkic language spoken by ~13 million people in Kazakhstan and neighbouring regions.* Bu model, [Anadil](https://anadil.org) ailesinin düşük kaynaklı diller için açık kaynak ses teknolojileri geliştirme çalışmasının bir parçasıdır.\n\n---\n\n## 📋 Model Bilgileri · Model Details\n\n| | |\n|---|---|\n| **Dil · Language** | Kazakça · Kazakh (`kaz`) |\n| **Görev · Task** | Metinden sese · Text-to-Speech |\n| **Temel model · Base model** | [openbmb/VoxCPM2](https://huggingface.co/openbmb/VoxCPM2) |\n| **Yöntem · Method** | LoRA (r=32, α=32, LM + DiT) |\n| **Konuşucu · Speaker** | `spk_tmp_001` (tek konuşmacı · single speaker) |\n| **Eğitim verisi · Training data** | 1.884 segment · Mozilla Common Voice 26.0 `kaz` |\n| **Eğitim adımı · Training steps** | 10.000 |\n| **Adapter boyutu · Adapter size** | ~72 MB (384 tensor, ~18,1M parametre · parameters, F32) |\n| **Çıkış · Output** | 48 kHz |\n| **Lisans · License** | MIT |\n\n---\n\n## 🔊 Örnek Sesler · Audio Samples\n\nHer örnekte **orijinal kayıt** ile **modelin sentezi** yan yana. *Each example shows the original recording next to the model's synthesis.*\n\n**1.** ұзын киім ұлымдікі, қысқа киім қызымдікі.\n\n| 🎤 Orijinal · Original | 🤖 Sentez · Synthesis |\n|:---:|:---:|\n| <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/1.wav\"></audio> | <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/1a.wav\"></audio> |\n\n**2.** Жалғыз аттан жығылса, неге келер шамасы.\n\n| 🎤 Orijinal · Original | 🤖 Sentez · Synthesis |\n|:---:|:---:|\n| <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/2.wav\"></audio> | <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/2a.wav\"></audio> |\n\n**3.** Ер басына кун туса, үйінен безеді.\n\n| 🎤 Orijinal · Original | 🤖 Sentez · Synthesis |\n|:---:|:---:|\n| <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/3.wav\"></audio> | <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/3a.wav\"></audio> |\n\n**4.** Қанша тұлпар десе де, мініп болмас жалсызды.\n\n| 🎤 Orijinal · Original | 🤖 Sentez · Synthesis |\n|:---:|:---:|\n| <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/4.wav\"></audio> | <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/4a.wav\"></audio> |\n\n**5.** Жаманның алдына ас қойсаң, екі қолын бірдей салады.\n\n| 🎤 Orijinal · Original | 🤖 Sentez · Synthesis |\n|:---:|:---:|\n| <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/5.wav\"></audio> | <audio controls preload=\"none\" src=\"https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS/resolve/main/samples/5a.wav\"></audio> |\n\n---\n\n## ⚡ Hızlı Başlangıç · Quick Start\n\nModel, bir **referans ses klibi** üzerinden ses klonlaması yapar: eğitim konuşucusu için `samples/1.wav`'ı kullanabilir, farklı bir ses için kendi kaydınızı verebilirsiniz. *The model clones the voice of a **reference clip**: use `samples/1.wav` for the training speaker, or pass your own recording for a different voice.*\n\n```bash\npip install torch torchaudio soundfile safetensors voxcpm\ngit clone https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS\ncd Anadil_Kazakh_TTS\n\n# Tek cümle sentezle · Synthesize one sentence\npython inference.py \"Сәлем!\" --reference samples/1.wav --out hello.wav\n\n# 5 örnek cümlenin tümünü üret · Generate all 5 sample sentences\npython inference.py --list-samples\n```\n\n### Python\n\n```python\nfrom inference import AnadilKazakhTTS\n\ntts = AnadilKazakhTTS()  # openbmb/VoxCPM2 + bu repodaki LoRA ağırlıkları · + this repo's LoRA weights\ntts.synthesize(\n    \"Сәлем!\",\n    reference_wav=\"samples/1.wav\",\n    out_path=\"hello.wav\",\n    cfg_value=2.0,\n    inference_timesteps=10,\n)\n```\n\n### Gradio (yerel · local)\n\n```bash\npip install gradio\npython demo.py            # http://localhost:7860\n```\n\n### Doğrulama · Smoke test\n\n```bash\npython test_smoke.py --weights-only   # saniyeler içinde ağırlık bütünlük kontrolü · weight integrity check\npython test_smoke.py                  # tam test · full test\n```\n\n**Donanım · Hardware:** ~9 GB bellek (fp32) önerilir · recommended; CUDA tercih edilir · preferred, Apple Silicon daha yavaştır · slower.\n\n---\n\n## ⚠️ Kısıtlamalar · Limitations\n\n- **Küçük veri seti · Small dataset:** 1.884 segment, ailedeki diğer modellere göre çok daha azdır; model eğitim konuşucusunun üslubuna yakındır. *1,884 segments is far fewer than most sibling models; output stays close to the training speaker's style.*\n- **Tek konuşmacı · Single speaker:** Farklı sesler referans klip ile sıfır-örnekçi klonlamayla yaklaşılır. *Other voices are approximated via zero-shot cloning from a reference clip.*\n- **Değerlendirme · Evaluation:** Otomatik metrikler (WER, UTMOS vb.) henüz raporlanmamıştır; örnekler eğitim içi cümlelerdir. *Automatic metrics (WER, UTMOS, …) are not reported yet; the samples are in-training sentences.*\n\n---\n\n## 🌐 Anadil TTS Ailesi · The Anadil TTS Family\n\nAynı VoxCPM2 + LoRA yöntemiyle eğitilmiş açık kaynak modeller · Open-source models trained with the same VoxCPM2 + LoRA recipe:\n\n| Model | Dil · Language | Kod · Code | Segment |\n|---|---|---|---:|\n| [Anadil_Uyghur_TTS](https://huggingface.co/Anadilorg/Anadil_Uyghur_TTS) | Uygurca · Uyghur | `ug` | 209.906 |\n| [Anadil_Uzbek_TTS](https://huggingface.co/Anadilorg/Anadil_Uzbek_TTS) | Özbekçe · Uzbek | `uz` | 87.695 |\n| [Anadil_Kurmanji_TTS](https://huggingface.co/Anadilorg/Anadil_Kurmanji_TTS) | Kurmancî · Kurmanji | `kmr` | 65.102 |\n| [AnadilAdygheTTS](https://huggingface.co/Anadilorg/AnadilAdygheTTS) | Adığece · Adyghe | `ady` | 54.004 |\n| [Anadil_Kyrgyz_TTS](https://huggingface.co/Anadilorg/Anadil_Kyrgyz_TTS) | Kırgızca · Kyrgyz | `kir` | 29.987 |\n| [Anadil_Armenian_TTS](https://huggingface.co/Anadilorg/Anadil_Armenian_TTS) | Ermenice · Armenian | `hye` | 26.008 |\n| [MozilLaz](https://huggingface.co/Anadilorg/MozilLaz) | Lazca · Laz | `lzz` | 21.071 |\n| [Anadil_Ladino_TTS](https://huggingface.co/Anadilorg/Anadil_Ladino_TTS) | Ladino | `lad` | 2.283 |\n| [Anadil_Turkmen_TTS](https://huggingface.co/Anadilorg/Anadil_Turkmen_TTS) | Türkmence · Turkmen | `tuk` | 2.031 |\n| **Anadil_Kazakh_TTS** *(bu model · this model)* | Kazakça · Kazakh | `kaz` | 1.884 |\n| [MozilLa_Zazaca_Alpha](https://huggingface.co/Anadilorg/MozilLa_Zazaca_Alpha) | Zazaca · Zaza | `zza` | ~1.700 |\n\nProje sayfası ve diğer çalışmalar · Project page and more: **[anadil.org](https://anadil.org)**\n\n---\n\n## 📚 Kaynaklar · References\n\n- Temel model · Base model: [openbmb/VoxCPM2](https://huggingface.co/openbmb/VoxCPM2)\n- LoRA: [Hu et al., 2021](https://huggingface.co/papers/2106.09685)\n- Veri · Data: [Mozilla Common Voice](https://commonvoice.mozilla.org/) 26.0 (`kaz`, CC-0)\n\n## 🤝 Katkı ve İletişim · Contributing & Contact\n\nSorun, geri bildirim ve katkı için **Community** sekmesini kullanın · Use the **Community** tab for issues, feedback and contributions. Daha fazlası için · More: [anadil.org](https://anadil.org). Bkz. [CONTRIBUTING.md](CONTRIBUTING.md).\n\n## 📄 Lisans · License\n\nMIT — bkz. · see [LICENSE](LICENSE). Eğitim verisi Mozilla Common Voice 26.0 (`kaz`) katkısından gelmektedir; lisans koşullarını (CC-0) gözden geçiriniz. *Training data comes from Mozilla Common Voice 26.0 (`kaz`); please review its license terms (CC-0).*\n\n## 📎 Atıf · Citation\n\n```bibtex\n@software{anadil-kazakh-tts,\n  author  = {Anadilorg},\n  title   = {AnadilKazakhTTS: An Open-Source Text-to-Speech LoRA Adapter for Kazakh},\n  url     = {https://huggingface.co/Anadilorg/Anadil_Kazakh_TTS},\n  version = {0.1.0},\n  year    = {2026}\n}\n```\n",
+      "arxiv_ids": [
+        "2106.09685"
+      ],
+      "datasets": [],
+      "base_models": [
+        "openbmb/VoxCPM2"
+      ],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "alibiserikbay/k5-kazakh-omnivoice",
+      "author": "alibiserikbay",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "omnivoice",
+        "text-to-speech",
+        "tts",
+        "kazakh",
+        "russian",
+        "zero-shot",
+        "voice-cloning",
+        "kk",
+        "ru",
+        "arxiv:2604.00688",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:finetune:k2-fsa/OmniVoice",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- kk\n- ru\nbase_model: k2-fsa/OmniVoice\npipeline_tag: text-to-speech\ntags:\n- text-to-speech\n- tts\n- kazakh\n- russian\n- omnivoice\n- zero-shot\n- voice-cloning\n---\n\n# k5 Kazakh OmniVoice (non-commercial)\n\nA Kazakh-focused fine-tune of **[OmniVoice](https://huggingface.co/k2-fsa/OmniVoice)**, the k2-fsa omnilingual zero-shot TTS model (a diffusion language model on a Qwen3-0.6B backbone). It speaks **Kazakh** natively and also reads **Russian** and mixed Kazakh–Russian text. It clones a voice from a short reference clip.\n\n> **Licence: CC BY-NC 4.0, non-commercial only.** The base OmniVoice weights are CC BY-NC because of their training data (Emilia), so this derivative is non-commercial too. See [Licence and attribution](#licence-and-attribution).\n\n## Samples\n\nAll samples were generated by this model at 32 decoding steps, without post-editing.\n\n| Case | Voice | Text | Audio |\n|---|---|---|---|\n| Call-centre greeting | Madina (KazakhTTS2 F2) | Сәлеметсіз бе! Байланыс орталығына хабарласқаныңызға рақмет. Сізге қалай көмектесе аламын? | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_greeting_madina.wav\"></audio> |\n| Call-centre greeting | Erlan (KazakhTTS2 M1) | same | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_greeting_erlan.wav\"></audio> |\n| Call-centre greeting | Aigul (KazEmoTTS female) | same | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_greeting_aigul.wav\"></audio> |\n| Call-centre greeting | Dauren (KazEmoTTS male 1) | same | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_greeting_dauren.wav\"></audio> |\n| Call-centre greeting | Askar (KazEmoTTS male 2) | same | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_greeting_askar.wav\"></audio> |\n| Weather forecast | Madina | Ауа райы болжамы бойынша, ертең Алматы облысында күн жылы болып, кешке қарай жаңбыр жауады. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_weather_madina.wav\"></audio> |\n| Fairy tale | Askar | Ертеде бір қарт пен кемпір өмір сүріпті. Олардың жалғыз ұлы болыпты, аты – Ер Төстік. Ол батыр да, ақылды да екен. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_tale_askar.wav\"></audio> |\n| Emotion: happy | Aigul (happy reference) | Шынымен бе? Бұл керемет жаңалық! Құттықтаймын! | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_happy_aigul.wav\"></audio> |\n| Emotion: surprise | Aigul (surprised reference) | Не дейсің? Ол шынымен келді ме? | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_surprise_aigul.wav\"></audio> |\n| Emotion: sad | Dauren (sad reference) | Өкінішке қарай, бүгінгі рейс тоқтатылды. Кешірім сұраймыз. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_sad_dauren.wav\"></audio> |\n| Emotion: angry | Askar (angry reference) | Мен сізге үш рет айттым! Құжаттарды уақытында тапсыру керек еді! | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_angry_askar.wav\"></audio> |\n| Russian | Madina | Здравствуйте! Вы позвонили в службу поддержки. Чем я могу вам помочь? | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ru_support_madina.wav\"></audio> |\n| Russian, numbers | Erlan | Ваш заказ на сумму двенадцать тысяч пятьсот тенге будет доставлен завтра до восемнадцати часов. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ru_order_erlan.wav\"></audio> |\n| Kazakh–Russian code-switching | Erlan | Мен бүгін кеңседе едім, бірақ встречу перенесли на завтра, сондықтан қазір үйдемін. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/mixed_kk_ru_erlan.wav\"></audio> |\n| Literary text with pauses (Abai, First Word) | Alibi (the author's own voice, used with consent) | Бұл жасқа келгенше жақсы өткіздік пе? Жаман өткіздік пе? … | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_abai_alibi.wav\"></audio> |\n\nMadina, Erlan, Aigul, Dauren and Askar are nicknames for speakers of the public ISSAI corpora (KazakhTTS2 and KazEmoTTS), both CC BY 4.0. Emotion comes from the reference clip: the same speaker's happy, sad, angry or surprised recording.\n\n## Voice cloning: original → copy\nThe model copies a voice from one short reference recording and its transcript. It needs no training for the new voice.\n\n### The author's own voice\nA 10-second casual Russian recording of the author, Alibi Serikbay, used with his consent. The model never heard any of the generated sentences in this voice.\n\n| | Text | Audio |\n|---|---|---|\n| **Original recording** (reference, 10 s, Russian) | casual speech | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_alibi.wav\"></audio> |\n| Copy: Kazakh | Сәлеметсіз бе! Бүгін сіздерге жаңа жобамыз туралы айтып бергім келеді. Бұл қазақ тілінде сөйлейтін дауыс моделі. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/clone_alibi_kk.wav\"></audio> |\n| Copy: Russian | Привет! Это мой голос, но эту фразу я никогда не произносил. Её полностью сгенерировала модель. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/clone_alibi_ru.wav\"></audio> |\n| Copy: Kazakh–Russian mix | Мен бүгін офисте боламын, бірақ встреча в три часа, сондықтан кешірек хабарласыңыз. | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/clone_alibi_mixed.wav\"></audio> |\n| Copy: literary text (Abai) | Бұл жасқа келгенше жақсы өткіздік пе? … | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_abai_alibi.wav\"></audio> |\n\nThe reference is Russian, yet the copy speaks Kazakh in the same voice, so the voice transfers across languages.\n\n### Public-corpus voices: reference → result, including emotion\nReferences are recordings from the open ISSAI corpora (CC BY 4.0). Emotion is not a separate setting: it transfers from the reference clip. Give a happy, sad or angry recording of the voice, and the new sentence comes out happy, sad or angry.\n\n| Voice | Reference (original recording) | Result | Text of the result |\n|---|---|---|---|\n| Madina (KazakhTTS2 F2), neutral | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_madina.wav\"></audio> | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_weather_madina.wav\"></audio> | Ауа райы болжамы бойынша, ертең Алматы облысында күн жылы болып, кешке қарай жаңбыр жауады. |\n| Madina → Russian | same | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ru_support_madina.wav\"></audio> | Здравствуйте! Вы позвонили в службу поддержки. Чем я могу вам помочь? |\n| Erlan (KazakhTTS2 M1), neutral | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_erlan.wav\"></audio> | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ru_order_erlan.wav\"></audio> | Ваш заказ на сумму двенадцать тысяч пятьсот тенге будет доставлен завтра до восемнадцати часов. |\n| Erlan → kk–ru mix | same | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/mixed_kk_ru_erlan.wav\"></audio> | Мен бүгін кеңседе едім, бірақ встречу перенесли на завтра, сондықтан қазір үйдемін. |\n| Aigul (KazEmoTTS), **happy** | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_aigul_happy.wav\"></audio> | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_happy_aigul.wav\"></audio> | Шынымен бе? Бұл керемет жаңалық! Құттықтаймын! |\n| Aigul, **surprised** | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_aigul_surprise.wav\"></audio> | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_surprise_aigul.wav\"></audio> | Не дейсің? Ол шынымен келді ме? |\n| Dauren (KazEmoTTS), **sad** | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_dauren_sad.wav\"></audio> | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_sad_dauren.wav\"></audio> | Өкінішке қарай, бүгінгі рейс тоқтатылды. Кешірім сұраймыз. |\n| Askar (KazEmoTTS), **angry** | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_askar_angry.wav\"></audio> | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_angry_askar.wav\"></audio> | Мен сізге үш рет айттым! Құжаттарды уақытында тапсыру керек еді! |\n| Askar, neutral | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/ref_askar_neutral.wav\"></audio> | <audio controls src=\"https://huggingface.co/alibiserikbay/k5-kazakh-omnivoice/resolve/main/samples/kk_tale_askar.wav\"></audio> | Ертеде бір қарт пен кемпір өмір сүріпті. Олардың жалғыз ұлы болыпты, аты – Ер Төстік. Ол батыр да, ақылды да екен. |\n\n## What was fine-tuned\n- **Base:** `k2-fsa/OmniVoice`.\n- **Data:**\n  - KazakhTTS2 studio speakers (5 speakers, ~248 h after quality gating, including long-form);\n  - KazEmoTTS (3 speakers, 6 emotions), kept only above a background-noise gate of DNSMOS BAK ≥ 3.5.\n- **Recipe:** upstream OmniVoice fine-tuning with gender and emotion instruct tags, which also enables voice design. The checkpoint was selected on a held-out set.\n\n## Results\nOn a held-out set of 100 Kazakh sentences (dev100), at 32 steps:\n\n| Metric | Value |\n|---|---|\n| Character error rate (GigaAM ASR) | **0.20 %** |\n| Speaker similarity to the reference (speaker-verification cosine) | **0.976** |\n\nReal-time numbers are in [Hardware, real-time and streaming](#hardware-real-time-and-streaming).\n\n## Usage\nInstall the `omnivoice` package from the official [k2-fsa OmniVoice](https://huggingface.co/k2-fsa/OmniVoice) release, then:\n\n```python\nimport torch, soundfile as sf\nfrom omnivoice.models.omnivoice import OmniVoice\n\nmodel = OmniVoice.from_pretrained(\"alibiserikbay/k5-kazakh-omnivoice\", device_map=\"cuda\", dtype=torch.float16)\naudio = model.generate(\n    text=\"Сәлеметсіз бе! Сізге қалай көмектесе аламын?\",\n    ref_audio=\"reference.wav\",                     # 3–15 s of clean speech of the target voice\n    ref_text=\"exact transcript of reference.wav\",\n    num_step=32,                                    # 16 = faster, slightly lower quality\n)\nsf.write(\"out.wav\", audio[0], 24000)                # one 24 kHz numpy array per input text\n```\n\n- **Audio tokenizer:** the repository contains only the language-model weights. On first load OmniVoice downloads the Higgs Audio v2 tokenizer (`eustlb/higgs-audio-v2-tokenizer`), which has its own licence, the Boson Higgs Audio 2 Community License.\n- **Tips:**\n  - Use a clean 3–15 s reference with its exact transcript.\n  - Write numbers as words; the base model's normaliser is not Kazakh-aware.\n  - Punctuation drives pauses.\n- **Non-verbal tags:** `[laughter]`, `[surprise-oh]` and `[question-ah]` appear to still work after fine-tuning (experimental, checked automatically, not by listeners). `[sigh]` degraded.\n\n## Hardware, real-time and streaming\n\n### VRAM (measured, fp16)\n| Setup | GPU memory |\n|---|---|\n| One request at a time (`generate()`, weights + audio tokenizer + CUDA context) | **~6–7 GB** (measured on our demo service process) |\n| Real-time streaming engine with CUDA graphs, serving **32 concurrent calls** | **~19–20 GB** peak (measured) |\n\nAn 8 GB GPU is enough to try the model. For a multi-call real-time server, plan on 24 GB or more.\n\n### Real-time performance (one H100 NVL, one call)\n- **First audio:**\n  - ~0.5 s at full quality (32 steps);\n  - 0.42 s with our CUDA-graph engine;\n  - ~0.3 s with «fast start» (first chunk at 16 steps).\n- **Whole sentence:** synthesised in ~0.36–0.54 s, i.e. 10–25× faster than real time.\n- **Stability:** no stalls once playback starts.\n\n### Streaming support we added\nOmniVoice is non-autoregressive: it refines a whole chunk over N steps, so upstream only returns audio for a complete text. Our engine, in the companion GitHub repository `k5-kazakh-russian-tts`, adds:\n- **Chunked streaming:**\n  - a short first chunk, for a fast first audio;\n  - later sentences merged into ~7 s chunks that are generated while the earlier audio plays;\n  - every chunk has a deadline.\n- **Two-lane scheduler:**\n  - first chunks of new calls run on an urgent lane, with CUDA graphs on a high-priority CUDA stream;\n  - later chunks are batched on a bulk lane, packed into one sequence with FlexAttention, so there is no padding.\n- **CUDA graphs:** a step takes 11 ms instead of 25–28 ms for one call, with bit-identical output.\n- **Fast start (optional):** the first chunk at 16 steps. About 3× more concurrent calls; the first words are slightly less clean.\n- **Short reference prompts for real time (3–5 s, cut at a word boundary):** less compute per call with no loss in speaker similarity.\n- **Prosody tags in the demo studio:** `<pause 1.2>`, `[пауза 1.2]`, `<break time=\"800ms\"/>`, `<slower>…</slower>`, `<louder>…</louder>`.\n\n### Concurrent calls per GPU\n\"Calls\" means typical phone-dialogue traffic:\n- each reply is 1–2 sentences;\n- there is a 2–6 s pause while the caller speaks;\n- the target is first audio within **0.8 s for 95 %** of replies, with no audible stalls.\n\n| GPU | VRAM | Full quality (32 steps) | Fast start (16-step first chunk) | Source |\n|---|---|---|---|---|\n| **H100 NVL** | 94 GB | **8** (long studio references) – **12** (3–5 s references) | **24 – 32** | measured |\n| **L40** | 48 GB | ~3 – 5 | ~8 – 12 | estimate |\n| **RTX 5090** | 32 GB | ~3 – 5 | ~8 – 12 | estimate |\n\n- **How the estimates were made:** the L40 and RTX 5090 figures are not measured. They scale the H100 results by tensor throughput and memory bandwidth.\n- **Why one call stays fast:** with a single call the engine is limited by kernel launches (CPU), not by the GPU. So the first audio for one call should stay near 0.5 s on these cards too.\n- **Measure your own card:** run `omni_rt_bench.py calls` from the GitHub repository on your hardware.\n- **Worst case:** if all calls start in the same second, capacity is much lower: 1–8 calls on an H100.\n\nFor comparison, our VoxCPM2-based Kazakh model serves about 32 calls per H100 at full quality, because it is autoregressive and streams natively.\n\n## Limitations\n- Russian is read with a light Kazakh accent: the fine-tune data is Kazakh-only.\n- Speaker similarity is best for clean studio-like references. Noisy or reverberant references reduce quality.\n- Not suitable for commercial use (licence).\n\n## Responsible use\nClone only voices you have the right to use. Do not use this model for impersonation, fraud or deception. This follows the base model's disclaimer.\n\n## Licence and attribution\n- **Model weights:** CC BY-NC 4.0, inherited from the base OmniVoice weights, which are non-commercial because of their training data (Emilia).\n- **Base model:** OmniVoice by k2-fsa (Zhu et al., 2026). Code Apache-2.0, weights CC BY-NC.\n- **Fine-tuning data:**\n  - **KazakhTTS2:** ISSAI, Nazarbayev University, CC BY 4.0. Mussakhojayeva et al., *KazakhTTS2: Extending the Open-Source Kazakh TTS Corpus With More Data, Speakers, and Topics*, LREC 2022.\n  - **KazEmoTTS:** ISSAI, Nazarbayev University, CC BY 4.0. Abilbekov et al., *KazEmoTTS: A Dataset for Kazakh Emotional Text-to-Speech Synthesis*, LREC-COLING 2024.\n- **Audio tokenizer (downloaded separately):** Higgs Audio v2 tokenizer by Boson AI, Boson Higgs Audio 2 Community License.\n\n```bibtex\n@article{zhu2026omnivoice,\n  title={OmniVoice: Towards Omnilingual Zero-Shot Text-to-Speech with Diffusion Language Models},\n  author={Zhu, Han and Ye, Lingxuan and Kang, Wei and Yao, Zengwei and Guo, Liyong and Kuang, Fangjun and Han, Zhifeng and Zhuang, Weiji and Lin, Long and Povey, Daniel},\n  journal={arXiv preprint arXiv:2604.00688},\n  year={2026}\n}\n```\n\n---\n\n## Кратко по-русски\n- Казахская версия OmniVoice. Говорит по-казахски, читает по-русски и смешанный текст, клонирует голос по короткому образцу.\n- **Только для некоммерческого использования** (CC BY-NC 4.0).\n- Обучена на открытых корпусах ISSAI KazakhTTS2 и KazEmoTTS (CC BY 4.0).\n- Примеры выше озвучены голосами дикторов этих корпусов и голосом автора, с его согласия.\n",
+      "arxiv_ids": [
+        "2604.00688"
+      ],
+      "datasets": [],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 21,
+      "topic_scores": {
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-32B-Para",
+      "author": "adventists-ai",
+      "created_at": "2026-10-07",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "paralinguistics",
+        "nonverbal",
+        "prosody",
+        "speaker-verification",
+        "speech-llm",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-ASR-0.6B",
+        "base_model:finetune:Qwen/Qwen3-ASR-0.6B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 87,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-32B-Para",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- adventists-ai/DuplexJev-32B-Turn\n- Qwen/Qwen3-VL-32B-Instruct\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- paralinguistics\n- nonverbal\n- prosody\n- speaker-verification\n- speech-llm\n- vllm\n---\n\n# DuplexJev-32B-Para (v1.1)\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev) · Research notes: [hearing stress](https://github.com/adventists-ai/duplexjev/blob/main/research/2026-10-stress-understanding.md) · [keeping a speech-decision LLM able to talk](https://github.com/adventists-ai/duplexjev/blob/main/research/2026-10-chat-replay.md)\n\n**The DuplexJev model that hears the most beyond the words.** On top of everything\n[DuplexJev-32B-Turn](https://huggingface.co/adventists-ai/DuplexJev-32B-Turn) and\n[DuplexJev-32B-Stress](https://huggingface.co/adventists-ai/DuplexJev-32B-Stress) do (spoken QA, gender, emotion,\nturn-taking, stress and pauses), it also hears **laughter, breathing, coughs and sighs**, notices **how** someone is\ntalking (whispering, shouting, very fast or slow), and can tell, roughly as a person would, **whether two clips are\nthe same speaker**. Mandarin and English. Since v1.1 it also **holds a normal conversation**, multi-turn included.\n\n> **v1.1 (2026-10-10)** replaces v1.0 (2026-10-09) and is better on almost every decision benchmark (table below).\n> v1.0 stays available as revision `v1.0` (`--revision v1.0` in vLLM, `revision=\"v1.0\"` in `from_pretrained`).\n\nDuplexJev reads typed, closed-set decisions from speech as a **single-token distribution** of the LLM: zero decode\nsteps, many questions about the same clip in parallel. This repository is the complete model (Qwen3-ASR-0.6B encoder\n+ connector + the language model of Qwen3-VL-32B, 33.0 B parameters, bf16; one 80 GB GPU).\n\n**Which 32B to pick.** This one if you want the widest set of paralinguistic signals. Turn if every point of\nemotion and turn-taking matters; Stress if stress is the main thing you need (see the table).\n\n## What changed\n\nStarting from DuplexJev-32B-Turn we trained the connector and a new rank-16 LoRA on the LLM (merged here) for 4,000\nsteps. The mix is the 32B-Turn mix plus:\n\n| added data | what it teaches |\n|---|---|\n| stress / pause detection (as in 32B-Stress: DEBATE, Stress-17K, TinyStress-15K, Expresso, neutral negatives) | which word is stressed, or none; where the pause is |\n| speaker pairs (VoxCeleb1 dev, AISHELL-1, LibriSpeech, two-speaker mixtures) | same speaker or not; is this person in the clip |\n| non-verbal sounds (VocalSound, NonVerbalSpeech-38K, NonverbalTTS, Expresso laughing) | is there laughter / breathing / a cough / a sigh / sniffing / throat clearing / a sneeze / crying …; negatives are cut from the same recordings away from the event |\n| speaking style (EARS, Expresso whisper) | whispering, loud, fast, slow, high or low pitch, normal |\n| spoken multiple-choice replay (ARC, OpenBookQA and CommonsenseQA train splits read by TTS) | keeps \"answer the content\" from being crowded out by \"listen to the voice\" |\n| **v1.1:** conversation replay (spoken and typed user turns, up to 6 earlier turns as history; target = the original LLM's own reply) and in-house chat items | normal, full-length replies; trained with per-row loss averaging so long replies do not swamp the one-token decisions |\n\n## Results\n\n| | 32B-Turn | 32B-Para v1.0 | **32B-Para v1.1** |\n|---|---:|---:|---:|\n| qa100 / ZJU-ML | 96 / 87 | 95 / 87 | **96 / 88** |\n| gender / emotion | 91.5 / 91.1 | 92.1 / 89.5 | **92.9 / 91.5** |\n| VoiceBench OBQA‡ / MMSU | 85.5 / 72.1 | 90.1 / 73.4 | **94.5 / 75.5** |\n| Easy-Turn* | 95.2 | 94.0 | **94.8** |\n| which word is stressed, \"none\" offered: DEBATE (zh) / StressPresso (en) | 35 / 1 | 87 / 84 | **93 / 96** |\n| neutral speech → \"no word is stressed\": AISHELL-1 / LibriSpeech | 92 / 50 | 99 / 100 | 100 / 99 |\n| meaning from stress: DEBATE held-out / StressTest | 35 / 52 | 81 / 70 | **85 / 76** |\n| **laughter / breathing / cough / sigh** (AUC, NonverbalTTS test, real speech, unseen) | — | 0.85 / 0.73 / 0.70 / 0.74 | **0.88 / 0.81 / 0.85 / 0.80** |\n| laughter / breathing in natural Mandarin conversation (AUC, unseen third-party sample) | — | 0.80 / 0.78 | 0.83 / 0.65 |\n| **speaking style, 7 classes** (EARS held-out speakers) | — | 69% | **82%** |\n| same speaker? EER, VoxCeleb1 random / hard pairs (our harness) | — | 37.4% / 45.7% | **28.2% / 39.6%** |\n\nPaper protocol (single-token readout, PyTorch), % correct unless marked; AUC 0.5 = chance.\nThrough vLLM with `duplexjev-vllm` in the client wording, v1.1: qa100 97, ZJU-ML 91, gender 93.2, emotion 90.0,\nEasy-Turn 94.8 (v1.0: 95, 90, 91.9, 89.5, 94.1; qa100 and ZJU-ML have 100 items each).\n\n- \\* Easy-Turn is in-domain (its training split is in the mix).\n- ‡ OpenBookQA's train split is in the replay data, so the OBQA gain is partly in-domain; MMSU is unrelated to it.\n- For reference, an AudioSet AST tagger scores 0.71 / 0.75 / 0.85 / 0.76 on the same four sounds.\n- Speaker: a dedicated speaker-verification model reaches ~1% EER on VoxCeleb1; this model is meant to have a rough,\n  human-like sense of \"same voice or not\", not to identify people.\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" duplexjev-vllm\nvllm serve adventists-ai/DuplexJev-32B-Para --max-model-len 4096\n```\n\nPrompt format and client are the same as for [DuplexJev-32B-Turn](https://huggingface.co/adventists-ai/DuplexJev-32B-Turn);\nsee [`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py). Examples:\n\n```\nThe user said: <|audio|>\n\nIs there laughter in this audio?\n\nOptions:\nA. Yes\nB. No\n\nAnswer with the letter only.\n```\n\n```\n用户说：<|audio|>\n\n除了说话，这段音频里还有哪种声音？\n\n选项：\nA. 叹气\nB. 咳嗽\nC. 笑声\nD. 都没有\n\n请只回答选项字母。\n```\n\nAlways offer a \"none\" option for stress and non-verbal questions; the model was trained with it.\n\n## Limitations\n\n- Non-verbal training audio is mostly acted (radio drama, animation, studio recordings); in natural conversation the\n  scores are lower (see the table).\n- Breathing in natural Mandarin conversation is lower than in v1.0 (AUC 0.65 vs 0.78); acted / read speech is higher.\n- Asked about itself, it may describe abilities (seeing images, speaking) that this checkpoint does not have on its\n  own: it takes speech and text and replies in text.\n- Speaker judgments are coarse (EER 18–40%) and must not be used to identify or verify people.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, non-commercial use only.**\n\n- Non-commercial data:\n  - Stress: DEBATE (github.com/SmileHnu/DEBATE), Stress-17K and TinyStress-15K (slprl);\n  - Expresso (Meta), EARS (Meta) and NonVerbalSpeech-38K, all CC BY-NC 4.0;\n  - ESD (research only); SmoothConv (CC BY-NC).\n  - Conversation replay (v1.1): user turns from wilzzzz/paralinguistic_dialogues (no licence stated on the dataset card; used for non-commercial research), SmoothConv (CC BY-NC), AISHELL-1 (Apache-2.0), LibriSpeech (CC BY 4.0); target replies generated by the base LLM (Apache-2.0); spoken chat questions synthesised with CosyVoice2 (Apache-2.0).\n- Other data:\n  - VocalSound (CC BY-SA 4.0), NonverbalTTS (audio from VoxCeleb and Expresso);\n  - VoxCeleb1 (CC BY 4.0), AISHELL-1 (Apache-2.0), LibriSpeech (CC BY 4.0);\n  - ARC (CC BY-SA 4.0), OpenBookQA, CommonsenseQA (MIT).\n- Base models keep their licences: Qwen3-VL-32B-Instruct and Qwen3-ASR-0.6B are Apache-2.0 (Alibaba Cloud).\n- The LLM weights are the language model of Qwen3-VL-32B-Instruct with LoRAs merged in; the vision encoder is not\n  included.\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/DuplexJev-32B-Turn",
+        "Qwen/Qwen3-VL-32B-Instruct",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [
+        "adventists-ai/DuplexJev-32B-Stress"
+      ],
+      "score": 19,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "assasinatee/SWEAR",
+      "author": "assasinatee",
+      "created_at": "2026-10-08",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2_5_omni_thinker",
+        "image-text-to-text",
+        "audio",
+        "audio-reasoning",
+        "qwen",
+        "swear",
+        "audio-text-to-text",
+        "en",
+        "arxiv:2610.13081",
+        "base_model:Qwen/Qwen2.5-Omni-7B",
+        "base_model:finetune:Qwen/Qwen2.5-Omni-7B",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/assasinatee/SWEAR",
+      "card_text": "---\nlicense: apache-2.0\nlibrary_name: transformers\nbase_model: Qwen/Qwen2.5-Omni-7B\npipeline_tag: audio-text-to-text\ntags:\n- audio\n- audio-reasoning\n- qwen\n- swear\nlanguage:\n- en\n---\n\n# SWEAR\n\nSWEAR model (merged full weights on [Qwen2.5-Omni-7B](https://huggingface.co/Qwen/Qwen2.5-Omni-7B)) for\n[SWEAR: Section-Wise Efficient Audio Reasoning via Self-Rated Difficulty](http://arxiv.org/abs/2610.13081).\n\nThis is the merged full-model release. No separate LoRA adapter is required.\n\nThe model was trained on the choice-only, no-S2TT subset of [DiCoTA](https://huggingface.co/datasets/assasinatee/DiCoTA).\n\n- **Paper:** [arXiv:2610.13081](http://arxiv.org/abs/2610.13081)\n- **Code:** https://github.com/assasinatee/SWEAR\n- **Dataset:** https://huggingface.co/datasets/assasinatee/DiCoTA\n",
+      "arxiv_ids": [
+        "2610.13081"
+      ],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen2.5-Omni-7B"
+      ],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "audio_understanding_reasoning": 16
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio reasoning, audio-text (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "jjcoders/suna-v1",
+      "author": "jjcoders",
+      "created_at": "2026-10-11",
+      "last_modified": "2026-10-11",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "safetensors",
+        "gguf",
+        "musicgen",
+        "audio",
+        "text-to-audio",
+        "music",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 123,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/jjcoders/suna-v1",
+      "card_text": "---\nlicense: apache-2.0\ntags:\n- musicgen\n- audio\n- text-to-audio\n- music\n- gguf\npipeline_tag: text-to-audio\ninference: false\n---\n\n# 👑 JJ coders Suna AI v1\n\n**JJ coders Suna AI v1** is a commercial-grade text-to-instrumental music generation foundation model optimized for background music, commercial ads, cinematic scores, and modern electronic beats.\n\n## 📦 Model Specifications\n- **Architecture**: MusicGen (Transformer Decoders + EnCodec Audio Tokenizer)\n- **Parameters**: 300M (Low-latency streaming tier)\n- **Audio Output**: 32 kHz Studio Audio\n- **Formats Available**:\n  - `model.safetensors` (Native PyTorch / Transformers)\n  - `JJ_coders_Suna_AI_v1_Q4_K_M.gguf` (Quantized GGUF for local CPU/GPU runtimes)\n\n## 🚀 Quickstart Usage\n\n```python\nimport torch\nimport scipy.io.wavfile as wavfile\nfrom transformers import AutoProcessor, MusicgenForConditionalGeneration\n\nmodel_id = \"johanjomet/jj-coders-suna-ai-v1\"\nprocessor = AutoProcessor.from_pretrained(model_id)\nmodel = MusicgenForConditionalGeneration.from_pretrained(\n    model_id, \n    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32\n).to(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\nprompt = \"an energetic bg music for an apple level ad for JJ coders\"\ninputs = processor(text=[prompt], padding=True, return_tensors=\"pt\").to(model.device)\n\nwith torch.no_grad():\n    audio_values = model.generate(**inputs, max_new_tokens=1500)\n\nsampling_rate = model.config.audio_encoder.sampling_rate\nwavfile.write(\"suna_output.wav\", sampling_rate, audio_values[0, 0].cpu().numpy())",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "generative_music_audio": 18
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag), musicgen",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Haramiday/owe-voice-mms-tts-yoruba",
+      "author": "Haramiday",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "vits",
+        "text-to-audio",
+        "yoruba",
+        "proverbs",
+        "research-only",
+        "text-to-speech",
+        "yo",
+        "base_model:facebook/mms-tts-yor",
+        "base_model:finetune:facebook/mms-tts-yor",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Haramiday/owe-voice-mms-tts-yoruba",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/mms-tts-yor"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Infinix-io/back-up-2",
+      "author": "Infinix-io",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "higgs_multimodal_qwen3",
+        "feature-extraction",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "higgs-audio",
+        "qwen3",
+        "custom_code",
+        "en",
+        "base_model:bosonai/higgs-tts-3-4b",
+        "base_model:finetune:bosonai/higgs-tts-3-4b",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Infinix-io/back-up-2",
+      "card_text": "---\nlicense: other\nlicense_name: bosonai-higgs-audio-v3\nlicense_link: LICENSE\nlanguage:\n- en\npipeline_tag: text-to-speech\ntags:\n- text-to-speech\n- tts\n- voice-cloning\n- higgs-audio\n- qwen3\n- custom_code\nbase_model:\n- bosonai/higgs-audio-v3-tts-4b\nlibrary_name: transformers\n---\n\n# Higgs Audio v3 TTS (4B) — transformers `trust_remote_code` port\n\nA `trust_remote_code` packaging of [`bosonai/higgs-audio-v3-tts-4b`](https://huggingface.co/bosonai/higgs-audio-v3-tts-4b)\nthat loads with plain 🤗 transformers (no SGLang). The weights are the original\ncheckpoint, copied unchanged; only a small `modeling_*.py` / `configuration_*.py`\npair and an `auto_map` were added.\n\nThe model is a standard **Qwen3-4B** backbone plus a fused multi-codebook audio\nembedding/head. Reference-audio encoding and waveform decoding use the\ntransformers-native [`bosonai/higgs-audio-v2-tokenizer`](https://huggingface.co/bosonai/higgs-audio-v2-tokenizer)\n(`higgs_audio_v2_tokenizer`), loaded automatically on first use.\n\nRequires `transformers >= 5.5`.\n\n## Usage\n\n```python\nimport torch\nimport torchaudio\nfrom transformers import AutoModelForCausalLM, AutoTokenizer\n\nrepo = \"multimodalart/higgs-audio-v3-tts-4b-transformers\"\ntokenizer = AutoTokenizer.from_pretrained(repo)\nmodel = AutoModelForCausalLM.from_pretrained(\n    repo, trust_remote_code=True, dtype=torch.bfloat16\n).to(\"cuda\").eval()\n\n# Zero-shot TTS\nwav = model.generate_speech(\"Hello, this is Higgs Audio running on transformers.\", tokenizer)\ntorchaudio.save(\"out.wav\", wav.unsqueeze(0), model.config.sample_rate)\n\n# Voice cloning from a reference clip (+ optional transcript)\nref, sr = torchaudio.load(\"reference.wav\")\nwav = model.generate_speech(\n    \"Now speaking in the cloned voice.\",\n    tokenizer,\n    reference_audio=ref,\n    reference_sample_rate=sr,\n    reference_text=\"optional transcript of the reference clip\",\n    temperature=0.7,\n    top_p=0.95,\n)\ntorchaudio.save(\"clone.wav\", wav.unsqueeze(0), model.config.sample_rate)\n```\n\n`generate_speech` returns a mono 24 kHz waveform as a CPU float32 tensor `[L]`.\n\n## Notes\n\n- Generation uses Higgs' delay pattern across 8 codebooks (vocab 1026, incl.\n  BOC/EOC specials); de-delay + decode are handled internally.\n- The codec runs in fp32 (decode is unstable in bf16); the LM backbone runs in\n  the dtype you load it in (bf16 recommended).\n- License: research/non-commercial, inherited from the upstream checkpoint — see\n  [`LICENSE`](LICENSE).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "bosonai/higgs-audio-v3-tts-4b"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "justdataplz/pocket-tts-web",
+      "author": "justdataplz",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "onnx",
+        "onnxruntime-web",
+        "webassembly",
+        "text-to-speech",
+        "el",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "base_model:kyutai/pocket-tts-without-voice-cloning",
+        "base_model:quantized:kyutai/pocket-tts-without-voice-cloning",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/justdataplz/pocket-tts-web",
+      "card_text": "---\nlicense: cc-by-4.0\nlanguage:\n- el\n- en\n- fr\n- de\n- es\npipeline_tag: text-to-speech\ntags:\n- pocket-tts\n- onnx\n- onnxruntime-web\n- webassembly\nbase_model:\n- kyutai/pocket-tts-without-voice-cloning\n- myned-ai/pocket-tts-greek\n---\n\n# Pocket TTS for the browser\n\nKyutai's [Pocket TTS](https://huggingface.co/kyutai/pocket-tts-without-voice-cloning) and Myned AI's\n[Greek Pocket TTS](https://huggingface.co/myned-ai/pocket-tts-greek), converted to run in a web browser\nwith onnxruntime-web on WebAssembly (one thread). Used by the read-aloud voices of everkept.net and of\nthe art museum at artmuseum.artfrompixels.com.\n\nOne folder per language (`greek`, `english`, `french`, `german`, `spanish`), each about 116 MB:\n\n| File | What it is |\n|---|---|\n| `bundle.json` | sizes, text rules and the list of files |\n| `text_conditioner.onnx`, `flow_lm_main.onnx`, `flow_lm_flow.onnx`, `mimi_decoder.onnx` | the four networks, int8 |\n| `tokenizer.json` | the language's SentencePiece (unigram) model as plain data |\n| `mimi_init.bin` | the decoder's starting state |\n| `voices/<voice>.bin` | a voice: the flow LM's attention cache after hearing the speaker, float16 |\n\nThe flow LM uses the KV-delta contract of\n[lookbe/pocket-tts-onnx-export](https://github.com/lookbe/pocket-tts-onnx-export) (MIT) with a 400-row\nattention cache (16-bit): it returns only the rows it adds. The browser loop follows\n[KevinAHM/pocket-tts-web](https://huggingface.co/spaces/KevinAHM/pocket-tts-web) (Apache 2.0) and\nKyutai's `pocket_tts`.\n\n## Voices\n\n| Language | Voices | Source |\n|---|---|---|\n| Greek | eleni, athina, katerina, spyros, kostas, nikos | Myned AI, from Mozilla Common Voice (CC0) |\n| English | alba, jane, george, michael | Kyutai: Alba Mackenna (CC BY 4.0); VCTK corpus (CC BY 4.0) |\n| French | estelle | Kyutai (CC0 recording) |\n| German | juergen | Kyutai |\n| Spanish | lola | Kyutai, from Mozilla Common Voice (CC0) |\n\n## Licence and use\n\nCC BY 4.0, as the models it comes from: Pocket TTS by Kyutai (Manu Orsini, Simon Rouard, Gabriel De\nMarmiesse, Václav Volhejn, Neil Zeghidour, Alexandre Défossez); the Greek model by Myned AI. Converted\nfor the browser by justdataplease.\n\nAs Kyutai asks: do not use it to imitate or clone anyone's voice without their explicit and lawful\nconsent, nor to present what it says as a genuine recording of a real person or event, and comply with\nall applicable laws.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "kyutai/pocket-tts-without-voice-cloning",
+        "myned-ai/pocket-tts-greek"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Rcarvalo/lfm2a-fr-v3-checkpoints",
+      "author": "Rcarvalo",
+      "created_at": "2026-10-09",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "speech-to-speech",
+        "liquid",
+        "lfm2-audio",
+        "text-to-speech",
+        "fr",
+        "en",
+        "base_model:LiquidAI/LFM2.5-Audio-1.5B",
+        "base_model:finetune:LiquidAI/LFM2.5-Audio-1.5B",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Rcarvalo/lfm2a-fr-v3-checkpoints",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "LiquidAI/LFM2.5-Audio-1.5B"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), speech-to-speech",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mrfakename/kokoro-cloning-v1-ONNX",
+      "author": "mrfakename",
+      "created_at": "2026-10-11",
+      "last_modified": "2026-10-11",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "kokoro",
+        "voice-cloning",
+        "webgpu",
+        "text-to-speech",
+        "en",
+        "base_model:AKinvox/kokoro-cloning-v1",
+        "base_model:quantized:AKinvox/kokoro-cloning-v1",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "onnx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/mrfakename/kokoro-cloning-v1-ONNX",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: AKinvox/kokoro-cloning-v1\nlibrary_name: onnx\npipeline_tag: text-to-speech\ntags:\n- kokoro\n- voice-cloning\n- onnx\n- webgpu\nlanguage:\n- en\n---\n\n# kokoro-cloning-v1 ONNX\n\nONNX export of [AKinvox/kokoro-cloning-v1](https://huggingface.co/AKinvox/kokoro-cloning-v1) (LoRA adapter merged into [hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M), plus the reference encoders and mapper) for onnxruntime-web / WebGPU.\n\n| file | inputs | outputs |\n|---|---|---|\n| `enroll.onnx` | `wave24` [1,N] float32 reference at 24 kHz, `ref_ids` [1,P] int64 transcript phoneme ids (with 0 at both ends), `wavlm` [1,512] x-vector | `style` [1,256], `memory` [1,M,192] |\n| `synth.onnx` | `input_ids` [1,T] int64 (with 0 at both ends), `style` [1,256], `memory` [1,M,192], `speed` [1] | `waveform` [S] at 24 kHz, `duration` [T] |\n\nThe `wavlm` x-vector comes from [microsoft/wavlm-base-plus-sv](https://huggingface.co/microsoft/wavlm-base-plus-sv) on the reference resampled to 16 kHz ([Xenova/wavlm-base-plus-sv](https://huggingface.co/Xenova/wavlm-base-plus-sv) `onnx/model.onnx` works). Phonemes use misaki (en-US); `vocab.json` maps phoneme symbols to ids.\n\nParity against the PyTorch reference (CPU, onnxruntime 1.2x): conditioning `style` max abs diff < 1e-6, `memory` < 5e-6, predicted durations identical; waveforms differ only by the random excitation noise of the vocoder.\n\n`export.py` is the export script (run against the official `kokoro_cloning` package). Batch size 1.\n\nDemo: [mrfakename/kokoro-cloning-webgpu](https://huggingface.co/spaces/mrfakename/kokoro-cloning-webgpu) (in-browser), [mrfakename/kokoro-cloning](https://huggingface.co/spaces/mrfakename/kokoro-cloning) (PyTorch).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "AKinvox/kokoro-cloning-v1"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Killuazyt/kurisu-gpt-sovits-v5turbo-20261012",
+      "author": "Killuazyt",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gpt-sovits",
+        "v5turbo",
+        "voice-cloning",
+        "kurisu",
+        "lora",
+        "text-to-speech",
+        "ja",
+        "zh",
+        "base_model:lj1995/GPT-SoVITS",
+        "base_model:adapter:lj1995/GPT-SoVITS",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Killuazyt/kurisu-gpt-sovits-v5turbo-20261012",
+      "card_text": "---\nlanguage:\n- ja\n- zh\npipeline_tag: text-to-speech\nbase_model: lj1995/GPT-SoVITS\ntags:\n- gpt-sovits\n- v5turbo\n- voice-cloning\n- kurisu\n- lora\n---\n\n# 牧濑红莉栖 / Makise Kurisu — GPT-SoVITS v5turbo\n\nGPT-SoVITS v5turbo 微调模型，训练日期 2026-10-12。训练语言为日文，中文属于跨语言合成。\n\n## 配套模型\n\n| 文件 | 说明 |\n| --- | --- |\n| `kurisu_v5turbo_20261012_e2_s316_l32.pth` | SoVITS v5turbo LoRA，rank 32，训练 2 轮 |\n| `kurisu_v5turbo_20261012-e15.ckpt` | 配套 GPT，训练 15 轮 |\n\n两个权重需配套使用。`.pth` 使用 GPT-SoVITS 官方 v5turbo LoRA 格式，仍需底模 `GPT_SoVITS/pretrained_models/gsv-v5-pretrained/s2Gv5turbo.pth` 和同目录 `vocoder.pth`，由支持 v5turbo 的 GPT-SoVITS 自动加载。\n\n## 使用方法\n\n1. 准备支持 v5turbo 的 [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) 和 [官方底模](https://huggingface.co/lj1995/GPT-SoVITS)。本次验证源码提交为 `1b47ca07ef43a284e0b8bd7f29d3e1e3ff76082a`。\n2. 将 `.pth` 放入 `SoVITS_weights_v5turbo/`，将 `.ckpt` 放入 `GPT_weights_v5turbo/`。\n3. 在界面选择 v5turbo，刷新模型列表并选择这两个文件。\n4. 参考音频使用 `reference/reference.wav`，将 `reference/reference.txt` 的完整内容填入参考文本，参考语言选“日文”。\n5. 目标语言按文本选择“日文”或“中文”；v5turbo 采样步数设为 4，速度设为 1。\n\n长文本建议逐句切分后连续合成。本次中文长文本测试中，默认“凑50字一切”出现三处 ASR 疑似漏读；按中文句末标点细分、去除不需要朗读的引号后，回读未再发现整句漏读。\n\n## 训练摘要\n\n484 条原始 WAV，总计约 68.87 分钟；使用 481 条已有整理转写，其中 469 条、约 66.64 分钟用于训练，12 条留作验收。3 条缺少整理转写的音频未参与训练。\n\nSoVITS：batch size 3，学习率 0.0001，LoRA rank 32，2 轮，启用梯度检查点。GPT：batch size 8，15 轮，未开启 DPO。其余优化参数沿用安装版本的官方配置。更多参数见 `training_parameters.json`。\n\n## 验证与试听\n\n- [日文新句试听](samples/kurisu_ja_new.wav) · [对应文字](samples/kurisu_ja_new.txt)\n- [中文新句试听](samples/kurisu_zh_new.wav) · [对应文字](samples/kurisu_zh_new.txt)\n- 短句实际合成输出 48kHz，权重有限值、非零 LoRA 更新与 GPT 参数更新检查通过。\n- 中文长文本 750 字：默认切分 13 段、136.12 秒；逐句切分 34 段、126.80 秒。两版均无削波。\n- ASR 回读字符差异分别约 6.05% 和 3.10%，包含同音字和识别错误。\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "lj1995/GPT-SoVITS"
+      ],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "gijl/level-tts-ar",
+      "author": "gijl",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "voice-cloning",
+        "arabic",
+        "arabic-dialects",
+        "flow-matching",
+        "ar",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/gijl/level-tts-ar",
+      "card_text": "---\nlanguage:\n- ar\ntags:\n- text-to-speech\n- voice-cloning\n- arabic\n- arabic-dialects\n- flow-matching\n---\n\n# gijl/level-tts-ar\n\nArabic-only (multi-dialect) zero-shot TTS / voice-cloning model, trained from scratch with\n`level.py` (flow-matching DiT, F5-TTS family). Preset: `base`. Last checkpoint: step 5000.\n\n* `latest.pt` - full training state (model, optimizer, EMA, step) used to resume training.\n* `ema_model.pt` - EMA weights in fp16 for inference.\n* `vocab_ar.json` - character vocabulary + dialect tags.\n\nDialect codes: msa, eg, sa, bh, kw, ae, qa, om, ye, iq, sy, lb, ps, jo, sd, ly, tn, dz, ma, mr, unk. Mel: 24000 Hz, 100 bands,\nhop 256 (pair with a matching Vocos vocoder).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "laion/Humaneness-Voice-Small",
+      "author": "laion",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "voice-acting",
+        "qwen3",
+        "moss-audio-tokenizer-v2",
+        "audio-generation",
+        "en",
+        "de",
+        "dataset:laion/tts-scaling-ladder-de-en",
+        "dataset:laion/humaneness-voice-small-acting-eval",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/laion/Humaneness-Voice-Small",
+      "card_text": "---\nlicense: cc-by-4.0\nlanguage:\n- en\n- de\ntags:\n- text-to-speech\n- voice-acting\n- qwen3\n- moss-audio-tokenizer-v2\n- audio-generation\ndatasets:\n- laion/tts-scaling-ladder-de-en\n- laion/humaneness-voice-small-acting-eval\nmodel-index:\n- name: Humaneness Voice Small\n  results: []\n---\n\n# Humaneness Voice Small\n\n## Current default: Humaneness Voice Small (12-10-26)\n\n**[Humaneness Voice Small (12-10-26)](checkpoints/HVS-Small-2026-10-12/model_bf16.pt)** is the current, complete BF16 checkpoint. It is the Real+Gemini full-parameter model after two more Gemini acting epochs with a Rank-64 semantic attention LoRA, **merged into the base weights**. You do not need to load an adapter. The Talker weights come from Real+Gemini and were not changed by this final LoRA. `python code/infer.py --stage default` loads this checkpoint; `--stage S3-Ref15-FullFT` still selects the preceding default. All original S1–S10 and Ref15 checkpoints remain available.\n\nThe user selected this default by listening, particularly for natural/organic acting. Audition the [matched five-checkpoint acting grid](https://laion-humaneness-voice-small-four-checkpoint-acting.static.hf.space/) with seven emotions, five voices, 12-second references and no-reference cases. The grid audio was generated with the unmerged LoRA; the merged export is checked for structural compatibility and should be numerically close, but no blinded perceptual or universal metric win is claimed. For lineage, exact training recipe, conditioning and caveats, see the [12 October release note](docs/HVS_SMALL_2026_10_12.md).\n\nFor speaker identity, start with a **distinct, clean 5–15-second reference**. The acting continuation also saw pseudonym-conditioned examples; use its companion acting inference path for pseudonym-only prompts. The older `code/infer.py` remains the general single-clip example and now resolves `default` to the merged weight file. The historical prompt and benchmark sections below describe earlier S1–S10 experiments and should not be mistaken for a fresh evaluation of this new default.\n\nHumaneness Voice Small is an experimental English/German text-to-speech and voice-acting model. This repository contains **ten stage-local checkpoints from one continuous S1→S10 training run** plus an S3-based long-reference continuation, Gemini/real-speech acting continuations, and the merged 12 October default. It also contains training and inference source, run statistics, and a guide to the exact prompt surfaces. It is not a standard `AutoModel.from_pretrained()` checkpoint: it uses a Qwen3-0.6B semantic backbone, a MOSS-style local Talker, and the separately loaded [MOSS Audio Tokenizer v2](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-v2). Read the inference instructions before loading weights.\n\n## Previous default: S3 Ref15 Full FT (9 October 2026)\n\nThe previous **reference-conditioned default checkpoint** is [`checkpoints/S3-Ref15-FullFT/model_bf16.pt`](checkpoints/S3-Ref15-FullFT/model_bf16.pt), the final **step 26,774** of a full-parameter continuation from the **original S3 step 32,337**. The user chose it because it sounded acoustically preferable in listening. Use `code/infer.py --stage S3-Ref15-FullFT` to load it explicitly. The ten original stage checkpoints are unchanged; `--stage S3` explicitly loads the original S3 and is still the comparison to try for **reference-free** generation. For this Ref15 checkpoint, supply a clean, distinct 5–15-second reference WAV; every accepted retraining example had a reference.\n\nThe key fix is the historical **2.96-second reference crop**: the original training loader and earlier example inference code used at most 37 × 80-ms codec frames even though the stored reference sequences were longer. This continuation used up to **187 frames / 14.96 seconds**, with a 55/20/20/5 family of script, historical structured, caption-transcript, and transcript-only prompts. It fully updated the active semantic backbone and Talker after a conservative target-text repair gate; it is **not** the Rank-128 LoRA and did not start from that adapter. There were **3,255,217 accepted training targets**, each presented once with its distinct reference. Read the detailed [data selection, repair, training and evaluation report](docs/S3_REF15_FULL_FT.md) and the [checkpoint metadata](checkpoints/S3-Ref15-FullFT/metadata.json) before reusing it.\n\nThis was a **listening-selected acoustic default**, not an objectively established all-round winner. In a matched 50-case non-speaker-disjoint test, final-step WER was 0.096 versus 0.088 for original S3; Orange cosine to the supplied reference was 0.707 versus 0.745, while cosine to the intended target improved from 0.658 to 0.734. Step 25,000 had better measured WER and target cosine than the final step. These learned/ASR proxies and the user's listening impression answer different questions; further blinded and speaker-disjoint evaluation is needed. No optimizer state is uploaded for this continuation.\n\nThe semantic backbone was **initialized from pretrained Qwen3-0.6B**, not from random weights. The **112,764,928-parameter Talker and bridge were initialized fresh** for this run. This corrects the loose description “trained from scratch” sometimes applied to earlier experiments. The Qwen hidden width is 1,024 and the local Talker width is 2,560. One semantic frame spans 80 ms; the Talker predicts **12 RVQ codebook indices per frame**, or 150 codebook indices per second. It does not predict 32 codebooks per frame. The codec reconstructs 48-kHz audio. The full state is approximately 715 million parameters, including the frozen, unused score conditioner; the model-only exports are BF16 PyTorch state dictionaries.\n\n## Choose a checkpoint\n\nThe `checkpoints/S*/model_bf16.pt` files are the **lowest independent held-out validation-loss checkpoint within each stage**. The common validation set has 50 held-out prompts in each of two conditioning modes (100 rows/checkpoint), and all 49 complete candidates were swept. The acting benchmark did not select the checkpoints. A lower validation loss does not necessarily mean a more natural voice.\n\n| Stage | Ladder tier | Approx. measured presentation-hours¹ | Best global step | Held-out loss | Shared-cell acting reward² |\n|---|---|---:|---:|---:|---:|\n| S1 | x100 | 188,354 | 16,265 | 4.8054 | 0.4292 |\n| S2 | x50 | 116,838 | 26,284 | 4.7232 | 0.4489 |\n| S3 | tier7 | 72,314 | 32,337 | 4.7045 | **0.4628** |\n| S4 | tier6 | 57,419 | 37,182 | **4.6966** | 0.4581 |\n| S5 | tier5 | 28,716 | 38,183 | 4.6987 | 0.4543 |\n| S6 | tier4 | 14,361 | 40,935 | 4.7005 | 0.4539 |\n| S7 | tier3 | 5,750 | 41,466 | 4.7056 | 0.4540 |\n| S8 | tier2 | 2,877 | 41,739 | 4.7109 | 0.4586 |\n| S9 | tier1 | 1,439 | 41,878 | 4.7198 | 0.4540 |\n| S10 | tier0 | 578 | 41,936 | 4.7278 | 0.4572 |\n\n¹ These are **training presentations**, not unique source-audio hours. Multi-format prompts repeat some recordings. The ladder tiers are nested and paired with sidecar material; do not add these hours to estimate unique audio. ² Target-aware automatic reward on 1,651 shared valid acting cells per stage, not a human MOS. The S3–S10 paired difference is +0.00557 with a 95% challenge-bootstrap CI of −0.00701 to +0.01899: **the benchmark does not establish S3 as significantly better than S10**. Among the **original ladder stages**, S3 was a reasonable provisional choice; inspect the same prompts in S3/S10 before choosing for a production voice. The later Ref15 Full FT was the previous reference-conditioned default by listening choice, under the caveats above. S4 has the best held-out validation loss. All underlying values and intervals are in `stats/acting_findings.json` and `stats/acting_analysis.json.gz`.\n\nThe run used 32 JUPITER Booster nodes × 4 GPUs/node, batch 4,096, **one** 2,097-step linear warmup followed by one cosine decay across all 41,936 updates—**no stage LR restarts**. Peak LRs were 8e-5 for the semantic backbone and 2.4e-4 for the Talker, ending at 5% of peak. The source `code/plan_caption_production_32nodes.json` records the exact historical manifests and hashes; its absolute JUPITER paths are provenance, not portable defaults.\n\n## Prompt formats actually trained\n\nThe outer model template is `<user_inst>` with `Reference(s)`, `Instruction`, `Tokens`, `Quality`, `Sound Event`, `Ambient Sound`, `Language`, and `Text` fields. The examples below show the **Instruction** field. `Text` separately repeats the SCRIPT after `SCRIPT:` for structured prompts, or otherwise follows the inherited packer behavior. `Tokens` is a **codec-frame budget**, not a literal transcript token count. Reference audio, when supplied, is codec-encoded through the dedicated reference channel. Do not paste a reference filename into the instruction.\n\n**Structured GENERAL/SCRIPT (C01).** Use when a specific delivery per sentence, explicit durations, pauses or vocal bursts matter:\n\n```text\nGENERAL: frightened, breath-held, intimate, increasingly panicked, adult, low-register\nSCRIPT:\n(quiet alarm, searching hesitation) [3.7 seconds duration] I locked the back door... didn't I?\n(fear rising, clipped self-correction) [4.2 seconds duration] I heard the latch click, but now it is standing open.\n(whispered panic, sharp inhale) [5.1 seconds duration] Wait—please don't move; there is someone breathing in the hallway.\n```\n\nThe [prompting guide](https://laion-humaneness-voice-small-acting-eval-space.static.hf.space/index.html) and the historical training code distinguish `GENERAL:` global cues from the `SCRIPT:` line-by-line performance and quoted text of other formats. Sentence durations and pauses are optional training variations, not promises of exact timing. If a vocal burst is requested in the structured SCRIPT, put it at its intended position in the spoken sequence, outside the literal speech text.\n\n**Caption + exact transcript (C02–C10).** The description outside quotes is English; the spoken text inside `TRANSCRIPT` may be English or German. The model saw BUD-E/Body Whisper v1.0 and v1.1, Timbre Whisper, Voice Tagging Whisper and one validated Gemma-4-E4B paraphrase per enriched UID. The six possible Gemma presentation modes were *not* all generated for each UID.\n\n```text\nCAPTION: Use a close, low-register voice that begins in contained fear and tightens into whispered panic.\nTRANSCRIPT: \"I locked the back door... didn't I? I heard the latch click, but now it is standing open.\"\n```\n\nFor Timbre Whisper and Voice Tagging Whisper, the training loader split comma-separated tags from prose and presented **tags only, prose only, or both**, each one-third of that family's examples. Tag order was shuffled deterministically. The combined form is literal:\n\n```text\nCAPTION: Tags: increasingly_panicked, tense, close-mic, breath-held, low-register. Caption: Use a close, low-register voice that tightens into whispered panic.\nTRANSCRIPT: \"I locked the back door... didn't I?\"\n```\n\nThe model also saw **transcript only with a distinct reference recording** (C11):\n\n```text\nTRANSCRIPT: \"I locked the back door... didn't I?\"\n```\n\nFor ordinary intelligible speech, start with a concise `CAPTION:` and an exact quoted `TRANSCRIPT:`. For voice identity, supply a short, clean, distinct reference audio. The S3 benchmark's Timbre-prose surface (C05) had mean WER 0.0437 across its mixed reference assignments; S3 Gemma-style C10 had the highest *descriptive* caption-style reward (0.505), while S10's Voice-Tagging tags+prose C09 had WER 0.0473 and the highest caption-style emotion-band hit there. These are not causal prompt-format rankings: reference assignments and authored captions differ by condition. The structured C01 format is currently much less reliable for words (S3 mean WER ≈0.348; S10 ≈0.313 across reference modes), but it is the surface that explicitly expresses sentence timing and bursts. It has not shown reliable exact burst-onset control.\n\n## Evaluation: what the scores do and do not say\n\nThe [public listening Space](https://huggingface.co/spaces/laion/humaneness-voice-small-acting-eval-space) and [direct site](https://laion-humaneness-voice-small-acting-eval-space.static.hf.space/index.html) contain **1,872 takes per checkpoint × ten checkpoints = 18,720 takes**: 50 English/German acting challenges, 11 prompt surfaces, three paired seeds, plus controlled reference and duration variations. Every stage has a [dedicated listening page](https://laion-humaneness-voice-small-acting-eval-space.static.hf.space/S3.html); replace `S3` in that URL with `S1`–`S10`. Separate [extreme S3 prompting](https://laion-humaneness-voice-small-acting-eval-space.static.hf.space/extreme_s3.html) and [S10 reference/CFG exploration](https://laion-humaneness-voice-small-acting-eval-space.static.hf.space/extreme_s10_cfg.html) are exploratory, **not** the frozen 18,720-take benchmark. The audio/score dataset is [here](https://huggingface.co/datasets/laion/humaneness-voice-small-acting-eval).\n\n| Stage | Mean WER ↓ | Genuineness ↑ | Burst blend ↑ | Requested-emotion hit ↑ | VoiceNet target hit ↑ | Requested burst type+onset F1 ↑ | Sentence duration MAE, s ↓ |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| S1 | 0.152 | 1.368 | 4.042 | 0.192 | 0.323 | 0.017 | 0.870 |\n| S2 | 0.128 | 1.533 | 3.981 | 0.199 | 0.338 | **0.053** | **0.850** |\n| S3 | 0.121 | **1.636** | 4.470 | 0.193 | 0.329 | 0.011 | 0.884 |\n| S4 | 0.120 | 1.615 | 4.354 | 0.191 | 0.333 | 0.030 | 0.934 |\n| S5 | **0.113** | 1.571 | 4.139 | 0.198 | 0.336 | 0.022 | 0.949 |\n| S6 | 0.122 | 1.609 | 4.577 | 0.201 | 0.326 | 0.031 | 0.924 |\n| S7 | 0.127 | 1.588 | **4.606** | 0.195 | 0.323 | 0.035 | 1.022 |\n| S8 | 0.115 | 1.591 | 4.593 | 0.192 | 0.326 | 0.015 | 1.007 |\n| S9 | 0.124 | 1.565 | 4.561 | 0.196 | 0.324 | 0.022 | 1.024 |\n| S10 | 0.121 | 1.561 | 4.556 | **0.207** | 0.320 | 0.030 | 0.966 |\n\nWER comes from Parakeet v3. Genuineness, burst blend, emotion and VoiceNet are learned proxy scores, **not** human listener ratings. Burst realization and duration error are restricted to eligible prompts; duration MAE excludes failed alignments, so consult alignment coverage before comparing it. A per-stage optimum in one column is not an all-round win. The balanced caption-condition comparison suggests reference audio often reduces *descriptive* WER, but the paired C01 reference/no-reference WER differences for S3 and S10 have confidence intervals crossing zero. No universal causal reference benefit is claimed. The benchmark's C01 prompts did carry parenthesized sentence directions, but lacked explicit pause tags, requested 0.7-second bursts only at sentence onset, and used durations for only half the challenges. These are limitations, not successful fine-grained-control results.\n\n## Practical CFG / temperature recommendations and GPU measurements\n\nA separate **S3 pilot** measured 660 synthetic takes across CFG, temperature, emotion and prompt recipes, including German, a second-reference sensitivity check and concise structured-cue follow-ups. The [study Space](https://huggingface.co/spaces/laion/humaneness-voice-small-studies) hosts both English reports:\n\n- [Emotion, CFG and temperature study — full results and listening examples](https://laion-humaneness-voice-small-studies.static.hf.space/study/index.html).\n- [On-device GPU throughput — offline, incremental PCM streaming and parallel batches](https://laion-humaneness-voice-small-studies.static.hf.space/performance/index.html).\n- [Reward-guided chunk search — 800/1600-ms winner/top-2 search, one-GPU measurements, quality pilot and implementation source](https://laion-humaneness-voice-small-studies.static.hf.space/search/index.html). The demo accepts batch sizes 1–16; isolated search throughput was measured at 4/8/12/16. Quality effects were mixed, not a universal improvement over full-utterance Best-of-N. This is a separate experiment, and its RTF includes ASR/reward scoring rather than only TTS/codec.\n\n**Recommended starting point for the tested S3 demo: temperature 1.0, CFG 1.5, concise `CAPTION:` and exact quoted `TRANSCRIPT:`.** CFG 2.0 at temperature 1.0 is a measured alternative to audition. Use a short, clean, distinct speech reference for voice identity; do not use the target recording as its own reference. These recommendations are provisional and do not establish an optimum for all voices, prompts or checkpoints.\n\n| Setting / recipe | Recommendation from this pilot |\n|---|---|\n| Caption + exact transcript, CFG 1.5 / T 1.0 | Conservative demo default. Main English cohort: mean raw WER 0.9% across 10 takes. |\n| Caption + exact transcript, CFG 2.0 / T 1.0 | Useful alternative. Equally weighted main/German/second-reference caption pool: raw WER 4.24% vs 4.55% for the default, 30 takes per setting; descriptive, not a proven universal improvement. |\n| Caption, CFG 2.0 / T 1.2 | Emotion-first winner under the main-grid selection rule, but less robust across reference checks; not the global default. |\n| Concise GENERAL/SCRIPT cues, CFG 3.0 / T 1.0 | Exploratory audition candidate only. Low absolute naturalness proxy and no German/second-reference validation for this follow-up. |\n| Temperature 0 | True argmax for audio and stop/continue in the tested demo. Available, but not the recommended study default; poor performance on this fixed recipe does not mean it fails on every prompt. |\n\nCFG here is **audio-logit guidance**, `unconditional + g * (conditional - unconditional)`. The comparison prompt keeps the same words, reference and requested timing/bursts while neutralizing emotional delivery. CFG 1 means no guidance beyond the conditional branch; reference-free or differently constructed unconditional prompts may behave differently. At positive audio temperatures the stop temperature stays 1.0; the tested T=0 setting also changes stop sampling. Top-k 50, top-p 0.95 and repetition penalty 1.0 were held fixed. The standalone inference example below should not be assumed to implement this optimized demo's CFG branch and stop policy automatically.\n\nNaturalness/genuineness and emotion were measured with **learned model proxies, not human MOS**. The first-grid emotion advantage over the default had wide intervals crossing zero. The prompt set is small; seed repeats at T=0 are not independent. Reference A is a positive-valence-labelled corpus speech clip; B is a hiss-labelled take containing speech, not a verified neutral control. The second-reference cohort is therefore a stress check, not a clean-reference replication. Verbose parenthesized script directions performed poorly, while shorter cues improved intelligibility; this does not imply that every structured prompt fails. The full report discloses the predeclared rule, follow-ups, reference provenance and all failures. WER uses Unicode-aware word Levenshtein `(S+D+I)/N` on untrimmed PCM; post-alignment/fade WER is reported separately. Do not directly equate these values with the separate historical acting benchmark above, whose protocol differs.\n\nThroughput was measured on an **RTX 3090**, using S3 at revision `5de86032771c37a3008d14e78ee7cdb39368e2a8`. Warm, fixed-eight-second single-stream RTF was approximately **0.20 offline** and **0.30 incremental PCM** after optimization. Ten parallel incremental streams achieved approximately **28.3 aggregate audio seconds per GPU second**, with per-stream RTF approximately **0.35**. Aggregate batch RTF divides GPU time by the sum of stream durations; it is not individual-stream latency. The measured path includes TTS and codec plus launch gaps, but excludes Luna, reference encoding, alignment, scoring, MP3 encoding and network. Browser playback in the tested demo still waits for alignment/scoring. These are workload-specific warm measurements; compilation, long-form memory and batch limits are documented in the report. Fused/compiled BF16 inference is **not bit-identical** to the original code, and numerical checks are not a human perceptual-equivalence test.\n\n## Files and inference\n\n- `checkpoints/S1` through `S10`: selected BF16 model-only state plus `metadata.json` with SHA-256 and original checkpoint contract. **Optimizer/RNG state is not uploaded.** Full 8.5-GB-per-checkpoint resume states remain in the original JUPITER scratch run; the public weights alone do not resume the optimizer exactly.\n- `code/continuous_train.py`, `code/train.sbatch`, `code/plan_caption_production_32nodes.json` and adjacent modules: the historical JUPITER source and training contract. The raw plan refers to local manifests and intentionally fails its hash checks if edited; regenerate plans and manifests for new data. `code/infer.py` is the standalone example for the exported weights. The code bundles MOSS export modules, tokenizer configuration and score schema; the audio codec is fetched separately from its upstream Hugging Face repository.\n- `stats/training_steps.jsonl`: every logged training-step scalar line across all four Slurm invocations. `stats/invocation_summaries.json`, `stats/run_configuration.json`, `stats/stage_winners.json`, `stats/validation_loss_full.tar.gz`, `stats/acting_findings.json`, and `stats/acting_analysis.json.gz` hold the remaining scalar summaries, all held-out checkpoint-sweep records, and the public acting aggregate. `stats/CONTENTS.json` gives hashes.\n\nExample using the **current merged default with a reference** (requires a CUDA environment with PyTorch, Transformers, NumPy, SoundFile, Torchaudio, Safetensors, and permission to download the separate codec):\n\n```bash\npython code/infer.py --stage default --reference-wav reference.wav --language en --frames 75 \\\n  --prompt $'CAPTION: Warm, softly amused, conversational.\\nTRANSCRIPT: \"I cannot believe we made it.\"' \\\n  --text 'I cannot believe we made it.' --output example.wav\n```\n\nDo not use the target recording as its own reference. For reference-free inference, compare `--stage S3` as a historical control; the current merged default also saw pseudonym and no-reference acting conditions, while the preceding Ref15-only stage was trained with references. **Correction (8 October 2026):** an earlier public `code/infer.py` rejected any reference over 37 MOSS codec frames (2.96 s). This was an inference-code limit as well as the historical S1–S10 training-loader crop, not an architectural limit. The updated example accepts a configurable reference ceiling (15 s default, 20 s maximum), reports a warning below 5 s and no longer silently blocks longer audio. The new Full FT was trained with up to 14.96 s; using longer than 15 s at inference is out of distribution and warned about. The original S1–S10 weights were trained with at most 2.96 s references, so longer-reference behavior from an original stage is experimental, not a guaranteed improvement. The separate [S3 Ref15 Rank-128 LoRA](https://huggingface.co/laion/Humaneness-Voice-Small-Ref15-LoRA-r128) is a different, frozen-backbone comparison. The example is a source-level starting point; the public listening Space is the already-audited playback path. This repository does **not** contain the large original SFT-3 model weights or original Qwen checkpoint separately, because the exported Humaneness Voice Small states include every trained model weight required for inference.\n\n## Training data, license and responsible use\n\nThe core nested scaling ladder and associated annotation sidecars are documented at [laion/tts-scaling-ladder-de-en](https://huggingface.co/datasets/laion/tts-scaling-ladder-de-en); inspect each linked dataset's license/provenance before a derivative training run. The [Humaneness Voice DPO collection](https://huggingface.co/collections/laion/humaneness-voice-dpo-6abba5d4ff02f0db286b232b) is a **separate future-adaptation resource**, not evidence that these base checkpoints were DPO-trained: [real-speech DPO](https://huggingface.co/datasets/laion/tts-realspeech-dpo-en-de), [voice-profile DPO](https://huggingface.co/datasets/laion/laion-voice-profiles-dpo), [CFG DPO](https://huggingface.co/datasets/laion/laion-voice-profiles-dpo-cfg), and [S5 pitch DPO](https://huggingface.co/datasets/laion/humaneness-voice-s5-pitch-dpo-v1). The pitch set's chosen/rejected quality gap is substantial; do not treat it as a clean voice-identity-only preference corpus.\n\nModel weights and original release materials are provided under **CC BY 4.0**; attribute LAION / Humaneness Voice Small and preserve attribution to the source projects. Qwen3 and MOSS Audio Tokenizer v2 are separate upstream dependencies under their own stated licenses. Respect speakers' rights, consent, provenance and applicable law. Synthetic voice acting can be mistaken for real speech; disclose generated audio and avoid impersonation or deceptive use. This is a research release with known shakiness, prompt sensitivity and imperfect word/timing/burst control, not a safety-certified production voice.\n\n<!-- humaneness-small-lora-links-v1 -->\n## LoRA adapter repositories\n\n- [557 Rank-1 voice, emotion and VoiceNet specialist LoRAs](https://huggingface.co/laion/Humaneness-Voice-Small-Rank1-LoRAs) — packed FP32 adapter weights, searchable index, training/validation and analysis statistics, loader and inference code. These adapters target the S3 semantic q/k/v/o modules only.\n- [Six DPO preference-tuning LoRAs](https://huggingface.co/laion/Humaneness-Voice-Small-DPO-LoRAs) — rank 16/64/128 alternatives trained on preference pairs. These are separate experiments and have different module targets and evaluation trade-offs.\n\nBoth collections use the S3 checkpoint at step 32,337; consult each adapter card for limitations. Training completion or a lower validation loss does not by itself prove better generated speech.\n\n\n<!-- hvs-small-dpo-default-study-2026-10-04 -->\n## Default DPO-adapter recommendation (matched speaker/emotion study)\n\nFor **the historical S3 DPO comparison, use the unadapted S3 checkpoint rather than activating a DPO LoRA by default**. This is an adapter-level recommendation, **not** a reversal of the newer 12 October merged checkpoint default above; the DPO LoRAs were trained against S3 and should not be assumed compatible or beneficial on Ref15 Full FT. The historical S3 prompt/CFG recommendations above also refer to S3, not a completed Ref15 tuning sweep. The [matched generated-audio study\nwith references and listening examples](https://laion-humaneness-voice-small-acting-eval-space.static.hf.space/dpo_lora_speaker_emotion_2026-10-02.html) compared the same 12\nEnglish/German acting challenges, prompts and seeds for each condition (432\noutputs per condition, including 198 reference-conditioned outputs). Its\n[machine-readable summary](https://huggingface.co/spaces/laion/humaneness-voice-small-acting-eval-space/blob/main/dpo_lora_speaker_emotion_2026-10-02.json) is also public.\n\n| S3 condition | Orange reference cosine ↑ | Parakeet WER ↓ | Requested-emotion instruction lift ↑ |\n|---|---:|---:|---:|\n| Historical S3 base, no DPO adapter **(study default)** | 0.501 | **0.096** | −0.021 |\n| Recent pitch/quality/CFG-p2 Rank 16 × 0.50 | 0.534 | 0.106 | −0.019 |\n| Same Rank 16 × 1.00 | 0.529 | 0.123 | −0.116 |\n| Same Rank 64 × 1.00 | 0.534 | 0.133 | −0.099 |\n\nRank 16 at **0.50 scale** is an optional, explicitly trade-off-bearing audition\nwhen reference-speaker similarity matters more than a small loss in word\naccuracy: its scene-balanced Orange gain versus base is +0.041 (95% bootstrap\ninterval +0.012 to +0.075), while its mean WER rises from 0.096 to 0.106.\nNo tested DPO adapter reliably improved emotion-instruction following, and\nfull-strength Rank 16/64 worsened WER more. These scores are learned-model\nproxies and ASR, not blinded human preference results. Do **not** apply this\nconclusion to the separate 557 Rank-1 voice/emotion/VoiceNet specialists; their\ntraining objective and evidence are different. The study HTML contains the\nexact prompts, paired audio players and methodological limits.\n\n\n<!-- hvs-small-explicit-optional-dpo-default-2026-10-04 -->\n### Which DPO LoRA should I load by default?\n\n**None for general use on the historical S3 base:** unadapted S3 achieved\nlower WER than any DPO LoRA in that matched study. The repository-wide\nreference-conditioned checkpoint default was Ref15 Full FT before the 12 October release, which was\nevaluated under a different 50-case protocol; this DPO result does not rank it.\nIf an application explicitly prioritizes similarity to a provided speaker\nreference, the **best-tested optional DPO LoRA at this date** is\n[`subset_pitch_quality_p2_rank016.adapter.pt`](https://huggingface.co/laion/Humaneness-Voice-Small-DPO-LoRAs/blob/main/adapters/subset_pitch_quality_p2_rank016.adapter.pt)\nat an **additive adapter scale of 0.50**. It improved mean Orange reference\ncosine from 0.501 to 0.534, but WER worsened from 0.096 to 0.106; it is not a\nuniversal quality or emotion-following upgrade. Use the adapter loader and\nbase S3 weights documented in the linked [DPO LoRA repository](https://huggingface.co/laion/Humaneness-Voice-Small-DPO-LoRAs).\nThe new burst/quality Rank-64 continuation is experimental and **not** the\nrecommended adapter until its held-out burst, emotion, WER and speaker tests\nhave completed. This recommendation will be revisited after those tests.\n",
+      "arxiv_ids": [],
+      "datasets": [
+        "laion/tts-scaling-ladder-de-en",
+        "laion/humaneness-voice-small-acting-eval"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "generative_music_audio": 10,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "atx-labs/Vyom-TTS-Hindi-3B",
+      "author": "atx-labs",
+      "created_at": "2026-08-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "llama",
+        "text-generation",
+        "text-to-speech",
+        "tts",
+        "audio",
+        "speech-synthesis",
+        "indic",
+        "hindi",
+        "orpheus",
+        "custom_code",
+        "hi",
+        "base_model:unsloth/orpheus-3b-0.1-ft",
+        "base_model:finetune:unsloth/orpheus-3b-0.1-ft",
+        "license:mit",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 26,
+      "likes": 4,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": true,
+      "url": "https://huggingface.co/atx-labs/Vyom-TTS-Hindi-3B",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "unsloth/orpheus-3b-0.1-ft"
+      ],
+      "variants": [
+        "atx-labs/Vyom-TTS-Marathi-3B"
+      ],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "archcross/kaiko-tts-kokoro",
+      "author": "archcross",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "style_text_to_speech_2",
+        "mirror",
+        "text-to-speech",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/archcross/kaiko-tts-kokoro",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "brandstone/Kokoro-82M-v1.0-ONNX",
+      "author": "brandstone",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers.js",
+        "onnx",
+        "style_text_to_speech_2",
+        "text-to-speech",
+        "en",
+        "base_model:hexgrad/Kokoro-82M",
+        "base_model:quantized:hexgrad/Kokoro-82M",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "transformers.js",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/brandstone/Kokoro-82M-v1.0-ONNX",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "hexgrad/Kokoro-82M"
+      ],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "smdesai/canary-1b-v2-coreml",
+      "author": "smdesai",
+      "created_at": "2026-07-07",
+      "last_modified": "2026-10-12",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "coreml",
+        "apple-neural-engine",
+        "on-device",
+        "ios",
+        "macos",
+        "speech",
+        "audio",
+        "automatic-speech-recognition",
+        "automatic-speech-translation",
+        "canary",
+        "fastconformer",
+        "nemo",
+        "kv-cache",
+        "fp16",
+        "bg",
+        "hr",
+        "cs",
+        "da",
+        "nl",
+        "en",
+        "et",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "hu",
+        "it",
+        "lv",
+        "lt",
+        "mt",
+        "pl",
+        "pt",
+        "ro",
+        "sk",
+        "sl",
+        "es",
+        "sv",
+        "ru",
+        "uk",
+        "base_model:nvidia/canary-1b-v2",
+        "base_model:finetune:nvidia/canary-1b-v2",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "coreml",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/smdesai/canary-1b-v2-coreml",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "nvidia/canary-1b-v2"
+      ],
+      "variants": [
+        "smdesai/canary-1b-v2-pal6-int8-coreml",
+        "smdesai/canary-1b-v2-pal6-coreml",
+        "smdesai/canary-1b-v2-int8full-coreml",
+        "smdesai/canary-1b-v2-int8-coreml"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
