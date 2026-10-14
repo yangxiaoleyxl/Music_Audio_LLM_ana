@@ -1,0 +1,2183 @@
+{
+  "generated_at": "2026-10-14",
+  "window_start": "2026-10-07",
+  "source_counts": {
+    "arxiv": 0,
+    "semantic_scholar": 52
+  },
+  "errors": [
+    "arXiv: HTTP Error 500: Internal Server Error",
+    "Semantic Scholar / Generative Music & Audio: HTTP Error 429: ",
+    "Semantic Scholar / Evaluation, Alignment, Safety & Copyright: HTTP Error 429: "
+  ],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13500",
+      "title": "Phonology-Aware Speaker Extraction Frontend for Audio LLMs",
+      "abstract": "Target speaker extraction (TSE) is a key frontend for enabling audio large language models (LLMs) to recognize and understand a designated speaker in overlapping speech. However, multilingual mixtures exhibit heterogeneous extraction demands, causing fixed-depth systems to either under-process challenging inputs or waste computation on inputs that have already converged. Existing TSE frontends generally apply uniform computation, while Audio-LLM adaptation methods neither explicitly model language-conditioned extraction demands nor preserve plug-and-play compatibility with frozen downstream models. We therefore propose LATTE, a lightweight 5.2M-parameter frontend that combines an acoustic Difficulty Estimator, a task-adaptive phonology-informed prior learned from multi-depth TSE gains, and an Adaptive Hourglass Extractor to route each mixture without requiring language identity at inference. On PolyExtract, LATTE achieves a macro SI-SNRi of 15.07 dB at 0.30 GFLOPs, retaining performance within 0.09 dB of a 0.53-GFLOP fixed-depth model while reducing computation by 43.4%, and lowers the average WER from 16.8% to 14.6% relative to TF-GridNet. By jointly modeling sample-level extraction demands and phonological structure, LATTE provides a practical framework for quality-aware, compute-efficient multilingual TSE and offers a scalable path toward robust Audio-LLM deployment.",
+      "authors": [
+        "Yan-Xiang Chen",
+        "Hao-Yuan Deng",
+        "Jin-Yu Wang",
+        "Hong-Yi Chen",
+        "Ding-Shan Li",
+        "Run-Lin Huang",
+        "Wei-Feng Su"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13500",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 22,
+      "topic_scores": {
+        "audio_language_models": 22
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio large language model, audio llm"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.14694",
+      "title": "VoTSpeech: Decoupling Voice Design from Speech Generation in Instruction-Following TTS",
+      "abstract": "Instruction-following text-to-speech (TTS) typically leaves voice design implicit, as conventional speaker embeddings encode reference audio rather than text-driven targets. We propose VoTSpeech, which decouples voice design from speech generation via an explicit intermediate voice latent. Built on a shared language model backbone, VoTSpeech first predicts a continuous voice latent from text instructions using a flow-based module. This latent serves as a shared condition for both the language model and the Acoustic DiT, guiding autoregressive sequence modeling and acoustic latent generation, respectively, before an audio VAE decoder converts the acoustic latents into waveforms. To capture speaker identity and complementary acoustic nuances, the voice latent is jointly supervised by speaker embeddings and temporally pooled audio VAE features. With task-specific adaptation, VoTSpeech performs strongly on InstructTTSEval-ZH, demonstrating competitive capabilities against strong open-source models while maintaining high naturalness. These results confirm that explicit voice latent design and its conditioning interface effectively empower text-driven voice design for controllable speech synthesis. Code, model, and audio samples are available at https://github.com/ywbn/VoTSpeech .",
+      "authors": [
+        "Wen-Bing Yang",
+        "Qi-Hang Lu",
+        "Zi-Han Sun",
+        "Pei-Lei Jia",
+        "Ying-Ming Gao",
+        "Ya Li",
+        "Jun Gao"
+      ],
+      "published": "2026-10-10",
+      "updated": "2026-10-10",
+      "url": "https://arxiv.org/abs/2610.14694",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [
+        "https://github.com/ywbn/VoTSpeech"
+      ],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 21,
+      "topic_scores": {
+        "speech_models": 19
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech",
+        "has open-source code link"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13600",
+      "title": "AudioTETRIS: Token Elimination via Transitional Importance Signals for Efficient Audio LLMs",
+      "abstract": "Large Audio Language Models (LALMs) achieve strong performance on speech-text tasks, but standard audio encoders produce hundreds of tokens for even short audio clips. Because self-attention scales quadratically in sequence length, this inflates inference-time compute substantially. Current training-free token compression methods prune or merge tokens based solely on coarse attention or feature similarity. However, treating audio tokens as generic, isotropic features smooths over spectral transitions, destroying fine-grained phonetic transitions essential for decoding speech. In contrast, speech signals exhibit highly structured temporal patterns where information density peaks at acoustic transitions. We propose AudioTETRIS, a training-free, two-stage framework that uses the audio encoder's representation geometry as an acoustic prior for token importance before applying attention-based compression. Instead of discarding encoder structure after the encoding stage, AudioTETRIS propagates this prior directly into the LLM decoder to compute a per-token fused score. This score drives progressive top-$k$ token selection across decoder layers without requiring additional training or auxiliary models. Evaluated on Qwen2-Audio-7B, Phi-4-Multimodal, and Audio Flamingo 3, AudioTETRIS retains near-uncompressed performance on several speech tasks using only 25% of audio tokens, matches or surpasses full-token accuracy at moderate compression rates, and consistently outperforms existing training-free baselines.",
+      "authors": [
+        "Shreya Sajid",
+        "Anna Vettoruzzo",
+        "J. Vanschoren"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13600",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 20,
+      "topic_scores": {
+        "audio_language_models": 20
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio llm"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.14776",
+      "title": "Training a Compact, Strong, and Realistic Text-to-Speech Model",
+      "abstract": "Text-to-speech (TTS) systems are conventionally optimized for intelligibility and speaker similarity. However, neither objective captures the prosodic detail that distinguishes human performances from synthetic speech, leaving a realism gap that larger models and higher-quality data can narrow but not close. In the absence of an objective that directly targets this gap, realism remains a persistent challenge in TTS. We present Audio8-TTS, a compact 0.6B-parameter model for zero-shot voice cloning that achieves state-of-the-art performance in intelligibility and speaker similarity, with particularly strong results in perceptual naturalness. To align the training signal with human perception rather than signal-level fidelity, we construct a quality ladder from widely used open-source TTS systems and train a realism critic to assess generated speech against matched human recordings of the same sentences. An identity-erasure objective discourages the critic from relying on generator fingerprints. We train the model in three stages: multilingual supervised fine-tuning; group relative policy optimization (GRPO) with word error rate (WER) and speaker similarity (SIM) rewards; and GRPO guided by the realism critic. The final stage improves perceived prosodic naturalness and speaker similarity while preserving WER performance.",
+      "authors": [
+        "Run-Yuan Cai",
+        "Yu Lin",
+        "Yi-Ming Wang",
+        "Xiao-Dong Zeng"
+      ],
+      "published": "2026-10-10",
+      "updated": "2026-10-10",
+      "url": "https://arxiv.org/abs/2610.14776",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 16,
+      "topic_scores": {
+        "speech_models": 16
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech, voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.14479",
+      "title": "AphaVoice: Text-to-Speech Model for Aphasia Patient Simulation",
+      "abstract": "While language therapy is the primary treatment for post-stroke aphasia, limited clinical resources often restrict patient access to proper care. Addressing this gap requires reliable training simulations for medical professionals. However, current AI efforts focus almost exclusively on speech processing, leaving speech generation largely unexplored. This study introduces AphaVoice, a novel text-to-speech (TTS) framework explicitly engineered to synthesize highly realistic aphasic speech. Evaluated against state-of-the-art TTS systems, AphaVoice demonstrates a superior ability to capture the clinical feature of dysfluency, outperforming existing models in temporal metrics while consistently maintaining speaker identity. By leveraging latent space shifting, the model also supports multi-speaker generation without sacrificing phonetic realism. Ultimately, AphaVoice provides a scalable, high-fidelity tool for medical training and clinical simulation related to aphasia.",
+      "authors": [
+        "Al Varrel Putra Kusuma",
+        "Fernando Bello",
+        "Joshua Brown"
+      ],
+      "published": "2026-10-10",
+      "updated": "2026-10-10",
+      "url": "https://arxiv.org/abs/2610.14479",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 15
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "504279be39009c8fe15433a4d11ccd814a2c2d0b",
+      "title": "Missing Melodies: AI Music Generation and Its “Nearly” Complete Omission of the Global South",
+      "abstract": "Recent advances in generative AI have sparked renewed interest and expanded possibilities for music generation. However, the performance and versatility of these systems across musical genres are heavily influenced by the availability of training data. We conducted an extensive analysis of over one million hours of audio datasets used in AI music generation research, and manually reviewed more than 200 papers from eleven prominent AI and music conferences and organizations to identify a critical gap in the fair representation and inclusion of the musical genres of the Global South in AI research. Our findings reveal a stark imbalance: approximately 86% of the total dataset hours and over 88% of researchers focus primarily on music from the Global North. However, around 40% of these datasets include some form of non-Western music, and genres from the Global South account for only 14.6% of the data. Furthermore, approximately 51% of the papers surveyed concentrate on symbolic music generation, a method that often fails to capture the cultural nuances inherent in music from regions such as South Asia, the Middle East, and Africa. As AI increasingly shapes the creation and dissemination of music, the significant underrepresentation of music genres in datasets and research presents a serious threat to global musical diversity, including evaluating music generation models, economic disparities, and reinforcing biases in generative music models. We also propose some important steps to mitigate these risks and foster a more inclusive future for AI-driven music generation.",
+      "authors": [],
+      "published": "2026-10-11",
+      "updated": "2026-10-11",
+      "url": "https://www.semanticscholar.org/paper/504279be39009c8fe15433a4d11ccd814a2c2d0b",
+      "pdf_url": "https://ojs.aaai.org/index.php/AIES/article/download/43269/50829",
+      "doi": "10.1609/aies.v9i3.43269",
+      "venue": "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "music_foundation_models": 4,
+        "generative_music_audio": 10
+      },
+      "matched_topics": [
+        "Music Foundation Models & Representations",
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation",
+        "Music Foundation Models & Representations: symbolic music"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13550",
+      "title": "Personalization Without Stereotyping: Do Speech LLMs Know When to Turn a Deaf Ear?",
+      "abstract": "Recent speech LLMs can leverage rich paralinguistic cues, enabling more complex and personalized interactions. However, little work investigates how this sensitivity can lead to stereotyping, and existing evaluations largely measure demographic disparities without distinguishing beneficial personalization from stereotypical behavior. We introduce BASIS-Bench, a benchmark designed to disentangle these two aspects through three axes: (1) demographic robustness, measuring disparities in content-based tasks across speakers and demographic classification capabilities; (2) stereotypical bias, measuring whether perceived demographic cues trigger unprompted stereotypical behavior; and (3) personalization, measuring whether models can tailor responses to demographic characteristics when explicitly requested. We evaluate eight recent speech LLMs and find that, despite often recognizing demographic cues, most fail to translate them into appropriate personalization. Explicit demographic labels improve personalization but also amplify stereotypical associations already present in the textual backbones. These findings highlight the need to train speech LLMs not only to perceive demographic cues, but to learn when they should shape their responses.",
+      "authors": [
+        "Kshitij Ambilduke",
+        "Caroline Brun",
+        "Thibaut Thonet",
+        "Vassilina Nikoulina",
+        "Marcely Zanon Boito"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13550",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "audio_language_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13282",
+      "title": "Frontend-Assisted Large Audio-Language Models for SLT2026 SmartGlasses Challenge",
+      "abstract": "This paper describes our systems for the Track 1 time-stamped speaker-attributed ASR task of the SmartGlasses Challenge. To handle overlapping speech, background noise and far-field conditions in two-person conversations, we employ SoulX-Transcriber, a multimodal large language model that takes full-length audio as input and generates structured transcriptions. In addition, we investigate the effect of speech frontend processing, including a rule-based Guided Source Separation method and a data-driven speech separation model, both of which improve performance on the validation set. Considering inference stability, our final submission uses the fine-tuned SoulX-Transcriber system, achieving a tcpCER of 6.22 on the test set.",
+      "authors": [
+        "Yu-Shi Wang",
+        "Ze-Yan Song",
+        "Xiao-Bin Rong",
+        "Cheng-Wei Liu",
+        "Jun Gao",
+        "Jing Lu"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13282",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "audio_language_models": 14
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13112",
+      "title": "Does Location Matter? A Black-Box Causal Audit Reveals Model-Dependent Audio Grounding in LALM Hallucination",
+      "abstract": "Large audio-language models (LALMs) frequently exhibit object hallucination, affirming absent sounds. The dominant mitigation, Audio-Aware Decoding (AAD), contrasts logits under real audio against an all-zero\"blank\"waveform, flagged by prior review as out-of-distribution. We introduce a black-box causal test that isolates the claimed evidence itself: localize a claim's evidence region via CLAP similarity, remove it by spectral gating, and compare against a random-window control across a 2x2x2 grid on three LALMs. On Qwen2-Audio-7B, localized ablation's raw AUROC trails blank's (0.613 vs. 0.721); this is a duration confound, not a localization failure, since blank removes the entire clip versus the grid's 2-4 s. Holding duration fixed, localization beats random removal at every cell on both models. Raw detection value remains model-dependent, especially on Audio Flamingo 3. The same evidence corrects decoding: contrastive decoding combining blank and language-prior contrasts, gated and ensembled, raises Qwen2-Audio accuracy from 57.1% to 71.9%, beating AAD alone. A unified causal-grounding profile does not transfer between models, indicating different grounding regimes. The source code and a detailed report of our findings, including identified limitations, are available at https://github.com/khalooei/causa.",
+      "authors": [
+        "Mohammad Khalooei",
+        "M. Sabokrou"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13112",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [
+        "https://github.com/khalooei/causa"
+      ],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 9,
+      "topic_scores": {
+        "audio_language_models": 7
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model",
+        "has open-source code link"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.13247",
+      "title": "What Do Audio-Language Judges of Generated Music Listen For? Four Probes with Controls from Expert Ratings",
+      "abstract": "Open audio-language models are used as judges of generated music: given a clip and its text prompt, the model rates the clip, and the judge is validated by how well its ratings correlate with expert ratings. The correlation does not show what the judge responds to: the music, the text prompt, or the way the question is asked. We propose four probes that test each of these, three of them read against a control computed from the human ratings: removing the audio, replacing the clip with another model's clip for the same prompt, swapping the order of two clips in pairwise judging, and rewording the instruction. We apply them to five open judges on all 2,748 clips of MusicEval, and the last two to the SongEval songs. Without audio, no judge exceeds what the prompt alone predicts from the human ratings, and for prompt alignment every judge falls below it. With audio, every judge follows the clip it hears when rating prompt alignment, two do when rating musical quality, and the strongest judge's quality score tracks the experts'alignment rating more than their quality rating. The pairwise verdicts of the four smaller judges follow the position of a clip in the pair (its slot) rather than its quality on both rating sets. For musical quality, rewording the instruction moves the correlation of most judges as much as changing the judge. MusicEval's prompt assignment bounds any prompt-only judge at the model level. We recommend reporting the four probes with every music judge.",
+      "authors": [
+        "Mateusz Modrzejewski",
+        "Tomasz Radzikowski"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13247",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "audio_language_models": 7
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "OpenLLM-France/Luciole-8B-Audio-1.0",
+      "author": "OpenLLM-France",
+      "created_at": "2026-09-18",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "nemo",
+        "safetensors",
+        "nemo_speechlm",
+        "openllm-france",
+        "audio-language-model",
+        "speech-llm",
+        "salm",
+        "audio-text-to-text",
+        "fr",
+        "en",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "nl",
+        "ar",
+        "dataset:OpenLLM-France/Luciole-Audio-Training-Dataset",
+        "arxiv:2410.12109",
+        "base_model:OpenLLM-France/Luciole-8B-Instruct-1.1",
+        "base_model:finetune:OpenLLM-France/Luciole-8B-Instruct-1.1",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 221,
+      "likes": 3,
+      "trending_score": 0.0,
+      "library_name": "nemo",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/OpenLLM-France/Luciole-8B-Audio-1.0",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- fr\n- en\n- de\n- es\n- it\n- pt\n- nl\n- ar\npipeline_tag: audio-text-to-text\ntags:\n- openllm-france\n- audio-language-model\n- speech-llm\n- salm\n- nemo\nbase_model:\n- OpenLLM-France/Luciole-8B-Instruct-1.1\n- nvidia/parakeet-tdt-0.6b-v3\ndatasets:\n  - OpenLLM-France/Luciole-Audio-Training-Dataset\nlibrary_name: nemo\n---\n\n![luciole_logo.png](assets/luciole_logo.png)\n\n# Model Card for Luciole-8B-Audio-1.0\n\n* [Model Description](#model-description)\n  * [Bias, Risks, and Limitations](#bias-risks-and-limitations)\n  * [Recommendations](#recommendations)\n* [Training details](#training-details)\n  * [Training data](#training-data)\n  * [Instruction template](#instruction-template)\n  * [Training Procedure](#training-procedure)\n* [Evaluation](#evaluation)\n* [Using the model](#using-the-model)\n  * [With vLLM](#with-vllm)\n  * [With NeMo](#with-nemo)\n  * [Example prompts for each task](#example-prompts-for-each-task)\n* [Acknowledgements](#acknowledgements)\n* [Contact](#contact)\n\n## Model Description\n\n**Luciole-8B-Audio-1.0** is an audio-capable version of [Luciole-8B-Instruct-1.1](https://huggingface.co/OpenLLM-France/Luciole-8B-Instruct-1.1).\nThe model was developed by [LINAGORA](https://linagora.com) and\nthe [OpenLLM-France](https://huggingface.co/OpenLLM-France) consortium, as part of the OpenLLM France project funded by\n[BPI France](https://www.bpifrance.fr/) under the France 2030 program.\n\nThe training of Luciole-8B-Audio-1.0 was conducted on the Jean Zay supercomputer managed by [IDRIS](http://www.idris.fr/docs/idris/missions),\nusing the [NVIDIA NeMo Speech](https://github.com/NVIDIA-NeMo/Speech) toolkit.\nThe model was trained on various tasks and types of audio, including ASR (Automatic Speech Recognition), AST (Automatic Speech Translation), QA (Question Answering), Sound (Question Answering and Captioning), Music (Question Answering and Captioning) and more.\n\n### Bias, Risks, and Limitations\n\n- Inherits the limitations of the base [Luciole-8B-Instruct-1.1](https://huggingface.co/OpenLLM-France/Luciole-8B-Instruct-1.1)\n  language model: it can struggle with math word problems, is susceptible to hallucination, and its\n  context window is limited to 16,384 tokens.\n<!-- - The audio encoder and its front-end were entirely frozen during training, so audio understanding is bounded by what\n  Parakeet-TDT-0.6B-v3 already hears: the model cannot learn to compensate for acoustic conditions the\n  encoder itself handles poorly. -->\n- Language coverage is uneven. French and English make up most of the training mix and are the only languages seen on every task. German, Spanish and Italian were seen in training for ASR, AST and spoken QA. Portuguese, Dutch and Arabic for ASR and AST only.\n- Arabic is the weakest language: the frozen Parakeet-TDT-0.6B-v3 encoder was not trained on Arabic,\n  so the model is clearly less reliable there (FLEURS WER ~30%).\n<!-- - LoRA fine-tuning only touches attention projections in the LLM; no additional audio-specific safety or\n  refusal tuning was performed beyond what the base LLM already has. -->\n\n### Recommendations\n\n- Speech, sound and music understanding: (summarization, captioning, sound/music QA, conversation):\n  best in French and English, the only languages the model was trained on for these tasks.\n- Transcription (ASR) and translation (AST): supported in French, English, German, Spanish,\n  Italian, Portuguese and Dutch. For production ASR/AST pipelines, a dedicated model may still\n  perform better.\n- Spoken question answering: mainly supported in French and English. German, Spanish and\n  Italian are also supported, but with far less training data.\n- Other languages and tasks: outside French and English, evaluate the model on your own data\n  before relying on it, especially for a task the model was not trained on in that language.\n- Up-to-date or domain-specific knowledge: as with the base LLM, pair the model with a RAG\n  pipeline.\n\n## Training details\n\n### Training data\n\nTrained on the [OpenLLM-France/Luciole-Audio-Training-Dataset](https://huggingface.co/datasets/OpenLLM-France/Luciole-Audio-Training-Dataset),\na large multilingual, multi-task collection of audio–text conversations comprising: ASR (Automatic Speech Recognition),\nAST (Automatic Speech Translation), spoken question answering, summarization, diarization, temporal localization,\nspeaker/gender/age/emotion/language recognition, and music/sound captioning and QA (Question Answering).\n\n### Instruction template\n\nSame chat template as the base LLM (inspired by Qwen3), extended with an `<|audio|>` locator tag:\nwherever `<|audio|>` appears in a turn, the corresponding audio segment is encoded and its embeddings\nreplace the tag before the sequence reaches the LLM. Conversations can carry several audio clips and mix\naudio-only, text-only, and audio+text turns within the same dialogue (see the\n[dataset card](https://huggingface.co/datasets/OpenLLM-France/Luciole-Audio-Training-Dataset) for example\nconversations).\n\n### Training Procedure\n\n| Component | Details |\n|---|---|\n| **Audio encoder** | [Parakeet-TDT-0.6B-v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3) Conformer encoder, frozen |\n| **RoTE** | Applied between audio encoder and audio adapter. θ=1200, rotary fraction=0.2. Inspired by [Goel et al., 2024, OMCAT](https://arxiv.org/abs/2410.12109).|\n| **Audio adapter** | Linear projection into the LLM embedding space (1024 -> 4096) |\n| **LLM** | [Luciole-8B-Instruct-1.1](https://huggingface.co/OpenLLM-France/Luciole-8B-Instruct-1.1), adapted with LoRA (on `q_proj`/`v_proj`, `up_proj`, `down_proj`, r=64, α=64) |\n| **Trainable params** | 82.1M / ~8.2B (1.0%) |\n| **Optimizer** | AdamW (β=(0.9, 0.98), weight decay 0.001) |\n| **LR schedule** | Cosine annealing (max LR 2e-4, min LR 1e-6, 500 warmup steps) |\n| **Batching** | Dynamic, bucketed by audio duration (27 buckets) |\n| **Steps** | 100,000 |\n| **Gradient clipping** | 1.0 |\n| **Strategy** | FSDP2 (full sharding), activation checkpointing on the LLM (to allow for long sequences), 1 node × 4 H100 |\n| **Precision** | bf16 |\n\nThe model was trained for 100k steps and drew from a weighted, randomly-ordered, sharded mix of that dataset,\nbucketed by duration into 27 buckets (up to 1,200s / 16,384 audio-equivalent tokens per example) with a\nmatching dynamic batch size per bucket (238 down to 1).\n\nValidation covered CommonVoice ASR (fr/en/ar),\nMultilingual TEDx speech translation (fr→en), spoken QA (SLUE-SQA-5, VoxPopuli-QA, en/fr), and audio/music\ncaptioning (AudioCaps, MusicCaps).\n\nThe training code and configs are available in the [Luciole-Audio-Training repository](https://github.com/OpenLLM-France/Luciole-Audio-Training). Training used an updated version of [NeMo/Speech 3.1](https://github.com/NVIDIA-NeMo/Speech) which can be found in our [NeMo/Speech fork](https://github.com/linagora-labs/NeMo/tree/luciole_speech.3.1.0-rc0).\n\n## Evaluation\n\nTo evaluate our models and compare them with other open-weight Audio LLMs, we used [our fork of AudioBench](https://github.com/OpenLLM-France/AudioBench). We used a combination of datasets from AudioBench and datasets available in [our HF audio evaluation repository](https://huggingface.co/datasets/OpenLLM-France/Luciole-Audio-Evaluation-Dataset). You can find the full details and results on [our AudioBench leaderboard](https://openllm-france.github.io/AudioBench/).\n\nA small excerpt from the leaderboard, showing the main table across all tasks and languages:\n\n![results.png](assets/results.png)\n\nResults for French and English only, as well as for ASR, AST, and QA tasks only:\n\n![results_fr_en.png](assets/results_fr_en.png)\n\nAs you can see, the model [OpenLLM-France/Luciole-8B-Audio-1.0](https://huggingface.co/OpenLLM-France/Luciole-8B-Audio-1.0) performs well in French and English compared to other models.\n\n## Using the model\n\n### With vLLM\n\nThe exported checkpoint's `config.json` declares `\"model_type\": \"nemo_speechlm\"` and\n`\"architectures\": [\"NeMoSpeechLMForConditionalGeneration\"]`. Both are registered with vLLM by the SALM\nplugin that ships inside `nemo-toolkit`\n([`nemo.collections.speechlm2.vllm.salm`](https://github.com/NVIDIA-NeMo/Speech/tree/main/nemo/collections/speechlm2/vllm/salm))\nvia the `vllm.general_plugins` entry point:\n\n```toml\n[project.entry-points.\"vllm.general_plugins\"]\nnemo_speechlm = \"nemo.collections.speechlm2.vllm.salm:register\"\n```\n\nvLLM auto-discovers this plugin at startup as soon as `nemo-toolkit` and `vllm` are installed in the same\nenvironment. The plugin merges the\nLoRA adapters into the LLM backbone on load and runs the frozen Parakeet encoder + connector to turn each\n`<|audio|>` tag into the right number of audio-embedding slots before generation.\n\n**Install using uv**\n\n```bash\nuv venv .venv --python 3.12\nsource .venv/bin/activate\n\nuv pip install \"nemo-toolkit[speechlm2,tts] @ git+https://github.com/linagora-labs/NeMo.git@luciole-1b-vllm-nemotron-fix\"\nuv pip install vllm==0.28.0\nuv pip install \"numpy<=2.4\"\n```\n\n**Serve**\n\n```bash\nvllm serve OpenLLM-France/Luciole-8B-Audio-1.0 \\\n    --max-model-len 16384\n```\n\n**Query** (OpenAI-compatible chat API, audio sent as base64):\n\n```python\nimport base64\nfrom openai import OpenAI\n\nclient = OpenAI(base_url=\"http://localhost:8000/v1\", api_key=\"EMPTY\")\n\nwith open(\"sample.wav\", \"rb\") as f:   # 16 kHz mono\n    audio_b64 = base64.b64encode(f.read()).decode()\n\nresponse = client.chat.completions.create(\n    model=\"OpenLLM-France/Luciole-8B-Audio-1.0\",\n    messages=[\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\"type\": \"text\", \"text\": \"Transcris cet audio en français : <|audio|>\"},\n                {\"type\": \"input_audio\", \"input_audio\": {\"data\": audio_b64, \"format\": \"wav\"}},\n            ],\n        }\n    ],\n)\nprint(response.choices[0].message.content)\n```\n\nThe `<|audio|>` placeholder is the same `audio_locator_tag` used during training: put it in the text\nwherever the audio should be attended to; the plugin expands it automatically. Audio must be 16 kHz mono;\nthe encoder supports chunked processing for long-form audio (well beyond the durations seen in training).\n\n### With NeMo\n\nThe checkpoint can also be loaded directly with NeMo's `SALM` class\n([`nemo.collections.speechlm2.models.salm`](https://github.com/NVIDIA-NeMo/Speech/blob/main/nemo/collections/speechlm2/models/salm.py)).\n\n**Install**\n\n```bash\nuv venv .venv --python 3.12\nsource .venv/bin/activate\n\nuv pip install \"nemo-toolkit[speechlm2,tts] @ git+https://github.com/linagora-labs/NeMo.git@luciole-1b-vllm-nemotron-fix\"\n```\n\n**Load and generate:**\n\n```python\nimport torch\nfrom nemo.collections.speechlm2 import SALM\n\nmodel = SALM.from_pretrained(\"OpenLLM-France/Luciole-8B-Audio-1.0\")  # or a local checkpoint directory\nmodel = model.eval().to(torch.bfloat16).to(\"cuda\")\n\n# High-level API: pass the audio file path(s) directly in the prompt, next to the\n# `<|audio|>` placeholder; SALM loads and resamples the audio for you.\nanswer_ids = model.generate(\n    prompts=[\n        [\n            {\n                \"role\": \"user\",\n                \"content\": f\"Transcris cet audio en français : {model.audio_locator_tag}\",\n                \"audio\": [\"sample.wav\"],\n            }\n        ]\n    ],\n    max_new_tokens=256,\n)\nprint(model.tokenizer.ids_to_text(answer_ids[0].tolist()))\n```\n\nA prompt can carry several turns and several audio clips (one `<|audio|>` tag per clip, in order).\n\n### Example prompts for each task\n\n- ASR: \n  - `Make a word-for-word transcription in English of the spoken content.`\n  - `Fais une transcription mot pour mot en français du contenu parlé.`\n- QA: `Listen to the audio and answer the question.`\n- AST: `Translate this file into French.`\n- Diarization: \n  - `Provide a time-stamped, speaker-attributed transcript of this audio.`\n  - `Transcris et diarise cet enregistrement, avec les horodatages de chaque tour.`\n\n## Acknowledgements\n\nTraining of Luciole-8B-Audio-1.0 was made possible by computing AI and storage resources by GENCI at IDRIS thanks to the grant 2025-AS011016445 on the supercomputer Jean Zay’s H100 partition. We gratefully acknowledge support from GENCI and IDRIS and from Stephane Requena (GENCI) and Pierre-François Lavallée (IDRIS) in particular.\n\nLuciole-8B-Audio-1.0 was created by members of LINAGORA, including in alphabetical order:\n\nAudran Bert (LINAGORA)\n\nHédi Naouara (LINAGORA)\n\nJérôme Louradour (LINAGORA)\n\nWe thank the support teams from IDRIS and [NVIDIA](https://www.nvidia.com/en-eu/) for technical guidance throughout the project.\n\n## Contact\n\ncontact@openllm-france.fr\n",
+      "arxiv_ids": [
+        "2410.12109"
+      ],
+      "datasets": [
+        "OpenLLM-France/Luciole-Audio-Training-Dataset"
+      ],
+      "base_models": [
+        "OpenLLM-France/Luciole-8B-Instruct-1.1",
+        "nvidia/parakeet-tdt-0.6b-v3"
+      ],
+      "variants": [],
+      "score": 57,
+      "topic_scores": {
+        "audio_language_models": 47,
+        "music_foundation_models": 4,
+        "audio_understanding_reasoning": 7,
+        "speech_models": 7
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Music Foundation Models & Representations",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model, audio llm",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition, speech translation",
+        "Audio Understanding & Reasoning: audio understanding, audio-text (pipeline tag)",
+        "Music Foundation Models & Representations: music understanding"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "jjcoders/suna-v1",
+      "author": "jjcoders",
+      "created_at": "2026-10-11",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "gguf",
+        "musicgen",
+        "text-to-audio",
+        "audio",
+        "text-to-music",
+        "suna-ai",
+        "jj-coders",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 161,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/jjcoders/suna-v1",
+      "card_text": "---\nlicense: apache-2.0\nlibrary_name: transformers\ntags:\n  - musicgen\n  - audio\n  - text-to-music\n  - suna-ai\n  - jj-coders\npipeline_tag: text-to-audio\n---\n\n# 👑 JJ coders Suna AI v1.4 (3.0B Peak Dual-Brain GOAT Studio)\n\n**Suna AI v1.4** by **JJ coders Group** combines a **1.5B Qwen2.5-Instruct AI Music Producer** with a **1.5B MusicGen-Medium Audio Synthesis Engine**, **Smart Genre Router**, **Reference Hit Song DNA Bank** (`suna_v1_4_dna_bank.json`), and **Adaptive 5-Stage 44.1 kHz Stereo Mastering**.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 52,
+      "topic_scores": {
+        "generative_music_audio": 41,
+        "audio_understanding_reasoning": 10
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, text-to-audio (pipeline tag)",
+        "Audio Understanding & Reasoning: audio-text",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "FractalSurfer/MOSS-Music-8B-Instruct-mlx-8bit",
+      "author": "FractalSurfer",
+      "created_at": "2026-10-13",
+      "last_modified": "2026-10-13",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "mlx-audio",
+        "safetensors",
+        "moss_music",
+        "mlx",
+        "music",
+        "music-understanding",
+        "audio-language-model",
+        "moss-music",
+        "audio-text-to-text",
+        "custom_code",
+        "en",
+        "zh",
+        "base_model:OpenMOSS-Team/MOSS-Music-8B-Instruct",
+        "base_model:quantized:OpenMOSS-Team/MOSS-Music-8B-Instruct",
+        "license:apache-2.0",
+        "8-bit",
+        "region:us"
+      ],
+      "downloads": 28,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx-audio",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/FractalSurfer/MOSS-Music-8B-Instruct-mlx-8bit",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: OpenMOSS-Team/MOSS-Music-8B-Instruct\nbase_model_relation: quantized\nlibrary_name: mlx-audio\npipeline_tag: audio-text-to-text\nlanguage:\n- en\n- zh\ntags:\n- mlx\n- mlx-audio\n- music\n- music-understanding\n- audio-language-model\n- moss-music\n---\n\n# MOSS-Music-8B-Instruct, MLX 8-bit\n\n[OpenMOSS-Team/MOSS-Music-8B-Instruct](https://huggingface.co/OpenMOSS-Team/MOSS-Music-8B-Instruct) converted to\n[MLX](https://github.com/ml-explore/mlx) and quantized to 8 bits, for a Mac with 24 GB of memory or more. It listens to music and answers\nquestions about it in text. A community conversion: the model is the OpenMOSS Team's, and so is the credit.\n\nIt was made to be the local \"ears\" of [Trainspotting Suite](https://github.com/remy-st/trainspotting-suite), where it\nhears every track sixteen bars at a time and fills in a form (who is singing and how, what the synth sounds like, the\nwords, the mood). There, `python -m djkit ears fetch` downloads it and nothing else needs setting up.\n\nThe other size: [5-bit](https://huggingface.co/FractalSurfer/MOSS-Music-8B-Instruct-mlx-5bit)\n(7.4 GB, peaks at 8.2 GB: for a 16 GB Mac). For filling in a strict form, the Thinking checkpoint with its thinking switched off was the tidier of\nthe two: [MOSS-Music-8B-Thinking, MLX 5-bit](https://huggingface.co/FractalSurfer/MOSS-Music-8B-Thinking-mlx-5bit).\n\n## Use\n\nWith [mlx-audio](https://github.com/Blaizzy/mlx-audio) 0.5.7 or later, on Apple Silicon:\n\n```python\nfrom mlx_audio.stt import load\n\nmodel = load(\"FractalSurfer/MOSS-Music-8B-Instruct-mlx-8bit\")\nprint(model.generate(\"clip.wav\", prompt=\"What instruments are playing, and what is the mood?\").text)\n```\n\nSample it the way Qwen3, its language model, asks: temperature 0.7, top-p 0.8, top-k 20. At temperature 0 it repeats\nitself on anything long. Keep clips short (about 30 seconds) and questions narrow.\n\n## How it was converted\n\n```bash\nhf download OpenMOSS-Team/MOSS-Music-8B-Instruct --local-dir MOSS-Music-8B-Instruct      # commit fce7f830\npython -m mlx_audio.stt.models.moss_music.convert --hf-path MOSS-Music-8B-Instruct \\\n    --mlx-path MOSS-Music-8B-Instruct-mlx-8bit --quantize --q-bits 8 --q-group-size 64\n```\n\nwith mlx 0.31.2 and mlx-audio 0.5.7, then `model_repo` in `config.json` corrected to name the Instruct checkpoint\n(the converter writes its default). Nothing else was changed.\n\n- Quantized to 8 bits (affine, group size 64): the Qwen3 language model, its token embeddings and `lm_head`.\n- Left in bf16: the audio encoder, the audio adapter and the three DeepStack mergers. What they produce goes straight\n  into the language model's input, and together they are under 2 GB.\n\n## Measured\n\nOn an M4 Max (64 GB), putting Trainspotting's listening-pass questions to it: a 30-second clip, a long system prompt\n(cached after the first clip) and a JSON form of about 230 tokens to fill in. Four clips, eight times each.\n\n| | |\n|---|---|\n| On disk | 10.4 GB |\n| Peak memory (MLX) | 11.3 GB |\n| Load | 4 s |\n| Per question | 6 to 7 s (27 to 40 tokens a second, depending on what else the machine was doing) |\n| Answers that were usable JSON | 29 of 32 after bracket repair (18 as written); the rest were asked again |\n| Full-mix answers with every field of the form | 13 of 16 |\n| Questions that got stuck repeating a lyric and were asked again | 1 in 32 |\n\nWhat was learned on the way, for anyone choosing a size:\n\n- 8, 6 and 5 bits were close on this test: the same field names, the same dropped brackets (the full-precision\n  model, run through PyTorch, wrote 4 of 8 answers with one too, so that is the model and not the quantization).\n  The 5-bit build got stuck a little more often: 4 questions in 32 against 1.\n- 4 bits fell apart. It misnamed or invented a field in a quarter of its answers, left a field out of nearly every\n  full-mix form and got stuck repeating itself in a quarter of the questions. That is why there is no 4-bit build here.\n- Every size occasionally loops on a lyric that really does repeat. Cut the answer when it does and ask again.\n- This is the Instruct checkpoint: do not open its answer with an empty `<think>` block, as one does to stop the\n  Thinking checkpoint thinking. Given one, it got stuck in 3 questions of 12, against 1 of 32 without.\n\nNot measured: anything about a 16 GB machine other than the peak above, and accuracy on the benchmarks the base\nmodel's card reports.\n\n## Licence\n\nApache-2.0, the base model's ([its card](https://huggingface.co/OpenMOSS-Team/MOSS-Music-8B-Instruct): \"Models in\nMOSS-Music are licensed under the Apache License 2.0\"). A copy is in `LICENSE`. The changes made to the original are\nthe format conversion and quantization described above.\n\n```bibtex\n@misc{mossmusic2026,\n  title  = {MOSS-Music Technical Report},\n  author = {OpenMOSS Team},\n  year   = {2026},\n  howpublished = {\\url{https://github.com/OpenMOSS/MOSS-Music}}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "OpenMOSS-Team/MOSS-Music-8B-Instruct"
+      ],
+      "variants": [
+        "FractalSurfer/MOSS-Music-8B-Instruct-mlx-5bit"
+      ],
+      "score": 35,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "music_foundation_models": 8,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Music Foundation Models & Representations",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model",
+        "Music Foundation Models & Representations: music understanding",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "FractalSurfer/MOSS-Music-8B-Thinking-mlx-5bit",
+      "author": "FractalSurfer",
+      "created_at": "2026-10-13",
+      "last_modified": "2026-10-13",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "mlx-audio",
+        "safetensors",
+        "moss_music",
+        "mlx",
+        "music",
+        "music-understanding",
+        "audio-language-model",
+        "moss-music",
+        "audio-text-to-text",
+        "custom_code",
+        "en",
+        "zh",
+        "base_model:OpenMOSS-Team/MOSS-Music-8B-Thinking",
+        "base_model:quantized:OpenMOSS-Team/MOSS-Music-8B-Thinking",
+        "license:apache-2.0",
+        "5-bit",
+        "region:us"
+      ],
+      "downloads": 9,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx-audio",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/FractalSurfer/MOSS-Music-8B-Thinking-mlx-5bit",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: OpenMOSS-Team/MOSS-Music-8B-Thinking\nbase_model_relation: quantized\nlibrary_name: mlx-audio\npipeline_tag: audio-text-to-text\nlanguage:\n- en\n- zh\ntags:\n- mlx\n- mlx-audio\n- music\n- music-understanding\n- audio-language-model\n- moss-music\n---\n\n# MOSS-Music-8B-Thinking, MLX 5-bit\n\n[OpenMOSS-Team/MOSS-Music-8B-Thinking](https://huggingface.co/OpenMOSS-Team/MOSS-Music-8B-Thinking) converted to\n[MLX](https://github.com/ml-explore/mlx) and quantized to 5 bits, for a Mac with 16 GB of memory. It listens to music and answers\nquestions about it in text. A community conversion: the model is the OpenMOSS Team's, and so is the credit.\n\nIt was made to be the local \"ears\" of [Trainspotting Suite](https://github.com/remy-st/trainspotting-suite), where it\nhears every track sixteen bars at a time and fills in a form (who is singing and how, what the synth sounds like, the\nwords, the mood). There, `python -m djkit ears fetch` downloads it and nothing else needs setting up.\n\nOther builds: at 8 bits,\n[mlx-community/MOSS-Music-8B-Thinking-8bit](https://huggingface.co/mlx-community/MOSS-Music-8B-Thinking-8bit)\n(10.2 GB, peaks at 11.1 GB: for 24 GB and up); and the Instruct checkpoint at\n[8](https://huggingface.co/FractalSurfer/MOSS-Music-8B-Instruct-mlx-8bit) and\n[5](https://huggingface.co/FractalSurfer/MOSS-Music-8B-Instruct-mlx-5bit) bits.\n\n## Use\n\nWith [mlx-audio](https://github.com/Blaizzy/mlx-audio) 0.5.7 or later, on Apple Silicon:\n\n```python\nfrom mlx_audio.stt import load\n\nmodel = load(\"FractalSurfer/MOSS-Music-8B-Thinking-mlx-5bit\")\nprint(model.generate(\"clip.wav\", prompt=\"What instruments are playing, and what is the mood?\").text)\n```\n\nIt thinks before it answers, inside `<think>...</think>`, which mlx-audio strips. To have it answer straight away\n(2-3x faster, and no worse at filling in a form), open its answer with an empty block: end the prompt you build with\n`<|im_start|>assistant\\n<think>\\n\\n</think>\\n\\n`. Trainspotting does that (`djkit/ears.py`), and everything measured below was\nmeasured that way.\n\nSample it the way Qwen3, its language model, asks: temperature 0.7, top-p 0.8, top-k 20. At temperature 0 it repeats\nitself on anything long. Keep clips short (about 30 seconds) and questions narrow.\n\n## How it was converted\n\n```bash\nhf download OpenMOSS-Team/MOSS-Music-8B-Thinking --local-dir MOSS-Music-8B-Thinking      # commit 2ce89998\npython -m mlx_audio.stt.models.moss_music.convert --hf-path MOSS-Music-8B-Thinking \\\n    --mlx-path MOSS-Music-8B-Thinking-mlx-5bit --quantize --q-bits 5 --q-group-size 64\n```\n\nwith mlx 0.31.2 and mlx-audio 0.5.7. Nothing else was changed.\n\n- Quantized to 5 bits (affine, group size 64): the Qwen3 language model, its token embeddings and `lm_head`.\n- Left in bf16: the audio encoder, the audio adapter and the three DeepStack mergers. What they produce goes straight\n  into the language model's input, and together they are under 2 GB.\n\n## Measured\n\nOn an M4 Max (64 GB), putting Trainspotting's listening-pass questions to it: a 30-second clip, a long system prompt\n(cached after the first clip) and a JSON form of about 230 tokens to fill in. Four clips, eight times each.\n\n| | |\n|---|---|\n| On disk | 7.4 GB |\n| Peak memory (MLX) | 8.2 GB |\n| Load | 4 s |\n| Per question | 9 s (28 tokens a second; the machine was busy, and the same test has run a third faster on it idle) |\n| Answers that were valid JSON as written | 32 of 32 |\n| Full-mix answers with every field of the form | 16 of 16 |\n| Questions that got stuck repeating a lyric and were asked again | 3 in 32 |\n\nThe 8-bit build linked above, on the same questions: 32 of 32, 16 of 16, and 1 in 32. The Instruct checkpoint at 5\nbits: 17 of 32 valid as written (31 after mending its brackets), 14 of 16, and 4 in 32. That is the reason this one is\nTrainspotting's default.\n\nWhat was learned on the way, for anyone choosing a size:\n\n- 5 bits cost nothing that this test could see against 8. 4 bits did, on the Instruct checkpoint: it misnamed or\n  invented a field in a quarter of its answers and left a field out of nearly every full-mix form. That is why\n  this is not a 4-bit build.\n- Every size occasionally loops on a lyric that really does repeat. Cut the answer when it does and ask again.\n- With thinking off it will still write words for a voice that isn't there when given an instrument stem and asked\n  about voices. Ask an isolated stem only about what is in it.\n\nNot measured: anything about a 16 GB machine other than the peak above, and accuracy on the benchmarks the base\nmodel's card reports.\n\n## Licence\n\nApache-2.0, the base model's ([its card](https://huggingface.co/OpenMOSS-Team/MOSS-Music-8B-Thinking): \"Models in\nMOSS-Music are licensed under the Apache License 2.0\"). A copy is in `LICENSE`. The changes made to the original are\nthe format conversion and quantization described above.\n\n```bibtex\n@misc{mossmusic2026,\n  title  = {MOSS-Music Technical Report},\n  author = {OpenMOSS Team},\n  year   = {2026},\n  howpublished = {\\url{https://github.com/OpenMOSS/MOSS-Music}}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "OpenMOSS-Team/MOSS-Music-8B-Thinking"
+      ],
+      "variants": [],
+      "score": 35,
+      "topic_scores": {
+        "audio_language_models": 26,
+        "music_foundation_models": 8,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Music Foundation Models & Representations",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model",
+        "Music Foundation Models & Representations: music understanding",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-4B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-28",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-4B",
+        "base_model:finetune:Qwen/Qwen3-4B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 80,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-4B",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- Qwen/Qwen3-4B\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- vllm\n---\n\n# DuplexJev-4B\n\n> **Archived.** Superseded by [DuplexJev-4B-Para](https://huggingface.co/adventists-ai/DuplexJev-4B-Para). This is the version before the turn-taking upgrade (paper model, total 78.6); 4B-Para scores 82.5. This repository stays online for existing users and paper reproducibility, but is no longer updated.\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev)\n\n**Built on [Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) + the [Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B) audio encoder.**\n\nDuplexJev reads typed, closed-set decisions from speech (*has the user finished? which filler fits? who is speaking,\nin what mood?*) as a **single-token distribution** of a frozen LLM: zero decode steps, many questions about the same\nclip in parallel. This repository is the **complete model** (encoder + trained connector + LLM, 4.2 B parameters, bf16)\nand runs on [vLLM](https://github.com/vllm-project/vllm) with a small plugin.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | Qwen3-ASR-0.6B encoder, 12.5 frames/s |\n| Connector (trained, 12.6 M) | 2 frames stacked → 6.25 audio tokens/s → SwiGLU MLP → LLM width |\n| LLM (frozen) | Qwen3-4B, used without thinking |\n| Training | content alignment (transcript distillation), then turn-taking + gender + emotion under the mixed objective (2026-10-01 update) |\n| Try it online | [api.adventists.cn/duplexjev](https://api.adventists.cn/duplexjev/) (web demo and trial API, this model) |\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" duplexjev-vllm\nvllm serve adventists-ai/DuplexJev-4B --max-model-len 4096\n```\n\n`duplexjev-vllm` registers the model with vLLM (Qwen3-ASR encoder + connector; the LLM runs on vLLM's own Qwen3\nkernels). Tested with vLLM 0.29 on one GPU; the model needs about 8 GB plus KV cache.\n\nEach question is one chat request with `max_tokens=1`: list the options under letters and read the log-probabilities\nof the letters. Requests about the same clip share the prompt prefix (chat header + audio), which vLLM's prefix cache\ncomputes once. A ready-made client (`openai` + standard library only) is\n[`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py):\n\n```python\nfrom vllm_client import DuplexJevClient\n\ndj = DuplexJevClient(\"http://localhost:8000/v1\")\ndj.decide(open(\"call.wav\", \"rb\").read(), {\n    \"turn\":    (\"Has the user finished speaking?\", [\"finished\", \"not finished\"]),\n    \"gender\":  (\"What is the perceived gender of the speaker?\", [\"female\", \"male\"]),\n    \"emotion\": (\"What is the speaker's emotional state?\", [\"neutral\", \"happy\", \"angry\", \"sad\"]),\n})\n# {'turn': {'answer': 'finished', 'confidence': 0.88, 'probs': {...}}, 'gender': {...}, 'emotion': {...}}\n```\n\nThe prompt it sends, which is the format the connector was trained on:\n\n```\nThe user said: <|audio|>\n\nQuestion: What is the perceived gender of the speaker?\n\nOptions:\nA. female\nB. male\n\nAnswer with only the letter of the correct option.\n```\n\nFor Chinese speech ask in Chinese: `用户说：<|audio|>`, `问题：…`, `选项：`, `请只回答正确选项的字母。`\nSend the audio as an `input_audio` part next to that text; restrict the answer with `allowed_token_ids` (the letter\ntokens) and set `logprobs=True`. The chat template turns thinking off by default.\n\n## Results\n\nPaper protocol (single-token readout; % correct):\n\n| version | qa100 | ZJU-ML | Easy-Turn | gender (800) | emotion (800, 4-way) | total |\n|---|---:|---:|---:|---:|---:|---:|\n| **current (2026-10-01)** | 74 | 50 | **78.1**\\* | 88.6 | 91.2 | **78.6** |\n| first release (2026-09-28, in the repo history) | 72 | 51 | 60.2 | 89.4 | 91.9 | 75.9 |\n\n\\* The current version's decision stage includes the Easy-Turn **training** split (disjoint from the 800-item test set,\ndifferent wording), so Easy-Turn is in-domain for it. Total = mean of main language (qa100, ZJU-ML, Easy-Turn) and\nparalinguistics (gender, emotion).\n\nServed by vLLM 0.29 with `duplexjev-vllm`, questions in the wording of the client above: qa100 74, ZJU-ML 52,\nEasy-Turn 77.9, gender 87.8, emotion 86.0. One decision event (8 questions about one clip) takes about 80 ms on a\nshared H100.\n\nqa100: 100 bilingual spoken multiple-choice questions ([`adventists-ai/qa100`](https://huggingface.co/datasets/adventists-ai/qa100)).\nZJU-ML: main-language part of the ZJU audio benchmark v2.0.0. Easy-Turn: 800-item four-way turn-state test set\n(see the [GitHub README](https://github.com/adventists-ai/duplexjev#6-benchmarks) for the reference).\nGender: 800 real utterances (AISHELL-1, LibriSpeech). Emotion: 800 utterances (ESD, CREMA-D).\n\n## Limitations\n\n- Evaluated on short read or acted speech; not on streaming input.\n- Spoken factual QA is much weaker than in [DuplexJev-32B](https://huggingface.co/adventists-ai/DuplexJev-32B).\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, research use only.** The connector was trained on the ESD emotional speech corpus, which is licensed\nfor research purposes only, and on CREMA-D (ODbL). The base models keep their own licences: Qwen3-4B and\nQwen3-ASR-0.6B are Apache-2.0 (Copyright Alibaba Cloud); this repository redistributes their weights unchanged.\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-4B",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
+      "score": 31,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14,
+        "evaluation_alignment_safety": 5
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Evaluation, Alignment, Safety & Copyright: audio benchmark",
+        "model card links an arXiv paper"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-32B",
+      "author": "adventists-ai",
+      "created_at": "2026-09-30",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-ASR-0.6B",
+        "base_model:finetune:Qwen/Qwen3-ASR-0.6B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 38,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-32B",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- Qwen/Qwen3-VL-32B-Instruct\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- vllm\n---\n\n# DuplexJev-32B\n\n> **Archived.** Superseded by [DuplexJev-32B-Para](https://huggingface.co/adventists-ai/DuplexJev-32B-Para). This is the version before the turn-taking upgrade (paper model, total 87.7); 32B-Para scores 92.3. This repository stays online for existing users and paper reproducibility, but is no longer updated.\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev)\n\n**Built on the language model of [Qwen3-VL-32B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct) + the\n[Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B) audio encoder.** Our recommended DuplexJev model.\n\nDuplexJev reads typed, closed-set decisions from speech (*has the user finished? which filler fits? who is speaking,\nin what mood?*) as a **single-token distribution** of a frozen LLM: zero decode steps, many questions about the same\nclip in parallel. This repository is the **complete model** (encoder + trained connector + LLM, 33.0 B parameters,\nbf16) and runs on [vLLM](https://github.com/vllm-project/vllm) with a small plugin.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | Qwen3-ASR-0.6B encoder, 12.5 frames/s |\n| Connector (trained) | 2 frames stacked → 6.25 audio tokens/s → SwiGLU MLP → LLM width |\n| LLM (frozen) | the language model of Qwen3-VL-32B-Instruct, weights unchanged, run as a text Qwen3 model (for text tokens the interleaved M-RoPE equals 1-D RoPE) |\n| Training | content alignment (transcript distillation), then turn-taking + gender + emotion under the mixed objective |\n| Inputs | audio + text. The vision encoder of Qwen3-VL is not included; image input is planned. |\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" duplexjev-vllm\nvllm serve adventists-ai/DuplexJev-32B --max-model-len 4096\n```\n\nThe weights take about 62 GB, so one 80 GB GPU (H100, A100 80 GB) is enough; or split over two GPUs with\n`--tensor-parallel-size 2`. `duplexjev-vllm` registers the model with vLLM (Qwen3-ASR encoder + connector; the LLM\nruns on vLLM's own Qwen3 kernels).\n\nEach question is one chat request with `max_tokens=1`: list the options under letters and read the log-probabilities\nof the letters. Requests about the same clip share the prompt prefix (chat header + audio), which vLLM's prefix cache\ncomputes once. A ready-made client (`openai` + standard library only) is\n[`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py):\n\n```python\nfrom vllm_client import DuplexJevClient\n\ndj = DuplexJevClient(\"http://localhost:8000/v1\")\ndj.decide(open(\"call.wav\", \"rb\").read(), {\n    \"turn\":    (\"Has the user finished speaking?\", [\"finished\", \"not finished\"]),\n    \"gender\":  (\"What is the perceived gender of the speaker?\", [\"female\", \"male\"]),\n    \"emotion\": (\"What is the speaker's emotional state?\", [\"neutral\", \"happy\", \"angry\", \"sad\"]),\n})\n# {'turn': {'answer': 'finished', 'confidence': 0.9, 'probs': {...}}, 'gender': {...}, 'emotion': {...}}\n```\n\nThe prompt it sends, which is the format the connector was trained on:\n\n```\nThe user said: <|audio|>\n\nQuestion: What is the perceived gender of the speaker?\n\nOptions:\nA. female\nB. male\n\nAnswer with only the letter of the correct option.\n```\n\nFor Chinese speech ask in Chinese: `用户说：<|audio|>`, `问题：…`, `选项：`, `请只回答正确选项的字母。`\nSend the audio as an `input_audio` part next to that text; restrict the answer with `allowed_token_ids` (the letter\ntokens) and set `logprobs=True`.\n\n## Results\n\nPaper protocol (single-token readout; % correct):\n\n| model | qa100 | ZJU-ML | Easy-Turn | gender | emotion | total |\n|---|---:|---:|---:|---:|---:|---:|\n| **DuplexJev-32B** (this repo) | 90 | **87** | **79.1**\\* | 89.4 | 90.6 | **87.7** |\n| same LLM, content training only | 91 | 88 | 71.4 | 54.3 | 25.5 | 61.7 |\n| [DuplexJev-4B](https://huggingface.co/adventists-ai/DuplexJev-4B) | 74 | 50 | 78.1\\* | 88.6 | 91.2 | 78.6 |\n\nTotal = mean of main language (qa100, ZJU-ML, Easy-Turn) and paralinguistics (gender, emotion). Decision training\nlifts gender and emotion from chance to about 90% while spoken QA stays where content-only training left it.\n\\* The decision stage includes the Easy-Turn **training** split (disjoint from the 800-item test set, different\nwording), so Easy-Turn is in-domain for this model; without it the same LLM scores 71.3.\n\nSpoken [VoiceBench](https://github.com/matthewcym/voicebench) (question spoken, options also given as text; same\nsingle-token readout): OpenBookQA **83.7**, MMSU **70.8**. Reading the transcript as text, the frozen LLM scores\n95.4 and 79.3.\n\nThe same weights served by vLLM 0.29 with `duplexjev-vllm`, questions in the wording of the client above (one H200,\nbf16): qa100 94, ZJU-ML 88, Easy-Turn 79.4, gender 89.8, emotion 89.9. One decision event (10 questions about one\n4.5 s clip, sent concurrently) through the OpenAI-compatible server takes about 240 ms end to end.\n\nqa100: 100 bilingual spoken multiple-choice questions ([`adventists-ai/qa100`](https://huggingface.co/datasets/adventists-ai/qa100)).\nZJU-ML: main-language part of the ZJU audio benchmark v2.0.0. Easy-Turn: 800-item four-way turn-state test set\n(see the [GitHub README](https://github.com/adventists-ai/duplexjev#6-benchmarks) for the reference).\nGender: 800 real utterances (AISHELL-1, LibriSpeech). Emotion: 800 utterances (ESD, CREMA-D).\n\n## Limitations\n\n- Evaluated on short read or acted speech; not on streaming input.\n- Spoken QA is still below reading the transcript as text (about 9–12 points on VoiceBench).\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, research use only.** The connector was trained on the ESD emotional speech corpus, which is licensed\nfor research purposes only, and on CREMA-D (ODbL). The base models keep their own licences: Qwen3-VL-32B-Instruct and\nQwen3-ASR-0.6B are Apache-2.0 (Copyright Alibaba Cloud); this repository redistributes their weights unchanged\n(the language-model weights of Qwen3-VL-32B-Instruct, renamed; the vision encoder is not included).\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-VL-32B-Instruct",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
+      "score": 31,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14,
+        "evaluation_alignment_safety": 5
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Evaluation, Alignment, Safety & Copyright: audio benchmark",
+        "model card links an arXiv paper"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-Gemma-31B",
+      "author": "adventists-ai",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "speech-llm",
+        "paralinguistics",
+        "gemma",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-ASR-0.6B",
+        "base_model:finetune:Qwen/Qwen3-ASR-0.6B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 27,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-Gemma-31B",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- google/gemma-4-31B-it\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- speech-llm\n- paralinguistics\n- gemma\n- vllm\n---\n\n# DuplexJev-Gemma-31B\n\n> **Archived.** Superseded by [DuplexJev-32B-Para](https://huggingface.co/adventists-ai/DuplexJev-32B-Para). This model has no turn-taking training; 32B-Para is the recommended server model. This repository stays online for existing users and paper reproducibility, but is no longer updated.\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev)\n\n\n**Built on [Gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it) + the\n[Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B) audio encoder.** The non-Qwen member of the DuplexJev\nfamily: strongest English reasoning of the LLMs we tested, Apache-2.0 base.\n\nDuplexJev reads typed, closed-set decisions from speech (*has the user finished? who is speaking, in what mood?*) as a\n**single-token distribution** of the LLM: zero decode steps, many questions about the same clip in parallel. This\nrepository is the **complete model** (encoder + trained connector + LLM, bf16, about 58 GB) and runs on\n[vLLM](https://github.com/vllm-project/vllm) with a small plugin.\n\n| | |\n|---|---|\n| Audio encoder (frozen) | Qwen3-ASR-0.6B encoder, 12.5 frames/s |\n| Connector (trained) | 2 frames stacked → 6.25 audio tokens/s → SwiGLU MLP → LLM width; audio embeddings ×3 and wrapped in Gemma's native `<\\|audio> … <audio\\|>` markers |\n| LLM | Gemma-4-31B-it text model. **Unlike DuplexJev-32B / 4B, the LLM is not frozen**: a LoRA (r 16, α 32, q/k/v/o) was trained in the paralinguistic stage and merged into the weights |\n| Training | content alignment (transcript distillation, LLM frozen) → LoRA content warm-up → gender + emotion with LoRA under the mixed objective (CE on decisions, KL on content) |\n| Inputs | audio + text. Gemma's vision tower is not included. |\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" \"duplexjev-vllm>=0.2.0\"\nvllm serve adventists-ai/DuplexJev-Gemma-31B --max-model-len 4096\n```\n\nOne 80 GB GPU is enough (or `--tensor-parallel-size 2`). `duplexjev-vllm` ≥ 0.2.0 registers\n`DuplexJevGemmaForConditionalGeneration` (Qwen3-ASR encoder + connector + ×3 scale + audio markers; the LLM runs on\nvLLM's own Gemma kernels). The placeholder in prompts stays `<|audio|>`; the plugin expands it.\n\nEach question is one chat request with `max_tokens=1`: list the options under letters and read the log-probabilities\nof the letters. A ready-made client is\n[`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py):\n\n```python\nfrom vllm_client import DuplexJevClient\n\ndj = DuplexJevClient(\"http://localhost:8000/v1\")\ndj.decide(open(\"call.wav\", \"rb\").read(), {\n    \"gender\":  (\"What is the perceived gender of the speaker?\", [\"female\", \"male\"]),\n    \"emotion\": (\"What is the speaker's emotional state?\", [\"neutral\", \"happy\", \"angry\", \"sad\"]),\n})\n```\n\nThe prompt format the connector was trained on:\n\n```\nThe user said: <|audio|>\n\nQuestion: What is the perceived gender of the speaker?\n\nOptions:\nA. female\nB. male\n\nAnswer with only the letter of the correct option.\n```\n\nFor Chinese speech ask in Chinese: `用户说：<|audio|>`, `问题：…`, `选项：`, `请只回答正确选项的字母。`\n\n## Results\n\nServed by vLLM 0.29 with `duplexjev-vllm` 0.2.0, questions in the training wording above (one H200, bf16; % correct):\n\n| model | qa100 | ZJU-ML | Easy-Turn | gender | emotion |\n|---|---:|---:|---:|---:|---:|\n| **DuplexJev-Gemma-31B** (this repo) | **97** | 87 | 68.0\\* | **94.4** | 90.6 |\n| [DuplexJev-32B](https://huggingface.co/adventists-ai/DuplexJev-32B) | 94 | **88** | **79.4** | 89.8 | 89.9 |\n| [DuplexJev-4B](https://huggingface.co/adventists-ai/DuplexJev-4B) | 77 | 49 | 60.0 | 87.9 | 90.9 |\n\n\\* No turn-taking data was used for this model; Easy-Turn is zero-shot here (DuplexJev-32B saw the Easy-Turn\ntraining split).\n\n**Wording sensitivity.** With a question wording that differs from training (our paper-protocol evaluation script),\nthis model scores qa100 96, ZJU-ML 84, but gender 78.5 and emotion 60.9. The DuplexJev-32B connector (frozen LLM)\nis much less sensitive to wording. Use the prompt format above.\n\nqa100: 100 bilingual spoken multiple-choice questions ([`adventists-ai/qa100`](https://huggingface.co/datasets/adventists-ai/qa100)).\nZJU-ML: main-language part of the ZJU audio benchmark v2.0.0. Easy-Turn: 800-item four-way turn-state test set.\nGender: 800 real utterances (AISHELL-1, LibriSpeech). Emotion: 800 utterances (ESD, CREMA-D).\n\n## Limitations\n\n- Evaluated on short read or acted speech; not on streaming input.\n- Paralinguistic accuracy depends on prompt wording (see above).\n- No turn-taking training yet; prefer DuplexJev-32B for end-of-turn decisions.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, research use only.** The connector and LoRA were trained on the ESD emotional speech corpus, which is\nlicensed for research purposes only, and on CREMA-D (ODbL). The base models keep their own licences:\nGemma-4-31B-it (Apache-2.0, Google) and Qwen3-ASR-0.6B (Apache-2.0, Alibaba Cloud). The LLM weights in this\nrepository are Gemma-4-31B-it's text-model weights with a LoRA merged in; the vision tower is not included.\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "google/gemma-4-31B-it",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
+      "score": 31,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2,
+        "speech_models": 14,
+        "evaluation_alignment_safety": 5
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: full duplex speech",
+        "Audio & Speech Language Models: speech llm",
+        "Evaluation, Alignment, Safety & Copyright: audio benchmark",
+        "model card links an arXiv paper"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "EMTIAZZ/xtts-bangla-finetuned",
+      "author": "EMTIAZZ",
+      "created_at": "2026-03-02",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "tts",
+        "bangla",
+        "bengali",
+        "xtts",
+        "xtts-v2",
+        "coqui",
+        "fine-tuned",
+        "voice-cloning",
+        "speech-synthesis",
+        "bn",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 10,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/EMTIAZZ/xtts-bangla-finetuned",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 23,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-4B-Turn",
+      "author": "adventists-ai",
+      "created_at": "2026-10-03",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "turn-taking",
+        "speech-llm",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-4B",
+        "base_model:finetune:Qwen/Qwen3-4B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 40,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-4B-Turn",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- adventists-ai/DuplexJev-4B\n- Qwen/Qwen3-4B\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- turn-taking\n- speech-llm\n- vllm\n---\n\n# DuplexJev-4B-Turn\n\n> **Archived.** Superseded by [DuplexJev-4B-Para](https://huggingface.co/adventists-ai/DuplexJev-4B-Para). 4B-Para keeps the same prompts and plugin and adds non-verbal sounds, speaking style, speaker, stress and normal conversation (total 82.5 vs 80.0). For live end-of-turn on a small GPU, use [DuplexJev-4B-Para-LiveTurn](https://huggingface.co/adventists-ai/DuplexJev-4B-Para-LiveTurn). This repository stays online for existing users and paper reproducibility, but is no longer updated.\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev)\n\n**[DuplexJev-4B](https://huggingface.co/adventists-ai/DuplexJev-4B) with a turn-taking upgrade.** Same size, same\nserving stack, same prompt format; it decides much better *when to speak, when to keep talking and when to stop*,\nwhile spoken QA, gender and emotion stay where they were.\n\nDuplexJev reads typed, closed-set decisions from speech as a **single-token distribution** of the LLM: zero decode\nsteps, many questions about the same clip in parallel. This repository is the complete model (Qwen3-ASR-0.6B encoder\n+ connector + Qwen3-4B, 4.2 B parameters, bf16).\n\n## What changed\n\nStarting from DuplexJev-4B we trained the connector together with a small **LoRA on the LLM** (rank 16 on q/k/v/o,\n0.6 % of the parameters; merged into the weights here) on 110 k turn-taking questions rewritten from public\ncorpora, mixed with the original content and paralinguistic data:\n\n| source | clips | what it teaches |\n|---|---:|---|\n| Easy-Turn training set (synthetic + real) | 44 k | Chinese: finished / unfinished / backchannel / \"wait\" |\n| SmoothConv | 30 k | Chinese multi-party conversation with turn labels, with text history |\n| otoSpeech + DualTurn frame labels | 12.5 k | English two-channel conversation: end of turn, pause, backchannel, interruption |\n| DuplexGen Spoken | 14 k | English human–AI dialogues with text history |\n| MUSAN noise, distant background voices | 9 k | sounds the assistant should ignore |\n\nMost questions give the **system state** (the assistant is speaking / idle) and ask for an action\n(keep talking / stop and listen; reply / keep waiting); the rest ask for the user's turn state.\n\n## Results\n\n| | qa100 | ZJU-ML | gender | emotion | VoiceBench OBQA / MMSU | Easy-Turn | CoDeTT zh / en | TurnBench-dev clips† |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|\n| DuplexJev-4B | 74 | 50 | 88.6 | 91.2 | 47.3 / 41.3 | 78.1 | 62.0 / 53.5 | 49.4 |\n| **DuplexJev-4B-Turn** | 74 | 52 | 89.4 | 92.0 | 46.4 / 41.7 | **92.5** | **67.0 / 68.6** | **87.3** |\n\nPaper protocol (single-token readout, PyTorch), % correct. Through vLLM with `duplexjev-vllm` in the client wording:\nqa100 77, ZJU-ML 49, gender 87.0, emotion 88.4, Easy-Turn 92.8.\n\n- **Easy-Turn**: 800-item four-way turn-state test set; the training mix contains the Easy-Turn training split\n  (disjoint from the test set), so this score is in-domain.\n- **CoDeTT** (arXiv 2603.25434): 18 k items, system state given, four actions averaged; zero-shot (no CoDeTT data\n  in training). Our protocol: current utterance as audio, no history. For reference, published results: GPT-4o-audio\n  66.6 / 71.9, Qwen3-Omni 70.4 / 70.9.\n- † **TurnBench-dev clips**: our own clip-level protocol on the TurnBench development conversations (the official test\n  labels are withheld): end of turn, pause inside a turn, backchannel, floor-taking interruption, noise / channel\n  bleed; mean of four action accuracies. Not comparable with the official TurnBench leaderboard.\n- Weakest remaining case: a pause in the middle of a long turn (the model takes the turn too early about half the time).\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" duplexjev-vllm\nvllm serve adventists-ai/DuplexJev-4B-Turn --max-model-len 4096\n```\n\nPrompt format, client and decision tables are the same as for\n[DuplexJev-4B](https://huggingface.co/adventists-ai/DuplexJev-4B); see\n[`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py).\nA state-aware question, for example:\n\n```\nThe user said: <|audio|>\n\nQuestion: The user said this while the assistant was speaking. What should the assistant do?\n\nOptions:\nA. keep talking (backchannel, noise, or not addressed to the assistant)\nB. stop and listen (interruption or a new request)\n\nAnswer with only the letter of the correct option.\n```\n\n## Limitations\n\n- Decides on one clip at a time; it is not a streaming end-of-turn detector by itself (call it at each pause).\n- Pauses inside long turns are still often taken as the end of the turn.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, research use only** (emotion data ESD is research-only; SmoothConv is CC BY-NC). Base models keep their\nlicences: Qwen3-4B and Qwen3-ASR-0.6B are Apache-2.0 (Alibaba Cloud). The LLM weights here are Qwen3-4B with a LoRA\nmerged in.\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/DuplexJev-4B",
+        "Qwen/Qwen3-4B",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-32B-Turn",
+      "author": "adventists-ai",
+      "created_at": "2026-10-03",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "turn-taking",
+        "speech-llm",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-ASR-0.6B",
+        "base_model:finetune:Qwen/Qwen3-ASR-0.6B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 35,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-32B-Turn",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- adventists-ai/DuplexJev-32B\n- Qwen/Qwen3-VL-32B-Instruct\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- turn-taking\n- speech-llm\n- vllm\n---\n\n# DuplexJev-32B-Turn\n\n> **Archived.** Superseded by [DuplexJev-32B-Para](https://huggingface.co/adventists-ai/DuplexJev-32B-Para). 32B-Para keeps the same prompts and plugin and adds non-verbal sounds, speaking style, speaker, stress and accents (total 92.3 vs 92.2). This repository stays online for existing users and paper reproducibility, but is no longer updated.\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev)\n\n\n**[DuplexJev-32B](https://huggingface.co/adventists-ai/DuplexJev-32B) with a turn-taking upgrade.** Same size, same\nserving stack, same prompt format; it decides much better *when to speak, when to keep talking and when to stop*,\nwhile spoken QA, gender and emotion stay where they were (or improve slightly).\n\nDuplexJev reads typed, closed-set decisions from speech as a **single-token distribution** of the LLM: zero decode\nsteps, many questions about the same clip in parallel. This repository is the complete model (Qwen3-ASR-0.6B encoder\n+ connector + the language model of Qwen3-VL-32B, 33.0 B parameters, bf16; one 80 GB GPU).\n\n## What changed\n\nStarting from DuplexJev-32B we trained the connector together with a small **LoRA on the LLM** (rank 16 on q/k/v/o,\n0.6 % of the parameters; merged into the weights here) on 110 k turn-taking questions rewritten from public\ncorpora, mixed with the original content and paralinguistic data:\n\n| source | clips | what it teaches |\n|---|---:|---|\n| Easy-Turn training set (synthetic + real) | 44 k | Chinese: finished / unfinished / backchannel / \"wait\" |\n| SmoothConv | 30 k | Chinese multi-party conversation with turn labels, with text history |\n| otoSpeech + DualTurn frame labels | 12.5 k | English two-channel conversation: end of turn, pause, backchannel, interruption |\n| DuplexGen Spoken | 14 k | English human–AI dialogues with text history |\n| MUSAN noise, distant background voices | 9 k | sounds the assistant should ignore |\n\nMost questions give the **system state** (the assistant is speaking / idle) and ask for an action\n(keep talking / stop and listen; reply / keep waiting); the rest ask for the user's turn state.\n\n## Results\n\n| | qa100 | ZJU-ML | gender | emotion | VoiceBench OBQA / MMSU | Easy-Turn | CoDeTT zh / en | TurnBench-dev clips† |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|\n| DuplexJev-32B | 90 | 87 | 89.4 | 90.6 | 83.7 / 70.8 | 79.1 | 64.7 / 62.9 | 60.7 |\n| **DuplexJev-32B-Turn** | **96** | 87 | **91.5** | **91.1** | **85.5 / 72.1** | **95.3** | **69.2 / 70.0** | **88.7** |\n\nPaper protocol (single-token readout, PyTorch), % correct. Through vLLM with `duplexjev-vllm` in the client wording:\nqa100 97, ZJU-ML 90, gender 92.4, emotion 90.5, Easy-Turn 95.6 (DuplexJev-32B: 94, 88, 89.8, 89.9, 79.4).\n\n- **Easy-Turn**: 800-item four-way turn-state test set; the training mix contains the Easy-Turn training split\n  (disjoint from the test set), so this score is in-domain.\n- **CoDeTT** (arXiv 2603.25434): 18 k items, system state given, four actions averaged; zero-shot (no CoDeTT data\n  in training). Our protocol: current utterance as audio, no history. For reference, published results: GPT-4o-audio\n  66.6 / 71.9, Qwen3-Omni 70.4 / 70.9, Gemini-3-Pro 80.8 / 81.9.\n- † **TurnBench-dev clips**: our own clip-level protocol on the TurnBench development conversations (the official test\n  labels are withheld): end of turn, pause inside a turn, backchannel, floor-taking interruption, noise / channel\n  bleed; mean of four action accuracies. Not comparable with the official TurnBench leaderboard.\n- Weakest remaining case: a pause in the middle of a long turn (the model takes the turn too early about half the time).\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" duplexjev-vllm\nvllm serve adventists-ai/DuplexJev-32B-Turn --max-model-len 4096\n```\n\nPrompt format, client and decision tables are the same as for\n[DuplexJev-32B](https://huggingface.co/adventists-ai/DuplexJev-32B); see\n[`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py).\nA state-aware question, for example:\n\n```\nThe user said: <|audio|>\n\nQuestion: The user said this while the assistant was speaking. What should the assistant do?\n\nOptions:\nA. keep talking (backchannel, noise, or not addressed to the assistant)\nB. stop and listen (interruption or a new request)\n\nAnswer with only the letter of the correct option.\n```\n\n## Limitations\n\n- Decides on one clip at a time; it is not a streaming end-of-turn detector by itself (call it at each pause).\n- Pauses inside long turns are still often taken as the end of the turn.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, research use only** (emotion data ESD is research-only; SmoothConv is CC BY-NC). Base models keep their\nlicences: Qwen3-VL-32B-Instruct and Qwen3-ASR-0.6B are Apache-2.0 (Alibaba Cloud). The LLM weights here are the\nlanguage model of Qwen3-VL-32B-Instruct with a LoRA merged in; the vision encoder is not included.\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/DuplexJev-32B",
+        "Qwen/Qwen3-VL-32B-Instruct",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-4B-Para-LiveTurn",
+      "author": "adventists-ai",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "spoken-dialogue",
+        "full-duplex",
+        "turn-detection",
+        "end-of-turn",
+        "accent",
+        "paralinguistics",
+        "speech-llm",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-4B",
+        "base_model:finetune:Qwen/Qwen3-4B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 1,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-4B-Para-LiveTurn",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- adventists-ai/DuplexJev-4B-Para\n- Qwen/Qwen3-4B\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- spoken-dialogue\n- full-duplex\n- turn-detection\n- end-of-turn\n- accent\n- paralinguistics\n- speech-llm\n- vllm\n---\n\n# DuplexJev-4B-Para-LiveTurn\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev) · Plugins: [`pipecat-duplexjev`](https://pypi.org/project/pipecat-duplexjev/), [`livekit-plugins-duplexjev`](https://pypi.org/project/livekit-plugins-duplexjev/)\n\n**The 4B DuplexJev tuned for live end-of-turn: is the user done, right after they go quiet?** A turn-taking\nvariant of [DuplexJev-4B-Para](https://huggingface.co/adventists-ai/DuplexJev-4B-Para) v1.1, which stays the general 4B.\n\nSame recipe as [DuplexJev-32B-Para v1.2](https://huggingface.co/adventists-ai/DuplexJev-32B-Para): the 4B-Para v1.1 mix\nplus accent data and pause-level turn-taking data, one rank-16 LoRA, 4,000 steps, merged. Qwen3-ASR-0.6B encoder +\nconnector + Qwen3-4B, 4.2 B parameters, bf16, ~10 GB GPU memory.\n\n**Which 4B to pick.**\n- **This one** for a voice agent's end-of-turn on a small GPU (LiveKit / Pipecat plugins).\n- **[4B-Para](https://huggingface.co/adventists-ai/DuplexJev-4B-Para)** for everything else (stress, non-verbal sounds,\n  spoken QA, chat): it is a few points better there, see Limitations.\n- **[32B-Para](https://huggingface.co/adventists-ai/DuplexJev-32B-Para)** v1.2 if you have an 80 GB GPU: better on all of it.\n\n## Live end of turn\n\n**LiveKit [eot-bench](https://github.com/livekit/eot-bench)** (validation set, official metrics, eot-bench audio not\nin our training data). False cut-offs when the agent may wait at most 300 / 600 ms (lower is better):\n\n| | English | Chinese |\n|---|---:|---:|\n| **4B-Para-LiveTurn, plugin default with the agent's previous message** (full eot-bench run) | **25.5 / 12.3%** | **38.8 / 12.0%** |\n| 4B-Para-LiveTurn, audio only (fast mode) | 25.5 / 12.8% | 39.6 / 13.2% |\n| DuplexJev-4B-Para v1.1, audio only (fast mode) | 46.4 / 17.7% | 48.5 / 15.6% |\n| DuplexJev-32B-Para v1.2, plugin default (full run) | 20.0 / 9.4% | 37.7 / 12.2% |\n| Smart Turn v3.2 | 35.2 / 14.8% | 42.9 / 13.2% |\n| LiveKit Turn Detector v1 | 9.9 / 4.5% | 20.6 / 8.7% |\n\nPlugin default: the turn question, P(finished) + P(backchannel), with `The assistant had just said: \"...\"` before the\naudio (the plugins add it from the agent's last message; gateway `duplexjev>=0.6`). Fast mode asks once per pause, at\nthe 0.2 s score point. Mean wait at ≤5% false cut-offs: English 954 ms (Smart Turn v3.2 1051), Chinese 908 ms (959).\n\n**Pipecat [Smart Turn v3.2](https://huggingface.co/datasets/pipecat-ai/smart-turn-data-v3.2-test) test set**\n(accuracy at 0.5, P(finished)): English 93.3% (4B-Para v1.1 67.9%; Smart Turn v3.2 itself 94.7%), Chinese 89.6%\n(78.9%; 90.5%). In-distribution: the Smart Turn v3.2 *training* set is in this model's training data.\n\nEasy-Turn test (800, in-domain): 92.0 (4B-Para v1.1 91.0).\n\n## Accents (new)\n\nHeld-out speakers of the training corpora (VCTK, English Dialects, EdAcc, common-accent, KeSpeech):\n\n| | 4B-Para v1.1 | **LiveTurn** |\n|---|---:|---:|\n| English accent, 4-way (19 accents) | 36.5 | **47.9** |\n| English region within England, 3-way | 21.4 | **84.4** |\n| standard Mandarin or not | 13.4 | **83.5** |\n| Mandarin dialect region, 4-way | 30.4 | **39.8** |\n\nSame corpora, different speakers, so these are in-distribution numbers. For DuplexJev-32B-Para v1.2, the Mandarin\njudgments held up on unseen corpora and the English accent ones did not (read speech, Speech Accent Archive): do not\nrely on English accent answers.\n\n## What it costs\n\n| | 4B-Para v1.1 | **LiveTurn** |\n|---|---:|---:|\n| qa100 / ZJU-ML | 77 / 58 | 76 / 62 |\n| gender / emotion | 89.3 / 90.0 | 89.5 / 90.5 |\n| VoiceBench OBQA / MMSU | 55.2 / 42.1 | **49.5 / 39.0** |\n| stress: DEBATE meaning / StressTest / StressPresso | 89.9 / 81.2 / 84.2 | **84.9 / 77.5 / 78.2** |\n| which word is stressed, zh / en | 90.6 / 92.0 | 86.9 / 86.1 |\n| non-verbal sound, VocalSound / NonVerbalSpeech-38K (acc.) | 96.9 / 90.3 | **91.2** / 87.7 |\n| speaking style, EARS | 66.8 | 67.7 |\n\nPaper protocol (single-token readout, PyTorch). Through vLLM with `duplexjev-vllm` in the client wording: qa100 78, ZJU-ML 52, gender 88.4, emotion 89.6, Easy-Turn 92.1 (4B-Para v1.1: 76, 51, 87.4, 87.9, 91.4).\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" duplexjev-vllm \"duplexjev[server]>=0.6\"\nvllm serve adventists-ai/DuplexJev-4B-Para-LiveTurn --max-model-len 4096 --port 8000 &\nduplexjev gateway --vllm http://localhost:8000/v1 --port 8420 --rate 1000000\n```\n\nThen point the LiveKit or Pipecat plugin at `http://localhost:8420` and give it the agent's previous message\n(`detector.attach(session)` in LiveKit, `DuplexJevContextTracker` in Pipecat). Decision prompts are the same as for\nDuplexJev-4B-Para; see [`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py).\n\n## Limitations\n\n- Stress (−4 to −6), VoiceBench (OBQA −5.7, MMSU −3.1) and VocalSound (−5.7) are below 4B-Para v1.1. Use 4B-Para for\n  those.\n- English accent answers did not generalise to unseen recordings in our 32B test; Mandarin did.\n- eot-bench and Smart Turn are single-utterance, audio-only setups; a real agent also has VAD, STT and network latency\n  in the loop.\n- Speaker and accent judgments describe how speech sounds; they must not be used to identify people or to infer\n  anyone's origin, and emotion outputs must not be used to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, non-commercial use only.**\n\n- Non-commercial data:\n  - Stress: DEBATE (github.com/SmileHnu/DEBATE), Stress-17K and TinyStress-15K (slprl);\n  - Expresso (Meta), EARS (Meta) and NonVerbalSpeech-38K, all CC BY-NC 4.0;\n  - ESD (research only); SmoothConv (CC BY-NC);\n  - Accents: KeSpeech (non-commercial research use).\n  - Conversation replay: user turns from wilzzzz/paralinguistic_dialogues (no licence stated on the dataset card; used for non-commercial research), SmoothConv (CC BY-NC), AISHELL-1 (Apache-2.0), LibriSpeech (CC BY 4.0); target replies generated by Qwen3-4B (Apache-2.0); spoken chat questions synthesised with CosyVoice2 (Apache-2.0).\n- Other data:\n  - VocalSound (CC BY-SA 4.0), NonverbalTTS (audio from VoxCeleb and Expresso);\n  - VoxCeleb1 (CC BY 4.0), AISHELL-1 (Apache-2.0), LibriSpeech (CC BY 4.0);\n  - ARC (CC BY-SA 4.0), OpenBookQA, CommonsenseQA (MIT);\n  - Accents: VCTK (CC BY 4.0), English Dialects (CC BY-SA 4.0), EdAcc (CC BY-SA 4.0), common-accent from Common Voice\n    (CC0 audio);\n  - Turn-taking: otoSpeech-141h (CC BY 4.0) with DualTurn labels; Smart Turn v3.2 training set (pipecat-ai, CC BY 4.0).\n- Base models keep their licences: Qwen3-4B and Qwen3-ASR-0.6B are Apache-2.0 (Alibaba Cloud); the Qwen3-4B licence\n  is included. The LLM weights are Qwen3-4B with LoRAs merged in.\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by AI降临派 / [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/DuplexJev-4B-Para",
+        "Qwen/Qwen3-4B",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "sajilck/f5-tts-malayalam-v2",
+      "author": "sajilck",
+      "created_at": "2026-07-30",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "f5-tts",
+        "gguf",
+        "tts",
+        "text-to-speech",
+        "malayalam",
+        "voice-cloning",
+        "ml",
+        "arxiv:2410.06885",
+        "base_model:SWivid/F5-TTS",
+        "base_model:quantized:SWivid/F5-TTS",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 23,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "f5-tts",
+      "license": "cc-by-nc-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/sajilck/f5-tts-malayalam-v2",
+      "card_text": "",
+      "arxiv_ids": [
+        "2410.06885"
+      ],
+      "datasets": [],
+      "base_models": [
+        "SWivid/F5-TTS"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "takuma104/pocket-tts-ja",
+      "author": "takuma104",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "safetensors",
+        "voice-cloning",
+        "text-to-speech",
+        "ja",
+        "dataset:amphion/Emilia-Dataset",
+        "arxiv:2509.06926",
+        "base_model:kyutai/pocket-tts",
+        "base_model:finetune:kyutai/pocket-tts",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/takuma104/pocket-tts-ja",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- ja\nlibrary_name: pocket-tts\npipeline_tag: text-to-speech\nbase_model: kyutai/pocket-tts\ndatasets:\n- amphion/Emilia-Dataset\ntags:\n- pocket-tts\n- voice-cloning\n---\n\n# Pocket TTS Japanese\n\nJapanese models for [Pocket TTS](https://github.com/kyutai-labs/pocket-tts) (Kyutai), fine-tuned\nfrom the English 24-layer model with the official training code. Code, training recipe and the\nfull log of results: [github.com/takuma104/pocket-tts-ja](https://github.com/takuma104/pocket-tts-ja).\n\n- Runs with the **stock `pocket-tts` package** (3.3.0 or later), on CPU, with no code changes.\n- Takes **plain Japanese text** (kanji and kana as written). There is no G2P front end; the model\n  reads the kanji itself.\n- **Zero-shot voice cloning** from a few seconds of reference audio, as in the original.\n\n| Model | Config | FlowLM | Parameters (with the codec) | File |\n|---|---|---|---:|---:|\n| `japanese` | `japanese.yaml` | 6 layers | 110M | 219 MB |\n| `japanese_24l` | `japanese_24l.yaml` | 24 layers | 336M | 1.3 GB |\n\n日本語の概要: Kyutai の Pocket TTS を日本語にファインチューニングしたモデルです。公式の `pocket-tts`\n（3.3.0 以降）にそのまま読み込め、CPU で動きます。入力は漢字かな交じりの文で、読みはモデルが決めます\n（G2P は使いません）。数秒の参照音声で声を指定します。ウェイトは CC BY-NC 4.0（非商用）です。\nコーデック（Mimi）のデコーダーは日本語音声で調整したものです（元のデコーダーの初回版は下記のコミットで使えます）。\n\n## Usage\n\n```bash\nuvx pocket-tts generate --config hf://takuma104/pocket-tts-ja/japanese.yaml \\\n    --voice prompt.wav --text \"こんにちは。今日はいい天気ですね。\"\n```\n\n```python\nfrom pocket_tts import TTSModel\n\nmodel = TTSModel.load_model(config=\"hf://takuma104/pocket-tts-ja/japanese.yaml\")\nvoice = model.get_state_for_audio_prompt(\"prompt.wav\")\naudio = model.generate_audio(voice, \"こんにちは。今日はいい天気ですね。\")  # 24 kHz, torch.Tensor\n```\n\n- `--voice` is a recording of the voice to clone (a few seconds of clean speech). Without it the\n  CLI clones its default voice (alba, an English speaker), which reads Japanese as well (JSUT\n  Kana-CER 1.80%, against 2.15% with the JVS prompts). The pre-made voices cannot be selected by\n  name (`--voice alba`): they are embeddings computed with the official weights.\n- The config sets the sampling temperature to 0.3, the value every number below was measured\n  with. Classifier-free guidance (scale 2.0) is distilled into the weights.\n- Use `japanese_24l.yaml` for the 24-layer model.\n- To keep a fixed version, add a commit hash: `hf://takuma104/pocket-tts-ja/japanese.yaml@<commit>`.\n  The first release (same language models, original Mimi decoder) is\n  `@ca9b00950babd912554d7de895761f4db1782b5f`.\n\n## Results\n\nAll numbers are from generated audio transcribed by an ASR model, with speakers of the JVS corpus\n(never trained on) as voice prompts, temperature 0.3, one LSD step.\n\n**Kanji reading: [JKYB-Parakeet](https://github.com/Parakeet-Inc/Joyo-Kanji-Yomi-Benchmark-Parakeet-Edition)**,\nall 13,536 sentences, official TTS protocol (kana-whisper). Accuracy is the share of sentences\nwhose target word is read correctly.\n\n| Model | Prompts: 4 JVS speakers in rotation | Prompt: jvs001 |\n|---|---:|---:|\n| `japanese` | **94.75%** | **94.84%** |\n| `japanese_24l` | 94.32% | 94.49% |\n| *First release (original Mimi decoder):* `japanese` | 94.15% | 94.73% |\n| *First release:* `japanese_24l` | 93.31% | 94.06% |\n| *Original Mimi decoder:* 24-layer teacher before the guidance was distilled (CFG 2.0, not released) | 92.97% | 93.68% |\n\nFor reference, with the jvs001 prompt\n[Irodori-TTS-v4.1-Small](https://huggingface.co/Aratako/Irodori-TTS-v4.1-Small) scores 94.0% and\n[Irodori-TTS-v4.1-Small-Yomi](https://huggingface.co/takuma104/Irodori-TTS-v4.1-Small-Yomi), which\nsynthesized part of the training data, 95.7%.\n\n**Other sets**, `japanese` with the stock package on CPU (the released bfloat16 file) next to the\nGPU evaluation of the same checkpoint:\n\n| Set | Metric | GPU | Stock package, CPU |\n|---|---|---:|---:|\n| JKYB-mini (1,500 sentences) | accuracy | 95.1% | 95.3% |\n| Aozora Bunko ruby (1,000 sentences) | target reading accuracy | 71.3% | |\n| JSUT (1,000 sentences) | Kana-CER | 2.28% | 2.15% |\n| JVS zero-shot (5 male + 5 female speakers, 10 sentences each) | Kana-CER | 2.32% | 1.70% |\n| JVS zero-shot | similarity to the speaker's recording of the same sentence (ECAPA) | 0.577 | 0.575 |\n| Short texts (172 texts of 2–8 tokens) | did not stop / extra speech | 0 / 1 | 1 / 1 |\n\n`japanese_24l` is at the same level on these sets (GPU: JKYB-mini 94.5%, Aozora Bunko 71.2%, JSUT\n2.28%, JVS 2.13% / 0.586, short texts 0 / 1; stock package on CPU: JKYB-mini 94.7%, JSUT 2.20%,\nJVS 1.80% / 0.586, short texts 1 / 3). The 6-layer model reads at least as well as the\n24-layer one, so `japanese` is the one to use unless the rarer failure to stop (see Limitations) matters.\n\n## Training\n\n1. A Japanese SentencePiece model with 4,000 pieces replaces the English tokenizer; the text\n   embedding is re-initialized. The codec (Mimi) stays frozen while the language model is trained.\n2. The 24-layer teacher starts from the English 24-layer model and is trained for 700k steps\n   (LSD objective, the voice prompt is another utterance of the same speaker).\n3. Natural speech contains few of the rarer kanji readings, so sentences rich in them were\n   synthesized with Irodori-TTS-v4.1-Small-Yomi in about 3,000 voices and kept only when an ASR\n   model confirmed the reading. The words were chosen without the JKYB keys, and JKYB sentences\n   and near duplicates were excluded.\n4. Guidance at scale 2.0 is distilled into the weights: into a copy of the 24-layer model\n   (`japanese_24l`) and into a 6-layer student initialized from the teacher's layers 0, 1, 2, 21,\n   22 and 23 (`japanese`).\n5. The decoder of the codec (10M parameters) is fine-tuned on Japanese speech for 90k steps\n   (multi-scale mel loss, MPD and MS-STFT discriminators, and a loss on the batch-averaged\n   spectrum against the tonal artifacts locked to the decoder's upsampling strides), on clips of\n   up to 8 seconds: 182 hours of the synthetic speech and 60 hours of high-bitrate Emilia. In the\n   last 10k steps these losses see only the band below 4 kHz, and above it the output is held at\n   the level of the original decoder: raised to the level of the recordings, that band was noise\n   in voiced speech and audible as a hiss. The encoder is untouched, so latents and voice prompts\n   are those of the original Mimi; only the decoder weights inside `model.safetensors` differ\n   from the first release.\n\n| Training data | Hours | License |\n|---|---:|---|\n| [Emilia](https://huggingface.co/datasets/amphion/Emilia-Dataset) Japanese (Emilia and Emilia-YODAS), filtered and re-checked by ASR | 1,531 | CC BY-NC 4.0 / CC BY 4.0 |\n| The same clips with a changed gain | 227 | |\n| Synthetic speech from Irodori-TTS, readings confirmed by ASR | 828 | text: CC BY-SA and public domain |\n\nReazonSpeech is not used. JVS and JSUT are used for evaluation only.\n\n## Limitations\n\n- About 5 to 6% of the JKYB sentences are still misread, mostly rare readings and words from the\n  appendix of the Joyo kanji table (jukujikun, 89% correct). Numbers, counters and Latin letters\n  were not evaluated separately.\n- In 0.1 to 0.3% of the JKYB sentences `japanese` does not end the utterance and keeps generating\n  up to the length limit (`japanese_24l`: 0.02 to 0.09%).\n- Reading accuracy and speaker similarity depend on the voice prompt.\n- Real Japanese recordings still lose clarity when they pass through the codec (Kana-CER of JVS\n  recordings: 3.3% as recorded, 4.7% through Mimi with the fine-tuned decoder; 5.4% with the\n  original decoder). Above 4 kHz the output is as quiet as the original decoder's, 6 to 8 dB\n  below the recordings in voiced speech.\n\n## Prohibited use\n\nThe prohibited uses of the original Pocket TTS apply: use of the model must comply with all\napplicable laws and regulations and must not result in, involve, or facilitate any illegal,\nharmful, deceptive, fraudulent, or unauthorized activity. Prohibited uses include, without\nlimitation, voice impersonation or cloning without explicit and lawful consent; misinformation,\ndisinformation, or deception (including fake news, fraudulent calls, or presenting generated\ncontent as genuine recordings of real people or events); and the generation of unlawful, harmful,\nlibelous, abusive, harassing, discriminatory, hateful, or privacy-invasive content.\n\n## License and acknowledgements\n\nWeights: CC BY-NC 4.0 (the training data includes Emilia). They derive from\n[kyutai/pocket-tts](https://huggingface.co/kyutai/pocket-tts) (CC BY 4.0) by Kyutai\n([paper](https://arxiv.org/abs/2509.06926)).\n\nThanks to Kyutai for Pocket TTS and its training code, to the authors of\n[Emilia](https://huggingface.co/datasets/amphion/Emilia-Dataset),\n[Irodori-TTS](https://huggingface.co/Aratako/Irodori-TTS-v4.1-Small) (Aratako),\n[JKYB-Parakeet](https://github.com/Parakeet-Inc/Joyo-Kanji-Yomi-Benchmark-Parakeet-Edition) and the\noriginal Joyo Kanji Yomi Benchmark (SB Intuitions), and of the JVS and JSUT corpora.\n",
+      "arxiv_ids": [
+        "2509.06926"
+      ],
+      "datasets": [
+        "amphion/Emilia-Dataset"
+      ],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mlx-community/fish-audio-drama-3-4bit",
+      "author": "mlx-community",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx-audio",
+        "fish_drama3",
+        "mlx",
+        "text-to-speech",
+        "multi-speaker",
+        "voice-cloning",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "es",
+        "pt",
+        "ar",
+        "ru",
+        "fr",
+        "de",
+        "sv",
+        "it",
+        "tr",
+        "no",
+        "nl",
+        "cy",
+        "eu",
+        "ca",
+        "da",
+        "gl",
+        "ta",
+        "hu",
+        "fi",
+        "pl",
+        "et",
+        "hi",
+        "la",
+        "ur",
+        "th",
+        "vi",
+        "jw",
+        "bn",
+        "yo",
+        "sl",
+        "cs",
+        "sw",
+        "nn",
+        "he",
+        "ms",
+        "uk",
+        "id",
+        "kk",
+        "bg",
+        "lv",
+        "my",
+        "tl",
+        "sk",
+        "ne",
+        "fa",
+        "af",
+        "el",
+        "bo",
+        "hr",
+        "ro",
+        "sn",
+        "mi",
+        "yi",
+        "am",
+        "be",
+        "km",
+        "is",
+        "az",
+        "sd",
+        "br",
+        "sq",
+        "ps",
+        "mn",
+        "ht",
+        "ml",
+        "sr",
+        "sa",
+        "te",
+        "ka",
+        "bs",
+        "pa",
+        "lt",
+        "kn",
+        "si",
+        "hy",
+        "mr",
+        "as",
+        "gu",
+        "fo",
+        "base_model:fishaudio/drama-3",
+        "base_model:quantized:fishaudio/drama-3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "mlx-audio",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/mlx-community/fish-audio-drama-3-4bit",
+      "card_text": "---\nlicense: other\nlicense_name: fish-audio-community-license\nlicense_link: LICENSE\nbase_model: fishaudio/drama-3\nbase_model_relation: quantized\npipeline_tag: text-to-speech\nlibrary_name: mlx-audio\ntags:\n  - mlx\n  - mlx-audio\n  - text-to-speech\n  - multi-speaker\n  - voice-cloning\nlanguage:\n  - zh\n  - en\n  - ja\n  - ko\n  - es\n  - pt\n  - ar\n  - ru\n  - fr\n  - de\n  - sv\n  - it\n  - tr\n  - 'no'\n  - nl\n  - cy\n  - eu\n  - ca\n  - da\n  - gl\n  - ta\n  - hu\n  - fi\n  - pl\n  - et\n  - hi\n  - la\n  - ur\n  - th\n  - vi\n  - jw\n  - bn\n  - yo\n  - sl\n  - cs\n  - sw\n  - nn\n  - he\n  - ms\n  - uk\n  - id\n  - kk\n  - bg\n  - lv\n  - my\n  - tl\n  - sk\n  - ne\n  - fa\n  - af\n  - el\n  - bo\n  - hr\n  - ro\n  - sn\n  - mi\n  - yi\n  - am\n  - be\n  - km\n  - is\n  - az\n  - sd\n  - br\n  - sq\n  - ps\n  - mn\n  - ht\n  - ml\n  - sr\n  - sa\n  - te\n  - ka\n  - bs\n  - pa\n  - lt\n  - kn\n  - si\n  - hy\n  - mr\n  - as\n  - gu\n  - fo\n---\n\n# Drama 3 MLX 4-bit\n\n**Built with Fish Audio.**\n\n[Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) converted for [mlx-audio](https://github.com/Blaizzy/mlx-audio) on Apple Silicon. This is an unofficial community conversion; Fish Audio did not release or endorse it.\n\n- routed experts: 4-bit, dequantized from the block-FP8 release\n- dense projections and audio tower: 8-bit\n- 22 GB on disk, about 26 GB peak memory while generating\n\n## Usage\n\nDrama 3 support is in review in mlx-audio ([#1018](https://github.com/Blaizzy/mlx-audio/pull/1018)). Until it is merged, install from the PR branch:\n\n```bash\npip install \"mlx-audio @ git+https://github.com/stickerdaniel/mlx-audio@fish-drama3\"\n```\n\n```python\nfrom mlx_audio.tts.utils import load_model\n\nmodel = load_model(\"mlx-community/fish-audio-drama-3-4bit\")\n\nfor result in model.generate(\n    text=\"[sighs] Fine. If we miss it, it's on you.\",\n    ref_audio=\"reference.wav\",\n    ref_text=\"Transcript of the reference clip.\",\n    stream=True,\n    first_chunk_frames=4,\n):\n    print(result.audio.shape)  # 44.1 kHz chunks\n```\n\n```bash\npython -m mlx_audio.tts.generate --model mlx-community/fish-audio-drama-3-4bit \\\n    --text \"[sighs] Fine. If we miss it, it's on you.\" \\\n    --ref_audio reference.wav --ref_text \"Transcript of the reference clip.\" \\\n    --temperature 0.7 --top_p 0.7 --top_k 30\n```\n\nSpeaker tags (`<|speaker:0|>` to `<|speaker:15|>`), multiple references and streaming are described in the [model docs](https://github.com/stickerdaniel/mlx-audio/blob/fish-drama3/docs/models/tts/fish-drama3.md).\n\n## Quality and speed\n\nOn an M3 Max:\n\n- 22 ms per frame (46 ms of audio), about 2x real time\n- first streamed audio in 160 to 200 ms once a voice is cached\n- teacher-forced against the PyTorch reference: backbone hidden cosine 0.995, semantic top-1 86%\n\n## Conversion\n\nMade with mlx-audio's converter:\n\n```bash\npython -m mlx_audio.tts.models.fish_drama3.convert --src drama-3 --dst drama-3-mlx-4bit \\\n    --expert-bits 4 --dense-bits 8 --tower-bits 8\n```\n\nThe unquantized weights are at [mlx-community/fish-audio-drama-3-bf16](https://huggingface.co/mlx-community/fish-audio-drama-3-bf16).\n\n`NOTICE` lists every change to the original weights.\n\n## License\n\nThe [Fish Audio Community License](LICENSE) applies, including its use restrictions and its terms for commercial use and hosted services.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/drama-3"
+      ],
+      "variants": [
+        "mlx-community/fish-audio-drama-3-bf16"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "waxal-benchmarking/voxcpm2-multilang28-full",
+      "author": "waxal-benchmarking",
+      "created_at": "2026-10-12",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "african-languages",
+        "low-resource",
+        "yo",
+        "sw",
+        "rw",
+        "ig",
+        "ha",
+        "wal",
+        "luo",
+        "am",
+        "om",
+        "sid",
+        "base_model:openbmb/VoxCPM2",
+        "base_model:finetune:openbmb/VoxCPM2",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 321,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/waxal-benchmarking/voxcpm2-multilang28-full",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: openbmb/VoxCPM2\nlanguage:\n  - yo\n  - sw\n  - rw\n  - ig\n  - ha\n  - wal\n  - luo\n  - am\n  - om\n  - sid\ntags:\n  - text-to-speech\n  - tts\n  - voice-cloning\n  - african-languages\n  - low-resource\n  - voxcpm\npipeline_tag: text-to-speech\n---\n\n# WAXAL VoxCPM2 — 28-Language African TTS\n\nA full fine-tune of [VoxCPM2](https://huggingface.co/openbmb/VoxCPM2) (2B params, tokenizer-free, diffusion-AR TTS with voice cloning) on **28 African languages**, produced by the [WAXAL](https://huggingface.co/waxal-benchmarking) project at [LyngualLabs](https://lynguallabs.org).\n\nThis is a research checkpoint. It is not production-polished — see **Known Limitations** below before using it for anything beyond experimentation.\n\n## Languages\n\nVoxCPM2 has no built-in mechanism for specifying language at inference — the base model infers pronunciation purely from text orthography. We added one: a dedicated `<lang:XX>` tag per language, registered as a real token in the tokenizer and resized into the text embedding table (mean-initialized, then learned during fine-tuning). **The tag is mandatory** — always prepend it to the text you want synthesized, e.g.:\n\n```\n<lang:yo> Ẹ káàárọ̀! Báwo ni oorun rí lálẹ́ àná?\n```\n\n| Language | Tag | Raw hours | Hours after resampling |\n|---|---|---|---|\n| Yoruba | `<lang:yo>` | 1038.7 | 602.4 |\n| Swahili | `<lang:sw>` | 1004.1 | 592.3 |\n| Kinyarwanda | `<lang:rw>` | 989.9 | 588.1 |\n| Igbo | `<lang:ig>` | 930.2 | 570.1 |\n| Hausa | `<lang:ha>` | 682.6 | 488.3 |\n| Wolaytta | `<lang:wal>` | 196.6 | 262.1 |\n| Dholuo | `<lang:luo>` | 191.5 | 258.7 |\n| Amharic | `<lang:am>` | 189.2 | 257.1 |\n| Oromo | `<lang:om>` | 189.2 | 257.1 |\n| Sidama | `<lang:sid>` | 188.2 | 256.4 |\n| Tigrinya | `<lang:tig>` | 180.0 | 250.8 |\n| Kikuyu | `<lang:kik>` | 185.8 | 254.8 |\n| Kalenjin | `<lang:kal>` | 153.2 | 231.3 |\n| Malagasy | `<lang:mlg>` | 179.8 | 250.6 |\n| Luganda | `<lang:lug>` | 111.4 | 197.3 |\n| Dagaare | `<lang:dagr>` | 104.3 | 190.9 |\n| Somali | `<lang:som>` | 103.2 | 189.9 |\n| Ewe | `<lang:ewe>` | 103.1 | 189.8 |\n| Ikposo | `<lang:ikp>` | 102.6 | 189.3 |\n| Wolof | `<lang:wol>` | 101.3 | 188.1 |\n| Dagbani | `<lang:dagb>` | 96.3 | 183.4 |\n| Maasai | `<lang:maa>` | 83.7 | 171.0 |\n| Shona | `<lang:sna>` | 83.7 | 171.0 |\n| Akan | `<lang:aka>` | 75.4 | 162.3 |\n| Nyankole | `<lang:nya>` | 48.8 | 130.6 |\n| Masaaba | `<lang:mas>` | 42.7 | 122.1 |\n| Lusoga | `<lang:lus>` | 39.0 | 116.7 |\n| Acholi | `<lang:ach>` | 29.7 | 101.9 |\n\nSource data: the [AfroNet](https://huggingface.co/Professor) speech collection (`Professor/<language>-speech-data`), 7,424 raw hours total.\n\n## Training\n\n- **Base**: `openbmb/VoxCPM2`, with 28 new `<lang:XX>` tokens added and the text embedding table resized (mean-initialized rows) before any fine-tuning started — this is an independent run from scratch, not built on top of any earlier narrower fine-tune.\n- **Mode**: full fine-tuning (all parameters trainable except the frozen AudioVAE codec).\n- **Data balancing**: the 28 languages range 35x in size (1038.7h Yoruba vs. 29.7h Acholi). Naive concatenation would starve the smallest languages; full equalization would cause heavy repetition/overfitting on them. We used **sqrt-temperature resampling** (weight ∝ √hours, renormalized to preserve total volume) — a standard middle-ground technique from multilingual ASR/TTS training. This downsamples the biggest languages to ~58–97% of their raw hours and upsamples the smallest to ~1.4–3.4x, via a combination of subsampling and controlled repetition.\n- **Scale**: 2,929,563 training rows (clips) after resampling, 9,450 held-out validation rows.\n- **Steps**: 44,000 steps (~0.99 epoch over the resampled training set), batch size 3 × grad-accum 11 × 2 GPUs (effective batch 66).\n- **Hardware**: 2× NVIDIA H200, via `torchrun` DDP.\n- **Learning rate**: 1e-5, 100 warmup steps.\n\n## Usage\n\n```python\nfrom huggingface_hub import snapshot_download\nfrom voxcpm import VoxCPM\nimport soundfile as sf\n\nmodel_dir = snapshot_download(\"waxal-benchmarking/voxcpm2-multilang28-full\")\nmodel = VoxCPM.from_pretrained(model_dir, load_denoiser=False, optimize=False)\n\nwav = model.generate(\n    text=\"<lang:yo> Ẹ káàárọ̀! Báwo ni oorun rí lálẹ́ àná?\",\n    cfg_value=2.0,\n    inference_timesteps=22,\n)\nsf.write(\"out.wav\", wav, model.tts_model.sample_rate)\n```\n\n`optimize=False` is required — `torch.compile` (the default optimization path) conflicts with some inference environments (e.g. HF ZeroGPU Spaces); disabling it costs some speed but avoids crashes.\n\nVoice cloning works the same way as base VoxCPM2 — pass `prompt_wav_path` and `prompt_text` (the literal transcript of what's spoken in the reference clip) alongside the tagged `text`.\n\nTry it live: **[WAXAL VoxCPM Multilingual Demo Space](https://huggingface.co/spaces/Professor/voxcpm-multilingual28-demo)**.\n\n## Evaluation\n\nWe built an automated evaluation pipeline rather than relying on casual listening, using:\n- **ASR-based CER** (Character Error Rate) via Meta's [Omnilingual ASR](https://github.com/facebookresearch/omnilingual-asr) (`omniASR_CTC_7B`, ~1,600-language coverage, verified against this model's own supported-language table — not assumed), comparing transcriptions of generated speech against the ground-truth input text.\n- The **same ASR run on real human recordings** of the same held-out text, as a per-language noise floor — several of these languages get nontrivial CER even on real speech (e.g. Fante in an earlier AfroNet pilot scored CER 0.49–0.57 on *real* recordings), so a raw TTS CER number is meaningless without that baseline.\n- **DNSMOS** (no-reference naturalness proxy). Caveat: DNSMOS is trained on English/high-resource-language listener ratings, so treat these scores as *relative* (comparing our own languages/checkpoints) rather than *absolute*.\n\nPilot results (5 held-out validation clips per language, no reference voice):\n\n| Metric | Result |\n|---|---|\n| DNSMOS (naturalness) | 2.78–3.41 across all 28 languages, no outliers |\n| Generated-speech CER | Usually *lower* than real-recording CER for the same ASR (e.g. Swahili: 0.028 generated vs. 0.013 real; Hausa: 0.044 vs. 0.113) — generated audio is clean and consistent, so it's often at least as ASR-decodable as noisy real recordings |\n| **Non-terminating generation** | A measurable failure mode: in a 5-clip-per-language sample, Malagasy, Sidama, and Somali hit an apparent generation-length ceiling in 3/5 clips; Shona and Swahili in 2/5; several others in 1/5. Confirmed as genuine overrun (not just naturally long sentences) by comparing generated duration against the real recording's duration for the same text. |\n\nThe non-terminating-generation issue doesn't cleanly correlate with raw data size — Swahili (one of the largest languages here) is affected while several much smaller languages (Hausa, Acholi, Dagbani, Wolof) show none. It's an open issue, not yet root-caused.\n\n## Known Limitations\n\n- **Voice-design and cross-lingual flexibility are likely reduced.** Earlier narrow single-language full fine-tunes on this same base model showed that full-FT on read-speech-only data degrades the base model's text-prompted style/voice-design control and non-trained-language generation. This 28-language run is far more linguistically diverse than those single-language runs, which should help, but it is still exclusively plain narration-style audio — we have not verified how much voice-design capability survives.\n- **Non-terminating generation** (see Evaluation) affects a meaningful minority of generations, worse for some languages (Malagasy, Sidama, Somali) than others.\n- **Translation/transcript quality varies by language** in our own test tooling — some of the lowest-resource languages here (Wolaytta, Sidama in particular) have had machine-translated test sentences that looked suspect on inspection; this is a tooling caveat about our *test sentences*, not necessarily the model.\n- Language coverage via Omnilingual ASR for evaluation purposes was spot-checked, not independently verified for linguistic accuracy of every transcription.\n\n## Related\n\n- [`waxal-benchmarking/voxcpm2-multilang10-full`](https://huggingface.co/waxal-benchmarking/voxcpm2-multilang10-full) — an earlier, independent fine-tune on just the 10 highest-resource languages from the same collection (Yoruba, Swahili, Kinyarwanda, Igbo, Hausa, Wolaytta, Dholuo, Amharic, Oromo, Sidama), trained the same way.\n- [AfroNet speech collection](https://huggingface.co/Professor) — the source training data.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "openbmb/VoxCPM2"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "apiplant/drama-q4",
+      "author": "apiplant",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "fish-audio",
+        "text-to-speech",
+        "multi-speaker",
+        "voice-cloning",
+        "int4",
+        "quantized",
+        "base_model:fishaudio/drama-3",
+        "base_model:quantized:fishaudio/drama-3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/apiplant/drama-q4",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/drama-3"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "UAzimov/Uzbek-tts-chatterbox",
+      "author": "UAzimov",
+      "created_at": "2026-08-22",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox-tts",
+        "safetensors",
+        "uzbek",
+        "tts",
+        "text-to-speech",
+        "chatterbox",
+        "lora",
+        "voice-cloning",
+        "turkic-languages",
+        "low-resource",
+        "uz",
+        "dataset:murodbek/uzbek-speech-corpus",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:adapter:ResembleAI/chatterbox",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "chatterbox-tts",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/UAzimov/Uzbek-tts-chatterbox",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "murodbek/uzbek-speech-corpus"
+      ],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Nav8ha/drama-3-mlx-mixed-3bit",
+      "author": "Nav8ha",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx-audio",
+        "fish_drama3",
+        "mlx",
+        "text-to-speech",
+        "voice-cloning",
+        "multi-speaker",
+        "apple-silicon",
+        "base_model:fishaudio/drama-3",
+        "base_model:quantized:fishaudio/drama-3",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx-audio",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Nav8ha/drama-3-mlx-mixed-3bit",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/drama-3"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "sekkit/drama-3",
+      "author": "sekkit",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "fish_omni",
+        "fish-audio",
+        "text-to-speech",
+        "multi-speaker",
+        "audio-editing",
+        "emotional-speech-generation",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "es",
+        "pt",
+        "ar",
+        "ru",
+        "fr",
+        "de",
+        "sv",
+        "it",
+        "tr",
+        "no",
+        "nl",
+        "cy",
+        "eu",
+        "ca",
+        "da",
+        "gl",
+        "ta",
+        "hu",
+        "fi",
+        "pl",
+        "et",
+        "hi",
+        "la",
+        "ur",
+        "th",
+        "vi",
+        "jw",
+        "bn",
+        "yo",
+        "sl",
+        "cs",
+        "sw",
+        "nn",
+        "he",
+        "ms",
+        "uk",
+        "id",
+        "kk",
+        "bg",
+        "lv",
+        "my",
+        "tl",
+        "sk",
+        "ne",
+        "fa",
+        "af",
+        "el",
+        "bo",
+        "hr",
+        "ro",
+        "sn",
+        "mi",
+        "yi",
+        "am",
+        "be",
+        "km",
+        "is",
+        "az",
+        "sd",
+        "br",
+        "sq",
+        "ps",
+        "mn",
+        "ht",
+        "ml",
+        "sr",
+        "sa",
+        "te",
+        "ka",
+        "bs",
+        "pa",
+        "lt",
+        "kn",
+        "si",
+        "hy",
+        "mr",
+        "as",
+        "gu",
+        "fo",
+        "arxiv:2610.18010",
+        "license:other",
+        "bsgemm-moe",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/sekkit/drama-3",
+      "card_text": "",
+      "arxiv_ids": [
+        "2610.18010"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "AMAImedia/Qwen3.5-35B-A3B-FishAudio-Drama3-TTS-83Lang-BF16-GGUF",
+      "author": "AMAImedia",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "gguf",
+        "fish_omni",
+        "fish-audio",
+        "text-to-speech",
+        "multi-speaker",
+        "audio-editing",
+        "emotional-speech-generation",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "es",
+        "pt",
+        "ar",
+        "ru",
+        "fr",
+        "de",
+        "sv",
+        "it",
+        "tr",
+        "no",
+        "nl",
+        "cy",
+        "eu",
+        "ca",
+        "da",
+        "gl",
+        "ta",
+        "hu",
+        "fi",
+        "pl",
+        "et",
+        "hi",
+        "la",
+        "ur",
+        "th",
+        "vi",
+        "jw",
+        "bn",
+        "yo",
+        "sl",
+        "cs",
+        "sw",
+        "nn",
+        "he",
+        "ms",
+        "uk",
+        "id",
+        "kk",
+        "bg",
+        "lv",
+        "my",
+        "tl",
+        "sk",
+        "ne",
+        "fa",
+        "af",
+        "el",
+        "bo",
+        "hr",
+        "ro",
+        "sn",
+        "mi",
+        "yi",
+        "am",
+        "be",
+        "km",
+        "is",
+        "az",
+        "sd",
+        "br",
+        "sq",
+        "ps",
+        "mn",
+        "ht",
+        "ml",
+        "sr",
+        "sa",
+        "te",
+        "ka",
+        "bs",
+        "pa",
+        "lt",
+        "kn",
+        "si",
+        "hy",
+        "mr",
+        "as",
+        "gu",
+        "fo",
+        "arxiv:2610.18010",
+        "base_model:fishaudio/drama-3",
+        "base_model:quantized:fishaudio/drama-3",
+        "license:apache-2.0",
+        "bsgemm-moe",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/AMAImedia/Qwen3.5-35B-A3B-FishAudio-Drama3-TTS-83Lang-BF16-GGUF",
+      "card_text": "",
+      "arxiv_ids": [
+        "2610.18010"
+      ],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/drama-3"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Salama1429/drama-3",
+      "author": "Salama1429",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "fish_omni",
+        "fish-audio",
+        "text-to-speech",
+        "multi-speaker",
+        "audio-editing",
+        "emotional-speech-generation",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "es",
+        "pt",
+        "ar",
+        "ru",
+        "fr",
+        "de",
+        "sv",
+        "it",
+        "tr",
+        "no",
+        "nl",
+        "cy",
+        "eu",
+        "ca",
+        "da",
+        "gl",
+        "ta",
+        "hu",
+        "fi",
+        "pl",
+        "et",
+        "hi",
+        "la",
+        "ur",
+        "th",
+        "vi",
+        "jw",
+        "bn",
+        "yo",
+        "sl",
+        "cs",
+        "sw",
+        "nn",
+        "he",
+        "ms",
+        "uk",
+        "id",
+        "kk",
+        "bg",
+        "lv",
+        "my",
+        "tl",
+        "sk",
+        "ne",
+        "fa",
+        "af",
+        "el",
+        "bo",
+        "hr",
+        "ro",
+        "sn",
+        "mi",
+        "yi",
+        "am",
+        "be",
+        "km",
+        "is",
+        "az",
+        "sd",
+        "br",
+        "sq",
+        "ps",
+        "mn",
+        "ht",
+        "ml",
+        "sr",
+        "sa",
+        "te",
+        "ka",
+        "bs",
+        "pa",
+        "lt",
+        "kn",
+        "si",
+        "hy",
+        "mr",
+        "as",
+        "gu",
+        "fo",
+        "arxiv:2610.18010",
+        "license:other",
+        "bsgemm-moe",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Salama1429/drama-3",
+      "card_text": "",
+      "arxiv_ids": [
+        "2610.18010"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-zok",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-zok",
+      "card_text": "---\nlibrary_name: omnivoice\ntags:\n- text-to-speech\n- voice-cloning\n- elarspeech\n---\n# ELARSpeech-OmniVoice-zok\n\nELARSpeech OmniVoice text-to-speech model for **Zok**.\n\n## Usage\n```python\nfrom omnivoice import OmniVoice\n\nmodel = OmniVoice.from_pretrained(\"Sanghyang00/ELARSpeech-OmniVoice-zok\",\n                                  device_map=\"cuda:0\", dtype=\"float16\")\naudio = model.generate(text=\"Your text here.\", language=\"\",\n                       ref_audio=\"reference.wav\", ref_text=\"Reference transcript.\")\n```\n\nThe model generates 24 kHz audio. Provide a short, clear reference recording and\nits transcript for voice cloning. This repository is compatible with the\n[`omnivoice`](https://huggingface.co/k2-fsa/OmniVoice) package, not bare\nTransformers `AutoModel` loading.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-yrl",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-yrl",
+      "card_text": "---\nlibrary_name: omnivoice\ntags:\n- text-to-speech\n- voice-cloning\n- elarspeech\n---\n# ELARSpeech-OmniVoice-yrl\n\nELARSpeech OmniVoice text-to-speech model for **Nheengatu**.\n\n## Usage\n```python\nfrom omnivoice import OmniVoice\n\nmodel = OmniVoice.from_pretrained(\"Sanghyang00/ELARSpeech-OmniVoice-yrl\",\n                                  device_map=\"cuda:0\", dtype=\"float16\")\naudio = model.generate(text=\"Your text here.\", language=\"yrl\",\n                       ref_audio=\"reference.wav\", ref_text=\"Reference transcript.\")\n```\n\nThe model generates 24 kHz audio. Provide a short, clear reference recording and\nits transcript for voice cloning. This repository is compatible with the\n[`omnivoice`](https://huggingface.co/k2-fsa/OmniVoice) package, not bare\nTransformers `AutoModel` loading.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-yla",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-yla",
+      "card_text": "---\nlibrary_name: omnivoice\ntags:\n- text-to-speech\n- voice-cloning\n- elarspeech\n---\n# ELARSpeech-OmniVoice-yla\n\nELARSpeech OmniVoice text-to-speech model for **Ulwa**.\n\n## Usage\n```python\nfrom omnivoice import OmniVoice\n\nmodel = OmniVoice.from_pretrained(\"Sanghyang00/ELARSpeech-OmniVoice-yla\",\n                                  device_map=\"cuda:0\", dtype=\"float16\")\naudio = model.generate(text=\"Your text here.\", language=\"yla\",\n                       ref_audio=\"reference.wav\", ref_text=\"Reference transcript.\")\n```\n\nThe model generates 24 kHz audio. Provide a short, clear reference recording and\nits transcript for voice cloning. This repository is compatible with the\n[`omnivoice`](https://huggingface.co/k2-fsa/OmniVoice) package, not bare\nTransformers `AutoModel` loading.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-xty",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-xty",
+      "card_text": "---\nlibrary_name: omnivoice\ntags:\n- text-to-speech\n- voice-cloning\n- elarspeech\n---\n# ELARSpeech-OmniVoice-xty\n\nELARSpeech OmniVoice text-to-speech model for **Yoloxóchitl Mixtec**.\n\n## Usage\n```python\nfrom omnivoice import OmniVoice\n\nmodel = OmniVoice.from_pretrained(\"Sanghyang00/ELARSpeech-OmniVoice-xty\",\n                                  device_map=\"cuda:0\", dtype=\"float16\")\naudio = model.generate(text=\"Your text here.\", language=\"xty\",\n                       ref_audio=\"reference.wav\", ref_text=\"Reference transcript.\")\n```\n\nThe model generates 24 kHz audio. Provide a short, clear reference recording and\nits transcript for voice cloning. This repository is compatible with the\n[`omnivoice`](https://huggingface.co/k2-fsa/OmniVoice) package, not bare\nTransformers `AutoModel` loading.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-wrr",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-wrr",
+      "card_text": "---\nlibrary_name: omnivoice\ntags:\n- text-to-speech\n- voice-cloning\n- elarspeech\n---\n# ELARSpeech-OmniVoice-wrr\n\nELARSpeech OmniVoice text-to-speech model for **Wardaman**.\n\n## Usage\n```python\nfrom omnivoice import OmniVoice\n\nmodel = OmniVoice.from_pretrained(\"Sanghyang00/ELARSpeech-OmniVoice-wrr\",\n                                  device_map=\"cuda:0\", dtype=\"float16\")\naudio = model.generate(text=\"Your text here.\", language=\"wrr\",\n                       ref_audio=\"reference.wav\", ref_text=\"Reference transcript.\")\n```\n\nThe model generates 24 kHz audio. Provide a short, clear reference recording and\nits transcript for voice cloning. This repository is compatible with the\n[`omnivoice`](https://huggingface.co/k2-fsa/OmniVoice) package, not bare\nTransformers `AutoModel` loading.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-western-algerian-amazigh",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-western-algerian-amazigh",
+      "card_text": "---\nlibrary_name: omnivoice\ntags:\n- text-to-speech\n- voice-cloning\n- elarspeech\n---\n# ELARSpeech-OmniVoice-western-algerian-amazigh\n\nELARSpeech OmniVoice text-to-speech model for **Western Algerian Amazigh**.\n\n## Usage\n```python\nfrom omnivoice import OmniVoice\n\nmodel = OmniVoice.from_pretrained(\"Sanghyang00/ELARSpeech-OmniVoice-western-algerian-amazigh\",\n                                  device_map=\"cuda:0\", dtype=\"float16\")\naudio = model.generate(text=\"Your text here.\", language=\"\",\n                       ref_audio=\"reference.wav\", ref_text=\"Reference transcript.\")\n```\n\nThe model generates 24 kHz audio. Provide a short, clear reference recording and\nits transcript for voice cloning. This repository is compatible with the\n[`omnivoice`](https://huggingface.co/k2-fsa/OmniVoice) package, not bare\nTransformers `AutoModel` loading.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-ula",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-ula",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-tzh",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-tzh",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Sanghyang00/ELARSpeech-OmniVoice-tnw",
+      "author": "Sanghyang00",
+      "created_at": "2026-10-14",
+      "last_modified": "2026-10-14",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "text-to-speech",
+        "voice-cloning",
+        "elarspeech",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "omnivoice",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Sanghyang00/ELARSpeech-OmniVoice-tnw",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    }
+  ]
+}
