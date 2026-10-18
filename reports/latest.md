@@ -1,12 +1,15 @@
-# Music / Audio Foundation Model Research Radar — 2026-10-17
+# Music / Audio Foundation Model Research Radar — 2026-10-18
 
-> Lookback window: 2026-10-10 to 2026-10-17 · New papers: 3 · New models: 18 · relevant papers/models in window: 53/60 · raw papers/models: 88/307
+> Lookback window: 2026-10-11 to 2026-10-18 · New papers: 0 · New models: 30 · relevant papers/models in window: 28/66 · raw papers/models: 34/316
 
-Sources: arxiv=0 · semantic_scholar=88 · huggingface_models=307
+Sources: arxiv=0 · semantic_scholar=34 · huggingface_models=316
 
 ## Source notes
 
 - arXiv: HTTP Error 500: Internal Server Error
+- Semantic Scholar / Music Foundation Models & Representations: HTTP Error 429: 
+- Semantic Scholar / Generative Music & Audio: HTTP Error 429: 
+- Semantic Scholar / Speech Generation, Recognition & Dialogue: HTTP Error 429: 
 
 ## Hugging Face model signals
 
@@ -14,173 +17,295 @@ Sources: arxiv=0 · semantic_scholar=88 · huggingface_models=307
 
 | # | Model family | Updated | Task | Score | Variants | Downloads | Likes | License |
 |---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | [jjcoders/suna-v1](https://huggingface.co/jjcoders/suna-v1) | 2026-10-17 | text-to-audio | 52 | 1 | 361 | 1 | apache-2.0 |
-| 2 | [Aunghtaw/VoxCPM2](https://huggingface.co/Aunghtaw/VoxCPM2) | 2026-10-17 | text-to-speech | 22 | 1 | 0 | 0 | apache-2.0 |
-| 3 | [PedroMarinhoDev/Drama-3-ComfyUI](https://huggingface.co/PedroMarinhoDev/Drama-3-ComfyUI) | 2026-10-16 | text-to-speech | 19 | 1 | 0 | 16 | other |
-| 4 | [muaibinrah/speecht5-finetuned-voxpopuli-nl](https://huggingface.co/muaibinrah/speecht5-finetuned-voxpopuli-nl) | 2026-10-17 | text-to-speech | 17 | 1 | 0 | 0 | mit |
-| 5 | [nineninesix/tyger](https://huggingface.co/nineninesix/tyger) | 2026-10-16 | automatic-speech-recognition | 17 | 1 | 113 | 28 | openmdw-1.1 |
-| 6 | [fishaudio/drama-3](https://huggingface.co/fishaudio/drama-3) | 2026-10-17 | text-to-speech | 16 | 1 | 8193 | 588 | other |
-| 7 | [suryatmodulus/tyger](https://huggingface.co/suryatmodulus/tyger) | 2026-10-17 | automatic-speech-recognition | 16 | 1 | 0 | 0 | openmdw-1.1 |
-| 8 | [obaidasiaone/mms-tts-urd-onnx](https://huggingface.co/obaidasiaone/mms-tts-urd-onnx) | 2026-10-17 | text-to-speech | 16 | 1 | 0 | 0 | unknown |
-| 9 | [dignome/kitten_tts2](https://huggingface.co/dignome/kitten_tts2) | 2026-10-17 | text-to-speech | 15 | 1 | 13313 | 1 | other |
-| 10 | [ghanaopenai/voxcpm2-ghana](https://huggingface.co/ghanaopenai/voxcpm2-ghana) | 2026-10-17 | text-to-speech | 15 | 1 | 0 | 0 | apache-2.0 |
-| 11 | [Infinix-io/s2-pro-gguf](https://huggingface.co/Infinix-io/s2-pro-gguf) | 2026-10-17 | text-to-speech | 15 | 1 | 0 | 0 | other |
-| 12 | [Infinix-io/Drama-3-GGUF](https://huggingface.co/Infinix-io/Drama-3-GGUF) | 2026-10-17 | text-to-speech | 15 | 2 | 0 | 0 | other |
-| 13 | [UltimateIntent/Fish-Audio-Drama-3-Q2-Q3](https://huggingface.co/UltimateIntent/Fish-Audio-Drama-3-Q2-Q3) | 2026-10-17 | text-to-speech | 15 | 1 | 0 | 0 | other |
-| 14 | [Infinix-io/Fish-D](https://huggingface.co/Infinix-io/Fish-D) | 2026-10-17 | text-to-speech | 15 | 1 | 0 | 0 | other |
-| 15 | [VoiceHub/DACFlow-EN-10k](https://huggingface.co/VoiceHub/DACFlow-EN-10k) | 2026-10-16 | text-to-speech | 15 | 1 | 0 | 0 | apache-2.0 |
-| 16 | [sunandbean/diffrhythm-1.2-p100a](https://huggingface.co/sunandbean/diffrhythm-1.2-p100a) | 2026-10-16 | text-to-audio | 14 | 1 | 0 | 0 | apache-2.0 |
-| 17 | [sunandbean/acestep-1.5-turbo-p100a](https://huggingface.co/sunandbean/acestep-1.5-turbo-p100a) | 2026-10-16 | text-to-audio | 14 | 1 | 0 | 0 | mit |
-| 18 | [Moxiegen/Moxie-Multimedia](https://huggingface.co/Moxiegen/Moxie-Multimedia) | 2026-10-16 | text-to-speech | 9 | 1 | 0 | 2 | gpl-3.0 |
+| 1 | [StillDeadcode/minimax-music3-bf16](https://huggingface.co/StillDeadcode/minimax-music3-bf16) | 2026-10-18 | text-to-audio | 42 | 1 | 0 | 0 | other |
+| 2 | [Allinsama/openbmb__VoxCPM1.5](https://huggingface.co/Allinsama/openbmb__VoxCPM1.5) | 2026-10-18 | text-to-speech | 34 | 1 | 11 | 0 | apache-2.0 |
+| 3 | [gyoom-sa/chatterbox](https://huggingface.co/gyoom-sa/chatterbox) | 2026-10-18 | text-to-speech | 25 | 1 | 0 | 0 | mit |
+| 4 | [aufklarer/MOSS-TTS-Nano-100M-CoreML](https://huggingface.co/aufklarer/MOSS-TTS-Nano-100M-CoreML) | 2026-10-18 | text-to-speech | 25 | 1 | 0 | 0 | apache-2.0 |
+| 5 | [audio-cpp/audio.cpp-gguf](https://huggingface.co/audio-cpp/audio.cpp-gguf) | 2026-10-18 | text-to-speech | 24 | 1 | 6408424 | 252 | other |
+| 6 | [didodo11/BgTTS-38M-V2](https://huggingface.co/didodo11/BgTTS-38M-V2) | 2026-10-18 | text-to-speech | 23 | 1 | 0 | 0 | apache-2.0 |
+| 7 | [Allinsama/openbmb__VoxCPM2](https://huggingface.co/Allinsama/openbmb__VoxCPM2) | 2026-10-18 | text-to-speech | 22 | 1 | 8 | 0 | apache-2.0 |
+| 8 | [Allinsama/microsoft__VibeVoice-1.5B](https://huggingface.co/Allinsama/microsoft__VibeVoice-1.5B) | 2026-10-18 | text-to-speech | 19 | 1 | 11 | 0 | mit |
+| 9 | [mohammedaly22/VoiceTut-TTS](https://huggingface.co/mohammedaly22/VoiceTut-TTS) | 2026-10-18 | text-to-speech | 16 | 1 | 1720 | 22 | apache-2.0 |
+| 10 | [Allinsama/m-a-p__YuE2-3B](https://huggingface.co/Allinsama/m-a-p__YuE2-3B) | 2026-10-18 | text-to-audio | 16 | 1 | 11 | 0 | cc-by-nc-4.0 |
+| 11 | [micknoisemachine/mimetic-a0](https://huggingface.co/micknoisemachine/mimetic-a0) | 2026-10-18 | text-to-audio | 16 | 1 | 0 | 0 | mit |
+| 12 | [mar23mar/YuE2-3B](https://huggingface.co/mar23mar/YuE2-3B) | 2026-10-18 | text-to-audio | 16 | 1 | 0 | 0 | cc-by-nc-4.0 |
+| 13 | [mlx-community/fish-audio-drama-3-4bit](https://huggingface.co/mlx-community/fish-audio-drama-3-4bit) | 2026-10-18 | text-to-speech | 15 | 2 | 880 | 10 | other |
+| 14 | [ASLP-lab/SemBridge](https://huggingface.co/ASLP-lab/SemBridge) | 2026-10-18 | text-to-speech | 15 | 1 | 108 | 7 | apache-2.0 |
+| 15 | [Allinsama/microsoft__VibeVoice-Realtime-0.5B](https://huggingface.co/Allinsama/microsoft__VibeVoice-Realtime-0.5B) | 2026-10-18 | text-to-speech | 15 | 1 | 9 | 1 | mit |
+| 16 | [actnowai/SoulX-Podcast-1.7B-MLX-8bit](https://huggingface.co/actnowai/SoulX-Podcast-1.7B-MLX-8bit) | 2026-10-18 | text-to-speech | 15 | 1 | 10 | 0 | apache-2.0 |
+| 17 | [maxxrubin/fish-audio-drama-3-6bit](https://huggingface.co/maxxrubin/fish-audio-drama-3-6bit) | 2026-10-18 | text-to-speech | 15 | 1 | 10 | 0 | other |
+| 18 | [ahmed-amedo/drama-3](https://huggingface.co/ahmed-amedo/drama-3) | 2026-10-18 | text-to-speech | 15 | 1 | 5 | 0 | other |
+| 19 | [actnowai/MOSS-TTSD-v1.0-MLX-8bit](https://huggingface.co/actnowai/MOSS-TTSD-v1.0-MLX-8bit) | 2026-10-18 | text-to-speech | 15 | 1 | 4 | 0 | apache-2.0 |
+| 20 | [inklight-app/pocket-tts-q8](https://huggingface.co/inklight-app/pocket-tts-q8) | 2026-10-18 | text-to-speech | 15 | 1 | 0 | 0 | cc-by-4.0 |
+| 21 | [OrionCAF/pocket-tts-turkish-8l](https://huggingface.co/OrionCAF/pocket-tts-turkish-8l) | 2026-10-18 | text-to-speech | 15 | 1 | 0 | 0 | cc-by-4.0 |
+| 22 | [itzune/pocket-tts-basque-24l](https://huggingface.co/itzune/pocket-tts-basque-24l) | 2026-10-18 | text-to-speech | 15 | 1 | 0 | 0 | cc-by-4.0 |
+| 23 | [Allinsama/myshell-ai__OpenVoice](https://huggingface.co/Allinsama/myshell-ai__OpenVoice) | 2026-10-18 | text-to-speech | 15 | 1 | 0 | 0 | mit |
+| 24 | [jordimas/drama-3-ct2-int8](https://huggingface.co/jordimas/drama-3-ct2-int8) | 2026-10-18 | text-to-speech | 15 | 1 | 0 | 0 | other |
+| 25 | [waxal-benchmarking/voxcpm2-multilang10-full](https://huggingface.co/waxal-benchmarking/voxcpm2-multilang10-full) | 2026-10-17 | text-to-speech | 15 | 1 | 337 | 0 | apache-2.0 |
+| 26 | [Allinsama/cstr__cosyvoice3-0.5b-2512-GGUF](https://huggingface.co/Allinsama/cstr__cosyvoice3-0.5b-2512-GGUF) | 2026-10-17 | text-to-speech | 15 | 1 | 51 | 0 | apache-2.0 |
+| 27 | [Jinstudio/MOSS-SoundEffect-v2.0](https://huggingface.co/Jinstudio/MOSS-SoundEffect-v2.0) | 2026-10-17 | text-to-audio | 14 | 1 | 10 | 0 | apache-2.0 |
+| 28 | [Allinsama/nvidia__bigvgan_v2_22khz_80band_256x](https://huggingface.co/Allinsama/nvidia__bigvgan_v2_22khz_80band_256x) | 2026-10-18 | audio-to-audio | 13 | 1 | 13 | 0 | mit |
+| 29 | [Allinsama/nvidia__bigvgan_v2_24khz_100band_256x](https://huggingface.co/Allinsama/nvidia__bigvgan_v2_24khz_100band_256x) | 2026-10-18 | audio-to-audio | 13 | 1 | 12 | 0 | mit |
+| 30 | [kuanyshoteu/freedomspeech-asr](https://huggingface.co/kuanyshoteu/freedomspeech-asr) | 2026-10-18 | automatic-speech-recognition | 12 | 1 | 0 | 0 | other |
 
 ### Model cards
 
-#### M1. jjcoders/suna-v1
+#### M1. StillDeadcode/minimax-music3-bf16
 
-- **Created / updated**: 2026-10-11 / 2026-10-17
-- **Task / library**: text-to-audio / transformers
-- **Relevance**: 52 pts · Generative Music & Audio: text-to-music, text to music, text-to-audio (pipeline tag); Audio Understanding & Reasoning: audio-text; declares license apache-2.0
-- **Adoption signals**: downloads=361 · likes=1 · trending=0.0
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-audio / radiance
+- **Relevance**: 42 pts · Generative Music & Audio: text-to-music, text to music, music generation; declares license other
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: other / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / MiniMaxAI/MiniMax-Music3
+- **Variants in family**: —
+
+#### M2. Allinsama/openbmb__VoxCPM1.5
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / voxcpm
+- **Relevance**: 34 pts · Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech; model card links an arXiv paper; declares license apache-2.0
+- **Adoption signals**: downloads=11 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: [arXiv:2509.24650](https://arxiv.org/abs/2509.24650)
+- **Datasets / base models**: unknown / openbmb/MiniCPM4-0.5B
+- **Variants in family**: —
+
+#### M3. gyoom-sa/chatterbox
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / chatterbox
+- **Relevance**: 25 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning; declares license mit
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: mit / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M4. aufklarer/MOSS-TTS-Nano-100M-CoreML
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / coreml
+- **Relevance**: 25 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning; Evaluation, Alignment, Safety & Copyright: audio benchmark; declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / Allinsama/OpenMOSS-Team__MOSS-TTS-Nano-100M, OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano
+- **Variants in family**: —
+
+#### M5. audio-cpp/audio.cpp-gguf
+
+- **Created / updated**: 2026-07-14 / 2026-10-18
+- **Task / library**: text-to-speech / audio.cpp
+- **Relevance**: 24 pts · Generative Music & Audio: text-to-audio; Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition; declares license other; community likes 252
+- **Adoption signals**: downloads=6408424 · likes=252 · trending=0.0
+- **License / access**: other / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / MiniMaxAI/MiniMax-H3, ACE-Step/Ace-Step1.5, ACE-Step/acestep-v15-base, Aratako/Irodori-TTS-500M-v3, Aratako/Irodori-TTS-600M-v3-VoiceDesign
+- **Variants in family**: —
+
+#### M6. didodo11/BgTTS-38M-V2
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / pytorch
+- **Relevance**: 23 pts · Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
 - **License / access**: apache-2.0 / public
 - **Related papers**: —
 - **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-#### M2. Aunghtaw/VoxCPM2
+#### M7. Allinsama/openbmb__VoxCPM2
 
-- **Created / updated**: 2026-10-17 / 2026-10-17
+- **Created / updated**: 2026-10-18 / 2026-10-18
 - **Task / library**: text-to-speech / voxcpm
 - **Relevance**: 22 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning; model card links an arXiv paper; declares license apache-2.0
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **Adoption signals**: downloads=8 · likes=0 · trending=0.0
 - **License / access**: apache-2.0 / public
 - **Related papers**: [arXiv:2509.24650](https://arxiv.org/abs/2509.24650)
 - **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-#### M3. PedroMarinhoDev/Drama-3-ComfyUI
+#### M8. Allinsama/microsoft__VibeVoice-1.5B
 
-- **Created / updated**: 2026-10-14 / 2026-10-16
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / transformers
+- **Relevance**: 19 pts · Generative Music & Audio: text-to-audio; model card links an arXiv paper; Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag); declares license mit
+- **Adoption signals**: downloads=11 · likes=0 · trending=0.0
+- **License / access**: mit / public
+- **Related papers**: [arXiv:2508.19205](https://arxiv.org/abs/2508.19205) · [arXiv:2412.08635](https://arxiv.org/abs/2412.08635)
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M9. mohammedaly22/VoiceTut-TTS
+
+- **Created / updated**: 2026-06-18 / 2026-10-18
+- **Task / library**: text-to-speech / omnivoice
+- **Relevance**: 16 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0; community likes 22
+- **Adoption signals**: downloads=1720 · likes=22 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / k2-fsa/OmniVoice
+- **Variants in family**: —
+
+#### M10. Allinsama/m-a-p__YuE2-3B
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-audio / unknown
+- **Relevance**: 16 pts · Generative Music & Audio: music generation, text-to-audio (pipeline tag); model card links an arXiv paper; declares license cc-by-nc-4.0
+- **Adoption signals**: downloads=11 · likes=0 · trending=0.0
+- **License / access**: cc-by-nc-4.0 / public
+- **Related papers**: [arXiv:2610.05336](https://arxiv.org/abs/2610.05336) · [arXiv:2609.33757](https://arxiv.org/abs/2609.33757) · [arXiv:2503.08638](https://arxiv.org/abs/2503.08638)
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M11. micknoisemachine/mimetic-a0
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-audio / stable-audio-tools
+- **Relevance**: 16 pts · Generative Music & Audio: text-to-audio (pipeline tag), music diffusion; declares license mit
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: mit / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M12. mar23mar/YuE2-3B
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-audio / unknown
+- **Relevance**: 16 pts · Generative Music & Audio: music generation, text-to-audio (pipeline tag); model card links an arXiv paper; declares license cc-by-nc-4.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: cc-by-nc-4.0 / public
+- **Related papers**: [arXiv:2610.05336](https://arxiv.org/abs/2610.05336) · [arXiv:2609.33757](https://arxiv.org/abs/2609.33757) · [arXiv:2503.08638](https://arxiv.org/abs/2503.08638)
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M13. mlx-community/fish-audio-drama-3-4bit
+
+- **Created / updated**: 2026-10-14 / 2026-10-18
+- **Task / library**: text-to-speech / mlx-audio
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license other
+- **Adoption signals**: downloads=880 · likes=10 · trending=0.0
+- **License / access**: other / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / fishaudio/drama-3
+- **Variants in family**: mlx-community/fish-audio-drama-3-bf16
+
+#### M14. ASLP-lab/SemBridge
+
+- **Created / updated**: 2026-10-12 / 2026-10-18
 - **Task / library**: text-to-speech / unknown
-- **Relevance**: 19 pts · Speech Generation, Recognition & Dialogue: text-to-speech, voice cloning; declares license other; community likes 16
-- **Adoption signals**: downloads=0 · likes=16 · trending=0.0
+- **Relevance**: 15 pts · Generative Music & Audio: singing voice synthesis; model card links an arXiv paper; Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=108 · likes=7 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: [arXiv:2608.07462](https://arxiv.org/abs/2608.07462) · [arXiv:2502.03930](https://arxiv.org/abs/2502.03930)
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M15. Allinsama/microsoft__VibeVoice-Realtime-0.5B
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / transformers
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag); model card links an arXiv paper; declares license mit
+- **Adoption signals**: downloads=9 · likes=1 · trending=0.0
+- **License / access**: mit / public
+- **Related papers**: [arXiv:2508.19205](https://arxiv.org/abs/2508.19205) · [arXiv:2412.08635](https://arxiv.org/abs/2412.08635)
+- **Datasets / base models**: unknown / Qwen/Qwen2.5-0.5B
+- **Variants in family**: —
+
+#### M16. actnowai/SoulX-Podcast-1.7B-MLX-8bit
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / mlx
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
+- **Adoption signals**: downloads=10 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / Soul-AILab/SoulX-Podcast-1.7B
+- **Variants in family**: —
+
+#### M17. maxxrubin/fish-audio-drama-3-6bit
+
+- **Created / updated**: 2026-10-17 / 2026-10-18
+- **Task / library**: text-to-speech / mlx-audio
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license other
+- **Adoption signals**: downloads=10 · likes=0 · trending=0.0
 - **License / access**: other / public
 - **Related papers**: —
 - **Datasets / base models**: unknown / fishaudio/drama-3
 - **Variants in family**: —
 
-#### M4. muaibinrah/speecht5-finetuned-voxpopuli-nl
+#### M18. ahmed-amedo/drama-3
 
-- **Created / updated**: 2026-10-17 / 2026-10-17
-- **Task / library**: text-to-speech / transformers
-- **Relevance**: 17 pts · Generative Music & Audio: text-to-audio; Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag); declares license mit
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: mit / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / microsoft/speecht5_tts
-- **Variants in family**: —
-
-#### M5. nineninesix/tyger
-
-- **Created / updated**: 2026-10-12 / 2026-10-16
-- **Task / library**: automatic-speech-recognition / unknown
-- **Relevance**: 17 pts · Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech-to-speech; model card links an arXiv paper; declares license openmdw-1.1; community likes 28
-- **Adoption signals**: downloads=113 · likes=28 · trending=0.0
-- **License / access**: openmdw-1.1 / public
-- **Related papers**: [arXiv:2503.04721](https://arxiv.org/abs/2503.04721) · [arXiv:2604.04847](https://arxiv.org/abs/2604.04847) · [arXiv:2410.00037](https://arxiv.org/abs/2410.00037) · [arXiv:2505.15670](https://arxiv.org/abs/2505.15670) · [arXiv:2411.00774](https://arxiv.org/abs/2411.00774) · [arXiv:2602.06053](https://arxiv.org/abs/2602.06053) · [arXiv:2507.08128](https://arxiv.org/abs/2507.08128)
-- **Datasets / base models**: unknown / nvidia/nemotron-3.5-asr-streaming-0.6b
-- **Variants in family**: —
-
-#### M6. fishaudio/drama-3
-
-- **Created / updated**: 2026-10-01 / 2026-10-17
+- **Created / updated**: 2026-10-18 / 2026-10-18
 - **Task / library**: text-to-speech / unknown
-- **Relevance**: 16 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag); model card links an arXiv paper; declares license other; community likes 588
-- **Adoption signals**: downloads=8193 · likes=588 · trending=0.0
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag); model card links an arXiv paper; declares license other
+- **Adoption signals**: downloads=5 · likes=0 · trending=0.0
 - **License / access**: other / public
 - **Related papers**: [arXiv:2610.18010](https://arxiv.org/abs/2610.18010)
 - **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-#### M7. suryatmodulus/tyger
+#### M19. actnowai/MOSS-TTSD-v1.0-MLX-8bit
 
-- **Created / updated**: 2026-10-17 / 2026-10-17
-- **Task / library**: automatic-speech-recognition / unknown
-- **Relevance**: 16 pts · Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech-to-speech; model card links an arXiv paper; declares license openmdw-1.1
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: openmdw-1.1 / public
-- **Related papers**: [arXiv:2503.04721](https://arxiv.org/abs/2503.04721) · [arXiv:2604.04847](https://arxiv.org/abs/2604.04847) · [arXiv:2410.00037](https://arxiv.org/abs/2410.00037) · [arXiv:2505.15670](https://arxiv.org/abs/2505.15670) · [arXiv:2411.00774](https://arxiv.org/abs/2411.00774) · [arXiv:2602.06053](https://arxiv.org/abs/2602.06053) · [arXiv:2507.08128](https://arxiv.org/abs/2507.08128)
-- **Datasets / base models**: unknown / nvidia/nemotron-3.5-asr-streaming-0.6b
-- **Variants in family**: —
-
-#### M8. obaidasiaone/mms-tts-urd-onnx
-
-- **Created / updated**: 2026-10-17 / 2026-10-17
-- **Task / library**: text-to-speech / transformers.js
-- **Relevance**: 16 pts · Generative Music & Audio: text-to-audio; Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: unknown / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / facebook/mms-tts-urd-script_arabic
-- **Variants in family**: —
-
-#### M9. dignome/kitten_tts2
-
-- **Created / updated**: 2026-10-03 / 2026-10-17
-- **Task / library**: text-to-speech / unknown
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license other
-- **Adoption signals**: downloads=13313 · likes=1 · trending=0.0
-- **License / access**: other / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / KittenML/kitten-tts-2
-- **Variants in family**: —
-
-#### M10. ghanaopenai/voxcpm2-ghana
-
-- **Created / updated**: 2026-10-17 / 2026-10-17
-- **Task / library**: text-to-speech / voxcpm
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / mlx
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **Adoption signals**: downloads=4 · likes=0 · trending=0.0
 - **License / access**: apache-2.0 / public
 - **Related papers**: —
-- **Datasets / base models**: google/WaxalNLP / openbmb/VoxCPM2
+- **Datasets / base models**: unknown / OpenMOSS-Team/MOSS-TTSD-v1.0
 - **Variants in family**: —
 
-#### M11. Infinix-io/s2-pro-gguf
+#### M20. inklight-app/pocket-tts-q8
 
-- **Created / updated**: 2026-10-17 / 2026-10-17
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / pocket-tts
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license cc-by-4.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: cc-by-4.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / kyutai/pocket-tts-without-voice-cloning
+- **Variants in family**: —
+
+#### M21. OrionCAF/pocket-tts-turkish-8l
+
+- **Created / updated**: 2026-10-17 / 2026-10-18
+- **Task / library**: text-to-speech / pocket-tts
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license cc-by-4.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: cc-by-4.0 / gated
+- **Related papers**: —
+- **Datasets / base models**: ysdede/commonvoice_17_tr_fixed / kyutai/pocket-tts
+- **Variants in family**: —
+
+#### M22. itzune/pocket-tts-basque-24l
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: text-to-speech / pocket-tts
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license cc-by-4.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: cc-by-4.0 / public
+- **Related papers**: —
+- **Datasets / base models**: itzune/bssd / kyutai/pocket-tts
+- **Variants in family**: —
+
+#### M23. Allinsama/myshell-ai__OpenVoice
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
 - **Task / library**: text-to-speech / unknown
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license other
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license mit
 - **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: other / public
+- **License / access**: mit / public
 - **Related papers**: —
-- **Datasets / base models**: unknown / fishaudio/s2-pro
+- **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-#### M12. Infinix-io/Drama-3-GGUF
+#### M24. jordimas/drama-3-ct2-int8
 
-- **Created / updated**: 2026-10-17 / 2026-10-17
-- **Task / library**: text-to-speech / unknown
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license other
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: other / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / fishaudio/drama-3
-- **Variants in family**: Infinix-io/drama-3-int4
-
-#### M13. UltimateIntent/Fish-Audio-Drama-3-Q2-Q3
-
-- **Created / updated**: 2026-10-17 / 2026-10-17
-- **Task / library**: text-to-speech / comfyui
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license other
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: other / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / fishaudio/drama-3
-- **Variants in family**: —
-
-#### M14. Infinix-io/Fish-D
-
-- **Created / updated**: 2026-10-17 / 2026-10-17
+- **Created / updated**: 2026-10-18 / 2026-10-18
 - **Task / library**: text-to-speech / unknown
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag); model card links an arXiv paper; declares license other
 - **Adoption signals**: downloads=0 · likes=0 · trending=0.0
@@ -189,94 +314,72 @@ Sources: arxiv=0 · semantic_scholar=88 · huggingface_models=307
 - **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-#### M15. VoiceHub/DACFlow-EN-10k
+#### M25. waxal-benchmarking/voxcpm2-multilang10-full
 
-- **Created / updated**: 2026-09-30 / 2026-10-16
-- **Task / library**: text-to-speech / audioseal
+- **Created / updated**: 2026-10-09 / 2026-10-17
+- **Task / library**: text-to-speech / voxcpm
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **Adoption signals**: downloads=337 · likes=0 · trending=0.0
 - **License / access**: apache-2.0 / public
 - **Related papers**: —
-- **Datasets / base models**: SynDataLab-EN/echo-clones-4m-en, VoiceHub/DACFlow-EN-10k-data / unknown
+- **Datasets / base models**: unknown / openbmb/VoxCPM2
 - **Variants in family**: —
 
-#### M16. sunandbean/diffrhythm-1.2-p100a
+#### M26. Allinsama/cstr__cosyvoice3-0.5b-2512-GGUF
 
-- **Created / updated**: 2026-10-10 / 2026-10-16
-- **Task / library**: text-to-audio / unknown
-- **Relevance**: 14 pts · Generative Music & Audio: music generation, text-to-audio (pipeline tag); declares license apache-2.0
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: apache-2.0 / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / ASLP-lab/DiffRhythm-1_2-full
-- **Variants in family**: —
-
-#### M17. sunandbean/acestep-1.5-turbo-p100a
-
-- **Created / updated**: 2026-10-10 / 2026-10-16
-- **Task / library**: text-to-audio / unknown
-- **Relevance**: 14 pts · Generative Music & Audio: music generation, text-to-audio (pipeline tag); declares license mit
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: mit / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / ACE-Step/Ace-Step1.5
-- **Variants in family**: —
-
-#### M18. Moxiegen/Moxie-Multimedia
-
-- **Created / updated**: 2026-10-07 / 2026-10-16
+- **Created / updated**: 2026-10-17 / 2026-10-17
 - **Task / library**: text-to-speech / unknown
-- **Relevance**: 9 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition; declares license gpl-3.0
-- **Adoption signals**: downloads=0 · likes=2 · trending=0.0
-- **License / access**: gpl-3.0 / public
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
+- **Adoption signals**: downloads=51 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / FunAudioLLM/Fun-CosyVoice3-0.5B-2512
+- **Variants in family**: —
+
+#### M27. Jinstudio/MOSS-SoundEffect-v2.0
+
+- **Created / updated**: 2026-10-17 / 2026-10-17
+- **Task / library**: text-to-audio / diffusers
+- **Relevance**: 14 pts · Generative Music & Audio: audio generation, text-to-audio (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=10 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / Qwen/Qwen3-1.7B
+- **Variants in family**: —
+
+#### M28. Allinsama/nvidia__bigvgan_v2_22khz_80band_256x
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: audio-to-audio / PyTorch
+- **Relevance**: 13 pts · Generative Music & Audio: audio generation; model card links an arXiv paper; declares license mit
+- **Adoption signals**: downloads=13 · likes=0 · trending=0.0
+- **License / access**: mit / public
+- **Related papers**: [arXiv:2206.04658](https://arxiv.org/abs/2206.04658)
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M29. Allinsama/nvidia__bigvgan_v2_24khz_100band_256x
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: audio-to-audio / PyTorch
+- **Relevance**: 13 pts · Generative Music & Audio: audio generation; model card links an arXiv paper; declares license mit
+- **Adoption signals**: downloads=12 · likes=0 · trending=0.0
+- **License / access**: mit / public
+- **Related papers**: [arXiv:2206.04658](https://arxiv.org/abs/2206.04658)
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M30. kuanyshoteu/freedomspeech-asr
+
+- **Created / updated**: 2026-10-18 / 2026-10-18
+- **Task / library**: automatic-speech-recognition / freedomspeech
+- **Relevance**: 12 pts · Speech Generation, Recognition & Dialogue: text-to-speech, automatic speech recognition (pipeline tag); declares license other
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: other / public
 - **Related papers**: —
 - **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-## Research signals
+## No new highly relevant papers today
 
-- Speech Generation, Recognition & Dialogue: 2 papers
-- Music Foundation Models & Representations: 1 papers
-
-## Quick scan
-
-| # | Paper | Date | Score | Topics | Code |
-|---:|---|---|---:|---|---|
-| 1 | [Text-to-Speech Bahasa Melayu Dialek Lubuk Kandis Menggunakan Metode VITS](https://www.semanticscholar.org/paper/7950d434e2f37ffe3deb637bf7b9814ef021edf5) | 2026-10-14 | 14 | Speech Generation, Recognition & Dialogue | — |
-| 2 | [SmartSign: Real-Time Hand Gesture Recognition and Speech Generation Platform](https://www.semanticscholar.org/paper/4e692f532eef3c19f546526e91a8be7d02b6b0de) | 2026-10-14 | 10 | Speech Generation, Recognition & Dialogue | — |
-| 3 | [Audio Analysis and Symbolic Music Note Generation](https://www.semanticscholar.org/paper/695c4aee4424bbddd7410dabe3abbaf664921982) | 2026-10-14 | 8 | Music Foundation Models & Representations | — |
-
-## Paper cards
-
-### 1. Text-to-Speech Bahasa Melayu Dialek Lubuk Kandis Menggunakan Metode VITS
-
-- **Authors**: Dedi Erlyanto, Yusra, M. Fikry
-- **Date / sources**: 2026-10-14 · semantic_scholar
-- **Relevance**: 14 pts · Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech
-- **Links**: [Paper](https://www.semanticscholar.org/paper/7950d434e2f37ffe3deb637bf7b9814ef021edf5) · [PDF](https://doi.org/10.33322/petir.v18i2.2883)
-
-The existence of numerous regional languages in Indonesia reflects the country's cultural richness, with their historical distribution forming various dialects. One of them is the Malay Language of the Lubuk Kandis Dialect. To support the preservation and dissemination of this language, this study applies speech synthesis technology in the form of Text-to-Speech (TTS) to generate speech output for the Lubuk Kandis…
-
-**Reading notes** (method / data / metrics / reproducibility / transferability): _TODO_
-
-### 2. SmartSign: Real-Time Hand Gesture Recognition and Speech Generation Platform
-
-- **Authors**: Animesh Chandrashekhar Agarkar, Rahul Mahadev Khar, Mr. Sahil Sharma, Mr. Vaibhav Sahadeo Korde, A. Alvi
-- **Date / sources**: 2026-10-14 · semantic_scholar
-- **Relevance**: 10 pts · Speech Generation, Recognition & Dialogue: speech generation
-- **Links**: [Paper](https://www.semanticscholar.org/paper/4e692f532eef3c19f546526e91a8be7d02b6b0de) · [PDF](https://doi.org/10.48175/ijarsct-38861)
-
-Sign language is an essential means of communication for individuals with hearing and speech impairments. However, communication barriers often arise between sign language users and people who are unfamiliar with sign language. To address this challenge, this paper presents a SmartSign: Real-Time Hand Gesture Recognition and Speech Generation Platform that uses computer vision and deep learning techniques to…
-
-**Reading notes** (method / data / metrics / reproducibility / transferability): _TODO_
-
-### 3. Audio Analysis and Symbolic Music Note Generation
-
-- **Authors**: Sarvesh Satish
-- **Date / sources**: 2026-10-14 · semantic_scholar
-- **Relevance**: 8 pts · Music Foundation Models & Representations: symbolic music
-- **Links**: [Paper](https://www.semanticscholar.org/paper/695c4aee4424bbddd7410dabe3abbaf664921982) · [PDF](https://www.ijfmr.com/papers/2026/5/89740.pdf)
-
-This report documents an analysis of a short trumpet recording, working through the full pipeline fromraw waveform to a playable MIDI file and, eventually, engraved sheet music. I used the Fast FourierTransform (FFT) to look at the recording's overall spectral content and a Short-Time Fourier Transform (STFT) spectrogram to see how that content changed over time. The pYIN algorithm provided a frame-by-frame estimate…
-
-**Reading notes** (method / data / metrics / reproducibility / transferability): _TODO_
+Model signals are above; no new relevant papers in the window.
