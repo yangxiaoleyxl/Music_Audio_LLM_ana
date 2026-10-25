@@ -1,12 +1,14 @@
-# Music / Audio Foundation Model Research Radar — 2026-10-24
+# Music / Audio Foundation Model Research Radar — 2026-10-25
 
-> Lookback window: 2026-10-17 to 2026-10-24 · New papers: 1 · New models: 17 · relevant papers/models in window: 26/54 · raw papers/models: 54/347
+> Lookback window: 2026-10-18 to 2026-10-25 · New papers: 0 · New models: 30 · relevant papers/models in window: 18/54 · raw papers/models: 35/343
 
-Sources: arxiv=0 · semantic_scholar=54 · huggingface_models=347
+Sources: arxiv=0 · semantic_scholar=35 · huggingface_models=343
 
 ## Source notes
 
 - arXiv: HTTP Error 500: Internal Server Error
+- Semantic Scholar / Speech Generation, Recognition & Dialogue: HTTP Error 429: 
+- Semantic Scholar / Evaluation, Alignment, Safety & Copyright: HTTP Error 429: 
 
 ## Hugging Face model signals
 
@@ -14,84 +16,218 @@ Sources: arxiv=0 · semantic_scholar=54 · huggingface_models=347
 
 | # | Model family | Updated | Task | Score | Variants | Downloads | Likes | License |
 |---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | [Aratako/Drama-3-Japanese](https://huggingface.co/Aratako/Drama-3-Japanese) | 2026-10-24 | text-to-speech | 25 | 1 | 2 | 1 | other |
-| 2 | [Im-fin3/hibiki-zero-3b-mlx-q4](https://huggingface.co/Im-fin3/hibiki-zero-3b-mlx-q4) | 2026-10-24 | audio-to-audio | 21 | 1 | 0 | 0 | cc-by-nc-sa-4.0 |
-| 3 | [AMAImedia/NOESIS-Qwen3-TTS-1.7B-Talker-Combo-LLM2-ASR2-BF16](https://huggingface.co/AMAImedia/NOESIS-Qwen3-TTS-1.7B-Talker-Combo-LLM2-ASR2-BF16) | 2026-10-24 | text-to-speech | 19 | 1 | 1711 | 3 | apache-2.0 |
-| 4 | [shaikayany/OmniVoice](https://huggingface.co/shaikayany/OmniVoice) | 2026-10-24 | text-to-speech | 16 | 1 | 0 | 1 | unknown |
-| 5 | [smirki/lure-tts-0.6b-preview](https://huggingface.co/smirki/lure-tts-0.6b-preview) | 2026-10-24 | text-to-speech | 15 | 1 | 49 | 1 | apache-2.0 |
-| 6 | [shiqianyan/TangYuGe-GPT-SoVITS-v2ProPlus](https://huggingface.co/shiqianyan/TangYuGe-GPT-SoVITS-v2ProPlus) | 2026-10-24 | text-to-speech | 15 | 1 | 0 | 1 | apache-2.0 |
-| 7 | [waxal-benchmarking/voxcpm2-top10-full](https://huggingface.co/waxal-benchmarking/voxcpm2-top10-full) | 2026-10-24 | text-to-speech | 15 | 1 | 97 | 0 | apache-2.0 |
-| 8 | [inklight-app/pocket-tts-q8](https://huggingface.co/inklight-app/pocket-tts-q8) | 2026-10-24 | text-to-speech | 15 | 1 | 46 | 0 | cc-by-4.0 |
-| 9 | [smirki/lure-turbo-tts-0.6b-preview](https://huggingface.co/smirki/lure-turbo-tts-0.6b-preview) | 2026-10-24 | text-to-speech | 15 | 1 | 0 | 0 | apache-2.0 |
-| 10 | [anyantudre/moore-tts-chatterbox](https://huggingface.co/anyantudre/moore-tts-chatterbox) | 2026-10-24 | text-to-speech | 15 | 1 | 0 | 0 | mit |
-| 11 | [anyantudre/moore-tts-omnivoice](https://huggingface.co/anyantudre/moore-tts-omnivoice) | 2026-10-24 | text-to-speech | 15 | 1 | 0 | 0 | cc-by-nc-4.0 |
-| 12 | [6l3m/kairos-voice](https://huggingface.co/6l3m/kairos-voice) | 2026-10-24 | text-to-speech | 15 | 1 | 0 | 0 | cc-by-4.0 |
-| 13 | [aufklarer/Breeze-TTS-2-MLX-bf16](https://huggingface.co/aufklarer/Breeze-TTS-2-MLX-bf16) | 2026-10-24 | text-to-speech | 15 | 2 | 0 | 0 | other |
-| 14 | [Anadilorg/Anadil_Kurmanji_TTS](https://huggingface.co/Anadilorg/Anadil_Kurmanji_TTS) | 2026-10-24 | text-to-speech | 13 | 1 | 47 | 0 | mit |
-| 15 | [terry-sarana/kokoro-dad-epoch5](https://huggingface.co/terry-sarana/kokoro-dad-epoch5) | 2026-10-24 | text-to-speech | 11 | 6 | 0 | 0 | other |
-| 16 | [tan-ht/naist-iwslt2025](https://huggingface.co/tan-ht/naist-iwslt2025) | 2026-10-24 | automatic-speech-recognition | 10 | 1 | 0 | 0 | apache-2.0 |
-| 17 | [audio-cpp/Ming-3.0-Audio-Tiny-GGUF](https://huggingface.co/audio-cpp/Ming-3.0-Audio-Tiny-GGUF) | 2026-10-24 | text-to-speech | 9 | 1 | 4180 | 3 | mit |
+| 1 | [yonghyunk1m/TTM-HumanPref](https://huggingface.co/yonghyunk1m/TTM-HumanPref) | 2026-10-24 | text-to-audio | 44 | 1 | 0 | 0 | cc-by-nc-4.0 |
+| 2 | [jjcoders/suna-v1](https://huggingface.co/jjcoders/suna-v1) | 2026-10-25 | text-to-audio | 42 | 1 | 1269 | 1 | mit |
+| 3 | [ArchiveStudio/MOSS-Music-8B-Thinking](https://huggingface.co/ArchiveStudio/MOSS-Music-8B-Thinking) | 2026-10-24 | audio-text-to-text | 35 | 1 | 17 | 0 | apache-2.0 |
+| 4 | [ArchiveStudio/MOSS-Music-8B-Instruct](https://huggingface.co/ArchiveStudio/MOSS-Music-8B-Instruct) | 2026-10-24 | audio-text-to-text | 35 | 1 | 17 | 0 | apache-2.0 |
+| 5 | [Tesslate/Lure-TTS-0.6B](https://huggingface.co/Tesslate/Lure-TTS-0.6B) | 2026-10-25 | text-to-speech | 33 | 1 | 24 | 5 | apache-2.0 |
+| 6 | [Tesslate/Lure-TTS-Turbo](https://huggingface.co/Tesslate/Lure-TTS-Turbo) | 2026-10-25 | text-to-speech | 33 | 1 | 20 | 1 | apache-2.0 |
+| 7 | [mradermacher/Lure-TTS-0.6B-GGUF](https://huggingface.co/mradermacher/Lure-TTS-0.6B-GGUF) | 2026-10-25 | text-to-speech | 33 | 1 | 0 | 1 | apache-2.0 |
+| 8 | [mradermacher/Lure-TTS-Turbo-GGUF](https://huggingface.co/mradermacher/Lure-TTS-Turbo-GGUF) | 2026-10-25 | text-to-speech | 33 | 1 | 0 | 1 | apache-2.0 |
+| 9 | [duonglequanghoang1/VieNeu-TTS-v3-Turbo](https://huggingface.co/duonglequanghoang1/VieNeu-TTS-v3-Turbo) | 2026-10-25 | text-to-speech | 31 | 1 | 0 | 0 | apache-2.0 |
+| 10 | [RetentionLabs/PolyPlex-11B-CJKE](https://huggingface.co/RetentionLabs/PolyPlex-11B-CJKE) | 2026-10-24 | audio-to-audio | 29 | 1 | 0 | 0 | other |
+| 11 | [HirCoir/piper-checkpoint-es-mx-astra](https://huggingface.co/HirCoir/piper-checkpoint-es-mx-astra) | 2026-10-25 | text-to-audio | 21 | 1 | 9 | 0 | unknown |
+| 12 | [Infinix-io/FishAudio-Drama3-TTS-83Lang-Qwen3.5-35B-A3B-FP8-BF16-GGUF](https://huggingface.co/Infinix-io/FishAudio-Drama3-TTS-83Lang-Qwen3.5-35B-A3B-FP8-BF16-GGUF) | 2026-10-25 | text-to-speech | 21 | 1 | 0 | 0 | apache-2.0 |
+| 13 | [Rohith9059/speecht5-finetuned-voxpopuli-nl](https://huggingface.co/Rohith9059/speecht5-finetuned-voxpopuli-nl) | 2026-10-25 | text-to-speech | 17 | 1 | 4 | 0 | mit |
+| 14 | [mrheartng/idoma-mms-tts-eng](https://huggingface.co/mrheartng/idoma-mms-tts-eng) | 2026-10-24 | text-to-speech | 17 | 1 | 0 | 1 | cc-by-nc-4.0 |
+| 15 | [zxyty/physicalai-hunyuanvideo-foley](https://huggingface.co/zxyty/physicalai-hunyuanvideo-foley) | 2026-10-25 | text-to-audio | 16 | 1 | 0 | 0 | other |
+| 16 | [preslaff/omnivoice-bg](https://huggingface.co/preslaff/omnivoice-bg) | 2026-10-25 | text-to-speech | 15 | 1 | 61 | 5 | apache-2.0 |
+| 17 | [shiqianyan/TangYuGe-GPT-SoVITS-v2ProPlus](https://huggingface.co/shiqianyan/TangYuGe-GPT-SoVITS-v2ProPlus) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 1 | apache-2.0 |
+| 18 | [jinhwan000/qwen3-tts-0.6b-base-ov](https://huggingface.co/jinhwan000/qwen3-tts-0.6b-base-ov) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 1 | apache-2.0 |
+| 19 | [anyantudre/moore-tts-kokoro](https://huggingface.co/anyantudre/moore-tts-kokoro) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 0 | apache-2.0 |
+| 20 | [theoracleguy/Chatterbox-Multilingual-pt-br-MLX](https://huggingface.co/theoracleguy/Chatterbox-Multilingual-pt-br-MLX) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 0 | mit |
+| 21 | [anyantudre/moore-tts-f5](https://huggingface.co/anyantudre/moore-tts-f5) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 0 | cc-by-nc-4.0 |
+| 22 | [theoracleguy/VoxCPM2-bf16](https://huggingface.co/theoracleguy/VoxCPM2-bf16) | 2026-10-25 | text-to-speech | 15 | 3 | 0 | 0 | apache-2.0 |
+| 23 | [jinhwan000/qwen3-tts-1.7b-base-ov](https://huggingface.co/jinhwan000/qwen3-tts-1.7b-base-ov) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 0 | apache-2.0 |
+| 24 | [theoracleguy/chatterbox-multilingual-v3](https://huggingface.co/theoracleguy/chatterbox-multilingual-v3) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 0 | mit |
+| 25 | [anyantudre/moore-tts-pocket](https://huggingface.co/anyantudre/moore-tts-pocket) | 2026-10-25 | text-to-speech | 15 | 1 | 0 | 0 | cc-by-4.0 |
+| 26 | [Modularcomputing/dynamic-accent-duplex](https://huggingface.co/Modularcomputing/dynamic-accent-duplex) | 2026-10-25 | audio-to-audio | 13 | 1 | 17 | 0 | apache-2.0 |
+| 27 | [Messam174/Sada-TTS-SA-v1](https://huggingface.co/Messam174/Sada-TTS-SA-v1) | 2026-10-25 | text-to-speech | 11 | 1 | 4 | 1 | other |
+| 28 | [ArchiveStudio/MOSS-Audio-8B-Thinking](https://huggingface.co/ArchiveStudio/MOSS-Audio-8B-Thinking) | 2026-10-24 | audio-text-to-text | 11 | 1 | 16 | 0 | apache-2.0 |
+| 29 | [ArchiveStudio/MOSS-Audio-8B-Instruct](https://huggingface.co/ArchiveStudio/MOSS-Audio-8B-Instruct) | 2026-10-24 | audio-text-to-text | 11 | 1 | 16 | 0 | apache-2.0 |
+| 30 | [NbAiLab/nb-asr-qwen17b-bokfink021-beta](https://huggingface.co/NbAiLab/nb-asr-qwen17b-bokfink021-beta) | 2026-10-25 | automatic-speech-recognition | 10 | 1 | 0 | 0 | apache-2.0 |
 
 ### Model cards
 
-#### M1. Aratako/Drama-3-Japanese
-
-- **Created / updated**: 2026-10-22 / 2026-10-24
-- **Task / library**: text-to-speech / unknown
-- **Relevance**: 25 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning; declares license other
-- **Adoption signals**: downloads=2 · likes=1 · trending=0.0
-- **License / access**: other / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / fishaudio/drama-3
-- **Variants in family**: —
-
-#### M2. Im-fin3/hibiki-zero-3b-mlx-q4
+#### M1. yonghyunk1m/TTM-HumanPref
 
 - **Created / updated**: 2026-10-24 / 2026-10-24
-- **Task / library**: audio-to-audio / mlx
-- **Relevance**: 21 pts · Speech Generation, Recognition & Dialogue: speech translation, speech-to-speech; declares license cc-by-nc-sa-4.0
+- **Task / library**: text-to-audio / pytorch
+- **Relevance**: 44 pts · Generative Music & Audio: text-to-music, text to music, music generation; model card links an arXiv paper; declares license cc-by-nc-4.0
 - **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: cc-by-nc-sa-4.0 / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / kyutai/hibiki-zero-3b-pytorch-bf16
+- **License / access**: cc-by-nc-4.0 / public
+- **Related papers**: [arXiv:2606.21670](https://arxiv.org/abs/2606.21670)
+- **Datasets / base models**: unknown / AndreasXi/MeanAudio
 - **Variants in family**: —
 
-#### M3. AMAImedia/NOESIS-Qwen3-TTS-1.7B-Talker-Combo-LLM2-ASR2-BF16
+#### M2. jjcoders/suna-v1
 
-- **Created / updated**: 2026-08-27 / 2026-10-24
-- **Task / library**: text-to-speech / unknown
-- **Relevance**: 19 pts · Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
-- **Adoption signals**: downloads=1711 · likes=3 · trending=0.0
-- **License / access**: apache-2.0 / public
+- **Created / updated**: 2026-10-11 / 2026-10-25
+- **Task / library**: text-to-audio / diffusers
+- **Relevance**: 42 pts · Generative Music & Audio: text-to-music, text to music, music generation; declares license mit
+- **Adoption signals**: downloads=1269 · likes=1 · trending=0.0
+- **License / access**: mit / public
 - **Related papers**: —
-- **Datasets / base models**: unknown / Qwen/Qwen3-TTS-12Hz-1.7B-Base, Qwen/Qwen3-1.7B, Qwen/Qwen3-ASR-1.7B, FINAL-Bench/Darwin-TTS-1.7B-Cross
+- **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-#### M4. shaikayany/OmniVoice
+#### M3. ArchiveStudio/MOSS-Music-8B-Thinking
 
 - **Created / updated**: 2026-10-24 / 2026-10-24
-- **Task / library**: text-to-speech / omnivoice
-- **Relevance**: 16 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; model card links an arXiv paper
-- **Adoption signals**: downloads=0 · likes=1 · trending=0.0
-- **License / access**: unknown / public
-- **Related papers**: [arXiv:2604.00688](https://arxiv.org/abs/2604.00688)
-- **Datasets / base models**: unknown / Qwen/Qwen3-0.6B
-- **Variants in family**: —
-
-#### M5. smirki/lure-tts-0.6b-preview
-
-- **Created / updated**: 2026-10-21 / 2026-10-24
-- **Task / library**: text-to-speech / unknown
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
-- **Adoption signals**: downloads=49 · likes=1 · trending=0.0
+- **Task / library**: audio-text-to-text / transformers
+- **Relevance**: 35 pts · Audio & Speech Language Models: audio language model, audio-language model; Music Foundation Models & Representations: music understanding; Audio Understanding & Reasoning: audio-text (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=17 · likes=0 · trending=0.0
 - **License / access**: apache-2.0 / public
 - **Related papers**: —
 - **Datasets / base models**: unknown / unknown
 - **Variants in family**: —
 
-#### M6. shiqianyan/TangYuGe-GPT-SoVITS-v2ProPlus
+#### M4. ArchiveStudio/MOSS-Music-8B-Instruct
 
-- **Created / updated**: 2026-10-20 / 2026-10-24
+- **Created / updated**: 2026-10-24 / 2026-10-24
+- **Task / library**: audio-text-to-text / transformers
+- **Relevance**: 35 pts · Audio & Speech Language Models: audio language model, audio-language model; Music Foundation Models & Representations: music understanding; Audio Understanding & Reasoning: audio-text (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=17 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M5. Tesslate/Lure-TTS-0.6B
+
+- **Created / updated**: 2026-10-24 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
+- **Relevance**: 33 pts · Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=24 · likes=5 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M6. Tesslate/Lure-TTS-Turbo
+
+- **Created / updated**: 2026-10-24 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
+- **Relevance**: 33 pts · Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=20 · likes=1 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M7. mradermacher/Lure-TTS-0.6B-GGUF
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / transformers
+- **Relevance**: 33 pts · Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=1 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / Tesslate/Lure-TTS-0.6B
+- **Variants in family**: —
+
+#### M8. mradermacher/Lure-TTS-Turbo-GGUF
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / transformers
+- **Relevance**: 33 pts · Speech Generation, Recognition & Dialogue: speech generation, speech synthesis, text-to-speech (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=1 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / Tesslate/Lure-TTS-Turbo
+- **Variants in family**: —
+
+#### M9. duonglequanghoang1/VieNeu-TTS-v3-Turbo
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
+- **Relevance**: 31 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning; Generative Music & Audio: audio generation, neural audio codec; declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: pnnbao-ump/VieNeu-TTS-10k-ENVI / unknown
+- **Variants in family**: —
+
+#### M10. RetentionLabs/PolyPlex-11B-CJKE
+
+- **Created / updated**: 2026-10-24 / 2026-10-24
+- **Task / library**: audio-to-audio / transformers
+- **Relevance**: 29 pts · Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech; model card links an arXiv paper; declares license other
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: other / public
+- **Related papers**: [arXiv:2410.00037](https://arxiv.org/abs/2410.00037) · [arXiv:2602.06053](https://arxiv.org/abs/2602.06053) · [arXiv:2506.02979](https://arxiv.org/abs/2506.02979) · [arXiv:2604.23295](https://arxiv.org/abs/2604.23295) · [arXiv:2505.09388](https://arxiv.org/abs/2505.09388) · [arXiv:2509.25149](https://arxiv.org/abs/2509.25149) · [arXiv:2505.02214](https://arxiv.org/abs/2505.02214)
+- **Datasets / base models**: unknown / nvidia/personaplex-7b-v1, Qwen/Qwen3-8B
+- **Variants in family**: —
+
+#### M11. HirCoir/piper-checkpoint-es-mx-astra
+
+- **Created / updated**: 2026-10-23 / 2026-10-25
+- **Task / library**: text-to-audio / unknown
+- **Relevance**: 21 pts · Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech; Generative Music & Audio: text-to-audio (pipeline tag)
+- **Adoption signals**: downloads=9 · likes=0 · trending=0.0
+- **License / access**: unknown / gated
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M12. Infinix-io/FishAudio-Drama3-TTS-83Lang-Qwen3.5-35B-A3B-FP8-BF16-GGUF
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
+- **Relevance**: 21 pts · Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning; model card links an arXiv paper; declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: [arXiv:2610.18010](https://arxiv.org/abs/2610.18010)
+- **Datasets / base models**: unknown / fishaudio/drama-3
+- **Variants in family**: —
+
+#### M13. Rohith9059/speecht5-finetuned-voxpopuli-nl
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / transformers
+- **Relevance**: 17 pts · Generative Music & Audio: text-to-audio; Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag); declares license mit
+- **Adoption signals**: downloads=4 · likes=0 · trending=0.0
+- **License / access**: mit / public
+- **Related papers**: —
+- **Datasets / base models**: qmeeus/voxpopuli / microsoft/speecht5_tts
+- **Variants in family**: —
+
+#### M14. mrheartng/idoma-mms-tts-eng
+
+- **Created / updated**: 2025-12-13 / 2026-10-24
+- **Task / library**: text-to-speech / transformers
+- **Relevance**: 17 pts · Generative Music & Audio: text-to-audio; Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag); declares license cc-by-nc-4.0
+- **Adoption signals**: downloads=0 · likes=1 · trending=0.0
+- **License / access**: cc-by-nc-4.0 / gated
+- **Related papers**: —
+- **Datasets / base models**: mrheartng/idoma-tts-speaker1 / facebook/mms-tts-eng
+- **Variants in family**: —
+
+#### M15. zxyty/physicalai-hunyuanvideo-foley
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-audio / hunyuanvideo-foley
+- **Relevance**: 16 pts · Audio Understanding & Reasoning: audio-text; Generative Music & Audio: text-to-audio (pipeline tag); model card links an arXiv paper; declares license other
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: other / public
+- **Related papers**: [arXiv:2508.16930](https://arxiv.org/abs/2508.16930)
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M16. preslaff/omnivoice-bg
+
+- **Created / updated**: 2026-06-24 / 2026-10-25
+- **Task / library**: text-to-speech / transformers
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
+- **Adoption signals**: downloads=61 · likes=5 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: raditotev/bg-audiobooks-tts, beleata74/bulgarian-audiobooks-tts-400h / k2-fsa/OmniVoice
+- **Variants in family**: —
+
+#### M17. shiqianyan/TangYuGe-GPT-SoVITS-v2ProPlus
+
+- **Created / updated**: 2026-10-20 / 2026-10-25
 - **Task / library**: text-to-speech / gpt-sovits
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
 - **Adoption signals**: downloads=0 · likes=1 · trending=0.0
@@ -100,146 +236,149 @@ Sources: arxiv=0 · semantic_scholar=54 · huggingface_models=347
 - **Datasets / base models**: unknown / lj1995/GPT-SoVITS
 - **Variants in family**: —
 
-#### M7. waxal-benchmarking/voxcpm2-top10-full
+#### M18. jinhwan000/qwen3-tts-0.6b-base-ov
 
-- **Created / updated**: 2026-10-22 / 2026-10-24
-- **Task / library**: text-to-speech / voxcpm
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
-- **Adoption signals**: downloads=97 · likes=0 · trending=0.0
+- **Adoption signals**: downloads=0 · likes=1 · trending=0.0
 - **License / access**: apache-2.0 / public
 - **Related papers**: —
-- **Datasets / base models**: unknown / openbmb/VoxCPM2
+- **Datasets / base models**: unknown / Qwen/Qwen3-TTS-12Hz-0.6B-Base
 - **Variants in family**: —
 
-#### M8. inklight-app/pocket-tts-q8
+#### M19. anyantudre/moore-tts-kokoro
 
-- **Created / updated**: 2026-10-18 / 2026-10-24
-- **Task / library**: text-to-speech / pocket-tts
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license cc-by-4.0
-- **Adoption signals**: downloads=46 · likes=0 · trending=0.0
-- **License / access**: cc-by-4.0 / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / kyutai/pocket-tts-without-voice-cloning
-- **Variants in family**: —
-
-#### M9. smirki/lure-turbo-tts-0.6b-preview
-
-- **Created / updated**: 2026-10-24 / 2026-10-24
+- **Created / updated**: 2026-10-25 / 2026-10-25
 - **Task / library**: text-to-speech / unknown
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
 - **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: apache-2.0 / public
+- **License / access**: apache-2.0 / gated
 - **Related papers**: —
-- **Datasets / base models**: unknown / unknown
+- **Datasets / base models**: unknown / hexgrad/Kokoro-82M
 - **Variants in family**: —
 
-#### M10. anyantudre/moore-tts-chatterbox
+#### M20. theoracleguy/Chatterbox-Multilingual-pt-br-MLX
 
-- **Created / updated**: 2026-10-24 / 2026-10-24
-- **Task / library**: text-to-speech / chatterbox
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / mlx-audio
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license mit
 - **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: mit / gated
+- **License / access**: mit / public
 - **Related papers**: —
-- **Datasets / base models**: unknown / ResembleAI/chatterbox
+- **Datasets / base models**: unknown / ResembleAI/Chatterbox-Multilingual-pt-br
 - **Variants in family**: —
 
-#### M11. anyantudre/moore-tts-omnivoice
+#### M21. anyantudre/moore-tts-f5
 
-- **Created / updated**: 2026-10-24 / 2026-10-24
+- **Created / updated**: 2026-10-25 / 2026-10-25
 - **Task / library**: text-to-speech / unknown
 - **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license cc-by-nc-4.0
 - **Adoption signals**: downloads=0 · likes=0 · trending=0.0
 - **License / access**: cc-by-nc-4.0 / gated
 - **Related papers**: —
-- **Datasets / base models**: unknown / k2-fsa/OmniVoice
+- **Datasets / base models**: unknown / SWivid/F5-TTS
 - **Variants in family**: —
 
-#### M12. 6l3m/kairos-voice
+#### M22. theoracleguy/VoxCPM2-bf16
 
-- **Created / updated**: 2026-10-24 / 2026-10-24
-- **Task / library**: text-to-speech / onnx
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license cc-by-4.0
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: cc-by-4.0 / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / kyutai/pocket-tts-without-voice-cloning
-- **Variants in family**: —
-
-#### M13. aufklarer/Breeze-TTS-2-MLX-bf16
-
-- **Created / updated**: 2026-10-23 / 2026-10-24
-- **Task / library**: text-to-speech / mlx
-- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license other
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: other / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / BreezeBlue/Breeze-TTS-2
-- **Variants in family**: aufklarer/Breeze-TTS-2-MLX-8bit
-
-#### M14. Anadilorg/Anadil_Kurmanji_TTS
-
-- **Created / updated**: 2026-08-23 / 2026-10-24
-- **Task / library**: text-to-speech / voxcpm
-- **Relevance**: 13 pts · Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag); model card links an arXiv paper; declares license mit
-- **Adoption signals**: downloads=47 · likes=0 · trending=0.0
-- **License / access**: mit / public
-- **Related papers**: [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
-- **Datasets / base models**: unknown / openbmb/VoxCPM2
-- **Variants in family**: —
-
-#### M15. terry-sarana/kokoro-dad-epoch5
-
-- **Created / updated**: 2026-10-24 / 2026-10-24
-- **Task / library**: text-to-speech / kokoro-js
-- **Relevance**: 11 pts · Speech Generation, Recognition & Dialogue: text-to-speech; declares license other
-- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
-- **License / access**: other / public
-- **Related papers**: —
-- **Datasets / base models**: unknown / hexgrad/Kokoro-82M
-- **Variants in family**: terry-sarana/kokoro-dad-epoch4, terry-sarana/kokoro-dad-epoch3, terry-sarana/kokoro-dad-epoch2, terry-sarana/kokoro-dad-epoch1, terry-sarana/kokoro-dad-epoch0
-
-#### M16. tan-ht/naist-iwslt2025
-
-- **Created / updated**: 2026-10-24 / 2026-10-24
-- **Task / library**: automatic-speech-recognition / fairseq
-- **Relevance**: 10 pts · Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation; declares license apache-2.0
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / mlx-audio
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
 - **Adoption signals**: downloads=0 · likes=0 · trending=0.0
 - **License / access**: apache-2.0 / public
 - **Related papers**: —
-- **Datasets / base models**: unknown / openai/whisper-large-v3, Qwen/Qwen2.5-7B
+- **Datasets / base models**: unknown / openbmb/VoxCPM2
+- **Variants in family**: theoracleguy/VoxCPM2-8bit, theoracleguy/VoxCPM2-4bit
+
+#### M23. jinhwan000/qwen3-tts-1.7b-base-ov
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / Qwen/Qwen3-TTS-12Hz-1.7B-Base
 - **Variants in family**: —
 
-#### M17. audio-cpp/Ming-3.0-Audio-Tiny-GGUF
+#### M24. theoracleguy/chatterbox-multilingual-v3
 
-- **Created / updated**: 2026-10-21 / 2026-10-24
-- **Task / library**: text-to-speech / unknown
-- **Relevance**: 9 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition; declares license mit
-- **Adoption signals**: downloads=4180 · likes=3 · trending=0.0
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / mlx-audio
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license mit
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
 - **License / access**: mit / public
 - **Related papers**: —
-- **Datasets / base models**: unknown / inclusionAI/Ming-3.0-audio-tiny
+- **Datasets / base models**: unknown / ResembleAI/chatterbox
 - **Variants in family**: —
 
-## Research signals
+#### M25. anyantudre/moore-tts-pocket
 
-- Generative Music & Audio: 1 papers
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
+- **Relevance**: 15 pts · Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning; declares license cc-by-4.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: cc-by-4.0 / gated
+- **Related papers**: —
+- **Datasets / base models**: unknown / kyutai/pocket-tts
+- **Variants in family**: —
 
-## Quick scan
+#### M26. Modularcomputing/dynamic-accent-duplex
 
-| # | Paper | Date | Score | Topics | Code |
-|---:|---|---|---:|---|---|
-| 1 | [Prompt specificity and iterative behaviour in text-to-music co-creation: a secondary analysis of interaction logs and a framework for perceived creative control](https://www.semanticscholar.org/paper/1975c31a5fab29456d0394082f41c74c3ff80d0b) | 2026-10-21 | 14 | Generative Music & Audio | — |
+- **Created / updated**: 2026-10-24 / 2026-10-25
+- **Task / library**: audio-to-audio / pytorch
+- **Relevance**: 13 pts · Speech Generation, Recognition & Dialogue: speech-to-speech; declares license apache-2.0
+- **Adoption signals**: downloads=17 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
 
-## Paper cards
+#### M27. Messam174/Sada-TTS-SA-v1
 
-### 1. Prompt specificity and iterative behaviour in text-to-music co-creation: a secondary analysis of interaction logs and a framework for perceived creative control
+- **Created / updated**: 2026-10-22 / 2026-10-25
+- **Task / library**: text-to-speech / unknown
+- **Relevance**: 11 pts · Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag); declares license other
+- **Adoption signals**: downloads=4 · likes=1 · trending=0.0
+- **License / access**: other / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / coqui/XTTS-v2
+- **Variants in family**: —
 
-- **Authors**: Xian Zhang, Lu Pan
-- **Date / sources**: 2026-10-21 · semantic_scholar
-- **Relevance**: 14 pts · Generative Music & Audio: text-to-music
-- **Links**: [Paper](https://www.semanticscholar.org/paper/1975c31a5fab29456d0394082f41c74c3ff80d0b) · [PDF](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1965465/pdf)
+#### M28. ArchiveStudio/MOSS-Audio-8B-Thinking
 
-Generative artificial intelligence can lower barriers to musical creation while also shifting consequential decisions away from the user. This study examines that tension through a secondary analysis of the published PAGURI interaction-log prompt corpus and develops a tentative framework for perceived creative control. The analysable corpus contained 304 text-to-music prompts from 24 participants. Musical…
+- **Created / updated**: 2026-10-24 / 2026-10-24
+- **Task / library**: audio-text-to-text / unknown
+- **Relevance**: 11 pts · Music Foundation Models & Representations: music understanding; Audio Understanding & Reasoning: audio-text (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=16 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
 
-**Reading notes** (method / data / metrics / reproducibility / transferability): _TODO_
+#### M29. ArchiveStudio/MOSS-Audio-8B-Instruct
+
+- **Created / updated**: 2026-10-24 / 2026-10-24
+- **Task / library**: audio-text-to-text / unknown
+- **Relevance**: 11 pts · Music Foundation Models & Representations: music understanding; Audio Understanding & Reasoning: audio-text (pipeline tag); declares license apache-2.0
+- **Adoption signals**: downloads=16 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / public
+- **Related papers**: —
+- **Datasets / base models**: unknown / unknown
+- **Variants in family**: —
+
+#### M30. NbAiLab/nb-asr-qwen17b-bokfink021-beta
+
+- **Created / updated**: 2026-10-25 / 2026-10-25
+- **Task / library**: automatic-speech-recognition / qwen-asr
+- **Relevance**: 10 pts · Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation; declares license apache-2.0
+- **Adoption signals**: downloads=0 · likes=0 · trending=0.0
+- **License / access**: apache-2.0 / gated
+- **Related papers**: —
+- **Datasets / base models**: unknown / NbAiLab/Qwen3-ASR-1.7B-custom-tokenizer
+- **Variants in family**: —
+
+## No new highly relevant papers today
+
+Model signals are above; no new relevant papers in the window.
