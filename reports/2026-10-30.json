@@ -1,0 +1,1748 @@
+{
+  "generated_at": "2026-10-30",
+  "window_start": "2026-10-23",
+  "source_counts": {
+    "arxiv": 0,
+    "semantic_scholar": 51
+  },
+  "errors": [
+    "arXiv: HTTP Error 500: Internal Server Error",
+    "Semantic Scholar / Audio Understanding & Reasoning: HTTP Error 429: "
+  ],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "2610.37912",
+      "title": "Beyond Utterance-Level Speaker Similarity: Perception-Aligned Segmental Evaluation of Accent in Speech Generation",
+      "abstract": "Utterance-level similarity ratings do not reveal where perceived accent differences occur in generated speech. We introduce a segmental evaluation protocol combining speaker and accent similarity ratings with subword annotations of perceived accent differences provided by listeners from target accent regions. Using newly collected recordings, 47 retained listeners evaluate 200 content-matched reference--candidate pairs spanning four Scottish and Australian voices, two zero-shot TTS systems, and an articulation-based voice conversion system. Subword annotations locate salient pronunciation differences and sometimes yield different system rankings from similarity ratings. Speaker and accent ratings remain strongly associated ($\\rho = 0.71$), highlighting the value of examining local perceptual evidence beyond these scores. Evaluation of seven objective distances reveals weak correspondence with subword selections, with correlations reaching at most $\\rho = 0.22$. We release code, data, and an interactive demo to support the development of perceptually grounded segmental accent evaluation.",
+      "authors": [
+        "Jinzuomu Zhong",
+        "Alice Ross",
+        "Catherine Lai",
+        "Korin Richmond"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37912",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "milliwattlabs/YuE2-3B-MLX-4bit",
+      "author": "milliwattlabs",
+      "created_at": "2026-09-26",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "4-bit",
+        "music-generation",
+        "text-to-music",
+        "apple-silicon",
+        "ios",
+        "text-to-audio",
+        "en",
+        "zh",
+        "arxiv:2503.08638",
+        "base_model:m-a-p/YuE2-3B",
+        "base_model:quantized:m-a-p/YuE2-3B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlicense_link: LICENSE\nbase_model: m-a-p/YuE2-3B\nbase_model_relation: quantized\nlibrary_name: mlx\npipeline_tag: text-to-audio\nlanguage:\n- en\n- zh\ntags:\n- mlx\n- 4-bit\n- music-generation\n- text-to-music\n- apple-silicon\n- ios\n---\n\n# YuE2-3B · MLX 4-bit\n\n[YuE2-3B](https://huggingface.co/m-a-p/YuE2-3B) quantized to 4-bit for\n[MLX](https://github.com/ml-explore/mlx). It turns lyrics and a style prompt\ninto a full song, vocals and accompaniment, on Apple silicon, including iPhone.\n\nAll the weights together take **2.15 GB**. The two transformer models shrink from 7.2 GB in bf16 to 2.0 GB. A 30-second song\ngenerates in **82 seconds on an iPhone 17 Pro Max** running iOS 26.6.\n\nPublished by [Milliwatt Labs](https://milliwattlabs.com). This is an unofficial\nconversion. For the model itself, its training and its benchmarks, see the\n[original model card](https://huggingface.co/m-a-p/YuE2-3B).\n\n## Samples\n\nGenerated on a Mac mini (M4) with this 4-bit model. More on [EM Radio](https://radio.transistorkit.com/), streaming 24/7.\n\n| Song | Artist | Genre | Listen |\n|---|---|---|---|\n| Better Off | Kira Nova | Pop | <audio controls src=\"https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit/resolve/main/samples/better-off.m4a\"></audio> |\n| Signal | Ada Ray | Top 40 | <audio controls src=\"https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit/resolve/main/samples/signal.m4a\"></audio> |\n| Coal Miner's Blood | Boone Harlan | Country | <audio controls src=\"https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit/resolve/main/samples/coal-miners-blood.m4a\"></audio> |\n| Phase Shift | MNTL | EDM | <audio controls src=\"https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit/resolve/main/samples/phase-shift.m4a\"></audio> |\n| Mud on the Tires | Cole Bridger | Country | <audio controls src=\"https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit/resolve/main/samples/mud-on-the-tires.m4a\"></audio> |\n| Pressure | Blaze Meridian | Hip-hop | <audio controls src=\"https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit/resolve/main/samples/pressure.m4a\"></audio> |\n\n## Apps\n\nFree apps built on this model. [ChorusPop](https://choruspop.com) adds stems, MIDI import and export, and an instrumental mode.\n\n| Platform | App |\n|---|---|\n| iPhone and iPad | [ChorusPop (TestFlight beta)](https://testflight.apple.com/join/b7j7z3CT) |\n| Mac | [ChorusPop for Mac (zip)](https://choruspop.com/download/ChorusPop-1.0.zip) |\n| Android | [ChorusPop for Android (APK beta)](https://choruspop.com/beta/ChorusPop-android.apk). Uses YuE2 weights converted for Android, not these MLX files. |\n\n## Files\n\n| Directory | What | Precision | Size |\n|---|---|---|---:|\n| `weights/ar-4bit/` | Autoregressive LM (Qwen3 architecture, 28 layers). Writes the ABC score, then the audio codec tokens. | 4-bit, group size 64 | 1.22 GB |\n| `weights/nar-4bit/` | Non-autoregressive velocity model. Turns codec tokens into audio latents. | 4-bit, group size 64; latent interface (`llm2vae`, `vae2llm`, `time_embedder`) kept in bf16 | 0.80 GB |\n| `weights/vae-decoder/` | Oobleck decoder from [YuE2-Vae](https://huggingface.co/m-a-p/YuE2-Vae). Turns 25 Hz latents into 48 kHz stereo audio. | fp16 | 0.13 GB |\n\nAlso in `weights/`: the tokenizer (`qwen.tiktoken`) and the sampling settings\n(`yue2_generation_config.json`). At the repo root: the MLX runner (`yue2_mlx.py`,\n`run_song.py`), `requirements.txt`, and the license files.\n\nQuantization is MLX's affine `mx.quantize` (4 bits, group size 64). The AR\ndirectory is a standard `qwen3` MLX checkpoint with a `quantization` block in\n`config.json`.\n\n## Changes from the original\n\nAs the CC BY-NC 4.0 license requires, here is what was changed:\n\n- The AR and NAR linear weights are quantized to 4-bit (affine, group size 64).\n  Norms and the NAR latent interface stay in bf16.\n- In the VAE decoder, weight normalization is folded into plain weights\n  (`g · v / ‖v‖`), stored in fp16. Only the decoder is included.\n- The tensors were rearranged into three MLX checkpoints. No weights were\n  retrained or fine-tuned.\n\n## Quality compared with bf16\n\nEach number compares this conversion with the original bf16 weights on the\nsame prompt and seed. That's one song, so treat it as a fidelity check, not a\nbenchmark.\n\n| Check | Result |\n|---|---|\n| AR codec tokens: top-1 agreement with bf16 (teacher-forced) | 82.9% |\n| AR codec KL divergence from bf16 | 0.023 |\n| AR codec perplexity, 4-bit / bf16 | 39.3 / 40.0 |\n| AR score (ABC) tokens: top-1 agreement | 98.8% |\n| NAR velocity cosine vs bf16 | 0.9965 |\n| Rendered latents, cosine vs bf16 (same codec tokens and noise) | 0.985 |\n| VAE decoder fp16 vs fp32 | 60.8 dB SNR |\n| Free-running song from lyrics | Finishes normally (emits the end-of-music token), 560 score + 1,056 codec tokens |\n\nFor the same seed, the 4-bit model doesn't reproduce the bf16 song note for\nnote. Its songs drift into a different, equally valid performance.\n\n## On a Mac\n\nOne full song, measured on a Mac mini (M4, 16 GB) running macOS 26.5 with\nMLX 0.32.2. The model ended the song on its own after 61.9 seconds of audio.\n\n| Stage | Seconds |\n|---|---:|\n| Load (tokenizer, AR, NAR) | 1.7 |\n| Score (ABC), 691 tokens at 80 tokens/s | 9.6 |\n| Codec tokens, 1,548 at 85 tokens/s | 19.0 |\n| NAR (codec → latents), 32 steps | 116.1 |\n| VAE decode | 5.2 |\n| **Total** | **152** |\n\nPeak MLX memory was 3.5 GB, during VAE decode.\n\n## On iPhone\n\nA 30-second clip, measured on an iPhone 17 Pro Max running iOS 26.6:\n\n| Stage | Seconds |\n|---|---:|\n| Load (tokenizer, AR) | 0.6 |\n| Score (ABC), 26 tokens/s | 23.2 |\n| Codec tokens (750), 41 tokens/s | 18.8 |\n| NAR (codec → latents) | 34.3 |\n| VAE decode | 4.3 |\n| **Total** | **81.6** |\n\n- **Memory:** peak footprint 1.9 GB during generation and 3.6 GB during VAE decode.\n- **Thermal state:** nominal the whole run.\n- **Latents** match the reference implementation's latents at cosine 0.9995 for\n  the same tokens.\n\n## Usage\n\n**Requirements**\n\n- An Apple silicon Mac (M1 or later). Intel Macs are not supported.\n- 8 GB of memory minimum; 16 GB recommended. A 3½-minute song peaks at 3.5 GB.\n- macOS 14 or later.\n- Python 3.10 or later.\n\nTested on a Mac mini (M4, 16 GB) with macOS 26, Python 3.12, `mlx` 0.32.2\nand `mlx-lm` 0.29.1.\n\nGot it running on another Mac? Let us know in the\n[Community](https://huggingface.co/milliwattlabs/YuE2-3B-MLX-4bit/discussions)\ntab which Mac it was and how long a song took.\n\n```bash\npip install mlx mlx-lm numpy tiktoken huggingface_hub\nhf download milliwattlabs/YuE2-3B-MLX-4bit --local-dir YuE2-3B-MLX-4bit\ncd YuE2-3B-MLX-4bit\n\npython run_song.py --weights weights --out out \\\n  --style \"upbeat indie pop, warm female lead vocal, acoustic guitar, light drums\" \\\n  --lyrics \"$(cat lyrics.txt)\" --seed 11\n```\n\nThe song is written to `out/song.wav` (48 kHz stereo), and the score to\n`out/abc.txt`. Lyrics use `[verse]` and `[chorus]` section tags. The same seed\ngives a different song than the original PyTorch release, because MLX uses a\ndifferent random number generator.\n\n`--cot` picks how much of the score the model writes before the audio:\n`full` (melody and chords, the default), `melody`, or `off`.\n\n## Limitations\n\n- **Non-commercial only.** The license comes from the original weights (see below).\n- Everything in the original card's limitations applies here too.\n- The runner generates a song in a single context window. Songs longer than\n  one window, which the original splits into chunks, aren't supported yet.\n- The quality figures above cover one prompt and one seed. Listen before relying on it.\n- Only the decoder half of the VAE is included, so this conversion can't\n  encode reference audio. Cover mode, which needs the encoder, isn't supported.\n  <!-- TODO: confirm cover mode is out of scope -->\n\n## License\n\nThe weights are derived from YuE2-3B and YuE2-Vae, which are licensed under\n[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/), and are\nredistributed under the same license. **Commercial use is not permitted.**\nThe MLX runner (`yue2_mlx.py`, `run_song.py`) is an independent MLX\nimplementation by Milliwatt Labs, released under the MIT license\n(`LICENSE-CODE`). The MIT license covers the code only, not the weights. The\nOobleck VAE and SnakeBeta designs it follows keep their original MIT licenses\n(`THIRD_PARTY_NOTICES.md`, `licenses/`).\n\nThe original model is by the [Multimodal Art Projection](https://github.com/multimodal-art-projection/YuE) team.\n\n## Citation\n\nIf you use this model, please cite the original YuE work:\n\n```bibtex\n@article{yuan2025yue,\n  title   = {{YuE}: Scaling Open Foundation Models for Long-Form Music Generation},\n  author  = {Yuan, Ruibin and Lin, Hanfeng and Guo, Shuyue and others},\n  journal = {arXiv preprint arXiv:2503.08638},\n  year    = {2025},\n  url     = {https://arxiv.org/abs/2503.08638}\n}\n```\n",
+      "arxiv_ids": [
+        "2503.08638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "m-a-p/YuE2-3B"
+      ],
+      "variants": [],
+      "score": 44,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "RetentionLabs/PolyPlex-14B-CJKE",
+      "author": "RetentionLabs",
+      "created_at": "2026-10-24",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "full-duplex",
+        "speech-to-speech",
+        "spoken-dialogue",
+        "tokenizer",
+        "multilingual",
+        "moshi",
+        "personaplex",
+        "qwen3",
+        "audio-to-audio",
+        "en",
+        "ko",
+        "ja",
+        "zh",
+        "arxiv:2410.00037",
+        "arxiv:2602.06053",
+        "arxiv:2506.02979",
+        "arxiv:2604.23295",
+        "arxiv:2505.09388",
+        "arxiv:2509.25149",
+        "arxiv:2505.02214",
+        "base_model:Qwen/Qwen3-8B",
+        "base_model:merge:Qwen/Qwen3-8B",
+        "base_model:nvidia/personaplex-7b-v1",
+        "base_model:merge:nvidia/personaplex-7b-v1",
+        "license:other",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/RetentionLabs/PolyPlex-14B-CJKE",
+      "card_text": "---\nlicense: other\nlicense_name: nvidia-open-model-license\nlicense_link: https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/\nlanguage:\n- en\n- ko\n- ja\n- zh\nlibrary_name: transformers\npipeline_tag: audio-to-audio\nbase_model:\n- nvidia/personaplex-7b-v1\n- Qwen/Qwen3-8B\nbase_model_relation: merge\ntags:\n- full-duplex\n- speech-to-speech\n- spoken-dialogue\n- tokenizer\n- multilingual\n- moshi\n- personaplex\n- qwen3\n---\n\n<div align=\"center\">\n\n# PolyPlex-14B-CJKE\n\n**A full-duplex spoken dialogue model for Chinese, Japanese, Korean and English**\n\n<p>\n<a href=\"https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/\"><img alt=\"License\" src=\"https://img.shields.io/badge/license-NVIDIA%20Open%20Model-76B900\"></a>\n<a href=\"https://huggingface.co/nvidia/personaplex-7b-v1\"><img alt=\"Base\" src=\"https://img.shields.io/badge/base-PersonaPlex%207B-76B900\"></a>\n<a href=\"https://huggingface.co/Qwen/Qwen3-8B\"><img alt=\"Base\" src=\"https://img.shields.io/badge/base-Qwen3--8B-615CED\"></a>\n<img alt=\"Vocabulary\" src=\"https://img.shields.io/badge/vocabulary-223%2C973-1F6FEB\">\n<img alt=\"Frame rate\" src=\"https://img.shields.io/badge/frames-12.5%20Hz-F97316\">\n<img alt=\"transformers\" src=\"https://img.shields.io/badge/transformers-%E2%89%A5%205.14-FFD21E\">\n</p>\n\n<p>\n<a href=\"#-quickstart\">Quickstart</a> ·\n<a href=\"#-the-tokenizer\">The tokenizer</a> ·\n<a href=\"#-the-processor\">The processor</a> ·\n<a href=\"#-lineage\">Lineage</a> ·\n<a href=\"#-license\">License</a> ·\n<a href=\"#-citation\">Citation</a>\n</p>\n\n</div>\n\n> [!NOTE]\n> **Preview release: tokenizer and processor only.** This repository currently ships the PolyPlex text tokenizer and the\n> input processor. The model weights will be added to this repository when training is finished. Everything below runs\n> on upstream `transformers` today; no fork is needed.\n\n## ✨ Highlights\n\n- **A vocabulary sized by speech, not by text.** Every token of a full-duplex model fills one 80 ms frame. The\n  vocabulary was grown language by language until words stop being cut by the next word on real conversational speech,\n  measured on Whisper word timings of YouTube speech in 110 languages.\n- **223,973 tokens, smaller than Gemma 3.** Helium (Moshi's vocabulary) is kept with its ids, Qwen3's tokens are merged in,\n  and whole words and subwords are added only where speech needs them. Written-only Qwen3 words that speech never uses\n  are dropped.\n- **No byte fragments in speech.** Every standard character of every language is a token, so speech never falls back to\n  bytes, which cannot be aligned to sound.\n- **Drop-in for 🤗 Transformers.** `AutoTokenizer` and `AutoProcessor` load it with stock `transformers`; the processor builds the\n  frame-aligned text, user-audio and assistant-audio streams, including the PersonaPlex persona prompt.\n\n## 🚀 Quickstart\n\n```bash\npip install \"transformers>=5.14\" torch\n```\n\n### Tokenizer\n\n```python\nfrom transformers import AutoTokenizer\n\ntokenizer = AutoTokenizer.from_pretrained(\"RetentionLabs/PolyPlex-14B-CJKE\")\n\ntokenizer.tokenize(\"안녕하세요, 반갑습니다.\")   # ['▁안녕하세요', ',', '▁반갑습니다', '.']\ntokenizer.tokenize(\"Hello there!\")               # ['▁Hello', '▁there', '!']\ntokenizer.tokenize(\"你好，很高兴认识你\")           # ['▁', '你好', '，', '很高兴', '认识', '你']\ntokenizer.tokenize(\"こんにちは、元気ですか\")       # ['▁', 'こんにちは', '、', '元', '気', 'ですか']\n\ntokenizer.pad_token_id, tokenizer.unk_token_id   # (3, 0): PAD and EPAD of the duplex text stream\n```\n\n### Processor\n\nThe processor loads the [Mimi](https://huggingface.co/kyutai/mimi) codec and turns text and audio into the three\nframe-aligned streams the model reads.\n\n```python\nimport numpy as np\nfrom transformers import AutoProcessor\n\nprocessor = AutoProcessor.from_pretrained(\"RetentionLabs/PolyPlex-14B-CJKE\", trust_remote_code=True)\n\nspeech = np.zeros(24_000 * 2, dtype=np.float32)          # 2 s of user speech at 24 kHz\ninputs = processor(text=\"안녕하세요\", audio=speech)\n# input_ids               (1, 25)    text padded with PAD to one token per frame\n# user_audio_codes        (1, 8, 25) Mimi codes of the user's speech\n# assistant_audio_codes   (1, 8, 25) encoded silence, since no assistant audio was given\n\nprompt = processor(text_prompt=\"You are a friendly assistant who speaks Korean.\")   # persona prefix\nwaveform = processor.decode_audio(inputs[\"user_audio_codes\"])                       # (1, 1, 48000)\n```\n\n## 🔤 The tokenizer\n\n### Why a duplex model needs its own vocabulary\n\nA text LLM can cut a rare word into many pieces: the sequence only gets longer. A full-duplex speech model writes its text\nstream in step with audio, **one token per 80 ms frame** (Moshi, PersonaPlex). A word must fit in the frames between its\nown onset and the next word's onset. When it does not, the next word overwrites its tail and the word is **cut**\n(Moshi, Section 3.4.4, Eq. 5). Byte fragments are worse still: a fragment of a UTF-8 character matches no sound at all.\n\nQwen3's byte-level BPE, for example, cuts 14.5% of the tokens of spoken Korean into byte fragments, 96% of them at a word's\nfirst character. So the PolyPlex vocabulary is designed around one measurable quantity.\n\n> **Word cut rate**: the share of words whose tokens do not all survive in the text stream when the words are placed at\n> their real onsets, one token per frame, the way the model is trained.\n\n### Construction\n\n| Step | What | Size |\n|---|---|---|\n| **1. Base** | Helium (Moshi's SentencePiece vocabulary) keeps every token and id. Qwen3's tokens are added with the leading space written as `▁` (`Ġword` → `▁word`); a string both have is one token, Helium's. Every string is NFC. | 32,000 + Qwen3 |\n| **2. Tier 1: characters** | Every standard character of each language (CLDR 48.2.3 exemplars, plus the full Unicode block for Indic, Southeast Asian and Georgian scripts), each also as a word-start form `▁c` for letters and digits. Unconditional. | 13,457 new |\n| **3. Tier 2: whole words** | Frequent spoken word forms that take two or more tokens, ordered by frames saved (count × (tokens − 1)), added 250 at a time while the cut rate falls. | 20,168 |\n| **4. Tier 3: subwords** | Subwords from a Unigram model trained on each language's multi-token spoken words, added 1,000 at a time while the cut rate falls, plus non-standard characters of the language's own scripts seen three or more times. | 64,228 |\n| **5. Scores** | Unigram scores by EM over the spoken text of every language, with the vocabulary fixed. | |\n| **6. Pruning** | Qwen3 multi-character tokens the spoken EM never uses are dropped (written Chinese and English words, symbol runs), as are unused word-start forms of single Han and kana characters. Code pieces, emoji and single characters are kept for tool use. | −30,685 |\n\nFor each language, both orders are run (subwords first, then whole words; and whole words first, then subwords), and the\norder that reaches the target with fewer tokens is kept. A subword shortens every word that holds it, so subwords win for\nscripts where words take many tokens (Greek: 5,016 subwords instead of 21,016 tokens; Hindi: 6,000 instead of 19,500);\nwhole words win where a few hundred to a few thousand forms suffice (Korean: 3,750 words).\n\n### Measuring the cut rate\n\n- **Speech.** User-subtitled YouTube videos of [YODAS2](https://huggingface.co/datasets/espnet/yodas2) in every language\n  that has them, Korean included. Neighbouring subtitle segments are joined into pieces of at most 25 s.\n- **Word timings.** Whisper large-v3, with the transcript forced (teacher forcing) and DTW over the alignment heads'\n  cross-attention. The timings are released as\n  [RetentionLabs/polyplex-word-timings](https://huggingface.co/datasets/RetentionLabs/polyplex-word-timings).\n- **Filtering.** Pieces whose alignment loss exceeds 1.61 (the 95th percentile on KsponSpeech) are subtitles that do not\n  match the speech. Pieces where over 10% of neighbouring onsets are under 20 ms apart were not aligned. A word whose span\n  or gap is under 30 ms per character is an alignment error: it keeps its frames but counts neither as cut nor in the total.\n- **Approximation.** Languages left with fewer than 2,000 timed words, and scripts without spaces, place words by their\n  share of characters in the utterance duration (FLEURS recordings, or the script's characters per second).\n- **Targets.** 1%, or the lowest reachable rate (every word one token) plus 0.2 points when that is higher. The main\n  languages, English, Korean, Japanese and Chinese, go on to the lowest rate plus 0.2 points even below 1%.\n\n### Result\n\nFinal cut rates are measured with the final tokenizer on the evaluation part of each language, held out from selection.\n\n| Language | Tier 1 | Tier 2 | Tier 3 | Word cut rate | Target |\n|---|---:|---:|---:|---:|---:|\n| English | 10 | 0 | 0 | 0.18% | 0.28% |\n| Korean | 2,432 | 3,750 | 48 | 0.23% | 0.23% |\n| Japanese | 8,817 | 0 | 3 | 0.00% | 0.20% |\n| Chinese (Simplified) | 6,850 | 0 | 3 | 0.00% | 0.20% |\n| Chinese (Traditional) | 6,801 | 0 | 98 | 0.03% | 0.20% |\n| Cantonese | 6,801 | 0 | 0 | 0.01% | 1.00% |\n\nAcross all 110 measured languages the median cut rate is 0.25%, and 109 are below their target. Punjabi stays at 1.97%:\nit has no subtitles in OpenSubtitles and five YODAS2 shards, so its candidate text is 2,198 lines. It is left above the\ntarget rather than filled with written text.\n\n| Vocabulary | Size |\n|---|---:|\n| Helium (Moshi, PersonaPlex) | 32,000 |\n| Llama 3 | 128,256 |\n| Qwen3 | 151,669 |\n| **PolyPlex** | **223,973** |\n| Gemma 3 | 262,144 |\n\n### Layout and behaviour\n\n| Item | Value |\n|---|---|\n| Model | SentencePiece-style Unigram with byte fallback (`tokenizers`) |\n| Normalization | NFC, then spaces to `▁` with one `▁` in front of the text |\n| Word starts | Marked by `▁` on the first token of every word. `EPAD` marks the end of a pause and is skipped when the previous word still occupies its frame (Moshi), so it cannot mark word starts. |\n| Digits | One token per digit; no multi-digit tokens exist |\n| Ids 0 – 31,999 | Helium, unchanged: `<unk>` = 0 (`EPAD` in the duplex stream), `<s>` = 1, `</s>` = 2, `<pad>` = 3 (`PAD`), bytes 4 – 259 |\n| Ids 32,000 – 32,005 | Control tokens `<tool_call>` `</tool_call>` `<tool_response>` `</tool_response>` `<think>` `</think>` |\n| Ids 32,006 – 223,972 | The rest of the base block, then one block per script, each ordered by score |\n| LM head | 224,000 rows (padded to a multiple of 128). The opening frame id is 224,000 and exists only as an input row. |\n\nControl and special tokens never come out of text: their Unigram score lies far below every text piece, so a literal\n`<think>` in text is cut as `▁<` `think` `>`.\n\nThe id range of each script block is stored as `blocks` in `tokenizer_config.json`. A script-group output head (the base\nblock plus one script's block) can be cut from it:\n\n<details>\n<summary><b>Block table</b></summary>\n\n| Block | Ids | Tokens |\n|---|---|---:|\n| base | 0 – 36,606 | 36,607 |\n| latin | 36,607 – 107,775 | 71,169 |\n| cyrillic | 107,776 – 116,037 | 8,262 |\n| greek | 116,038 – 121,270 | 5,233 |\n| armenian | 121,271 – 126,639 | 5,369 |\n| georgian | 126,640 – 126,896 | 257 |\n| hebrew | 126,897 – 130,022 | 3,126 |\n| arabic | 130,023 – 139,702 | 9,680 |\n| devanagari | 139,703 – 150,566 | 10,864 |\n| bengali | 150,567 – 150,739 | 173 |\n| gurmukhi | 150,740 – 157,581 | 6,842 |\n| gujarati | 157,582 – 157,985 | 404 |\n| oriya | 157,986 – 158,390 | 405 |\n| tamil | 158,391 – 162,326 | 3,936 |\n| telugu | 162,327 – 162,493 | 167 |\n| kannada | 162,494 – 162,651 | 158 |\n| malayalam | 162,652 – 163,847 | 1,196 |\n| sinhala | 163,848 – 178,857 | 15,010 |\n| thai | 178,858 – 180,917 | 2,060 |\n| lao | 180,918 – 183,056 | 2,139 |\n| khmer | 183,057 – 185,486 | 2,430 |\n| myanmar | 185,487 – 190,240 | 4,754 |\n| hangul | 190,241 – 200,006 | 9,766 |\n| han | 200,007 – 221,049 | 21,043 |\n| kana | 221,050 – 222,717 | 1,668 |\n| other | 222,718 – 223,948 | 1,231 |\n| mixed | 223,949 – 223,972 | 24 |\n\n</details>\n\n```python\nstart, end = tokenizer.init_kwargs[\"blocks\"][\"hangul\"]\n```\n\n<details>\n<summary><b>Data used to build the vocabulary</b></summary>\n\n| Use | Data |\n|---|---|\n| Standard characters | Unicode CLDR 48.2.3 exemplar characters |\n| Candidate words and EM scores | OpenSubtitles (first 200,000 lines per language), YODAS2 subtitles of shards not used for evaluation, FLEURS transcripts, Korean spoken corpora (AI Hub daily multi-session dialogue, colloquial Korean–English), Wikipedia only for languages without spoken text |\n| Word cut rate | YODAS2 pieces with Whisper word timings; FLEURS read speech as a reference only |\n| Check of the method on Korean | KsponSpeech evaluation split |\n\n</details>\n\n## 🎛 The processor\n\n`processing_polyplex.py` depends on upstream `transformers` only. Its behaviour matches the PersonaPlex processor output\nfor output (tested on text, audio, assistant audio and persona prompts).\n\n| Input | Output |\n|---|---|\n| `text` | `input_ids`, `attention_mask`, padded with `PAD` to one token per audio frame |\n| `audio` | `user_audio_codes` `(batch, 8, frames)` |\n| `assistant_audio` | `assistant_audio_codes` `(batch, 8, frames)` |\n| A stream left out | Filled with Mimi-encoded silence, not with a reserved id |\n| `voice_prompt`, `text_prompt` | The persona prefix in front of the inputs (needs `pyloudnorm` for the voice prompt) |\n\nThe persona prefix follows PersonaPlex's training format:\n\n| Stage | Text | Assistant stream | User stream |\n|---|---|---|---|\n| Voice prompt | `PAD` | the voice sample | 440 Hz tone |\n| 0.5 s | `PAD` | silence | tone |\n| Text prompt | `<system> … <system>`, one token per frame | silence | tone |\n| 0.5 s | `PAD` | silence | tone |\n\n## 🧬 Lineage\n\n```\nkyutai/moshiko-pytorch-bf16 ──▶ nvidia/personaplex-7b-v1 ──┐\n                                                            ├──▶ RetentionLabs/PolyPlex-14B-CJKE\nQwen/Qwen3-8B ──────────────────────────────────────────────┘\n```\n\nPolyPlex keeps PersonaPlex's attention, its feed-forward layers, its depth decoder and the Mimi codec, and places the\nfeed-forward layers of Qwen3-8B beside PersonaPlex's in every layer. Qwen3 carries multilingual knowledge; PersonaPlex's\nfeed-forward layers keep the duplex behaviour of speaking, listening and turn-taking. The text vocabulary joins Helium's\nand Qwen3's as described above.\n\n## 📚 Related work\n\n| Work | What PolyPlex takes from it |\n|---|---|\n| [Moshi](https://arxiv.org/abs/2410.00037) (Kyutai, 2024) | The full-duplex architecture, the frame-aligned text stream with `PAD`/`EPAD` (Section 3.4.4), the Helium vocabulary and the Mimi codec |\n| [PersonaPlex](https://arxiv.org/abs/2602.06053) (NVIDIA, 2026) | The duplex checkpoint PolyPlex is grafted onto, and the persona prompt the processor builds |\n| [J-Moshi](https://arxiv.org/abs/2506.02979) (Ohashi et al., Interspeech 2025) | A Japanese Moshi, pre-trained on large-scale Japanese spoken dialogue (J-CHAT) and fine-tuned on 344 hours of stereo dialogue |\n| [Human-1](https://arxiv.org/abs/2604.23295) (Josh Talks, 2026) | A Hindi Moshi with a Hindi tokenizer and re-initialized text parameters, trained on 26,000 hours of real telephone conversations |\n| [Qwen3](https://arxiv.org/abs/2505.09388) (Qwen Team, 2025) | The multilingual feed-forward layers and token strings |\n| [Pretraining LLMs with NVFP4](https://arxiv.org/abs/2509.25149) (NVIDIA, 2025) | Which parts stay in high precision when the backbone runs in NVFP4: embeddings, the LM head, normalizations and attention, and a share of the linear layers |\n| [An Empirical Study of Qwen3 Quantization](https://arxiv.org/abs/2505.02214) (2025) | Qwen3 holds up under 4-bit weights but collapses when activations are quantized to 4-bit integers, which is why the backbone uses block-scaled NVFP4 and is checked layer by layer |\n\nJ-Moshi and Human-1 adapt Moshi to one new language each with thousands of hours of that language's conversational\nspeech. PolyPlex takes multilingual knowledge from a text LLM instead, so a new language needs its text and a little\nspeech rather than a large conversational corpus.\n\n## 📜 License\n\nThis repository is governed by the\n[**NVIDIA Open Model License Agreement**](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/),\nbecause PolyPlex is derived from [PersonaPlex](https://huggingface.co/nvidia/personaplex-7b-v1).\n\nAttributions:\n\n- PersonaPlex is derived from [Moshiko](https://huggingface.co/kyutai/moshiko-pytorch-bf16) by Kyutai, released under\n  [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). The first 32,000 tokens of the vocabulary are Moshi's Helium\n  tokenizer.\n- Token strings and, in the full model, feed-forward weights come from [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) by the\n  Qwen team, released under [Apache-2.0](https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE).\n- `processing_polyplex.py` is released under Apache-2.0.\n\n## 📖 Citation\n\n```bibtex\n@misc{polyplex2026,\n  title        = {PolyPlex: Data-efficient Multilingual Transfer for Duplex Spoken LMs},\n  author       = {{RetentionLabs}},\n  year         = {2026},\n  howpublished = {\\url{https://huggingface.co/RetentionLabs/PolyPlex-14B-CJKE}}\n}\n\n@article{defossez2024moshi,\n  title   = {Moshi: a speech-text foundation model for real-time dialogue},\n  author  = {D{\\'e}fossez, Alexandre and Mazar{\\'e}, Laurent and Orsini, Manu and Royer, Am{\\'e}lie and\n             P{\\'e}rez, Patrick and J{\\'e}gou, Herv{\\'e} and Grave, Edouard and Zeghidour, Neil},\n  journal = {arXiv preprint arXiv:2410.00037},\n  year    = {2024}\n}\n\n@article{roy2026personaplex,\n  title   = {PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models},\n  author  = {Roy, Rajarshi and Raiman, Jonathan and Lee, Sang-gil and Ene, Teodor-Dumitru and Kirby, Robert and\n             Kim, Sungwon and Kim, Jaehyeon and Catanzaro, Bryan},\n  journal = {arXiv preprint arXiv:2602.06053},\n  year    = {2026}\n}\n\n@article{qwen3technicalreport,\n  title   = {Qwen3 Technical Report},\n  author  = {{Qwen Team}},\n  journal = {arXiv preprint arXiv:2505.09388},\n  year    = {2025}\n}\n```\n",
+      "arxiv_ids": [
+        "2410.00037",
+        "2602.06053",
+        "2506.02979",
+        "2604.23295",
+        "2505.09388",
+        "2509.25149",
+        "2505.02214"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nvidia/personaplex-7b-v1",
+        "Qwen/Qwen3-8B"
+      ],
+      "variants": [],
+      "score": 29,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Muiru/Audio8-TTS-Realistic-0.6b",
+      "author": "Muiru",
+      "created_at": "2026-10-30",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arktts",
+        "feature-extraction",
+        "audio",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot",
+        "multilingual",
+        "custom_code",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "ru",
+        "ar",
+        "fi",
+        "hi",
+        "id",
+        "ms",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "sv",
+        "th",
+        "tr",
+        "vi",
+        "yue",
+        "arxiv:2610.14776",
+        "base_model:Edge0/Audio8-TTS-Preview-0.6b",
+        "base_model:finetune:Edge0/Audio8-TTS-Preview-0.6b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Muiru/Audio8-TTS-Realistic-0.6b",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n  - zh\n  - en\n  - ja\n  - ko\n  - de\n  - fr\n  - es\n  - it\n  - ru\n  - ar\n  - fi\n  - hi\n  - id\n  - ms\n  - nl\n  - \"no\"\n  - pl\n  - pt\n  - sv\n  - th\n  - tr\n  - vi\n  - yue\nlibrary_name: transformers\npipeline_tag: text-to-speech\nbase_model: Edge0/Audio8-TTS-Preview-0.6b\ntags:\n  - audio\n  - text-to-speech\n  - tts\n  - voice-cloning\n  - zero-shot\n  - multilingual\n---\n\n<div align=\"center\">\n\n<img src=\"./assets/realistic-hero.svg\" alt=\"Audio8-TTS-Realistic-0.6B — More realistic speech. More languages. Still 0.6B.\" width=\"960\">\n\n[![GitHub](./assets/badges/github-badge.svg)](https://github.com/Edge0-AI/Audio8_TTS) [![License](./assets/badges/license-badge.svg)](./LICENSE) [![Demo](./assets/badges/demo-badge.svg)](https://edge0-ai.github.io/Audio8_TTS/realistic-0.6b/) [![arXiv](./assets/badges/arxiv-badge.svg)](https://arxiv.org/abs/2610.14776)\n\n[![Playground](./assets/badges/playground-badge.svg)](https://huggingface.co/spaces/Edge0/Audio8-TTS-Realistic-0.6b)\n\n[Languages](#supported-languages) · [Quick start](#installation) · [Serving](#high-throughput-serving-sglang-omni) · [Evaluation](#evaluation)\n\n</div>\n\n---\n\n**Audio8-TTS-Realistic-0.6B** builds on [Audio8-TTS-Preview-0.6b](https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b), delivering **substantially improved speech realism** while retaining its compact **0.6B** architecture and zero-shot voice cloning capabilities.\n\nThis release supports **23 languages**, adding **12 languages compared with Preview**. It uses the same Transformers inference interface as Preview. This repository includes the complete model checkpoint, its 44.1 kHz neural audio codec, tokenizer, processor, and custom Transformers code.\n\nTry speech generation and voice cloning in the [interactive Playground](https://huggingface.co/spaces/Edge0/Audio8-TTS-Realistic-0.6b). Hosted on Hugging Face ZeroGPU; availability depends on the queue and your daily GPU allowance.\n\nAudio8 is also participating in [TTS Arena](https://tts-agi-tts-arena-v2.hf.space/), where it has received encouraging ratings from listeners. We are grateful to everyone who has listened and voted.\n\n## Highlights\n\n- **Improved realism:** more natural prosody and expressive delivery, building on Preview.\n- **Broader multilingual coverage:** 23 languages, including 12 additions to Preview's 11 supported languages.\n- **Compact model:** 601 million main-model parameters, with the audio codec bundled separately.\n- **Flexible generation:** zero-shot voice cloning from a reference recording and transcript, or speech generation without a reference.\n- **GPU serving:** an SGLang Omni adapter with paged attention, dynamic batching, and an OpenAI-compatible speech API.\n\n## Supported Languages\n\n| Coverage | Languages |\n|---|---|\n| Supported in Preview (11) | Cantonese, Chinese, Dutch, English, French, German, Italian, Japanese, Korean, Polish, Spanish |\n| Added in Realistic (12) | Arabic, Finnish, Hindi, Indonesian, Malay, Norwegian, Portuguese, Russian, Swedish, Thai, Turkish, Vietnamese |\n\n> **Note:** Language quality varies; see the per-language evaluation below. Benchmark coverage includes some additional languages and is distinct from the supported-language list.\n\n## Model Details\n\nAudio8 TTS uses a DualAR architecture inspired by [Fish Audio S2 Pro](https://github.com/fishaudio/fish-speech). The slow AR transformer predicts one semantic token for each audio frame. The fast AR transformer predicts the frame's codec codebooks, conditioned on the slow hidden state and preceding codebooks.\n\n| Component | Configuration |\n|---|---|\n| Main model | 601,159,424 parameters, excluding the codec |\n| Slow AR | 24 layers, width 896, 14 attention heads, 2 KV heads |\n| Fast AR | 4 layers, width 896, 14 attention heads, 2 KV heads |\n| Acoustic tokens | 10 codebooks, 4,096 entries per codebook |\n| Codec | 44.1 kHz, 2,048 samples per model frame (~21.5 frames/s) |\n| Context | Up to 2,048 packed text/audio positions |\n\nThe bundled codec handles both reference-audio encoding and waveform decoding, so no additional codec checkpoint is required. The **0.6B** size refers to the main DualAR model; the codec is excluded from that parameter count.\n\n---\n\n## Installation\n\nPython 3.10 or newer and a CUDA-capable GPU are recommended.\n\n```bash\npip install \"torch>=2.5.0\" \"torchaudio>=2.5.0\" \\\n  \"transformers>=4.57.0,<5\" \"soundfile>=0.12\" \"safetensors>=0.4\"\n```\n\nThe Transformers release package was smoke-tested with PyTorch 2.8.0 and Transformers 4.57.3 on an NVIDIA H20 using BF16. Checks covered model loading, English and Chinese generation with and without reference audio, and generation in Arabic, Cantonese, Portuguese, and Russian. These are runtime checks, separate from the benchmark results below.\n\n## Usage\n\nThe model uses custom Transformers code. Review the files in this repository, then load it with `trust_remote_code=True`.\n\n### Zero-shot voice cloning\n\nUse a clean reference recording. Its transcript must match the spoken content exactly.\n\n```python\nimport soundfile as sf\nimport torch\nfrom transformers import AutoModel, AutoProcessor\n\nmodel_id = \"Edge0/Audio8-TTS-Realistic-0.6b\"\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\ndtype = torch.bfloat16 if device == \"cuda\" else torch.float32\n\nprocessor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)\nmodel = AutoModel.from_pretrained(\n    model_id,\n    trust_remote_code=True,\n    dtype=dtype,\n).eval().to(device)\n\ninputs = processor(\n    text=[\"Welcome to Audio8 TTS. It is wonderful to hear from you.\"],\n    reference_audio=[\"reference.wav\"],\n    reference_text=[\"The exact transcript of the reference recording.\"],\n    return_tensors=\"pt\",\n)\ninputs = {name: value.to(device) for name, value in inputs.items()}\n\nwith torch.inference_mode():\n    output = model.generate(\n        **inputs,\n        max_new_tokens=1024,\n        temperature=0.8,\n        top_p=0.95,\n        top_k=50,\n        do_sample=True,\n        return_dict_in_generate=True,\n    )\n    waveforms, waveform_lengths = model.decode_audio(output.codes)\n\naudio = waveforms[0, : int(waveform_lengths[0])].float().cpu().numpy()\nsf.write(\"output.wav\", audio, model.config.codec_sample_rate)\n```\n\n### Generation without a reference\n\nReplace the processor call above with:\n\n```python\ninputs = processor(\n    text=[\"This utterance does not use a reference voice.\"],\n    return_tensors=\"pt\",\n)\n```\n\nThen move the inputs to the model device and run the same generation and decoding steps. For command-line inference, batching, and supervised fine-tuning, see the [Audio8 TTS repository](https://github.com/Edge0-AI/Audio8_TTS), using `Edge0/Audio8-TTS-Realistic-0.6b` as the model path.\n\n## High-throughput serving: SGLang Omni\n\nThe [SGLang Omni adapter](https://github.com/Edge0-AI/Audio8_TTS/tree/master/sglang_omni) provides GPU serving for Audio8 TTS. It is installed as an independent model plugin and does not overwrite SGLang Omni core files.\n\n| Capability | Support |\n|---|---|\n| Attention and batching | SGLang paged attention and dynamic batching |\n| DualAR execution | Slow AR serving with a fixed KV cache for the Fast AR codebook decoder |\n| Voice cloning | Reference-audio encoding and waveform decoding |\n| API | OpenAI-compatible `/v1/audio/speech` service |\n\nUse the **0.6B** configuration, `sglang_omni/configs/audio8_tts_0_6b.yaml`, and set the model path to `Edge0/Audio8-TTS-Realistic-0.6b` or its downloaded snapshot. The adapter supports generation without a reference and zero-shot voice cloning. See the [deployment guide](https://github.com/Edge0-AI/Audio8_TTS#sglang-omni-serving) for compatible dependency versions, installation, server configuration, and API examples.\n\n> **Validation note:** Audio8-TTS-Realistic was tested on an NVIDIA H20 in BF16 for generation with and without a reference through the non-streaming speech API, with Torch compilation and CUDA graphs disabled. These checks validate runtime compatibility; throughput and streaming were not benchmarked.\n\n---\n\n## Evaluation\n\nError rates are percentages (**lower is better**). Speaker similarity (SIM) is on a **0–1 scale** (**higher is better**). These metrics measure intelligibility and speaker similarity; they do not directly measure perceived speech realism.\n\n### Benchmark summary\n\n**Audio8-TTS-Preview** and **Audio8-TTS-Realistic**, both **0.6B**:\n\n| Benchmark | Coverage | Preview error % ↓ | Realistic error % ↓ | Preview SIM ↑ | Realistic SIM ↑ |\n|---|---|---:|---:|---:|---:|\n| Seed-TTS | English / Chinese | 1.23 | 1.25 | 0.682 | 0.704 |\n| CV3 | 8 shared languages | 4.80 | 4.56 | — | 0.663 |\n| CV3 | 9 core languages | — | 4.86 | — | 0.661 |\n| MiniMax | 24 evaluated languages | — | 5.89 | — | 0.754 |\n\n> **Note:** Values are unweighted language macro averages. Preview results are calculated from its [published model card](https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b#evaluation), with SIM converted from percentages to a 0–1 scale. The two releases were evaluated separately. A dash means the corresponding result was not reported on Preview's card.\n>\n> Seed-TTS averages English WER and Chinese CER, excluding hard Chinese. The shared CV3 subset is Chinese, English, Japanese, Korean, German, French, Spanish, and Italian; the 9-language set also includes Russian. CV3 averages exclude hard subsets and the 13 additional languages. MiniMax averages all 24 evaluated languages, including languages outside the supported list.\n\n### Reference comparison\n\nThe following error rates come from the sources used in our technical report. Different evaluation pipelines and text normalization make this a reference comparison rather than a strictly matched ranking. A dash means that a result is unavailable in the comparison, not that the model lacks support.\n\n| Model | Parameters (B) | Seed-TTS EN/ZH error ↓ | CV3 (9) error ↓ | MiniMax (24) error ↓ |\n|---|---:|---:|---:|---:|\n| **Audio8-TTS-Realistic** | **0.6** | **1.25** | **4.86** | **5.89** |\n| Qwen3-TTS-12Hz-0.6B | 0.6 | 1.12 | — | — |\n| Qwen3-TTS-1.7B | 1.7 | 1.01 | 7.73 | 27.41 |\n| Higgs Audio v3 | 4 | 1.11 | 4.41 | 2.74 |\n| Higgs Audio v2 | 4.7 | 1.17 | 4.49 | — |\n| Fish S2 Pro | 4.6 | 1.32 | 4.49 | 4.40 |\n| MOSS-TTS-v1.5 | 8.5 | 1.52 | 6.11 | 3.78 |\n| CosyVoice3-1.5B | 1.5 | 1.67 | 6.89 | — |\n| VoxCPM2 | 2.3 | 1.41 | 5.35 | — |\n\n> **Sources:** Qwen Seed-TTS results are from the Qwen3-TTS report, linked from the [official Qwen3-TTS repository](https://github.com/QwenLM/Qwen3-TTS); Qwen's CV3/MiniMax results, all Higgs Audio v3 results, and MOSS-TTS-v1.5's CV3/MiniMax results are from [Boson AI's evaluation](https://huggingface.co/bosonai/higgs-audio-v3-tts-4b). Fish S2 Pro's MiniMax result is from the Fish Audio S2 report, linked from the [official Fish Speech repository](https://github.com/fishaudio/fish-speech); its Seed-TTS/CV3 results and Higgs Audio v2's results are our reevaluations. MOSS-TTS-v1.5's Seed-TTS result and the CosyVoice3/VoxCPM2 results are compiled in the [VoxCPM repository](https://github.com/OpenBMB/VoxCPM). Cross-project SIM values are omitted because speaker encoders and evaluation conventions differ.\n\n> **Parameter conventions:** Audio8's 0.6B excludes its separate codec; Qwen and CosyVoice use release labels; Higgs Audio v3 uses its nominal **4B** release label. The remaining sizes are rounded checkpoint counts used in our report (VoxCPM2 excludes its separate AudioVAE). These counts use different conventions across systems.\n\n### Seed-TTS detail\n\n| Split | Metric | Preview error % ↓ | Realistic error % ↓ | Preview SIM ↑ | Realistic SIM ↑ |\n|---|---|---:|---:|---:|---:|\n| English | WER | 1.506 | 1.464 | 0.632 | 0.663 |\n| Chinese | CER | 0.950 | 1.029 | 0.731 | 0.745 |\n| Chinese, hard | CER | 11.510 | 12.797 | 0.687 | 0.702 |\n\n> **Note:** Preview values are from its [published Seed-TTS table](https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b#seed-tts), with SIM converted to a 0–1 scale.\n\n### Multilingual detail\n\n<details>\n<summary>CV3: 22 languages and hard subsets</summary>\n\n| Language | Metric | Error % ↓ | SIM ↑ |\n|---|---|---:|---:|\n| Chinese | CER | 1.814 | 0.6898 |\n| English | WER | 2.907 | 0.6295 |\n| Japanese | CER | 7.511 | 0.6659 |\n| Korean | CER | 4.801 | 0.6962 |\n| German | WER | 3.200 | 0.6669 |\n| French | WER | 7.938 | 0.6355 |\n| Spanish | WER | 3.389 | 0.6680 |\n| Italian | WER | 4.933 | 0.6498 |\n| Russian | WER | 7.258 | 0.6451 |\n| Arabic | WER | 21.098 | 0.6122 |\n| Finnish | WER | 32.279 | 0.7028 |\n| Hindi | WER | 21.714 | 0.7245 |\n| Indonesian | WER | 13.743 | 0.6682 |\n| Malay | WER | 17.798 | 0.6710 |\n| Dutch | WER | 10.873 | 0.6918 |\n| Norwegian | WER | 17.961 | 0.6905 |\n| Polish | WER | 19.233 | 0.6738 |\n| Portuguese | WER | 6.871 | 0.6772 |\n| Swedish | WER | 19.252 | 0.7104 |\n| Thai | WER | 48.574 | 0.6691 |\n| Turkish | WER | 12.567 | 0.6496 |\n| Vietnamese | WER | 28.111 | 0.6790 |\n\nHard Chinese CER is **10.665%** and hard English WER is **4.736%**. These hard subsets are excluded from the 9-language summary. Each of the 22 regular language rows contains 500 evaluation items. Chinese, Japanese, and Korean use CER; the other regular language rows use WER.\n\n</details>\n\n<details>\n<summary>MiniMax: all 24 evaluated languages</summary>\n\n| Language | Metric | Error % ↓ | SIM ↑ |\n|---|---|---:|---:|\n| Arabic | CER | 2.403 | 0.7040 |\n| Cantonese | CER | 31.349 | 0.7710 |\n| Chinese | CER | 1.112 | 0.7950 |\n| Czech † | WER | 8.628 | 0.7330 |\n| Dutch | WER | 1.715 | 0.7050 |\n| English | WER | 2.161 | 0.7740 |\n| Finnish | WER | 5.072 | 0.7910 |\n| French | WER | 3.198 | 0.6660 |\n| German | WER | 0.898 | 0.7510 |\n| Greek † | CER | 4.181 | 0.7910 |\n| Hindi | CER | 9.209 | 0.8170 |\n| Indonesian | WER | 2.128 | 0.7270 |\n| Italian | WER | 1.958 | 0.7370 |\n| Japanese | CER | 5.142 | 0.7890 |\n| Korean | CER | 3.731 | 0.7850 |\n| Polish | WER | 1.957 | 0.7890 |\n| Portuguese | WER | 2.234 | 0.7860 |\n| Romanian † | WER | 17.425 | 0.7330 |\n| Russian | WER | 3.071 | 0.7490 |\n| Spanish | WER | 1.350 | 0.7450 |\n| Thai | CER | 6.674 | 0.7760 |\n| Turkish | WER | 1.560 | 0.7650 |\n| Ukrainian † | WER | 16.343 | 0.6940 |\n| Vietnamese | CER | 7.966 | 0.7120 |\n\nEach language has 100 evaluation items. Rows marked † are evaluated for completeness and are outside this release's supported-language list. The metric column preserves the evaluation suite's language-specific WER/CER choice. Cantonese is included in the 24-language average.\n\n</details>\n\n### Compared with Preview\n\nRealistic expands Preview's **11-language** coverage to **23 languages**, adding **Arabic, Finnish, Hindi, Indonesian, Malay, Norwegian, Portuguese, Russian, Swedish, Thai, Turkish, and Vietnamese**.\n\n---\n\n## Limitations and Responsible Use\n\n- Quality varies by language and evaluation set. The detailed results include difficult cases, including Cantonese and some newly supported languages; the support list is not a claim of equal quality across languages.\n- Noisy reference audio or mismatched transcripts can reduce stability and speaker similarity. The reference audio, transcript, and target text share a finite context budget; split long passages into manageable utterances.\n- Speech may contain pronunciation errors, repetitions, omissions, or early stopping. Listen to generated audio before using it in a finished product.\n- Obtain permission to clone a voice and disclose synthetic audio where appropriate.\n\n## License and Acknowledgements\n\nThe code and model weights are released under the [Apache License 2.0](./LICENSE). See [NOTICE](./NOTICE) for attribution details.\n\nWe thank the Fish Audio team for publishing the DualAR architecture used in Fish Audio S2 Pro.\n",
+      "arxiv_ids": [
+        "2610.14776"
+      ],
+      "datasets": [],
+      "base_models": [
+        "Edge0/Audio8-TTS-Preview-0.6b"
+      ],
+      "variants": [],
+      "score": 28,
+      "topic_scores": {
+        "generative_music_audio": 6,
+        "speech_models": 19
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "Generative Music & Audio: neural audio codec",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "WhissleAI/steer-tts",
+      "author": "WhissleAI",
+      "created_at": "2026-10-15",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "steertts",
+        "safetensors",
+        "steer-tts",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "english",
+        "controllable-tts",
+        "steerable-tts",
+        "prosody-control",
+        "expressive-tts",
+        "style-control",
+        "inline-markup",
+        "word-emphasis",
+        "zero-shot-voice-cloning",
+        "voice-cloning",
+        "interpretable",
+        "non-autoregressive",
+        "fastpitch",
+        "hybrid-attention",
+        "flow-matching",
+        "vocos",
+        "small-model",
+        "quantized",
+        "int8",
+        "on-device",
+        "c",
+        "embedded",
+        "streaming",
+        "non-commercial",
+        "en",
+        "license:cc-by-nc-4.0",
+        "model-index",
+        "region:us"
+      ],
+      "downloads": 144,
+      "likes": 16,
+      "trending_score": 0.0,
+      "library_name": "steertts",
+      "license": "cc-by-nc-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/WhissleAI/steer-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 24,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-4.0",
+        "community likes 16"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "AEmotionStudio/drama-3-models",
+      "author": "AEmotionStudio",
+      "created_at": "2026-10-29",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pytorch",
+        "safetensors",
+        "fish_omni",
+        "text-to-speech",
+        "voice-cloning",
+        "multi-speaker",
+        "int4",
+        "mirror",
+        "base_model:fishaudio/drama-3",
+        "base_model:quantized:fishaudio/drama-3",
+        "license:other",
+        "4-bit",
+        "drama3-int4",
+        "region:us"
+      ],
+      "downloads": 9,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/AEmotionStudio/drama-3-models",
+      "card_text": "---\nlicense: other\nlicense_name: fish-audio-community-license\nlicense_link: LICENSE\nlibrary_name: pytorch\npipeline_tag: text-to-speech\ntags:\n  - text-to-speech\n  - voice-cloning\n  - multi-speaker\n  - int4\n  - mirror\nbase_model:\n  - fishaudio/drama-3-int4\n  - fishaudio/drama-3\n---\n\n# Fish Audio Drama 3 (int4) — mirror for Mæstræa\n\n**Built with Fish Audio.**\n\nA mirror of **Fish Audio's Drama 3** — the official int4 checkpoint, [`fishaudio/drama-3-int4`](https://huggingface.co/fishaudio/drama-3-int4) @ `a6f58869` — laid out for the [Mæstræa](https://github.com/AEmotionStudio) AI Workstation (AI ▸ Voice ▸ Drama 3). All credit for the model goes to Fish Audio: see the [Drama 3 model card](https://huggingface.co/fishaudio/drama-3) and [fish.audio/drama-3](https://fish.audio/drama-3/).\n\n## License\n\nThese Fish Audio Materials are licensed under the **Fish Audio Community License, Version 1.0**. Copyright © 39 AI, INC. All Rights Reserved. The full agreement is in `LICENSE`; `NOTICE` carries the required attribution and lists what changed. Nothing here is relicensed.\n\nIn short — read `LICENSE` for the binding terms:\n\n- Free for research and non-commercial use.\n- Commercial use is free while you and your affiliates earn under **USD 500,000** a year; above that you need a licence from Fish Audio (business@fish.audio).\n- Offering Drama 3 as a **hosted speech service** (an API, or an app whose main purpose is TTS, voice-over or cloning for others) always needs a separate licence.\n- **Never clone or imitate a real person's voice without their consent**, never use it to impersonate, defraud or harass, and never remove watermarks or provenance signals. Anyone you make Drama 3 speech generation available to must be bound to the same restrictions.\n- Don't use the outputs to train other speech, audio or foundation models.\n- Products built with it must show \"Built with Fish Audio\".\n\nBy downloading these files you accept the Fish Audio Community License.\n\n## What is here\n\n| File | What it is |\n|---|---|\n| `model-000NN-of-00012.safetensors`, `model.safetensors.index.json` | The int4 checkpoint (routed experts int4 GPTQ-symmetric, everything else bf16) — byte-identical to upstream |\n| `codec.safetensors` | The 44.1 kHz audio codec — upstream's `codec.pth` converted to safetensors, every tensor bit-identical |\n| `config.json`, `tokenizer*.json`, `special_tokens_map.json`, `chat_template.jinja` | Byte-identical to upstream |\n| `LICENSE`, `NOTICE`, `sha256.json` | The agreement (verbatim), the attribution + changes, and the sha256 of every file above |\n\nFish's evaluation folders, samples and quantization scripts are not included — use the upstream repository for those.\n\n## How Mæstræa runs it\n\nMæstræa loads these weights with its own Apache-2.0 inference code (`backend/ai/drama3_vendor`, ported from [sglang-omni](https://github.com/sgl-project/sglang-omni) and [vllm-omni](https://github.com/vllm-project/vllm-omni)); no `fish-speech` code is used. On a 12 GB GPU the dense layers, codebook tower and codec decoder stay resident while the 16.6 GB of int4 experts stream from the memory-mapped shards through a GPU cache — about 2–3× real time on an RTX 4070. Scenes render line by line so each character keeps their own voice, and the main token is sampled with top-k off (a top-k cap traps cloned voices in silence).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/drama-3-int4",
+        "fishaudio/drama-3"
+      ],
+      "variants": [],
+      "score": 20,
+      "topic_scores": {
+        "speech_models": 19
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "wegotomars/OmniVoice-CoreAI-ANE",
+      "author": "wegotomars",
+      "created_at": "2026-10-25",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "coreai",
+        "safetensors",
+        "omnivoice",
+        "voice-cloning",
+        "voice-design",
+        "tts",
+        "apple",
+        "ane",
+        "apple-neural-engine",
+        "fp16",
+        "tinkerbox",
+        "text-to-speech",
+        "zh",
+        "en",
+        "ar",
+        "my",
+        "da",
+        "nl",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "he",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lo",
+        "ms",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sw",
+        "sv",
+        "tl",
+        "th",
+        "tr",
+        "vi",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:finetune:k2-fsa/OmniVoice",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 41,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "coreai",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/wegotomars/OmniVoice-CoreAI-ANE",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nbase_model: k2-fsa/OmniVoice\npipeline_tag: text-to-speech\nlibrary_name: coreai\nlanguage:\n- zh\n- en\n- ar\n- my\n- da\n- nl\n- fi\n- fr\n- de\n- el\n- he\n- hi\n- id\n- it\n- ja\n- km\n- ko\n- lo\n- ms\n- no\n- pl\n- pt\n- ru\n- es\n- sw\n- sv\n- tl\n- th\n- tr\n- vi\ntags:\n  - omnivoice\n  - voice-cloning\n  - voice-design\n  - tts\n  - apple\n  - coreai\n  - ane\n  - apple-neural-engine\n  - fp16\n  - tinkerbox\n---\n\n# OmniVoice on Apple Neural Engine\n\nCore AI conversion of [k2-fsa/OmniVoice](https://huggingface.co/k2-fsa/OmniVoice) for multilingual speech synthesis, voice cloning, and voice design, using [tinkerbox-ane](https://github.com/WeGoToMars/tinkerbox).\n\nThe FP16 Qwen3 diffusion transformer and audio projection run fully on the ANE. The 24 kHz acoustic codec decoder also runs fully on the ANE. Text processing, embeddings, scheduling, sampling, codec lookup/projection and reference encoding run on the CPU while your GPU stays idle and cool 😎❄️.\n\nRequires macOS 27, Apple Silicon M4 or newer, and Python 3.12 or 3.13. M1 and M2 are not supported: their ANE compiler rejects the long-context attention. M3 is not supported because the codec exceeds its ANE tensor-width limit.\n\n## Usage\n\nInstall `tinkerbox-ane[speech]>=2.2.0`. The downloader fetches only this Mac's bundle: its `checkpoint` folder carries the tokenizer, configuration, embeddings, and audio codec the CPU uses.\n\nGenerate speech and save it as WAV:\n\n```python\nimport soundfile as sf\nfrom tinkerbox_ane import omnivoice\nfrom tinkerbox_ane.bundle import download_bundle\n\nbundle = download_bundle(\"omnivoice\", \"wegotomars/OmniVoice-CoreAI-ANE\", \"v2.2.0\")\nwith omnivoice.load(bundle) as model:\n    audio = model.generate(\"Hello! Welcome to Tinkerbox.\", language=\"en\", seed=42)[0]\n    sf.write(\"speech.wav\", audio, model.sampling_rate)\n```\n\nClone a voice from a recording and its transcript, reusing the downloaded bundle:\n\n```python\nwith omnivoice.load(bundle) as model:\n    voice = model.create_voice_clone_prompt(\n        \"reference.m4a\", ref_text=\"The words spoken in the reference recording.\"\n    )\n    audio = model.generate(\"A new sentence in the same voice.\", voice_clone_prompt=voice, seed=42)[0]\n    sf.write(\"cloned.wav\", audio, model.sampling_rate)\n```\n\nFor voice design, pass an instruction such as `instruct=\"female, low pitch, British accent\"` to `generate`. Voice prompts can be saved with `voice.save(\"voice.pt\")` and reused with `model.load_voice_clone_prompt(\"voice.pt\")`.\n\nText, reference, and generated audio share the original model's full 40,960-position context per diffusion call. Up to 4,096 positions run as one fused ANE call, longer sequences use blockwise attention. Long-form speech uses upstream chunking above its default 30-second threshold. OmniVoice refines every audio frame together until the last diffusion step, so it does not stream partial audio.\n\n## Supported architectures\n\n| Architecture | SoC name |\n| --- | --- |\n| `h16g` | Apple M4 |\n| `h16s` | Apple M4 Pro |\n| `h16c` | Apple M4 Max |\n| `h17g` | Apple M5 |\n| `h17s` | Apple M5 Pro |\n| `h17c` | Apple M5 Max |\n| `h17d` | Apple M5 Ultra |\n| `h18g` | Apple M6 |\n\n## Benchmarks\n\nThese measurements predate the ANE codec decoder update and describe the previous CPU-codec bundles.\n\nMeasured October 26, 2026 on Apple M5 Pro (`h17s`, 24 GiB), macOS 27.0.1, warm. Real-time multiplier is audio duration divided by generation time (higher is faster); RTF is its inverse (lower is faster).\n\n| Request | Audio | Generation time | Real-time multiplier | RTF | ANE energy |\n| --- | ---: | ---: | ---: | ---: | ---: |\n| Automatic voice | 4.4 s | 1.11 s | 4.0× | 0.25 | 4.2 J |\n| Saved clone | 2.9 s | 1.03 s | 2.8× | 0.35 | 3.8 J |\n| Passage, default chunking | 18.5 s | 5.74 s | 3.2× | 0.31 | 21.2 J |\n\n| Memory | Peak |\n| --- | ---: |\n| Wired, including ANE weights | 1.35 GiB |\n| Python process | 1.49 GiB |\n\n## Accuracy\n\nThe updated ANE-codec bundle passed public speech regressions on M5 Pro (`h17s`), macOS 27.0.1, on October 29, 2026: automatic voice, design, cloning, ordered batches, seed replay, request isolation, transcription and offline bundled-checkpoint loading. Other advertised chips are cross-compiled with full ANE placement verification; on-device correctness and performance are established only on M5 Pro.\n\nCompared with the original `omnivoice==0.2.1` in CPU FP16 on identical inputs:\n\n| Check | Result |\n| --- | --- |\n| Full-transformer logits (96–3,000 positions), cosine | ≥ 0.999985 |\n| 40,960-key attention kernel, cosine | ≥ 0.999998 |\n| 60-second passage, mean transcription error | 0.187 (original 0.193) |\n\nOriginal checkpoint: `k2-fsa/OmniVoice@c5fdb5ccb189668d56333f77ba2629f4cd7535f4`. Weights and converted assets retain [CC-BY-NC-4.0](LICENSE). Upstream code is [Apache-2.0](LICENSES/Apache-2.0.txt). The bundled Higgs audio codec retains the [Boson Higgs Audio 2 Community License](LICENSES/Boson-Higgs-Audio-2.txt), which incorporates the [Meta Llama 3 Community License](LICENSES/Meta-Llama-3.txt). See [NOTICE](NOTICE).\n\nBuilt with Higgs Materials licensed from Boson AI USA, Inc., Copyright Boson AI USA, Inc., All Rights Reserved and Meta Llama 3 licensed under the Meta Llama 3 Community License, Copyright Meta Platforms, Inc., All Rights Reserved.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "stabilityai/stable-audio-3-optimized",
+      "author": "stabilityai",
+      "created_at": "2026-05-18",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "stable-audio-3",
+        "tflite",
+        "onnx",
+        "audio-generation",
+        "music",
+        "sound-effects",
+        "diffusion",
+        "text-to-audio",
+        "en",
+        "arxiv:2605.17991",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 47656,
+      "likes": 62,
+      "trending_score": 0.0,
+      "library_name": "stable-audio-3",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/stabilityai/stable-audio-3-optimized",
+      "card_text": "",
+      "arxiv_ids": [
+        "2605.17991"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license other",
+        "community likes 62"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "LattifAI/YuE2-3B-GGUF",
+      "author": "LattifAI",
+      "created_at": "2026-10-27",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "gguf",
+        "music-generation",
+        "text-to-audio",
+        "yue2",
+        "lyrics-to-music",
+        "music",
+        "lattifai",
+        "edgespeak",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "ru",
+        "es",
+        "arxiv:2609.33757",
+        "arxiv:2610.05336",
+        "base_model:m-a-p/YuE2-3B",
+        "base_model:quantized:m-a-p/YuE2-3B",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 261,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/LattifAI/YuE2-3B-GGUF",
+      "card_text": "",
+      "arxiv_ids": [
+        "2609.33757",
+        "2610.05336"
+      ],
+      "datasets": [],
+      "base_models": [
+        "m-a-p/YuE2-3B",
+        "m-a-p/YuE2-Vae"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Aarjan/swar",
+      "author": "Aarjan",
+      "created_at": "2026-10-22",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "f5-tts",
+        "onnx",
+        "text-to-speech",
+        "voice-cloning",
+        "nepali",
+        "ne",
+        "en",
+        "base_model:ai4bharat/IndicF5",
+        "base_model:quantized:ai4bharat/IndicF5",
+        "license:cc-by-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 108,
+      "likes": 5,
+      "trending_score": 0.0,
+      "library_name": "f5-tts",
+      "license": "cc-by-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Aarjan/swar",
+      "card_text": "---\nlicense: cc-by-sa-4.0\nlanguage:\n- ne\n- en\npipeline_tag: text-to-speech\ntags:\n- text-to-speech\n- voice-cloning\n- nepali\n- f5-tts\nbase_model: ai4bharat/IndicF5\n---\n\n# Swar: open Nepali voice cloning\n\nSwar speaks Nepali the way it is spoken in Nepal and clones a voice from 20 to 30 seconds of someone talking. It reads Nepali, English, and Nepali mixed with English. By [Naamche Labs](https://github.com/Naamche-Labs).\n\n**Try it in your browser, no setup:** [Swar Playground](https://naamchelabs.com/playground): nine ready voices, or clone your own from 30 seconds of speech, free to try. **Run it yourself:** [Colab notebook](https://colab.research.google.com/github/Naamche-Labs/swar/blob/main/notebooks/Swar_Clone_Colab.ipynb) (free T4 GPU). **Code and paper:** [github.com/Naamche-Labs/swar](https://github.com/Naamche-Labs/swar).\n\n## Files\n\n- `podvoices_ema.pt`: **the default model** (F5-TTS Base architecture, EMA weights). Every result below is this file.\n- `swar_v6_ema.pt`: a second checkpoint for English-heavy text, trained further with 96 h of English (LibriTTS-R). Mixed Nepali-English errors 5.24% (default 5.6%), but pure Nepali is weaker (NepTTS-Bench pronunciation error 4.04%, FLEURS cloning errors 5.41%). Use it with `ENGLISH_LATIN=1`.\n- `vocab.txt`: character vocabulary (IndicF5).\n- `kriti_onnx/`: Kriti, our Nepali speech recogniser (MIT), used to transcribe uploads and check takes.\n- `presets/`: ready voices Maya (female) and Aarav (male), built only from model-made audio.\n- `app/`: the cloner app (Gradio) used by the notebook.\n\n## Results (NepTTS-Bench, 205 sentences, one take)\n\n| System | Character error | Pronunciation error | UTMOS |\n|---|---|---|---|\n| Swar, studio voice | **6.19** | **2.92** | 3.82 |\n| Swar, Maya voice | 7.45 | 4.52 | **4.09** |\n| OmniVoice (same prompt) | 6.68 | 4.32 | 3.93 |\n| Indic-Speak Srijana | 10.25 | 8.12 | 3.97 |\n| ElevenLabs v3 | 15.70 | 12.91 | |\n\n[Nepali Voice Cloning Benchmark](https://github.com/Naamche-Labs/nepali-voice-cloning-bench) (our open benchmark on FLEURS, v1.1, clean track, 64 distinct prompt + sentence pairs from 4 unseen voices): Swar errors 4.72% and voice match 0.697, OmniVoice 5.08% and 0.683, IndicF5 8.30% and 0.669.\n\nNepali mixed with English (30 held-out sentences): Swar 5.6% character errors, OmniVoice 11.4%. UTMOS is an automatic predictor, not a listener test.\n\n## Training data\n\nInitialised from ai4bharat/IndicF5 (MIT). Fine-tuned on AI4Bharat Rasa and IndicVoices-R (CC BY 4.0), Google FLEURS (CC BY 4.0), OpenSLR 43 and 54 (CC BY-SA 4.0), LibriTTS-R (CC BY 4.0), and podcast speech used with the speakers' permission (not released). The weights are released under CC BY-SA 4.0 to respect the share-alike data.\n\n## Responsible use\n\nOnly clone a voice with that person's permission. Do not use Swar to impersonate anyone, to deceive, or to commit fraud.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ai4bharat/IndicF5"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ronbakker/chatterbox-nano-fp16-coreai",
+      "author": "ronbakker",
+      "created_at": "2026-10-29",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "coreai",
+        "ios",
+        "macos",
+        "on-device",
+        "voice-cloning",
+        "text-to-speech",
+        "en",
+        "base_model:ResembleAI/chatterbox-nano",
+        "base_model:finetune:ResembleAI/chatterbox-nano",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/ronbakker/chatterbox-nano-fp16-coreai",
+      "card_text": "---\nlicense: mit\nlanguage: [en]\npipeline_tag: text-to-speech\nbase_model: ResembleAI/chatterbox-nano\ntags: [coreai, ios, macos, on-device, voice-cloning]\n---\n\n# Chatterbox Nano Core AI · FP16\n\nEnglish narration and voice enrollment for iOS 27+ and macOS 27+ on Apple Silicon.\nFive native `.aimodel` assets, converted and optimized by **Ron Bakker** from\n[Resemble AI Chatterbox Nano](https://huggingface.co/ResembleAI/chatterbox-nano).\nOutput is mono 24 kHz PCM. No voices or recordings are included.\n\n| Components | Download files before archive compression |\n|---|---:|\n| Four narration models and required tables | 569.0 MB |\n| Optional combined voice enrollment model | 301.6 MB |\n\nNarration learned weights and T3 state are FP16, with mixed-precision acoustic\nsignal processing. Enrollment uses FP16-stored speech-tokenizer matrices with\nFP32 computation, FP32 speaker networks and FP32 frontends.\nSee [INTEGRATION.md](INTEGRATION.md) for loading, tensor contracts and voice preparation.\n\n## Measured warm performance\n\n| Device | OS | Median RTF | Three-run range |\n|---|---|---:|---:|\n| iPhone 16 Pro | iOS 27.0.1 | 0.200 | 0.199–0.201 |\n| M1 Max | macOS 27.0.1 | 0.185 | 0.183–0.188 |\n\nRTF is completed synthesis wall divided by audio\nduration, including native prefill/decode, sampling, cache updates, acoustics,\nsolver work and required output reads/waits. Model loading/compilation, fixed\nconditioning/random-input preparation, a complete warm-up, WAV writing and\nplayback are excluded. Enrollment is a separate operation. Other text lengths\nand flexible functions can have different performance.\n\nMIT. Original model: Copyright (c) 2025 Resemble AI.\nConversion, optimization and packaging: Copyright (c) 2026 Ron Bakker.\nPreserve [LICENSE](LICENSE), [NOTICE.md](NOTICE.md) and the component license.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox-nano"
+      ],
+      "variants": [
+        "ronbakker/chatterbox-nano-int4-int8-coreai"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "t8star/Drama-3-Comfy",
+      "author": "t8star",
+      "created_at": "2026-10-15",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "comfyui",
+        "onnx",
+        "safetensors",
+        "gguf",
+        "drama3",
+        "audio",
+        "text-to-speech",
+        "voice-cloning",
+        "fp8",
+        "w4a8",
+        "t8star",
+        "zh",
+        "en",
+        "base_model:fishaudio/drama-3",
+        "base_model:quantized:fishaudio/drama-3",
+        "license:other",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 153,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "comfyui",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/t8star/Drama-3-Comfy",
+      "card_text": "---\nlanguage: [zh, en]\nlicense: other\nlicense_name: fish-audio-community-license\nlicense_link: LICENSE\nbase_model: fishaudio/drama-3\npipeline_tag: text-to-speech\ntags: [drama3, comfyui, audio, text-to-speech, voice-cloning, fp8, w4a8, t8star]\nlibrary_name: comfyui\n---\n\n# Drama-3 · T8 native models\n\n**English** | [简体中文](README.zh-CN.md)\n\nModel files for [Drama-3 T8 Studio & ComfyUI](https://github.com/T8mars/Comfyui-Drama-3). **Built with Fish Audio.** Use the T8 native loader; these converted files are not standard Transformers checkpoints.\n\n## Start creating\n\nThe local white-and-pink Studio provides a versioned voice library, fixed casting, multiple takes, script editing, context-aware generation, recording segmentation and WAV/stem/subtitle delivery. ComfyUI uses the same core through native nodes, without a Studio HTTP bridge. See the [code repository](https://github.com/T8mars/Comfyui-Drama-3) for installation, canvas workflows and version-bound validation.\n\nThe author supplies the [complete Windows bundle](https://pan.quark.cn/s/264edb7e36bd). GitHub Release code ZIPs contain **neither Python nor models**. The bundle updater updates code while preserving runtime, models, user data and custom paths; it does not run pip.\n\n## Files\n\nSizes are decimal GB/MB. Studio places these files directly under `<bundle>/models/`; the last column gives paths relative to ComfyUI.\n\n| Artifact | Size | ComfyUI destination / use |\n|---|---:|---|\n| `drama3-t8-fp8.safetensors` | 38.58 GB | `models/diffusion_models/` — main model |\n| `drama3-t8-w4a8.safetensors` | 24.60 GB | Same folder — smaller main-model alternative |\n| `drama3-codec.safetensors` | 1.57 GB | `models/vae/` — audio Codec |\n| `drama3-line-head.safetensors` | 8.48 KB | `models/diffusion_models/` — compact Scene/control head |\n| `drama3-text-head.safetensors` | 1.03 GB | Same folder — full-head alternative/fallback |\n| `qwen3-asr-06b.safetensors` / `qwen3_asr_1.7b_bf16.safetensors` | 1.56 / 4.08 GB | `models/asr/` — optional transcription |\n| `qwen3_forced_aligner_0.6b_bf16.safetensors` | 1.84 GB | `models/asr/` — optional word timing |\n| `qwen-aligner/` | 1.84 GB model + tokenizer | `models/asr/` — directory aligner alternative; download the complete folder |\n| `Confucius4-R2T2-GGUF/` | 2.18 GB pair | `models/asr/` — Q8 model and matching projector |\n| `FireRedVAD-ONNX/` | 2.31 MB model | `models/asr/` — R2T2 long-recording segmentation |\n| `campplus-zh-en.onnx` | 28.28 MB | Custom speaker-model path — optional CPU speaker grouping; Studio defaults to `models/campplus-zh-en.onnx` |\n\nGeneration needs **one main model, Codec and the selected/fallback head**. ASR, alignment, VAD and speaker models are required only for their corresponding features. Reference-voice generation accepts clean audio with an accurate transcript; a supplied transcript needs no ASR. Keep the R2T2 model and projector together; its separately installed native runtime is also required.\n\nAll model paths are configurable, including absolute paths on other drives. Studio also supports custom voice-library and workspace locations. Code updates do not require downloading unchanged DRAMA weights. W6A8/INT8 conversion tools are available in the code repository; those checkpoints are not uploaded here.\n\nThe supported Windows stack is **Torch 2.8 + CUDA 12.8, Transformers 4.57.1, tokenizers 0.22.2 and huggingface-hub 0.36.2**. Memory and speed depend on the model, context and hardware; expert-cache size is not total memory use. Review generated speech before delivery. Existing release results do not certify every new feature or recording.\n\n## Sources and licenses\n\n- DRAMA weights, heads and Codec retain the [Fish Audio Community License v1.0](LICENSE), from [fishaudio/drama-3](https://huggingface.co/fishaudio/drama-3/tree/e0a9218aa48888270f06ef1ed9ea67622c0e17d2). Redistribution and commercial use are conditional; the community commercial grant has a USD 500,000 annual-revenue threshold, and hosted services generally require a separate license. Review the full license before deployment.\n- Qwen ASR/aligner, FireRedVAD and optional CAM++ use Apache-2.0. Preserve their licenses and notices: [Qwen source/license](licenses/QWEN3-ASR/NOTICE-UPSTREAM.md), [FireRedVAD](FireRedVAD-ONNX/LICENSE), [CAM++ source/license](licenses/NOTICE-CAMPPLUS.md).\n- Confucius weights retain the [NetEase Youdao model license](Confucius4-R2T2-GGUF/MODEL_LICENSE), including its downstream conditions and licensing thresholds. See the accompanying [model notice](licenses/NOTICE-CONFUCIUS-MODEL.txt). The Apache license of the inference code does not replace the weights' license.\n\nConversion changes and credits are recorded in [provenance](provenance/t8-native-0.2.0.json), [upstream sources](upstream-lock.json) and [notices](licenses/NOTICE-T8). Existing artifact checksums are in [model-manifest.json](model-manifest.json); the additional CAM++ checksum is in its [notice](licenses/NOTICE-CAMPPLUS.md). No upstream endorsement is implied.\n\n## T8star\n\n[Bilibili](https://space.bilibili.com/385085361) · [YouTube](https://www.youtube.com/@T8star-Aix/) · [API](https://api.seedance.nz/sign-up?aff=5f4w) · [Gallery](https://www.openzhenzhen.com) · [Online apps](https://www.runninghub.ai/zh-cn/user-center/1907375370302308353/userPost?inviteCode=rh-v1121) · [ComfyUI bundle](https://pan.quark.cn/s/264edb7e36bd) · [Hugging Face](https://huggingface.co/t8star)\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/drama-3"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "aufklarer/Breeze-TTS-2-MLX-8bit",
+      "author": "aufklarer",
+      "created_at": "2026-10-23",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "breeze",
+        "speech-swift",
+        "text-to-speech",
+        "voice-cloning",
+        "voice-design",
+        "en",
+        "zh",
+        "base_model:BreezeBlue/Breeze-TTS-2",
+        "base_model:finetune:BreezeBlue/Breeze-TTS-2",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 134,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/aufklarer/Breeze-TTS-2-MLX-8bit",
+      "card_text": "---\nlicense: other\nlicense_name: breezeblue-research-and-non-commercial-license\nlicense_link: LICENSE\nbase_model: BreezeBlue/Breeze-TTS-2\nlibrary_name: mlx\npipeline_tag: text-to-speech\nlanguage: [en, zh]\ntags: [mlx, speech-swift, text-to-speech, voice-cloning, voice-design]\n---\n# Breeze TTS 2 (8-bit MLX)\n\nDerived from Breeze TTS 2 by BreezeBlue and licensed for research and non-commercial use only.\n\nNative MLX checkpoint for [speech-swift](https://github.com/soniqo/speech-swift).\nEnglish and Chinese synthesis, natural-language voice design, reference-guided voice\ncloning and direction, mono 24 kHz PCM, and incremental audio chunks.\n\nSource: [BreezeBlue/Breeze-TTS-2](https://huggingface.co/BreezeBlue/Breeze-TTS-2/tree/3e28c5151381a722f1d8661b4118c298caa77aa4).\nThe model and self-hosted outputs are restricted to research and non-commercial use.\nSee [LICENSE](LICENSE) and [NOTICE](NOTICE). This is an independently converted checkpoint.\n\n## Conversion\n\nAffine 8-bit Linear weights in groups of 64; embeddings, normalization weights,\nand depth codebook heads retain upstream precision. The Qwen3 audio tokenizer is copied\nunchanged. Unused legacy codec and text embeddings are removed; tied audio embeddings\nare stored once. Immutable provenance, file hashes, and conversion details are in\n`export_config.json`. No inference quality or performance claim follows from export alone.\n\n## Swift\n\n```swift\nimport BreezeTTS\n\nlet model = try await BreezeTTSModel.fromPretrained(modelId: \"aufklarer/Breeze-TTS-2-MLX-8bit\")\nlet samples = try await model.generate(\n    text: \"The quick brown fox jumps over the lazy dog.\",\n    instruction: \"A clear, calm English narrator.\")\n```\n\n## CLI\n\n```bash\nspeech speak \"The quick brown fox jumps over the lazy dog.\" --engine breeze \\\n  --breeze-model-id aufklarer/Breeze-TTS-2-MLX-8bit --instruct \"A clear English narrator\" --stream -o speech.wav\n```\n\nVoice cloning requires `--voice-sample reference.wav --breeze-reference-text \"Exact transcript\"`.\nAdd `--instruct` to direct the reference voice. English and Chinese are inferred from text.\nUse one generation at a time per model. Reaching the frame cap before EOS raises an error.\n\n## Optimized Swift runtime — 2026-10-30\n\nThe updated [speech-swift runtime](https://github.com/soniqo/speech-swift/pull/542)\nuses the same checkpoint weights. Matched release measurements on Apple M5 Pro,\n48 GiB unified memory, macOS 26.6.2, with compiled Metal shaders and the shared\n2 GiB reusable MLX cache ceiling:\n\n| Metric | Measured |\n|---|---:|\n| Warm median, first decoded PCM | 178 ms |\n| Warm median RTF (wall/audio) | 0.535 |\n| Peak RSS | 3.92 GiB |\n| Peak physical footprint | 7.23 GiB |\n\nThe sentence is “The quick brown fox jumps over the lazy dog.” with instruction\n“A clear, calm English narrator.”, seed 42, CFG 4, and 3 / 25 frame chunks.\nTimings are medians of three warm requests after an initial request in a fresh\nprocess. Each optimized clip is 3.20 s. Model loading and WAV writing are excluded;\nfirst PCM also excludes playback buffering and output-device latency. Memory\nvalues include loading and all requests. These are workload-specific results.\n\nThe matched default-chunk output is byte-identical to the original runtime.\nWith one initial frame, two-frame follow-ups, and\n`--breeze-cache-limit-mib 1024`, the 9.04 s paragraph measures 103 ms first PCM,\nRTF 0.761, and 6.10 GiB peak physical footprint. Its estimated CLI prebuffer is\nready at 190 ms, excluding render callback and device latency.\n\nThe final matched series produced 45 WAVs across both variants, representing\n11 distinct waveforms. All repeats within a fixed runtime and chunk schedule\nare byte-identical. Independent Qwen3-ASR reports zero normalized WER/CER for\nall 11, covering the short sentence, paragraph, alternative chunks, cloning,\nand direction. Fifteen isolated real-model/CLI/tokenizer checks passed with no\nskips; the local CI-equivalent unit run completed 1,933 tests with 42 skips and\nno failures. This verifies content, not general acoustic quality or speaker identity.\n\nSee the [full benchmark and reproduction steps](https://github.com/soniqo/speech-swift/blob/main/docs/benchmarks/breeze-tts.md).\nThe dated results, `validation.json`, and sample files below describe the earlier\nruntime and remain available as historical records.\n\n## Measured Swift smoke test — 2026-10-24\n\nApple M5 Pro, 48 GiB RAM, macOS 26.6.2, release build with compiled Metal\nshaders. English voice design, 3.20 seconds of speech, seed 42, guidance 4,\n3 frames in the first chunk and 25 thereafter. Three warm repeats.\n\n| Metric | Measured |\n|---|---:|\n| Model load, cached local files | 1.384 s |\n| First request, first decoded audio | 349 ms |\n| Warm median, first decoded audio | 329 ms |\n| Warm median RTF (wall/audio) | 0.707 |\n| Peak RSS | 3.94 GiB |\n| Peak physical footprint | 8.22 GiB |\n\nRSS can undercount GPU mappings. Physical footprint includes MLX allocations\nand reusable buffers. Other texts and reference modes can use more memory.\nAll measured clips for this checkpoint have zero normalized WER/CER with\n`aufklarer/Qwen3-ASR-0.6B-MLX-4bit`; see `validation.json` for transcripts,\nper-request timing, memory, and numerical comparisons with official PyTorch.\nAll 16 measured clips across both published variants match the previous validated\nWAV files byte for byte. The full local CI unit selection passed 1,739 tests\nwith 41 skips; all ten Breeze runtime/CLI E2E checks and three exporter checks passed.\nThis is a deterministic smoke test, not a general quality or speaker-identity benchmark.\n\nNative Swift runtime, CLI, and regression coverage: [speech-swift #526](https://github.com/soniqo/speech-swift/pull/526).\n\n## Audio samples\n\n- [design-8bit](samples/design-en.wav)\n- [chinese-8bit](samples/design-zh.wav)\n- [clone-8bit](samples/clone-en.wav)\n- [direction-8bit](samples/direction-en.wav)\n\nThe unchanged Qwen3 audio tokenizer is separately licensed under Apache-2.0;\nsee [audio_tokenizer/LICENSE](audio_tokenizer/LICENSE) for its source attribution\nand full license.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "BreezeBlue/Breeze-TTS-2"
+      ],
+      "variants": [
+        "aufklarer/Breeze-TTS-2-MLX-bf16"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "NidAll/audio8-tts-realistic-0.6b-int8-convrot",
+      "author": "NidAll",
+      "created_at": "2026-10-30",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "audio",
+        "voice-cloning",
+        "comfyui",
+        "int8",
+        "convrot",
+        "base_model:Edge0/Audio8-TTS-Realistic-0.6b",
+        "base_model:finetune:Edge0/Audio8-TTS-Realistic-0.6b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/NidAll/audio8-tts-realistic-0.6b-int8-convrot",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: Edge0/Audio8-TTS-Realistic-0.6b\npipeline_tag: text-to-speech\ntags:\n- text-to-speech\n- audio\n- voice-cloning\n- comfyui\n- int8\n- convrot\n---\n\n# Audio8 TTS Realistic 0.6B — INT8 ConvRot\n\nPortable offline model bundles for [ComfyUI-Audio8](https://github.com/NidAll/ComfyUI-Audio8). The TTS bundle contains the Audio8 DualAR transformer, neural speech codec, tokenizer and configuration in one safetensors file. An additional Whisper Base bundle provides optional multilingual reference transcription for the long-output cloning workflow.\n\nThese are pack-specific safetensors formats. Install the custom node pack to load them; they are not standard Transformers checkpoint files. Runtime loading and inference make no network requests.\n\n## Files\n\n| File | Purpose | Size |\n| --- | --- | ---: |\n| `audio8-realistic-int8-all.safetensors` | Recommended TTS bundle. 140 transformer linear layers use INT8 tensorwise ConvRot with group size 64 and FP32 row scales. Embeddings, normalization, output projection and speech codec remain BF16. | 1,473,493,080 bytes |\n| `whisper-base.safetensors` | Optional multilingual reference ASR bundle, FP16. Contains the Whisper Base weights, tokenizer and processor/generation configuration. | 147,903,754 bytes |\n\n## Use\n\nInstall [ComfyUI-Audio8](https://github.com/NidAll/ComfyUI-Audio8), then download only the bundles you need into the indicated ComfyUI model directories:\n\n```sh\nhf download NidAll/audio8-tts-realistic-0.6b-int8-convrot audio8-realistic-int8-all.safetensors --local-dir /path/to/ComfyUI/models/audio8\nhf download NidAll/audio8-tts-realistic-0.6b-int8-convrot whisper-base.safetensors --local-dir /path/to/ComfyUI/models/audio8_asr\n```\n\nRestart ComfyUI and load the bundle with the Audio8 nodes. For automatic transcription, the optional ASR bundle also needs Transformers installed in ComfyUI's Python environment. The bundle uses the regular Transformers Whisper implementation with PyTorch SDPA and ComfyUI model offloading.\n\nThe TTS pack supports 23 model-card languages. Whisper Base is multilingual; transcript quality varies, so review recognized reference text before cloning. Long Speech divides target text into complete sections and joins them using the same reference voice. Greedy generation is the default for that node.\n\n## Provenance and license\n\nThe TTS model is derived from [Edge0/Audio8-TTS-Realistic-0.6b](https://huggingface.co/Edge0/Audio8-TTS-Realistic-0.6b), revision `1e857568bfd4f02931aca3988ee773a44d2d26d3`. Its source model, codec and tokenizer are licensed Apache-2.0. The TTS transformer was quantized offline with Comfy Kitchen's INT8 ConvRot tensor layout; the codec was retained in BF16. This is a model conversion, not a new training run.\n\nThe ASR bundle packages [OpenAI Whisper Base](https://huggingface.co/openai/whisper-base), revision `e37978b90ca9030d5170a5c07aadb050351a65bb`, as FP16 weights plus the matching local tokenizer and configuration. Whisper Base is Apache-2.0 licensed.\n\nSee [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) for the Apache-2.0 license and upstream notices. SHA-256 hashes:\n\n- TTS: `1c508ebd0757172cd4cc417ecdbc8effdc3970a2733a06fad1e3bfe80f830635`\n- Whisper Base: `e0570a8c352ff104a1b8cb8c2559649c1c36fc7804cfba59a53bd82738ffd29f`\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Edge0/Audio8-TTS-Realistic-0.6b"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ArminRahimi/Audio8-TTS-Kurdish-Sorani",
+      "author": "ArminRahimi",
+      "created_at": "2026-10-30",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arktts",
+        "feature-extraction",
+        "text-to-speech",
+        "tts",
+        "kurdish",
+        "central-kurdish",
+        "sorani",
+        "voice-cloning",
+        "audio8",
+        "custom_code",
+        "ckb",
+        "dataset:aranemini/central-kurdish-tts4all",
+        "base_model:ArminRahimi/Audio8-TTS-Persian",
+        "base_model:finetune:ArminRahimi/Audio8-TTS-Persian",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ArminRahimi/Audio8-TTS-Kurdish-Sorani",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n  - ckb\nbase_model: ArminRahimi/Audio8-TTS-Persian\ndatasets:\n  - aranemini/central-kurdish-tts4all\npipeline_tag: text-to-speech\nlibrary_name: transformers\ntags:\n  - text-to-speech\n  - tts\n  - kurdish\n  - central-kurdish\n  - sorani\n  - voice-cloning\n  - audio8\n  - custom_code\n---\n\n# Audio8-TTS-Kurdish-Sorani\n\nA **Central Kurdish (Sorani)** fine-tune of Audio8 TTS, a 0.6B-parameter DualAR text-to-speech model with zero-shot voice cloning. Neither Central Kurdish nor Persian is among the base model's supported languages. Training started from the Persian fine-tune [ArminRahimi/Audio8-TTS-Persian](https://huggingface.co/ArminRahimi/Audio8-TTS-Persian), whose script Sorani largely shares. <!-- If you trained from the original Audio8 (INIT_MODEL = \"base\"), change this sentence and base_model above to Edge0/Audio8-TTS-Preview-0.6b. -->\n\nTraining code, Colab notebook and documentation: **https://github.com/ard9/Audio8-Persian-TTS**\n\n> **Non-commercial use only.** The training data, [central-kurdish-tts4all](https://huggingface.co/datasets/aranemini/central-kurdish-tts4all), is licensed CC BY-NC-ND 4.0, so this model is released under **CC BY-NC 4.0**: free for research, education and non-commercial demos; not for paid products or services.\n\n## 🔊 Samples\n\n| Text | Audio |\n|---|---|\n| سڵاو، ئەمڕۆ کەشوهەوا زۆر خۆشە و دەمەوێت کەمێک لە پارک پیاسە بکەم. | [ft_s01.wav](samples/ft_s01.wav) |\n| دوێنێ لەگەڵ هاوڕێکانم چووین بۆ سینەما، فیلمەکە بەڕاستی زۆر جوان بوو! | [ft_s03.wav](samples/ft_s03.wav) |\n| Voice clone (reference from another speaker of the dataset) | [clone_s01.wav](samples/clone_s01.wav) |\n\n## Usage\n\nThe model uses Audio8's custom Transformers code (`trust_remote_code=True`). Normalize the text with the same Sorani rules as in training (`normalize_ckb` in the GitHub repo: Arabic letter variants unified, numbers spelled out in Kurdish).\n\n```python\n# pip install \"transformers>=4.57,<5\" soundfile\n# git clone https://github.com/ard9/Audio8-Persian-TTS  (for fa_tools.normalize_ckb)\nimport sys, torch, soundfile as sf\nfrom transformers import AutoModel, AutoProcessor\nsys.path.insert(0, \"Audio8-Persian-TTS/src\")\nfrom fa_tools import normalize_ckb\n\nmodel_id = \"ArminRahimi/Audio8-TTS-Kurdish-Sorani\"\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\ndtype = torch.bfloat16 if device == \"cuda\" else torch.float32\n\nprocessor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)\nmodel = AutoModel.from_pretrained(model_id, trust_remote_code=True, dtype=dtype).eval().to(device)\n\ntext = normalize_ckb(\"سڵاو! چۆنی؟\")\ninputs = processor(text=[text], return_tensors=\"pt\")\n# Voice cloning: add reference_audio=[\"ref.wav\"], reference_text=[normalize_ckb(\"exact transcript\")]\ninputs = {k: v.to(device) for k, v in inputs.items()}\nwith torch.inference_mode():\n    out = model.generate(**inputs, max_new_tokens=1024, temperature=0.8, top_p=0.95, top_k=50,\n                         do_sample=True, return_dict_in_generate=True)\n    wav, lengths = model.decode_audio(out.codes)\nsf.write(\"output.wav\", wav[0, : int(lengths[0])].float().cpu().numpy(), model.config.codec_sample_rate)\n```\n\nOr from the command line: `python scripts/synthesize.py --model ArminRahimi/Audio8-TTS-Kurdish-Sorani --lang ckb --text \"سڵاو\" --output out.wav`.\n\n## Training details\n\n| | |\n|---|---|\n| Starting model | Audio8-TTS-Persian (itself fine-tuned from Audio8-TTS-Preview-0.6B, repo commit `07e40f5`) |\n| Data | central-kurdish-tts4all: ≈ 35 h of read Central Kurdish, 3 speakers (male and female audiobook narrators, male studio voice), 24 kHz, clips of 1–20 s |\n| Default voice | The speaker with the most audio is trained without a reference clip; the other speakers always with a same-speaker reference, which teaches voice cloning |\n| Text normalization | Sorani rules: Arabic yeh/kaf → Kurdish forms, ھ → ه, heh + ZWNJ → ە, diacritics and ZWNJ removed, numbers spelled out in Kurdish |\n| Trainable parameters | Both DualAR branches (slow + fast AR), all 601M parameters |\n| Optimizer | 8-bit AdamW, lr 3e-5, cosine schedule, 3% warmup, grad-norm clip 1.0 |\n| Steps / epochs | TODO |\n| Hardware | TODO GPU on Google Colab |\n| Exported weights | bf16 |\n\n## Evaluation\n\n| Metric | Value |\n|---|---|\n| Eval loss (held-out, slow + fast AR) | TODO |\n| CER, ASR transcription of generated speech | not measured yet |\n| MOS, native listeners | not measured yet |\n\n## Limitations\n\n- **Three speakers, read speech.** Voice variety and prosody are limited; conversational speech and unseen voices are weaker.\n- **Possible Persian accent** when starting from the Persian model, especially in early checkpoints.\n- **Spelling follows the dataset**: the model learns pronunciation from how the transcripts are written; non-standard spellings and Latin-script words may be mispronounced.\n- The base model is a Preview checkpoint without Kurdish or Persian pre-training.\n\n## Responsible use\n\nThis model can imitate voices. Clone a voice only with the speaker's explicit consent and disclose synthetic audio. Do not use it for impersonation, fraud or misinformation, or to imitate the dataset's speakers.\n\n## License and attribution\n\n**CC BY-NC 4.0** (non-commercial). Model code and architecture: [Audio8 TTS](https://github.com/Edge0-AI/Audio8_TTS) (Apache-2.0). Training data: [central-kurdish-tts4all](https://huggingface.co/datasets/aranemini/central-kurdish-tts4all) by Aran Emini et al. (CC BY-NC-ND 4.0), including audiobook content used with the permission of Malaka Mustafa Soltani, read by Shahen Shahlai and Fatih.\n\n## Citation\n\n```bibtex\n@misc{audio8_persian_tts_2026,\n  title        = {Audio8-Persian-TTS: Adapting a Compact Multilingual TTS Model to Persian},\n  author       = {Rahimi Darehbagh, Armin},\n  year         = {2026},\n  howpublished = {\\url{https://github.com/ard9/Audio8-Persian-TTS}}\n}\n```\n\nPlease also cite the central-kurdish-tts4all dataset as described on [its dataset page](https://huggingface.co/datasets/aranemini/central-kurdish-tts4all).\n",
+      "arxiv_ids": [],
+      "datasets": [
+        "aranemini/central-kurdish-tts4all"
+      ],
+      "base_models": [
+        "ArminRahimi/Audio8-TTS-Persian"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mwalol/drama-3-int4-2910-update",
+      "author": "mwalol",
+      "created_at": "2026-10-30",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "fish_omni",
+        "fish-audio",
+        "text-to-speech",
+        "multi-speaker",
+        "audio-editing",
+        "emotional-speech-generation",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "es",
+        "pt",
+        "ar",
+        "ru",
+        "fr",
+        "de",
+        "sv",
+        "it",
+        "tr",
+        "no",
+        "nl",
+        "cy",
+        "eu",
+        "ca",
+        "da",
+        "gl",
+        "ta",
+        "hu",
+        "fi",
+        "pl",
+        "et",
+        "hi",
+        "la",
+        "ur",
+        "th",
+        "vi",
+        "jw",
+        "bn",
+        "yo",
+        "sl",
+        "cs",
+        "sw",
+        "nn",
+        "he",
+        "ms",
+        "uk",
+        "id",
+        "kk",
+        "bg",
+        "lv",
+        "my",
+        "tl",
+        "sk",
+        "ne",
+        "fa",
+        "af",
+        "el",
+        "bo",
+        "hr",
+        "ro",
+        "sn",
+        "mi",
+        "yi",
+        "am",
+        "be",
+        "km",
+        "is",
+        "az",
+        "sd",
+        "br",
+        "sq",
+        "ps",
+        "mn",
+        "ht",
+        "ml",
+        "sr",
+        "sa",
+        "te",
+        "ka",
+        "bs",
+        "pa",
+        "lt",
+        "kn",
+        "si",
+        "hy",
+        "mr",
+        "as",
+        "gu",
+        "fo",
+        "arxiv:2610.18010",
+        "license:other",
+        "4-bit",
+        "drama3-int4",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/mwalol/drama-3-int4-2910-update",
+      "card_text": "",
+      "arxiv_ids": [
+        "2610.18010"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "audio-cpp/Audio8-TTS-Realistic-0.6b-GGUF",
+      "author": "audio-cpp",
+      "created_at": "2026-10-29",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "audio.cpp",
+        "gguf",
+        "audio",
+        "text-to-speech",
+        "voice-cloning",
+        "base_model:Edge0/Audio8-TTS-Realistic-0.6b",
+        "base_model:quantized:Edge0/Audio8-TTS-Realistic-0.6b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 215,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "audio.cpp",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/audio-cpp/Audio8-TTS-Realistic-0.6b-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Edge0/Audio8-TTS-Realistic-0.6b"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/Wav2Vec2-Large-AntiDeepfake",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/wav2vec-large-anti-deepfake",
+        "base_model:quantized:nii-yamagishilab/wav2vec-large-anti-deepfake",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 76,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/Wav2Vec2-Large-AntiDeepfake",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/wav2vec-large-anti-deepfake"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/MMS-300M-AntiDeepfake",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/mms-300m-anti-deepfake",
+        "base_model:quantized:nii-yamagishilab/mms-300m-anti-deepfake",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 65,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/MMS-300M-AntiDeepfake",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/mms-300m-anti-deepfake"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/Wav2Vec2-Large-AntiDeepfake-NDA",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/wav2vec-large-anti-deepfake-nda",
+        "base_model:quantized:nii-yamagishilab/wav2vec-large-anti-deepfake-nda",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 57,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/Wav2Vec2-Large-AntiDeepfake-NDA",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/wav2vec-large-anti-deepfake-nda"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/HuBERT-XL-AntiDeepfake-NDA",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "hubert",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/hubert-xlarge-anti-deepfake-nda",
+        "base_model:quantized:nii-yamagishilab/hubert-xlarge-anti-deepfake-nda",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 50,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/HuBERT-XL-AntiDeepfake-NDA",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/hubert-xlarge-anti-deepfake-nda"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/MMS-1B-AntiDeepfake-NDA",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/mms-1b-anti-deepfake-nda",
+        "base_model:quantized:nii-yamagishilab/mms-1b-anti-deepfake-nda",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 47,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/MMS-1B-AntiDeepfake-NDA",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/mms-1b-anti-deepfake-nda"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/XLS-R-2B-AntiDeepfake-NDA",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/xls-r-2b-anti-deepfake-nda",
+        "base_model:quantized:nii-yamagishilab/xls-r-2b-anti-deepfake-nda",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 45,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/XLS-R-2B-AntiDeepfake-NDA",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/xls-r-2b-anti-deepfake-nda"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/XLS-R-1B-AntiDeepfake",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/xls-r-1b-anti-deepfake",
+        "base_model:quantized:nii-yamagishilab/xls-r-1b-anti-deepfake",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 41,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/XLS-R-1B-AntiDeepfake",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/xls-r-1b-anti-deepfake"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/MMS-1B-AntiDeepfake",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/mms-1b-anti-deepfake",
+        "base_model:quantized:nii-yamagishilab/mms-1b-anti-deepfake",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 34,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/MMS-1B-AntiDeepfake",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/mms-1b-anti-deepfake"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/MMS-300M-AntiDeepfake-NDA",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "wav2vec2",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/mms-300m-anti-deepfake-nda",
+        "base_model:quantized:nii-yamagishilab/mms-300m-anti-deepfake-nda",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 32,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/MMS-300M-AntiDeepfake-NDA",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/mms-300m-anti-deepfake-nda"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "SpeechAntiSpoofingBenchmarks/HuBERT-XL-AntiDeepfake",
+      "author": "SpeechAntiSpoofingBenchmarks",
+      "created_at": "2026-06-09",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "hubert",
+        "anti-spoofing",
+        "audio-deepfake-detection",
+        "speech",
+        "audio-classification",
+        "arxiv:2506.21090",
+        "base_model:nii-yamagishilab/hubert-xlarge-anti-deepfake",
+        "base_model:quantized:nii-yamagishilab/hubert-xlarge-anti-deepfake",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 23,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/SpeechAntiSpoofingBenchmarks/HuBERT-XL-AntiDeepfake",
+      "card_text": "",
+      "arxiv_ids": [
+        "2506.21090"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nii-yamagishilab/hubert-xlarge-anti-deepfake"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "riasatsk/maya2-native",
+      "author": "riasatsk",
+      "created_at": "2026-10-29",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "maya3",
+        "text-to-speech",
+        "tts",
+        "indic",
+        "multilingual",
+        "voice-cloning",
+        "streaming",
+        "mimi",
+        "as",
+        "bn",
+        "en",
+        "gu",
+        "hi",
+        "kn",
+        "ml",
+        "mr",
+        "or",
+        "pa",
+        "ta",
+        "te",
+        "base_model:Qwen/Qwen3-1.7B-Base",
+        "base_model:finetune:Qwen/Qwen3-1.7B-Base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 8,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/riasatsk/maya2-native",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-1.7B-Base"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "HirCoir/yue2-multigpu-kaggle",
+      "author": "HirCoir",
+      "created_at": "2026-10-29",
+      "last_modified": "2026-10-29",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "gguf",
+        "yue2",
+        "music-generation",
+        "audio.cpp",
+        "cuda",
+        "multi-gpu",
+        "kaggle",
+        "text-to-audio",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 2,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/HirCoir/yue2-multigpu-kaggle",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Fealtyy/morisyen-tts",
+      "author": "Fealtyy",
+      "created_at": "2026-09-29",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "custom",
+        "text-to-speech",
+        "speech-generation",
+        "mauritian-creole",
+        "kreol-morisien",
+        "morisyen",
+        "mfe",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "custom",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Fealtyy/morisyen-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "WhissleAI/steer-tts-edge",
+      "author": "WhissleAI",
+      "created_at": "2026-10-22",
+      "last_modified": "2026-10-30",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "steertts-edge",
+        "onnx",
+        "steer-tts-edge",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "english",
+        "on-device",
+        "edge",
+        "tiny",
+        "int4",
+        "quantized",
+        "controllable-tts",
+        "steerable-tts",
+        "prosody-control",
+        "style-control",
+        "inline-markup",
+        "vocos",
+        "streaming",
+        "cpu",
+        "onnxruntime",
+        "raspberry-pi",
+        "cpp",
+        "non-commercial",
+        "en",
+        "base_model:WhissleAI/steer-tts",
+        "base_model:quantized:WhissleAI/steer-tts",
+        "license:cc-by-nc-4.0",
+        "model-index",
+        "region:us"
+      ],
+      "downloads": 56,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "steertts-edge",
+      "license": "cc-by-nc-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/WhissleAI/steer-tts-edge",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "WhissleAI/steer-tts"
+      ],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
