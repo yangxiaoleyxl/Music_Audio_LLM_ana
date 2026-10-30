@@ -3,9 +3,10 @@ from __future__ import annotations
 import datetime as dt
 import os
 import re
+import time
 import urllib.parse
 import xml.etree.ElementTree as ET
-from typing import Dict, Iterable, List, Sequence, Tuple
+from typing import Dict, List, Tuple
 
 from .models import Paper
 from .net import get_bytes, get_json
@@ -28,32 +29,7 @@ def _github_urls(*texts: str) -> List[str]:
     return urls
 
 
-def _topic_phrases(config: dict) -> List[str]:
-    phrases: List[str] = []
-    for topic in config["topics"]:
-        for phrase in topic["keywords"]:
-            if phrase not in phrases:
-                phrases.append(phrase)
-    return phrases
-
-
-def fetch_arxiv(config: dict, start: dt.date, end: dt.date) -> List[Paper]:
-    source_config = config["sources"]["arxiv"]
-    phrases = _topic_phrases(config)
-    term_query = " OR ".join('all:\"{}\"'.format(p.replace('"', "")) for p in phrases)
-    date_range = "submittedDate:[{}0000 TO {}2359]".format(
-        start.strftime("%Y%m%d"), end.strftime("%Y%m%d")
-    )
-    params = urllib.parse.urlencode(
-        {
-            "search_query": "({}) AND {}".format(term_query, date_range),
-            "start": 0,
-            "max_results": int(source_config.get("max_results", 300)),
-            "sortBy": "submittedDate",
-            "sortOrder": "descending",
-        }
-    )
-    payload = get_bytes("https://export.arxiv.org/api/query?" + params)
+def _arxiv_entries(payload: bytes) -> List[Paper]:
     root = ET.fromstring(payload)
     atom = "{http://www.w3.org/2005/Atom}"
     arxiv = "{http://arxiv.org/schemas/atom}"
@@ -87,6 +63,37 @@ def fetch_arxiv(config: dict, start: dt.date, end: dt.date) -> List[Paper]:
     return papers
 
 
+def fetch_arxiv(config: dict, start: dt.date, end: dt.date) -> Tuple[List[Paper], List[str]]:
+    source_config = config["sources"]["arxiv"]
+    per_topic = max(20, int(source_config.get("max_results", 300)) // max(len(config["topics"]), 1))
+    date_range = "submittedDate:[{}0000 TO {}2359]".format(
+        start.strftime("%Y%m%d"), end.strftime("%Y%m%d")
+    )
+    papers: List[Paper] = []
+    errors: List[str] = []
+    for index, topic in enumerate(config["topics"]):
+        if index:
+            time.sleep(2)
+        term_query = " OR ".join(
+            'all:\"{}\"'.format(phrase.replace('"', "")) for phrase in topic["keywords"]
+        )
+        params = urllib.parse.urlencode(
+            {
+                "search_query": "({}) AND {}".format(term_query, date_range),
+                "start": 0,
+                "max_results": per_topic,
+                "sortBy": "submittedDate",
+                "sortOrder": "descending",
+            }
+        )
+        try:
+            payload = get_bytes("https://export.arxiv.org/api/query?" + params)
+            papers.extend(_arxiv_entries(payload))
+        except Exception as exc:
+            errors.append("arXiv / {}: {}".format(topic["name"], exc))
+    return papers, errors
+
+
 def _s2_query(topic: dict) -> str:
     phrases = list(topic["keywords"].keys())
     return " | ".join('"{}"'.format(p.replace('"', "")) for p in phrases)
@@ -115,7 +122,9 @@ def fetch_semantic_scholar(config: dict, start: dt.date, end: dt.date) -> Tuple[
             response = get_json(url, headers=headers)
         except Exception as exc:  # one topic must not stop the daily run
             errors.append("Semantic Scholar / {}: {}".format(topic["name"], exc))
+            time.sleep(8)
             continue
+        time.sleep(3)
         limit = int(source_config.get("max_results_per_topic", 30))
         for item in response.get("data", [])[:limit]:
             published = item.get("publicationDate") or "{}-01-01".format(item.get("year") or end.year)
@@ -220,13 +229,10 @@ def fetch_all(config: dict, start: dt.date, end: dt.date) -> Tuple[List[Paper], 
     counts: Dict[str, int] = {}
 
     if config["sources"].get("arxiv", {}).get("enabled"):
-        try:
-            result = fetch_arxiv(config, start, end)
-            papers.extend(result)
-            counts["arxiv"] = len(result)
-        except Exception as exc:
-            errors.append("arXiv: {}".format(exc))
-            counts["arxiv"] = 0
+        result, source_errors = fetch_arxiv(config, start, end)
+        papers.extend(result)
+        errors.extend(source_errors)
+        counts["arxiv"] = len(result)
 
     if config["sources"].get("semantic_scholar", {}).get("enabled"):
         result, source_errors = fetch_semantic_scholar(config, start, end)

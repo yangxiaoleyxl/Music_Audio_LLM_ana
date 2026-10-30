@@ -20,14 +20,30 @@ def _clip(value: str, limit: int) -> str:
     return text[: limit - 1].rstrip() + "…"
 
 
+def explain_errors(errors: list) -> str:
+    notes = []
+    for error in errors:
+        text = str(error)
+        if text.startswith("arXiv"):
+            topic = text.split(":", 1)[0].replace("arXiv / ", "")
+            notes.append("arXiv「{}」没有返回".format(topic) if topic != "arXiv" else "arXiv 没有返回")
+        elif "429" in text and "Semantic Scholar" in text:
+            topic = text.split(":", 1)[0].replace("Semantic Scholar / ", "")
+            notes.append("Semantic Scholar「{}」被限流".format(topic))
+        else:
+            notes.append(_clip(text, 80))
+    return "；".join(notes)
+
+
 def build_message(
     data: dict,
     *,
     repo: str,
     report_name: str,
-    paper_limit: int = 5,
-    model_limit: int = 5,
+    paper_limit: int = 60,
+    model_limit: int = 40,
     include_abstract: bool = False,
+    brief: str = "",
 ) -> str:
     papers = data.get("papers") or []
     models = data.get("models") or []
@@ -38,8 +54,18 @@ def build_message(
         "新论文 {} · 新模型 {}".format(len(papers), len(models)),
         "全文 https://github.com/{}/blob/main/reports/{}".format(repo, report_name),
     ]
+    if brief:
+        lines.append("简报 https://github.com/{}/blob/main/reports/{}-brief.md".format(repo, Path(report_name).stem))
     if errors:
-        lines.append("源异常: " + _clip(" | ".join(errors), 300))
+        lines.append("来源未齐: " + explain_errors(errors))
+    if brief.strip():
+        lines.extend(["", brief.strip()])
+        message = "\n".join(lines)
+        encoded = message.encode("utf-8")
+        if len(encoded) <= 18000:
+            return message
+        clipped = encoded[:17500].decode("utf-8", errors="ignore")
+        return clipped + "\n\n简报过长，其余见上面的全文链接。"
     lines.extend(["", "论文"])
     if not papers:
         lines.append("- 无")
@@ -95,13 +121,16 @@ def _env_int(name: str, default: int) -> int:
 def notify_latest(reports_dir: Path, webhook: str, repo: str) -> str:
     path = latest_report(reports_dir)
     data = json.loads(path.read_text(encoding="utf-8"))
+    brief_path = path.with_name(path.stem + "-brief.md")
+    brief = brief_path.read_text(encoding="utf-8") if brief_path.exists() else ""
     message = build_message(
         data,
         repo=repo,
         report_name=path.with_suffix(".md").name,
-        paper_limit=_env_int("LARK_PAPER_LIMIT", 5),
-        model_limit=_env_int("LARK_MODEL_LIMIT", 5),
+        paper_limit=_env_int("LARK_PAPER_LIMIT", 60),
+        model_limit=_env_int("LARK_MODEL_LIMIT", 40),
         include_abstract=os.environ.get("LARK_INCLUDE_ABSTRACT", "").strip().lower() == "true",
+        brief=brief,
     )
     post_text(webhook, message)
     return message

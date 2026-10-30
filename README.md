@@ -72,7 +72,8 @@ Push the whole `audio-llm-radar` directory as the repository root; if it lives a
 - `OPENALEX_API_KEY` (only needed when OpenAlex is enabled)
 - `OPENALEX_EMAIL`
 - `HF_TOKEN` (optional; public models work without it, but it stabilizes rate limits)
-- `LARK_WEBHOOK` (optional; Lark custom-bot URL. The message is a short digest of that run's JSON, so later topic or detail changes flow through without rewriting the bot call. `LARK_PAPER_LIMIT`, `LARK_MODEL_LIMIT`, and `LARK_INCLUDE_ABSTRACT` in the workflow control how much of the digest is sent. The bot keyword must appear in the message; the current text starts with `音频研究雷达`.)
+- `LARK_WEBHOOK` (optional; Lark custom-bot URL. The message lists the papers and models in that run's JSON. `LARK_PAPER_LIMIT` and `LARK_MODEL_LIMIT` default to 60 and 40. The bot keyword must appear in the message; the current text starts with `音频研究雷达`.)
+- `OPENAI_API_KEY` (optional; one Chat Completions call writes `reports/YYYY-MM-DD-brief.md` from the fetched abstracts and model notes, and Lark sends that brief. This uses OpenAI API credit. A local Codex login is not available on the GitHub runner. Set repository variable `OPENAI_BRIEF_MODEL` to override the default `gpt-4.1-mini`.)
 
 ### Local cron
 

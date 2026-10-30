@@ -21,7 +21,7 @@ concurrency:
 jobs:
   radar:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,6 +39,11 @@ jobs:
           else
             ./scripts/run_daily.sh
           fi
+      - name: Write research brief
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BRIEF_MODEL: ${{ vars.OPENAI_BRIEF_MODEL }}
+        run: python3 scripts/write_brief.py
       - name: Commit report and state
         run: |
           git config user.name "github-actions[bot]"
@@ -50,8 +55,8 @@ jobs:
         env:
           LARK_WEBHOOK: ${{ secrets.LARK_WEBHOOK }}
           REPORT_REPO: ${{ github.repository }}
-          LARK_PAPER_LIMIT: "5"
-          LARK_MODEL_LIMIT: "5"
+          LARK_PAPER_LIMIT: "60"
+          LARK_MODEL_LIMIT: "40"
           LARK_INCLUDE_ABSTRACT: "false"
         run: python3 scripts/notify_lark.py
       - uses: actions/upload-artifact@v4
