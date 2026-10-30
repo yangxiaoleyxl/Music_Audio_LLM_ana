@@ -46,6 +46,14 @@ jobs:
           git add reports data/radar.db
           git diff --cached --quiet || git commit -m "radar: daily update $(date -u +%F)"
           git push
+      - name: Notify Lark
+        env:
+          LARK_WEBHOOK: ${{ secrets.LARK_WEBHOOK }}
+          REPORT_REPO: ${{ github.repository }}
+          LARK_PAPER_LIMIT: "5"
+          LARK_MODEL_LIMIT: "5"
+          LARK_INCLUDE_ABSTRACT: "false"
+        run: python3 scripts/notify_lark.py
       - uses: actions/upload-artifact@v4
         with:
           name: audio-llm-radar-${{ github.run_id }}
