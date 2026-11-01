@@ -64,7 +64,7 @@ A single failing source does not break the digest; errors appear both in the ter
 
 ### GitHub Actions (recommended)
 
-The repo ships `.github/workflows/daily-radar.yml`, which runs daily at 11:30 UTC and commits the digest plus SQLite state back to the repository. Manual triggering is also supported.
+The repo ships `.github/workflows/daily-radar.yml`, which is scheduled at 19:20 UTC so that, after GitHub's usual queue delay, the digest is committed around 08:00–10:00 Beijing time. The schedule is UTC and does not follow the computer's timezone. Manual triggering is also supported.
 
 Push the whole `audio-llm-radar` directory as the repository root; if it lives as a subdirectory of a larger repo, prefix the workflow commands and `git add` paths accordingly. Add these repository Secrets:
 
