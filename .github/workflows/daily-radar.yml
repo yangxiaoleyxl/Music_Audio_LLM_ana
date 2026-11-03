@@ -9,9 +9,9 @@ on:
         type: boolean
         default: false
   schedule:
-    # GitHub cron is UTC and often starts 5–6 hours late. 19:20 UTC is 03:20
-    # Beijing time, so a typical delay lands between 08:00 and 10:00 Beijing.
-    - cron: "20 19 * * *"
+    # GitHub cron is UTC and can start 5–8 hours late. 16:17 UTC is 00:17
+    # Beijing time, so an 8-hour delay still starts by about 08:17 Beijing.
+    - cron: "17 16 * * *"
 
 permissions:
   contents: write
