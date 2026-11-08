@@ -1,0 +1,1893 @@
+{
+  "generated_at": "2026-11-08",
+  "window_start": "2026-11-01",
+  "source_counts": {
+    "arxiv": 86,
+    "semantic_scholar": 65
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "7846fc83f865ccf470d6286eaefe05d7d996f662",
+      "title": "Creative Demands and Practical Limitations of Controllable Music Generation from the Human Perception Perspective",
+      "abstract": "Controllable music generation aims to allow creators to guide AI in music creation through intuitive means, but the existing systems are still far from achieving this goal. From the perspective of human perception, this study combines computer music education and practical experience to explore the actual demands of creators for a generation system in terms of timbre control, rhythm arrangement, emotional expression, and editability of results. The study found that current controllable music generation has three deficiencies: First, there is a semantic mismatch between the system's parameter settings and the auditory perception of creators, and the adjustable dimensions are difficult to align with intuitive judgments in music creation; Second, the response of the generation model to control instructions lacks stability and precision, and there are frequent deviations between the creative concept and the final output; Third, the existing tools do not support an iterative workflow of repeated listening and local modification in music production, making it difficult to further edit and refine the generated results. The above problems show that, in order to serve the creative needs of people in their work, controllable music generation should be based on their perception habits and working methods rather than technical performance optimisation.",
+      "authors": [
+        "Xin-Yu Jiang"
+      ],
+      "published": "2026-11-04",
+      "updated": "2026-11-04",
+      "url": "https://www.semanticscholar.org/paper/7846fc83f865ccf470d6286eaefe05d7d996f662",
+      "pdf_url": "https://asciences.org/index.php/ojs/article/download/118/117",
+      "doi": "10.54097/00mxxz05",
+      "venue": "Academic Journal of Applied Sciences",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "generative_music_audio": 10
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "6064abd5826b047553ef4de4d9857918e82cc10a",
+      "title": "Clinical Praat Parameters and Cepstral Representations for Speaker-Independent Voice Pathology Detection: The Influence of Age and Dysphonia Severity.",
+      "abstract": "OBJECTIVES To determine whether clinically validated Praat parameters discriminate pathological from healthy voice under speaker-independent evaluation of the complete Saarbrücken Voice Database corpus of sustained vowels, how their performance compares with a high-dimensional cepstral representation and a speech foundation model trained through self-supervision, and how discrimination depends on dysphonia severity and on the age difference between groups. STUDY DESIGN Retrospective analysis of a publicly available voice database. The machine learning task was formulated as binary classification: healthy versus pathological voice. METHODS All 15,442 sustained vowel recordings from 1288 sessions of 1180 speakers (age 27.9 ± 11.7 years in healthy and 50.7 ± 15.4 years in pathological speakers) were analyzed. A total of 78 features were extracted: 14 clinical parameters via Praat and 64 cepstral, spectral, and energy descriptors via librosa. Group differences were tested at the session level with Mann-Whitney U, quantified by rank-biserial correlation, and corrected by Holm-Bonferroni. Six classifiers were compared using nested cross-validation with five folds grouped by speaker. The severity of acoustic alteration was estimated with the Acoustic Voice Quality Index (AVQI), which does not replace perceptual evaluation, and age was controlled by matching patients to controls on age and sex and by reweighting the training data. RESULTS Nine of 11 parameters reached medium effect size, led by jitter PPQ5 (r = -0.414) and CPPS (r = +0.382). Sixty percent of pathological sessions had acoustic voice quality within the healthy range. The SVM (0.775 ± 0.019) and XGBoost (0.770 ± 0.013) reached the highest recording-level AUC; adapted wav2vec 2.0 reached 0.726 ± 0.015. The 14 Praat parameters and the 52 cepstral coefficients performed similarly (AUC difference +0.014, 95% CI -0.002 to +0.030); neither equivalence nor superiority was demonstrated. With age controlled, XGBoost reached a session-level AUC of 0.721 (95% CI 0.669 to 0.769). Discrimination increased progressively across strata of acoustic alteration defined by the AVQI: 0.60 within the healthy range and 0.89 to 0.99 above it. Jitter, shimmer, and CPPS kept their effect sizes after age matching, whereas f0 variability did not. CONCLUSIONS Acoustic analysis of sustained vowels identifies dysphonia with measurable acoustic alteration but not acoustically mild disorders, and 14 interpretable parameters performed similarly to a cepstral representation nearly four times larger. Discrimination reported on the SVD should be interpreted in the light of the age difference between groups and the severity composition of the sample.",
+      "authors": [
+        "Leonardo Forero Mendoza",
+        "Edson Cataldo",
+        "H. D. de Mello",
+        "M. Kohler",
+        "E. Batista",
+        "Marco Aurélio Pacheco"
+      ],
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "url": "https://www.semanticscholar.org/paper/6064abd5826b047553ef4de4d9857918e82cc10a",
+      "pdf_url": "https://www.jvoice.org/article/S0892-1997(26)00612-0/pdf",
+      "doi": "10.1016/j.jvoice.2026.10.051",
+      "venue": "Journal of Voice",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "audio_language_models": 7
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech foundation model"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "arpanpathak/staleynet-checkpoints",
+      "author": "arpanpathak",
+      "created_at": "2026-11-04",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "music-generation",
+        "text-to-music",
+        "audio-tokens",
+        "rvq",
+        "rust",
+        "cuda-oxide",
+        "staleynet",
+        "text-to-audio",
+        "en",
+        "license:cc-by-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/arpanpathak/staleynet-checkpoints",
+      "card_text": "---\nlicense: cc-by-sa-4.0\nlanguage:\n  - en\ntags:\n  - music-generation\n  - text-to-music\n  - audio-tokens\n  - rvq\n  - rust\n  - cuda-oxide\n  - staleynet\npipeline_tag: text-to-audio\n---\n\n# StaleyNET checkpoints\n\n[![Source on GitHub](https://img.shields.io/badge/source-GitHub-1D1B20?logo=github)](https://github.com/arpanpathak/staleynet) [![staleynet-audio on crates.io](https://img.shields.io/crates/v/staleynet-audio?label=staleynet-audio)](https://crates.io/crates/staleynet-audio) [![Paper](https://img.shields.io/badge/paper-PDF-6750A4)](https://github.com/arpanpathak/staleynet/blob/main/paper/preprint.pdf) [![Book](https://img.shields.io/badge/book-mdBook-6750A4)](https://github.com/arpanpathak/staleynet/tree/main/book/src) [![Release v0.1.2](https://img.shields.io/github/v/release/arpanpathak/staleynet)](https://github.com/arpanpathak/staleynet/releases) [![Dataset: 3.1 GB](https://img.shields.io/badge/dataset-3.1%20GB-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/arpanpathak/staleynet-data)\n\nWeights for **StaleyNET**, a text-prompted music generator trained from random initialization in Rust on NVIDIA edge GPUs. The Transformer, residual vector quantizer, Griffin-Lim vocoder, and GPU kernels are implemented in the project.\n\nThe code, paper, and book live in the companion repository:\n<https://github.com/arpanpathak/staleynet>.\n\n## Release v0.1.2\n\n- GitHub release: <https://github.com/arpanpathak/staleynet/releases/tag/v0.1.2>\n- `staleynet-audio` 0.1.2 on crates.io: <https://crates.io/crates/staleynet-audio>. Its page explains each audio step with intuition and runnable examples.\n- Since v0.1.1: the GPU kernels are organised into one module per topic, the AGX Thor builds against cuda-oxide's main branch, and the paper has been revised with hardware, benchmark and tokenizer appendices.\n- New in these repositories: the `lyrics-thor`, `lyrics-thor-long` and `pq-large` runs, and the band-group token caches they train on.\n- CI: rustfmt, clippy with warnings denied, cargo-deny, the audio coverage gate, and documentation tests for every example on the crate page.\n\n## At a glance\n\n| Item | Value |\n|---|---|\n| Checkpointed runs | 9 |\n| Parameters | 7,099,904 for text-only runs; 7,165,440 for the lyrics runs; 42,858,496 for `pq-large` |\n| Transformer | width 256, 8 heads, 6 layers, context 768 (`pq-large`: width 512, 8 layers, context 1152) |\n| Audio tokens | 4 residual codebooks of 1024 entries (`pq-large`: 4 band groups × 4 levels = 16 codebooks of 1024 entries) |\n| Audio features | 128 mel bands at 24 kHz, FFT 1024, hop 256 |\n| Training data | Song Describer Dataset and JamendoLyrics MultiLang |\n| License | CC BY-SA 4.0, subject to the upstream dataset terms |\n\n## Checkpoints\n\n| Run | Purpose | Parameters | `best` step | `latest` step | Training tracks |\n|---|---|---:|---:|---:|---:|\n| `thor-base` | base text-to-music model | 7,099,904 | 0 | None | 667 |\n| `smoke` | pipeline smoke test | 7,099,904 | 0 | 1,500 | 667 |\n| `overfit-one-take` | single-take memorisation check | 7,099,904 | 200 | 200 | 1 |\n| `vocal-scratch` | vocal-filtered model from scratch | 7,099,904 | 5,500 | 6,000 | 281 |\n| `vocal-finetune` | vocal fine-tune | 7,099,904 | 250 | None | 281 |\n| `lyrics-orin` | lyrics-conditioned model | 7,165,440 | 3,750 | 4,000 | 543 (73 with lyrics) |\n| `lyrics-thor` | lyrics-conditioned model trained on the AGX Thor | 7,165,440 | 4,750 | 8,000 | 543 (73 with lyrics) |\n| `lyrics-thor-long` | the same model trained for 20,000 steps | 7,165,440 | 19,750 | 20,000 | 543 (73 with lyrics) |\n| `pq-large` | larger model on the band-group tokenizer (in progress) | 42,858,496 | 7,000 | 7,000 | 742 (75 with lyrics) |\n\nThe step values are exactly what each `model.json` records. `best/` is the weight-only checkpoint selected by validation. `latest/` is the resumable checkpoint with AdamW moments. Some early runs stored only `best/`, and `thor-base` and `smoke` record step 0 in their `best/model.json`. Where a `latest/` exists, prefer it for the late training state.\n\n### About `pq-large`\n\n`pq-large` is still training on the Jetson AGX Thor (128 GB). The files here are a snapshot at step 7,000 of 20,000, and they will be replaced as the run advances. Its validation loss (5.135 nats per token at step 7,000) is averaged over 16 codebooks of a different tokenizer, so it cannot be compared directly with the 4-codebook runs above.\n\nThe model reads codes from the band-group tokenizer, which splits the 128 mel bands into 4 groups and quantises each group with 4 residual levels. That tokenizer is stored as `checkpoints/pq-large/tokenizer.json`, and the matching caches are `cache-g4l4f1/`, `cache-pq-jamendolyrics/` and `cache-pq-recordings/` in the dataset repository. Pass `--cache data/cache-g4l4f1` when generating with this run.\n\n`evaluations/<run>/` holds the paired lyrics test of each lyrics run: the per-track loss with aligned, removed and mismatched lyrics.\n\n## Training progress\n\nThe runs on the Jetson AGX Thor publish their metrics here every two hours\n(`deploy/hf/publish.sh` in the code repository): `metrics/<run>.jsonl` holds\nevery logged event, and `plots/<run>.png` shows, from left to right, the\ntraining and validation loss in nats per code against optimizer step, the\nlatest validation loss of each codebook (coarse levels are far easier to\npredict than fine ones), and the throughput in positions per second.\n\n![pq-large training curves](plots/pq-large.png)\n\n## Layout\n\n```text\ncheckpoints/<run>/best/      weights only       model.json + tensors.bin\ncheckpoints/<run>/latest/    weights + AdamW    model.json + tensors.bin\nconfigs/                     canonical training configurations\nrun-configs/                 per-run config.json where the run saved one\nmetrics/                     full metrics.jsonl for every run\nlogs/                        captured training logs and the tokenizer sweeps\nevaluations/<run>/           paired lyrics evaluations\n```\n\n`tensors.bin` is little-endian `f32` in parameter-visitor order. `latest/` appends the AdamW first moments and then the second moments. `model.json` records the tensor manifest, the step, whether optimizer state is present, and the training configuration.\n\n## Download and use\n\n```bash\nhf download arpanpathak/staleynet-checkpoints \\\n  --repo-type model --local-dir staleynet-checkpoints\n\n# From the code repository, on a Jetson with the cuda-oxide toolchain:\ncargo oxide build -- --release\nstaleynet sing \\\n  --cache data/cache \\\n  --run staleynet-checkpoints/checkpoints/thor-base/best \\\n  --prompt \"slow acoustic ballad, warm female voice\" \\\n  --out song.wav\n```\n\nFor the lyrics model:\n\n```bash\nstaleynet sing \\\n  --run staleynet-checkpoints/checkpoints/lyrics-orin/best \\\n  --prompt \"grunge rock, raw male voice\" \\\n  --lyrics-file song.txt \\\n  --out song.wav\n```\n\nArchitecture: width 256, 8 heads, 6 layers, feed-forward multiplier 4, context length 768, 4 residual codebooks of 1024 entries, 128 mel bands at 24 kHz. `lyrics-orin` adds a 256-byte lyrics field.\n\n## Training data and licensing\n\n- **Song Describer Dataset** (SDD), Zenodo record [10072001](https://zenodo.org/records/10072001): 706 Jamendo recordings with human captions. Captions are CC BY-SA 4.0. The recordings carry the per-track Creative Commons licenses in `audio_licenses.txt`, including CC BY-NC-ND and CC BY-NC-SA.\n- **JamendoLyrics MultiLang**, <https://github.com/f90/jamendolyrics>: code and metadata are MIT. Songs and lyrics carry the per-song CC licenses in `JamendoLyrics.csv`.\n\nBecause the training audio includes NonCommercial and NoDerivatives tracks, these checkpoints are research artifacts, not a commercial product. Do not use them commercially where the upstream recording licenses forbid it, and do not use them to impersonate a singer without consent.\n\nThe checkpoint files are offered under CC BY-SA 4.0 (`LICENSE-CC-BY-SA-4.0.txt`) to the extent the upstream dataset licenses allow. See `NOTICE` for the full provenance statement and `SHA256SUMS` for integrity.\n\n## Known limitations\n\n- Griffin-Lim produces phasey audio compared with a learned vocoder.\n- The models are small edge models, not production music systems.\n- The lyric models were trained on a small lyrics subset, so lyric intelligibility is limited.\n- The checkpoints are research artifacts and have no warranty.\n\n## Citation\n\n```bibtex\n@misc{pathak2026staleynet,\n  author = {Arpan Pathak},\n  title  = {StaleyNET: Text-Conditioned Music Generation Trained from Scratch\n            on Edge GPUs in Rust},\n  year   = {2026},\n  url    = {https://github.com/arpanpathak/staleynet}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license cc-by-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "CodecFake/CodecFake_Source_Tracing",
+      "author": "CodecFake",
+      "created_at": "2025-07-28",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "audio",
+        "speech",
+        "deepfake-detection",
+        "audio-deepfake-detection",
+        "anti-spoofing",
+        "source-tracing",
+        "neural-audio-codec",
+        "codecfake",
+        "audio-classification",
+        "en",
+        "dataset:CodecFake/CodecFake_Plus_Dataset",
+        "arxiv:2505.12994",
+        "arxiv:2506.07294",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/CodecFake/CodecFake_Source_Tracing",
+      "card_text": "---\nlanguage:\n- en\npipeline_tag: audio-classification\ndatasets:\n- CodecFake/CodecFake_Plus_Dataset\ntags:\n- audio\n- speech\n- deepfake-detection\n- audio-deepfake-detection\n- anti-spoofing\n- source-tracing\n- neural-audio-codec\n- codecfake\n---\n\n# CodecFake Source Tracing Checkpoints\n\n[![INTERSPEECH 2025](https://img.shields.io/badge/INTERSPEECH-2025-b31b1b.svg)](https://arxiv.org/abs/2505.12994)\n[![IEEE ASRU 2025](https://img.shields.io/badge/IEEE%20ASRU-2025-00629B.svg)](https://arxiv.org/abs/2506.07294)\n[![GitHub](https://img.shields.io/badge/GitHub-Code-181717.svg?logo=github)](https://github.com/ResponsibleGenAI/CodecFake-Source-Tracing)\n[![Dataset](https://img.shields.io/badge/Dataset-CodecFake+-blue.svg)](https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset)\n[![Audio Demo](https://img.shields.io/badge/Audio-Demo-2563eb.svg)](https://responsiblegenai.github.io/CodecFake-Plus-Dataset/)\n\nPretrained model checkpoints for our source tracing work on codec-based deepfake speech. Training and inference code is on [GitHub](https://github.com/ResponsibleGenAI/CodecFake-Source-Tracing).\n\n🏆 [Towards Generalized Source Tracing for Codec-Based Deepfake Speech](https://arxiv.org/abs/2506.07294) received a **Best Student Paper Nomination (Top 2.5%)** at IEEE ASRU 2025.\n\n## Tasks and Training Subsets\n\n| Task | Meaning |\n|---|---|\n| `BIN` | Binary spoof detection |\n| `VQ` | Vector quantization source tracing |\n| `AUX` | Auxiliary objective source tracing |\n| `DEC` | Decoder type source tracing |\n\n| Subset | Sampling in the training data |\n|---|---|\n| `vq` | MVQ : SVQ : SQ = 1 : 1 : 1 |\n| `aux` | None : Semantic Distillation : Disentanglement = 1 : 1 : 1 |\n| `dec` | Time : Frequency = 1 : 1 |\n\n## Checkpoints\n\n### Wav2Vec2-AASIST\n\nFiles are in `model_checkpoints/Wav2Vec2_baseline/`.\n\n| Model | Learning | Task | Trained on | Files |\n|---|---|---|---|---|\n| `S_BIN` | Single-task | BIN | vq / aux / dec | `S_BIN_VQ_bal.pth`, `S_BIN_AUX_bal.pth`, `S_BIN_DEC_bal.pth` |\n| `S_VQ` | Single-task | VQ | vq | `S_VQ.pth` |\n| `S_AUX` | Single-task | AUX | aux | `S_AUX.pth` |\n| `S_DEC` | Single-task | DEC | dec | `S_DEC.pth` |\n| `D_VQ` | Dual-task | BIN / VQ | vq | `D_VQ.pth` |\n| `D_AUX` | Dual-task | BIN / AUX | aux | `D_AUX.pth` |\n| `D_DEC` | Dual-task | BIN / DEC | dec | `D_DEC.pth` |\n| `M1` | Multi-task | BIN / VQ / AUX / DEC | vq / aux / dec | `M1_VQ_bal.pth`, `M1_AUX_bal.pth`, `M1_DEC_bal.pth` |\n| `M2` | Multi-task | VQ / AUX / DEC | vq / aux / dec | `M2_VQ_bal.pth`, `M2_AUX_bal.pth`, `M2_DEC_bal.pth` |\n\n### SAST Net\n\nFiles are in `model_checkpoints/SAST_Net/`.\n\n| Task | Trained on | Files |\n|---|---|---|\n| BIN | vq / aux / dec | `SAST_Net_BIN_VQ_bal.pth`, `SAST_Net_BIN_AUX_bal.pth`, `SAST_Net_BIN_DEC_bal.pth` |\n| VQ | vq | `SAST_Net_VQ.pth` |\n| AUX | aux | `SAST_Net_AUX.pth` |\n| DEC | dec | `SAST_Net_DEC.pth` |\n\n### Pretrained weights\n\nFiles are in `model_checkpoints/Pretrain_weight/`.\n\n| File | Description | Used by |\n|---|---|---|\n| `xlsr2_300m.pt` | Wav2Vec2 pretrained weight | Wav2Vec2-AASIST, SAST Net |\n| `mae_pretrained_base.pth` | AudioMAE pretrained on AudioSet | SAST Net |\n| `tuned_weight.pth` | Wav2Vec2-AASIST on CodecFake+ | SAST Net |\n\n## Usage\n\nDownload a checkpoint:\n\n```python\nfrom huggingface_hub import hf_hub_download\n\ncheckpoint = hf_hub_download(\n    repo_id=\"CodecFake/CodecFake_Source_Tracing\",\n    filename=\"model_checkpoints/SAST_Net/SAST_Net_VQ.pth\",\n)\n```\n\nSetup, inference, and training commands are in the [GitHub README](https://github.com/ResponsibleGenAI/CodecFake-Source-Tracing).\n\n> **Note:** The `metadata/` files in the GitHub repository use the file names from our internal copy of the dataset. The public [CodecFake+ release](https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset) uses a different layout and different CoSG file names, so the paths need to be adapted before running the scripts.\n\n## Citation\n\n```bibtex\n@inproceedings{chen2025towards,\n  title     = {Towards Generalized Source Tracing for Codec-Based Deepfake Speech},\n  author    = {Chen, Xuanjun and Lin, I-Ming and Zhang, Lin and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},\n  booktitle = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},\n  pages     = {1--8},\n  year      = {2025},\n  doi       = {10.1109/ASRU65441.2025.11434771}\n}\n\n@inproceedings{chen2025codec,\n  title     = {Codec-Based Deepfake Source Tracing via Neural Audio Codec Taxonomy},\n  author    = {Chen, Xuanjun and Lin, I-Ming and Zhang, Lin and Du, Jiawei and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},\n  booktitle = {{INTERSPEECH 2025}},\n  pages     = {1538--1542},\n  year      = {2025},\n  doi       = {10.21437/Interspeech.2025-1297}\n}\n\n@article{chen2026codecfake+,\n  title   = {{CodecFake+}: Codec-Based Resynthesized Data as a Proxy for Detecting {CodecFake} Speech},\n  author  = {Chen, Xuanjun and Du, Jiawei and Wu, Haibin and Zhang, Lin and Lin, I-Ming and Chiu, I-Hsiang and Ren, Wenze and Tseng, Yuan and Tsao, Yu and Jang, Jyh-Shing Roger and Lee, Hung-yi},\n  journal = {IEEE Transactions on Audio, Speech and Language Processing},\n  volume  = {34},\n  pages   = {2929--2944},\n  year    = {2026},\n  doi     = {10.1109/TASLPRO.2026.3692291}\n}\n```\n",
+      "arxiv_ids": [
+        "2505.12994",
+        "2506.07294"
+      ],
+      "datasets": [
+        "CodecFake/CodecFake_Plus_Dataset"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 38,
+      "topic_scores": {
+        "generative_music_audio": 12,
+        "speech_models": 3,
+        "evaluation_alignment_safety": 24
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake, speech deepfake",
+        "Generative Music & Audio: neural audio codec",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "model card links an arXiv paper"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "DanielClough/music-gen-ace-step-v15-xl-turbo-onnx",
+      "author": "DanielClough",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "onnxruntime",
+        "onnx",
+        "music",
+        "text-to-music",
+        "ace-step",
+        "music-gen",
+        "bf16",
+        "text-to-audio",
+        "base_model:ACE-Step/acestep-v15-xl-turbo",
+        "base_model:quantized:ACE-Step/acestep-v15-xl-turbo",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "onnxruntime",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/DanielClough/music-gen-ace-step-v15-xl-turbo-onnx",
+      "card_text": "---\nlicense: mit\nbase_model: ACE-Step/acestep-v15-xl-turbo\nlibrary_name: onnxruntime\npipeline_tag: text-to-audio\ntags:\n  - onnx\n  - music\n  - text-to-music\n  - ace-step\n  - music-gen\n  - bf16\n---\n\n# ACE-Step 1.5 XL turbo (4B) for music-gen (ONNX)\n\nThis is the ACE-Step 1.5 **XL turbo** model (the 4B DiT: 8 steps, no CFG) converted to ONNX: its\ncondition encoder (FP32) and its DiT (BF16 inside, with FP32 inputs and output). It's made for\nmusic-gen, a local ACE-Step 1.5 text-to-music runner on ONNX Runtime and CUDA. A whole pipeline\nalso needs:\n- `music-gen-qwen3-embedding-0.6b-onnx`, the caption and lyric encoders;\n- `music-gen-ace-step-v15-vae-onnx`, the VAE and silence latent.\n\nThe source is `ACE-Step/acestep-v15-xl-turbo` at revision\n`d4a0b288b83ebb7e25a8c0b32c573c22e134e8ee`, run with the modeling code shipped beside it.\n\n## Files\n\n**`condition_xl_turbo.onnx`** (+ `.data`, 2.4 GB, FP32): XL's condition encoder, with the same\ninputs, outputs and limits as the 2B's (see `music-gen-ace-step-v15-turbo-onnx`). XL's timbre\nencoder prepends a CLS token; that's inside the graph.\n\n**`dit_xl_turbo.onnx`** (+ `.data`, 8.3 GB, BF16 inside):\n- **Inputs:** `hidden_states` [1, T, 64], `timestep` [1], `encoder_hidden_states` [1, E, 2048],\n  `context_latents` [1, T, 128].\n- **Output:** `velocity` [1, T, 64].\n- **Limits:** T even, 16–15000; E 2–4096.\n- **Fits on a 24 GB GPU** up to about 7 minutes (T 10500); see Memory.\n\n`SHA256SUMS` lists every file's sha256. Sampling is the same as the 2B turbo's: the shift-3 turbo\nschedule, Euler steps, and x0 at the last step.\n\n## Precision\n\n- **Why not FP16:** XL overflows in FP16. Its residual stream passes 65504 in the first layer, in\n  PyTorch too.\n- **Why not FP32:** about 16 GB of weights would leave no room for a long piece's activations.\n- **So BF16, as upstream runs it on CUDA, with two exceptions:**\n  - **The attention scores and softmax run in FP32.** Split into ONNX ops, BF16 scores made long\n    sequences 2–3 times less accurate than upstream; upstream's fused kernel keeps them in FP32\n    inside.\n  - **The two patch convolutions (`proj_in`, `proj_out`) run in FP32,** because ONNX's `Conv` takes\n    no BF16 at opset 18.\n\n## Accuracy\n\nThe FP32 condition encoder against PyTorch FP32: 9.7e-9 on unpadded inputs, 3.9–4.1e-7 with\npadding.\n\nThe BF16 DiT against PyTorch **FP32**, relative RMS error. Upstream's own BF16 is the yardstick,\nand our graph has to stay within 1.5 times it to pass:\n\n| Case | This graph | Upstream's BF16 |\n|---|---|---|\n| T=200, E=86 | 4.5e-2 | 4.4e-2 |\n| T=750, E=86 | 4.9e-2 | 4.5e-2 |\n| T=750, E=300 | 6.4e-2 | 6.6e-2 |\n| T=1500, E=40 | 4.6e-2 | 4.1e-2 |\n\n## Memory and speed (RTX 3090, 24 GB)\n\n| Length | Time | Peak |\n|---|---|---|\n| 30 s | 8–9 s, loading included | 9.5–11.6 GB |\n| 3 min | 13.5 s | 15.3 GB |\n| 5 min | 20.5 s | 22.9 GB |\n| 7 min | 29.5 s | 20.8 GB |\n| 8 min | 33.5 s | 24.1 GB (at the limit) |\n| 9 min | fails | |\n\nThe FP32 attention scores grow as 32 heads × T²/4. For pieces longer than 7 minutes on a 24 GB GPU,\nuse the 2B turbo, which goes to 10.\n\n## How it was made\n\nThe scripts are included in `export/`:\n- `condition.py` is the same as for the 2B.\n- `dit.py` is run with `bf16`. It loads the checkpoint in BF16, registers an attention function\n  with FP32 scores and softmax, and wraps the two convolutions in FP32. It exports with\n  `torch.onnx.export(dynamo=True)` at opset 18 and checks the result against PyTorch FP32 and BF16,\n  each stage in its own process.\n\nPackages: torch 2.10.0+cu128, transformers 4.57.6, accelerate 1.13.0, onnx 1.23.2,\nonnxscript 0.7.2, onnxruntime-gpu 1.24.4.\n\n## Licence and changes\n\nMIT (`LICENSE`), as the original, copyright (c) 2026 ACEStep. **Changed:** converted from\nsafetensors to ONNX; the condition encoder and DiT were split out of the model and wrapped as\ndescribed above; the DiT's weights were cast to BF16, with attention scores and the two\nconvolutions in FP32. Nothing was retrained or quantised further.\n\n```bibtex\n@misc{gong2026acestep,\n    title={ACE-Step 1.5: Pushing the Boundaries of Open-Source Music Generation},\n    author={Junmin Gong, Yulin Song, Wenxiao Zhao, Sen Wang, Shengyuan Xu, Jing Guo},\n    howpublished={\\url{https://github.com/ace-step/ACE-Step-1.5}},\n    year={2026},\n    note={GitHub repository}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/acestep-v15-xl-turbo"
+      ],
+      "variants": [],
+      "score": 37,
+      "topic_scores": {
+        "generative_music_audio": 36
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "DanielClough/music-gen-ace-step-v15-turbo-onnx",
+      "author": "DanielClough",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "onnxruntime",
+        "onnx",
+        "music",
+        "text-to-music",
+        "ace-step",
+        "music-gen",
+        "text-to-audio",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:quantized:ACE-Step/Ace-Step1.5",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "onnxruntime",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/DanielClough/music-gen-ace-step-v15-turbo-onnx",
+      "card_text": "---\nlicense: mit\nbase_model: ACE-Step/Ace-Step1.5\nlibrary_name: onnxruntime\npipeline_tag: text-to-audio\ntags:\n  - onnx\n  - music\n  - text-to-music\n  - ace-step\n  - music-gen\n---\n\n# ACE-Step 1.5 turbo (2B) for music-gen (ONNX, FP32)\n\nThis is the ACE-Step 1.5 **turbo** model (the 2B DiT: 8 steps, no CFG) converted to ONNX: its\ncondition encoder and its DiT. It's made for music-gen, a local ACE-Step 1.5 text-to-music runner\non ONNX Runtime and CUDA. A whole pipeline also needs:\n- `music-gen-qwen3-embedding-0.6b-onnx`, the caption and lyric encoders;\n- `music-gen-ace-step-v15-vae-onnx`, the VAE and silence latent.\n\nThe source is `ACE-Step/Ace-Step1.5` at revision `19671f406d603126926c1b7e2adc169acbcade22`,\n`acestep-v15-turbo/` (`model.safetensors` sha256 `3f6e0797…6e422d7`), run with the modeling code\nshipped beside it.\n\n> Why not an existing ONNX export? The community export `shreyask/ACE-Step-v1.5-ONNX` has a DiT\n> whose weights aren't this checkpoint's: 81 of its 110 named weights differ, so it makes noise from\n> any input. Its condition encoder's lyric part is also wrong unless the lyrics are padded to 2048\n> tokens. These graphs were exported from the checkpoint itself and checked against it.\n\n## Files\n\n**`condition_turbo.onnx`** (+ `.data`, 2.4 GB): ACE-Step's condition encoder (text projector, lyric\nencoder, timbre encoder, packing), plus `prepare_condition`'s\n`src = where(is_covers > 0, hints, src_latents)` and `context = [src, chunk_masks]`.\n- **Inputs:** `text_hidden_states` [1, ts, 1024], `text_attention_mask` [1, ts],\n  `lyric_hidden_states` [1, ls, 1024], `lyric_attention_mask` [1, ls],\n  `refer_audio_acoustic_hidden_states_packed` [1, rl, 64], `refer_audio_order_mask` int64 [1],\n  `src_latents` [1, t, 64], `chunk_masks` [1, t, 64], `is_covers` [1],\n  `precomputed_lm_hints_25hz` [1, t, 64].\n- **Outputs:** `encoder_hidden_states` [1, ts+ls+1, 2048], `encoder_attention_mask` [1, ts+ls+1],\n  `context_latents` [1, t, 128].\n- **Limits:** one batch item and one reference clip (the timbre unpacking for that case);\n  ts 2–512, ls 2–4096, rl 2–15000, t 2–15000.\n\n**`dit_turbo.onnx`** (+ `.data`, 6.3 GB): the DiT, called as ACE-Step's sampler calls it\n(`timestep_r = timestep`, no cache).\n- **Inputs:** `hidden_states` [1, T, 64], `timestep` [1], `encoder_hidden_states` [1, E, 2048],\n  `context_latents` [1, T, 128].\n- **Output:** `velocity` [1, T, 64].\n- **Limits:** T even, 16–15000 (up to 10 minutes at 25 frames a second); E 2–4096.\n\nAll tensors are float32 except where marked. `SHA256SUMS` lists every file's sha256.\n\n**Sampling,** as ACE-Step's turbo does it:\n- Start from Gaussian noise [1, T, 64].\n- Use the shift-3 schedule `[1.0, 0.95455, 0.9, 0.83333, 0.75, 0.64286, 0.5, 0.3]`.\n- Each step does `x -= v · (t_k − t_{k+1})`; the last step does `x0 = x − v · t`.\n- Decode x0 with the VAE.\n\nFor text-to-music, `src_latents` is the silence latent tiled to T, `chunk_masks` is all ones and\n`is_covers` is 0. For repainting a span, `src_latents` is the existing latent with the span set to\nsilence and `chunk_masks` is 1 over the span.\n\n## How it was made\n\nThe scripts are included in `export/`:\n- `condition.py` exports with `torch.onnx.export(dynamo=True)` at opset 18. Two of upstream's\n  functions are replaced during the export only, each with an exact equivalent: the stable argsort\n  in `pack_sequences` (for 0/1 masks, sorting a unique key gives the same order, and ONNX has no\n  stable sort) and the timbre unpacking (its one-batch case).\n- `dit.py` runs each stage (PyTorch's reference answers, the export, the check) in its own process.\n\nPackages: torch 2.10.0+cu128, transformers 4.57.6, onnx 1.23.2, onnxscript 0.7.2,\nonnxruntime-gpu 1.24.4.\n\n## Accuracy\n\nAgainst upstream's PyTorch FP32 on CUDA, with TF32 off, as relative RMS error:\n\n| Graph | Results |\n|---|---|\n| `condition_turbo` | 7e-9 to 9e-9 on unpadded inputs; up to 4.0e-7 with padded captions and lyrics (text 256 / lyrics 2048 with masks; text 30 / lyrics 600 at 1501 frames) |\n| `dit_turbo` | 1.5e-5 at T=200, 4.0e-6 at 750, 5.0e-6 at 750 with 300 condition tokens, 8.3e-6 at 1500 |\n| All 8 steps, against upstream's own sampler on the same noise | 4.8e-6 at 750 frames (30 s); 7.9e-5 at 15000 frames (10 min) |\n\nOn an RTX 3090 (24 GB): a 3-minute piece takes about 10 s with a 10.3 GB peak; a 10-minute piece\ntakes 29 s with a 16.7–19.8 GB peak.\n\n## Licence and changes\n\nMIT (`LICENSE`), as the original, copyright (c) 2026 ACEStep. **Changed:** converted from\nsafetensors to ONNX; the condition encoder and DiT were split out of the model and wrapped as\ndescribed above. Nothing was retrained or quantised.\n\n```bibtex\n@misc{gong2026acestep,\n    title={ACE-Step 1.5: Pushing the Boundaries of Open-Source Music Generation},\n    author={Junmin Gong, Yulin Song, Wenxiao Zhao, Sen Wang, Shengyuan Xu, Jing Guo},\n    howpublished={\\url{https://github.com/ace-step/ACE-Step-1.5}},\n    year={2026},\n    note={GitHub repository}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/Ace-Step1.5"
+      ],
+      "variants": [],
+      "score": 37,
+      "topic_scores": {
+        "generative_music_audio": 36
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-32B-E2E",
+      "author": "adventists-ai",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "safetensors",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "voice-agent",
+        "paralinguistics",
+        "expressive-speech",
+        "duplexjev",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E",
+      "card_text": "---\nlicense: apache-2.0\nframeworks:\n- PyTorch\nlanguage:\n- zh\n- en\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- voice-agent\n- paralinguistics\n- expressive-speech\n- duplexjev\n---\n\n<h1 align=\"center\">Sophon-Realtime-32B-E2E（研究预览）</h1>\n\n<p align=\"center\"><b>Sophon-Realtime v1 系列的端到端版：听和说用同一种向量语言</b><br>AI降临派（Adventists AI）· Apache-2.0</p>\n\n<p align=\"center\">\n<a href=\"https://github.com/adventists-ai/sophon-realtime\">GitHub</a> ·\n<a href=\"https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E\">Hugging Face</a> ·\n<a href=\"https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-32B-E2E\">魔搭</a> ·\n<a href=\"#english\">English</a>\n</p>\n\n> **研究预览。** 生产使用请选 [Sophon-Realtime-32B-Tag](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-32B-Tag)（表现力最强，单卡）或 [Sophon-Realtime-32B-Flash](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-32B-Flash)（最快、并发最高，单卡）。三个版本是同一个大脑，只有出声方式不同。\n\n## 这是什么\n\nE2E 版不用单独的语音模型。32B 模型在听你说话时，内部会形成一串连续向量，里面既有说了什么，也有怎么说的（语调、轻重、情绪）。E2E 的说话头直接用这门「向量语言」写出回复，再由解码器还原成声音，所以模型听得懂的语气，它也能说出来。\n\n## 在 v1 系列里的位置\n\nSophon-Realtime v1 有三个版本，同一个大脑（VoiceBench 82.8、Big Bench Audio 81.8%，两项开源全双工第一；副语言理解综合第一），区别只在回复怎么变成声音：\n\n| | [Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag)（推荐） | [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) | **E2E（本仓库，研究预览）** |\n|---|---|---|---|\n| NVV-SuperBench（中 / 英） | **0.86 / 0.80** | 0.77 / 0.63 | 0.77 / 0.60 |\n| 单路首包 | 约 0.6 秒 | **0.31 秒** | 约 1 秒 |\n| 显卡 | 1 张 | 1 张 | 2 张 |\n\nE2E 适合研究端到端的语音表达；生产使用建议选 Tag 或 Flash。系列介绍和完整评测见 [v1 系列主页](https://huggingface.co/adventists-ai/Sophon-Realtime-v1)。\n\n## 本版更新（2026-11）\n\n- **解码器换代，4 步出声。** 每块音频的计算量与旧版相同。\n- 同一说话头的回复上，与旧版解码器对比：\n\n| | 旧版（Sophon-Realtime-v1） | **本版** |\n|---|---|---|\n| 长回复错字率（150 条，中 / 英 / 日） | 1.78%（1.03 / 1.32 / 2.99） | **1.51%（0.97 / 0.71 / 2.86）** |\n| 未见说话人参考音色的相似度 | 0.33 | **0.52** |\n| 单路首包（发布包 bench，中位） | 0.57 s | **0.51 s** |\n\n- 旧版权重仍保留在 [Sophon-Realtime-v1](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-v1)。\n\n## 部署\n\n两张 80 GB 显卡：思考器一张，说话引擎一张（说话引擎单卡建议 4–5 路并发）。需要 Linux、NVIDIA 驱动 580 及以上。\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime\ncd sophon-realtime\nbash scripts/install.sh          # 建两个虚拟环境，并从魔搭下载本模型\nSOPHON_MODEL_DIR=$PWD/Sophon-Realtime-32B-E2E THINKER_GPU=0 TALKER_GPU=1 bash scripts/start.sh\n```\n\n启动后打开 `http://<服务器>:8000/` 即可在网页里直接对话，也可以通过 WebSocket 接口（`/ws`）接入自己的客户端。说明见 GitHub 仓库的 [docs/deploy_CN.md](https://github.com/adventists-ai/sophon-realtime/blob/main/docs/deploy_CN.md)。\n\n## 文件\n\n| 目录 | 内容 |\n|---|---|\n| `base/` | 32B 底座（思考器与说话头共用） |\n| `adapters/tag/` | 写回复的 LoRA |\n| `talker/` | 说话头 |\n| `e2/` | 解码器（4 步）与声码器 |\n| `voices/` | 默认音色 |\n\n## 许可证\n\n代码和权重都是 Apache-2.0。第三方组件保留各自的许可证，见 GitHub 仓库的 NOTICE。\n\n## 联系\n\n商务合作：jiejin@adventists.ai\n\n---\n\n<a id=\"english\"></a>\n\n# Sophon-Realtime-32B-E2E (research preview)\n\n**The end-to-end build of the Sophon-Realtime v1 family: hearing and speaking share one vector language.** Adventists AI · Apache-2.0\n\n> **Research preview.** For production, use [Sophon-Realtime-32B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) (most expressive, one GPU) or [Sophon-Realtime-32B-Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) (fastest, most users per GPU, one GPU). All three share the same brain and differ only in how the reply becomes sound.\n\n## What it is\n\nThe E2E build speaks without a separate speech model. While the 32B model listens, it builds a stream of continuous vectors that carries both what was said and how (intonation, emphasis, emotion). The E2E talker writes replies directly in that vector language and a decoder turns it into sound, so the tone the model can hear is the tone it can speak.\n\n## Where it fits in the v1 family\n\nSophon-Realtime v1 has three builds that share one brain (VoiceBench 82.8 and Big Bench Audio 81.8%, #1 among open full-duplex models on both; #1 in paralinguistic understanding). They differ only in how the reply becomes sound:\n\n| | [Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) (recommended) | [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) | **E2E (this repository, research preview)** |\n|---|---|---|---|\n| NVV-SuperBench (zh / en) | **0.86 / 0.80** | 0.77 / 0.63 | 0.77 / 0.60 |\n| First audio, one user | ~0.6 s | **0.31 s** | ~1 s |\n| GPUs | 1 | 1 | 2 |\n\nE2E is for research on end-to-end expressive speech; for production, use Tag or Flash. Family overview and full benchmarks: [v1 family home page](https://huggingface.co/adventists-ai/Sophon-Realtime-v1).\n\n## What's new (Nov 2026)\n\n- **New decoder, 4 steps.** Same compute per audio chunk as before.\n- Against the previous decoder, on replies from the same talker:\n\n| | previous (Sophon-Realtime-v1) | **this release** |\n|---|---|---|\n| Long replies, error rate (150 replies, zh / en / ja) | 1.78% (1.03 / 1.32 / 2.99) | **1.51% (0.97 / 0.71 / 2.86)** |\n| Voice similarity to an unseen reference speaker | 0.33 | **0.52** |\n| First audio, one user (release-package bench, median) | 0.57 s | **0.51 s** |\n\n- The previous weights stay in [Sophon-Realtime-v1](https://huggingface.co/adventists-ai/Sophon-Realtime-v1).\n\n## Deployment\n\nTwo 80 GB GPUs: one for the thinker, one for the speaking engine (4–5 concurrent conversations recommended per engine GPU). Linux with NVIDIA driver 580 or newer.\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime\ncd sophon-realtime\nbash scripts/install.sh          # two virtual environments + this model from ModelScope\nSOPHON_MODEL_DIR=$PWD/Sophon-Realtime-32B-E2E THINKER_GPU=0 TALKER_GPU=1 bash scripts/start.sh\n```\n\nThen open `http://<server>:8000/` to talk in the browser, or connect your own client to the WebSocket API (`/ws`). See [docs/deploy.md](https://github.com/adventists-ai/sophon-realtime/blob/main/docs/deploy.md).\n\n## Files\n\n| folder | contents |\n|---|---|\n| `base/` | 32B backbone (shared by the thinker and the talker) |\n| `adapters/tag/` | reply LoRA |\n| `talker/` | talker |\n| `e2/` | decoder (4 steps) and vocoder |\n| `voices/` | default voice |\n\n## License\n\nCode and weights are released under Apache-2.0. Third-party components keep their own licences; see NOTICE in the GitHub repository.\n\n## Contact\n\nBusiness enquiries: jiejin@adventists.ai\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mradermacher/LFM3-Omni-2B-heretic-GGUF",
+      "author": "mradermacher",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "gguf",
+        "liquid",
+        "lfm3",
+        "lfm3-omni",
+        "omni",
+        "audio",
+        "vision",
+        "speech-to-speech",
+        "text-to-speech",
+        "speech-recognition",
+        "voice-cloning",
+        "uncensored",
+        "ablation",
+        "heretic",
+        "edge",
+        "custom_code",
+        "en",
+        "ar",
+        "zh",
+        "fr",
+        "de",
+        "it",
+        "ja",
+        "ko",
+        "pt",
+        "es",
+        "vi",
+        "th",
+        "id",
+        "hi",
+        "ru",
+        "pl",
+        "da",
+        "el",
+        "fi",
+        "he",
+        "nl",
+        "sv",
+        "tr",
+        "base_model:rodrigomt/LFM3-Omni-2B-heretic",
+        "base_model:quantized:rodrigomt/LFM3-Omni-2B-heretic",
+        "license:other",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/mradermacher/LFM3-Omni-2B-heretic-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "rodrigomt/LFM3-Omni-2B-heretic"
+      ],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning, speech-to-speech",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "LSM571/LARA-Gen",
+      "author": "LSM571",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "safetensors",
+        "music-generation",
+        "emotion-control",
+        "arxiv:2510.05875",
+        "text-to-audio",
+        "base_model:facebook/musicgen-medium",
+        "base_model:finetune:facebook/musicgen-medium",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/LSM571/LARA-Gen",
+      "card_text": "",
+      "arxiv_ids": [
+        "2510.05875"
+      ],
+      "datasets": [],
+      "base_models": [
+        "facebook/musicgen-medium"
+      ],
+      "variants": [],
+      "score": 26,
+      "topic_scores": {
+        "generative_music_audio": 23
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag), musicgen",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "KeraAI/Kera",
+      "author": "KeraAI",
+      "created_at": "2026-11-04",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "llama.cpp",
+        "gguf",
+        "local-ai",
+        "inference",
+        "mixture-of-experts",
+        "vulkan",
+        "rocm",
+        "metal",
+        "text-to-image",
+        "text-to-speech",
+        "text-to-audio",
+        "text-to-video",
+        "cuda",
+        "dgx-spark",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/KeraAI/Kera",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "audio_understanding_reasoning": 10,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Audio Understanding & Reasoning: audio-text",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Pragmaticl/ZeroTTS",
+      "author": "Pragmaticl",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "text-to-speech",
+        "tts",
+        "vietnamese",
+        "onnxruntime",
+        "zero-shot",
+        "speech-synthesis",
+        "voice-cloning",
+        "vietnamese-tts",
+        "tieng-viet",
+        "vi",
+        "arxiv:2602.10934",
+        "license:mit",
+        "model-index",
+        "region:us"
+      ],
+      "downloads": 5,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "onnx",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Pragmaticl/ZeroTTS",
+      "card_text": "",
+      "arxiv_ids": [
+        "2602.10934"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "hello-test1/PhotonTTS",
+      "author": "hello-test1",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "singing-voice-synthesis",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/hello-test1/PhotonTTS",
+      "card_text": "---\nlicense: other\ntags: [text-to-speech, tts, voice-cloning, singing-voice-synthesis]\n---\n# PhotonTTS (work in progress)\n\nFast, human-like, zero-shot voice-cloning TTS with singing support.\nDesign: a causal LM backbone at 12.5 Hz over continuous VAE latents, a per-patch flow-matching head distilled to 1-2 steps, and Score Clock conditioning for singing.\nTiers: Photon-S (edge/CPU), Photon-M (consumer GPU), Photon-L (24GB+).\n\nStatus: scaffolding. No weights yet.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "generative_music_audio": 10,
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "Generative Music & Audio: singing voice synthesis",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Izahat2/chatterbox-nano-AZ",
+      "author": "Izahat2",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox",
+        "text-to-speech",
+        "speech-generation",
+        "voice-cloning",
+        "azerbaijani",
+        "az",
+        "en",
+        "base_model:ResembleAI/chatterbox-nano",
+        "base_model:finetune:ResembleAI/chatterbox-nano",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "chatterbox",
+      "license": "mit",
+      "gated": true,
+      "url": "https://huggingface.co/Izahat2/chatterbox-nano-AZ",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox-nano"
+      ],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Twinber/fish-speech-1.5-nova-lora",
+      "author": "Twinber",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dual_ar",
+        "fish-speech",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "lora",
+        "spanish",
+        "speech-synthesis",
+        "pytorch",
+        "es",
+        "base_model:fishaudio/fish-speech-1.5",
+        "base_model:adapter:fishaudio/fish-speech-1.5",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Twinber/fish-speech-1.5-nova-lora",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/fish-speech-1.5"
+      ],
+      "variants": [],
+      "score": 23,
+      "topic_scores": {
+        "speech_models": 22
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "avericaai/canary-qwen-2.5b-gguf",
+      "author": "avericaai",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "canary",
+        "canary-qwen",
+        "salm",
+        "audio-llm",
+        "fastconformer",
+        "qwen3",
+        "automatic-speech-recognition",
+        "en",
+        "arxiv:1706.03762",
+        "arxiv:2503.05931",
+        "arxiv:2505.13404",
+        "arxiv:2310.09424",
+        "arxiv:2104.02821",
+        "base_model:nvidia/canary-qwen-2.5b",
+        "base_model:quantized:nvidia/canary-qwen-2.5b",
+        "license:cc-by-4.0",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/avericaai/canary-qwen-2.5b-gguf",
+      "card_text": "---\nlicense: cc-by-4.0\nbase_model: nvidia/canary-qwen-2.5b\nbase_model_relation: quantized\nlibrary_name: transcribe.cpp\npipeline_tag: automatic-speech-recognition\nlanguage:\n  - en\ntags:\n  - gguf\n  - transcribe.cpp\n  - asr\n  - speech-to-text\n  - canary\n  - canary-qwen\n  - salm\n  - audio-llm\n  - fastconformer\n  - qwen3\ntranscribe_cpp:\n  schema_version: 2\n  wer_fleurs_en:\n    q8_0: 3.58\n  wer_librispeech_test_clean:\n    bf16: 1.63\n    f16: 1.63\n    q8_0: 1.63\n    q6_k: 1.63\n    q5_k_m: 1.63\n    q4_k_m: 1.63\n  rtf_m4_max:\n    cpu: 10.03\n    metal: 42.43\n  rtf_ryzen_4750u:\n    cpu: 2.51\n    vulkan: 3.98\n  streaming: false\n  translate: false\n  lang_detect: false\n  timestamps: none\n---\n\n# canary-qwen-2.5b: transcribe.cpp GGUF\n\nGGUF conversions of [nvidia/canary-qwen-2.5b](https://huggingface.co/nvidia/canary-qwen-2.5b) for use\nwith [transcribe.cpp](https://github.com/handy-computer/transcribe.cpp).\n\nPorted from upstream commit\n[b1469e1](https://huggingface.co/nvidia/canary-qwen-2.5b/commit/b1469e1),\npinned 2026-05-15.\nValidated against the NeMo SALM 2.7.3 reference at transcribe.cpp commit\n[6f6c699](https://github.com/handy-computer/transcribe.cpp/tree/6f6c699)\non 2026-05-16.\n\nOffline English speech-to-text. NeMo SALM (Speech-Augmented Language\nModel): a FastConformer audio encoder (32 layers, `d_model=1024`) feeds\naudio embeddings into a Qwen3-1.7B causal LM (28 layers,\n`hidden_size=2048`) via audio-token injection at a sentinel position in\nthe prompt. English only. Takes a 16 kHz mono WAV and produces a\ntranscript via greedy decoding.\n\n\n## Downloads\n\n| Quantization | Download | Size | WER (LibriSpeech test-clean) |\n| --- | --- | ---: | ---: |\n| BF16 | [canary-qwen-2.5b-BF16.gguf](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/resolve/main/canary-qwen-2.5b-BF16.gguf) | 5.08 GB | 1.63% |\n| F16 | [canary-qwen-2.5b-F16.gguf](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/resolve/main/canary-qwen-2.5b-F16.gguf) | 5.08 GB | 1.63% |\n| Q8_0 | [canary-qwen-2.5b-Q8_0.gguf](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/resolve/main/canary-qwen-2.5b-Q8_0.gguf) | 2.80 GB | 1.63% |\n| Q6_K | [canary-qwen-2.5b-Q6_K.gguf](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/resolve/main/canary-qwen-2.5b-Q6_K.gguf) | 2.21 GB | 1.63% |\n| Q5_K_M | [canary-qwen-2.5b-Q5_K_M.gguf](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/resolve/main/canary-qwen-2.5b-Q5_K_M.gguf) | 1.98 GB | 1.63% |\n| Q4_K_M | [canary-qwen-2.5b-Q4_K_M.gguf](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/resolve/main/canary-qwen-2.5b-Q4_K_M.gguf) | 1.74 GB | 1.63% |\n\nWER on the full LibriSpeech test-clean split (2,620 utterances), batch size 1, timestamps none. Figures without a commit were published before provenance was recorded.\n\nScored with the Whisper-style English text normalizer and jiwer 3.x on an Apple M4.\nThe same-machine NeMo SALM reference run (CPU torch, dither=0.0, greedy\n`model.generate`) lands at **1.61%** with 95% bootstrap CI [1.47%, 1.75%]: `0.01`\nabove NVIDIA's published 1.60% but well within statistical noise. All six GGUF\npresets land at exactly 1.63% (`+0.02` over our reference run, same CI band).\nInvestigation of the worst per-utterance differences shows scattered token-level\nnoise consistent with BF16 weight precision (homophones, word-boundary flips,\nfunction-word substitutions). Reproduce with `scripts/wer/run.py` +\n`scripts/wer/score.py`.\n\n\n## Usage\n\nBuild transcribe.cpp from source:\n\n```bash\ngit clone git@github.com:handy-computer/transcribe.cpp.git\ncd transcribe.cpp\ncmake -B build && cmake --build build\n```\n\nRun on a 16 kHz mono WAV:\n\n```bash\nbuild/bin/transcribe-cli \\\n  -m canary-qwen-2.5b-Q8_0.gguf \\\n  input.wav\n```\n\nIf your audio isn't already 16 kHz mono WAV, convert it first:\n\n```bash\nffmpeg -i input.mp3 -ar 16000 -ac 1 output.wav\n```\n\nSee the [transcribe.cpp model page](https://github.com/handy-computer/transcribe.cpp/blob/main/docs/models/canary-qwen-2.5b.md) for performance\nnumbers, numerical validation, and reproduction steps.\n\n## License\n\nInherited from the base model: **CC-BY-4.0**. See the\n[upstream model card](https://huggingface.co/nvidia/canary-qwen-2.5b) for full terms.\nThis repository includes the license text\n([`LICENSE`](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/blob/main/LICENSE)) and a\n[`NOTICE`](https://huggingface.co/handy-computer/canary-qwen-2.5b-gguf/blob/main/NOTICE) recording\nhow these files were derived from the original.\n\n---\n\n## Original Model Card\n\n> The section below is reproduced from\n> [nvidia/canary-qwen-2.5b](https://huggingface.co/nvidia/canary-qwen-2.5b) at commit\n> `b1469e1` for offline reference. The upstream card is the\n> authoritative source.\n\n<style>\nimg {\n display: inline;\n}\n</style>\n\n[![Model architecture](https://img.shields.io/badge/Model_Arch-SALM-blue#model-badge)](#model-architecture)\n| [![Model size](https://img.shields.io/badge/Params-2.5B-green#model-badge)](#model-architecture)\n| [![Language](https://img.shields.io/badge/Language-en-orange#model-badge)](#datasets)\n\n\n# Model Overview\n\n## Description:\nNVIDIA NeMo Canary-Qwen-2.5B is an English speech recognition model that achieves state-of-the art performance on multiple English speech benchmarks. With 2.5 billion parameters and running at 418 RTFx, Canary-Qwen-2.5B supports automatic speech-to-text recognition (ASR) in English with punctuation and capitalization (PnC). The model works in two modes: as a transcription tool (ASR mode) and as an LLM (LLM mode). In ASR mode, the model is only capable of transcribing the speech into text, but does not retain any LLM-specific skills such as reasoning. In LLM mode, the model retains all of the original LLM capabilities, which can be used to post-process the transcript, e.g. summarize it or answer questions about it. In LLM mode, the model does not \"understand\" the raw audio anymore - only its transcript. This model is ready for commercial use.\n\n### License/Terms of Use: \nCanary-Qwen-2.5B is released under the CC-BY-4.0 license. By using this model, you are agreeing to the [terms and conditions](https://choosealicense.com/licenses/cc-by-4.0/) of the license. <br>\n\n### Discover more from NVIDIA: \nFor documentation, deployment guides, enterprise-ready APIs, and the latest open models—including Nemotron and other cutting-edge speech, translation, and generative AI—visit the NVIDIA Developer Portal at developer.nvidia.com.\nJoin the community to access tools, support, and resources to accelerate your development with NVIDIA’s NeMo, Riva, NIM, and foundation models.<br>\n\n#### Explore more from NVIDIA: <br>\nWhat is [Nemotron](https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/)?<br>\nNVIDIA Developer [Nemotron](https://developer.nvidia.com/nemotron)<br>\n[NVIDIA Riva Speech](https://developer.nvidia.com/riva?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.riva%3Adesc%2Ctitle%3Aasc#demos)<br>\n[NeMo Documentation](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/asr/models.html)<br>\n\n## References:\n[1] [Less is More: Accurate Speech Recognition & Translation without Web-Scale Data](https://www.isca-archive.org/interspeech_2024/puvvada24_interspeech.pdf)\n\n[2] [Fast Conformer with Linearly Scalable Attention for Efficient Speech Recognition](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10389701)\n\n[3] [Attention Is All You Need](https://arxiv.org/abs/1706.03762)\n\n[4] [Qwen/Qwen3-1.7B Model Card](https://huggingface.co/Qwen/Qwen3-1.7B)\n\n[5] [Training and Inference Efficiency of Encoder-Decoder Speech Models](https://arxiv.org/abs/2503.05931)\n\n[6] [NVIDIA NeMo Toolkit](https://github.com/NVIDIA/NeMo)\n\n[7] [Granary: Speech Recognition and Translation Dataset in 25 European Languages](https://arxiv.org/abs/2505.13404)\n\n[8] [Towards Measuring Fairness in AI: the Casual Conversations Dataset](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9634168)\n\n[9] [SALM: Speech-augmented Language Model with In-context Learning for Speech Recognition and Translation](https://arxiv.org/abs/2310.09424) \n\n### Deployment Geography:\n\nGlobal\n\n### Use Case:\n\nThe model is intended for users requiring speech-to-text transcription capabilities for English speech, and/or transcript post-processing capabilities enabled by prompting the underlying LLMs. Typical use-cases: transcription, summarization, answering user questions about the transcript.\n\n### Release Date:\n\nHuggingface 07/17/2025 via https://huggingface.co/nvidia/canary-qwen-2.5b\n\n## Discover more from NVIDIA:\nFor documentation, deployment guides, enterprise-ready APIs, and the latest open models—including Nemotron and other cutting-edge speech, translation, and generative AI—visit the NVIDIA Developer Portal at [developer.nvidia.com](https://developer.nvidia.com/).\nJoin the community to access tools, support, and resources to accelerate your development with NVIDIA’s NeMo, Riva, NIM, and foundation models.<br>\n\n### Explore more from NVIDIA:  <br>\nWhat is [Nemotron](https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/)?<br>\nNVIDIA Developer [Nemotron](https://developer.nvidia.com/nemotron)<br>\n[NVIDIA Riva Speech](https://developer.nvidia.com/riva?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.riva%3Adesc%2Ctitle%3Aasc#demos)<br>\n[NeMo Documentation](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/asr/models.html)<br>\n\n## Model Architecture:\nCanary-Qwen is a Speech-Augmented Language Model (SALM) [9] model with FastConformer [2] Encoder and Transformer Decoder [3]. It is built using two base models: `nvidia/canary-1b-flash` [1,5] and `Qwen/Qwen3-1.7B` [4], a linear projection, and low-rank adaptation (LoRA) applied to the LLM. The audio encoder computes audio representation that is mapped to the LLM embedding space via a linear projection, and concatenated with the embeddings of text tokens. The model is prompted with \"Transcribe the following: <audio>\", using Qwen's chat template.\n\n### Limitations\n\n**Input length.** The maximum audio duration in training was 40s, and the maximum token sequence length was 1024 tokens (including prompt, audio, and response). The model may technically be able to process longer sequences, but its accuracy may be degraded.\n\n**Exclusively ASR oriented capabilities.** The model is not expected to preserve any of the underlying LLM's capabilities into speech modality. \n\n**English-only language support.** The model was trained using English data only. It may be able to spuriously transcribe other languages as the underlying encoder was pretrained using German, French, and Spanish speech in addition to English, but it's unlikely to be reliable as a multilingual model.\n\n## NVIDIA NeMo\n\nTo train, fine-tune or transcribe with Canary-Qwen-2.5B, you will need to install [NVIDIA NeMo](https://github.com/NVIDIA/NeMo).\n\n```bash\n# Currently requires installing the latest trunk version of NeMo, and PyTorch 2.6+ for FSDP2 support.\npython -m pip install \"nemo_toolkit[asr,tts] @ git+https://github.com/NVIDIA/NeMo.git\"\n```\n\n## How to Use this Model\n\nThe model is available for use in the NVIDIA NeMo toolkit [6], and can be used as a pre-trained checkpoint for inference or for fine-tuning on another dataset.\n\n### Loading the Model\n\n```python\nfrom nemo.collections.speechlm2.models import SALM\n\nmodel = SALM.from_pretrained('nvidia/canary-qwen-2.5b')\n```\n\n## Input: \n\n**Input Type(s):** Audio, text prompt <br>\n**Input Format(s):** Audio: .wav or .flac files. Text prompt string for ASR mode: `Transcribe the following: <|audioplaceholder|>` <br>\n**Input Parameters(s):** Audio: Two-Dimensional (batch, audio-samples); Text: One-Dimensional (string) <br>\n**Other Properties Related to Input:** 16000 Hz Mono-channel Audio, Pre-Processing Not Needed <br>\n\nInput to Canary-Qwen-2.5B is a batch of prompts that include audio.\n\nExample usage in ASR mode (speech-to-text):\n\n```python\nanswer_ids = model.generate(\n    prompts=[\n        [{\"role\": \"user\", \"content\": f\"Transcribe the following: {model.audio_locator_tag}\", \"audio\": [\"speech.wav\"]}]\n    ],\n    max_new_tokens=128,\n)\nprint(model.tokenizer.ids_to_text(answer_ids[0].cpu()))\n```\n\nExample usage in LLM mode (text-only):\n\n```python\nprompt = \"...\"\ntranscript = \"...\"\nwith model.llm.disable_adapter():\n    answer_ids = model.generate(\n        prompts=[[{\"role\": \"user\", \"content\": f\"{prompt}\\n\\n{transcript}\"}]],\n        max_new_tokens=2048,\n    )\n```\n\nTo transcribe a dataset of recordings, specify the input as jsonl manifest file, where each line in the file is a dictionary containing the following fields: \n\n```yaml\n# Example of a line in input_manifest.json\n{\n    \"audio_filepath\": \"/path/to/audio.wav\",  # path to the audio file\n    \"duration\": 30.0,  # duration of the audio\n}\n```\n\nand then use:\n```bash\ncd NeMo\npython examples/speechlm2/salm_generate.py \\\n  pretrained_name=nvidia/canary-qwen-2.5b \\\n  inputs=input_manifest.json \\\n  output_manifest=generations.jsonl \\\n  batch_size=128 \\\n  user_prompt=\"Transcribe the following:\"  # audio locator is added automatically at the end if not present\n```\n\n## Output:\n**Output Type(s):** Text <br>\n**Output Format:** Text transcript as a sequence of token IDs or a string <br> \n**Output Parameters:** One-Dimensional text string <br>\n**Other Properties Related to Output:** May Need Inverse Text Normalization <br>\n\nOur AI models are designed and/or optimized to run on NVIDIA GPU-accelerated systems. By leveraging NVIDIA’s hardware (e.g. GPU cores) and software frameworks (e.g., CUDA libraries), the model achieves faster training and inference times compared to CPU-only solutions.\n\n## Software Integration:\n**Runtime Engine(s):** \n* NeMo - 2.5.0 or higher <br>\n\n**Supported Hardware Microarchitecture Compatibility:** <br>\n* [NVIDIA Ampere] <br>\n* [NVIDIA Blackwell] <br>\n* [NVIDIA Jetson]  <br>\n* [NVIDIA Hopper] <br>\n* [NVIDIA Lovelace] <br>\n* [NVIDIA Pascal] <br>\n* [NVIDIA Turing] <br>\n* [NVIDIA Volta] <br>\n\n**[Preferred/Supported] Operating System(s):** <br>\n* [Linux] <br>\n* [Linux 4 Tegra] <br>\n* [Windows] <br>\n\n## Model Version(s): \nCanary-Qwen-2.5B <br>\n\n## Training\n\nCanary-Qwen-2.5B was trained using the NVIDIA NeMo toolkit [6] for a total of 90k steps on 32 NVIDIA A100 80GB GPUs. LLM parameters were kept frozen. Speech encoder, projection, and LoRA parameters were trainable. The encoder's output frame rate is 80ms, or 12.5 tokens per second. The model was trained on approximately 1.3B tokens in total (this number inlcudes the speech encoder output frames, text response tokens, prompt tokens, and chat template tokens). \n\nThe model can be trained using this [example script](https://github.com/NVIDIA/NeMo/blob/main/examples/speechlm2/salm_train.py) and [base config](https://github.com/NVIDIA/NeMo/blob/main/examples/speechlm2/conf/salm.yaml).\n\nThe tokenizer was inherited from `Qwen/Qwen3-1.7B`.\n\n# Training and Evaluation Datasets: \n\n## Training Dataset:\n\n** The total size (in number of data points): approx. 40 million (speech, text) pairs\n** Total number of datasets: 26, with 18 for training and 8 for test\n** Dataset partition: Training 99.6%, testing 0.04%, validation 0%\n** Time period for training data collection: 1990-2025\n** Time period for testing data collection: 2005-2022\n** Time period for validation data collection N/A (unused)\n\nThe Canary-Qwen-2.5B model is trained on a total of 234K hrs of publicly available speech data.\nThe datasets below include conversations, videos from the web and audiobook recordings.\n\n**Data Collection Method:**\n* Human <br>\n\n**Labeling Method:**\n* Hybrid: Human, Automated <br>\n\n### Properties\n\n#### English (234.5k hours)\n\nThe majority of the training data comes from the English portion of the Granary dataset [7]:\n\n- YouTube-Commons (YTC) (109.5k hours)\n- YODAS2 (77k hours)\n- LibriLight (13.6k hours)\n\nIn addition, the following datasets were used:\n- Librispeech 960 hours\n- Fisher Corpus\n- Switchboard-1 Dataset\n- WSJ-0 and WSJ-1\n- National Speech Corpus (Part 1, Part 6)\n- VCTK\n- VoxPopuli (EN)\n- Europarl-ASR (EN)\n- Multilingual Librispeech (MLS EN)\n- Mozilla Common Voice (v11.0)\n- Mozilla Common Voice (v7.0)\n- Mozilla Common Voice (v4.0)\n- AMI\n- FLEURS\n\nAMI was oversampled during model training to constitute about 15% of the total data observed. \nThis skewed the model towards predicting verbatim transcripts that include conversational speech disfluencies such as repetitions.\n\nThe training transcripts contained punctuation and capitalization.\n\n## Evaluation Dataset:\n\n**Data Collection Method:** <br>\n* Human <br>\n\n**Labeling Method:** <br>\n* Human <br>\n\nAutomatic Speech Recognition: \n* [HuggingFace OpenASR Leaderboard evaluation sets](https://huggingface.co/spaces/hf-audio/open_asr_leaderboard)\n\nHallucination Robustness:\n* [MUSAN](https://www.openslr.org/17/) 48 hrs eval set\n\nNoise Robustness:\n* [Librispeech](https://www.openslr.org/12)\n\nModel Fairness:\n* [Casual Conversations Dataset](https://arxiv.org/pdf/2104.02821)\n\n## Performance\n\nThe ASR predictions were generated using greedy decoding.\n\n### ASR Performance (w/o PnC) \n\nThe ASR performance is measured with word error rate (WER), and we process the groundtruth and predicted text with [whisper-normalizer](https://pypi.org/project/whisper-normalizer/) version 0.1.12.\n\nWER on [HuggingFace OpenASR leaderboard](https://huggingface.co/spaces/hf-audio/open_asr_leaderboard):\n\n| **Version** | **Model**     | **RTFx**   | **Mean**   | **AMI**   | **GigaSpeech**   | **LS Clean**   | **LS Other**   | **Earnings22**   | **SPGISpech**   | **Tedlium**   | **Voxpopuli**   |\n|:---------:|:-----------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|\n| 2.5.0  | Canary-Qwen-2.5B | 418 | 5.63 | 10.18 | 9.41 | 1.60 | 3.10 | 10.42 | 1.90 | 2.72 | 5.66 |\n\nMore details on evaluation can be found at [HuggingFace ASR Leaderboard](https://huggingface.co/spaces/hf-audio/open_asr_leaderboard)\n\n### Hallucination Robustness\nNumber of characters per minute on [MUSAN](https://www.openslr.org/17) 48 hrs eval set (`max_new_tokens=50` following `nvidia/canary-1b-flash` evaluation)\n| **Version** | **Model** | **# of character per minute** |\n|:-----------:|:---------:|:----------:|\n| 2.5.0       | Canary-Qwen-2.5B |   138.1   |\n\n### Noise Robustness\nWER on [Librispeech Test Clean](https://www.openslr.org/12) at different SNR (signal to noise ratio) levels of additive white noise\n\n| **Version** | **Model** | **SNR 10** | **SNR 5** | **SNR 0** | **SNR -5** |\n|:-----------:|:---------:|:----------:|:----------:|:----------:|:----------:|\n| 2.5.0       | Canary-Qwen-2.5B |    2.41%   |   4.08%   |   9.83%   |    30.60%  |\n\n## Model Fairness Evaluation\n\nAs outlined in the paper \"Towards Measuring Fairness in AI: the Casual Conversations Dataset\" [8], we assessed the Canary-Qwen-2.5B model for fairness. The model was evaluated on the CasualConversations-v1 dataset with inference done on non-overlapping 40s chunks, and the results are reported as follows:\n\n### Gender Bias:\n\n| Gender | Male | Female | N/A | Other |\n| :--- | :--- | :--- | :--- | :--- |\n| Num utterances | 18471 | 23378 | 880 | 18 |\n| % WER | 16.71 | 13.85 | 17.71 | 29.46 |\n\n### Age Bias:\n\n| Age Group | (18-30) | (31-45) | (46-85) | (1-100) |\n| :--- | :--- | :--- | :--- | :--- |\n| Num utterances | 15058 | 13984 | 12810 | 41852 |\n| % WER | 15.73 | 15.3 | 14.14 | 15.11 |\n\n(Error rates for fairness evaluation are determined by normalizing both the reference and predicted text, similar to the methods used in the evaluations found at https://github.com/huggingface/open_asr_leaderboard.)\n\n## Inference:\n**Engine:** NVIDIA NeMo <br>\n**Test Hardware :** <br>\n* A6000 <br>\n* A100 <br>\n* RTX 5090 <br>\n\n## Ethical Considerations:\nNVIDIA believes Trustworthy AI is a shared responsibility and we have established policies and practices to enable development for a wide array of AI applications.  When downloaded or used in accordance with our terms of service, developers should work with their internal model team to ensure this model meets requirements for the relevant industry and use case and addresses unforeseen product misuse.  \nFor more detailed information on ethical considerations for this model, please see the Model Card++ Explainability, Bias, Safety & Security, and Privacy Subcards. Please report security vulnerabilities or NVIDIA AI Concerns [here](https://www.nvidia.com/en-us/support/submit-security-vulnerability/).\n",
+      "arxiv_ids": [
+        "1706.03762",
+        "2503.05931",
+        "2505.13404",
+        "2310.09424",
+        "2104.02821"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nvidia/canary-qwen-2.5b"
+      ],
+      "variants": [],
+      "score": 20,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 3
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "model card links an arXiv paper",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/DuplexJev-32B-Para",
+      "author": "adventists-ai",
+      "created_at": "2026-10-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "ultravox",
+        "duplexjev",
+        "speech-to-decision",
+        "full-duplex",
+        "paralinguistics",
+        "nonverbal",
+        "prosody",
+        "speaker-verification",
+        "turn-detection",
+        "accent",
+        "multilingual",
+        "speech-llm",
+        "audio-text-to-text",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "vi",
+        "th",
+        "ar",
+        "ru",
+        "arxiv:2610.02638",
+        "base_model:Qwen/Qwen3-ASR-0.6B",
+        "base_model:finetune:Qwen/Qwen3-ASR-0.6B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 430,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/DuplexJev-32B-Para",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- zh\n- en\n- ja\n- ko\n- vi\n- th\n- ar\n- ru\nlibrary_name: vllm\npipeline_tag: audio-text-to-text\nbase_model:\n- adventists-ai/DuplexJev-32B-Turn\n- Qwen/Qwen3-VL-32B-Instruct\n- Qwen/Qwen3-ASR-0.6B\ntags:\n- duplexjev\n- speech-to-decision\n- full-duplex\n- paralinguistics\n- nonverbal\n- prosody\n- speaker-verification\n- turn-detection\n- accent\n- multilingual\n- speech-llm\n- vllm\n---\n\n# DuplexJev-32B-Para (v1.5)\n\n📄 Paper: [arXiv:2610.02638](https://arxiv.org/abs/2610.02638) · Code: [github.com/adventists-ai/duplexjev](https://github.com/adventists-ai/duplexjev) · Release notes: [hearing the whole clip (v1.5)](https://github.com/adventists-ai/duplexjev/blob/main/research/2026-11-full-length.md) · [Japanese as a third language](https://github.com/adventists-ai/duplexjev/blob/main/research/2026-10-japanese.md) · [weak languages](https://github.com/adventists-ai/duplexjev/blob/main/research/2026-10-weak-languages.md) · Research notes: [hearing stress](https://github.com/adventists-ai/duplexjev/blob/main/research/2026-10-stress-understanding.md) · [keeping a speech-decision LLM able to talk](https://github.com/adventists-ai/duplexjev/blob/main/research/2026-10-chat-replay.md)\n\n🗣️ **Now with a voice:** DuplexJev-32B-Para is the ears of [Sophon-Realtime v1](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag), our open full-duplex voice model that hears your tone and speaks with one. Released: [Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) and [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash), one GPU each.\n\n**The DuplexJev model that hears the most beyond the words.** On top of everything\n[DuplexJev-32B-Turn](https://huggingface.co/adventists-ai/DuplexJev-32B-Turn) and\n[DuplexJev-32B-Stress](https://huggingface.co/adventists-ai/DuplexJev-32B-Stress) do (spoken QA, gender, emotion,\nturn-taking, stress and pauses), it also hears **laughter, breathing, coughs and sighs**, notices **how** someone is\ntalking (whispering, shouting, very fast or slow), and can tell, roughly as a person would, **whether two clips are\nthe same speaker**. Mandarin and English. Since v1.1 it also **holds a normal conversation**, multi-turn included.\n**v1.2** adds **accent judgments** (English accents and Mandarin dialect regions) and much sharper **end-of-turn\ndetection right after the user pauses**: on LiveKit's eot-bench it now beats Smart Turn v3.2 in English and Chinese.\n**v1.3** hears **stress** much better: on the public StressTest benchmark it goes from 72 to **85**, on StressPresso's\nmeaning questions from 69 to **89**, and on choosing the meaning a stressed word implies (DEBATE, held-out) from 85 to **93**, with the\nother decisions about the same.\n**v1.4** understands far more languages: **Japanese** error goes from 33 % to **12 %** (FLEURS) and from 38 % to\n**11 %** on conversational Japanese, Korean and Vietnamese error falls to a quarter to a third of v1.3, Thai,\nArabic and Russian error by 30–40 %, and Mandarin conversational paralinguistics (laughter, breath, drawl, stutter …) are much sharper.\n**v1.5** hears the **whole clip**: earlier versions (like every Qwen3-ASR-based checkpoint we trained) dropped the\nlast ~4 % of every 30 s audio chunk, because the connector assumed 6.25 audio tokens per second while the encoder\nemits 6.5. v1.5 is retrained on the true length, which sharpens the decisions that depend on the end of an utterance:\n**end-of-turn** (Smart Turn test set 93.3 → **94.4**, Chinese 91.4 → **94.6**; LiveKit eot-bench English false\ncut-offs at 300 ms 20.4 → **17.7 %**), **stress** (StressTest 81.7 → **85.3**), and **emotion** in natural speech\n(LISTEN emotion 32.4 → **33.2**, LISTEN non-verbal 48.8 → **51.6**), with spoken QA up a point as well.\n\n> **v1.5 (2026-11-03)** replaces v1.4 (2026-10-22): audio is read at its true length (`\"audio_full_length\": true`\n> in `config.json`). **Use `duplexjev-vllm>=0.4` / `duplexjev>=0.7`**, which read this flag; older versions still\n> load the model but cut the last ~4 % of each 30 s chunk, as before.\n> Earlier versions stay available as revisions `v1.4`, `v1.3`, `v1.2`, `v1.1` and `v1.0` (`--revision v1.4` in vLLM,\n> `revision=\"v1.4\"` in `from_pretrained`).\n\nDuplexJev reads typed, closed-set decisions from speech as a **single-token distribution** of the LLM: zero decode\nsteps, many questions about the same clip in parallel. This repository is the complete model (Qwen3-ASR-0.6B encoder\n+ connector + the language model of Qwen3-VL-32B, 33.0 B parameters, bf16; one 80 GB GPU).\n\n**Which 32B to pick.** This one, for everything above.\n\n## What changed\n\nStarting from DuplexJev-32B-Turn we trained the connector and a new rank-16 LoRA on the LLM (merged here) for 4,000\nsteps. The mix is the 32B-Turn mix plus:\n\n| added data | what it teaches |\n|---|---|\n| stress / pause detection (as in 32B-Stress: DEBATE, Stress-17K, TinyStress-15K, Expresso, neutral negatives) | which word is stressed, or none; where the pause is |\n| speaker pairs (VoxCeleb1 dev, AISHELL-1, LibriSpeech, two-speaker mixtures) | same speaker or not; is this person in the clip |\n| non-verbal sounds (VocalSound, NonVerbalSpeech-38K, NonverbalTTS, Expresso laughing) | is there laughter / breathing / a cough / a sigh / sniffing / throat clearing / a sneeze / crying …; negatives are cut from the same recordings away from the event |\n| speaking style (EARS, Expresso whisper) | whispering, loud, fast, slow, high or low pitch, normal |\n| spoken multiple-choice replay (ARC, OpenBookQA and CommonsenseQA train splits read by TTS) | keeps \"answer the content\" from being crowded out by \"listen to the voice\" |\n| **v1.1:** conversation replay (spoken and typed user turns, up to 6 earlier turns as history; target = the original LLM's own reply) and in-house chat items | normal, full-length replies; trained with per-row loss averaging so long replies do not swamp the one-token decisions |\n| **v1.2:** accents (VCTK, English Dialects, EdAcc, Common Voice accent labels, KeSpeech; held-out speakers kept for testing) | which accent: 19 English accents and 9 Mandarin dialect regions; native speaker or not; standard Mandarin or not; which English region |\n| **v1.2:** end of turn right after a pause (otoSpeech-141h cut 0.2 s into each pause, with DualTurn labels; Smart Turn v3.2 training set) | finished vs. still talking / hesitating when the user has just gone quiet, the way a live voice agent has to decide |\n| **v1.3:** the stress data re-balanced (more \"which meaning does this stress imply\" items, weight raised) and the gender data weighted ×2; no new corpora | choosing the meaning a stressed word implies; keeping gender where it was |\n| **v1.4:** weak-language speech (ja, ko, vi, th, ar, ru: Emilia, Emilia-YODAS, YODAS2, Zeroth-Korean, VIVOS, FLEURS train, Common Voice; 162 k, labels re-checked with Qwen3-ASR-0.6B) + continuation (36 k) | transcribe and understand these languages |\n| **v1.4:** Japanese speech (Emilia JA, Emilia-YODAS JA, Common Voice ja and other Japanese speech data; 358 k, re-checked) + Japanese continuation (20 k) | Japanese close to Chinese and English |\n| **v1.4:** Mandarin conversational paralinguistics (licensed MagicData corpus, training speakers only; 42 k questions) | laughter, laughing while talking, breath, lip smack, sniff, cough, stressed word, drawl, which character is drawn out, stutter, sudden noise, unnatural pause, sentence emotion |\n| **v1.4:** more emotion classes (surprise, fear, anxiety, excitement, encouragement, apologetic, playful) from CSEMOTIONS, EmotionTalk, DailyTalk, JL-Corpus, EMNS, Emozionalmente, SUBESCO | emotions beyond the basic four |\n| **v1.5:** the whole v1.4 mix again, now with audio tokens at the encoder's true length (6.5 per second); transcription items with native-language instructions and leading / trailing silence (FLEURS dev split, the v1.4 weak-language speech); a light replay of all emotion data | the end of every clip is heard; always transcribe when asked to; emotion kept sharp |\n\nv1.4 was trained from v1.3 in four short stages (2,000 + 2,000 + 1,500 + 1,000 steps; connector + a new rank-16 LoRA\neach time, merged here), replaying the full v1.3 mix in every stage; the last two stages raise the stress,\nnon-verbal, emotion and speaking-style replay ×1.5 each.\n\nv1.5 was trained from v1.4 in two stages (2,000 + 1,500 steps; connector + a new rank-16 LoRA each time, merged\nhere) with the audio-token count computed from the encoder's real output length.\n\n## v1.5 vs v1.4\n\n| | v1.4 | **v1.5** |\n|---|---:|---:|\n| qa100 / ZJU-ML (vLLM, client wording) | 97 / 90 | **98 / 91** |\n| gender / emotion (vLLM) | 92.1 / 89.2 | **92.6 / 90.0** |\n| Easy-Turn* (vLLM) | 94.1 | **95.4** |\n| Smart Turn v3.2 test set, all / Chinese (threshold 0.5) | 93.3 / 91.4 | **94.4 / 94.6** |\n| eot-bench, English false cut-offs at 300 / 600 ms (with the assistant's previous message, fast mode) | 20.4 / 8.9% | **17.7 / 7.0%** |\n| eot-bench, Chinese, same setting | 42.3 / 13.8% | **41.0 / 13.3%** |\n| StressTest / StressPresso (which meaning the stress implies) | 81.7 / 88.6 | **85.3 / 89.1** |\n| DEBATE: stressed word / pause position | 89.8 / 79.8 | **90.7 / 81.4** |\n| LISTEN (EACL 2026) emotion / non-verbal, audio only | 32.4 / 48.8 | **33.2 / 51.6** |\n| EmotionTalk / CSEMOTIONS emotion (test splits)† | 62.6 / 89.8 | **68.5 / 94.2** |\n\nSame harness for both columns (stress, LISTEN and emotion rows: single-token readout, PyTorch, % correct).\n† In-domain: the training splits of these corpora are in the replay data.\n\n## v1.4 vs v1.3\n\nLanguages (FLEURS test, 150 utterances per language, median word / character error, lower is better):\n\n| | ja | ko | vi | th | ar | ru | zh | en | es | fr | de |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n| v1.3 | 32.7 | 31.8 | 41.7 | 29.1 | 27.0 | 10.6 | 3.8 | 1.5 | 4.4 | 8.5 | 5.3 |\n| **v1.4** | **11.6** | **7.6** | **14.6** | **18.0** | **19.4** | **6.9** | 3.8 | 0.0 | 3.5 | 7.0 | 5.3 |\n| encoder ceiling (Qwen3-ASR-0.6B) | 7.0 | 2.7 | 7.8 | 5.1 | 16.7 | 7.8 | 2.0 | 1.3 | 3.4 | 6.2 | 5.6 |\n\nJapanese, conversational (held-out Emilia JA shard) / Common Voice ja test, character error: v1.3 38.2 / 33.3 →\n**v1.4 11.1 / 13.0** (encoder 8.3 / 10.8).\n\nMandarin conversational paralinguistics (licensed MagicData corpus, held-out speakers, accuracy %; yes/no unless noted):\n\n| | breath | lip smack | laughter | laughing while talking | sniff | cough | drawl | stressed word (4-way) | emotion (4-way) |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n| **v1.4** | 91.7 | 85.8 | 89.3 | 87.8 | 87.5 | 71.4 | 79.4 | 85.3 | 70.7 |\n\n(v1.3 was not trained on this corpus; the 4B-Para v1.1, also untrained on it, scores 50–66 on the yes/no rows.)\n\nAccent, same-speaker and turn-taking (eot-bench, Smart Turn) were **not re-run** for v1.4; the numbers in the next\nsections are v1.3's.\n\n## Results (v1.3 and earlier)\n\n| | 32B-Turn | 32B-Para v1.1 | 32B-Para v1.2 | **32B-Para v1.3** |\n|---|---:|---:|---:|---:|\n| qa100 / ZJU-ML | 96 / 87 | 96 / 88 | 95 / 87 | 96 / 87 |\n| gender / emotion | 91.5 / 91.1 | 92.9 / 91.5 | 93.9 / 90.1 | 93.8 / 92.1 |\n| VoiceBench OBQA‡ / MMSU | 85.5 / 72.1 | 94.5 / 75.5 | 94.3 / 75.0 | 94.1 / 75.7 |\n| Easy-Turn* | 95.2 | 94.8 | **95.5** | 94.4 |\n| which word is stressed, \"none\" offered: DEBATE (zh) / StressPresso (en) | 35 / 1 | 93 / 96 | 92 / 91 | **95 / 96** |\n| neutral speech → \"no word is stressed\": AISHELL-1 / LibriSpeech | 92 / 50 | 100 / 99 | 99 / — | 98 / 83 |\n| **meaning from stress: DEBATE held-out / StressTest** | 35 / 52 | 85 / 76 | 85 / 72 | **93 / 85** |\n| StressPresso, which meaning the stress implies (English) | — | — | 69 | **89** |\n| **laughter / breathing / cough / sigh** (AUC, NonverbalTTS test, real speech, unseen) | — | 0.88 / 0.81 / 0.85 / 0.80 | 0.87 / 0.81 / 0.84 / 0.75 | ≈ v1.2† |\n| laughter / breathing in natural Mandarin conversation (AUC, unseen third-party sample) | — | 0.83 / 0.65 | 0.80 / 0.56 | ≈ v1.2† |\n| **speaking style, 7 classes** (EARS held-out speakers) | — | 82% | 79% | 80% |\n| same speaker? EER, VoxCeleb1 random / hard pairs (our harness) | — | 28.2% / 39.6% | 31.2% / 42.3% | 29.1% / 38.4%◊ |\n| **accent, 4 choices**: English (19 accents) / Mandarin (9 dialect regions)§ | — | 39.6 / 25.7 | **56.0 / 48.2** | — |\n| **native English speaker? / standard Mandarin?**§ | — | 84.8 / 46.6 | **91.1 / 91.3** | — |\n| **LISTEN** (EACL 2026), mean of the 4 audio-only conditions, full set | — | — | 38.4 | **38.9** |\n\nPaper protocol (single-token readout, PyTorch), % correct unless marked; AUC 0.5 = chance.\nThrough vLLM with `duplexjev-vllm` in the client wording, v1.3: qa100 97, ZJU-ML 90, gender 92.1, emotion 91.8,\nEasy-Turn 94.5 (v1.2: 98, 90, 93.6, 89.8, 95.5; v1.1: 97, 91, 93.2, 90.0, 94.8; qa100 and ZJU-ML have 100 items each).\n\"—\": not re-run for that version.\n\n- † v1.3 non-verbal sounds were checked by accuracy on the same test sets (NonverbalTTS, NonVerbalSpeech-38K,\n  VocalSound, Expresso, MagicData): within a few points of v1.2 either way; AUC not re-run.\n- ◊ Same harness re-run for v1.2: 30.7% / 38.2% (the v1.2 column is from an earlier run).\n- Accents for v1.3 were checked only on the cross-corpus set: standard Mandarin or not 88.8 (v1.2 93.1, 160 items),\n  Mandarin dialect 4-way 61.3 (60.0); English accents stay near chance cross-corpus for both versions.\n\n- \\* Easy-Turn is in-domain (its training split is in the mix).\n- § Accent test items come from the same corpora as the training items (different speakers); chance is 25% / 50%.\n- ‡ OpenBookQA's train split is in the replay data, so the OBQA gain is partly in-domain; MMSU is unrelated to it.\n- For reference, an AudioSet AST tagger scores 0.71 / 0.75 / 0.85 / 0.76 on the same four sounds.\n- Speaker: a dedicated speaker-verification model reaches ~1% EER on VoxCeleb1; this model is meant to have a rough,\n  human-like sense of \"same voice or not\", not to identify people.\n\n## Turn-taking benchmarks (v1.2 / v1.3; v1.5 in the table above)\n\n**LiveKit [eot-bench](https://github.com/livekit/eot-bench)** (validation set, decision 0.2 s into each pause, official\nmetrics). False cut-offs when the agent may wait at most 300 / 600 ms (lower is better):\n\n| | English | Chinese |\n|---|---:|---:|\n| LiveKit Turn Detector v1 | 9.9 / 4.5% | 20.6 / 8.7% |\n| **DuplexJev-32B-Para v1.2, with the assistant's previous message** (plugin default, full eot-bench run) | **20.0 / 9.4%** | **37.7 / 12.2%** |\n| DuplexJev-32B-Para v1.2, with the assistant's previous message, `readout=\"act\"` (fast mode) | 18.4 / 7.9% | 37.3 / 12.3% |\n| DuplexJev-32B-Para v1.2, audio only (fast mode) | 23.5 / 11.1% | 40.0 / 12.8% |\n| **DuplexJev-32B-Para v1.3, with the assistant's previous message** (fast mode) | 20.3 / 8.8% | **35.5** / 12.3% |\n| DuplexJev-32B-Para v1.3, audio only (fast mode) | 24.7 / 11.2% | 38.8 / 12.0% |\n| DuplexJev-32B-Turn, audio only (fast mode) | 29.8 / 13.9% | 44.9 / 14.5% |\n| Smart Turn v3.2 | 35.2 / 14.8% | 42.9 / 13.2% |\n\neot-bench audio is not in our training data. \"With the assistant's previous message\" puts\n`The assistant had just said: \"...\"` before the audio; the Pipecat and LiveKit plugins send it\n(`pipecat-duplexjev>=0.3`, `livekit-plugins-duplexjev>=0.2`, gateway `duplexjev>=0.6`). Plugin default: the turn\nquestion, P(finished) + P(backchannel); run with every eot-bench decision point (adapter\n`benchmarks/turn_detection/eot_bench/duplexjev_ctx_adapter.py` on GitHub). `readout=\"act\"` (`pipecat-duplexjev>=0.4`,\n`livekit-plugins-duplexjev>=0.3`): question \"What should the assistant do now?\", P(reply now) + P(short\nacknowledgement). Rows marked fast mode ask once per pause, at the 0.2 s score point.\n\n**Pipecat [Smart Turn v3.2](https://huggingface.co/datasets/pipecat-ai/smart-turn-data-v3.2-test) test set**\n(accuracy at threshold 0.5): v1.2 English 94.0% (Smart Turn v3.2: 94.7%), Chinese 91.1% (90.5%); v1.3 94.2% / 91.4%; DuplexJev-32B-Turn\n65.2% / 84.6%. The Smart Turn v3.2 *training* set is in our training mix, so this is an in-distribution result.\n\n## Serve with vLLM\n\n```bash\npip install \"vllm[audio]>=0.29\" \"duplexjev-vllm>=0.4\"\nvllm serve adventists-ai/DuplexJev-32B-Para --max-model-len 4096\n```\n\n`duplexjev-vllm>=0.4` reads `\"audio_full_length\": true` from `config.json` and feeds the whole clip; `DJ_FULL_LEN=0`\nforces the old truncated length, `DJ_FULL_LEN=1` the full length for any checkpoint.\n\nPrompt format and client are the same as for [DuplexJev-32B-Turn](https://huggingface.co/adventists-ai/DuplexJev-32B-Turn);\nsee [`examples/vllm_client.py`](https://github.com/adventists-ai/duplexjev/blob/main/examples/vllm_client.py). Examples:\n\n```\nThe user said: <|audio|>\n\nIs there laughter in this audio?\n\nOptions:\nA. Yes\nB. No\n\nAnswer with the letter only.\n```\n\n```\n用户说：<|audio|>\n\n除了说话，这段音频里还有哪种声音？\n\n选项：\nA. 叹气\nB. 咳嗽\nC. 笑声\nD. 都没有\n\n请只回答选项字母。\n```\n\nAlways offer a \"none\" option for stress and non-verbal questions; the model was trained with it.\n\n## Limitations\n\n- Accent and same-speaker scores were not re-measured for v1.4 / v1.5.\n- Thai and Arabic are still 2–3× the encoder's own error.\n- Non-verbal training audio is mostly acted (radio drama, animation, studio recordings); in natural conversation the\n  scores are lower (see the table).\n- Breathing in natural Mandarin conversation is weak (AUC 0.56 in v1.2, 0.65 in v1.1, 0.78 in v1.0); acted / read\n  speech is much better.\n- Accent answers describe how someone sounds, not where they are from or who they are; accents are often mixed or\n  ambiguous. Do not use them to make decisions about people.\n- Asked about itself, it may describe abilities (seeing images, speaking) that this checkpoint does not have on its\n  own: it takes speech and text and replies in text.\n- Speaker judgments are coarse (EER 18–40%) and must not be used to identify or verify people.\n- Emotion labels come from acted corpora; do not use the outputs to make decisions about individuals.\n\n## License\n\n**CC BY-NC 4.0, non-commercial use only.**\n\n- Non-commercial data:\n  - Stress: DEBATE (github.com/SmileHnu/DEBATE), Stress-17K and TinyStress-15K (slprl);\n  - Expresso (Meta), EARS (Meta) and NonVerbalSpeech-38K, all CC BY-NC 4.0;\n  - ESD (research only); SmoothConv (CC BY-NC).\n  - Accents (v1.2): KeSpeech (non-commercial research use).\n  - Conversation replay (v1.1): user turns from wilzzzz/paralinguistic_dialogues (no licence stated on the dataset card; used for non-commercial research), SmoothConv (CC BY-NC), AISHELL-1 (Apache-2.0), LibriSpeech (CC BY 4.0); target replies generated by the base LLM (Apache-2.0); spoken chat questions synthesised with CosyVoice2 (Apache-2.0).\n- Added in v1.4 (non-commercial or share-alike): Emilia JA/KO (CC BY-NC 4.0); VIVOS (CC BY-NC-SA 4.0); EmotionTalk\n  (CC BY-NC-SA 4.0); DailyTalk (CC BY-SA 4.0); a licensed Mandarin conversational corpus with paralinguistic annotation\n  (MagicData, purchased licence; audio not redistributed); other Japanese speech data used for non-commercial research.\n- Added in v1.4 (other): Emilia-YODAS JA/KO (CC BY 4.0), YODAS2 (CC BY 3.0), Zeroth-Korean (CC BY 4.0), FLEURS train split\n  (CC BY 4.0; the test split was never used), Common Voice 17 ja/ar/ru (CC0), CSEMOTIONS (Apache-2.0), EMNS (Apache-2.0),\n  JL-Corpus (CC0), Emozionalmente (CC BY 4.0), SUBESCO (CC BY 4.0). Labels were re-checked, and for unlabelled YODAS2\n  clips produced, with Qwen3-ASR-0.6B (Apache-2.0); continuation targets were written by Qwen3-32B (Apache-2.0).\n- Added in v1.5: FLEURS dev split (CC BY 4.0; the test split was never used).\n- Other data:\n  - VocalSound (CC BY-SA 4.0), NonverbalTTS (audio from VoxCeleb and Expresso);\n  - VoxCeleb1 (CC BY 4.0), AISHELL-1 (Apache-2.0), LibriSpeech (CC BY 4.0);\n  - ARC (CC BY-SA 4.0), OpenBookQA, CommonsenseQA (MIT).\n  - Accents (v1.2): VCTK (CC BY 4.0), English Dialects (CC BY-SA 4.0), EdAcc (CC BY-SA 4.0), common-accent from\n    Common Voice (CC0 audio).\n  - Turn-taking (v1.2): otoSpeech-141h (CC BY 4.0) with DualTurn labels; Smart Turn v3.2 training set\n    (pipecat-ai, CC BY 4.0).\n- Base models keep their licences: Qwen3-VL-32B-Instruct and Qwen3-ASR-0.6B are Apache-2.0 (Alibaba Cloud).\n- The LLM weights are the language model of Qwen3-VL-32B-Instruct with LoRAs merged in; the vision encoder is not\n  included.\n\n## Citation\n\n```bibtex\n@misc{jin2026duplexjev,\n  title         = {Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen {LLM} Hear Beyond the Transcript},\n  author        = {Jin, Jie and Ma, Ziyin and Yin, Min and Chen, Jinyu and Song, Haigang and Pang, Zhikun and Zhang, Xiaowen},\n  year          = {2026},\n  eprint        = {2610.02638},\n  archivePrefix = {arXiv},\n  note          = {Submitted to IEEE ICASSP 2027}\n}\n```\n\nBuilt by [Adventists.ai](https://github.com/adventists-ai/duplexjev). Claude (Anthropic) assisted with code.\n",
+      "arxiv_ids": [
+        "2610.02638"
+      ],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/DuplexJev-32B-Turn",
+        "Qwen/Qwen3-VL-32B-Instruct",
+        "Qwen/Qwen3-ASR-0.6B"
+      ],
+      "variants": [],
+      "score": 19,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech llm",
+        "model card links an arXiv paper",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "avericaai/Fun-ASR-Nano-2512-gguf",
+      "author": "avericaai",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "fun-asr-nano",
+        "sense-voice-encoder",
+        "qwen3",
+        "audio-llm",
+        "automatic-speech-recognition",
+        "zh",
+        "en",
+        "ja",
+        "arxiv:2509.12508",
+        "base_model:FunAudioLLM/Fun-ASR-Nano-2512",
+        "base_model:quantized:FunAudioLLM/Fun-ASR-Nano-2512",
+        "license:other",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/avericaai/Fun-ASR-Nano-2512-gguf",
+      "card_text": "---\nlicense: other\nlicense_name: funasr-model-license-v1.1\nlicense_link: https://github.com/modelscope/FunASR/blob/main/MODEL_LICENSE\nbase_model: FunAudioLLM/Fun-ASR-Nano-2512\nbase_model_relation: quantized\nlibrary_name: transcribe.cpp\npipeline_tag: automatic-speech-recognition\nlanguage:\n  - zh\n  - en\n  - ja\ntags:\n  - gguf\n  - transcribe.cpp\n  - asr\n  - speech-to-text\n  - fun-asr-nano\n  - sense-voice-encoder\n  - qwen3\n  - audio-llm\ntranscribe_cpp:\n  schema_version: 2\n  wer_fleurs_en:\n    q8_0: 5.49\n  cer_fleurs_ja:\n    q8_0: 8.5\n  cer_fleurs_zh:\n    q8_0: 8.59\n  wer_librispeech_test_clean:\n    bf16: 1.78\n    f16: 1.79\n    q8_0: 1.79\n    q6_k: 1.78\n    q5_k_m: 1.82\n    q4_k_m: 1.92\n  rtf_m4:\n    cpu: 18.12\n    metal: 32.87\n  rtf_m4_max:\n    cpu: 28.06\n    metal: 78.13\n  rtf_ryzen_4750u:\n    cpu: 7.95\n    vulkan: 10.73\n  streaming: false\n  translate: false\n  lang_detect: true\n  explicit_language_selection: true\n  timestamps: none\n---\n\n# Fun-ASR-Nano-2512: transcribe.cpp GGUF\n\nGGUF conversions of [FunAudioLLM/Fun-ASR-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512) for use\nwith [transcribe.cpp](https://github.com/handy-computer/transcribe.cpp).\n\nPorted from upstream commit\n[a7088d6](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512/commit/a7088d6),\npinned 2026-05-06.\nValidated against the FunASR reference at transcribe.cpp commit\n[f094d28](https://github.com/handy-computer/transcribe.cpp/tree/f094d28)\non 2026-05-06.\n\nOffline speech-to-text in Chinese, English, and Japanese, plus 7 Chinese\ndialects (Wu, Cantonese, Min, Hakka, Gan, Xiang, Jin) and 26 regional\nMandarin accents. ~800M trainable parameters wrapping a frozen\nSenseVoiceEncoderSmall (50 SAN-M main blocks + 20 transformer blocks),\na 2-layer audio adaptor (512 → 1024), and a bundled Qwen3-0.6B LLM\n(28 layers, 16/8 GQA, BF16) that produces the transcript autoregressively.\nTakes a 16 kHz mono WAV and emits text. Not a streaming model, no\ntranslation, no built-in long-form chunking, no timestamps. ITN\n(inverse text normalization) is off by default, since with it on\nEnglish can come back all caps; pass `--itn` for digits and\npunctuation, which helps Chinese.\n\n\n## Downloads\n\n| Quantization | Download | Size | WER (LibriSpeech test-clean) |\n| --- | --- | ---: | ---: |\n| BF16 | [Fun-ASR-Nano-2512-BF16.gguf](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/resolve/main/Fun-ASR-Nano-2512-BF16.gguf) | 1.67 GB | 1.78% |\n| F16 | [Fun-ASR-Nano-2512-F16.gguf](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/resolve/main/Fun-ASR-Nano-2512-F16.gguf) | 1.67 GB | 1.79% |\n| Q8_0 | [Fun-ASR-Nano-2512-Q8_0.gguf](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/resolve/main/Fun-ASR-Nano-2512-Q8_0.gguf) | 891 MB | 1.79% |\n| Q6_K | [Fun-ASR-Nano-2512-Q6_K.gguf](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/resolve/main/Fun-ASR-Nano-2512-Q6_K.gguf) | 691 MB | 1.78% |\n| Q5_K_M | [Fun-ASR-Nano-2512-Q5_K_M.gguf](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/resolve/main/Fun-ASR-Nano-2512-Q5_K_M.gguf) | 631 MB | 1.82% |\n| Q4_K_M | [Fun-ASR-Nano-2512-Q4_K_M.gguf](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/resolve/main/Fun-ASR-Nano-2512-Q4_K_M.gguf) | 557 MB | 1.92% |\n\nWER on the full LibriSpeech test-clean split (2,620 utterances). Figures without a commit were published before provenance was recorded.\n\nGreedy LLM decoding via the bundled Qwen3-0.6B head. Publisher reports 1.76% on this\nsplit (model card \"Open-Source Dataset Performance\" table). Our FunASR 1.3.1\nreference run scores 1.79% (95% CI [1.63%, 1.95%]), within bootstrap noise of the\npublisher's number. transcribe.cpp's BF16 port matches that baseline within -0.01\npercentage-points. LibriSpeech is an English-only benchmark; Chinese (AISHELL-1,\nWenetSpeech) and Japanese (CommonVoice JA) are the recommended complementary checks.\nThese table values were measured with ITN off, this variant's runtime default,\nmatching the FunASR reference.\n\n\n## Usage\n\nBuild transcribe.cpp from source:\n\n```bash\ngit clone git@github.com:handy-computer/transcribe.cpp.git\ncd transcribe.cpp\ncmake -B build && cmake --build build\n```\n\nRun on a 16 kHz mono WAV:\n\n```bash\nbuild/bin/transcribe-cli \\\n  -m Fun-ASR-Nano-2512-Q8_0.gguf \\\n  input.wav\n```\n\nIf your audio isn't already 16 kHz mono WAV, convert it first:\n\n```bash\nffmpeg -i input.mp3 -ar 16000 -ac 1 output.wav\n```\n\nSee the [transcribe.cpp model page](https://github.com/handy-computer/transcribe.cpp/blob/main/docs/models/fun-asr-nano-2512.md) for performance\nnumbers, numerical validation, and reproduction steps.\n\n## License\n\nInherited from the base model: **FunASR Model Open Source License Agreement v1.1**. See the\n[upstream model card](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512) for full terms.\nThis repository includes the license text\n([`LICENSE`](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/blob/main/LICENSE)) and a\n[`NOTICE`](https://huggingface.co/handy-computer/Fun-ASR-Nano-2512-gguf/blob/main/NOTICE) recording\nhow these files were derived from the original.\n\n---\n\n## Original Model Card\n\n> The section below is reproduced from\n> [FunAudioLLM/Fun-ASR-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512) at commit\n> `a7088d6` for offline reference. The upstream card is the\n> authoritative source.\n\n# Fun-ASR\n\n「[简体中文](README_zh.md)」|「English」\n\nFun-ASR is an end-to-end speech recognition large model launched by Tongyi Lab. It is trained on tens of millions of hours of real speech data, possessing powerful contextual understanding capabilities and industry adaptability. It supports low-latency real-time transcription and covers 31 languages. It excels in vertical domains such as education and finance, accurately recognizing professional terminology and industry expressions, effectively addressing challenges like \"hallucination\" generation and language confusion, achieving \"clear hearing, understanding meaning, and accurate writing.\"\n\n<div align=\"center\">\n<img src=\"images/funasr-v2.png\">\n</div>\n\n<div align=\"center\">\n<h4>\n<a href=\"https://funaudiollm.github.io/funasr\"> Homepage </a>\n｜<a href=\"#core-features\"> Core Features </a>\n｜<a href=\"#performance-evaluation\"> Performance Evaluation </a>\n｜<a href=\"#environment-setup\"> Environment Setup </a>\n｜<a href=\"#usage-tutorial\"> Usage Tutorial </a>\n\n</h4>\n\nModel Repository: [modelscope](https://www.modelscope.cn/models/FunAudioLLM/Fun-ASR-Nano-2512), [huggingface](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512)\n\nOnline Experience:\n[ModelScope Community Space](https://modelscope.cn/studios/FunAudioLLM/Fun-ASR-Nano), [huggingface space](https://huggingface.co/spaces/FunAudioLLM/Fun-ASR-Nano)\n\n</div>\n\n|                                                                           Model Name                                                                            |                                                                                                                                                                                                       Task Details                                                                                                                                                                                                       |         Training Data          | Parameters |\n| :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------: | :--------: |\n|       Fun-ASR-Nano <br> ([⭐](https://www.modelscope.cn/models/FunAudioLLM/Fun-ASR-Nano-2512) [🤗](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512))       | Speech recognition supports Chinese, English, and Japanese. Chinese includes support for 7 dialects (Wu, Cantonese, Min, Hakka, Gan, Xiang, Jin) and 26 regional accents (Henan, Shanxi, Hubei, Sichuan, Chongqing, Yunnan, Guizhou, Guangdong, Guangxi and more than 20 other regions). English and Japanese cover multiple regional accents. Additional features include lyric recognition and rap speech recognition. |   Tens of millions of hours    |    800M    |\n| Fun-ASR-MLT-Nano <br> ([⭐](https://www.modelscope.cn/models/FunAudioLLM/Fun-ASR-MLT-Nano-2512) [🤗](https://huggingface.co/FunAudioLLM/Fun-ASR-MLT-Nano-2512)) |                                    Speech recognition supports Chinese, English, Cantonese, Japanese, Korean, Vietnamese, Indonesian, Thai, Malay, Filipino, Arabic, Hindi, Bulgarian, Croatian, Czech, Danish, Dutch, Estonian, Finnish, Greek, Hungarian, Irish, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Swedish, and 31 languages in total.                                    | Hundreds of thousands of hours |    800M    |\n\n<a name=\"What's News\"></a>\n\n# What's New 🔥\n\n- 2025/12: [Fun-ASR-Nano-2512](https://modelscope.cn/models/FunAudioLLM/Fun-ASR-Nano-2512) is an end-to-end speech recognition large model trained on tens of millions of hours real speech data. It supports low-latency real-time transcription and covers 31 languages.\n- 2024/7: [FunASR](https://github.com/modelscope/FunASR) is a fundamental speech recognition toolkit that offers a variety of features, including speech recognition (ASR), Voice Activity Detection (VAD), Punctuation Restoration, Language Models, Speaker Verification, Speaker Diarization and multi-talker ASR.\n\n# Core Features 🎯\n\n**Fun-ASR** focuses on high-precision speech recognition, multi-language support, and industry customization capabilities\n\n- **Far-field High-noise Recognition:** Deeply optimized for far-distance sound pickup and high-noise scenarios (such as conference rooms, in-vehicle environments, industrial sites, etc.), improving recognition accuracy to **93%**.\n- **Chinese Dialects and Regional Accents:**\n  - Supports **7 major dialects**: Wu, Cantonese, Min, Hakka, Gan, Xiang, Jin\n  - Covers **26 regional accents**: including Henan, Shaanxi, Hubei, Sichuan, Chongqing, Yunnan, Guizhou, Guangdong, Guangxi and more than 20 other regions\n- **Multi-language Free Speech:** Supports recognition of **31 languages**, with focused optimization on East and Southeast Asian languages, supporting free language switching and mixed recognition.\n- **Music Background Lyric Recognition:** Enhanced speech recognition performance under music background interference, supporting accurate recognition of lyric content in songs.\n\n# Environment Setup 🐍\n\n```shell\ngit clone https://github.com/FunAudioLLM/Fun-ASR.git\ncd Fun-ASR\npip install -r requirements.txt\n```\n\n<a name=\"usage-tutorial\"></a>\n\n# TODO\n\n- [ ] Support returning timestamps\n- [ ] Support speaker diarization\n- [ ] Support model training\n\n# Usage 🛠️\n\n## Inference\n\n### Using funasr for inference\n\n```python\nfrom funasr import AutoModel\n\n\ndef main():\n    model_dir = \"FunAudioLLM/Fun-ASR-Nano-2512\"\n    model = AutoModel(\n        model=model_dir,\n        trust_remote_code=True,\n        remote_code=\"./model.py\",\n        device=\"cuda:0\",\n    )\n\n    wav_path = f\"{model.model_path}/example/zh.mp3\"\n    res = model.generate(\n        input=[wav_path],\n        cache={},\n        batch_size=1,\n        hotwords=[\"开放时间\"],\n        # 中文、英文、日文 for Fun-ASR-Nano-2512\n        # 中文、英文、粤语、日文、韩文、越南语、印尼语、泰语、马来语、菲律宾语、阿拉伯语、\n        # 印地语、保加利亚语、克罗地亚语、捷克语、丹麦语、荷兰语、爱沙尼亚语、芬兰语、希腊语、\n        # 匈牙利语、爱尔兰语、拉脱维亚语、立陶宛语、马耳他语、波兰语、葡萄牙语、罗马尼亚语、\n        # 斯洛伐克语、斯洛文尼亚语、瑞典语 for Fun-ASR-MLT-Nano-2512\n        language=\"中文\",\n        itn=True, # or False\n    )\n    text = res[0][\"text\"]\n    print(text)\n\n    model = AutoModel(\n        model=model_dir,\n        trust_remote_code=True,\n        vad_model=\"fsmn-vad\",\n        vad_kwargs={\"max_single_segment_time\": 30000},\n        remote_code=\"./model.py\",\n        device=\"cuda:0\",\n    )\n    res = model.generate(input=[wav_path], cache={}, batch_size=1)\n    text = res[0][\"text\"]\n    print(text)\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Direct Inference\n\n```python\nfrom model import FunASRNano\n\n\ndef main():\n    model_dir = \"FunAudioLLM/Fun-ASR-Nano-2512\"\n    m, kwargs = FunASRNano.from_pretrained(model=model_dir, device=\"cuda:0\")\n    m.eval()\n\n    wav_path = f\"{kwargs['model_path']}/example/zh.mp3\"\n    res = m.inference(data_in=[wav_path], **kwargs)\n    text = res[0][0][\"text\"]\n    print(text)\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\n<details><summary> Parameter Description (click to expand) </summary>\n\n- `model_dir`: Model name or local disk model path.\n- `trust_remote_code`: Whether to trust remote code for loading custom model implementations.\n- `remote_code`: Specify the location of specific model code (e.g., `model.py` in the current directory), supporting both absolute and relative paths.\n- `device`: Specify the device to use, such as \"cuda:0\" or \"cpu\".\n\n</details>\n\n# Performance 📝\n\nWe evaluated Fun-ASR against other state-of-the-art models on open-source benchmarks, Chinese dialect datasets, and industry-specific test sets. The results demonstrate that Fun-ASR achieves superior performance across various scenarios.\n\n### 1. Open-Source Dataset Performance (WER %)\n\n| Test set            | GLM-ASR-nano | GLM-ASR-nano\\* | Whisper-large-v3 | Seed-ASR | Seed-ASR\\* | Kimi-Audio | Step-Audio2 | FireRed-ASR | Fun-ASR-nano | Fun-ASR |\n| :------------------ | :----------: | :------------: | :--------------: | :------: | :--------: | :--------: | :---------: | :---------: | :----------: | :-----: |\n| **Model Size**      |     1.5B     |      1.5B      |       1.6B       |    -     |     -      |     -      |      -      |    1.1B     |     0.8B     |  7.7B   |\n| **OpenSource**      |      ✅      |       ✅       |        ✅        |    ❌    |     ❌     |     ✅     |     ✅      |     ✅      |      ✅      |   ❌    |\n| AIShell1            |     1.81     |      2.17      |       4.72       |   0.68   |    1.63    |    0.71    |    0.63     |    0.54     |     1.80     |  1.22   |\n| AIShell2            |      -       |      3.47      |       4.68       |   2.27   |    2.76    |    2.86    |    2.10     |    2.58     |     2.75     |  2.39   |\n| Fleurs-zh           |      -       |      3.65      |       5.18       |   3.43   |    3.23    |    3.11    |    2.68     |    4.81     |     2.56     |  2.53   |\n| Fleurs-en           |     5.78     |      6.95      |       6.23       |   9.39   |    9.39    |    6.99    |    3.03     |    10.79    |     5.96     |  4.74   |\n| Librispeech-clean   |     2.00     |      2.17      |       1.86       |   1.58   |    2.8     |    1.32    |    1.17     |    1.84     |     1.76     |  1.51   |\n| Librispeech-other   |     4.19     |      4.43      |       3.43       |   2.84   |    5.69    |    2.63    |    2.42     |    4.52     |     4.33     |  3.03   |\n| WenetSpeech Meeting |     6.73     |      8.21      |      18.39       |   5.69   |    7.07    |    6.24    |    4.75     |    4.95     |     6.60     |  6.17   |\n| WenetSpeech Net     |      -       |      6.33      |      11.89       |   4.66   |    4.84    |    6.45    |    4.67     |    4.94     |     6.01     |  5.46   |\n\n> _Note: Seed-ASR\\* results are evaluated using the official API on volcengine; GLM-ASR-nano\\* results are evaluated using the open-source checkpoint._\n\n### 2. Industry Dataset Performance (WER %)\n\n| Test set           | GLM-ASR-Nano | Whisper-large-v3 | Seed-ASR  | FireRed-ASR | Kimi-Audio | Paraformer v2 | Fun-ASR-nano |  Fun-ASR  |\n| :----------------- | :----------: | :--------------: | :-------: | :---------: | :--------: | :-----------: | :----------: | :-------: |\n| **Model Size**     |     1.5B     |       1.6B       |     -     |    1.1B     |     8B     |     0.2B      |     0.8B     |   7.7B    |\n| **OpenSource**     |      ✅      |        ✅        |    ❌     |     ✅      |     ✅     |      ✅       |      ✅      |    ❌     |\n| Nearfield          |    16.95     |      16.58       |   7.20    |    10.10    |    9.02    |     8.11      |     7.79     |   6.31    |\n| Farfield           |     9.44     |      22.21       |   4.59    |    7.49     |   10.95    |     9.55      |     5.79     |   4.34    |\n| Complex Background |    23.79     |      32.57       |   12.90   |    15.56    |   15.56    |     15.19     |    14.59     |   11.45   |\n| English General    |    16.47     |      18.56       |   15.65   |    21.62    |   18.12    |     19.48     |    15.28     |   13.73   |\n| Opensource         |     4.67     |       7.05       |   3.83    |    5.31     |    3.79    |     6.23      |     4.22     |   3.38    |\n| Dialect            |    54.21     |      66.14       |   29.45   |    52.82    |   71.94    |     41.16     |    28.18     |   15.21   |\n| Accent             |    19.78     |      36.03       |   10.23   |    14.05    |   27.20    |     17.80     |    12.90     |   10.31   |\n| Lyrics             |    46.56     |      54.82       |   30.26   |    42.87    |   65.18    |     50.14     |    30.85     |   21.00   |\n| Hiphop             |    43.32     |      46.56       |   29.46   |    33.88    |   57.25    |     43.79     |    30.87     |   28.58   |\n| **Average**        |  **26.13**   |    **33.39**     | **15.95** |  **22.63**  | **31.00**  |   **23.49**   |  **16.72**   | **12.70** |\n\n<div align=\"center\">\n<img src=\"images/compare_en.png\" width=\"800\" />\n</div>\n\n## Citations\n\n```bibtex\n@article{an2025fun,\n  title={Fun-ASR Technical Report},\n  author={An, Keyu and Chen, Yanni and Deng, Chong and Gao, Changfeng and Gao, Zhifu and Gong, Bo and Li, Xiangang and Li, Yabin and Lv, Xiang and Ji, Yunjie and others},\n  journal={arXiv preprint arXiv:2509.12508},\n  year={2025}\n}\n```\n",
+      "arxiv_ids": [
+        "2509.12508"
+      ],
+      "datasets": [],
+      "base_models": [
+        "FunAudioLLM/Fun-ASR-Nano-2512"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "avericaai/Fun-ASR-MLT-Nano-2512-gguf",
+      "author": "avericaai",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "fun-asr-nano",
+        "fun-asr-mlt-nano",
+        "sense-voice-encoder",
+        "qwen3",
+        "audio-llm",
+        "multilingual",
+        "automatic-speech-recognition",
+        "zh",
+        "en",
+        "yue",
+        "ja",
+        "ko",
+        "vi",
+        "id",
+        "th",
+        "ms",
+        "tl",
+        "ar",
+        "hi",
+        "bg",
+        "hr",
+        "cs",
+        "da",
+        "nl",
+        "et",
+        "fi",
+        "el",
+        "hu",
+        "ga",
+        "lv",
+        "lt",
+        "mt",
+        "pl",
+        "pt",
+        "ro",
+        "sk",
+        "sl",
+        "sv",
+        "arxiv:2509.12508",
+        "base_model:FunAudioLLM/Fun-ASR-MLT-Nano-2512",
+        "base_model:quantized:FunAudioLLM/Fun-ASR-MLT-Nano-2512",
+        "license:other",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/avericaai/Fun-ASR-MLT-Nano-2512-gguf",
+      "card_text": "---\nlicense: other\nlicense_name: funasr-model-license-v1.1\nlicense_link: https://github.com/modelscope/FunASR/blob/main/MODEL_LICENSE\nbase_model: FunAudioLLM/Fun-ASR-MLT-Nano-2512\nbase_model_relation: quantized\nlibrary_name: transcribe.cpp\npipeline_tag: automatic-speech-recognition\nlanguage:\n  - zh\n  - en\n  - yue\n  - ja\n  - ko\n  - vi\n  - id\n  - th\n  - ms\n  - tl\n  - ar\n  - hi\n  - bg\n  - hr\n  - cs\n  - da\n  - nl\n  - et\n  - fi\n  - el\n  - hu\n  - ga\n  - lv\n  - lt\n  - mt\n  - pl\n  - pt\n  - ro\n  - sk\n  - sl\n  - sv\ntags:\n  - gguf\n  - transcribe.cpp\n  - asr\n  - speech-to-text\n  - fun-asr-nano\n  - fun-asr-mlt-nano\n  - sense-voice-encoder\n  - qwen3\n  - audio-llm\n  - multilingual\ntranscribe_cpp:\n  schema_version: 2\n  wer_fleurs_ar:\n    q8_0: 25.88\n  wer_fleurs_bg:\n    q8_0: 55.78\n  wer_fleurs_cs:\n    q8_0: 48.7\n  wer_fleurs_da:\n    q8_0: 55.94\n  wer_fleurs_el:\n    q8_0: 100.43\n  wer_fleurs_en:\n    q8_0: 5.02\n  wer_fleurs_et:\n    q8_0: 61.09\n  wer_fleurs_fi:\n    q8_0: 65.77\n  wer_fleurs_fil:\n    q8_0: 14.29\n  wer_fleurs_ga:\n    q8_0: 95.78\n  wer_fleurs_hi:\n    q8_0: 23.07\n  wer_fleurs_hr:\n    q8_0: 67.52\n  wer_fleurs_hu:\n    q8_0: 110.75\n  wer_fleurs_id:\n    q8_0: 7.32\n  cer_fleurs_ja:\n    q8_0: 2.1\n  cer_fleurs_ko:\n    q8_0: 5.41\n  wer_fleurs_lt:\n    q8_0: 75.25\n  wer_fleurs_lv:\n    q8_0: 52.14\n  wer_fleurs_ms:\n    q8_0: 9.11\n  wer_fleurs_mt:\n    q8_0: 89.25\n  wer_fleurs_nl:\n    q8_0: 42.36\n  wer_fleurs_pl:\n    q8_0: 52.34\n  wer_fleurs_pt:\n    q8_0: 22.23\n  wer_fleurs_ro:\n    q8_0: 67.83\n  wer_fleurs_sk:\n    q8_0: 60.13\n  wer_fleurs_sl:\n    q8_0: 72.73\n  wer_fleurs_sv:\n    q8_0: 71.6\n  cer_fleurs_th:\n    q8_0: 7.28\n  wer_fleurs_vi:\n    q8_0: 8.22\n  cer_fleurs_yue:\n    q8_0: 8.39\n  cer_fleurs_zh:\n    q8_0: 7.33\n  wer_librispeech_test_clean:\n    bf16: 1.71\n    f16: 1.71\n    q8_0: 1.72\n    q6_k: 1.66\n    q5_k_m: 1.74\n    q4_k_m: 1.8\n  rtf_m4:\n    cpu: 11.33\n    metal: 25.82\n  rtf_m4_max:\n    cpu: 19.54\n    metal: 70.03\n  rtf_ryzen_4750u:\n    cpu: 5.47\n    vulkan: 8.84\n  streaming: false\n  translate: false\n  lang_detect: true\n  explicit_language_selection: true\n  timestamps: none\n---\n\n# Fun-ASR-MLT-Nano-2512: transcribe.cpp GGUF\n\nGGUF conversions of [FunAudioLLM/Fun-ASR-MLT-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-MLT-Nano-2512) for use\nwith [transcribe.cpp](https://github.com/handy-computer/transcribe.cpp).\n\nPorted from upstream commit\n[cf67a93](https://huggingface.co/FunAudioLLM/Fun-ASR-MLT-Nano-2512/commit/cf67a93),\npinned 2026-05-06.\nValidated against the FunASR reference at transcribe.cpp commit\n[f094d28](https://github.com/handy-computer/transcribe.cpp/tree/f094d28)\non 2026-05-06.\n\nOffline speech-to-text covering 31 languages, with focused optimization\non East and Southeast Asian languages: Chinese, English, Cantonese,\nJapanese, Korean, Vietnamese, Indonesian, Thai, Malay, Filipino, plus\nArabic, Hindi, and 19 European languages (Bulgarian, Croatian, Czech,\nDanish, Dutch, Estonian, Finnish, Greek, Hungarian, Irish, Latvian,\nLithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian,\nSwedish). Same architecture as Fun-ASR-Nano-2512 (~800M trainable\nparameters: frozen SenseVoiceEncoderSmall + 2-layer audio adaptor +\nbundled Qwen3-0.6B LLM); trained on a smaller multilingual corpus\n(\"hundreds of thousands of hours\" per the model card, vs Nano's\n\"tens of millions\"). Takes a 16 kHz mono WAV and emits text. Not\nstreaming, no translation, no timestamps. ITN (inverse text\nnormalization) is on by default, matching upstream, for readable\ncasing, punctuation, and digits; pass `--no-itn` for spoken-form\noutput.\n\n\n## Downloads\n\n| Quantization | Download | Size | WER (LibriSpeech test-clean) |\n| --- | --- | ---: | ---: |\n| BF16 | [Fun-ASR-MLT-Nano-2512-BF16.gguf](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/resolve/main/Fun-ASR-MLT-Nano-2512-BF16.gguf) | 1.67 GB | 1.71% |\n| F16 | [Fun-ASR-MLT-Nano-2512-F16.gguf](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/resolve/main/Fun-ASR-MLT-Nano-2512-F16.gguf) | 1.67 GB | 1.71% |\n| Q8_0 | [Fun-ASR-MLT-Nano-2512-Q8_0.gguf](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/resolve/main/Fun-ASR-MLT-Nano-2512-Q8_0.gguf) | 891 MB | 1.72% |\n| Q6_K | [Fun-ASR-MLT-Nano-2512-Q6_K.gguf](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/resolve/main/Fun-ASR-MLT-Nano-2512-Q6_K.gguf) | 691 MB | 1.66% |\n| Q5_K_M | [Fun-ASR-MLT-Nano-2512-Q5_K_M.gguf](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/resolve/main/Fun-ASR-MLT-Nano-2512-Q5_K_M.gguf) | 631 MB | 1.74% |\n| Q4_K_M | [Fun-ASR-MLT-Nano-2512-Q4_K_M.gguf](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/resolve/main/Fun-ASR-MLT-Nano-2512-Q4_K_M.gguf) | 557 MB | 1.80% |\n\nWER on the full LibriSpeech test-clean split (2,620 utterances), batch size 8, timestamps none, language hint `en`, decoded on cuda. Measured at transcribe.cpp `c5f26f94`.\n\nGreedy LLM decoding via the bundled Qwen3-0.6B head. The publisher does not report a\nnumerical LibriSpeech WER for the MLT variant specifically (the shared README's\nper-model table covers Fun-ASR-Nano only). Gate baseline is our own FunASR 1.3.1\nreference run on the same manifest with ITN on (`--use-itn`): 1.71% (95% CI [1.55%,\n1.89%]). transcribe.cpp's BF16 port matches that baseline within -0.01\npercentage-points. LibriSpeech is English only; the strength of the MLT variant is\nmultilingual coverage, not English accuracy. All values on this page are measured\nwith ITN on, this variant's runtime default. With ITN off the reference scores 1.76%\nand the BF16 port 1.74%; on FLEURS, ITN on lowers error in 27 of 31 languages,\npartly because FLEURS references write numbers as digits.\n\n\n## Usage\n\nBuild transcribe.cpp from source:\n\n```bash\ngit clone git@github.com:handy-computer/transcribe.cpp.git\ncd transcribe.cpp\ncmake -B build && cmake --build build\n```\n\nRun on a 16 kHz mono WAV:\n\n```bash\nbuild/bin/transcribe-cli \\\n  -m Fun-ASR-MLT-Nano-2512-Q8_0.gguf \\\n  input.wav\n```\n\nIf your audio isn't already 16 kHz mono WAV, convert it first:\n\n```bash\nffmpeg -i input.mp3 -ar 16000 -ac 1 output.wav\n```\n\nSee the [transcribe.cpp model page](https://github.com/handy-computer/transcribe.cpp/blob/main/docs/models/fun-asr-mlt-nano-2512.md) for performance\nnumbers, numerical validation, and reproduction steps.\n\n## License\n\nInherited from the base model: **FunASR Model Open Source License Agreement v1.1**. See the\n[upstream model card](https://huggingface.co/FunAudioLLM/Fun-ASR-MLT-Nano-2512) for full terms.\nThis repository includes the license text\n([`LICENSE`](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/blob/main/LICENSE)) and a\n[`NOTICE`](https://huggingface.co/handy-computer/Fun-ASR-MLT-Nano-2512-gguf/blob/main/NOTICE) recording\nhow these files were derived from the original.\n\n---\n\n## Original Model Card\n\n> The section below is reproduced from\n> [FunAudioLLM/Fun-ASR-MLT-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-MLT-Nano-2512) at commit\n> `cf67a93` for offline reference. The upstream card is the\n> authoritative source.\n\n# Fun-ASR\n\n「[简体中文](README_zh.md)」|「English」\n\nFun-ASR is an end-to-end speech recognition large model launched by Tongyi Lab. It is trained on tens of millions of hours of real speech data, possessing powerful contextual understanding capabilities and industry adaptability. It supports low-latency real-time transcription and covers 31 languages. It excels in vertical domains such as education and finance, accurately recognizing professional terminology and industry expressions, effectively addressing challenges like \"hallucination\" generation and language confusion, achieving \"clear hearing, understanding meaning, and accurate writing.\"\n\n<div align=\"center\">\n<img src=\"images/funasr-v2.png\">\n</div>\n\n<div align=\"center\">\n<h4>\n<a href=\"https://funaudiollm.github.io/funasr\"> Homepage </a>\n｜<a href=\"#core-features\"> Core Features </a>\n｜<a href=\"#performance-evaluation\"> Performance Evaluation </a>\n｜<a href=\"#environment-setup\"> Environment Setup </a>\n｜<a href=\"#usage-tutorial\"> Usage Tutorial </a>\n\n</h4>\n\nModel Repository: [modelscope](https://www.modelscope.cn/models/FunAudioLLM/Fun-ASR-Nano-2512), [huggingface](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512)\n\nOnline Experience:\n[ModelScope Community Space](https://modelscope.cn/studios/FunAudioLLM/Fun-ASR-Nano), [huggingface space](https://huggingface.co/spaces/FunAudioLLM/Fun-ASR-Nano)\n\n</div>\n\n|                                                                           Model Name                                                                            |                                                                                                                                                                                                       Task Details                                                                                                                                                                                                       |         Training Data          | Parameters |\n| :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------: | :--------: |\n|       Fun-ASR-Nano <br> ([⭐](https://www.modelscope.cn/models/FunAudioLLM/Fun-ASR-Nano-2512) [🤗](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512))       | Speech recognition supports Chinese, English, and Japanese. Chinese includes support for 7 dialects (Wu, Cantonese, Min, Hakka, Gan, Xiang, Jin) and 26 regional accents (Henan, Shanxi, Hubei, Sichuan, Chongqing, Yunnan, Guizhou, Guangdong, Guangxi and more than 20 other regions). English and Japanese cover multiple regional accents. Additional features include lyric recognition and rap speech recognition. |   Tens of millions of hours    |    800M    |\n| Fun-ASR-MLT-Nano <br> ([⭐](https://www.modelscope.cn/models/FunAudioLLM/Fun-ASR-MLT-Nano-2512) [🤗](https://huggingface.co/FunAudioLLM/Fun-ASR-MLT-Nano-2512)) |                                    Speech recognition supports Chinese, English, Cantonese, Japanese, Korean, Vietnamese, Indonesian, Thai, Malay, Filipino, Arabic, Hindi, Bulgarian, Croatian, Czech, Danish, Dutch, Estonian, Finnish, Greek, Hungarian, Irish, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Swedish, and 31 languages in total.                                    | Hundreds of thousands of hours |    800M    |\n\n<a name=\"What's News\"></a>\n\n# What's New 🔥\n\n- 2025/12: [Fun-ASR-Nano-2512](https://modelscope.cn/models/FunAudioLLM/Fun-ASR-Nano-2512) is an end-to-end speech recognition large model trained on tens of millions of hours real speech data. It supports low-latency real-time transcription and covers 31 languages.\n- 2024/7: [FunASR](https://github.com/modelscope/FunASR) is a fundamental speech recognition toolkit that offers a variety of features, including speech recognition (ASR), Voice Activity Detection (VAD), Punctuation Restoration, Language Models, Speaker Verification, Speaker Diarization and multi-talker ASR.\n\n# Core Features 🎯\n\n**Fun-ASR** focuses on high-precision speech recognition, multi-language support, and industry customization capabilities\n\n- **Far-field High-noise Recognition:** Deeply optimized for far-distance sound pickup and high-noise scenarios (such as conference rooms, in-vehicle environments, industrial sites, etc.), improving recognition accuracy to **93%**.\n- **Chinese Dialects and Regional Accents:**\n  - Supports **7 major dialects**: Wu, Cantonese, Min, Hakka, Gan, Xiang, Jin\n  - Covers **26 regional accents**: including Henan, Shaanxi, Hubei, Sichuan, Chongqing, Yunnan, Guizhou, Guangdong, Guangxi and more than 20 other regions\n- **Multi-language Free Speech:** Supports recognition of **31 languages**, with focused optimization on East and Southeast Asian languages, supporting free language switching and mixed recognition.\n- **Music Background Lyric Recognition:** Enhanced speech recognition performance under music background interference, supporting accurate recognition of lyric content in songs.\n\n# Environment Setup 🐍\n\n```shell\ngit clone https://github.com/FunAudioLLM/Fun-ASR.git\ncd Fun-ASR\npip install -r requirements.txt\n```\n\n<a name=\"usage-tutorial\"></a>\n\n# TODO\n\n- [ ] Support returning timestamps\n- [ ] Support speaker diarization\n- [ ] Support model training\n\n# Usage 🛠️\n\n## Inference\n\n### Using funasr for inference\n\n```python\nfrom funasr import AutoModel\n\n\ndef main():\n    model_dir = \"FunAudioLLM/Fun-ASR-Nano-2512\"\n    model = AutoModel(\n        model=model_dir,\n        trust_remote_code=True,\n        remote_code=\"./model.py\",\n        device=\"cuda:0\",\n    )\n\n    wav_path = f\"{model.model_path}/example/zh.mp3\"\n    res = model.generate(\n        input=[wav_path],\n        cache={},\n        batch_size=1,\n        hotwords=[\"开放时间\"],\n        # 中文、英文、日文 for Fun-ASR-Nano-2512\n        # 中文、英文、粤语、日文、韩文、越南语、印尼语、泰语、马来语、菲律宾语、阿拉伯语、\n        # 印地语、保加利亚语、克罗地亚语、捷克语、丹麦语、荷兰语、爱沙尼亚语、芬兰语、希腊语、\n        # 匈牙利语、爱尔兰语、拉脱维亚语、立陶宛语、马耳他语、波兰语、葡萄牙语、罗马尼亚语、\n        # 斯洛伐克语、斯洛文尼亚语、瑞典语 for Fun-ASR-MLT-Nano-2512\n        language=\"中文\",\n        itn=True, # or False\n    )\n    text = res[0][\"text\"]\n    print(text)\n\n    model = AutoModel(\n        model=model_dir,\n        trust_remote_code=True,\n        vad_model=\"fsmn-vad\",\n        vad_kwargs={\"max_single_segment_time\": 30000},\n        remote_code=\"./model.py\",\n        device=\"cuda:0\",\n    )\n    res = model.generate(input=[wav_path], cache={}, batch_size=1)\n    text = res[0][\"text\"]\n    print(text)\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Direct Inference\n\n```python\nfrom model import FunASRNano\n\n\ndef main():\n    model_dir = \"FunAudioLLM/Fun-ASR-Nano-2512\"\n    m, kwargs = FunASRNano.from_pretrained(model=model_dir, device=\"cuda:0\")\n    m.eval()\n\n    wav_path = f\"{kwargs['model_path']}/example/zh.mp3\"\n    res = m.inference(data_in=[wav_path], **kwargs)\n    text = res[0][0][\"text\"]\n    print(text)\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\n<details><summary> Parameter Description (click to expand) </summary>\n\n- `model_dir`: Model name or local disk model path.\n- `trust_remote_code`: Whether to trust remote code for loading custom model implementations.\n- `remote_code`: Specify the location of specific model code (e.g., `model.py` in the current directory), supporting both absolute and relative paths.\n- `device`: Specify the device to use, such as \"cuda:0\" or \"cpu\".\n\n</details>\n\n# Performance 📝\n\nWe evaluated Fun-ASR against other state-of-the-art models on open-source benchmarks, Chinese dialect datasets, and industry-specific test sets. The results demonstrate that Fun-ASR achieves superior performance across various scenarios.\n\n### 1. Open-Source Dataset Performance (WER %)\n\n| Test set            | GLM-ASR-nano | GLM-ASR-nano\\* | Whisper-large-v3 | Seed-ASR | Seed-ASR\\* | Kimi-Audio | Step-Audio2 | FireRed-ASR | Fun-ASR-nano | Fun-ASR |\n| :------------------ | :----------: | :------------: | :--------------: | :------: | :--------: | :--------: | :---------: | :---------: | :----------: | :-----: |\n| **Model Size**      |     1.5B     |      1.5B      |       1.6B       |    -     |     -      |     -      |      -      |    1.1B     |     0.8B     |  7.7B   |\n| **OpenSource**      |      ✅      |       ✅       |        ✅        |    ❌    |     ❌     |     ✅     |     ✅      |     ✅      |      ✅      |   ❌    |\n| AIShell1            |     1.81     |      2.17      |       4.72       |   0.68   |    1.63    |    0.71    |    0.63     |    0.54     |     1.80     |  1.22   |\n| AIShell2            |      -       |      3.47      |       4.68       |   2.27   |    2.76    |    2.86    |    2.10     |    2.58     |     2.75     |  2.39   |\n| Fleurs-zh           |      -       |      3.65      |       5.18       |   3.43   |    3.23    |    3.11    |    2.68     |    4.81     |     2.56     |  2.53   |\n| Fleurs-en           |     5.78     |      6.95      |       6.23       |   9.39   |    9.39    |    6.99    |    3.03     |    10.79    |     5.96     |  4.74   |\n| Librispeech-clean   |     2.00     |      2.17      |       1.86       |   1.58   |    2.8     |    1.32    |    1.17     |    1.84     |     1.76     |  1.51   |\n| Librispeech-other   |     4.19     |      4.43      |       3.43       |   2.84   |    5.69    |    2.63    |    2.42     |    4.52     |     4.33     |  3.03   |\n| WenetSpeech Meeting |     6.73     |      8.21      |      18.39       |   5.69   |    7.07    |    6.24    |    4.75     |    4.95     |     6.60     |  6.17   |\n| WenetSpeech Net     |      -       |      6.33      |      11.89       |   4.66   |    4.84    |    6.45    |    4.67     |    4.94     |     6.01     |  5.46   |\n\n> _Note: Seed-ASR\\* results are evaluated using the official API on volcengine; GLM-ASR-nano\\* results are evaluated using the open-source checkpoint._\n\n### 2. Industry Dataset Performance (WER %)\n\n| Test set           | GLM-ASR-Nano | Whisper-large-v3 | Seed-ASR  | FireRed-ASR | Kimi-Audio | Paraformer v2 | Fun-ASR-nano |  Fun-ASR  |\n| :----------------- | :----------: | :--------------: | :-------: | :---------: | :--------: | :-----------: | :----------: | :-------: |\n| **Model Size**     |     1.5B     |       1.6B       |     -     |    1.1B     |     8B     |     0.2B      |     0.8B     |   7.7B    |\n| **OpenSource**     |      ✅      |        ✅        |    ❌     |     ✅      |     ✅     |      ✅       |      ✅      |    ❌     |\n| Nearfield          |    16.95     |      16.58       |   7.20    |    10.10    |    9.02    |     8.11      |     7.79     |   6.31    |\n| Farfield           |     9.44     |      22.21       |   4.59    |    7.49     |   10.95    |     9.55      |     5.79     |   4.34    |\n| Complex Background |    23.79     |      32.57       |   12.90   |    15.56    |   15.56    |     15.19     |    14.59     |   11.45   |\n| English General    |    16.47     |      18.56       |   15.65   |    21.62    |   18.12    |     19.48     |    15.28     |   13.73   |\n| Opensource         |     4.67     |       7.05       |   3.83    |    5.31     |    3.79    |     6.23      |     4.22     |   3.38    |\n| Dialect            |    54.21     |      66.14       |   29.45   |    52.82    |   71.94    |     41.16     |    28.18     |   15.21   |\n| Accent             |    19.78     |      36.03       |   10.23   |    14.05    |   27.20    |     17.80     |    12.90     |   10.31   |\n| Lyrics             |    46.56     |      54.82       |   30.26   |    42.87    |   65.18    |     50.14     |    30.85     |   21.00   |\n| Hiphop             |    43.32     |      46.56       |   29.46   |    33.88    |   57.25    |     43.79     |    30.87     |   28.58   |\n| **Average**        |  **26.13**   |    **33.39**     | **15.95** |  **22.63**  | **31.00**  |   **23.49**   |  **16.72**   | **12.70** |\n\n<div align=\"center\">\n<img src=\"images/compare_en.png\" width=\"800\" />\n</div>\n\n## Citations\n\n```bibtex\n@article{an2025fun,\n  title={Fun-ASR Technical Report},\n  author={An, Keyu and Chen, Yanni and Deng, Chong and Gao, Changfeng and Gao, Zhifu and Gong, Bo and Li, Xiangang and Li, Yabin and Lv, Xiang and Ji, Yunjie and others},\n  journal={arXiv preprint arXiv:2509.12508},\n  year={2025}\n}\n```\n",
+      "arxiv_ids": [
+        "2509.12508"
+      ],
+      "datasets": [],
+      "base_models": [
+        "FunAudioLLM/Fun-ASR-MLT-Nano-2512"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license other",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "avericaai/Voxtral-Mini-4B-Realtime-2602-gguf",
+      "author": "avericaai",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "transcribe.cpp",
+        "gguf",
+        "asr",
+        "speech-to-text",
+        "voxtral",
+        "audio-llm",
+        "streaming",
+        "multilingual",
+        "automatic-speech-recognition",
+        "en",
+        "fr",
+        "es",
+        "de",
+        "ru",
+        "zh",
+        "ja",
+        "it",
+        "pt",
+        "nl",
+        "ar",
+        "hi",
+        "ko",
+        "arxiv:2602.11298",
+        "base_model:mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "base_model:quantized:mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transcribe.cpp",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/avericaai/Voxtral-Mini-4B-Realtime-2602-gguf",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: mistralai/Voxtral-Mini-4B-Realtime-2602\nbase_model_relation: quantized\nlibrary_name: transcribe.cpp\npipeline_tag: automatic-speech-recognition\nlanguage:\n  - en\n  - fr\n  - es\n  - de\n  - ru\n  - zh\n  - ja\n  - it\n  - pt\n  - nl\n  - ar\n  - hi\n  - ko\ntags:\n  - gguf\n  - transcribe.cpp\n  - asr\n  - speech-to-text\n  - voxtral\n  - audio-llm\n  - streaming\n  - multilingual\ntranscribe_cpp:\n  schema_version: 2\n  wer_fleurs_ar:\n    q8_0: 14.53\n  wer_fleurs_de:\n    q8_0: 4.24\n  wer_fleurs_en:\n    q8_0: 6.27\n  wer_fleurs_es:\n    q8_0: 2.67\n  wer_fleurs_fr:\n    q8_0: 6.29\n  wer_fleurs_hi:\n    q8_0: 14.44\n  wer_fleurs_it:\n    q8_0: 2.25\n  cer_fleurs_ja:\n    q8_0: 5.44\n  cer_fleurs_ko:\n    q8_0: 5.27\n  wer_fleurs_nl:\n    q8_0: 6.09\n  wer_fleurs_pt:\n    q8_0: 3.87\n  wer_fleurs_ru:\n    q8_0: 5.41\n  cer_fleurs_zh:\n    q8_0: 10.41\n  wer_librispeech_test_clean:\n    bf16: 2.08\n    f16: 2.09\n    q8_0: 2.07\n    q6_k: 2.08\n    q5_k_m: 2.08\n    q4_k_m: 2.08\n  rtf_m4_max:\n    cpu: 2.41\n    metal: 6.63\n  rtf_ryzen_4750u:\n    cpu: 0.58\n    vulkan: 0.76\n  streaming: true\n  translate: false\n  lang_detect: true\n  timestamps: none\n---\n\n# Voxtral-Mini-4B-Realtime-2602: transcribe.cpp GGUF\n\nGGUF conversions of [mistralai/Voxtral-Mini-4B-Realtime-2602](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602) for use\nwith [transcribe.cpp](https://github.com/handy-computer/transcribe.cpp).\n\nPorted from upstream commit\n[2769294](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602/commit/2769294),\npinned 2026-06-06.\nValidated against the Transformers reference at transcribe.cpp commit\n[483c122](https://github.com/handy-computer/transcribe.cpp/tree/483c122)\non 2026-06-06.\n\nStreaming audio-LLM speech-to-text. A ~970M causal audio encoder (left-pad\ncausal conv stem + 32-layer sliding-window RoPE transformer) feeds a\n4-frame-group projector whose audio embeddings are added onto a ~3.4B\nMinistral decoder (26 layers, GQA 32/8, NEOX RoPE) with delay-token latency\nconditioning, emitting one text token per 80 ms audio slot (12.5 Hz). Takes a\n16 kHz mono WAV and supports both incremental streaming (configurable\nlatency/quality via --stream-chunk-ms and --stream-voxtral-delay) and offline\ntranscription using an accuracy-first 2400 ms delay. Architecturally distinct\nfrom the offline Voxtral 2507 family — own arch, streaming frontend, causal\nencoder, additive audio fusion.\n\n\n## Downloads\n\n| Quantization | Download | Size | WER (LibriSpeech test-clean) |\n| --- | --- | ---: | ---: |\n| BF16 | [Voxtral-Mini-4B-Realtime-2602-BF16.gguf](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/resolve/main/Voxtral-Mini-4B-Realtime-2602-BF16.gguf) | 8.87 GB | 2.08% |\n| F16 | [Voxtral-Mini-4B-Realtime-2602-F16.gguf](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/resolve/main/Voxtral-Mini-4B-Realtime-2602-F16.gguf) | 8.88 GB | 2.09% |\n| Q8_0 | [Voxtral-Mini-4B-Realtime-2602-Q8_0.gguf](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/resolve/main/Voxtral-Mini-4B-Realtime-2602-Q8_0.gguf) | 4.73 GB | 2.07% |\n| Q6_K | [Voxtral-Mini-4B-Realtime-2602-Q6_K.gguf](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/resolve/main/Voxtral-Mini-4B-Realtime-2602-Q6_K.gguf) | 3.66 GB | 2.08% |\n| Q5_K_M | [Voxtral-Mini-4B-Realtime-2602-Q5_K_M.gguf](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/resolve/main/Voxtral-Mini-4B-Realtime-2602-Q5_K_M.gguf) | 3.28 GB | 2.08% |\n| Q4_K_M | [Voxtral-Mini-4B-Realtime-2602-Q4_K_M.gguf](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/resolve/main/Voxtral-Mini-4B-Realtime-2602-Q4_K_M.gguf) | 2.83 GB | 2.08% |\n\nWER on the full LibriSpeech test-clean split (2,620 utterances), batch size 8, timestamps none. Figures without a commit were published before provenance was recorded.\n\nScored with the Whisper English text normalizer, offline path at delay 6, on an\nNVIDIA L40S. A delay-30 remeasurement is pending. Same-machine HuggingFace\ntransformers reference (VoxtralRealtimeForConditionalGeneration, BF16, greedy):\n2.08%; the BF16 GGUF matches at 2.08%. Every shipped quant stays within bootstrap\nnoise (2.07-2.09%), so the quantization ladder is WER-neutral down to Q4_K_M. The\nmodel is multilingual (13 languages, auto-detect); the published WER is English\nonly.\n\n\n## Usage\n\nBuild transcribe.cpp from source:\n\n```bash\ngit clone git@github.com:handy-computer/transcribe.cpp.git\ncd transcribe.cpp\ncmake -B build && cmake --build build\n```\n\nRun on a 16 kHz mono WAV:\n\n```bash\nbuild/bin/transcribe-cli \\\n  -m Voxtral-Mini-4B-Realtime-2602-Q8_0.gguf \\\n  input.wav\n```\n\nIf your audio isn't already 16 kHz mono WAV, convert it first:\n\n```bash\nffmpeg -i input.mp3 -ar 16000 -ac 1 output.wav\n```\n\nSee the [transcribe.cpp model page](https://github.com/handy-computer/transcribe.cpp/blob/main/docs/models/voxtral-realtime.md) for performance\nnumbers, numerical validation, and reproduction steps.\n\n## License\n\nInherited from the base model: **Apache-2.0**. See the\n[upstream model card](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602) for full terms.\nThis repository includes the license text\n([`LICENSE`](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/blob/main/LICENSE)) and a\n[`NOTICE`](https://huggingface.co/handy-computer/Voxtral-Mini-4B-Realtime-2602-gguf/blob/main/NOTICE) recording\nhow these files were derived from the original.\n\n---\n\n## Original Model Card\n\n> The section below is reproduced from\n> [mistralai/Voxtral-Mini-4B-Realtime-2602](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602) at commit\n> `2769294` for offline reference. The upstream card is the\n> authoritative source.\n\n# Voxtral Mini 4B Realtime 2602\n\nVoxtral Mini 4B Realtime 2602 is a **multilingual, realtime speech-transcription model** and among the first open-source solutions to achieve accuracy comparable to offline systems with a delay of **<500ms**.\nIt supports **13 languages** and outperforms existing open-source baselines across a range of tasks, making it ideal for applications like voice assistants and live subtitling.\n\nBuilt with a **natively streaming architecture** and a custom causal audio encoder - it allows configurable transcription delays (240ms to 2.4s), enabling users to balance **latency and accuracy** based on their needs. \nAt a **480ms delay**, it matches the performance of leading offline open-source transcription models, as well as realtime APIs.\n\nAs a **4B-parameter model**, is optimized for **on-device deployment**, requiring minimal hardware resources. \nIt runs in realtime with on devices minimal hardware with throughput exceeding 12.5 tokens/second.\n\nThis model is released in **BF16** under the **Apache-2 license**, ensuring flexibility for both research and commercial use.\n\nFor more details, see our:\n- [Blog post](https://mistral.ai/news/voxtral-transcribe-2)\n- [Demo](https://huggingface.co/spaces/mistralai/Voxtral-Mini-Realtime)\n- [Technical report](https://arxiv.org/abs/2602.11298)\n- [vLLM's blog on streaming input](https://blog.vllm.ai/2026/01/31/streaming-realtime.html)\n\n\n## Key Features\nVoxtral Mini 4B Realtime consists of two main architectural components:\n- **≈3.4B Language Model**\n- **≈970M Audio Encoder**\n- The audio encoder was trained from scratch with causal attention enabling streaming capability\n- Both the audio encoder as well as the LLM backbone use sliding window attention allowing for \"infinite\" streaming\n- For more details, refer to the [technical report](https://arxiv.org/abs/2602.11298)\n\n![Voxtral-Realtime Architecture](https://raw.githubusercontent.com/sanchit-gandhi/notebooks/refs/heads/main/voxtral-realtime.jpeg)\n\nThe Voxtral Mini 4B Realtime model offers the following capabilities:\n- **High-Quality Transcription**: Transcribe audio to text with confidence.\n- **Multilingual**: Supports dozens of languages, making it perfect for multilingual transcription tasks.\n- **Real-Time**: Fast streaming ASR model, enabling real-time transcription use cases.\n- **Configurable Transcription Delays**: Customize the transcription delay to balance quality and latency, from 80ms to 2.4s.\n\n### Use Cases\n**Real-Time Transcription Purposes:**\n- Private meeting transcriptions\n- Live subtitle creation\n- Real-time assistants with speech understanding\n- And more\n\nBringing real-time transcription capabilities to all.\n\n### Recommended Settings\n\nWe recommend deploying with the following best practices:\n- Always set the temperature to 0.0\n- A single text-token is worth 80ms. Hence, make sure to set your `--max-model-len` accordingly. To live-record a 1h meeting, you need to set `--max-model-len >= 3600 / 0.8 = 45000`.\n  In theory, you should be able to record with no limit; in practice, pre-allocations of RoPE parameters among other things limits `--max-model-len`.\n  For the best user experience, we recommend to simply instantiate vLLM with the default parameters which will automatically set a maximum model length of 131072 (~ca. 3h).\n- We strongly recommend using websockets to set up audio streaming sessions. For more info on how to do so, check [Usage](#usage).\n- We recommend using a delay of 480ms as we found it to be the sweet spot of performance and low latency. If, however, you want to adapt the delay, you can change the `\"transcription_delay_ms\": 480` parameter\n  in the [tekken.json](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602/blob/main/tekken.json) file to any multiple of 80ms between 80 and 1200, as well as 2400 as a standalone value.\n\n## Benchmark Results\n\nWe compare Voxtral Mini 4B Realtime to similar models - both offline models and realtime.\nVoxtral Mini 4B Realtime is competitive to leading offline models and shows significant gains over existing open-source realtime solutions.\n\n### Fleurs\n\n| Model                                   | Delay       | AVG     | Arabic | German | English | Spanish | French | Hindi  | Italian | Dutch | Portuguese | Chinese | Japanese | Korean | Russian |\n|-----------------------------------------|-------------|---------|--------|--------|---------|---------|--------|--------|---------|-------|------------|---------|----------|--------|---------|            \n| Voxtral Mini Transcribe 2.0             | Offline     | 5.90%   | 13.54% | 3.54%  | 3.32%   | 2.63%   | 4.32%  | 10.33% | 2.17%   | 4.78% | 3.56%      | 7.30%   | 4.14%    | 12.29% | 4.75%   | \n| **Voxtral Mini 4B Realtime 2602**       | 480 ms      | 8.72%   | 22.53% | 6.19%  | 4.90%   | 3.31%   | 6.42%  | 12.88% | 3.27%   | 7.07% | 5.03%      | 10.45%  | 9.59%    | 15.74% | 6.02%   |\n|                                         |             |         |        |        |         |         |        |        |         |       |            |         |          |        |         |\n|                                         | 160 ms      | 12.60%  | 24.33% | 9.50%  | 6.46%   | 5.34%   | 9.75%  | 15.28% | 5.59%   | 11.39%| 10.01%     | 17.67%  | 19.17%   | 19.81% | 9.53%   |\n|                                         | 240 ms      | 10.80%  | 23.95% | 8.15%  | 5.91%   | 4.59%   | 8.00%  | 14.26% | 4.41%   | 9.23% | 7.51%      | 13.84%  | 15.17%   | 17.56% | 7.87%   |\n|                                         | 960 ms      | 7.70%   | 20.32% | 4.87%  | 4.34%   | 2.98%   | 5.68%  | 11.82% | 2.46%   | 6.76% | 4.57%      | 8.99%   | 6.80%    | 14.90% | 5.56%   |\n|                                         | 2400 ms     | 6.73%   | 14.71% | 4.15%  | 4.05%   | 2.71%   | 5.23%  | 10.73% | 2.37%   | 5.91% | 3.93%      | 8.48%   | 5.50%    | 14.30% | 5.41%   |\n\n### Long-form English\n\n| Model                              | Delay  | Meanwhile (<10m) | E-21 (<10m) | E-22 (<10m) | TEDLIUM (<20m) |\n| ---------------------------------- | ------ | ---------------- | ----------- | ----------- | -------------- |\n| Voxtral Mini Transcribe 2.0        | Offline| 4.08%            | 9.81%       | 11.69%      | 2.86%          |\n| **Voxtral Mini 4B Realtime 2602**  | 480ms  | 5.05%            | 10.23%      | 12.30%      | 3.17%          |\n\n\n### Short-form English\n\n| Model                              | Delay  | CHiME-4 | GigaSpeech 2k Subset | AMI IHM | SwitchBoard | CHiME-4 SP | GISpeech 2k Subset |\n| ---------------------------------- | ------ | ------- | -------------------- | ------- | ----------- | ---------- | ------------------ | \n| Voxtral Mini Transcribe 2.0        | Offline | 10.39%  | 6.81%               | 14.43%  | 11.54%      | 10.42% | 1.74% |\n| **Voxtral Mini 4B Realtime 2602**  | 480ms  | 10.50%  | 7.35%                | 15.05%  | 11.65%      | 12.41% | 1.73% |\n\n## Usage\n\nThe model can also be deployed with the following libraries:\n- [`vllm (recommended)`](https://github.com/vllm-project/vllm): See [here](#vllm-recommended)\n- [`transformers`](https://github.com/huggingface/transformers): See [here](#transformers)\n- [`executorch` (untested)](https://github.com/pytorch/executorch/tree/main/examples/models/voxtral_realtime): See [here](#executorch-untested)\n  \n- *Community Contributions*: See [here](#community-contributions-untested)\n\n### vLLM (recommended)\n\n> [!Tip]\n> We've worked hand-in-hand with the vLLM team to have production-grade support for Voxtral Mini 4B Realtime 2602 with vLLM.\n> Special thanks goes out to [Joshua Deng](https://github.com/joshuadeng), [Yu Luo](https://github.com/ErickLuo90), [Chen Zhang](https://github.com/heheda12345), [Nick Hill](https://github.com/njhill), [Nicolò Lucchesi](https://github.com/NickLucche), [Roger Wang](https://github.com/ywang96), and [Cyrus Leung](https://github.com/DarkLight1337)\n> for the amazing work and help on building a production-ready audio streaming and realtime system in vLLM.\n\n> [!Warning]\n> Due to its novel architecture, Voxtral Realtime is currently only support in vLLM. We very much welcome community contributions\n> to add the architecture to [Transformers](https://github.com/huggingface/transformers) and [Llama.cpp](https://github.com/ggml-org/llama.cpp).\n\nWe've worked hand-in-hand with the vLLM team to have production-grade support for Voxtral Mini 4B Realtime 2602 with vLLM.\n[vLLM](https://github.com/vllm-project/vllm)'s [new Realtime API](https://docs.vllm.ai/en/latest/serving/openai_compatible_server/?h=realtime#realtime-api) is perfectly suited to \nrun audio streaming sessions with the model.\n\n#### Installation\n\nMake sure to install [vllm](https://github.com/vllm-project/vllm) from the nightly pypi package. \nSee [here](https://docs.vllm.ai/en/latest/getting_started/installation/) for a full installation guide.\n\n```\nuv pip install -U vllm\n```\n\nDoing so should automatically install [`mistral_common >= 1.9.0`](https://github.com/mistralai/mistral-common/releases/tag/v1.9.0).\n\nTo check:\n```\npython -c \"import mistral_common; print(mistral_common.__version__)\"\n```\n\nYou can also make use of a ready-to-go [docker image](https://github.com/vllm-project/vllm/blob/main/docker/Dockerfile) or on the [docker hub](https://hub.docker.com/layers/vllm/vllm-openai/nightly/images/sha256-6ae33f5001ab9d32346ce2c82c660fe57021c4f0c162ed0c60b843319829b810).\n\nMake sure to also install all required audio processing libraries:\n\n```\nuv pip install soxr librosa soundfile\n```\n\nAlso we recommend using Transformers v5 as v4 can clutter the terminal with unnecessary warnings (see [here](https://github.com/vllm-project/vllm/issues/34642))\n\n```\nuv pip install --upgrade transformers\n```\n\n#### Serve\n\nDue to size and the BF16 format of the weights - `Voxtral-Mini-4B-Realtime-2602` can run on a single GPU with >= 16GB memory.\n\nThe model can be launched in both \"eager\" mode:\n\n```bash\nVLLM_DISABLE_COMPILE_CACHE=1 vllm serve mistralai/Voxtral-Mini-4B-Realtime-2602 --compilation_config '{\"cudagraph_mode\": \"PIECEWISE\"}'\n```\n\nAdditional flags:\n* You can set `--max-num-batched-tokens` to balance throughput and latency, higher means higher throughput but higher latency.\n* You can reduce the default `--max-model-len` to allocate less memory for the pre-computed RoPE frequencies,\n  if you are certain that you won't have to transcribe for more than X hours. By default the model uses a `--max-model-len` of 131072 (> 3h).\n\n#### Client\n\nAfter serving `vllm`, you should see that the model is compatible with `vllm's` new realtime endpoint:\n```\n...\n(APIServer pid=3246965) INFO 02-03 17:04:43 [launcher.py:58] Route: /v1/realtime, Endpoint: realtime_endpoint\n...\n```\n\nWe have added two simple example files that allow you to:\n- [Stream audio files](https://docs.vllm.ai/en/latest/examples/online_serving/openai_realtime_client/?h=realtime#openai-realtime-client)\n- [Simple gradio live transcription demo](https://docs.vllm.ai/en/latest/examples/online_serving/openai_realtime_microphone_client/#openai-realtime-microphone-client)\n\n[![Screenshot 2026-02-03 at 18.30.08](https://cdn-uploads.huggingface.co/production/uploads/5dfcb1aada6d0311fd3d5448/STM6r9lsL8_NRmS3bcZ9x.png)](https://huggingface.co/spaces/mistralai/Voxtral-Mini-Realtime)\n\n**To try out a demo, click [here](https://huggingface.co/spaces/mistralai/Voxtral-Mini-Realtime)**\n\n### Transformers\n\nStarting with `transformers >= 5.2.0`, you can run Voxtral Realtime natively in Transformers!\n\nFor more details, refer to the [Transformers documentation](https://huggingface.co/docs/transformers/main/en/model_doc/voxtral_realtime).\n\n#### Installation\n\nInstall Transformers:\n\n```bash\npip install --upgrade transformers\n```\n\nMake sure to have `mistral-common` installed with audio dependencies:\n\n```bash\npip install --upgrade \"mistral-common[audio]\"\n```\n\n#### Usage\n\n```python\nfrom transformers import VoxtralRealtimeForConditionalGeneration, AutoProcessor\nfrom mistral_common.tokens.tokenizers.audio import Audio\nfrom huggingface_hub import hf_hub_download\n\nrepo_id = \"mistralai/Voxtral-Mini-4B-Realtime-2602\"\n\nprocessor = AutoProcessor.from_pretrained(repo_id)\nmodel = VoxtralRealtimeForConditionalGeneration.from_pretrained(repo_id, device_map=\"auto\")\n\nrepo_id = \"patrickvonplaten/audio_samples\"\naudio_file = hf_hub_download(repo_id=repo_id, filename=\"bcn_weather.mp3\", repo_type=\"dataset\")\n\naudio = Audio.from_file(audio_file, strict=False)\naudio.resample(processor.feature_extractor.sampling_rate)\n\ninputs = processor(audio.audio_array, return_tensors=\"pt\")\ninputs = inputs.to(model.device, dtype=model.dtype)\n\noutputs = model.generate(**inputs)\ndecoded_outputs = processor.batch_decode(outputs, skip_special_tokens=True)\n\nprint(decoded_outputs[0])\n```\n\n### ExecuTorch (Untested)\n\n> [!Warning]\n> Running Voxtral-Realtime on-device with ExecuTorch is not throughly tested and hence\n> there might be some sharp edges. If you encounter any problems, please file a bug report directly on\n> [ExecuTorch's GitHub](https://github.com/pytorch/executorch/issues/new/choose)\n\n[ExecuTorch](https://github.com/pytorch/executorch) enables you to deploy **Voxtral-Realtime** locally—either on-device or on your laptop.\n\nFor a quick, offline demo on your MacBook, check out [Voxtral-Mini-4B-Realtime-2602-ExecuTorch](https://huggingface.co/mistral-labs/Voxtral-Mini-4B-Realtime-2602-ExecuTorch).\n\nTo deploy **Voxtral-Realtime** in a custom environment or on any device, refer to the [Official Readme](https://github.com/pytorch/executorch/blob/main/examples/models/voxtral_realtime/README.md).\n\n> [!Tip]\n> If you're looking for an implementation that is purely written in C,\n> we recommend to take a look at [voxtral.c](https://github.com/antirez/voxtral.c)\n\n\n### Community Contributions (Untested)\n\nVoxtral Realtime integrations in:\n- [Pure C](https://github.com/antirez/voxtral.c) - thanks [Salvatore Sanfilippo](https://github.com/antirez)\n- [mlx-audio framework](https://github.com/Blaizzy/mlx-audio) - thanks [Shreyas Karnik](https://github.com/shreyaskarnik)\n- [MLX](https://github.com/awni/voxmlx) - thanks [Awni Hannun](https://github.com/awni)\n- [Rust](https://github.com/TrevorS/voxtral-mini-realtime-rs) - thanks [TrevorS](https://github.com/TrevorS)\n\n## License\n\nThis model is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt).\n\n*You must not use this model in a manner that infringes, misappropriates, or otherwise violates any third party’s rights, including intellectual property rights.*\n",
+      "arxiv_ids": [
+        "2602.11298"
+      ],
+      "datasets": [],
+      "base_models": [
+        "mistralai/Voxtral-Mini-4B-Realtime-2602"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio llm",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Infinix-io/Audio8-TTS-Realistic-Air",
+      "author": "Infinix-io",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arktts",
+        "feature-extraction",
+        "audio",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot",
+        "multilingual",
+        "custom_code",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "ru",
+        "ar",
+        "fi",
+        "hi",
+        "id",
+        "ms",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "sv",
+        "th",
+        "tr",
+        "vi",
+        "yue",
+        "arxiv:2610.14776",
+        "base_model:Edge0/Audio8-TTS-Preview-0.6b",
+        "base_model:finetune:Edge0/Audio8-TTS-Preview-0.6b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Infinix-io/Audio8-TTS-Realistic-Air",
+      "card_text": "",
+      "arxiv_ids": [
+        "2610.14776"
+      ],
+      "datasets": [],
+      "base_models": [
+        "Edge0/Audio8-TTS-Preview-0.6b"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Abhay2310/laghu-tts-7m-hindi",
+      "author": "Abhay2310",
+      "created_at": "2026-11-07",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "pocket-tts",
+        "text-to-speech",
+        "tts",
+        "hindi",
+        "streaming",
+        "on-device",
+        "cpu",
+        "voice-cloning",
+        "hi",
+        "dataset:ai4bharat/Rasa",
+        "dataset:ai4bharat/indicvoices_r",
+        "arxiv:2607.18662",
+        "arxiv:2509.06926",
+        "arxiv:2410.00037",
+        "arxiv:2409.05356",
+        "arxiv:2205.12446",
+        "arxiv:2111.03945",
+        "arxiv:2203.16512",
+        "arxiv:2305.13516",
+        "base_model:kyutai/pocket-tts",
+        "base_model:finetune:kyutai/pocket-tts",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 58,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "onnx",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/Abhay2310/laghu-tts-7m-hindi",
+      "card_text": "",
+      "arxiv_ids": [
+        "2607.18662",
+        "2509.06926",
+        "2410.00037",
+        "2409.05356",
+        "2205.12446",
+        "2111.03945",
+        "2203.16512",
+        "2305.13516"
+      ],
+      "datasets": [
+        "ai4bharat/Rasa",
+        "ai4bharat/indicvoices_r"
+      ],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "chenzs/VoxCPM2",
+      "author": "chenzs",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "multilingual",
+        "voice-cloning",
+        "voice-design",
+        "diffusion",
+        "audio",
+        "zh",
+        "en",
+        "ar",
+        "my",
+        "da",
+        "nl",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "he",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lo",
+        "ms",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sw",
+        "sv",
+        "tl",
+        "th",
+        "tr",
+        "vi",
+        "arxiv:2509.24650",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/chenzs/VoxCPM2",
+      "card_text": "",
+      "arxiv_ids": [
+        "2509.24650"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "chenzs/IndexTTS-2.5-Complete",
+      "author": "chenzs",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "indextts",
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "zero-shot",
+        "voice-cloning",
+        "multilingual",
+        "cross-lingual",
+        "emotion-controllable",
+        "zh",
+        "en",
+        "ja",
+        "es",
+        "ar",
+        "arxiv:2601.03888",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "indextts",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/chenzs/IndexTTS-2.5-Complete",
+      "card_text": "",
+      "arxiv_ids": [
+        "2601.03888"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "HoppouAI/Breeze-TTS-2.cpp",
+      "author": "HoppouAI",
+      "created_at": "2026-08-28",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gguf",
+        "text-to-speech",
+        "tts",
+        "ggml",
+        "vulkan",
+        "voice-cloning",
+        "voice-conversion",
+        "en",
+        "zh",
+        "base_model:BreezeBlue/Breeze-TTS-2",
+        "base_model:quantized:BreezeBlue/Breeze-TTS-2",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 1015828,
+      "likes": 43,
+      "trending_score": 0.0,
+      "library_name": "gguf",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/HoppouAI/Breeze-TTS-2.cpp",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "BreezeBlue/Breeze-TTS-2"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other",
+        "community likes 43"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "t8star/Drama-3-Comfy",
+      "author": "t8star",
+      "created_at": "2026-10-15",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "comfyui",
+        "onnx",
+        "safetensors",
+        "gguf",
+        "drama3",
+        "audio",
+        "text-to-speech",
+        "voice-cloning",
+        "fp8",
+        "w4a8",
+        "t8star",
+        "zh",
+        "en",
+        "base_model:fishaudio/drama-3",
+        "base_model:quantized:fishaudio/drama-3",
+        "license:other",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 242,
+      "likes": 4,
+      "trending_score": 0.0,
+      "library_name": "comfyui",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/t8star/Drama-3-Comfy",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "fishaudio/drama-3"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "DRVEXO-LLM/drvexo-4b-unified",
+      "author": "DRVEXO-LLM",
+      "created_at": "2026-11-07",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "drvexo-unified",
+        "safetensors",
+        "drvexo_speech_qwen35_4b",
+        "multimodal",
+        "vision-language",
+        "speech",
+        "text-to-speech",
+        "voice-cloning",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 63,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "drvexo-unified",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/DRVEXO-LLM/drvexo-4b-unified",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "AfriSpeech/africa-tts",
+      "author": "AfriSpeech",
+      "created_at": "2026-11-06",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "onnx",
+        "safetensors",
+        "gguf",
+        "text-to-speech",
+        "african-languages",
+        "ipa",
+        "voice-cloning",
+        "ada",
+        "aha",
+        "ajg",
+        "am",
+        "amh",
+        "bas",
+        "bci",
+        "bem",
+        "bin",
+        "bsq",
+        "bum",
+        "cce",
+        "cjk",
+        "dnj",
+        "dga",
+        "din",
+        "dua",
+        "dyu",
+        "en",
+        "eng",
+        "ee",
+        "ewe",
+        "ewo",
+        "fat",
+        "aka",
+        "ak",
+        "fon",
+        "gaa",
+        "gur",
+        "guw",
+        "gxx",
+        "ha",
+        "hau",
+        "hz",
+        "her",
+        "ig",
+        "ibo",
+        "iso",
+        "kab",
+        "kam",
+        "kbp",
+        "kea",
+        "ki",
+        "kik",
+        "rw",
+        "kin",
+        "kmb",
+        "kri",
+        "kss",
+        "leh",
+        "ln",
+        "lin",
+        "lom",
+        "lu",
+        "lub",
+        "lue",
+        "lg",
+        "lug",
+        "lun",
+        "mer",
+        "mfe",
+        "mgh",
+        "mg",
+        "mlg",
+        "mos",
+        "naq",
+        "nba",
+        "ng",
+        "ndo",
+        "ngb",
+        "ngl",
+        "nnb",
+        "nse",
+        "nso",
+        "ny",
+        "nya",
+        "nzi",
+        "pov",
+        "rng",
+        "rn",
+        "run",
+        "sg",
+        "sag",
+        "seh",
+        "sfw",
+        "shr",
+        "sn",
+        "sna",
+        "sop",
+        "ss",
+        "ssw",
+        "swh",
+        "swa",
+        "sw",
+        "ti",
+        "tir",
+        "tiv",
+        "tll",
+        "tog",
+        "toh",
+        "toi",
+        "tsc",
+        "ts",
+        "tso",
+        "tui",
+        "tum",
+        "tw",
+        "twi",
+        "umb",
+        "urh",
+        "ve",
+        "ven",
+        "vmw",
+        "wo",
+        "wol",
+        "xh",
+        "xho",
+        "xpe",
+        "yao",
+        "yo",
+        "yor",
+        "zu",
+        "zul",
+        "multilingual",
+        "base_model:kyutai/pocket-tts",
+        "base_model:quantized:kyutai/pocket-tts",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 13,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/AfriSpeech/africa-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "amarosilva/OmniVoice-PT-GGUF",
+      "author": "amarosilva",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gguf",
+        "ggml",
+        "text-to-speech",
+        "tts",
+        "portuguese",
+        "voice-cloning",
+        "omnivoice",
+        "higgs-audio-2",
+        "pt",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:quantized:k2-fsa/OmniVoice",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/amarosilva/OmniVoice-PT-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "borisbat/dasllama-tts",
+      "author": "borisbat",
+      "created_at": "2026-09-03",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "dasllama",
+        "gguf",
+        "daslang",
+        "kittentts",
+        "kokoro",
+        "styletts2",
+        "pocket-tts",
+        "voice-cloning",
+        "text-to-speech",
+        "en",
+        "ru",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "fr",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 955,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "dasllama",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/borisbat/dasllama-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Infinix-io/kitten-tts-2",
+      "author": "Infinix-io",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "gguf",
+        "text-to-speech",
+        "voice-cloning",
+        "multilingual",
+        "license:other",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 182,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Infinix-io/kitten-tts-2",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "laion/Humanness-Voice-Podcast",
+      "author": "laion",
+      "created_at": "2026-11-07",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "moss_tts_local",
+        "feature-extraction",
+        "podcast",
+        "multi-speaker",
+        "voice-cloning",
+        "expressive-speech",
+        "custom-code",
+        "research",
+        "text-to-speech",
+        "custom_code",
+        "en",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "base_model:laion/Humaneness-Voice-Large-1.7",
+        "base_model:finetune:laion/Humaneness-Voice-Large-1.7",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 81,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/laion/Humanness-Voice-Podcast",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "laion/Humaneness-Voice-Large-1.7"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "INGMUYLEANG/VoxPocket-v4",
+      "author": "INGMUYLEANG",
+      "created_at": "2026-11-06",
+      "last_modified": "2026-11-08",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "voxcpm",
+        "safetensors",
+        "khmer",
+        "tts",
+        "text-to-speech",
+        "voice-cloning",
+        "code-mixing",
+        "km",
+        "en",
+        "dataset:INGMUYLEANG/voxpocket-khmer-tts-v4",
+        "base_model:openbmb/VoxCPM1.5",
+        "base_model:finetune:openbmb/VoxCPM1.5",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 59,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "voxcpm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/INGMUYLEANG/VoxPocket-v4",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "INGMUYLEANG/voxpocket-khmer-tts-v4"
+      ],
+      "base_models": [
+        "openbmb/VoxCPM1.5"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
