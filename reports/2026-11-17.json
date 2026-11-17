@@ -1,0 +1,1095 @@
+{
+  "generated_at": "2026-11-17",
+  "window_start": "2026-11-10",
+  "source_counts": {
+    "arxiv": 39,
+    "semantic_scholar": 62
+  },
+  "errors": [
+    "arXiv / Audio & Speech Language Models: HTTP Error 429: Unknown Error",
+    "arXiv / Generative Music & Audio: HTTP Error 429: Unknown Error",
+    "arXiv / Audio Understanding & Reasoning: The read operation timed out"
+  ],
+  "papers": [
+    {
+      "source": "arxiv",
+      "source_id": "2611.18112",
+      "title": "Any Channel Count, One Token Stream: Incorporating Spatial Audio Understanding and Reasoning into Large Audio-Language Models",
+      "abstract": "Audio phase relations encode source locations, yet existing large audio-language models (LALM) reduce audio to single-channel content to stabilise general audio understanding, leaving spatial information for direction, distance, and source-relation questions unused. We present SpheraAudio, which accepts recordings with any channel count -- mono, stereo, First-Order Ambisonics (FOA), or higher -- and maps them into a single token stream. A spatial encoder turns complex multichannel spectra into spatial tokens interleaved with audio tokens at corresponding temporal positions. Spatial Multimodal RoPE (SMRoPE) makes each token's modality identity and temporal slot visible to rotary attention without altering the language model's original RoPE. Training runs in three stages -- spatial-encoder pretraining, projector alignment, and joint supervised-and-reinforcement learning -- progressing from geometric supervision to language-based spatial decisions, with answers trained as explicit spatial chain-of-thought: step-by-step geometric reasoning over the heard scene. Current benchmarks tie questions to a fixed channel-count format and score answers without spatial reasoning evidence. We introduce SpheraQA, which spans mono, stereo, and FOA recordings and organises questions hierarchically from single-attribute perception through cross-source relations to multi-step reasoning, scored programmatically against simulated scene geometry and real-recording annotations with step-by-step solution references. Across SpheraQA and public spatial-audio benchmarks, SpheraAudio sets a new performance standard for spatial audio understanding. It supports high-precision localisation, tracking, and reasoning over static and moving sound sources while preserving strong general-audio capabilities. We will release code, SpheraQA, and evaluation metrics to support reproducibility.",
+      "authors": [
+        "Yuhuan You",
+        "Wenxiang Guo",
+        "Zhifang Guo",
+        "Yuxuan Wang",
+        "Jin Xu"
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.18112",
+      "pdf_url": "https://arxiv.org/pdf/2611.18112v1",
+      "doi": "",
+      "venue": "27 pages, 5 figures. Code: https://github.com/Konoyo-014/SpheraQA. Dataset: https://modelscope.cn/datasets/Konoyo/SpheraQA. Paper experiments use the 20,492-question SpheraQA version; the public release contains 22,197 questions",
+      "categories": [
+        "cs.SD"
+      ],
+      "code_urls": [
+        "https://github.com/Konoyo-014/SpheraQA"
+      ],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 27,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "audio_understanding_reasoning": 10,
+        "evaluation_alignment_safety": 5
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model",
+        "Audio Understanding & Reasoning: audio understanding",
+        "Evaluation, Alignment, Safety & Copyright: audio benchmark",
+        "has open-source code link"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "2611.17644",
+      "title": "CoTTAGE: An Explainable Judge for Text-to-Audio Generation",
+      "abstract": "Rapid progress in text-to-audio (TTA) generation demands reliable and explainable automatic evaluation. However, existing metrics fail to simultaneously deliver high correlation with human judgments and meaningful, audio-grounded explanations, forcing reliance on labor-intensive human evaluation that bottlenecks model development iteration. To address this, we propose CoTTAGE, a reasoning-based evaluator for text relevance (REL) and audio quality (OVL). Following a reason-then-predict paradigm, CoTTAGE first generates an audio-grounded rationale to diagnose errors before predicting scores. Supported by over 10K newly collected human OVL annotations, CoTTAGE is first trained via supervised fine-tuning and then refined with reinforcement learning using a Thurstone-based preference objective that converts sampled score distributions into pairwise preference probabilities and rewards agreement with rankings derived from human judgments. Across six benchmarks spanning REL and OVL, CoTTAGE achieves state-of-the-art correlation with human judgments while producing human-preferred explanations to accelerate TTA development.",
+      "authors": [
+        "Yu-Xiang Lin",
+        "Yun-Man Hsu",
+        "Bo-Ru Lu",
+        "Kuan-Po Huang",
+        "Wen-Ze Ren",
+        "Ming-To Chuang",
+        "Chun-Yi Kuan",
+        "Jia-Wei Du",
+        "Byeonggeun Kim",
+        "Qing-Ming Tang",
+        "Chieh-Chi Kao",
+        "Ankur Gandhe",
+        "Chao Wang",
+        "Hung-Yi Lee"
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.17644",
+      "pdf_url": "",
+      "doi": "",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 24,
+      "topic_scores": {
+        "generative_music_audio": 24
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: audio generation, text-to-audio"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "5fffd685ea4d7bc34d3616a116dacf4c2c2fd8e2",
+      "title": "The Cost of Being Out of Sync: How Voice Realism and Lip-Sync Quality Shape Trust and Perception of Virtual Humans",
+      "abstract": "Advancements in artificial intelligence (AI) and virtual human (VH) technologies have enabled highly realistic digital agents, raising users’ expectations for natural interaction. This study investigated how voice-generation realism and lip-sync quality influence user perception and trust in a photorealistic VH. The VH was developed in Unreal Engine using photogrammetry data captured from a real person. The same individual was used to create a professional voice clone in ElevenLabs, enabling consistent audiovisual representations. Next, a within-subjects 2 × 2 experiment involving 167 participants was conducted to compare the commonly used speech synthesis and lip-sync technology (Microsoft Azure) with higher-fidelity voice cloning and facial animation systems (ElevenLabs Professional Voice Cloning and Runtime MetaHuman Lip Sync). Participants evaluated videos of the same VH across four audiovisual conditions varying in voice realism and lip-sync quality. Results showed that the high-fidelity Runtime MetaHuman lip-sync system significantly increased perceived humanness, human-like appearance and behavior, user acceptance, and trust, while reducing perceived eeriness. In contrast, differences between the cloned and synthetic voices were smaller and less consistent. Interaction effects revealed that voice-related differences were primarily noticeable when lip-sync quality was low. Overall, the findings highlight the importance of audiovisual alignment and lip-sync quality in shaping user perception and trust in highly realistic VHs.",
+      "authors": [
+        "Samer Al Hussban",
+        "Nick van Apeldoorn",
+        "A. van Buggenum",
+        "Niels Voskens",
+        "M. Alimardani"
+      ],
+      "published": "2026-11-16",
+      "updated": "2026-11-16",
+      "url": "https://www.semanticscholar.org/paper/5fffd685ea4d7bc34d3616a116dacf4c2c2fd8e2",
+      "pdf_url": "https://doi.org/10.1145/3841580.3841614",
+      "doi": "10.1145/3841580.3841614",
+      "venue": "",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, voice cloning"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "Jakevin/ACE-Step1.5-Qwen3.5-0.8B-MLX",
+      "author": "Jakevin",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "mlx",
+        "diffusers",
+        "safetensors",
+        "qwen3_5",
+        "apple-silicon",
+        "music-generation",
+        "text-to-music",
+        "ace-step",
+        "gated-deltanet",
+        "audio-planner",
+        "text-to-audio",
+        "en",
+        "base_model:Qwen/Qwen3.5-0.8B-Base",
+        "base_model:finetune:Qwen/Qwen3.5-0.8B-Base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Jakevin/ACE-Step1.5-Qwen3.5-0.8B-MLX",
+      "card_text": "---\nlicense: apache-2.0\nbase_model: Qwen/Qwen3.5-0.8B-Base\nlibrary_name: mlx\npipeline_tag: text-to-audio\nlanguage:\n  - en\ntags:\n  - mlx\n  - apple-silicon\n  - music-generation\n  - text-to-music\n  - ace-step\n  - qwen3_5\n  - gated-deltanet\n  - audio-planner\n---\n\n# ACE-Step 1.5 — Qwen3.5-0.8B 5Hz Planner (MLX) + All-in-One Renderer Bundle\n\nExperimental out-of-the-box text-to-music bundle (`Jakevin/ACE-Step1.5-Qwen3.5-0.8B-MLX`) for **Apple Silicon Macs**. It pairs an experimental **Qwen3.5-0.8B** (`18 GatedDeltaNet + 6 full-attention` layers) 5Hz semantic-audio planner in **MLX** (`bf16` main checkpoint, `S-lr3e5-best-bf16`) with the unmodified official **ACE-Step 1.5** rendering stack (`acestep-v15-turbo` DiT, 48 kHz Oobleck `vae`, and `Qwen3-Embedding-0.6B` text encoder) under `./checkpoints/`, so a single command generates a `.wav` file offline with no extra model downloads.\n\n> **Important Status Notice:** This is an **experimental research checkpoint** selected strictly by lowest validation masked cross-entropy (`6.933546922`). On raw `dev-100` decoding, **the official `ACE-Step/acestep-5Hz-lm-0.6B` baseline is faster (`5.71 s` vs. `7.96 s`), achieves higher strict validity (`100/100` vs. `97/100`), and scores higher on CLAP (`0.3451` vs. `0.2832` / `0.2920`)**. Overall quality evaluation remains **`INCOMPLETE`**. Because the raw 0.8B student exhibits lower audio-code diversity (`0.4326` mean unique ratio) and can collapse into late-sequence single-code loops on longer tracks, `generate.py` **enables inference-time anti-repeat post-processing by default** (disable via `--no-antirepeat`). See [Anti-Repeat Decoding (Default On)](#anti-repeat-decoding-default-on), [Evaluation (`dev-100`)](#evaluation-dev-100), and [Limitations](#limitations) before use.\n\n---\n\n## Quickstart (3-Step Fresh Virtual Environment)\n\nRequires **macOS on Apple Silicon (`arm64`)** and **Python 3.12** (`>=3.11,<3.13`):\n\n```bash\npython3.12 -m venv .venv && source .venv/bin/activate\npip install -r requirements.txt\npip install --no-deps mlx-lm==0.32.2\n```\n\n*(Note: `mlx-lm==0.32.2` provides the `qwen3_5` GatedDeltaNet architecture while `--no-deps` preserves `transformers==4.57.6` required by official `ace-step==1.5.0`.)*\n\n### One-Line Generation Examples\n\nGenerate a 30-second English vocal track (anti-repeat enabled by default; offline-ready once the environment is installed):\n\n```bash\npython generate.py --prompt \"upbeat indie synth-pop, pulsing analog bass, crisp drums, bright synth hooks, warm female vocals\" --lyrics \"[Verse 1]\\nMorning light across the avenue\\nEvery shadow turns to gold with you\\n[Chorus]\\nRun into the open sky tonight\\nChasing echoes in the neon light\" --duration 30 --out vocal_30s.wav\n```\n\nGenerate a 30-second instrumental track:\n\n```bash\npython generate.py --prompt \"cinematic acoustic guitar and warm strings, gentle fingerpicking, peaceful autumn atmosphere, instrumental\" --lyrics \"[Instrumental]\" --duration 30 --out instrumental_30s.wav\n```\n\nDisable anti-repeat post-processing to reproduce exact raw model decoding (bit-identical audio codes to the unpenalized planner for the same seed and parameters):\n\n```bash\npython generate.py --no-antirepeat --prompt \"cinematic acoustic guitar and warm strings, gentle fingerpicking, peaceful autumn atmosphere, instrumental\" --lyrics \"[Instrumental]\" --duration 30 --seed 42 --out instrumental_raw_30s.wav\n```\n\n---\n\n## Anti-Repeat Decoding (Default On)\n\nIn raw Stage-2 sampling, this distilled 0.8B planner can occasionally fall into repetitive short cycles or single-code stutters on longer durations (e.g., `60–120 s`). `generate.py` therefore enables an **inference-time anti-repeat post-processing and quality-gate pipeline by default** during Stage-2 5Hz audio-code generation (`Stage-1` `<think>...</think>` YAML CoT decoding is unchanged).\n\n### Stage-2 Per-Step Sampling Order\n\nAt each Stage-2 audio-code step (`step_i` in `0 .. 5 * duration - 1`), `generate.py` applies operations in strict order:\n\n1. **CFG Merge:** `step_logits = uncond + cfg_scale * (cond - uncond)` (when `--cfg-scale > 1.0`).\n2. **Audio-Code Vocabulary Mask:** Restrict valid tokens strictly to `<|audio_code_0|> .. <|audio_code_63999|>` (`-1e9` outside the 64,000 audio codes; `<|im_end|>` forced once `5 * duration` codes are emitted).\n3. **Windowed Penalties, N-Gram Blocking & Late Temperature Schedule:**\n   - **Windowed Repetition / Frequency / Presence Penalties** over the **last `40` generated codes** (`8.0 s` at `5 Hz`): multiplicative/divisive repetition penalty `1.2`, additive frequency penalty `0.25 * count`, and flat presence penalty `0.15`.\n   - **Windowed 8-Gram Blocking** over the **last `80` generated codes** (`16.0 s` at `5 Hz`): forbids repeating any `8`-gram (`1.6 s` span; `max_count = 1`, setting the completion logit to `-1e9`).\n   - **Late-Sequence Linear Temperature Ramp:** holds `--temperature` (`0.85`) through the first `40%` of audio-code steps, then linearly increases effective temperature from `0.85` to `1.05` (`--temperature-late`) over the remaining `60%` of the sequence.\n4. **Log-Softmax & Top-p Nucleus Sampling:** `log_softmax` followed by nucleus sampling (`--top-p 0.9`).\n\n### Quality Gate & Definition of \"Best\" Attempt\n\nAfter generating the full sequence of `5 * duration` audio codes, `generate.py` evaluates three repetition quality-gate thresholds:\n\n- **Overall Unique Code Ratio:** `unique_code_ratio >= 0.58`\n- **Second-Half 8-Gram Repeat Rate:** `late_ngram_repeat_ratio <= 0.50` (fraction of `8`-grams in the second half of the track that already appeared in the first half)\n- **Longest Contiguous Periodic Cycle:** `longest_cycle_frac <= 0.30` (longest immediately repeating cycle of period `1..64` codes divided by total code count)\n\nIf an attempt fails any of these three thresholds, `generate.py` re-runs the planner with a deterministic stepped seed (`seed + 100 * regen_index`) for **at most `--max-regen 3` total attempts** (`seed`, `seed + 100`, `seed + 200`), stopping immediately on the first attempt that passes all three thresholds.\n\n**How the \"best\" attempt is selected:**\n1. Any valid attempt that passes all three quality-gate thresholds (`passed_thresholds = true`) takes priority over attempts that do not, and terminates the retry loop immediately.\n2. If all `--max-regen` attempts fail at least one threshold, `generate.py` keeps the valid attempt with the highest composite **`quality_score`**:\n\n```text\nquality_score = unique_code_ratio\n              + 0.25 * late_unique_code_ratio\n              + 0.25 * ngram8_unique_ratio\n              - 0.60 * late_ngram_repeat_ratio\n              - 0.60 * longest_cycle_frac\n```\n\nWhen `--save-meta-json <path>` is supplied (and in the JSON summary printed to `stdout`), `generate.py` records `repetition_metrics`, `quality_score`, `passed_thresholds`, `regen_attempts` (with each attempt's `seed`, `passed_thresholds`, `metrics`, and `quality_score`), and the full `audio_codes` integer array.\n\n### CLI Anti-Repeat Flags & Defaults\n\n| CLI Flag | Default | Description |\n|---|---:|---|\n| `--no-antirepeat` (`--antirepeat-off`) | `False` (enabled) | Disable all anti-repeat penalties, temperature ramp, and quality-gate retries; behaves identically to original raw `generate.py` |\n| `--repetition-penalty` | `1.2` | Multiplicative/divisive repetition penalty within `--penalty-window` (`1.0` disables) |\n| `--frequency-penalty` | `0.25` | Additive penalty per code occurrence within `--penalty-window` (`0.0` disables) |\n| `--presence-penalty` | `0.15` | Flat additive penalty for any code present within `--penalty-window` (`0.0` disables) |\n| `--penalty-window` | `40` | Lookback window in audio codes (`40` codes = `8.0 s` at `5 Hz`; `0` = full history) |\n| `--no-repeat-ngram` | `8` | N-gram size blocked from repeating within `--no-repeat-ngram-window` (`0` disables) |\n| `--no-repeat-ngram-window` | `80` | Lookback window in audio codes for n-gram blocking (`80` codes = `16.0 s` at `5 Hz`; `0` = full history) |\n| `--no-repeat-ngram-max-count` | `1` | Max occurrences of an n-gram allowed in the window before masking to `-1e9` (`1` = forbid repeats) |\n| `--temperature` | `0.85` | Base planner temperature (Stage-1 CoT and first `40%` of Stage-2 audio codes) |\n| `--temperature-late` | `1.05` | Target temperature at the end of Stage-2 generation (set equal to `--temperature` to disable ramp) |\n| `--temperature-late-start-frac` | `0.40` | Generation progress fraction (`0.40` = `40%`) where the linear temperature ramp starts |\n| `--unique-code-ratio-min` | `0.58` | Quality-gate minimum overall unique audio-code ratio |\n| `--late-ngram-size` | `8` | N-gram size used for `late_ngram_repeat_ratio` |\n| `--late-ngram-repeat-max` | `0.50` | Quality-gate maximum second-half n-gram repeat ratio |\n| `--longest-cycle-frac-max` | `0.30` | Quality-gate maximum fraction of codes covered by a contiguous periodic loop |\n| `--max-regen` | `3` | Maximum total planner attempts across stepped seeds (`seed`, `seed+100`, `seed+200`) |\n| `--save-meta-json` | `None` | Save full run metadata JSON (including `repetition_metrics`, `regen_attempts`, and `audio_codes`) |\n| `--save-codes-json` | `None` | Optional path to save `{audio_codes, audio_codes_str, n_codes}` as a standalone JSON |\n| `--skip-render` | `False` | Run Stage-A MLX planner only without loading DiT/VAE |\n\n### Illustrative Single-Example Diagnostic (`lyrical_ballad`, `81 s`, Seed `1507723155`)\n\n> **Disclaimer:** The table below shows a **single illustrative diagnostic case (`N = 1`)** from downstream 24/7 chiptune radio testing where raw decoding suffered catastrophic single-code collapse; **it is NOT a formal benchmark evaluation**.\n\nSettings: `lyrical_ballad` (`--prompt \"gentle 8-bit chiptune, nostalgic lyrical film-score ballad, square wave melody, soft arpeggios, warm pastoral, wistful, 90 bpm, retro game console sound\" --instrumental --bpm 90 --timesignature 4 --duration 81 --seed 1507723155`, `405` audio codes at `5 Hz`):\n\n| Mode | Seed Used (`regen_used`) | Unique Codes / Total (`unique_code_ratio`) | Late Unique Ratio | Late 8-Gram Repeat Ratio | Longest Cycle Run (`longest_cycle_frac`) | `quality_score` | Behavior Summary |\n|---|---|---:|---:|---:|---:|---:|---|\n| Raw decoding (`--no-antirepeat`) | `1507723155` (`1`) | `14 / 405` (**`0.035`** / `0.0346`) | `0.0049` | `1.0000` | `375` codes (**`0.9259`**, `period=1` from code index `30`) | `-1.1009` | Starting at code index `30` (`~6 s`), collapsed onto audio code `40443` for `375` consecutive codes |\n| Default anti-repeat | `1507723155` (`1`) | `359 / 405` (**`0.886`** / `0.8864`) | `0.9754` | `0.0000` | `0` codes (**`0.0000`**) | `+1.3803` | Passed all thresholds on initial seed (`0.035 → 0.886` unique ratio), zero 8-gram repeats or cyclic runs |\n\n---\n\n## Hardware & System Requirements\n\n- **Platform:** Apple Silicon Mac (`M1` / `M2` / `M3` / `M4`, `arm64`) running macOS with Metal / MPS enabled.\n- **Unified Memory:** `16 GB` minimum recommended (`generate.py` unloads the `~1.64 GB` MLX planner before loading the ACE-Step DiT/VAE renderer; benchmark numbers below were measured on an Apple M4 Pro with `64 GB` unified memory).\n- **Disk Space:** `~7.7 GB` for repository weights + `~2.5 GB` for the Python virtual environment.\n- **Python:** `3.12` (`>=3.11,<3.13`).\n\n---\n\n## Bundle Layout\n\n- **Repository root (`.`):** Fused MLX 5Hz composer checkpoint (`model.safetensors` with `284 BF16` + `36 F32` GatedDeltaNet tensors, `config.json`, `tokenizer.json`, `tokenizer_config.json`, `chat_template.jinja`, `export_meta.json`, `selection.json`, `transplant_meta.json`), `generate.py`, `requirements.txt`, `LICENSE` (Apache-2.0), `LICENSE-ACE-Step` (ACE-Step 1.5 MIT License full text), and `NOTICE`.\n- **`./checkpoints/`:** Official ACE-Step 1.5 renderer directories (`acestep-v15-turbo/`, `vae/`, `Qwen3-Embedding-0.6B/`, `config.json`) in the native layout expected by `acestep`, requiring zero runtime Hugging Face downloads (`HF_HUB_OFFLINE=1` compatible).\n\n---\n\n## Evaluation (`dev-100`)\n\n> **Important Note on `dev-100` Scores vs. Default Anti-Repeat:** All `dev-100` evaluation results in the tables below are **raw model decoding outputs WITHOUT anti-repeat enabled** (equivalent to `--no-antirepeat`, `max_retries = 0`). The anti-repeat penalties, late temperature ramp, and quality-gate regeneration in `generate.py` are **inference-time post-processing heuristics** and **have NOT been formally re-evaluated on the same `dev-100` benchmark**.\n\nAll metrics below are taken directly from the pre-registered single-shot constrained `dev-100` evaluation (`50` English CC0 vocal prompts + `50` `[Instrumental]` prompts across `30–120 s`, `max_retries = 0`, Stream-A constrained decoding with `temperature = 0.85`, `top_p = 0.9`, `cfg_scale = 2.0`, no anti-repeat penalties, and 8-step `acestep-v15-turbo` `strict_planner` rendering on an Apple M4 Pro with `64 GB` RAM).\n\n### Checkpoint Selection (12-Point `dev-100` Masked CE Grid)\n\n| Eligible `bf16` Student | Selected Step | Selected Epoch | Raw `dev-100` Masked CE |\n|---|---:|---:|---:|\n| **This model (`S-lr3e5-best-bf16`, `lr = 3e-5`)** | **975** | **3** | **6.933546922** |\n| Previous student (`S-best-bf16`, `lr = 1e-4`) | 325 | 1 | 6.955565437 |\n\n`S-lr3e5-best-bf16` was selected solely by the frozen CE-first rule (`-0.022018514` lower masked CE vs. the `lr = 1e-4` student). Lower validation CE **did not** translate into superior downstream audio metrics.\n\n### Downstream Audio & Latency Comparison (`dev-100`, Raw Decoding Without Anti-Repeat)\n\n| Model Arm (`bf16`) | Strict Valid | CLAP (All 100¹) | CLAP (Valid Only) | Mean Code Entropy (`bits`) / Unique Ratio | Mean LM Time (`s/prompt`) | Derived LM + Render (`s/valid track`²) |\n|---|---:|---:|---:|---:|---:|---:|\n| **This model (`S-lr3e5-best-bf16`, step 975)** | **97/100** | **0.2832** (`0.283249`) | **0.2920** (`0.292009`, `N=97`) | **4.5837** / **0.4326** | **7.96 s** (`7.9631`) | **25.09 s** (`25.0901`) |\n| Previous student (`S-best-bf16`, `lr=1e-4`, step 325) | 100/100 | 0.2953 (`0.295278`) | 0.2953 (`0.295278`, `N=100`) | 4.7526 / 0.4769 | 7.65 s (`7.6489`) | 24.75 s (`24.7532`) |\n| Teacher (`T-bf16`, ACE-Step 1.7B) | 100/100 | 0.3311 (`0.331114`) | 0.3311 (`0.331114`, `N=100`) | 8.1718 / 0.9306 | 14.33 s (`14.3272`) | 31.51 s (`31.5113`) |\n| Official 0.6B (`B-0.6B-official`, `acestep-5Hz-lm-0.6B`) | 100/100 | 0.3451 (`0.345059`) | 0.3451 (`0.345059`, `N=100`) | 8.1403 / 0.9194 | **5.71 s** (`5.7105`) | **22.82 s** (`22.8227`) |\n\n¹ Failed strict renders receive the pre-registered CLAP value `0.0`.\n² Arithmetic aggregate: mean LM generation time plus batch DiT+VAE rendering wall time divided by valid rendered tracks.\n\n### Paired `ΔCLAP` Differences (10,000-Resample Bootstrap, Exploratory)\n\n| Comparison (`S-lr3e5-best-bf16` minus Reference) | `ΔCLAP` Mean | Exploratory 95% CI |\n|---|---:|---|\n| vs. Previous student (`S-best-bf16`) | `-0.012029` | `[-0.033552, +0.009861]` |\n| vs. Teacher (`T-bf16`) | `-0.047865` | `[-0.075600, -0.020870]` |\n| vs. Official 0.6B (`B-0.6B-official`) | `-0.061810` | `[-0.090213, -0.034635]` |\n\nAgainst `T-bf16`, this model fails 4 of the 5 pre-registered numerical non-inferiority checks (`F/F/F/F/T`: strict validity `0.97 < 0.98`, uncalibrated Whisper v2 WER/CER upper bounds `+0.310824 / +0.301368` above `+0.020 / +0.015`, CLAP lower bound `-0.075600 < -0.010`, CoT duration match `0.97 < 0.98`; passing only standalone LM latency `-44.42%` vs. `T-bf16`).\n\n---\n\n## Limitations\n\n1. **Experimental Checkpoint (Not Superior to Official 0.6B):** `B-0.6B-official` (`ACE-Step/acestep-5Hz-lm-0.6B`) is faster (`5.71 s` vs. `7.96 s`), uses less memory, has higher single-shot strict validity (`100/100` vs. `97/100`), higher raw code diversity (`8.1403` vs. `4.5837` bits), and higher CLAP (`0.3451` vs. `0.2832`).\n2. **Anti-Repeat Post-Processing Not Formally Benchmarked on `dev-100`:** Default anti-repeat penalties and quality-gate retries mitigate code-collapse symptoms at inference time, but their downstream impact on `dev-100` CLAP, ASR WER/CER, and mean wall-clock latency has not been formally evaluated.\n3. **Single Training Seed:** Trained with a single seed (`seed = 42`) on `2,600` teacher-sampled trajectories (`975` optimizer steps); cross-seed stability is not established.\n4. **Exploratory `dev-100` Only (`test-300` Untouched):** Two learning rates (`1e-4` and `3e-5`) were evaluated on `dev-100`; the held-out `test-300` split has not been evaluated.\n5. **No Human Listening Tests or Calibrated ASR (`INCOMPLETE` Quality Gate):** Automated Whisper v2 metrics are uncalibrated diagnostics only, and no independent human transcription calibration or blind listening tests (MUSHRA / preference) have been performed.\n6. **English & Instrumental Only (Multilingual Unverified):** Distilled strictly on English CC0 vocal prompts and `[Instrumental]` prompts (`30–120 s`). Multilingual lyric planning has not been trained or verified.\n7. **Inference-Only Fused Export:** LoRA adapters and expanded embedding rows are permanently fused (`resumable = false`), retaining `36 F32` GatedDeltaNet recurrent tensors alongside `284 BF16` tensors.\n\n---\n\n## License, Sources & Attribution\n\n- **Planner Base Model (`Qwen/Qwen3.5-0.8B-Base`) & Bundled Text Encoder (`Qwen/Qwen3-Embedding-0.6B`):** Licensed under **Apache License 2.0** (`Copyright 2026 Alibaba Cloud`). Full license text is included in [`LICENSE`](./LICENSE) and modification notices in [`NOTICE`](./NOTICE).\n- **Bundled ACE-Step 1.5 Renderer (`./checkpoints/acestep-v15-turbo`, `./checkpoints/vae`, `./checkpoints/config.json`) & Upstream Runtime:**\n  - Weights source: [`https://huggingface.co/ACE-Step/Ace-Step1.5`](https://huggingface.co/ACE-Step/Ace-Step1.5) at commit `19671f406d603126926c1b7e2adc169acbcade22` (ACE Studio and StepFun; model card and README declare **MIT**).\n  - Runtime & synced dynamic DiT module code source: [`https://github.com/ace-step/ACE-Step-1.5`](https://github.com/ace-step/ACE-Step-1.5) at commit `ca1e85fe9430179831e6bc6be790c332190a3866` (`MIT License`, `Copyright (c) 2026 ACEStep`; dynamic module headers carry `Apache-2.0`).\n  - Transparency note: As documented in [`NOTICE`](./NOTICE), the upstream `ACE-Step/Ace-Step1.5` Hugging Face repository declares `MIT` via its model card/README without a standalone root `LICENSE` file (nor a separate license file inside its `acestep-5Hz-lm-1.7B` teacher directory); the full MIT License text (`Copyright (c) 2026 ACEStep`) is included in [`LICENSE-ACE-Step`](./LICENSE-ACE-Step) and also reproduced in [`NOTICE`](./NOTICE), taken from the official `ace-step/ACE-Step-1.5` GitHub repository.\n- **Companion GGUF Repository (`BF16` & `Q8_0` for `llama.cpp` / `llama-cpp-python`):** [`Jakevin/ACE-Step1.5-Qwen3.5-0.8B-GGUF`](https://huggingface.co/Jakevin/ACE-Step1.5-Qwen3.5-0.8B-GGUF).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3.5-0.8B-Base"
+      ],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Jayanth-MKV/Haru-4B-GGUF",
+      "author": "Jayanth-MKV",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "gguf",
+        "qwen3_5_text",
+        "speech",
+        "full-duplex",
+        "speech-to-speech",
+        "haru",
+        "quantized",
+        "qwen3_5",
+        "audio-to-audio",
+        "en",
+        "es",
+        "pt",
+        "de",
+        "fr",
+        "zh",
+        "ja",
+        "ru",
+        "ko",
+        "base_model:higurashi-ai/Haru-4B",
+        "base_model:quantized:higurashi-ai/Haru-4B",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Jayanth-MKV/Haru-4B-GGUF",
+      "card_text": "---\nbase_model: higurashi-ai/Haru-4B\nlanguage:\n- en\n- es\n- pt\n- de\n- fr\n- zh\n- ja\n- ru\n- ko\npipeline_tag: audio-to-audio\ntags:\n- speech\n- full-duplex\n- speech-to-speech\n- haru\n- gguf\n- quantized\n- qwen3_5\nlicense: apache-2.0\n---\n\n# Haru-4B GGUF (Quantized)\n\n[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jayanth-MKV/Haru-4B-GGUF/blob/main/Haru_4B_Colab_Kaggle.ipynb)\n\nThis repository provides **GGUF quantized weights** and extracted FP16 audio modules for **[higurashi-ai/Haru-4B](https://huggingface.co/higurashi-ai/Haru-4B)**, the open-weight continuous full-duplex spoken dialogue foundation model.\n\n## 🚀 Interactive Google Colab Notebook\nTry out this quantized release and launch the live spoken dialogue web portal for free on a Google Colab T4 GPU:\n👉 **[Open `Haru_4B_Colab_Kaggle.ipynb` in Colab](https://colab.research.google.com/github/Jayanth-MKV/Haru-4B-GGUF/blob/main/Haru_4B_Colab_Kaggle.ipynb)**\n\n---\n\n## 🔬 Model Architecture & Quantization Strategy\nHaru-4B is a full-duplex Listening-while-Speaking Language Model (LSLM) operating at **7.5 Hz (133.33 ms frame budget)**. \n\nTo enable CPU and low-VRAM deployment without compromising voice fidelity, this release applies a **hybrid quantization approach**:\n- **Language Model Backbone:** `Qwen3.5-4B` extracted and quantized to **GGUF Q4_K_M** (compressed from 8.4 GB down to **2.6 GB**).\n- **Audio Codec (VibeVoice):** Preserved in **FP16** (~1.3 GB) to maintain causal convolution quality and avoid metallic static artifacts.\n- **Audio Generation Head (MeanFlow):** Preserved in **FP16** (~694 MB) for 1-step continuous ODE flow-matching sampling.\n\n## 📦 Repository Contents\n\n| File | Format | Size | Description |\n| :--- | :--- | :--- | :--- |\n| `qwen-haru-q4_k_m.gguf` | GGUF Q4_K_M | **2.6 GB** | 4-bit medium quantized Qwen3.5 language model backbone |\n| `vibevoice-codec-f16.safetensors` | Safetensors FP16 | **1.3 GB** | Causal 1D convolution VibeVoice acoustic tokenizer |\n| `meanflow-head-f16.safetensors` | Safetensors FP16 | **694 MB** | 4-layer 1-step MeanFlow ODE audio generation head |\n| `config.json` | JSON | ~2 KB | Model hyperparameter configuration |\n| `tokenizer.json` | JSON | ~20 MB | Qwen tokenizer vocabulary (248,320 tokens) |\n| `Haru_4B_Colab_Kaggle.ipynb` | Jupyter Notebook | ~7 KB | Turnkey Colab/Kaggle notebook to test GGUF & launch voice portal |\n\n## 🛠️ Usage with llama.cpp\n\nThe quantized language model backbone can be run directly with [llama.cpp](https://github.com/ggml-org/llama.cpp):\n\n```bash\n# Run inference on CPU (4 threads)\n./llama-cli -m qwen-haru-q4_k_m.gguf -p \"Hello! Let's talk.\" -n 64 -t 4\n\n# Run inference on GPU (-ngl 99 offloads all 32 layers to VRAM)\n./llama-cli -m qwen-haru-q4_k_m.gguf -p \"Hello! Let's talk.\" -n 128 -ngl 99\n```\n\n## 📜 Citation & Credits\nOriginal base model and architecture developed by **higurashi-ai**:\n- Official Repository: [github.com/higurashi-ai/Haru](https://github.com/higurashi-ai/Haru)\n- Base Model: [higurashi-ai/Haru-4B](https://huggingface.co/higurashi-ai/Haru-4B)\n- License: Apache-2.0\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "higurashi-ai/Haru-4B"
+      ],
+      "variants": [],
+      "score": 32,
+      "topic_scores": {
+        "generative_music_audio": 5,
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "Generative Music & Audio: audio generation",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "FireH2O/MrJMThaiTTS_CT",
+      "author": "FireH2O",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "safetensors",
+        "thai",
+        "voice-cloning",
+        "text-to-speech",
+        "th",
+        "dataset:pythainlp/som_tts_dataset",
+        "dataset:CMKL/Porjai-Thai-voice-dataset-central",
+        "dataset:airesearch/thai-ser",
+        "arxiv:2604.27607",
+        "base_model:kyutai/pocket-tts",
+        "base_model:finetune:kyutai/pocket-tts",
+        "license:cc-by-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "cc-by-sa-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/FireH2O/MrJMThaiTTS_CT",
+      "card_text": "",
+      "arxiv_ids": [
+        "2604.27607"
+      ],
+      "datasets": [
+        "pythainlp/som_tts_dataset",
+        "CMKL/Porjai-Thai-voice-dataset-central",
+        "airesearch/thai-ser"
+      ],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license cc-by-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "HAizelf/speecht5_tts_voxpopuli_nl",
+      "author": "HAizelf",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "speecht5",
+        "text-to-audio",
+        "generated_from_trainer",
+        "text-to-speech",
+        "nl",
+        "dataset:facebook/voxpopuli",
+        "base_model:microsoft/speecht5_tts",
+        "base_model:finetune:microsoft/speecht5_tts",
+        "license:mit",
+        "model-index",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/HAizelf/speecht5_tts_voxpopuli_nl",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "facebook/voxpopuli"
+      ],
+      "base_models": [
+        "microsoft/speecht5_tts"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "fotiecodes/turaco-csm-tts-wes-1b",
+      "author": "fotiecodes",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "csm",
+        "text-to-audio",
+        "sesame",
+        "cameroon-pidgin",
+        "common-voice",
+        "lora",
+        "research",
+        "turaco",
+        "text-to-speech",
+        "wes",
+        "base_model:unsloth/csm-1b",
+        "base_model:finetune:unsloth/csm-1b",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/fotiecodes/turaco-csm-tts-wes-1b",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "unsloth/csm-1b"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mradermacher/Volt-TTS-GGUF",
+      "author": "mradermacher",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "gguf",
+        "text-to-speech",
+        "tts",
+        "indic",
+        "voice-cloning",
+        "multilingual",
+        "kn",
+        "hi",
+        "ta",
+        "te",
+        "ml",
+        "mr",
+        "bn",
+        "gu",
+        "pa",
+        "or",
+        "as",
+        "ne",
+        "ur",
+        "sa",
+        "ks",
+        "sd",
+        "kok",
+        "mai",
+        "mni",
+        "brx",
+        "doi",
+        "sat",
+        "bho",
+        "mag",
+        "hne",
+        "base_model:openarcane/Volt-TTS",
+        "base_model:quantized:openarcane/Volt-TTS",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/mradermacher/Volt-TTS-GGUF",
+      "card_text": "---\nbase_model: openarcane/Volt-TTS\nlanguage:\n- kn\n- hi\n- ta\n- te\n- ml\n- mr\n- bn\n- gu\n- pa\n- or\n- as\n- ne\n- ur\n- sa\n- ks\n- sd\n- kok\n- mai\n- mni\n- brx\n- doi\n- sat\n- bho\n- mag\n- hne\nlibrary_name: transformers\nlicense: apache-2.0\nmradermacher:\n  readme_rev: 1\nquantized_by: mradermacher\ntags:\n- text-to-speech\n- tts\n- indic\n- voice-cloning\n- multilingual\n---\n## About\n\n<!-- ### quantize_version: 2 -->\n<!-- ### output_tensor_quantised: 1 -->\n<!-- ### convert_type: hf -->\n<!-- ### vocab_type:  -->\n<!-- ### tags:  -->\n<!-- ### quants:  x-f16 Q4_K_S Q2_K Q8_0 Q6_K Q3_K_M Q3_K_S Q3_K_L Q4_K_M Q5_K_S Q5_K_M IQ4_XS -->\n<!-- ### quants_skip:  -->\n<!-- ### skip_mmproj:  -->\nstatic quants of https://huggingface.co/openarcane/Volt-TTS\n\n<!-- provided-files -->\n\n***For a convenient overview and download list, visit our [model page for this model](https://hf.tst.eu/model#Volt-TTS-GGUF).***\n\nweighted/imatrix quants seem not to be available (by me) at this time. If they do not show up a week or so after the static ones, I have probably not planned for them. Feel free to request them by opening a Community Discussion.\n## Usage\n\nIf you are unsure how to use GGUF files, refer to one of [TheBloke's\nREADMEs](https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF) for\nmore details, including on how to concatenate multi-part files.\n\n## Provided Quants\n\n(sorted by size, not necessarily quality. IQ-quants are often preferable over similar sized non-IQ quants)\n\n| Link | Type | Size/GB | Notes |\n|:-----|:-----|--------:|:------|\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.mmproj-Q8_0.gguf) | mmproj-Q8_0 | 0.6 | multi-modal supplement |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q2_K.gguf) | Q2_K | 0.8 |  |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.mmproj-f16.gguf) | mmproj-f16 | 0.8 | multi-modal supplement |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q3_K_S.gguf) | Q3_K_S | 0.9 |  |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q3_K_M.gguf) | Q3_K_M | 1.0 | lower quality |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q3_K_L.gguf) | Q3_K_L | 1.0 |  |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.IQ4_XS.gguf) | IQ4_XS | 1.1 |  |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q4_K_S.gguf) | Q4_K_S | 1.1 | fast, recommended |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q4_K_M.gguf) | Q4_K_M | 1.2 | fast, recommended |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q5_K_S.gguf) | Q5_K_S | 1.4 |  |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q5_K_M.gguf) | Q5_K_M | 1.4 |  |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q6_K.gguf) | Q6_K | 1.6 | very good quality |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.Q8_0.gguf) | Q8_0 | 2.0 | fast, best quality |\n| [GGUF](https://huggingface.co/mradermacher/Volt-TTS-GGUF/resolve/main/Volt-TTS.f16.gguf) | f16 | 3.8 | 16 bpw, overkill |\n\nHere is a handy graph by ikawrakow comparing some lower-quality quant\ntypes (lower is better):\n\n![image.png](https://www.nethype.de/huggingface_embed/quantpplgraph.png)\n\nAnd here are Artefact2's thoughts on the matter:\nhttps://gist.github.com/Artefact2/b5f810600771265fc1e39442288e8ec9\n\n## FAQ / Model Request\n\nSee https://huggingface.co/mradermacher/model_requests for some answers to\nquestions you might have and/or if you want some other model quantized.\n\n## Thanks\n\nI thank my company, [nethype GmbH](https://www.nethype.de/), for letting\nme use its servers and providing upgrades to my workstation to enable\nthis work in my free time.\n\n<!-- end -->\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "openarcane/Volt-TTS"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Igor282/qwen3-tts-12hz-1.7b-ru-pruned-enru-Q4_K_M",
+      "author": "Igor282",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "qwentts.cpp",
+        "gguf",
+        "qwen3-tts",
+        "text-to-speech",
+        "voice-cloning",
+        "voice-design",
+        "tokenizer-pruning",
+        "russian",
+        "quantization",
+        "ru",
+        "en",
+        "base_model:Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "base_model:quantized:Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "qwentts.cpp",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Igor282/qwen3-tts-12hz-1.7b-ru-pruned-enru-Q4_K_M",
+      "card_text": "---\nlicense: apache-2.0\nbase_model:\n  - Qwen/Qwen3-TTS-12Hz-1.7B-Base\n  - Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign\n  - siriusfreak/qwen3-tts-12hz-1.7b-ru-stress-cf\nlibrary_name: qwentts.cpp\npipeline_tag: text-to-speech\nquantization: Q4_K_M\nlanguage:\n  - ru\n  - en\ntags:\n  - gguf\n  - qwen3-tts\n  - text-to-speech\n  - voice-cloning\n  - voice-design\n  - tokenizer-pruning\n  - russian\n  - quantization\n---\n\n# Qwen3-TTS 1.7B · RU (stress) · Q4_K_M — 1.11 ГБ · голос по записи\n\n**Русская голосовая TTS: текст на входе, речь на выходе. Голос задаётся короткой записью\n(клон по 3 секунды), ударения ставит по меткам U+0301 в тексте.** Сборка Qwen3-TTS-12Hz-1.7B-Base\nс русским стресс-дообучением, текстовый словарь ужат на 23.7 %, квант Q4_K_M — **1.11 ГБ**,\nцеликом в видеопамять от 4 ГБ, RTF ≈ 0.19–0.21 на RTX 3060 Laptop (1 минута озвучки за ~12 с).\n\n```\nТекстовый словарь: 151 936 → 116 000 токенов   (−23.7%)\nПараметров вырезано: 73.6M\nРазмер Q4_K_M: 1 219 245 248 B → 1 157 193 440 B   (−5.1%)\nСловарь аудиокодека (3072), code-predictor, attention/FFN: не тронуты\nВыход: 24 kHz mono WAV, 12.5 кадров/с (1 кадр = 80 мс)\n```\n\n> ### 🔹 Голос по текстовому описанию — **не умеет**\n>\n> Это сборка варианта **Base**. По официальной таблице Qwen у Base колонка\n> «Instruction Control» пустая: голос берётся **только из записи-референса**\n> (`--ref-wav`, 3 секунды достаточно), текстовым описанием («молодая, низкий тембр,\n> усталая») он не задаётся.\n>\n> | Нужен | Какая модель |\n> |---|---|\n> | голос по записи (клон) | **эта сборка** (Base) |\n> | голос по текстовому описанию | `Qwen3-TTS-12Hz-1.7B-VoiceDesign` — отдельная модель, `--instruct` |\n> | готовые тембры (9 шт.) + управление стилем инструкцией | `Qwen3-TTS-12Hz-1.7B-CustomVoice` — отдельная модель |\n>\n> В рантайме это видно напрямую: `--instruct` на этой сборке отклоняется.\n> Голос из описания всё равно можно получить — **цепочкой из двух моделей**, см. раздел\n> «Голос из описания — цепочкой». Файл VoiceDesign в кванте Q4_K_M лежит **в этом же\n> репозитории**, отдельно его скачивать не нужно.\n>\n> Ударения: модель ставит их **по знаку U+0301 после ударной гласной** в тексте\n> («за́мок», «замо́к»), включая случаи против словаря. Без меток читает по словарю.\n\n---\n\n## Что изменено относительно оригинала\n\nИзменён **только текстовый словарь** и одна матрица — `talker.text_embd.weight`. Из словаря\nвырезаны письменности, не используемые в русско-английском тексте (CJK, корейский, арабский,\nиврит, деванагари, тайский и т. п.).\n\n| | Текстовый словарь | Словарь аудиокодека |\n|---|---|---|\n| Размер | 151 936 → **116 000** строк | 3072 — **не тронут** |\n| Что в нём живёт | `im_start/im_end`, `tts_bos/tts_eos/tts_pad`, BPE-куски текста | `codec_bos/eos/pad`, `think*`, `language_ids` |\n| Прунинг | да, −23.7 % | нет |\n\nПрунинг **lossless для русского и английского**: special- и байтовые токены целые, все токены\nрусско-английского корпуса сохранены, замыкание по merges соблюдено, сегментация корпуса\nстарым и новым токенизатором совпадает токен-в-токен (расхождений 0). Поэтому веса не\nпереобучались и переучивания не требуется. Байтовый фолбэк целая — любой редкий символ\nостаётся достижимым, просто дороже по токенам.\n\nСлужебные id после remap: `<|endoftext|>` = 115 967, `<|im_start|>` = 115 968,\n`<|im_end|>` = 115 969, `tts_pad` = 115 995, `tts_bos` = 115 996, `tts_eos` = 115 997.\n\n---\n\n## Числа приёмки\n\nОдин пайплайн, один seed (42), один референсный голос (женский, 3 с), `--lang Russian`.\nКонтроль — та же модель без прунинга, тем же командным вызовом.\n\n| Текст | CER контроль | CER эта сборка | Кадры до EOS | Длина звука |\n|---|---|---|---|---|\n| Длинный рассказ (181 слово) | 4.06 % | **4.06 %** | 1108 / 1108 | 88.64 с / 88.64 с |\n| Перечень стресс-пар (123 слова) | 13.81 % | **13.81 %** | 913 / 913 | 73.04 с / 73.04 с |\n| 12 размеченных фраз (U+0301, омографы) | — | — | 48…84 / те же | 3.84…6.72 с / те же |\n\n**Вывод побитово идентичен контролю**: WAV-пары совпали по MD5 (100 % семплов, maxdiff 0),\nостановка по EOS на тех же кадрах. Ужатие словаря поведение модели не изменило.\n\nПроверка на **тексте с метками ударений** (12 фраз по 1–2 омографа: «За́мок стои́т на холме́,\nа ма́стер почини́л замо́к в двери́.», а́тлас/атла́с, му́ки/мука́, ча́сы/часы́, сто́ит/стои́т,\nпа́ря/пари́т, о́браз/обра́з, зе́мля/земля́, пи́ла/пила́, ка́ша/каша́, сы́р/сыро́в, до́ма/дома́) —\n**12 фраз из 12 совпали с контролем побитово**, EOS на тех же кадрах (48…84). Проверено и в\nauto, и с `--lang Russian`. На ударениях прунинг не сказался.\n\nCER — faster-whisper `small` (CUDA, compute_type int8, `language=\"ru\"`), расстояние по\nсимволам до эталонного текста, очищенного от меток U+0301 и пунктуации. У автора базового\nстресс-дообучения метрика снималась моделью `large-v3-turbo` — его 2.9 % и наши 4.06 %\nне одна и та же линейка.\n\n> **`--lang Russian` влияет на разбор.** Тот же текст, тот же seed, та же модель:\n>\n> | режим | перечень стресс-пар | CER |\n> |---|---|---|\n> | `--lang` не задан (auto) | 364 кадра, 29.12 с | 57.06 % |\n> | `--lang Russian` | 913 кадров, 73.04 с | **13.81 %** |\n>\n> В auto-режиме модель на плотном перечне слов без синтаксиса бросает читать список на\n> середине. С явным языком дочитывает его целиком. Контроль ведёт себя точно так же,\n> идентичность pruned/контроль сохраняется в обоих режимах.\n\n---\n\n## Запуск\n\n**Работает только в [qwentts.cpp](https://github.com/ServeurpersoCom/qwentts.cpp)** — форке\nllama.cpp для Qwen3-TTS. В llama.cpp эти GGUF не запускаются: архитектура `qwen3-tts` идёт с\nдвумя потоками (talker + code-predictor) и внешним кодеком.\n\n```powershell\n.\\qwen-tts.exe `\n  --model  .\\qwen-talker-1.7b-base-ru-pruned-Q4_K_M.gguf `\n  --codec  .\\qwen-tokenizer-12hz-Q8_0.gguf `\n  --ref-wav .\\my_voice.wav `\n  --lang Russian `\n  --seed 42 `\n  -o out.wav `\n  < text.txt\n```\n\n* `--ref-wav` — запись целевого голоса (короткая, чистая, 24 kHz). Тембр и манера берутся из неё.\n* `--lang Russian` — задавать явно (см. рамку в разделе приёмки: на перечне слов CER\n  57.06 % → 13.81 %).\n* `--seed <int>` — детерминированный вывод; по умолчанию сэмплирование (`temp 0.9`,\n  `top_k 50`, `top_p 1.0`, repetition 1.05).\n* `--greedy` — argmax. **На длинном тексте не останавливается:** доходит до потолка\n  `--max-new` (2048 кадров = 163.84 с) без EOS. То же и в контроле — свойство базовой\n  модели. Для длинного текста — сэмплирование с seed и/или `--max-new`.\n* `--max-new <кадров>` — потолок длины (по умолчанию 2048 ≈ 164 с звука).\n* `--instruct` на этой сборке отклоняется (см. раздел про голос).\n* `--device CPU` работает, RTF ≈ 1.2–1.5 на 8 потоках.\n\n### Скорость (замер, RTX 3060 Laptop 6 ГБ, кодек Q8_0)\n\n| | CUDA | CPU |\n|---|---|---|\n| RTF (сэмплирование) | **0.19–0.21** | 1.22–1.47 |\n| мс на кадр (12.5 кадров/с) | 13.1–14.4 | 56–67 |\n| первый кадр (TTFA) | 60–140 мс | 0.65–3.4 с |\n| prefill промпта | 28–90 мс | 0.6–3.3 с |\n| старт процесса (загрузка моделей) | 2.0 с | 2.1 с |\n| VRAM | ~1.4 ГБ | — |\n\nКороткая фраза 13.4 с озвучивается за 2.5 с вместе с загрузкой; 88.6 с текста — за 18 с.\nОсновная стоимость кадра — не talker (6.8 с на 1108 кадров), а code-predictor (9.1 с);\nдекод аудиокодека — 1.9 с, ~11 % времени.\n\n### Голос из описания — цепочкой из двух моделей\n\nОдним запуском совмещить описание голоса и озвучку нельзя: режим читается из `model_type`\nвнутри GGUF, и флаги несовместимы (`--instruct` отвергается на Base, `--ref-wav` требует\nBase). Поэтому два последовательных шага, **оба файла — из этого репозитория**:\n\n```powershell\n# шаг 1: голос из текстового описания — модель VoiceDesign (не эта сборка)\n.\\qwen-tts.exe `\n  --model .\\qwen-talker-1.7b-voicedesign-Q4_K_M.gguf `\n  --codec .\\qwen-tokenizer-12hz-Q8_0.gguf `\n  --instruct \"female, teenage girl, very high pitch, bright shrill youthful voice\" `\n  --lang Russian -o voice.wav `\n  < sample.txt\n\n# шаг 2: озвучка нужного текста этим файлом, голос — из шага 1\n.\\qwen-tts.exe `\n  --model .\\qwen-talker-1.7b-base-ru-pruned-Q4_K_M.gguf `\n  --codec .\\qwen-tokenizer-12hz-Q8_0.gguf `\n  --ref-wav .\\voice.wav `\n  --lang Russian --seed 42 -o out.wav `\n  < text.txt\n```\n\nЗамер на 3060: шаг 1 — 2.5 с (12.6 с звука), шаг 2 — 18 с (88.6 с звука). Голос из шага 1\nможно сохранить и использовать многократно, тогда останется один шаг.\n\nФайл VoiceDesign — **оригинальный**, без ужатия словаря (151 936) и без русского\nстресс-дообучения: он отвечает только за тембр по описанию. Ударения по меткам U+0301\nчитает шаг 2, то есть эта сборка.\n\n---\n\n## Что умеет и что сломалось\n\n**Работает как раньше:**\n- русский текст с метками ударений (по замерам автора базового дообучения: 100 % попадания по\n  знаку на словарной гласной, 96 % там, где знак стоит против словаря; CER 2.9 % на обычном\n  тексте с разметкой RUAccent);\n- английский — цел (латиница в словаре сохранена);\n- клон голоса по записи, детерминированный режим по seed, стриминг по строкам\n  (`--stream-by-line`);\n- аудиокодек, code-predictor, attention/FFN talker'а — не тронуты.\n\n**Ухудшилось — и это цель:**\n- генерация на вырезанных письменностях (китайский, японский, корейский, арабский, иврит,\n  деванагари, тайский и т. п.): модель их не произнесёт своими токенами, уйдёт в byte-fallback;\n- редкая юникод-матрица вне Latin/Cyrillic — аналогично.\n\n**Честные ограничения:**\n1. Голос по текстовому описанию **эта сборка не делает** — нужен файл VoiceDesign, он лежит\n   здесь же, цепочка из двух шагов расписана выше.\n2. Прунинг **не улучшает дикцию**: он даёт −5.1 % размера и убирает байты на письменности,\n   которые в русско-английском тексте не встречаются. Качество речи = качество базового\n   стресс-чекпойнта.\n3. Модель не дообучалась после ужатия словаря (lossless → переучивание не требуется).\n4. «Встроенного голоса» в файле нет: звучание определяется записью-референсом.\n5. `--greedy` на длинном тексте не останавливается (см. «Запуск»).\n\n---\n\n## Файлы\n\n| Файл | Байт | Что это |\n|---|---|---|\n| `qwen-talker-1.7b-base-ru-pruned-Q4_K_M.gguf` | 1 157 193 440 | **target**: talker Base, Q4_K_M, текстовый словарь 116 000 — озвучка по записи-референсу |\n| `qwen-talker-1.7b-voicedesign-Q4_K_M.gguf` | 1 182 630 816 | **голос по текстовому описанию** (`--instruct`), Q4_K_M, словарь 151 936 — для шага 1 цепочки, файл без изменений |\n| `qwen-tokenizer-12hz-Q8_0.gguf` | 291 150 624 | **аудиокодек** (talker выдаёт коды, звук делает он) — без изменений, без него не запустить |\n| `qwen-talker-1.7b-base-ru-full-Q4_K_M.gguf` | 1 219 245 248 | контроль: та же модель без ужатия словаря, для честного A/B |\n\nЧетыре файла вместе = 3 850 220 128 B (3.85 GB), с этой карточкой — 3 850 237 460 B.\nГолос-референс, на котором делалась приёмка, не выкладывается.\n\nSHA-256:\n\n```\nqwen-talker-1.7b-base-ru-pruned-Q4_K_M.gguf\nBD6D673FBB9D4306596BCB0C9C1E822742441A3F6B8FE374FDF3822695C63EFC\nqwen-talker-1.7b-voicedesign-Q4_K_M.gguf\n7605ED0CC5E72059F27468C27F70C070E05D1CC0C7B1C76BFB9CBA717A59EEE3\nqwen-tokenizer-12hz-Q8_0.gguf\n1883BEEED99348FC35E23DD225E9082F93F6F8C109330A33D935BAA8ACDBFD94\nqwen-talker-1.7b-base-ru-full-Q4_K_M.gguf\nF99FEF28E66194CAADA1FED8E1136256A9CC9F5C6BB355C3B57188C0DC3ACC6D\n```\n\n---\n\n## Лицензия и атрибуция\n\n**Apache-2.0** — та же лицензия, что у исходной модели, без дополнительных ограничений.\n\n- Веса: производные от [Qwen/Qwen3-TTS-12Hz-1.7B-Base](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) © Alibaba Qwen, Apache-2.0.\n- Русское стресс-дообучение: [siriusfreak/qwen3-tts-12hz-1.7b-ru-stress-cf](https://huggingface.co/siriusfreak/qwen3-tts-12hz-1.7b-ru-stress-cf) (LoRA: [sknyazev/qwen3-tts-12hz-1.7b-ru-stress-gguf](https://huggingface.co/sknyazev/qwen3-tts-12hz-1.7b-ru-stress-gguf)).\n- Голос по текстовому описанию: [Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign), квант Q4_K_M — [Serveurperso/Qwen3-TTS-GGUF](https://huggingface.co/Serveurperso/Qwen3-TTS-GGUF), выложен без изменений.\n- Аудиокодек: [Serveurperso/Qwen3-TTS-GGUF](https://huggingface.co/Serveurperso/Qwen3-TTS-GGUF).\n- Рантайм: [qwentts.cpp](https://github.com/ServeurpersoCom/qwentts.cpp).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "siriusfreak/qwen3-tts-12hz-1.7b-ru-stress-cf"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "openarcane/Volt-TTS",
+      "author": "openarcane",
+      "created_at": "2026-11-11",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "qwen3_tts",
+        "text-to-speech",
+        "tts",
+        "indic",
+        "voice-cloning",
+        "multilingual",
+        "kn",
+        "hi",
+        "ta",
+        "te",
+        "ml",
+        "mr",
+        "bn",
+        "gu",
+        "pa",
+        "or",
+        "as",
+        "ne",
+        "ur",
+        "sa",
+        "ks",
+        "sd",
+        "kok",
+        "mai",
+        "mni",
+        "brx",
+        "doi",
+        "sat",
+        "bho",
+        "mag",
+        "hne",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/openarcane/Volt-TTS",
+      "card_text": "---\nlicense: apache-2.0\npipeline_tag: text-to-speech\ntags: [text-to-speech, tts, indic, voice-cloning, multilingual]\nlanguage: [kn, hi, ta, te, ml, mr, bn, gu, pa, or, as, ne, ur, sa, ks, sd, kok, mai, mni, brx, doi, sat, bho, mag, hne]\n---\n\n# Volt-TTS\n\n<video src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/Volt-TTS-teaser.mp4\" controls autoplay muted loop playsinline width=\"100%\"></video>\n\nVolt-TTS is a text-to-speech model for 25 Indian languages, finetuned from\n[Qwen3-TTS-12Hz-1.7B-Base](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) by the Qwen team. It speaks in\ntwo built-in voices, or clones any voice from a short reference clip. This is a preview release.\n\n## Highlights\n\n- **25 Indian languages** in one model, chosen per line.\n- **Two built-in voices**: Arjun (male) and Meera (female), both speaking every language.\n- **Voice cloning** from a 5-15 s clip, with or without its transcript, in any language.\n\n## Samples\n\nBuilt-in voices (Arjun, Meera) with default settings.\n\n| Voice | Language | Text | Audio |\n|---|---|---|---|\n| Arjun | Kannada | ಬೆಂಗಳೂರು ಕರ್ನಾಟಕದ ರಾಜಧಾನಿ. ಇಲ್ಲಿನ ಹವಾಮಾನ ವರ್ಷವಿಡೀ ಹಿತವಾಗಿರುತ್ತದೆ. ಉದ್ಯಾನಗಳು, ಕೆರೆಗಳು ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಕಂಪನಿಗಳಿಂದ ಈ ನಗರ ದೇಶದಾದ್ಯಂತ ಪ್ರಸಿದ್ಧವಾಗಿದೆ. | <audio controls src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/samples/arjun_kannada.wav\"></audio> |\n| Meera | Hindi | भारत में हर कुछ किलोमीटर पर भाषा और खाना बदल जाता है। यही विविधता इस देश को खास बनाती है, और हर यात्रा में कुछ नया सीखने को मिलता है। | <audio controls src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/samples/meera_hindi.wav\"></audio> |\n| Meera | Tamil | சென்னை மெரினா கடற்கரை உலகின் நீளமான கடற்கரைகளில் ஒன்று. மாலை நேரத்தில் குடும்பங்கள் இங்கே வந்து காற்று வாங்கி, சுண்டல் சாப்பிட்டு மகிழ்கிறார்கள். | <audio controls src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/samples/meera_tamil.wav\"></audio> |\n| Arjun | Telugu | హైదరాబాద్ బిర్యానీ రుచికి ప్రపంచమంతా అభిమానులు ఉన్నారు. చార్మినార్ దగ్గర సాయంత్రం నడుస్తూ, వేడి వేడి ఇరానీ చాయ్ తాగడం ఒక మంచి అనుభవం. | <audio controls src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/samples/arjun_telugu.wav\"></audio> |\n| Meera | Bengali | কলকাতার দুর্গাপূজা শুধু একটি উৎসব নয়, এটি শহরের প্রাণ। প্রতিটি পাড়ায় সুন্দর প্যান্ডেল সাজানো হয়, আর রাতভর মানুষ ঠাকুর দেখতে বের হয়। | <audio controls src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/samples/meera_bengali.wav\"></audio> |\n| Arjun | Malayalam | കേരളത്തിലെ കായലുകളിലൂടെയുള്ള ഹൗസ്ബോട്ട് യാത്ര വളരെ മനോഹരമാണ്. പച്ചപ്പ് നിറഞ്ഞ തീരങ്ങളും ശാന്തമായ വെള്ളവും മനസ്സിന് വലിയ സമാധാനം നൽകുന്നു. | <audio controls src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/samples/arjun_malayalam.wav\"></audio> |\n| Meera | Marathi | पुण्यातला पाऊस काही वेगळाच असतो. डोंगरावरून येणारे ढग, गरम चहा आणि भजी, यामुळे पावसाळा हा सगळ्यांचा आवडता ऋतू आहे. | <audio controls src=\"https://huggingface.co/openarcane/Volt-TTS/resolve/main/samples/meera_marathi.wav\"></audio> |\n\n## Model details\n\n| | |\n|---|---|\n| Parameters | 2.02B (the 1.93B base plus 93M for the new Indic token embeddings) |\n| Base model | [Qwen3-TTS-12Hz-1.7B-Base](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) |\n| Languages | 25 Indian languages |\n| Speech codec | 12.5 Hz (from the base model) |\n| Precision | bf16 |\n| License | Apache-2.0 |\n\n## Languages\n\nPass the value in the `language=` column to `generate_voice_clone`.\n\n| Language | `language=` | Language | `language=` |\n|---|---|---|---|\n| Assamese | `\"assamese\"` | Malayalam | `\"malayalam\"` |\n| Bengali | `\"bengali\"` | Manipuri | `\"manipuri\"` |\n| Bhojpuri | `\"bhojpuri\"` | Marathi | `\"marathi\"` |\n| Bodo | `\"bodo\"` | Nepali | `\"nepali\"` |\n| Chhattisgarhi | `\"chhattisgarhi\"` | Odia | `\"odia\"` |\n| Dogri | `\"dogri\"` | Punjabi | `\"punjabi\"` |\n| Gujarati | `\"gujarati\"` | Sanskrit | `\"sanskrit\"` |\n| Hindi | `\"hindi\"` | Santali | `\"santali\"` |\n| Kannada | `\"kannada\"` | Sindhi | `\"sindhi\"` |\n| Kashmiri | `\"kashmiri\"` | Tamil | `\"tamil\"` |\n| Konkani | `\"konkani\"` | Telugu | `\"telugu\"` |\n| Magahi | `\"magahi\"` | Urdu | `\"urdu\"` |\n| Maithili | `\"maithili\"` |  | |\n\n## Quickstart\n\nNeeds a CUDA GPU with about 8 GB of memory. Warnings about SoX and the tokenizer class can be ignored.\n\n```bash\npip install -U qwen-tts soundfile\n```\n\n**Built-in voices**\n\n```python\nimport soundfile as sf\nimport torch\nfrom huggingface_hub import hf_hub_download\nfrom safetensors import safe_open\nfrom qwen_tts import Qwen3TTSModel\nfrom qwen_tts.inference.qwen3_tts_model import VoiceClonePromptItem\n\ntts = Qwen3TTSModel.from_pretrained(\"openarcane/Volt-TTS\", device_map=\"cuda:0\", dtype=torch.bfloat16)\n\ndef speaker(name):\n    \"\"\"A built-in voice: \"arjun\" (male) or \"meera\" (female).\"\"\"\n    path = hf_hub_download(\"openarcane/Volt-TTS\", f\"speakers/{name}.safetensors\")\n    with safe_open(path, \"pt\") as f:\n        return [VoiceClonePromptItem(ref_code=f.get_tensor(\"ref_code\"), ref_spk_embedding=f.get_tensor(\"ref_spk_embedding\"),\n                                     x_vector_only_mode=False, icl_mode=True, ref_text=f.metadata()[\"ref_text\"])]\n\nwavs, sr = tts.generate_voice_clone(\n    text=(\"ಬೆಂಗಳೂರು ಕರ್ನಾಟಕದ ರಾಜಧಾನಿ. ಇಲ್ಲಿನ ಹವಾಮಾನ ವರ್ಷವಿಡೀ ಹಿತವಾಗಿರುತ್ತದೆ. \"\n          \"ಉದ್ಯಾನಗಳು, ಕೆರೆಗಳು ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಕಂಪನಿಗಳಿಂದ ಈ ನಗರ ದೇಶದಾದ್ಯಂತ ಪ್ರಸಿದ್ಧವಾಗಿದೆ.\"),\n    language=\"kannada\", voice_clone_prompt=speaker(\"arjun\"))\nsf.write(\"arjun_kannada.wav\", wavs[0], sr)\n\nwavs, sr = tts.generate_voice_clone(\n    text=\"आज मौसम बहुत अच्छा है। सुबह हल्की बारिश हुई थी, इसलिए हवा में ठंडक है। चलो, शाम को पार्क में टहलने चलते हैं।\",\n    language=\"hindi\", voice_clone_prompt=speaker(\"meera\"))\nsf.write(\"meera_hindi.wav\", wavs[0], sr)\n```\n\n**Voice cloning.** Give a 5-15 s clip of the voice and what is said in it. The clip can be in any language.\n\n```python\nwavs, sr = tts.generate_voice_clone(\n    text=(\"ఈ రోజు వాతావరణం చాలా బాగుంది. ఉదయం కొంచెం వర్షం పడింది, అందుకే గాలి చల్లగా ఉంది. \"\n          \"సాయంత్రం పార్కుకు నడకకు వెళ్దాం.\"),\n    language=\"telugu\",\n    ref_audio=\"my_voice.wav\",                 # path, URL or base64\n    ref_text=\"Transcript of my_voice.wav.\",   # no transcript? drop it and pass x_vector_only_mode=True\n)\nsf.write(\"my_voice_telugu.wav\", wavs[0], sr)\n```\n\n**Batch.** Pass lists to speak several lines at once, each in its own language:\n\n```python\nlines = [(\"இன்று வானிலை நன்றாக உள்ளது. காலையில் லேசான மழை பெய்ததால் காற்று குளிர்ச்சியாக இருக்கிறது. \"\n          \"மாலையில் கடற்கரைக்குச் செல்லலாம்.\", \"tamil\"),\n         (\"আজ আবহাওয়া খুব সুন্দর। সকালে হালকা বৃষ্টি হয়েছিল, তাই বাতাস ঠান্ডা। চলো, সন্ধ্যায় পার্কে হাঁটতে যাই।\", \"bengali\"),\n         (\"आज हवामान खूप छान आहे. सकाळी हलका पाऊस पडला, त्यामुळे हवेत गारवा आहे. चला, संध्याकाळी बागेत फिरायला जाऊ.\", \"marathi\"),\n         (\"Volt speaks twenty five Indian languages and English. Give it a short clip of any voice, \"\n          \"and it reads your text in that voice, in the language you choose.\", \"english\")]\nwavs, sr = tts.generate_voice_clone(text=[t for t, _ in lines], language=[l for _, l in lines],\n                                    voice_clone_prompt=speaker(\"meera\") * len(lines))\nfor (_, lang), w in zip(lines, wavs):\n    sf.write(f\"meera_{lang}.wav\", w, sr)\n```\n\nThe default sampling settings (`temperature=0.9, top_k=50, repetition_penalty=1.05`) come from\n`generation_config.json`. Pass any of them to `generate_voice_clone` to change them, e.g. `temperature=0.7`.\nCall `torch.manual_seed(...)` first for a repeatable result.\n\n## Benchmark (FLEURS, 8 languages)\n\nWe benchmarked on **FLEURS** (Google), using its real **audio and text**. Each language uses test items from\nthe FLEURS test split. For each item, the voice reference is a real FLEURS recording with its transcript, and the\nmodel reads a different FLEURS test sentence in that voice. None of this data was used in training.\n\n**Note:** these are early, small-scale numbers from one ASR system, and they leave out English loanwords, so\nthey are lower than a strict score. Counting every word, CER is higher, for example Hindi\n7.5 %, Malayalam 2.8 % and Tamil 4.0 %. Treat them as a rough guide, not a full evaluation.\n\n| Language | CER | WER |\n|---|---|---|\n| Hindi | 1.0 % | 4.1 % |\n| Malayalam | 1.7 % | 13.5 % |\n| Kannada | 2.0 % | 9.3 % |\n| Telugu | 2.3 % | 10.0 % |\n| Odia | 2.7 % | 12.4 % |\n| Tamil | 2.8 % | 15.2 % |\n| Punjabi | 3.1 % | 8.4 % |\n| Assamese | 5.6 % | 21.8 % |\n| **Average** | **2.7 %** | **11.8 %** |\n\n- **CER / WER:** the generated audio was transcribed with ElevenLabs Scribe v3, with the language forced. Each\n  transcript was compared with the target sentence after Unicode normalisation. CER is computed per language,\n  then averaged.\n- **English loanwords:** Scribe often writes English loanwords in Latin script even when they are spoken\n  correctly, which the metric counts as errors. These regions are excluded from both the reference and the\n  transcript. Raw CER with them included is higher, for example Hindi 7.5 %, Malayalam 2.8 % and Tamil 4.0 %.\n- **Speaker similarity:** the cloned voice scores above 0.94 cosine similarity to the reference speaker\n  (Malayalam 0.942, Tamil 0.943; WavLM-base-plus-sv embeddings). Two halves of the same real recording score\n  about 0.96, the practical ceiling.\n- Sampling settings are the defaults above (temperature 0.9, top-k 50), so every run differs slightly.\n\n## Training\n\n- **Method**: LoRA finetuning (rank 32, alpha 64, 40.5M trainable parameters) on the attention, MLP, text\n  projection and output layers; the new token embeddings were trained in full.\n- **Data**: Rasa (22 languages), SYSPIN (9 languages) and LibriTTS-R (English): 1.18M clips, about 2,240 hours,\n  sampled so smaller languages are not drowned out.\n- **Tokenizer**: extended with 45,622 Indic pieces (vocab 197,298) and 25 new language ids.\n- **Voice cloning**: about half the clips were trained with a reference clip and its transcript, the rest with the\n  speaker embedding only.\n- **Validation**: held-out set of 2,291 clips, loss 2.31 (base model before training: 4.22).\n\n## Limitations\n\n- Preview release. Quality varies by language and speaker; low-resource languages are less tested.\n- No text normaliser yet: numbers, symbols and maths may be read wrongly.\n- Cross-lingual cloning (for example an English voice speaking Kannada) works but was not trained explicitly.\n\n## License and credits\n\nApache-2.0. Volt-TTS is a finetune of [Qwen3-TTS-12Hz-1.7B-Base](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base)\nby the Qwen team. It uses the `qwen-tts` package, which is why the config says `qwen3_tts`.\n\nTraining data: Rasa (AI4Bharat), SYSPIN (IISc / ARTPARK) and LibriTTS-R. Please follow their licenses when using\nthis model. The built-in voices Arjun and Meera each come from one SYSPIN clip.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Ansu/Latxa-Omni-SNAC-Qwen3.5-4B",
+      "author": "Ansu",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "safetensors",
+        "omni_speech_qwen3_5",
+        "speech-to-speech",
+        "spoken-dialogue",
+        "basque",
+        "latxa",
+        "snac",
+        "qwen3.5",
+        "audio-text-to-text",
+        "eu",
+        "base_model:HiTZ/Latxa-Qwen3.5-4B",
+        "base_model:finetune:HiTZ/Latxa-Qwen3.5-4B",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Ansu/Latxa-Omni-SNAC-Qwen3.5-4B",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "HiTZ/Latxa-Qwen3.5-4B",
+        "openai/whisper-large-v3",
+        "meta-llama/Llama-3.2-1B-Instruct"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "audio_understanding_reasoning": 2,
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mimba/mimba-tune",
+      "author": "mimba",
+      "created_at": "2026-11-07",
+      "last_modified": "2026-11-17",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "peft",
+        "safetensors",
+        "music",
+        "music-generation",
+        "lora",
+        "ace-step",
+        "african-music",
+        "bikutsi",
+        "amapiano",
+        "zouk",
+        "sega",
+        "makossa",
+        "afrobeat",
+        "text-to-audio",
+        "fr",
+        "en",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:adapter:ACE-Step/Ace-Step1.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "peft",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/mimba/mimba-tune",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/Ace-Step1.5"
+      ],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "akbargherbal/arabmaqamrock-blend-yue2-lora",
+      "author": "akbargherbal",
+      "created_at": "2026-10-13",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "audiocpp",
+        "audio",
+        "music-generation",
+        "text-to-audio",
+        "yue2",
+        "lora",
+        "arabic",
+        "maqam",
+        "rock",
+        "instrumental",
+        "lora-merge",
+        "ar",
+        "base_model:m-a-p/YuE2-3B",
+        "base_model:adapter:m-a-p/YuE2-3B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "audiocpp",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/akbargherbal/arabmaqamrock-blend-yue2-lora",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "m-a-p/YuE2-3B"
+      ],
+      "variants": [
+        "akbargherbal/arabic-instrumental-yue2-lora",
+        "akbargherbal/arabmaqamrock-yue2-lora"
+      ],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "laion/Humaneness-Voice-Converter",
+      "author": "laion",
+      "created_at": "2026-10-11",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "pytorch",
+        "safetensors",
+        "voice-conversion",
+        "speech-to-speech",
+        "chatterbox",
+        "flow-matching",
+        "reinforcement-learning",
+        "english",
+        "german",
+        "audio-to-audio",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:finetune:ResembleAI/chatterbox",
+        "license:cc-by-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "cc-by-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/laion/Humaneness-Voice-Converter",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license cc-by-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "superretrosfx/RVC-MODEL",
+      "author": "superretrosfx",
+      "created_at": "2025-12-11",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "keras-hub",
+        "RVC",
+        "Voice Cloning",
+        "voicemodels",
+        "audio-to-audio",
+        "en",
+        "es",
+        "dataset:openbmb/UltraData-SFT-Agent-2609",
+        "dataset:openbmb/UltraData-RL-2609",
+        "base_model:nex-agi/Nex-N2.5-mini",
+        "base_model:finetune:nex-agi/Nex-N2.5-mini",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "keras-hub",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/superretrosfx/RVC-MODEL",
+      "card_text": "---\nlicense: mit\ndatasets:\n- openbmb/UltraData-SFT-Agent-2609\n- openbmb/UltraData-RL-2609\nlanguage:\n- en\n- es\nmetrics:\n- FanaticPythoner/bertscore-with-torch_dtype\n- gjacob/google_bleu\nbase_model:\n- nex-agi/Nex-N2.5-mini\nnew_version: >-\n  DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF\npipeline_tag: audio-to-audio\nlibrary_name: keras-hub\ntags:\n- RVC\n- Voice Cloning\n- voicemodels\n---",
+      "arxiv_ids": [],
+      "datasets": [
+        "openbmb/UltraData-SFT-Agent-2609",
+        "openbmb/UltraData-RL-2609"
+      ],
+      "base_models": [
+        "nex-agi/Nex-N2.5-mini"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "MAdel121/LFM3-Audio-2B-Full-Duplex",
+      "author": "MAdel121",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "peft",
+        "safetensors",
+        "liquid",
+        "lfm3",
+        "audio",
+        "speech-to-speech",
+        "full-duplex",
+        "turn-taking",
+        "barge-in",
+        "lora",
+        "apple-silicon",
+        "audio-to-audio",
+        "en",
+        "base_model:LiquidAI/LFM3-Audio-2B",
+        "base_model:adapter:LiquidAI/LFM3-Audio-2B",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "peft",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/MAdel121/LFM3-Audio-2B-Full-Duplex",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "LiquidAI/LFM3-Audio-2B"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "longcap/LongCap_ICLR",
+      "author": "longcap",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "audio-captioning",
+        "speaker-diarization",
+        "automatic-speech-recognition",
+        "en",
+        "zh",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/longcap/LongCap_ICLR",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- en\n- zh\ntags:\n- audio-captioning\n- speaker-diarization\n- automatic-speech-recognition\n---\n\n# LongCap usage\n\nUse Linux x86-64, Python 3.12, a C/C++ compiler, an NVIDIA driver compatible\nwith CUDA 13.0, and an FP8-capable GPU with sufficient memory, such as an H100 80 GB.\n\n## Download and install\n\n```bash\npython3.12 -m venv .venv\nsource .venv/bin/activate\npython -m pip install huggingface_hub\n```\n\nDownload the code and the checkpoint for your task. No Hugging Face login is required.\n\n```bash\n# Captioning\nhf download longcap/LongCap_ICLR --local-dir LongCap_ICLR --include 'code/*' 'LongCap/*'\n\n# Diarization and transcription\nhf download longcap/LongCap_ICLR --local-dir LongCap_ICLR --include 'code/*' 'LongCap_Diar/*'\n```\n\nInstall from the downloaded `code/` directory:\n\n```bash\ncd LongCap_ICLR/code\npython -m pip install --only-binary=:all: --require-hashes -r requirements/bootstrap.lock\npython -m pip install --only-binary=:all: --require-hashes -r requirements/server.lock\npython -m pip install --no-build-isolation --no-deps .\n```\n\nFor a client-only installation, use `requirements/client.lock` instead of\n`requirements/server.lock` and omit `--no-build-isolation` from the final command.\nRun the following commands from `code/` with the same Python environment\nactivated in each terminal.\n\n## Captioning\n\nStart the server:\n\n```bash\nlongcap verify-model --model ../LongCap\nlongcap serve --model ../LongCap --profile long\n```\n\nIn another terminal:\n\n```bash\nlongcap caption --audio /path/to/recording.wav --model ../LongCap --output outputs/caption\n```\n\nRead the captions from `outputs/caption/predictions/predictions.jsonl`.\nEvent start and end times are in seconds from the start of the recording.\n\n## Diarization and transcription\n\nStop the previous server before reusing its port, then start the diarization server:\n\n```bash\nlongcap verify-model --model ../LongCap_Diar\nlongcap serve --model ../LongCap_Diar --profile long\n```\n\nIn another terminal:\n\n```bash\nlongcap diarize --audio /path/to/recording.wav --model ../LongCap_Diar --frequency-penalty 0.05 --output outputs/diarization\n```\n\nRead the segments from `outputs/diarization/predictions/diarization.jsonl`.\nEach segment contains start/end seconds, a speaker label, and text.\n\n## Docker server\n\nWith Docker and NVIDIA Container Toolkit installed, run from `code/`:\n\n```bash\ndocker build -f docker/Dockerfile -t longcap:review .\nmkdir -p cache\ndocker run --rm --gpus all --shm-size=16g -p 127.0.0.1:20000:20000 \\\n  -v \"$PWD/../LongCap:/models/longcap-35b-a3b:ro\" \\\n  -v \"$PWD/cache:/cache\" longcap:review\n```\n\nFor diarization, replace `../LongCap` with `../LongCap_Diar` in the model mount.\nUse the client commands above from the host. The host client and container server\nmust use the same checkpoint. Stop any other server using port 20000 first.\n\n## Batch input and saved runs\n\nUse WAV or FLAC input. To process multiple recordings, replace\n`--audio /path/to/recording.wav` with `--manifest recordings.jsonl`:\n\n```json\n{\"key\": \"recording_001\", \"audio_path\": \"audio/recording_001.wav\", \"duration\": 73.5}\n```\n\nPut one recording on each line. Audio paths are relative to the manifest;\n`duration` is the number of seconds to process and must not exceed the file length.\n\nRerun the same command to resume saved work. Use a new output directory when\nchanging inputs, tasks, models, or decoding settings. Exit code 2 means output is\nincomplete; inspect `predictions/conversion.jsonl` and `raw/client.json` in the\noutput directory. To regenerate predictions from saved replies, run\n`longcap convert --run /path/to/output`.\n\nUse `longcap --help` or `longcap <command> --help` for more options.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 12,
+      "topic_scores": {
+        "audio_understanding_reasoning": 10,
+        "speech_models": 1
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio captioning",
+        "declares license apache-2.0",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "litert-community/granite-speech-5.0-2b",
+      "author": "litert-community",
+      "created_at": "2026-11-06",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "litert-lm",
+        "litert",
+        "tflite",
+        "on-device",
+        "edge",
+        "asr",
+        "speech-recognition",
+        "speech-translation",
+        "audio",
+        "granite",
+        "granite-speech",
+        "automatic-speech-recognition",
+        "multilingual",
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "ja",
+        "base_model:ibm-granite/granite-speech-5.0-2b",
+        "base_model:quantized:ibm-granite/granite-speech-5.0-2b",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 225,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "litert-lm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/litert-community/granite-speech-5.0-2b",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ibm-granite/granite-speech-5.0-2b"
+      ],
+      "variants": [],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "paincupid/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B-GGUF",
+      "author": "paincupid",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-16",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "gguf",
+        "nemotron-3.5",
+        "nemo-speech-cpp",
+        "speech-to-text",
+        "asr",
+        "transcription",
+        "speaker-diarization",
+        "speech-translation",
+        "nvfp4",
+        "automatic-speech-recognition",
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "nl",
+        "pl",
+        "cs",
+        "sk",
+        "hi",
+        "ja",
+        "ko",
+        "zh",
+        "multilingual",
+        "base_model:nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+        "base_model:quantized:nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+        "license:other",
+        "endpoints_compatible",
+        "region:us",
+        "imatrix",
+        "conversational"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "gguf",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/paincupid/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B-GGUF",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+      ],
+      "variants": [],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "declares license other"
+      ],
+      "is_new": true
+    }
+  ]
+}
