@@ -1,0 +1,1453 @@
+{
+  "generated_at": "2026-11-19",
+  "window_start": "2026-11-12",
+  "source_counts": {
+    "arxiv": 79,
+    "semantic_scholar": 60
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "arxiv",
+      "source_id": "2611.24094",
+      "title": "21Codec: Decoder-side Speaker Control for Text-to-Speech",
+      "abstract": "We propose 21Codec, a streaming codec model with reduced recoverable speaker information from the token stream and decoder-side speaker control. Existing codec models infer speaker identity from token stream. Making them streamable is not sufficiently robust to speaker drift, because each chunk re-infers the identity from the local chunk context alone. Our adversarial speaker classifier and NANSY-style formant-shift data augmentation pushes the model to rely on the provided speaker embedding while reducing the recoverable speaker information from the token stream. We show that 21Codec can control speaker identity through the conditioning vector, and that the speaker identity is maintained across chunks during streaming. With the ability to control speaker identity even in mid-stream, 21Codec is a promising candidate for streaming TTS systems for better controllability of speaker identity.",
+      "authors": [
+        "David Lindevelt",
+        "Suzan Verberne",
+        "Joost Broekens"
+      ],
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24094",
+      "pdf_url": "https://arxiv.org/pdf/2611.24094v1",
+      "doi": "",
+      "venue": "Submitted to ICASSP 2027",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.24125",
+      "title": "Location Matters: Layer-wise Prompt Conditioning for Voice--Style Disentanglement in Text-to-Speech",
+      "abstract": "Independent control of voice and emotional style characteristics of speech is a long-standing problem in text-to-speech (TTS) systems. We investigate how the conditioning location of voice and style prompts across TTS decoder layers affects the trade-off between preservation and expressiveness for voice identity and emotional style. We introduce a layer-dependent gated fusion mechanism and systematically study which layers should be influenced by which prompt type. Our findings show an asymmetric relationship. Voice benefits from early conditioning for identity preservation, while style benefits from early conditioning for expressiveness. Our findings provide practical guidance that helps neural network architects make an appropriate trade-off for the architecture of TTS systems according to their use cases.",
+      "authors": [
+        "David Lindevelt",
+        "Suzan Verberne",
+        "Joost Broekens"
+      ],
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24125",
+      "pdf_url": "https://arxiv.org/pdf/2611.24125v1",
+      "doi": "",
+      "venue": "Submitted to ICASSP 2027",
+      "categories": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.24453",
+      "title": "Harmonic Circuit: Chord Progression Lies in a Sparse Principal Information Flow in Symbolic Music Models",
+      "abstract": "Mechanistic Interpretability (MI) seeks to decode neural network computations into human-understandable logic. A core methodology in MI is circuit discovery: identifying the information flow in sub-networks that drive specific model behaviors. While circuit discovery has matured within Natural Language Processing (NLP), the interpretable circuits in music models remain largely unexplored. In this work, we identify a music-functional circuit within two symbolic music generative models: ChatMusician and MuPT. The music function we consider is the prediction of the terminal tonic root in a classical harmonic progression pattern $I \\ldots V \\rightarrow I$. We use the Auto-Emergence algorithm to extract a principal sparse sub-network as the identified circuit. Validation via causal intervention confirms that this identified circuit is a primary driver of harmonic progression behaviors in the symbolic music models. To our knowledge, this represents the first systematic circuit-discovery study conducted within the music domain. Our demo page is available at: https://ukiyo23rui.github.io/auto-emergence-demo/.",
+      "authors": [
+        "Ruiji Yu",
+        "Gus Xia"
+      ],
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24453",
+      "pdf_url": "https://arxiv.org/pdf/2611.24453v1",
+      "doi": "",
+      "venue": "Accepted at the NeurIPS 2026 Workshop on Interpretability for Discovery. 12 pages, 6 figures",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 9,
+      "topic_scores": {
+        "music_foundation_models": 8
+      },
+      "matched_topics": [
+        "Music Foundation Models & Representations"
+      ],
+      "reasons": [
+        "Music Foundation Models & Representations: symbolic music",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "semantic_scholar",
+      "source_id": "34736970d1091a41439bc9daee5ae53424907b60",
+      "title": "Real-time sign language to speech translation using CNNs",
+      "abstract": "<p><span lang=\"EN-US\" style=\"font-size:10.0pt\"><span style=\"font-family:\"Times New Roman\",serif\">This article presents the design, implementation, and empirical evaluation of an end-to-end software architecture for the real-time translation of the American Sign Language (ASL) alphabet into text and synthesized speech. The proposed system leverages the OpenCV library for video ingestion and the MediaPipe framework to extract 21 precise three-dimensional topological landmarks of the human hand, effectively isolating the gesture from environmental noise. A custom Convolutional Neural Network (CNN) built in TensorFlow and Keras processes these normalized skeletal representations to classify 26 static ASL characters. The model demonstrates a robust overall classification accuracy, performing exceptionally well on open hand topologies while highlighting occlusion-based challenges in complex gestures. Operating with exceedingly low latency, the system ensures fluid real-time human-computer interaction, providing a scalable and computationally efficient foundation for accessible communication tools without the need for specialized depth-sensing hardware.</span></span></p>",
+      "authors": [
+        "Piotr Krzysztof Gdula"
+      ],
+      "published": "2026-11-15",
+      "updated": "2026-11-15",
+      "url": "https://www.semanticscholar.org/paper/34736970d1091a41439bc9daee5ae53424907b60",
+      "pdf_url": "https://doi.org/10.5604/01.3001.0055.9904",
+      "doi": "10.5604/01.3001.0055.9904",
+      "venue": "Computer Science and Mathematical Modelling",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 8,
+      "topic_scores": {
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech translation"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.24862",
+      "title": "Gaspard: Expressive unified speech and gesture synthesis with continuous autoregressive flow-matching and decoupled classifier-free guidance",
+      "abstract": "Human communication involves highly coordinated multimodal signals such as speech and co-speech gestures. Existing approaches for generating both modalities commonly follow a cascaded pipeline, where speech is generated first and subsequently used to drive gesture generation; speech generation is therefore independent of gestures. We introduce Gaspard, a unified speech--gesture generation model based on continuous autoregressive generation with next-step flow-matching predictions, and trained on Seamless Interaction, a large-scale multimodal dataset. The heterogeneous temporal properties of speech and gesture motivate modality-specific prediction heads and decoupled classifier-free guidance over the two generation streams. This guidance rebalances the influence of speech and gesture at inference time, improving expressivity while mitigating dynamics collapse in continuous autoregressive gesture generation. Objective and perceptual evaluations show that Gaspard is a strong gesture generation model against unimodal baselines and that it produces highly synchronous speech and gestures compared to a matched cascaded system.",
+      "authors": [
+        "Téo Guichoux",
+        "Théodor Lemerle",
+        "Catherine Pelachaud",
+        "Nicolas Obin"
+      ],
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24862",
+      "pdf_url": "https://arxiv.org/pdf/2611.24862v1",
+      "doi": "",
+      "venue": "Preprint - under review",
+      "categories": [
+        "cs.CV"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 6,
+      "topic_scores": {
+        "speech_models": 5
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "coinnoin/YuE2-in-Google-Colab",
+      "author": "coinnoin",
+      "created_at": "2026-11-19",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "yue2",
+        "yue-2",
+        "yue2-music",
+        "yue2-music-generation",
+        "yue2-3b",
+        "yue2-comfyui",
+        "yue2-music-cover",
+        "yue2-text-to-music",
+        "yue",
+        "sheetsage2",
+        "sheetsage2-audio-encoder",
+        "comfy-org",
+        "ai-music",
+        "ai-music-generation",
+        "music-generation",
+        "text-to-music",
+        "lyrics-to-music",
+        "text-to-song",
+        "text-to-audio",
+        "audio-generation",
+        "music-synthesis",
+        "generative-music",
+        "generative-audio",
+        "music-creation",
+        "ai-song-generator",
+        "ai-music-generator",
+        "song-generation",
+        "full-song-generation",
+        "complete-song-generation",
+        "vocal-generation",
+        "ai-vocals",
+        "singing-synthesis",
+        "ai-singing",
+        "singing-voice-generation",
+        "vocal-synthesis",
+        "synthetic-vocals",
+        "music-with-vocals",
+        "vocals-and-instruments",
+        "instrumental-generation",
+        "instrumental-music",
+        "melody-generation",
+        "melody-synthesis",
+        "chord-generation",
+        "chord-progression",
+        "music-composition",
+        "automatic-music-composition",
+        "ai-composer",
+        "songwriting",
+        "ai-songwriting",
+        "lyrics-generation",
+        "lyrics",
+        "lyric-conditioned-generation",
+        "music-cover",
+        "ai-music-cover",
+        "song-cover",
+        "vocal-cover",
+        "music-transformation",
+        "music-to-music",
+        "audio-to-audio",
+        "reference-audio",
+        "reference-based-generation",
+        "melody-conditioned-generation",
+        "melody-conditioning",
+        "melody-preservation",
+        "audio-encoder",
+        "audio-understanding",
+        "audio-feature-extraction",
+        "music-analysis",
+        "music-transcription",
+        "music-information-retrieval",
+        "abc-notation",
+        "abc-music-notation",
+        "abc-planning",
+        "musical-structure",
+        "music-arrangement",
+        "music-theory",
+        "bpm-control",
+        "tempo-control",
+        "genre-conditioning",
+        "style-conditioning",
+        "music-style-transfer",
+        "pop-music",
+        "electronic-music",
+        "hip-hop",
+        "rock-music",
+        "jazz",
+        "classical-music",
+        "diffusion",
+        "generative-model",
+        "foundation-model",
+        "deep-learning",
+        "machine-learning",
+        "artificial-intelligence",
+        "neural-networks",
+        "transformer",
+        "autoregressive-model",
+        "sequence-modeling",
+        "audio-model",
+        "music-model",
+        "3b-parameters",
+        "model-inference",
+        "inference",
+        "pytorch",
+        "python",
+        "audio-processing",
+        "sound-generation",
+        "sound-design",
+        "waveform-generation",
+        "flac",
+        "wav",
+        "mp3",
+        "audio-export",
+        "comfyui",
+        "comfyui-workflow",
+        "comfyui-custom-nodes",
+        "comfyui-audio",
+        "comfyui-music-generation",
+        "comfyui-api",
+        "node-based-workflow",
+        "workflow",
+        "google-colab",
+        "colab-notebook",
+        "jupyter-notebook",
+        "google-colab-gpu",
+        "nvidia-t4",
+        "gpu-acceleration",
+        "cuda",
+        "cloud-gpu",
+        "ai-workflow",
+        "ai-tools",
+        "open-source-ai",
+        "music-generation-tool",
+        "music-generation-tutorial",
+        "audio-generation-tutorial",
+        "tutorial",
+        "beginner-friendly",
+        "no-code",
+        "low-code",
+        "interactive-ai",
+        "creative-ai",
+        "creative-workflow",
+        "machine-learning-project",
+        "ai-project",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/coinnoin/YuE2-in-Google-Colab",
+      "card_text": "\n---\nlicense: other\ntags:\n  - yue2\n  - yue-2\n  - yue2-music\n  - yue2-music-generation\n  - yue2-3b\n  - yue2-comfyui\n  - yue2-music-cover\n  - yue2-text-to-music\n  - yue\n  - sheetsage2\n  - sheetsage2-audio-encoder\n  - comfy-org\n  - ai-music\n  - ai-music-generation\n  - music-generation\n  - text-to-music\n  - lyrics-to-music\n  - text-to-song\n  - text-to-audio\n  - audio-generation\n  - music-synthesis\n  - generative-music\n  - generative-audio\n  - music-creation\n  - ai-song-generator\n  - ai-music-generator\n  - song-generation\n  - full-song-generation\n  - complete-song-generation\n  - vocal-generation\n  - ai-vocals\n  - singing-synthesis\n  - ai-singing\n  - singing-voice-generation\n  - vocal-synthesis\n  - synthetic-vocals\n  - music-with-vocals\n  - vocals-and-instruments\n  - instrumental-generation\n  - instrumental-music\n  - melody-generation\n  - melody-synthesis\n  - chord-generation\n  - chord-progression\n  - music-composition\n  - automatic-music-composition\n  - ai-composer\n  - songwriting\n  - ai-songwriting\n  - lyrics-generation\n  - lyrics\n  - lyric-conditioned-generation\n  - music-cover\n  - ai-music-cover\n  - song-cover\n  - vocal-cover\n  - music-transformation\n  - music-to-music\n  - audio-to-audio\n  - reference-audio\n  - reference-based-generation\n  - melody-conditioned-generation\n  - melody-conditioning\n  - melody-preservation\n  - audio-encoder\n  - audio-understanding\n  - audio-feature-extraction\n  - music-analysis\n  - music-transcription\n  - music-information-retrieval\n  - abc-notation\n  - abc-music-notation\n  - abc-planning\n  - musical-structure\n  - music-arrangement\n  - music-theory\n  - bpm-control\n  - tempo-control\n  - genre-conditioning\n  - style-conditioning\n  - music-style-transfer\n  - pop-music\n  - electronic-music\n  - hip-hop\n  - rock-music\n  - jazz\n  - classical-music\n  - diffusion\n  - generative-model\n  - foundation-model\n  - deep-learning\n  - machine-learning\n  - artificial-intelligence\n  - neural-networks\n  - transformer\n  - autoregressive-model\n  - sequence-modeling\n  - audio-model\n  - music-model\n  - 3b-parameters\n  - model-inference\n  - inference\n  - pytorch\n  - python\n  - audio-processing\n  - sound-generation\n  - sound-design\n  - waveform-generation\n  - flac\n  - wav\n  - mp3\n  - audio-export\n  - comfyui\n  - comfyui-workflow\n  - comfyui-custom-nodes\n  - comfyui-audio\n  - comfyui-music-generation\n  - comfyui-api\n  - node-based-workflow\n  - workflow\n  - google-colab\n  - colab-notebook\n  - jupyter-notebook\n  - google-colab-gpu\n  - nvidia-t4\n  - gpu-acceleration\n  - cuda\n  - cloud-gpu\n  - ai-workflow\n  - ai-tools\n  - open-source-ai\n  - music-generation-tool\n  - music-generation-tutorial\n  - audio-generation-tutorial\n  - tutorial\n  - beginner-friendly\n  - no-code\n  - low-code\n  - interactive-ai\n  - creative-ai\n  - creative-workflow\n  - machine-learning-project\n  - ai-project\n---\n\n\n# ⚡ YuE2 Music Generation in Google Colab\n\nThis repository provides an easy-to-use Google Colab notebook to run **YuE2**, an advanced AI music generation model. Built on ComfyUI, this tool allows you to create complete songs with vocals from scratch (Text-to-Music) or generate customized covers of existing songs (Music Cover), all running locally on a free Google Colab T4 GPU.\n\n**🎥 Watch the Tutorial:** [How to Use](https://www.youtube.com/watch?v=8zUtBY2c-Gc)\n\n**🚀 Run in Colab:** [Open Google Colab Notebook](https://colab.research.google.com/drive/15xKI5kv6BpiB4aTx7zjzgI0rZugY2qpM?usp=sharing)\n\n[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/salman02-12/YuE2-in-Google-Colab/blob/main/YuE2_CoinNoin.ipynb)\n[![Get Pro](https://img.shields.io/badge/Get%20Pro-PayPal-blue?logo=paypal)](https://www.paypal.com/ncp/payment/9592PQ88FJDJC)\n\n---\n<img src=\"./thumbnail.png\" width=\"100%\" />\n\n## ✨ Features Supported in this Notebook\n\nThis notebook streamlines the complex YuE2 music generation process into simple steps:\n\n1. **⚙️ Initialize Core Environment**: Automatically sets up the ComfyUI engine and essential dependencies for native YuE2 nodes.\n2. **📥 Download YuE2 Models**: Rapidly fetches the 3B parameter YuE2 checkpoint. It also includes an optional download for the **SheetSage2 audio encoder**, which is required if you want to create song covers.\n3. **🎵 YuE2 Text to Music**: \n   * Generate a complete song (vocals and instruments) simply by providing a text description of the style (e.g., \"contemporary pop, 96 BPM\") and writing your own lyrics.\n   * Supports **ABC Planning**: The AI can write an editable melody/chord plan before rendering the audio for better musical structure.\n   * Control the max duration (up to 900 seconds) and generation mode (full song or melody only).\n4. **🎤 YuE2 Music Cover**: \n   * Upload an existing `.flac`, `.wav`, or `.mp3` song.\n   * The SheetSage2 encoder transcribes the original melody, and YuE2 re-sings it using your newly provided lyrics and musical style!\n\n## 🛠️ How to Use\n\n1. Click the \"Open in Colab\" badge above.\n2. Go to **Runtime > Change runtime type** and ensure the **T4 GPU** is selected in Colab.\n3. Run **Cell 1** to initialize the ComfyUI environment.\n4. Run **Cell 2** to download the models. Make sure `DOWNLOAD_SHEETSAGE2` is checked if you want to make covers.\n5. **To generate a new song:** Go to **Cell 3**, type your music style and lyrics (using tags like `[Verse]`), and click Play.\n6. **To make a cover:** Go to **Cell 4**, type your new style and lyrics, and click Play. You will be prompted to upload your reference song.\n7. *Note: YuE2 is a large model. Song generation will take several minutes on a T4 GPU.*\n\n## 🤝 Credits\n* **Notebook Creator:** [@CoinNoin](https://www.youtube.com/@CoinNoin)\n* **Base Models:** [Comfy-Org / YuE2](https://huggingface.co/Comfy-Org/YuE2)\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 74,
+      "topic_scores": {
+        "music_foundation_models": 6,
+        "generative_music_audio": 63,
+        "audio_understanding_reasoning": 10
+      },
+      "matched_topics": [
+        "Music Foundation Models & Representations",
+        "Generative Music & Audio",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "Audio Understanding & Reasoning: audio understanding",
+        "Music Foundation Models & Representations: music information retrieval",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "HeartMuLa/MuLaCover",
+      "author": "HeartMuLa",
+      "created_at": "2026-09-14",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "mulacover",
+        "safetensors",
+        "music",
+        "audio",
+        "cover",
+        "cover-song-generation",
+        "music-remix",
+        "remix-generation",
+        "text-to-music",
+        "symbolic-music",
+        "audio-to-audio",
+        "arxiv:2601.10547",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 779,
+      "likes": 50,
+      "trending_score": 0.0,
+      "library_name": "mulacover",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/HeartMuLa/MuLaCover",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlibrary_name: mulacover\npipeline_tag: audio-to-audio\ntags:\n  - music\n  - audio\n  - cover\n  - cover-song-generation\n  - music-remix\n  - remix-generation\n  - text-to-music\n  - symbolic-music\n---\n\n# MuLaCover — Cover Song & Music Remix Generation\n\n> 🎵 **Try HeartMuLa online — no GPU or setup needed:** [heartmula.com](https://heartmula.com/?utm_source=huggingface&utm_medium=model_card&utm_campaign=mulacover_top)\n> Make songs from lyrics, create covers and remixes, and edit any passage of a song in MuLa Studio. Free daily credits.\n\nMuLaCover is a controllable AI cover-song and music-remix model. It transforms\nreference music using lyrics and a structured text style prompt, or generates\nfrom melody/chord MIDI. The standalone inference code is maintained in the\n[MuLaCover repository](https://github.com/HeartMuLa/MuLaCover).\n\n[HeartMuLa repository](https://github.com/HeartMuLa/heartlib) ·\n[HeartMuLa paper](https://arxiv.org/abs/2601.10547) ·\n[Try it online](https://heartmula.com/?utm_source=huggingface&utm_medium=model_card&utm_campaign=mulacover_try)\n\n> Model weights are publicly available for download. No access request is required.\n\n## Inputs\n\nLyrics use section markers and preserved line breaks:\n\n```text\n[Verse]\nOne lyric line\nAnother lyric line\n\n[Chorus]\nOne chorus line\n```\n\nStyle is one UTF-8 line using named fields:\n\n```text\ntopic:[Longing]; genre:[country]; instrument:[Strings,acoustic guitar]; mood:[hopeful]\n```\n\n## Download\n\nDownload the model weights with the Hugging Face CLI. Authentication is not required:\n\n```bash\nhf download HeartMuLa/MuLaCover --local-dir ./ckpt/MuLaCover\n```\n\nAlso download HeartCodec and Qwen3-Embedding-0.6B\ninto sibling checkpoint directories. Reference-audio conditioning also needs\nthe documented YourMT3 and ChordNet checkpoints. See the code repository for\nthe complete installation and generation commands.\n\n## Usage\n\nInstall the `mulacover` package and prepare all checkpoint directories using\nthe [generation guide](https://github.com/HeartMuLa/MuLaCover/blob/main/examples/cover_song_generation.md).\nRun the following from the code repository root. `./ckpt` is the parent\ndirectory containing MuLaCover, HeartCodec, Qwen3, and the transcription models.\n\n```python\nimport torch\nfrom mulacover import MuLaCoverGenPipeline\n\ntorch.manual_seed(42)\npipe = MuLaCoverGenPipeline.from_pretrained(\n    \"./ckpt\",\n    device=torch.device(\"cuda:0\"),\n    dtype={\n        \"mulacover\": torch.bfloat16,\n        \"codec\": torch.float32,\n        \"qwen\": torch.float32,\n        \"transcriptor\": torch.float32,\n    },\n    lazy_load=True,\n)\npipe(\n    {\n        \"ref_audio\": \"/path/to/reference.mp3\",\n        \"lyrics\": \"assets/lyrics.txt\",\n        \"tags\": \"assets/tags.txt\",\n    },\n    save_path=\"cover.wav\",\n)\n```\n\nThe pipeline writes a WAV file. Use the MuLaCover package API shown above;\nthis model is not a built-in Transformers model class.\n\n## Files\n\n- `config.json`: MuLaCover model architecture configuration.\n- `gen_config.json`: audio/text token identifiers used during generation.\n- `model-00001-of-00005.safetensors` … `model-00005-of-00005.safetensors`:\n  sharded model weights.\n- `model.safetensors.index.json`: shard index.\n- `tokenizer.json`: lyrics and prompt tokenizer.\n- `SHA256SUMS`: release integrity checksums.\n\n## License and use restrictions\n\nThe official model weights are licensed under CC BY-NC 4.0 with the additional\nterms in `MODEL_LICENSE`. Commercial use of the official weights is prohibited\nwithout separate written authorization from MuLa Labs.\n\nOutputs generated using the official weights are restricted to noncommercial\nuse unless separately authorized in writing by MuLa Labs. The Apache-2.0\nlicense covering the source-code repository does not grant commercial rights\nto these weights or their generated outputs.\n\nUsers are responsible for obtaining the rights required for their lyrics,\nreference audio, performances, voices, and generated works. Do not use the\nmodel to impersonate a person deceptively or violate copyright, privacy, or\npublicity rights.\n\n## Community\n\nJoin the [MuLaCover Discord](https://discord.gg/Nf7SRkmWAE) for discussion and\ncommunity support. Reproducible software defects should be reported through\nthe code repository's GitHub Issues.\n\n## Join MuLa Labs, Vera Praxis Lab\n\nWe are always excited to meet people with a strong interest in audio and music.\nMuLa Labs has internship openings for candidates who want to build the next\ngeneration of music and audio technology. To apply, email your resume or CV,\ntogether with a short introduction, to\n[contact@mulalabs.ai](mailto:contact@mulalabs.ai).\n",
+      "arxiv_ids": [
+        "2601.10547"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 40,
+      "topic_scores": {
+        "music_foundation_models": 8,
+        "generative_music_audio": 28
+      },
+      "matched_topics": [
+        "Music Foundation Models & Representations",
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music",
+        "Music Foundation Models & Representations: symbolic music",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ntc-ai/minimax-music3-particle-sliders",
+      "author": "ntc-ai",
+      "created_at": "2026-08-16",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "music",
+        "text-to-music",
+        "lora",
+        "particle-sliders",
+        "minimax-music-3",
+        "comfyui",
+        "text-to-audio",
+        "base_model:MiniMaxAI/MiniMax-Music3",
+        "base_model:adapter:MiniMaxAI/MiniMax-Music3",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 21,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/ntc-ai/minimax-music3-particle-sliders",
+      "card_text": "---\nlicense: mit\nbase_model: MiniMaxAI/MiniMax-Music3\nbase_model_relation: adapter\ntags:\n- music\n- text-to-music\n- lora\n- particle-sliders\n- minimax-music-3\n- comfyui\npipeline_tag: text-to-audio\n---\n\n# MiniMax Music 3 particle sliders\n\n**[Try the MiniMax Music 3 Space](https://huggingface.co/spaces/ntc-ai/minimax-music3-particle-sliders)** · **[YuE2 slider weights](https://huggingface.co/ntc-ai/yue2-particle-sliders)** · **[YuE2 Space](https://huggingface.co/spaces/ntc-ai/yue2-particle-sliders)**\n\n## Choose a loading path\n\n- **Native audio generation.** Start with a working MiniMax Music 3 pipeline in a compatible PyTorch and Diffusers environment. Download the adapter and its matching JSON sidecar. Follow the [native loading example](usage.md) to attach the adapter with the included `LoRANetwork` before generating audio.\n- **ComfyUI.** Download the converted ComfyUI adapter and follow the [ComfyUI loading guide](comfyui/README.md). Use a Music 3 text encoder with separate query, key and value projections. Set model strength to `0` and CLIP strength to `1` for the selected voice and genre controls.\n\n## NEW — September 16, 2026\n\n**16 newly retrained voice and genre LoRAs, with new matching samples and ComfyUI exports.** The downloads below are the selected checkpoints from the new four-prompt training runs.\n\n![Same seed. Different sound. Off and On waveforms from the selected Female checkpoint.](assets/same-seed.svg)\n\n**New voice and genre controls · Selected checkpoints · Native and ComfyUI downloads**\n\nSteer the lead toward a female vocal, a piano-led arrangement toward heavy riffs, or a small band toward a club pulse. These LoRA adapters change the language model that plans music in [MiniMax Music 3](https://huggingface.co/MiniMaxAI/MiniMax-Music3).\n\n**September 16, 2026:** all sixteen retrains are complete. This release uses the checkpoints selected by the final per-slider audit: steps 1,000, 2,000, 3,000 or 3,400 depending on the control. All voice and genre downloads and On samples below refer to those selected checkpoints.\n\n[Choose a control](#choose-a-control) · [ComfyUI](#comfyui) · [Native loading](#native-loading) · [Selection criteria](#how-these-checkpoints-were-chosen) · [Training](#training) · [How it works + math](#how-the-sliders-learn)\n\n## Press play\n\n**Off** uses the base model. **On** adds the named adapter at strength **+1**. The prompt, lyrics and seed match within each pair; composition and phrasing can still change. Recordings retain their original levels and lengths.\n\n### Female\n\nSame prompt · same lyrics · seed **1709** · selected step **1000**\n\n<table style=\"display:table;width:100%;table-layout:fixed\">\n<thead><tr><th>OFF · 0</th><th>ON · +1</th></tr></thead>\n<tbody><tr><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/female/row2-seed1709-off.mp3\"></audio></td><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/female/row2-seed1709-on.mp3\"></audio></td></tr></tbody>\n</table>\n\n[Off WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/female/row2-seed1709-off.wav) · [On WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/female/row2-seed1709-on.wav) · [Target-caption reference](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/female/row2-seed1709-reference.mp3)\n\n### Metal\n\nSame prompt · same lyrics · seed **1709** · selected step **2000**\n\n<table style=\"display:table;width:100%;table-layout:fixed\">\n<thead><tr><th>OFF · 0</th><th>ON · +1</th></tr></thead>\n<tbody><tr><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/metal/row2-seed1709-off.mp3\"></audio></td><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/metal/row2-seed1709-on.mp3\"></audio></td></tr></tbody>\n</table>\n\n[Off WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/metal/row2-seed1709-off.wav) · [On WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/metal/row2-seed1709-on.wav) · [Target-caption reference](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/metal/row2-seed1709-reference.mp3)\n\n### House\n\nSame prompt · same lyrics · seed **1709** · selected step **1000**\n\n<table style=\"display:table;width:100%;table-layout:fixed\">\n<thead><tr><th>OFF · 0</th><th>ON · +1</th></tr></thead>\n<tbody><tr><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/house/row2-seed1709-off.mp3\"></audio></td><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/house/row2-seed1709-on.mp3\"></audio></td></tr></tbody>\n</table>\n\n[Off WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/house/row2-seed1709-off.wav) · [On WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/house/row2-seed1709-on.wav) · [Target-caption reference](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/house/row2-seed1709-reference.mp3)\n\n### Disco Funk\n\nSame prompt · same lyrics · seed **1709** · selected step **2000**\n\n<table style=\"display:table;width:100%;table-layout:fixed\">\n<thead><tr><th>OFF · 0</th><th>ON · +1</th></tr></thead>\n<tbody><tr><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/disco-funk/row2-seed1709-off.mp3\"></audio></td><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/disco-funk/row2-seed1709-on.mp3\"></audio></td></tr></tbody>\n</table>\n\n[Off WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/disco-funk/row2-seed1709-off.wav) · [On WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/disco-funk/row2-seed1709-on.wav) · [Target-caption reference](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/disco-funk/row2-seed1709-reference.mp3)\n\n### Pop Punk\n\nSame prompt · same lyrics · seed **1709** · selected step **3400**\n\n<table style=\"display:table;width:100%;table-layout:fixed\">\n<thead><tr><th>OFF · 0</th><th>ON · +1</th></tr></thead>\n<tbody><tr><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/pop-punk/row2-seed1709-off.mp3\"></audio></td><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/pop-punk/row2-seed1709-on.mp3\"></audio></td></tr></tbody>\n</table>\n\n[Off WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/pop-punk/row2-seed1709-off.wav) · [On WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/pop-punk/row2-seed1709-on.wav) · [Target-caption reference](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/pop-punk/row2-seed1709-reference.mp3)\n\n### Lo-fi\n\nSame prompt · same lyrics · seed **1709** · selected step **3000**\n\n<table style=\"display:table;width:100%;table-layout:fixed\">\n<thead><tr><th>OFF · 0</th><th>ON · +1</th></tr></thead>\n<tbody><tr><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/lofi/row2-seed1709-off.mp3\"></audio></td><td><audio controls preload=\"none\" style=\"width:100%;min-width:0;max-width:280px\" src=\"https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/lofi/row2-seed1709-on.mp3\"></audio></td></tr></tbody>\n</table>\n\n[Off WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/lofi/row2-seed1709-off.wav) · [On WAV](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/lofi/row2-seed1709-on.wav) · [Target-caption reference](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/resolve/main/samples/uni16-fresh-selected-v2/lofi/row2-seed1709-reference.mp3)\n\n[Hear all 64 Off/On comparisons](samples/uni16-fresh-selected-v2/README.md). Every selected checkpoint has two arrangements × two seeds. Each featured example uses the first fixed arrangement and seed; examples were not chosen by their individual scores. Target-caption references are also included.\n\n## Choose a control\n\n**All sixteen downloads in this table are NEW as of September 16, 2026.** Each file adds one target sound. All are language-model attention adapters with rank 8 and alpha 8. Female and Male are separate controls; negative strength is not a trained opposite.\n\n| New control | Target sound | Selected step | Native | ComfyUI | New samples |\n|---|---|---:|---|---|---|\n| Female | Encourages one adult female lead vocal | 1,000 | [Weights](weights/uni16-fresh-selected-v2/female/female_step1000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/female/female_step1000.json) | [Weights](comfyui/uni16-fresh-selected-v2/female_step1000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/female/README.md) |\n| Lo-fi | Soft swung drums, mellow keys and gentle tape warmth | 3,000 | [Weights](weights/uni16-fresh-selected-v2/lofi/lofi_step3000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/lofi/lofi_step3000.json) | [Weights](comfyui/uni16-fresh-selected-v2/lofi_step3000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/lofi/README.md) |\n| Male | Encourages one adult male lead vocal | 3,400 | [Weights](weights/uni16-fresh-selected-v2/male/male_step3400.safetensors) · [Settings](weights/uni16-fresh-selected-v2/male/male_step3400.json) | [Weights](comfyui/uni16-fresh-selected-v2/male_step3400_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/male/README.md) |\n| Pop | Clear hooks, crisp drums and a polished chorus | 2,000 | [Weights](weights/uni16-fresh-selected-v2/pop/pop_step2000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/pop/pop_step2000.json) | [Weights](comfyui/uni16-fresh-selected-v2/pop_step2000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/pop/README.md) |\n| Hip-Hop | Rapped verses, deep sub bass and nimble hats | 3,000 | [Weights](weights/uni16-fresh-selected-v2/hiphop/hiphop_step3000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/hiphop/hiphop_step3000.json) | [Weights](comfyui/uni16-fresh-selected-v2/hiphop_step3000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/hiphop/README.md) |\n| R&B | Warm keys, deep pocket and fluid vocal phrasing | 3,400 | [Weights](weights/uni16-fresh-selected-v2/rnb/rnb_step3400.safetensors) · [Settings](weights/uni16-fresh-selected-v2/rnb/rnb_step3400.json) | [Weights](comfyui/uni16-fresh-selected-v2/rnb_step3400_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/rnb/README.md) |\n| Indie Rock | Chiming guitars, moving bass and a human drum kit | 1,000 | [Weights](weights/uni16-fresh-selected-v2/indie-rock/indie-rock_step1000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/indie-rock/indie-rock_step1000.json) | [Weights](comfyui/uni16-fresh-selected-v2/indie-rock_step1000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/indie-rock/README.md) |\n| Pop Punk | Palm-muted power chords and driving chorus drums | 3,400 | [Weights](weights/uni16-fresh-selected-v2/pop-punk/pop-punk_step3400.safetensors) · [Settings](weights/uni16-fresh-selected-v2/pop-punk/pop-punk_step3400.json) | [Weights](comfyui/uni16-fresh-selected-v2/pop-punk_step3400_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/pop-punk/README.md) |\n| Metal | Heavy guitar riffs, tight kicks and big melodic choruses | 2,000 | [Weights](weights/uni16-fresh-selected-v2/metal/metal_step2000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/metal/metal_step2000.json) | [Weights](comfyui/uni16-fresh-selected-v2/metal_step2000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/metal/README.md) |\n| Country | Acoustic strum, twangy fills and an easy backbeat | 1,000 | [Weights](weights/uni16-fresh-selected-v2/country/country_step1000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/country/country_step1000.json) | [Weights](comfyui/uni16-fresh-selected-v2/country_step1000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/country/README.md) |\n| Acoustic Folk | Fingerpicked strings and a warm small-room performance | 2,000 | [Weights](weights/uni16-fresh-selected-v2/acoustic-folk/acoustic-folk_step2000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/acoustic-folk/acoustic-folk_step2000.json) | [Weights](comfyui/uni16-fresh-selected-v2/acoustic-folk_step2000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/acoustic-folk/README.md) |\n| House | Steady club kick, offbeat hats and a rolling bass line | 1,000 | [Weights](weights/uni16-fresh-selected-v2/house/house_step1000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/house/house_step1000.json) | [Weights](comfyui/uni16-fresh-selected-v2/house_step1000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/house/README.md) |\n| Disco Funk | Elastic bass, clipped guitar and bright dance-floor strings | 2,000 | [Weights](weights/uni16-fresh-selected-v2/disco-funk/disco-funk_step2000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/disco-funk/disco-funk_step2000.json) | [Weights](comfyui/uni16-fresh-selected-v2/disco-funk_step2000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/disco-funk/README.md) |\n| K-pop | Sharp synth hooks, tight edits and a big chorus lift | 2,000 | [Weights](weights/uni16-fresh-selected-v2/kpop/kpop_step2000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/kpop/kpop_step2000.json) | [Weights](comfyui/uni16-fresh-selected-v2/kpop_step2000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/kpop/README.md) |\n| Reggaeton | Dembow drums, rounded sub bass and clipped melodic hooks | 1,000 | [Weights](weights/uni16-fresh-selected-v2/reggaeton/reggaeton_step1000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/reggaeton/reggaeton_step1000.json) | [Weights](comfyui/uni16-fresh-selected-v2/reggaeton_step1000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/reggaeton/README.md) |\n| Afrobeats | Interlocking percussion, melodic bass and buoyant guitar | 1,000 | [Weights](weights/uni16-fresh-selected-v2/afrobeats/afrobeats_step1000.safetensors) · [Settings](weights/uni16-fresh-selected-v2/afrobeats/afrobeats_step1000.json) | [Weights](comfyui/uni16-fresh-selected-v2/afrobeats_step1000_comfyui.safetensors) | [4 pairs](samples/uni16-fresh-selected-v2/afrobeats/README.md) |\n\n[Machine-readable catalog](catalog.json) · [Selection scores and checkpoint comparisons](evidence/uni16-fresh-selected-v2/README.md) · [Release file hashes](release-manifest.json)\n\n## ComfyUI\n\n1. Download the **ComfyUI** file for your chosen control and place it in `ComfyUI/models/loras/`.\n2. Use **Load LoRA** with your Music 3 text encoder connected to **CLIP**.\n3. Set **strength_model = 0** and **strength_clip = 1** for the published On treatment. Compare with CLIP strength 0; start with one adapter.\n\nUse a Music 3 text encoder with separate `q_proj`, `k_proj`, `v_proj` and `o_proj` layers. Text encoders with merged `qkv_proj` layers cannot apply the separate query/key/value factors in these files. See the [ComfyUI loading guide](comfyui/README.md).\n\nAll sixteen ComfyUI files were produced by the upstream conversion script from the selected native exports. Factors are BF16 and alpha scalars are FP32. The published recordings use the native adapters; ComfyUI precision and generation settings can change the resulting audio.\n\n## Native loading\n\nDownload the native weight and its matching JSON settings file. Use the included [loading example](usage.md) with your existing Music 3 pipeline.\n\n```python\nfrom huggingface_hub import snapshot_download\n\nfolder = snapshot_download(\n    \"ntc-ai/minimax-music3-particle-sliders\",\n    allow_patterns=[\n        \"catalog.json\", \"usage.md\", \"source/lora.py\",\n        \"weights/uni16-fresh-selected-v2/female/*\",\n        \"prompts/uni16-fresh-selected-v2/*\",\n    ],\n)\n```\n\nReplace `female` with a control ID, or use `weights/uni16-fresh-selected-v2/*/*` for all native files. For ComfyUI only, download `comfyui/uni16-fresh-selected-v2/*`.\n\nStart at direct multiplier **1** and compare with **0** using the same caption, lyrics and seed. The studio normalizes slider mixtures by host energy, so its fader position may differ from the direct multiplier used here.\n\n## How these checkpoints were chosen\n\nThe final audit scored **80 checkpoint candidates**, with four matched clips per candidate. It excluded checkpoints with technical flags, then evaluated **Content Enjoyment (CE)** and **Production Quality (PQ)** separately using Audiobox Aesthetics.\n\nFor each control, a checkpoint qualifies when its mean CE is within **0.2 points** of the best clean CE and its mean PQ is within **0.2 points** of the best clean PQ. Among qualifying checkpoints, the latest checkpoint from the new training run is preferred. The two best values can come from different checkpoints. This is the `quality-later-v2` policy.\n\n**Description similarity has no influence on selection.** CLAP measurements are kept as a separate diagnostic. Cached lyric checks are informational only. There is no combined style/quality score in this selection rule.\n\nThe 0.2-point tolerance is a preference rule, not a calibrated audible threshold. The [selection report](evidence/uni16-fresh-selected-v2/README.md) shows how picks change at 0.1, 0.2 and 0.3 points. Four short clips support a shortlist; they do not establish universal quality, broad musical diversity, full-song reliability or behavior when stacking adapters.\n\nAll sixteen selected native exports contain finite tensors and match their saved full training states. Original-waveform checks cover silence, clipping, shortening, high-frequency excess, stereo issues, interior gaps and repeated or near-identical audio. These checks do not rule out subtle musical defects.\n\n## Training\n\nEach slider uses all **four existing prompt pairs**. A fresh rank-8 adapter first trains for 600 updates with all four rows per batch. Further updates use one row at a time in balanced shuffled passes, with a fresh frozen-base continuation on every update. Continuations supply ending supervision; the prompt-state style targets remain fixed per row.\n\nEight runs reached 3,400 updates, and the other eight stopped at the approved 2,000-update budget. The published checkpoints were selected afterward. Generator and critic learning rates stay at 0.0005 and 0.00075, with adversarial, feature-matching and ending terms each weighted 1. Milestone samples retain their first draws without seed retries.\n\n[Method and equations](evidence/uni16-fresh-selected-v2/formulation.md) · [Training record](evidence/uni16-fresh-selected-v2/training.json) · [Checkpoint integrity](evidence/uni16-fresh-selected-v2/integrity.json) · [Conversion record](evidence/uni16-fresh-selected-v2/conversion.json)\n\n## How the sliders learn\n\nThe **new September 16 voice and genre adapters** use LoRA to change the language model that plans the music.\n\n### One strength control\n\nFor an adapted weight matrix, the slider applies:\n\n$$\nW(s) = W_0 + s\\,\\frac{\\alpha}{r}BA.\n$$\n\nHere \\\\(W_0\\\\) is the frozen base weight, \\\\(A\\\\) and \\\\(B\\\\) are the learned low-rank factors, and \\\\(s\\\\) is the strength. The new exports use \\\\(r=8\\\\) and \\\\(\\alpha=8\\\\), so \\\\(s=0\\\\) switches the adapter off and \\\\(s=1\\\\) applies its exported change. Intermediate strengths scale the weight change smoothly; the resulting music need not change linearly. Negative strength is not a trained opposite sound.\n\n### Voice and genre: learn the change between descriptions\n\nEach of the sixteen new controls learns from **four caption pairs**. One caption describes a starting arrangement and the other adds the requested voice or genre. Lyrics, tempo and section tags stay fixed within each pair.\n\n**1. Build a target change.** The frozen language model encodes the starting and target captions. We compare corresponding lyric-token states and the audio-start state. Let \\\\(H_0\\\\) be the starting-caption sequence, \\\\(H_+\\\\) the target-caption sequence, and \\\\(H_\\theta\\\\) the adapted model's sequence on the starting caption:\n\n$$\nx_+ = \\frac{H_+ - H_0}{\\sigma}, \\qquad\nx_\\theta = \\frac{H_\\theta - H_0}{\\sigma}.\n$$\n\nThe fixed scale \\\\(\\sigma\\\\) is calibrated from the teacher changes using root mean square (RMS). It puts the target change \\\\(x_+\\\\) and the adapter's change \\\\(x_\\theta\\\\) in the same units. Padding is excluded.\n\n**2. Train a critic to recognize that change.** A small two-layer transformer \\\\(D\\\\) learns to score target changes above adapted changes. It combines the mean of valid token features with the final audio-start feature. Its relativistic pairing objective is:\n\n$$\n\\mathcal L_D =\n\\mathbb E\\!\\left[\\operatorname{softplus}\\big(D(x_\\theta)-D(x_+)\\big)\\right]\n+ \\mathcal R_{\\mathrm{cap}}.\n$$\n\nHere \\\\(\\mathbb E\\\\) denotes a batch average, and \\\\(\\operatorname{softplus}(u)=\\log(1+e^u)\\\\) penalizes the wrong ordering smoothly. The critic is used during training only.\n\n**3. Train the adapter for the target change, its features and stopping behavior.** The adapter minimizes three terms, each with coefficient 1:\n\n$$\n\\begin{aligned}\n\\mathcal L_G ={}&\n\\mathbb E\\!\\left[\\operatorname{softplus}\\big(D(x_+)-D(x_\\theta)\\big)\\right] \\\\\n&+ \\operatorname{MSE}\\!\\left(\\mathbb E[\\phi(x_\\theta)],\\mathbb E[\\phi(x_+)]\\right)\n+ \\mathcal L_{\\mathrm{end}}.\n\\end{aligned}\n$$\n\n| Term | What it teaches |\n|---|---|\n| Adversarial comparison | Make the adapted change resemble the target-caption change. |\n| Feature matching | Match the batch means of the critic's learned features \\\\(\\phi\\\\). MSE is mean squared error over feature coordinates. |\n| Ending supervision | Preserve the base model's balance between continuing and ending on a supplied token history. |\n\nWarm-up uses four rows per batch. Fresh-continuation training uses one row per update, so feature matching then compares that update's student and teacher features. The adapter has no separate explicit lyric-hold term.\n\n**4. Preserve the stopping margin on fresh histories.** Let \\\\(\\ell\\\\) denote token logits and \\\\(\\mathcal S\\\\) the semantic audio-token vocabulary. On the same supplied history, compare the audio-end logit with the total semantic-continuation mass:\n\n$$\n\\begin{aligned}\nm &= \\ell_{\\mathrm{audio\\_end}} - \\log\\sum_{j\\in\\mathcal S}e^{\\ell_j}, \\\\\n\\mathcal L_{\\mathrm{end}} &= \\operatorname{MSE}(m_\\theta,m_0).\n\\end{aligned}\n$$\n\nThe first 600 updates use fixed base histories. **From update 601 onward, each update samples a fresh frozen-base continuation with the adapter disabled**, cycling through all four training rows in balanced shuffled passes. Seeds do not repeat; duplicate continuation tensors are rejected without substituting a new seed. These histories diversify ending supervision. The prompt-state style targets remain fixed per row.\n\nThe ending term preserves a stopping decision on the supplied histories. It does not establish that every newly generated full song will end naturally.\n\n**5. Keep the critic's gradients bounded.** In the calibrated input coordinates, the cap penalizes gradient norms only above 1:\n\n$$\n\\mathcal R_{\\mathrm{cap}} =\n\\frac{1}{2}\\sum_{z\\in\\{x_+,x_\\theta\\}}\n\\mathbb E\\!\\left[\n\\max\\!\\left(0,\\lVert\\nabla_zD(z)\\rVert_2-1\\right)^2\n\\right].\n$$\n\nThe cap coefficient and threshold are both 1. Small gradients are allowed, and the initially zero adapter change remains included.\n\n| Training setting | New September 16 release |\n|---|---|\n| Adapter location | Language-model attention; 36 layers × four projections |\n| Starting point | A fresh zero-output rank-8, alpha-8 adapter and critic per control |\n| Warm-up | 600 updates; all four prompt pairs per batch |\n| Further training | One row per update; balanced shuffled passes; one fresh base continuation per update |\n| Learning rates | Adapter 0.0005; critic 0.00075; constant |\n| Continuation step bound | Adapter parameter-update L2 norm at most 2 |\n| Training budgets | Eight runs to 3,400; eight runs to 2,000 |\n| Published checkpoints | Selected per control at 1,000, 2,000, 3,000 or 3,400 |\n| Published samples | 64 Off/On pairs: two arrangements × two seeds for each of all sixteen controls |\n\nThe critic, optimizers, sampler and RNG state carry across milestones. Every selected native export was checked tensor-for-tensor against its saved full state. The full [training record](evidence/uni16-fresh-selected-v2/training.json) gives the recipe and budgets.\n\n### Checkpoint selection: quality bounds, then later steps\n\nSelection happens after training. For one slider, let \\\\(\\mathcal C\\\\) contain checkpoints that pass the technical screen, with four-clip mean enjoyment \\\\(E_c\\\\), mean production quality \\\\(P_c\\\\), and step \\\\(t_c\\\\). The quality anchors and eligible set are:\n\n$$\n\\begin{aligned}\nE^* &= \\max_{c\\in\\mathcal C} E_c, \\qquad\nP^* = \\max_{c\\in\\mathcal C} P_c, \\\\\n\\mathcal Q &= \\left\\{c\\in\\mathcal C :\nE^*-E_c\\leq0.2\\;\\text{ and }\\;P^*-P_c\\leq0.2\\right\\}.\n\\end{aligned}\n$$\n\nAmong qualifying checkpoints from the new run, choose:\n\n$$\nc_{\\mathrm{release}} =\n\\operatorname*{arg\\,max}_{c\\in\\mathcal Q_{\\mathrm{new}}} t_c.\n$$\n\nIf no new-run checkpoint qualifies, the legacy release can be considered under the same quality bounds; an empty eligible set requires listening to resolve the tradeoff. All sixteen current selections are from the new runs. Description similarity and cached lyric checks have zero influence on this selection. The 0.2-point tolerance is a preference rule, not statistical equivalence or a proven audible boundary. [Selection policy and sensitivity](evidence/uni16-fresh-selected-v2/README.md).\n\n## Earlier releases\n\nThe update-660 UNI16 release and older uni-lyric, v24 and bipolar weights remain at their existing paths. The root catalog and download table now point to the selected fresh-continuation release. [Previous model card](https://huggingface.co/ntc-ai/minimax-music3-particle-sliders/blob/cb5b47832362354aa35aa1b4104f3dcf60bbb6fd/README.md).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "MiniMaxAI/MiniMax-Music3"
+      ],
+      "variants": [],
+      "score": 38,
+      "topic_scores": {
+        "generative_music_audio": 36
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, audio generation",
+        "declares license mit",
+        "community likes 21"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "JinchuanTian/LongCap-35B-A3B-FP8",
+      "author": "JinchuanTian",
+      "created_at": "2026-10-26",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "longcap",
+        "safetensors",
+        "qwen3_5",
+        "arxiv:2611.11125",
+        "audio",
+        "audio-captioning",
+        "timestamped-audio-captioning",
+        "dense-audio-captioning",
+        "long-form-audio",
+        "speaker-diarization",
+        "automatic-speech-recognition",
+        "music",
+        "sound-event-detection",
+        "vllm",
+        "fp8",
+        "audio-text-to-text",
+        "en",
+        "zh",
+        "base_model:JinchuanTian/LongCap-35B-A3B",
+        "base_model:quantized:JinchuanTian/LongCap-35B-A3B",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 87,
+      "likes": 3,
+      "trending_score": 0.0,
+      "library_name": "longcap",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/JinchuanTian/LongCap-35B-A3B-FP8",
+      "card_text": "---\nlanguage:\n- en\n- zh\nlicense: apache-2.0\nlibrary_name: longcap\npipeline_tag: audio-text-to-text\ntags:\n- arxiv:2611.11125\n- audio\n- audio-captioning\n- timestamped-audio-captioning\n- dense-audio-captioning\n- long-form-audio\n- speaker-diarization\n- automatic-speech-recognition\n- music\n- sound-event-detection\n- vllm\n- fp8\nbase_model:\n- JinchuanTian/LongCap-35B-A3B\nbase_model_relation: quantized\n---\n\n# LongCap-35B-A3B-FP8\n\n**LongCap** turns a recording, from a few seconds up to about two hours, into a timeline of speech, music, and sound events. Each event has start and end times and a structured set of attributes. The same checkpoint also transcribes speech with speaker labels.\n\n[Quickstart](https://github.com/jctian98/longcap-code/blob/main/docs/quickstart.md) | [Code](https://github.com/jctian98/longcap-code) | [Project page](https://jctian98.github.io/longcap/) | [Paper (arXiv)](https://arxiv.org/abs/2611.11125) | [Benchmark (LongCapBench-TAC-Long)](https://huggingface.co/datasets/JinchuanTian/LongCapBench-TAC-Long) | [BF16 version](https://huggingface.co/JinchuanTian/LongCap-35B-A3B)\n\nThese are the **FP8** weights, for a single H100 80GB GPU. The [BF16 weights](https://huggingface.co/JinchuanTian/LongCap-35B-A3B) are also available.\n\n<p align=\"center\"><img src=\"assets/longform_results.png\" width=\"100%\" alt=\"Caption quality over two hours of audio\"></p>\n\n*Caption quality over time on LongCapBench-TAC-Long (lower TER and GER and higher tcpCapSim are better). Left of each divider: independent 10-minute segments, where other systems degrade within minutes. Right: LongCap's single pass over full recordings of up to two hours. LongCap-122B-A10B is a larger model from the paper and is not released.*\n\n## Highlights\n\n- **Hour-scale audio.** LongCap reads a recording in short chunks and writes the events of each chunk as it goes, keeping earlier audio and text in context (up to 1M tokens).\n- **Timestamped, structured events.** Each event has start and end times and attributes from 62 expert-designed keys covering speech, music, and sound.\n- **Two tasks, one model.** Timestamped audio captioning, and speech recognition with speaker diarization.\n- **Strong captions.** 64.6% tcpCapSim on LongCapBench-TAC-Short (a benchmark from the paper), against 52.7% for Qwen3.5-Omni-Plus, at similar timeline error (13.0% vs 13.2% TER).\n\n## Model variants\n\n| Repository | Precision | Size | GPUs |\n| --- | --- | ---: | --- |\n| [LongCap-35B-A3B](https://huggingface.co/JinchuanTian/LongCap-35B-A3B) | BF16 | 70.6 GB | 2x H100 80GB |\n| [LongCap-35B-A3B-FP8](https://huggingface.co/JinchuanTian/LongCap-35B-A3B-FP8) | FP8 MoE experts, BF16 elsewhere | 38.4 GB | 1x H100 80GB |\n\nOnly the MoE expert weights are quantized, and the two versions produce closely matching output. All reported scores use FP8.\n\n## Output\n\n<p align=\"center\"><img src=\"assets/tac_format.png\" width=\"100%\" alt=\"LongCap output format\"></p>\n\n*Schematic of the output, with English attribute names for readability.*\n\nEach event has a `type` (`speech`, `music`, or `sound_event`), the attributes that apply to it, and a short `caption`. For example, speech events carry the transcript and speaker traits, music events the instruments and tempo, and sound events the source and distance. Attribute names and values are written in Chinese, while transcripts and lyrics keep the spoken language. [`attribute_keys.json`](attribute_keys.json) gives the English name of every key.\n\n**Example.** Four events LongCap predicted 87 minutes into *A Star Is Born* (1937), in a single pass over the 110-minute film: footsteps walking away, two short lines of speech, and a trumpet solo marking a scene change. Times are seconds from the start of the film.\n\n<details>\n<summary>Show the prediction</summary>\n\n```json\n{\n  \"key\": \"01_movie_en\",\n  \"duration\": 6640.047875,\n  \"events\": [\n    {\n      \"start\": 5242.7,\n      \"end\": 5246.0,\n      \"attributes\": {\n        \"type\": \"sound_event\",\n        \"声音事件识别\": \"脚步声\",\n        \"声源真实性\": \"真实\",\n        \"编辑/拼接检测\": \"无明显剪辑/拼接\",\n        \"响度轮廓\": \"由近及远\",\n        \"音色与质感\": \"硬底鞋走在硬质地面上\",\n        \"混响特性\": \"轻微房间混响\",\n        \"距离估计\": \"由近及远\",\n        \"前景-背景音区分\": \"前景\",\n        \"声音功能\": \"表示人物离开\",\n        \"caption\": \"奥利弗离开的脚步声，声音逐渐远去。\"\n      }\n    },\n    {\n      \"start\": 5246.8,\n      \"end\": 5247.5,\n      \"attributes\": {\n        \"type\": \"speech\",\n        \"说话人身份\": \"诺曼 (Norman)\",\n        \"说话人年龄\": \"中年\",\n        \"说话人性别\": \"男\",\n        \"话语角色\": \"自言自语者\",\n        \"文字转写\": \"Well, Cuddles.\",\n        \"语言识别\": \"英语\",\n        \"方言\": \"通用美式英语\",\n        \"口音\": \"无明显地域口音\",\n        \"词汇难度\": \"低\",\n        \"句法复杂度\": \"简单\",\n        \"命名实体\": \"Cuddles\",\n        \"响度轮廓\": \"低\",\n        \"发声质量\": \"自言自语\",\n        \"嗓音声学细节\": \"低音区\",\n        \"语速\": \"慢\",\n        \"音高语调\": \"平调\",\n        \"感知音频质量\": \"良好，有年代感\",\n        \"话轮转换模式\": \"独白\",\n        \"说话人情绪\": \"平静\",\n        \"情绪强度/唤醒度\": \"低\",\n        \"效价轨迹\": \"中性\",\n        \"说话人意图\": \"自言自语\",\n        \"言语行为类型\": \"独白\",\n        \"潜台词\": \"现在没人了\",\n        \"文化语境\": \"好莱坞电影工业\",\n        \"声音功能\": \"展现人物状态\",\n        \"caption\": \"诺曼独自一人时，轻声呼唤Cuddles的名字。\"\n      }\n    },\n    {\n      \"start\": 5249.1,\n      \"end\": 5250.5,\n      \"attributes\": {\n        \"type\": \"speech\",\n        \"说话人身份\": \"诺曼 (Norman)\",\n        \"说话人年龄\": \"中年\",\n        \"说话人性别\": \"男\",\n        \"话语角色\": \"自言自语者\",\n        \"文字转写\": \"Alone at last.\",\n        \"语言识别\": \"英语\",\n        \"方言\": \"通用美式英语\",\n        \"口音\": \"无明显地域口音\",\n        \"词汇难度\": \"低\",\n        \"句法复杂度\": \"简单\",\n        \"响度轮廓\": \"低\",\n        \"发声质量\": \"自言自语、如释重负\",\n        \"嗓音声学细节\": \"低音区\",\n        \"语速\": \"慢\",\n        \"音高语调\": \"下降\",\n        \"重音与强调\": \"Alone, last\",\n        \"感知音频质量\": \"良好，有年代感\",\n        \"话轮转换模式\": \"独白\",\n        \"说话人情绪\": \"如释重负\",\n        \"情绪强度/唤醒度\": \"低\",\n        \"效价轨迹\": \"积极\",\n        \"说话人意图\": \"自言自语\",\n        \"言语行为类型\": \"独白\",\n        \"潜台词\": \"终于清净了\",\n        \"文化语境\": \"好莱坞电影工业\",\n        \"声音功能\": \"展现人物状态\",\n        \"caption\": \"诺曼自言自语道：“终于独处了。”\"\n      }\n    },\n    {\n      \"start\": 5253.5,\n      \"end\": 5257.5,\n      \"attributes\": {\n        \"type\": \"music\",\n        \"乐器列表\": \"小号\",\n        \"乐器功能\": \"主旋律\",\n        \"声部类型\": \"独奏\",\n        \"乐器音色\": \"明亮、金属感\",\n        \"速度/BPM\": \"约120\",\n        \"节拍强度\": \"强\",\n        \"调式/调性\": \"大调\",\n        \"主旋律\": \"上行音阶式旋律\",\n        \"旋律轮廓\": \"上行\",\n        \"音乐织体类型\": \"单音音乐\",\n        \"乐器演奏法\": \"断奏\",\n        \"演奏动态\": \"强\",\n        \"音乐结构段落\": \"引子\",\n        \"混响特性\": \"明显\",\n        \"音乐情绪\": \"欢快、活泼\",\n        \"情绪强度/唤醒度\": \"高\",\n        \"声音功能\": \"场景转换/情绪渲染\",\n        \"caption\": \"一段明亮欢快的小号独奏响起，作为场景的结束或转换。\"\n      }\n    }\n  ]\n}\n```\n\n</details>\n\n## Usage\n\nLongCap runs through its own vLLM server and client, not a standard Transformers pipeline. The [quickstart on GitHub](https://github.com/jctian98/longcap-code/blob/main/docs/quickstart.md) shows how to install LongCap in a Python environment or with Docker, download this checkpoint, start the server, and caption or diarize a recording. This FP8 checkpoint runs on one H100 80GB GPU.\n\n## Disclaimer\n\nLongCap is a research release, intended for research use. It is not a product or a hosted service and has not been validated for production use. Like other AI models, it can make mistakes: it may miss or invent events, give wrong timestamps, mistranscribe speech, or mislabel speakers. Attributes such as a speaker's gender, age, or emotion are inferred from audio and may be wrong or biased. Review outputs before relying on them, and do not use them to identify people or to make decisions about them. You are responsible for how you use the model and its outputs, including having the right to process the audio you provide. The software and weights are provided \"as is\", without warranty of any kind, under the Apache License 2.0.\n",
+      "arxiv_ids": [
+        "2611.11125"
+      ],
+      "datasets": [],
+      "base_models": [
+        "JinchuanTian/LongCap-35B-A3B"
+      ],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "audio_understanding_reasoning": 18,
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio captioning, sound event detection, audio-text (pipeline tag)",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "JinchuanTian/LongCap-35B-A3B",
+      "author": "JinchuanTian",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "longcap",
+        "safetensors",
+        "qwen3_5",
+        "arxiv:2611.11125",
+        "audio",
+        "audio-captioning",
+        "timestamped-audio-captioning",
+        "dense-audio-captioning",
+        "long-form-audio",
+        "speaker-diarization",
+        "automatic-speech-recognition",
+        "music",
+        "sound-event-detection",
+        "vllm",
+        "audio-text-to-text",
+        "en",
+        "zh",
+        "base_model:Qwen/Qwen3.5-35B-A3B-Base",
+        "base_model:finetune:Qwen/Qwen3.5-35B-A3B-Base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 100,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "longcap",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/JinchuanTian/LongCap-35B-A3B",
+      "card_text": "---\nlanguage:\n- en\n- zh\nlicense: apache-2.0\nlibrary_name: longcap\npipeline_tag: audio-text-to-text\ntags:\n- arxiv:2611.11125\n- audio\n- audio-captioning\n- timestamped-audio-captioning\n- dense-audio-captioning\n- long-form-audio\n- speaker-diarization\n- automatic-speech-recognition\n- music\n- sound-event-detection\n- vllm\nbase_model:\n- Qwen/Qwen3.5-35B-A3B-Base\nbase_model_relation: finetune\n---\n\n# LongCap-35B-A3B\n\n**LongCap** turns a recording, from a few seconds up to about two hours, into a timeline of speech, music, and sound events. Each event has start and end times and a structured set of attributes. The same checkpoint also transcribes speech with speaker labels.\n\n[Quickstart](https://github.com/jctian98/longcap-code/blob/main/docs/quickstart.md) | [Code](https://github.com/jctian98/longcap-code) | [Project page](https://jctian98.github.io/longcap/) | [Paper (arXiv)](https://arxiv.org/abs/2611.11125) | [Benchmark (LongCapBench-TAC-Long)](https://huggingface.co/datasets/JinchuanTian/LongCapBench-TAC-Long) | [FP8 version](https://huggingface.co/JinchuanTian/LongCap-35B-A3B-FP8)\n\nThese are the **BF16** weights, for two H100 80GB GPUs. For a single GPU, use the [FP8 version](https://huggingface.co/JinchuanTian/LongCap-35B-A3B-FP8).\n\n<p align=\"center\"><img src=\"assets/longform_results.png\" width=\"100%\" alt=\"Caption quality over two hours of audio\"></p>\n\n*Caption quality over time on LongCapBench-TAC-Long (lower TER and GER and higher tcpCapSim are better). Left of each divider: independent 10-minute segments, where other systems degrade within minutes. Right: LongCap's single pass over full recordings of up to two hours. LongCap-122B-A10B is a larger model from the paper and is not released.*\n\n## Highlights\n\n- **Hour-scale audio.** LongCap reads a recording in short chunks and writes the events of each chunk as it goes, keeping earlier audio and text in context (up to 1M tokens).\n- **Timestamped, structured events.** Each event has start and end times and attributes from 62 expert-designed keys covering speech, music, and sound.\n- **Two tasks, one model.** Timestamped audio captioning, and speech recognition with speaker diarization.\n- **Strong captions.** 64.6% tcpCapSim on LongCapBench-TAC-Short (a benchmark from the paper), against 52.7% for Qwen3.5-Omni-Plus, at similar timeline error (13.0% vs 13.2% TER).\n\n## Model variants\n\n| Repository | Precision | Size | GPUs |\n| --- | --- | ---: | --- |\n| [LongCap-35B-A3B](https://huggingface.co/JinchuanTian/LongCap-35B-A3B) | BF16 | 70.6 GB | 2x H100 80GB |\n| [LongCap-35B-A3B-FP8](https://huggingface.co/JinchuanTian/LongCap-35B-A3B-FP8) | FP8 MoE experts, BF16 elsewhere | 38.4 GB | 1x H100 80GB |\n\nOnly the MoE expert weights are quantized, and the two versions produce closely matching output. All reported scores use FP8.\n\n## Output\n\n<p align=\"center\"><img src=\"assets/tac_format.png\" width=\"100%\" alt=\"LongCap output format\"></p>\n\n*Schematic of the output, with English attribute names for readability.*\n\nEach event has a `type` (`speech`, `music`, or `sound_event`), the attributes that apply to it, and a short `caption`. For example, speech events carry the transcript and speaker traits, music events the instruments and tempo, and sound events the source and distance. Attribute names and values are written in Chinese, while transcripts and lyrics keep the spoken language. [`attribute_keys.json`](attribute_keys.json) gives the English name of every key.\n\n**Example.** Four events LongCap predicted 87 minutes into *A Star Is Born* (1937), in a single pass over the 110-minute film: footsteps walking away, two short lines of speech, and a trumpet solo marking a scene change. Times are seconds from the start of the film.\n\n<details>\n<summary>Show the prediction</summary>\n\n```json\n{\n  \"key\": \"01_movie_en\",\n  \"duration\": 6640.047875,\n  \"events\": [\n    {\n      \"start\": 5242.7,\n      \"end\": 5246.0,\n      \"attributes\": {\n        \"type\": \"sound_event\",\n        \"声音事件识别\": \"脚步声\",\n        \"声源真实性\": \"真实\",\n        \"编辑/拼接检测\": \"无明显剪辑/拼接\",\n        \"响度轮廓\": \"由近及远\",\n        \"音色与质感\": \"硬底鞋走在硬质地面上\",\n        \"混响特性\": \"轻微房间混响\",\n        \"距离估计\": \"由近及远\",\n        \"前景-背景音区分\": \"前景\",\n        \"声音功能\": \"表示人物离开\",\n        \"caption\": \"奥利弗离开的脚步声，声音逐渐远去。\"\n      }\n    },\n    {\n      \"start\": 5246.8,\n      \"end\": 5247.5,\n      \"attributes\": {\n        \"type\": \"speech\",\n        \"说话人身份\": \"诺曼 (Norman)\",\n        \"说话人年龄\": \"中年\",\n        \"说话人性别\": \"男\",\n        \"话语角色\": \"自言自语者\",\n        \"文字转写\": \"Well, Cuddles.\",\n        \"语言识别\": \"英语\",\n        \"方言\": \"通用美式英语\",\n        \"口音\": \"无明显地域口音\",\n        \"词汇难度\": \"低\",\n        \"句法复杂度\": \"简单\",\n        \"命名实体\": \"Cuddles\",\n        \"响度轮廓\": \"低\",\n        \"发声质量\": \"自言自语\",\n        \"嗓音声学细节\": \"低音区\",\n        \"语速\": \"慢\",\n        \"音高语调\": \"平调\",\n        \"感知音频质量\": \"良好，有年代感\",\n        \"话轮转换模式\": \"独白\",\n        \"说话人情绪\": \"平静\",\n        \"情绪强度/唤醒度\": \"低\",\n        \"效价轨迹\": \"中性\",\n        \"说话人意图\": \"自言自语\",\n        \"言语行为类型\": \"独白\",\n        \"潜台词\": \"现在没人了\",\n        \"文化语境\": \"好莱坞电影工业\",\n        \"声音功能\": \"展现人物状态\",\n        \"caption\": \"诺曼独自一人时，轻声呼唤Cuddles的名字。\"\n      }\n    },\n    {\n      \"start\": 5249.1,\n      \"end\": 5250.5,\n      \"attributes\": {\n        \"type\": \"speech\",\n        \"说话人身份\": \"诺曼 (Norman)\",\n        \"说话人年龄\": \"中年\",\n        \"说话人性别\": \"男\",\n        \"话语角色\": \"自言自语者\",\n        \"文字转写\": \"Alone at last.\",\n        \"语言识别\": \"英语\",\n        \"方言\": \"通用美式英语\",\n        \"口音\": \"无明显地域口音\",\n        \"词汇难度\": \"低\",\n        \"句法复杂度\": \"简单\",\n        \"响度轮廓\": \"低\",\n        \"发声质量\": \"自言自语、如释重负\",\n        \"嗓音声学细节\": \"低音区\",\n        \"语速\": \"慢\",\n        \"音高语调\": \"下降\",\n        \"重音与强调\": \"Alone, last\",\n        \"感知音频质量\": \"良好，有年代感\",\n        \"话轮转换模式\": \"独白\",\n        \"说话人情绪\": \"如释重负\",\n        \"情绪强度/唤醒度\": \"低\",\n        \"效价轨迹\": \"积极\",\n        \"说话人意图\": \"自言自语\",\n        \"言语行为类型\": \"独白\",\n        \"潜台词\": \"终于清净了\",\n        \"文化语境\": \"好莱坞电影工业\",\n        \"声音功能\": \"展现人物状态\",\n        \"caption\": \"诺曼自言自语道：“终于独处了。”\"\n      }\n    },\n    {\n      \"start\": 5253.5,\n      \"end\": 5257.5,\n      \"attributes\": {\n        \"type\": \"music\",\n        \"乐器列表\": \"小号\",\n        \"乐器功能\": \"主旋律\",\n        \"声部类型\": \"独奏\",\n        \"乐器音色\": \"明亮、金属感\",\n        \"速度/BPM\": \"约120\",\n        \"节拍强度\": \"强\",\n        \"调式/调性\": \"大调\",\n        \"主旋律\": \"上行音阶式旋律\",\n        \"旋律轮廓\": \"上行\",\n        \"音乐织体类型\": \"单音音乐\",\n        \"乐器演奏法\": \"断奏\",\n        \"演奏动态\": \"强\",\n        \"音乐结构段落\": \"引子\",\n        \"混响特性\": \"明显\",\n        \"音乐情绪\": \"欢快、活泼\",\n        \"情绪强度/唤醒度\": \"高\",\n        \"声音功能\": \"场景转换/情绪渲染\",\n        \"caption\": \"一段明亮欢快的小号独奏响起，作为场景的结束或转换。\"\n      }\n    }\n  ]\n}\n```\n\n</details>\n\n## Usage\n\nLongCap runs through its own vLLM server and client, not a standard Transformers pipeline. The [quickstart on GitHub](https://github.com/jctian98/longcap-code/blob/main/docs/quickstart.md) shows how to install LongCap in a Python environment or with Docker, download this checkpoint, start the server, and caption or diarize a recording. This BF16 checkpoint needs two H100 80GB GPUs.\n\n## Disclaimer\n\nLongCap is a research release, intended for research use. It is not a product or a hosted service and has not been validated for production use. Like other AI models, it can make mistakes: it may miss or invent events, give wrong timestamps, mistranscribe speech, or mislabel speakers. Attributes such as a speaker's gender, age, or emotion are inferred from audio and may be wrong or biased. Review outputs before relying on them, and do not use them to identify people or to make decisions about them. You are responsible for how you use the model and its outputs, including having the right to process the audio you provide. The software and weights are provided \"as is\", without warranty of any kind, under the Apache License 2.0.\n",
+      "arxiv_ids": [
+        "2611.11125"
+      ],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3.5-35B-A3B-Base"
+      ],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "audio_understanding_reasoning": 18,
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: audio captioning, sound event detection, audio-text (pipeline tag)",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "model card links an arXiv paper",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "nesoai-qa-org/higurashi-ai-Haru-4B",
+      "author": "nesoai-qa-org",
+      "created_at": "2026-11-19",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "safetensors",
+        "haru",
+        "speech",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "en",
+        "es",
+        "pt",
+        "de",
+        "fr",
+        "zh",
+        "ja",
+        "ru",
+        "ko",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/nesoai-qa-org/higurashi-ai-Haru-4B",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- en\n- es\n- pt\n- de\n- fr\n- zh\n- ja\n- ru\n- ko\npipeline_tag: audio-to-audio\ntags:\n- speech\n- full-duplex\n- speech-to-speech\n- haru\n---\n\n# Haru-4B\n\n[Code](https://github.com/higurashi-ai/Haru) ·\n[Technical blog](https://blog.higurashi.ai/melte/haru4b/) ·\n[Technical blog (Japanese)](https://blog.higurashi.ai/melte/haru4b-ja/)\n\nHaru-4B is a low-latency and multilingual full-duplex continuous spoken dialogue foundation\nmodel: it listens and speaks at the same time, the way people do on a phone call. It is a\npretrained base model, released for research.\n\n- **Native full-duplex at 7.5 Hz.** Every 133 ms the model takes one frame of the user's audio\n  and produces one frame of its own audio and text. User audio, model audio and model text are\n  summed into a single position of the language model, so listening and speaking never wait\n  for each other.\n- **Continuous audio, one sampling step.** Audio is a 64-dimensional latent per frame. A small\n  MLP head with MeanFlow sampling produces it in one step from the language model's hidden\n  state; there is no separate audio transformer and there are no discrete audio tokens.\n- **Character and voice control.** A text card sets the character, a short reference clip sets\n  the voice.\n- **Multilingual.** English, Spanish, Portuguese, German, French, Chinese, Japanese, Russian\n  and Korean.\n\n<p align=\"center\">\n  <img src=\"assets/architecture.svg\" width=\"720\" alt=\"Haru-4B architecture: in every 133 ms frame, the user's speech latent, the model's previous text token and its previous speech latent are summed into one position of the language model, whose output predicts the next text token and the next speech latent.\">\n</p>\n\n## Usage\n\nThe code is at <https://github.com/higurashi-ai/Haru>: a PyTorch implementation with a\nweb demo, an MLX implementation with a native macOS app, and a plugin for serving with\nvLLM-Omni.\n\nWith an NVIDIA GPU (about 12 GB of memory):\n\n```bash\ngit clone https://github.com/higurashi-ai/Haru && cd Haru\npip install -e ./haru\npython -m haru.server --hf-repo higurashi-ai/Haru-4B\n```\n\nOpen <http://localhost:8998>, pick a character, give the model a voice, and talk. For low\nlatency, we recommend wired headphones and a wired microphone. Bluetooth devices add 100 ms or\nmore.\n\n**Bring your own voice.** Haru ships without voice clips. Upload or record a clip of the voice\nthe model should speak with: one speaker, 3 seconds to 3 minutes, clean speech. Only use voices\nyou have the right to use.\n\n```python\nfrom haru import DuplexSession, HaruModel\nfrom haru.audio import load_audio, prepare_reference\n\nmodel = HaruModel.from_pretrained(\"higurashi-ai/Haru-4B\")\nvoice = prepare_reference(load_audio(\"voice.wav\"))\nsession = DuplexSession(model, system_prompt=card, reference=voice)\n\nframe = session.start()                  # the model's first 133 ms: frame.audio, frame.text\nwhile not frame.done:\n    frame = session.step(user_audio)     # 3200 samples at 24 kHz in, 3200 out\n```\n\nThe system prompt is a character card with a fixed layout; the repository's README shows how\nto build one.\n\n## Files\n\n| File | Contents |\n| --- | --- |\n| `model.safetensors` | All weights (bfloat16): `lm.*` language model, `model_audio_proj.*` / `user_audio_proj.*` audio input projections, `head.*` MeanFlow head, `codec.*` audio codec |\n| `config.json` | Model configuration |\n| `tokenizer.json` | Text tokenizer |\n\n## Architecture\n\n| Part | Details |\n| --- | --- |\n| Language model | Qwen3.5-4B text backbone, 32 layers, hidden size 2560 |\n| Audio codec | VibeVoice acoustic tokenizer, causal, 24 kHz, 3200 samples per latent |\n| Audio head | 4-layer MLP, MeanFlow, 1 sampling step, guidance scale 1 to 2 (default 1.5) |\n| Frame rate | 7.5 Hz |\n\n## Limitations\n\nHaru-4B is a pretrained base model, released for research. It holds a natural conversation,\nbut it is not a reliable source of facts and does not follow instructions the way an assistant\ndoes. It can imitate the voice of a reference clip; only use voices you have the right to use.\n\n## License\n\nThe weights are released under the Apache License 2.0.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Microguy1/Haru-4B-DUPLI",
+      "author": "Microguy1",
+      "created_at": "2026-11-19",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "safetensors",
+        "haru",
+        "speech",
+        "full-duplex",
+        "speech-to-speech",
+        "audio-to-audio",
+        "en",
+        "es",
+        "pt",
+        "de",
+        "fr",
+        "zh",
+        "ja",
+        "ru",
+        "ko",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Microguy1/Haru-4B-DUPLI",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- en\n- es\n- pt\n- de\n- fr\n- zh\n- ja\n- ru\n- ko\npipeline_tag: audio-to-audio\ntags:\n- speech\n- full-duplex\n- speech-to-speech\n- haru\n---\n\n# Haru-4B\n\n[Code](https://github.com/higurashi-ai/Haru) ·\n[Technical blog](https://blog.higurashi.ai/melte/haru4b/) ·\n[Technical blog (Japanese)](https://blog.higurashi.ai/melte/haru4b-ja/)\n\nHaru-4B is a low-latency and multilingual full-duplex continuous spoken dialogue foundation\nmodel: it listens and speaks at the same time, the way people do on a phone call. It is a\npretrained base model, released for research.\n\n- **Native full-duplex at 7.5 Hz.** Every 133 ms the model takes one frame of the user's audio\n  and produces one frame of its own audio and text. User audio, model audio and model text are\n  summed into a single position of the language model, so listening and speaking never wait\n  for each other.\n- **Continuous audio, one sampling step.** Audio is a 64-dimensional latent per frame. A small\n  MLP head with MeanFlow sampling produces it in one step from the language model's hidden\n  state; there is no separate audio transformer and there are no discrete audio tokens.\n- **Character and voice control.** A text card sets the character, a short reference clip sets\n  the voice.\n- **Multilingual.** English, Spanish, Portuguese, German, French, Chinese, Japanese, Russian\n  and Korean.\n\n<p align=\"center\">\n  <img src=\"assets/architecture.svg\" width=\"720\" alt=\"Haru-4B architecture: in every 133 ms frame, the user's speech latent, the model's previous text token and its previous speech latent are summed into one position of the language model, whose output predicts the next text token and the next speech latent.\">\n</p>\n\n## Usage\n\nThe code is at <https://github.com/higurashi-ai/Haru>: a PyTorch implementation with a\nweb demo, an MLX implementation with a native macOS app, and a plugin for serving with\nvLLM-Omni.\n\nWith an NVIDIA GPU (about 12 GB of memory):\n\n```bash\ngit clone https://github.com/higurashi-ai/Haru && cd Haru\npip install -e ./haru\npython -m haru.server --hf-repo higurashi-ai/Haru-4B\n```\n\nOpen <http://localhost:8998>, pick a character, give the model a voice, and talk. For low\nlatency, we recommend wired headphones and a wired microphone. Bluetooth devices add 100 ms or\nmore.\n\n**Bring your own voice.** Haru ships without voice clips. Upload or record a clip of the voice\nthe model should speak with: one speaker, 3 seconds to 3 minutes, clean speech. Only use voices\nyou have the right to use.\n\n```python\nfrom haru import DuplexSession, HaruModel\nfrom haru.audio import load_audio, prepare_reference\n\nmodel = HaruModel.from_pretrained(\"higurashi-ai/Haru-4B\")\nvoice = prepare_reference(load_audio(\"voice.wav\"))\nsession = DuplexSession(model, system_prompt=card, reference=voice)\n\nframe = session.start()                  # the model's first 133 ms: frame.audio, frame.text\nwhile not frame.done:\n    frame = session.step(user_audio)     # 3200 samples at 24 kHz in, 3200 out\n```\n\nThe system prompt is a character card with a fixed layout; the repository's README shows how\nto build one.\n\n## Files\n\n| File | Contents |\n| --- | --- |\n| `model.safetensors` | All weights (bfloat16): `lm.*` language model, `model_audio_proj.*` / `user_audio_proj.*` audio input projections, `head.*` MeanFlow head, `codec.*` audio codec |\n| `config.json` | Model configuration |\n| `tokenizer.json` | Text tokenizer |\n\n## Architecture\n\n| Part | Details |\n| --- | --- |\n| Language model | Qwen3.5-4B text backbone, 32 layers, hidden size 2560 |\n| Audio codec | VibeVoice acoustic tokenizer, causal, 24 kHz, 3200 samples per latent |\n| Audio head | 4-layer MLP, MeanFlow, 1 sampling step, guidance scale 1 to 2 (default 1.5) |\n| Frame rate | 7.5 Hz |\n\n## Limitations\n\nHaru-4B is a pretrained base model, released for research. It holds a natural conversation,\nbut it is not a reliable source of facts and does not follow instructions the way an assistant\ndoes. It can imitate the voice of a reference clip; only use voices you have the right to use.\n\n## License\n\nThe weights are released under the Apache License 2.0.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "TheStinger/Ilaria_RVC",
+      "author": "TheStinger",
+      "created_at": "2026-11-01",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "voice-conversion",
+        "rvc",
+        "audio",
+        "text-to-speech",
+        "audio-to-audio",
+        "en",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/TheStinger/Ilaria_RVC",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 21,
+      "topic_scores": {
+        "audio_understanding_reasoning": 10,
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "Audio Understanding & Reasoning: audio-text",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ntc-ai/yue2-particle-sliders",
+      "author": "ntc-ai",
+      "created_at": "2026-09-17",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "yue2",
+        "lora",
+        "music-generation",
+        "comfyui",
+        "text-to-audio",
+        "en",
+        "base_model:m-a-p/YuE2-3B",
+        "base_model:adapter:m-a-p/YuE2-3B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 22,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/ntc-ai/yue2-particle-sliders",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- en\ntags:\n- yue2\n- lora\n- music-generation\n- comfyui\nbase_model: m-a-p/YuE2-3B\npipeline_tag: text-to-audio\n---\n\n# YuE2 Particle Sliders v2\n\n**One prompt. Sixteen ways to move the sound.** Native particle sliders for the voice and genre of YuE2-3B.\n\n[Particle sliders](#get-the-particle-sliders) · [Standard LoRAs](#get-the-distilled-loras) · [How it works](#how-the-sliders-learn)\n\n## Run in yue2.cpp / Ruach Studio\n\n[goldhub](https://huggingface.co/goldhub) (Viktor Zhuromskyy) converted all 16 sliders to the format of [yue2.cpp](https://github.com/ServeurpersoCom/yue2.cpp), the C++/GGML port of YuE2, keeping the slider values. They run in [Ruach Studio](https://github.com/igrbible/Ruach_Studio), credited to this repo. The converted files are hosted at [goldhub/Ruach_Studio_Models](https://huggingface.co/goldhub/Ruach_Studio_Models) under this repo's licence (CC BY-NC 4.0). Thanks to goldhub; see [discussion #3](https://huggingface.co/ntc-ai/yue2-particle-sliders/discussions/3).\n\n## Listen to v2\n\n**Hear the particle sliders.** Distill is the standard-LoRA approximation;\nOff is the base. Same caption, lyrics and seed; about 20 seconds per clip.\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Female</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/female/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/female/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/female/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Male</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/male/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/male/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/male/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Pop</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/pop/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/pop/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/pop/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Hip-Hop</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/hiphop/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/hiphop/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/hiphop/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">R&amp;B</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/rnb/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/rnb/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/rnb/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Indie Rock</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/indie-rock/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/indie-rock/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/indie-rock/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Pop Punk</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/pop-punk/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/pop-punk/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/pop-punk/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Metal</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/metal/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/metal/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/metal/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Country</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/country/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/country/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/country/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Acoustic Folk</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/acoustic-folk/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/acoustic-folk/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/acoustic-folk/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">House</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/house/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/house/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/house/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Disco Funk</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/disco-funk/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/disco-funk/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/disco-funk/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">K-pop</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/kpop/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/kpop/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/kpop/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Reggaeton</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/reggaeton/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/reggaeton/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/reggaeton/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Afrobeats</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/afrobeats/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/afrobeats/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/afrobeats/row1-off.mp3\"></audio></div>\n\n<div style=\"background-color:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-left:4px solid #8b5cf6;border-radius:12px;padding:16px;margin:20px 0\"><h3 style=\"margin:0 0 12px\">Lo-fi</h3><p style=\"margin:0 0 8px\"><strong>Particles · On</strong></p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/lofi/row1-teacher.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Distill · standard LoRA approximation</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/lofi/row1-plain-ar.mp3\"></audio><p style=\"margin:16px 0 8px;font-size:14px\">Off · base YuE2</p><audio controls preload=\"none\" style=\"display:block;width:100%;height:56px\" src=\"https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/samples/lofi/row1-off.mp3\"></audio></div>\n\n<details>\n<summary>Recording details and full samples</summary>\n\n[All recordings, captions and lyrics](SAMPLES.md)\n\nEach group uses seed **1709**. Particles and Distill apply the control during\ncomposition, so phrasing and arrangement can change. Female and Male use an\nopposite-voice caption at Off, then apply the target control to that same caption at On.\n\nThe gallery uses the second held-out prompt, a 500-token diagnostic guard\n(about 20 seconds), and 16 acoustic steps. Native GPU recordings are provided\nas original FLAC and MP3 listening copies. The sample folders retain both\nheld-out prompts, the original diagnostic recordings and caption/lyric\nsidecars. Full-song reliability and full ComfyUI\nGPU audio generation are unvalidated. Actual ComfyUI CPU loader, weight and\nparticle-integration checks pass for the released formats.\n\n</details>\n\n<a id=\"choose-an-adapter\"></a>\n\n## Get the particle sliders\n\nUse the native particle adapters for the sound featured above.\n\n**[Download all 16 particle sliders](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/particle-gmix-1600-v2/yue2-v2-particles.zip?download=true)**\n\n[ComfyUI custom node](https://huggingface.co/ntc-ai/yue2-particle-sliders/blob/main/comfyui/ntc_yue2_sliders/README.md) · [Particle workflow](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/comfyui/ntc_yue2_sliders/workflow.json?download=true) · [Native loading guide](USAGE.md)\n\nIn ComfyUI, load these weights with the **YuE2 Particle Slider** custom node.\nStrength 0 is Off; 1 is the trained positive endpoint; 0.5 is intermediate.\nNegative strengths are unsupported.\n\n## Particle controls and downloads\n\n| Control | Sound | Particle weights |\n|---|---|---|\n| Female | One adult female lead with clear melodic phrasing | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/female_step1600.safetensors?download=true) |\n| Male | One adult male lead with clear melodic phrasing | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/male_step1600.safetensors?download=true) |\n| Pop | Clear hooks, crisp drums and a polished chorus | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/pop_step1600.safetensors?download=true) |\n| Hip-Hop | Rapped verses, deep sub bass and nimble hats | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/hiphop_step1600.safetensors?download=true) |\n| R&B | Warm keys, deep pocket and fluid vocal phrasing | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/rnb_step1600.safetensors?download=true) |\n| Indie Rock | Chiming guitars, moving bass and a human drum kit | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/indie-rock_step1600.safetensors?download=true) |\n| Pop Punk | Palm-muted power chords and driving chorus drums | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/pop-punk_step1600.safetensors?download=true) |\n| Metal | Heavy guitar riffs, tight kicks and big melodic choruses | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/metal_step1600.safetensors?download=true) |\n| Country | Acoustic strum, twangy fills and an easy backbeat | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/country_step1600.safetensors?download=true) |\n| Acoustic Folk | Fingerpicked strings and a warm small-room performance | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/acoustic-folk_step1600.safetensors?download=true) |\n| House | Steady club kick, offbeat hats and a rolling bass line | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/house_step1600.safetensors?download=true) |\n| Disco Funk | Elastic bass, clipped guitar and bright dance-floor strings | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/disco-funk_step1600.safetensors?download=true) |\n| K-pop | Sharp synth hooks, tight edits and a big chorus lift | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/kpop_step1600.safetensors?download=true) |\n| Reggaeton | Dembow drums, rounded sub bass and clipped melodic hooks | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/reggaeton_step1600.safetensors?download=true) |\n| Afrobeats | Interlocking percussion, melodic bass and buoyant guitar | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/afrobeats_step1600.safetensors?download=true) |\n| Lo-fi | Soft swung drums, mellow keys and gentle tape warmth | [Download](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/weights/particle-gmix-1600-v2/lofi_step1600.safetensors?download=true) |\n\n## Get the distilled LoRAs\n\nThe convenient option for standard LoRA loaders. These rank-8 distills\napproximate the particle adapters and can change the sound. Compare the\nrecordings above before choosing.\n\n[Download all ComfyUI distills](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/yue2-v2-comfyui-loras.zip?download=true) · [Standard LoRA workflow](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/workflow.json?download=true) · [Method and measurements](DISTILLATION.md)\n\nPlace files ending in `_comfyui.safetensors` in `ComfyUI/models/loras/`.\nUse standard **Load LoRA**, MODEL **0**, CLIP **1**. QKV is fused to rank 24;\nO remains rank 8.\n\n| Control | ComfyUI LoRA | Native LoRA |\n|---|---|---|\n| Female | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/female_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/female_v2_distilled_rank8.safetensors?download=true) |\n| Male | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/male_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/male_v2_distilled_rank8.safetensors?download=true) |\n| Pop | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/pop_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/pop_v2_distilled_rank8.safetensors?download=true) |\n| Hip-Hop | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/hiphop_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/hiphop_v2_distilled_rank8.safetensors?download=true) |\n| R&B | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/rnb_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/rnb_v2_distilled_rank8.safetensors?download=true) |\n| Indie Rock | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/indie-rock_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/indie-rock_v2_distilled_rank8.safetensors?download=true) |\n| Pop Punk | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/pop-punk_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/pop-punk_v2_distilled_rank8.safetensors?download=true) |\n| Metal | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/metal_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/metal_v2_distilled_rank8.safetensors?download=true) |\n| Country | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/country_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/country_v2_distilled_rank8.safetensors?download=true) |\n| Acoustic Folk | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/acoustic-folk_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/acoustic-folk_v2_distilled_rank8.safetensors?download=true) |\n| House | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/house_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/house_v2_distilled_rank8.safetensors?download=true) |\n| Disco Funk | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/disco-funk_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/disco-funk_v2_distilled_rank8.safetensors?download=true) |\n| K-pop | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/kpop_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/kpop_v2_distilled_rank8.safetensors?download=true) |\n| Reggaeton | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/reggaeton_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/reggaeton_v2_distilled_rank8.safetensors?download=true) |\n| Afrobeats | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/afrobeats_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/afrobeats_v2_distilled_rank8.safetensors?download=true) |\n| Lo-fi | [ComfyUI](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/comfyui/lofi_v2_distilled_rank8_comfyui.safetensors?download=true) | [Native](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/distilled-rank8-v2/native/lofi_v2_distilled_rank8.safetensors?download=true) |\n\n## What changed in v2\n\nVersion 2 publishes the final **1,600-update EMA gmix teachers**, newly\ndistilled rank-8 ordinary LoRAs and ComfyUI exports for all 16 controls.\n\nThe inference branch still routes through 128 learned four-dimensional particles\nshared across 112 AR attention projections. Training now uses 512 seedbank\nsources per control, 32-token shared histories, paired-edit normalization and\nan eight-token, width-48 global-mix critic with four attention heads. Each\ncritic token mixes the complete hidden state. The bounded critic score,\npaired shared noise, lazy gradient cap and particle variance/covariance penalty\ndefine the adversarial game.\n\nThe catalog records the actual schedules: Metal retains the longer anneal;\nPop and Hip-Hop hold noise at 1; the remaining controls use the per-run 1.3×\nedit-RMS hold. The final noise does not reach 0.03. Female and Male use the\nretained expanded-cue h13 runs. All 16 are final EMA checkpoints at update\n1600. This is a fixed-budget release; no listening-quality selection is claimed.\nSee [the full equations](MATH.md) and [training traces](https://huggingface.co/ntc-ai/yue2-particle-sliders/tree/main/evidence/particle-gmix-1600-v2).\n\n## How the sliders learn\n\nVersion 2 contains the final EMA checkpoint at **1,600 updates** for all 16\ncontrols. The inference architecture remains the routed-particle adapter. The\ntraining formulation changes its training sources, error normalization, critic\nand noise schedule. The release also creates new ordinary rank-8 students from\nthese exact v2 teachers. The archived v1 math describes the earlier release.\nThe embedded adapter-format identifier still ends in `ar-v1`: its tensor\nlayout and inference architecture are unchanged. It is separate from the\nrelease version and the training formulation.\n\n### Why train with particles?\n\nThe aim is to learn a useful change in YuE2's behavior while keeping the base\nmodel frozen. **G** is the trainable slider attached to YuE2; **D** is a critic\nthat learns to recognize the remaining error against a positive-caption\nhidden target. G learns the correction through that adversarial signal.\n\nThe particle cloud gives the adapter a shared, trainable set of features to\ndraw on. Each projection routes its current input through those features,\nthen combines them with its own low-rank features using a nonlinear network.\nThe routing can change with the musical context. The variance/covariance\npenalty encourages the cloud to retain spread, while the critic gradient cap\ndiscourages overly steep critic responses. Together, these are\nthe design rationale for a more flexible adapter and a manageable training\ngame. Their separate effects require controlled experiments.\n\nThe recipe draws on [ParticleGAN at revision `441fdf42`](https://github.com/HyperGAN/ParticleGAN/tree/441fdf42dd2c0905af312a303add422f700c0ac2):\nlearned particles, relativistic adversarial losses, a gradient cap and\nvariance/covariance regularization. Our YuE2 adapter uses input-dependent\nrouting through the cloud inside transformer projections. The critic is\nneeded during training only; the cloud and routing remain in the native\nadapter at inference. Distillation learns an ordinary LoRA that approximates\nthis correction for standard loaders.\n\n### Historical evidence: why we pursued this recipe\n\nThe following graph is restored from **v1**. It compares earlier **Metal,\nseed 7** experiments using the same frozen base, four prompt/lyric pairs and\nrank-8 attention targets. It motivated further work on the particle recipe.\nThe v2 checkpoints use the revised formulation below and finish at 1,600\nupdates; they are not the runs plotted here.\n\n![Historical v1 training curves: generator adversarial loss and hidden-target cosine for the earlier ordinary-LoRA GAN and routed-particle recipes.](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/assets/gan-training-stability.svg)\n\n[Full-size graph](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/assets/gan-training-stability.svg) · [Measurements](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/evidence/gan-stability/training-curves.csv) · [Recipes and provenance](https://huggingface.co/ntc-ai/yue2-particle-sliders/blob/main/evidence/gan-stability/provenance.json)\n\n| Historical recipe | Updates | Peak G adversarial loss | Update at peak |\n|---|---:|---:|---:|\n| Ordinary LoRA, original GAN recipe | 600 | 549.76 | 373 |\n| Routed particles, v1 recipe | 1,200 | 35.66 | 945 |\n\nEvery logged update is shown without smoothing. The upper panel plots the\ngenerator's adversarial term, excluding particle regularization, on a log\nscale. The lower panel measures alignment with the hidden target. The earlier\nordinary-LoRA run has a large loss spike and loses alignment; the particle\nrun stays close to the target through the released **v1** Metal checkpoint.\nThe dashed line marks the end of the 600-update run.\n\nThis is evidence about the complete historical recipes. Their critics,\nnormalization, noise, batching, optimizer settings and regularization also\ndiffer, so the graph cannot attribute the change to particles alone or rank\naudio quality from loss values. The ordinary-LoRA curve is an earlier GAN\nexperiment; the current **Distill** adapters instead learn from particle\nteachers through regression and hidden-state matching.\n\n### Ordinary LoRA and the routed-particle adapter\n\n![Ordinary LoRA adds a fixed linear weight update. The routed-particle adapter adds input-dependent cloud routing and a nonlinear bridge before its up projection.](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/assets/lora-vs-particle.svg)\n\n[Full-size architecture diagram](https://huggingface.co/ntc-ai/yue2-particle-sliders/resolve/main/assets/lora-vs-particle.svg)\n\nBoth paths add a strength-scaled correction to the frozen projection:\n\n$$\n\\begin{aligned}\ny&=W_0x+s\\Delta(x),\\\\\n\\Delta_{\\mathrm{LoRA}}(x)&=BAx,\\\\\n\\Delta_{\\mathrm{particle}}(x)&=U\\phi([Vx;z(x)]).\n\\end{aligned}\n$$\n\nAn ordinary LoRA compresses the input with A and expands it with B.\nTheir product is a fixed matrix, so the update can be merged as W₀ + sBA.\nThe particle adapter also routes the compressed input through its cloud to\nobtain z(x). Its nonlinear bridge combines these features before U.\nThe extra capability is nonlinear computation inside the adapter itself;\nthe full base model remains nonlinear in both cases.\n\n**Distill** learns separate matrices A and B to approximate the teacher's\nwhole correction on representative activations. It trades that nonlinear\ninference path for the simple two-matrix update supported by ordinary LoRA\nloaders. The architecture diagram applies to both v1 and v2.\n\n### Inference: a nonlinear correction in AR attention\n\nYuE2 has 28 autoregressive layers. Each slider modifies their Q, K, V and O\nprojections: 112 branches, each with rank/alpha 8/8. NAR attention, both MLP\npaths, embeddings, normalization, output head and VAE remain frozen. During\nnative generation the adapter runs in semantic composition, and its hooks are\nremoved before acoustic synthesis.\n\nFor input column vector x, a branch uses its own down projection V, router\nR, nonlinear bridge φ and up projection U. The learned cloud P contains\n128 four-dimensional vectors shared across this slider's branches:\n\n$$\n\\begin{aligned}\na&=Vx,\\qquad q=R(a),\\\\\nw&=\\operatorname{softmax}(Pq/\\sqrt4),\\\\\nz&=P^Tw,\\\\\ny&=W_0x+s\\,U\\phi([a;z]).\n\\end{aligned}\n$$\n\nThe router has three width-16 hidden layers; the bridge has three width-48\nhidden layers. Both use LeakyReLU with slope 0.2. The cloud is learned once\nper slider and stays fixed at inference; its mixing weights depend on each\ninput. Strength zero bypasses the branch exactly. Strength one is the trained\npositive endpoint. Intermediate strengths scale the correction; negative\nstrengths are unsupported. This nonlinear adapter cannot be merged into a\nfixed base-weight update. The critic is used only in training.\n\n### Seedbank supervision\n\nEach of four sound-only caption/lyric templates supplies **128 distinct\ncontinuation seeds**, giving 512 training sources. For each source the frozen\nbase generates a **32-token neutral history**. The same history is appended\nto the neutral and positive prefixes. Their final hidden states are nᵢ and\ntᵢ; the student on the neutral prefix and that history produces gᵢ.\nThe target is the raw positive state tᵢ. This is supervision at the end of\neach sampled history, rather than a loss on every music token.\n\nThe generator and critic independently draw batches of eight sources with\nreplacement. Repeated sources share a model forward within a phase but receive\nindependent noise draws. The run seed is 7. The kept Female and Male runs use\nthe expanded vocal cues and the h13 noise hold recorded in their metadata.\nThe failed one-word Male run and the superseded gender candidates are excluded.\n\n### Normalize the paired edit\n\nLet eᵢ = tᵢ − nᵢ and H = 2048. Compute sample standard deviations over the\n512 paired edits, then choose a scalar gain so their median normalized row\nRMS is one:\n\n$$\n\\begin{aligned}\nd_j&=\\max(\\operatorname{std}_i(e_{ij}),10^{-4}),\\\\\n\\rho_i&=\\sqrt{\\frac1H\\sum_j(e_{ij}/d_j)^2},\\\\\nm&=\\max(\\operatorname{median}_i\\rho_i,10^{-4}),\\\\\ns_j&=m\\,d_j,\\\\\nE&=\\sqrt{\\frac1{NH}\\sum_{i,j}(e_{ij}/s_j)^2}.\n\\end{aligned}\n$$\n\nThe implementation subtracts the mean positive target from each hidden state\nand divides coordinatewise by s. The mean cancels in the paired\nerror, so the critic sees (gᵢ − tᵢ) / s. In v1 the coordinate scales came\nfrom absolute target states. Here they come from the desired edit, so small\nvocal edits are not measured against the much larger spread of unrelated\nhidden states. Median row RMS is one; overall RMS E generally differs from\none. `teacher-audit.json` records both the normalization and initial noise.\n\n### Paired-error game and noise\n\nFor each source draw one shared Gaussian vector for its real/fake pair:\n\n$$\n\\begin{aligned}\n\\epsilon_i&\\sim\\mathcal N(0,\\sigma_t^2I),\\\\\nr_i&=\\epsilon_i,\\\\\nf_i&=\\epsilon_i+(g_i-t_i)/s,\\\\\n\\sigma_t^{\\rm raw}&=\\sigma_0\n\\left(\\frac{0.03}{\\sigma_0}\\right)^{\\min(t/T,1)},\\\\\n\\sigma_0&=\\max(E/0.28,0.03).\n\\end{aligned}\n$$\n\nThe v2 set spans three recorded schedules. **Metal** has T = 8000 and its\noriginal exponential anneal (the final recorded noise is about 1.537).\n**Pop and Hip-Hop** have T = 1600 with a fixed hold of 1; Pop resumed with\nthe hold after update 462. The other 13 controls, including both kept gender\nruns, use T = 1600 and hold the scheduled noise at a minimum of 1.3E.\nFor those holds the exponential start exceeds the hold. Consequently the\nrelease does **not** reach noise 0.03 at update 1600. Per-run traces and\nnormalization audits are included in `evidence/particle-gmix-1600-v2/`.\n\n### Global-mix critic\n\nThe critic learns a linear map from all 2048 error coordinates into eight\n48-dimensional tokens and adds learned token positions. One four-head\nattention block processes those tokens. Each token can mix the entire hidden\nstate; contiguous hidden coordinates are not assumed to be meaningful patches.\nThe block uses RMS normalization, residual self-attention and a residual MLP.\nAfterward the critic independently RMS-normalizes the mean and elementwise\nmaximum across tokens, concatenates them, and predicts a bounded score:\n\n$$\n\\begin{aligned}\nX&=\\operatorname{reshape}_{8\\times48}(Ae+b)+P_D,\\\\\nZ&=\\operatorname{AttentionBlock}(X),\\\\\nv&=\\begin{bmatrix}\n\\operatorname{RMSNorm}(\\operatorname{mean}Z)\\\\\n\\operatorname{RMSNorm}(\\operatorname{max}Z)\n\\end{bmatrix},\\\\\nD(e)&=8\\tanh\\left(\\frac{u^Tv+b_D}{8}\\right).\n\\end{aligned}\n$$\n\nThe actual checkpoint setting is `gmix_t8_w48_l1`, with four heads and score\nbound 8. Later trainer defaults are not a description of these trained files.\n\n### Objectives, gradient cap and moving average\n\nUsing paired relativistic logistic losses:\n\n$$\n\\begin{aligned}\nL_D&=\\mathbb E\\,\\operatorname{softplus}(D(f)-D(r))+R_D,\\\\\nL_G&=\\mathbb E\\,\\operatorname{softplus}(D(r)-D(f))+\\mathcal V(P_S).\n\\end{aligned}\n$$\n\nEvery fourth update applies the lazy gradient cap\n\n$$\n\\begin{aligned}\nc(v)&=\\max(0,\\|\\nabla_vD\\|_2-1)^2,\\\\\nR_D&=4\\cdot\\frac12\\left(\\mathbb E_r c(r)+\\mathbb E_f c(f)\\right).\n\\end{aligned}\n$$\n\nIt is zero on other updates. The factor four compensates for the lazy\nfrequency. A fresh subset of 64 particles, sampled without replacement, gives\nsample covariance C with denominator 63. Its variance/covariance penalty is\n\n$$\n\\begin{aligned}\n\\mathcal V(P_S)={}&\\frac14\\sum_{j=1}^4\n\\max(0,1-\\sqrt{C_{jj}+10^{-4}})\\\\\n&+\\frac14\\sum_{j\\ne k}C_{jk}^2.\n\\end{aligned}\n$$\n\nThere is no extra output MSE, lyric preservation or ending loss in teacher\ntraining. Adam uses betas (0, 0.999), zero weight decay and constant rates:\n0.0006 for the adapter branches, 0.006 for the shared particles, and 0.0009 for\nthe critic. After each update all learned adapter parameters enter an EMA:\n\n$$\\bar\\theta_t=0.995\\bar\\theta_{t-1}+0.005\\theta_t.$$\n\nThe release uses final EMA weights, not a listening-quality selection. Training\ncosines and critic losses diagnose hidden-state optimization; they do not\nestablish perceptual quality, lyric preservation or natural endings.\n\n### Ordinary LoRA distillation and ComfyUI\n\nFor each exact v2 teacher, regression fits a rank-8 linear down projection to\nits routed features while retaining its up projection. Hidden-state refinement\nthen optimizes both matrices, selecting on a reserved training lyric sheet.\nThe two evaluation lyric sheets stay excluded from fitting and selection.\nSee [DISTILLATION.md](DISTILLATION.md) for the regression, refinement and\nheld-out error equations and the resulting measurements.\n\nAn ordinary student adds sBAx. ComfyUI fuses Q/K/V by concatenating their\ndown matrices and placing their up matrices on a block diagonal: fused QKV\nrank 24, O rank 8, with alpha/rank preserved. Conversion is exact before BF16\nrounding; teacher-to-student distillation is an approximation. Standard\n**Load LoRA**, MODEL **0**, CLIP **1**, also affects acoustic-prefix processing.\nThe native particle custom node applies its correction only during AR\ngeneration. The gallery's Distill examples apply the ordinary LoRA only during\nautoregressive composition.\n\n## Reproduction and previous versions\n\n[Release tools](release-tools/README.md) create the ordinary distills from the\nversioned teacher catalog, then convert and validate the exports. The\n[v2 manifest](https://huggingface.co/ntc-ai/yue2-particle-sliders/blob/main/particle-gmix-1600-v2/release-manifest.json) records file hashes;\neach student records its exact teacher hash. Training and evaluation prompts\ncontain sound descriptions. Weights retain CC BY-NC 4.0 terms.\n\n[V1 particle weights](https://huggingface.co/ntc-ai/yue2-particle-sliders/tree/main/weights/particle-1200-v1) · [V1 ordinary LoRAs](https://huggingface.co/ntc-ai/yue2-particle-sliders/tree/main/distilled-rank8-v1) · [V1 README and math at their original revision](https://huggingface.co/ntc-ai/yue2-particle-sliders/tree/f7c2e7ab024b6505f009ea9c6f7deb36e3373bc0).\nThe [live Space](https://huggingface.co/spaces/ntc-ai/yue2-particle-sliders) continues to run its pinned v1 particle deployment.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "m-a-p/YuE2-3B"
+      ],
+      "variants": [],
+      "score": 20,
+      "topic_scores": {
+        "generative_music_audio": 18
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, audio generation, text-to-audio (pipeline tag)",
+        "declares license cc-by-nc-4.0",
+        "community likes 22"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "FireH2O/MrJMThaiTTS_CT",
+      "author": "FireH2O",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "safetensors",
+        "thai",
+        "voice-cloning",
+        "text-to-speech",
+        "th",
+        "dataset:pythainlp/som_tts_dataset",
+        "dataset:CMKL/Porjai-Thai-voice-dataset-central",
+        "dataset:airesearch/thai-ser",
+        "arxiv:2604.27607",
+        "base_model:kyutai/pocket-tts",
+        "base_model:finetune:kyutai/pocket-tts",
+        "license:cc-by-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "cc-by-sa-4.0",
+      "gated": true,
+      "url": "https://huggingface.co/FireH2O/MrJMThaiTTS_CT",
+      "card_text": "",
+      "arxiv_ids": [
+        "2604.27607"
+      ],
+      "datasets": [
+        "pythainlp/som_tts_dataset",
+        "CMKL/Porjai-Thai-voice-dataset-central",
+        "airesearch/thai-ser"
+      ],
+      "base_models": [
+        "kyutai/pocket-tts"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "model card links an arXiv paper",
+        "declares license cc-by-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mehdi-hf/chatterbox-farsi",
+      "author": "mehdi-hf",
+      "created_at": "2026-11-11",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "chatterbox",
+        "text-to-speech",
+        "persian",
+        "farsi",
+        "voice-cloning",
+        "fa",
+        "base_model:ResembleAI/chatterbox",
+        "base_model:finetune:ResembleAI/chatterbox",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 52,
+      "trending_score": 0.0,
+      "library_name": "chatterbox",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/mehdi-hf/chatterbox-farsi",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ResembleAI/chatterbox"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other",
+        "community likes 52"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "ishiki-labs/ishiki-deepfake-0.5",
+      "author": "ishiki-labs",
+      "created_at": "2026-11-18",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "safetensors",
+        "ishiki_deepfake_0_5",
+        "audio",
+        "audio-deepfake-detection",
+        "anti-spoofing",
+        "asvspoof",
+        "audio-classification",
+        "en",
+        "zh",
+        "de",
+        "fr",
+        "es",
+        "arxiv:2202.12233",
+        "arxiv:1911.01601",
+        "arxiv:2504.05657",
+        "arxiv:2109.00537",
+        "arxiv:2209.08000",
+        "base_model:facebook/wav2vec2-xls-r-300m",
+        "base_model:finetune:facebook/wav2vec2-xls-r-300m",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 17,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/ishiki-labs/ishiki-deepfake-0.5",
+      "card_text": "---\nlicense: mit\npipeline_tag: audio-classification\nlanguage:\n  - en\n  - zh\n  - de\n  - fr\n  - es\nbase_model: facebook/wav2vec2-xls-r-300m\ntags:\n  - audio\n  - audio-deepfake-detection\n  - anti-spoofing\n  - asvspoof\n  - safetensors\n---\n\n# Ishiki-Deepfake-0.5 (`ishiki-labs/ishiki-deepfake-0.5`)\n\n**`ishiki-labs/ishiki-deepfake-0.5`** is an open-weights audio deepfake and speech anti-spoofing detector developed by **[Ishiki Labs](https://ishikilabs.ai)**, initialized from the **[`Wav2Vec2-XLS-R-300M`](https://huggingface.co/facebook/wav2vec2-xls-r-300m) + [`AASIST` (`TakHemlata/SSL_Anti-spoofing`)](https://github.com/TakHemlata/SSL_Anti-spoofing)** (`318M` parameters, [Paper](https://arxiv.org/pdf/2202.12233)) base checkpoint.\n\nThis repository provides **two model checkpoints** and the **forward-pass calibration dataset** ([`distilled_dataset/`](distilled_dataset/)):\n1. **[`86.8M` Compact Checkpoint](model.safetensors)** (`354 MB`, `variant=\"86.8M\"`, default).\n2. **[`318M` Full Checkpoint](model_318m_full.safetensors)** (`1.27 GB`, `variant=\"318M\"`).\n3. **[`distilled_dataset/`](distilled_dataset/)**: The forward-pass manifests and extracted feature/waveform bundles (`12.4K` main-fit rows + `3.2K` calibration rows + `2.4K` multi-codec rows + paired acoustic probes).\n\n---\n\n## Evaluation Benchmark Results (`86.8M` Compact & `318M` Full vs. Base Checkpoint & Published SOTA)\n\nLower Equal Error Rate (**EER %**) and higher **ROC-AUC** indicate stronger detection accuracy.\n\n| Dataset & Official Paper | Partition (Trials) | Base ([`W2V2-AASIST`](https://arxiv.org/pdf/2202.12233), `318M`) EER / AUC | Published / Leaderboard Reference SOTA (Method, Params, EER / AUC) | Did Reference SOTA Train on This Dataset? | What Our Forward-Pass Set Used ([`distilled_dataset/`](distilled_dataset/)) | Ours ([`318M` Full](model_318m_full.safetensors)) EER / AUC | Ours ([`86.8M` Compact](model.safetensors)) EER / AUC |\n| :--- | :--- | :---: | :--- | :--- | :--- | :---: | :---: |\n| **[ASVspoof 2019 LA](https://datashare.ed.ac.uk/items/31074a11-b6f6-4e92-a4ad-07093f8c0c45)** · [[Paper]](https://arxiv.org/abs/1911.01601) | Eval (`71.2K`) | `0.22%` / `0.9997` | [`LaST-Net`](https://huggingface.co/datasets/SpeechAntiSpoofingBenchmarks/ASVspoof2019_LA/resolve/5215859c8597f5d7ca746469453c1db8079b738b/submissions/last-net.yaml) (`317M`): **`0.09%`** · [`Nes2NetX`](https://arxiv.org/pdf/2504.05657) (`318M`): `0.12%` | **Yes** (`25.4K` train + `24.8K` dev) | `3.0K` train + `600` dev (`0` eval) | `0.12%` / `0.99999` | `0.16%` / `0.99996` |\n| **[ASVspoof 2021 LA](https://zenodo.org/records/4837263)** · [[Paper]](https://arxiv.org/abs/2109.00537) | Eval (`148.2K`) | `8.11%` / `0.9779` | [`XLS-R Conformer`](https://www.isca-archive.org/interspeech_2025/kim25j_interspeech.pdf): **`0.69%`** | **Trained on `ASV19 LA` train** | **`0` clips** (uses `ASV19` + paired PSTN probes) | `1.42%` / `0.9964` | `1.51%` / `0.9959` |\n| **[ASVspoof 2021 DF](https://zenodo.org/records/4837263)** · [[Paper]](https://arxiv.org/abs/2109.00537) | Eval (`533.9K`) | `6.63%` / `8.32%` | [`VeriSpoof-Base`](https://arxiv.org/html/2611.04634v1) (`2.85B`): **`0.97%`** · [`XLSR-Mamba`](https://ieeexplore.ieee.org/document/10909468) (`319M`): `1.88%` | **Multi-corpus** (8 corpora incl. `ASV19` & `ASV5`) | **`0` clips** (uses `ASV19`/`ASV5` + paired codec probes) | `1.98%` / `0.9983` | `2.19%` / `0.9980` |\n| **[In-The-Wild (ITW)](https://deepfake-total.com/in_the_wild)** · [[Paper]](https://www.isca-archive.org/interspeech_2022/muller22_interspeech.pdf) | Full (`31.8K`) | `11.22%` / `0.9572` | [`UTCN-XLSR2B`](https://huggingface.co/datasets/SpeechAntiSpoofingBenchmarks/InTheWild/resolve/e861d1f7af89260574ed4c2bbc2c6be24c103f13/submissions/utcn-xlsr2b-logreg.yaml) (`433M`): **`0.37%`** · [`DF-Arena-1B`](https://huggingface.co/Speech-Arena-2025/DF_Arena_1B_V_1) (`1B`): `0.91%` · [`XLSR-Mamba`](https://ieeexplore.ieee.org/document/10909468) (`319M`): `6.71%` | **Multi-corpus** (7 corpora + `ITW` selection) | **`0` clips** in forward-pass set | `2.51%` / `0.9958` | `2.72%` / `0.9951` |\n| **[DECRO (EN + ZH)](https://zenodo.org/records/7603208)** · [[Paper]](https://github.com/petrichorwq/DECRO-dataset) | Eval (`37.3K`) | `9.57%` / `0.9583` | [`Spectra-AASIST`](https://huggingface.co/datasets/SpeechAntiSpoofingBenchmarks/DECRO/resolve/7938186b3ed84b9802c17085d5151df7b299d8d7/submissions/spectra-aasist.yaml) (`316M`): **`0.17%`** | **Undisclosed** (Arena submission) | **`0` DECRO clips** (`1.28K` `CFAD` Chinese in ancestor) | `1.30%` / `0.9986` | `1.41%` / `0.9980` |\n| **[ASVspoof 5 (Track 1)](https://huggingface.co/datasets/jungjee/asvspoof5)** · [[Paper]](https://www.isca-archive.org/asvspoof_2024/wang24_asvspoof.pdf) | Eval (`680.8K`) | `16.25%` / `0.9003` | [`Modulate VELMA-2`](https://speech-arena-2025-speech-df-arena.hf.space/) (`316M`, Prop.): **`0.38%`** · [`NSGA-II Fusion`](https://arxiv.org/html/2604.01330) (`6.6B`, Open): **`2.37%`** | **Yes** (full `ASV5` train + dev) | `5.0K` train + `3.44K` unique dev (`0` eval) | `5.73%` / `0.9856` | `5.80%` / `0.9857` |\n| **[DFADD](https://huggingface.co/datasets/isjwdu/DFADD)** · [[Paper]](https://arxiv.org/html/2409.08731) | Test (`3.8K`) | `11.88%` / `0.9436` | [`VeriSpoof-Base`](https://arxiv.org/html/2611.04634v1) (`2.85B`): **`0.00%`** · [`XLSR+SLS`](https://openreview.net/pdf?id=acJMIXJg2u) (`340M`): `7.54%` | **Yes** (full `DFADD` train) | `704` train + `350` dev aliases | `0.27%` / `0.99995` | `0.53%` / `0.99991` |\n| **[TIMIT-TTS (Clean)](https://zenodo.org/records/6560159)** · [[Paper]](https://arxiv.org/pdf/2209.08000v1) | Full (`20.2K`) | `2.09%` / `0.9954` | [`Standard MoE`](https://arxiv.org/html/2409.16077): `0.93%` (`0.9512` AUC) | **No** (unseen test corpus) | **`0` clips** (completely unseen) | **`0.01%`** / **`0.999998`** | `0.03%` / `0.999997` |\n| **[TIMIT-TTS (Time-Warped DTW)](https://zenodo.org/records/6560159)** · [[Paper]](https://arxiv.org/pdf/2209.08000v1) | Full (`20.2K`) | `10.51%` / `0.9535` | [`RawNet2` Baseline](https://arxiv.org/pdf/2209.08000v1) (`17.6M`): `0.7800` AUC | **No** (`ASV19`-trained) | **`0` clips** (completely unseen) | **`0.69%`** / `0.9995` | `0.93%` / `0.9997` |\n| **[TIMIT-TTS (Augmented)](https://zenodo.org/records/6560159)** · [[Paper]](https://arxiv.org/pdf/2209.08000v1) | Orig Real (`20.2K`) | `2.14%` / `0.9946` | [`RawNet2` Baseline](https://arxiv.org/pdf/2209.08000v1) (`17.6M`): `0.9300` AUC | **No** (`ASV19`-trained) | **`0` clips** (completely unseen) | **`0.46%`** / **`0.9996`** | `1.17%` / `0.9994` |\n| **[TIMIT-TTS (DTW + Augmented)](https://zenodo.org/records/6560159)** · [[Paper]](https://arxiv.org/pdf/2209.08000v1) | Orig Real (`20.2K`) | `12.84%` / `0.9381` | [`XLS-R 2B + LogReg`](https://www.isca-archive.org/interspeech_2024/pascu24_interspeech.pdf) (`2B`): `3.60%` | **No** (`ASV19` train + dev) | **`0` clips** (completely unseen) | **`1.85%`** / `0.9972` | `1.86%` / `0.9983` |\n| **[MULTISpoof](https://huggingface.co/datasets/purdueviperlab/MULTISpoof)** · [[Paper]](https://upcommons.upc.edu/entities/publication/63f9ddc9-d4b4-4965-be84-b7ce669dded1) | Test (`43.3K`) | `14.62%` / `0.9214` | [Asilomar 2026 Paper](https://cmsworkshops.com/Asilomar2026/view_paper.php?PaperNum=1333) (no public test table) | N/A | `1.33K` val clips in ancestor (`0` test) | **`2.94%`** / **`0.9964`** | `3.32%` / `0.9955` |\n| **[Fake-or-Real (`for-norm`)](https://bil.eecs.yorku.ca/datasets/)** · [[Paper]](https://www.isca-archive.org/interspeech_2019/reimao19_interspeech.pdf) | Testing (`4.6K`) | `7.42%` / `0.9816` | [`VeriSpoof-Plus`](https://arxiv.org/html/2611.04634v1) (`2.85B`): **`0.09%`** · [`XLSR+SLS`](https://openreview.net/pdf?id=acJMIXJg2u) (`340M`): `5.08%` | **Yes** (full `for-norm` train) | **`0` clips** (completely unseen) | `3.13%` / `0.9953` | `4.29%` / `0.9912` |\n| **[MLAAD](https://huggingface.co/datasets/mueller91/MLAAD)** · [[Paper]](https://arxiv.org/html/2401.09512) | Eval (`64.0K`) | `15.40%` / `0.9120` | [`AASIST Voiced/Unvoiced`](https://arxiv.org/html/2608.24639): **`5.82%`** · [`WavLM-LDA`](https://aclanthology.org/2026.trustaudio-1.1.pdf): `10.00%` | **Yes** (custom `MLAAD` splits / CV) | `664` train + `200` dev aliases | `6.84%` / `0.9785` | `7.51%` / `0.9730` |\n| **[DiffSSD](https://huggingface.co/datasets/purdueviperlab/diffssd)** · [[Paper]](https://arxiv.org/html/2409.13049) | Test (`54.6K`) | `18.90%` / `0.8840` | [`Wiener-Hopf 2D CNN`](https://arxiv.org/html/2607.12584) (`0.42M`): **`2.95%`** · [`Wav2Vec2` Baseline](https://arxiv.org/html/2409.13049): `3.00%` | **Yes** (full `~70K` `DiffSSD` train) | `755` train + `249` val aliases | `8.92%` / `0.9742` | `9.77%` / `0.9691` |\n\n---\n\n## Standalone Quickstart (`86.8M` Compact & `318M` Full Variants)\n\n```python\nimport sys\nimport numpy as np\nfrom huggingface_hub import snapshot_download\n\nrepo_dir = snapshot_download(\"ishiki-labs/ishiki-deepfake-0.5\")\nsys.path.insert(0, repo_dir)\nfrom inference import create_predictor\n\n# Load either \"86.8M\" (default compact model) or \"318M\" (full model)\npredict_86m  = create_predictor(repo_dir, device=\"cuda:0\", batch_size=32, variant=\"86.8M\")\npredict_318m = create_predictor(repo_dir, device=\"cuda:0\", batch_size=32, variant=\"318M\")\n\nwavs_16khz = np.random.randn(4, 64600).astype(np.float32) * 0.2\nprint(\"86.8M Compact scores:\", predict_86m(wavs_16khz))\nprint(\"318M Full scores    :\", predict_318m(wavs_16khz))\n```\n",
+      "arxiv_ids": [
+        "2202.12233",
+        "1911.01601",
+        "2504.05657",
+        "2109.00537",
+        "2209.08000"
+      ],
+      "datasets": [],
+      "base_models": [
+        "facebook/wav2vec2-xls-r-300m"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "model card links an arXiv paper",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "RetentionLabs/personaplex-7b-extended",
+      "author": "RetentionLabs",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "personaplex",
+        "text-generation",
+        "speech-to-speech",
+        "full-duplex",
+        "long-context",
+        "audio-to-audio",
+        "en",
+        "arxiv:2401.01325",
+        "base_model:nvidia/personaplex-7b-v1",
+        "base_model:finetune:nvidia/personaplex-7b-v1",
+        "license:other",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 2,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/RetentionLabs/personaplex-7b-extended",
+      "card_text": "",
+      "arxiv_ids": [
+        "2401.01325"
+      ],
+      "datasets": [],
+      "base_models": [
+        "nvidia/personaplex-7b-v1"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "model card links an arXiv paper",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "mimba/mimba-tune",
+      "author": "mimba",
+      "created_at": "2026-11-07",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "peft",
+        "safetensors",
+        "music",
+        "music-generation",
+        "lora",
+        "ace-step",
+        "african-music",
+        "bikutsi",
+        "amapiano",
+        "zouk",
+        "sega",
+        "makossa",
+        "afrobeat",
+        "text-to-audio",
+        "fr",
+        "en",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:adapter:ACE-Step/Ace-Step1.5",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "peft",
+      "license": "other",
+      "gated": true,
+      "url": "https://huggingface.co/mimba/mimba-tune",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/Ace-Step1.5"
+      ],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "neurarank/voice-ai-s2s",
+      "author": "neurarank",
+      "created_at": "2026-11-17",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "voice_s2s",
+        "feature-extraction",
+        "speech-to-speech",
+        "voice-ai",
+        "full-duplex",
+        "multimodal",
+        "moe",
+        "audio",
+        "model-context-protocol",
+        "mcp",
+        "causal-conformer",
+        "acoustic-rvq",
+        "cognitive-runtime",
+        "docker",
+        "gradio",
+        "pytorch",
+        "audio-to-audio",
+        "custom_code",
+        "vi",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 109,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/neurarank/voice-ai-s2s",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "hhhhaura/purplemusic-500k",
+      "author": "hhhhaura",
+      "created_at": "2026-11-19",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "pytorch",
+        "music-generation",
+        "flow-matching",
+        "repa",
+        "text-to-audio",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "unknown",
+      "gated": true,
+      "url": "https://huggingface.co/hhhhaura/purplemusic-500k",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "amosgyamfi/Sophon-Realtime-4B-Flash-CoreAI",
+      "author": "amosgyamfi",
+      "created_at": "2026-11-19",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "core-ai",
+        "speech-to-speech",
+        "voice-chat",
+        "turn-taking",
+        "qwen3",
+        "audio-to-audio",
+        "en",
+        "zh",
+        "base_model:adventists-ai/Sophon-Realtime-4B-Flash",
+        "base_model:finetune:adventists-ai/Sophon-Realtime-4B-Flash",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/amosgyamfi/Sophon-Realtime-4B-Flash-CoreAI",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/Sophon-Realtime-4B-Flash"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "KaleComputer/kale-tts-1-nano",
+      "author": "KaleComputer",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "style_text_to_speech_2",
+        "text-to-speech",
+        "tts",
+        "small",
+        "cpu",
+        "on-device",
+        "synthetic-voices",
+        "based-on-maya",
+        "en",
+        "dataset:KaleComputer/kale-tts-1-data",
+        "base_model:KaleComputer/kale-tts-1-base",
+        "base_model:finetune:KaleComputer/kale-tts-1-base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 129,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "onnx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/KaleComputer/kale-tts-1-nano",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "KaleComputer/kale-tts-1-data"
+      ],
+      "base_models": [
+        "KaleComputer/kale-tts-1-base"
+      ],
+      "variants": [],
+      "score": 11,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "rodbiren/kokoro_parakeet_aio_models",
+      "author": "rodbiren",
+      "created_at": "2026-10-02",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "text-to-speech",
+        "automatic-speech-recognition",
+        "kokoro",
+        "parakeet",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/rodbiren/kokoro_parakeet_aio_models",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 9,
+      "topic_scores": {
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), automatic speech recognition",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "HeartMuLa/HeartMuLa-oss-3B",
+      "author": "HeartMuLa",
+      "created_at": "2026-01-14",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "safetensors",
+        "heartmula",
+        "music",
+        "art",
+        "text-to-audio",
+        "multilingual",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "es",
+        "arxiv:2601.10547",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 779,
+      "likes": 262,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/HeartMuLa/HeartMuLa-oss-3B",
+      "card_text": "",
+      "arxiv_ids": [
+        "2601.10547"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 7,
+      "topic_scores": {
+        "generative_music_audio": 3
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "community likes 262"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "HeartMuLa/HeartMuLa-oss-3B-happy-new-year",
+      "author": "HeartMuLa",
+      "created_at": "2026-02-13",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "safetensors",
+        "heartmula",
+        "music",
+        "art",
+        "text-to-audio",
+        "multilingual",
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "es",
+        "arxiv:2601.10547",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 3158,
+      "likes": 67,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/HeartMuLa/HeartMuLa-oss-3B-happy-new-year",
+      "card_text": "",
+      "arxiv_ids": [
+        "2601.10547"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 7,
+      "topic_scores": {
+        "generative_music_audio": 3
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio (pipeline tag)",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "community likes 67"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "litert-community/MediaPipe-AudioClassifier-YAMNet",
+      "author": "litert-community",
+      "created_at": "2026-11-18",
+      "last_modified": "2026-11-19",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "litert",
+        "tflite",
+        "mediapipe",
+        "audio-classification",
+        "on-device",
+        "android",
+        "ios",
+        "web",
+        "python",
+        "flutter",
+        "audio",
+        "audioset",
+        "yamnet",
+        "sound-event-detection",
+        "fp32",
+        "int8",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "litert",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/litert-community/MediaPipe-AudioClassifier-YAMNet",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 7,
+      "topic_scores": {
+        "audio_understanding_reasoning": 6
+      },
+      "matched_topics": [
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio Understanding & Reasoning: sound event detection",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
