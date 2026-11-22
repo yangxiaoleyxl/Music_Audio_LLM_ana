@@ -1,0 +1,827 @@
+{
+  "generated_at": "2026-11-22",
+  "window_start": "2026-11-15",
+  "source_counts": {
+    "arxiv": 57,
+    "semantic_scholar": 57
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "semantic_scholar",
+      "source_id": "732d04f2434a6412a2dec470236e515c1704414b",
+      "title": "Video-Based Automated Seizure Classification Using Multimodal Large Language Models.",
+      "abstract": "OBJECTIVE Accurately distinguishing between epileptic seizures (ES) and nonepileptic seizures (NES) remains a significant clinical challenge, typically requiring resource-intensive inpatient video-EEG monitoring. We developed a multimodal large language model (MLLM)-based framework for automated extraction of semiological features from seizure videos, followed by classification of events as ES or NES. METHODS We analyzed 90 seizure videos (45 ES, 45 NES) from 29 patients in an epilepsy monitoring unit. Each event was labeled using expert-reviewed video-EEG and annotated for 24 clinically relevant semiological features. An MLLM framework integrating open-source vision-language models (VLMs) and audio-language models (ALMs) was used to extract these features automatically. The extracted features were then used to train classifiers (K-Nearest Neighbors, XGBoost, and Deep Factorization Machine) to distinguish ES from NES. Model performance was evaluated using leave-one-patient-out (LOPO) cross-validation. RESULTS Expert-annotated features yielded near-perfect classification using KNN (precision = 0.92, recall = 0.92, F1-score = 0.92, AUC = 0.99). Compared to expert annotations, the MLLM pipeline achieved a mean recall of 0.71, accuracy of 0.58, and F1-score of 0.51 for feature extraction. Using MLLM-extracted features, the KNN classifier (k = 7) achieved a precision of 0.77, recall of 0.76, F1-score of 0.76, and AUC of 0.76, correctly identifying 68 out of 90 events. CONCLUSION Multimodal large language models can extract clinically relevant semiological features from seizure videos and support interpretable classification of ES versus NES. This approach offers a scalable, explainable tool to assist in video-based epilepsy diagnosis.",
+      "authors": [
+        "Li-Na Zhang",
+        "Richard Jiang",
+        "Tonmoy Monsoor",
+        "J. Pasqua",
+        "Colin M. McCrimmon",
+        "Prateik Sinha",
+        "Kartik Sharma",
+        "Muayad A. Alzuabi",
+        "Victor Morales",
+        "H. Miranda",
+        "Chaya Manjeshwar",
+        "V. Roychowdhury",
+        "R. Mazumder"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://www.semanticscholar.org/paper/732d04f2434a6412a2dec470236e515c1704414b",
+      "pdf_url": "https://doi.org/10.1002/acn3.70574",
+      "doi": "10.1002/acn3.70574",
+      "venue": "Annals of Clinical and Translational Neurology",
+      "categories": [],
+      "code_urls": [],
+      "sources": [
+        "semantic_scholar"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "audio_language_models": 7
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "moonbox-dev/YuE2-3B-MLX",
+      "author": "moonbox-dev",
+      "created_at": "2026-11-20",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "mlx",
+        "moonbox",
+        "yue2",
+        "yue",
+        "music-generation",
+        "text-to-music",
+        "song-generation",
+        "lyrics-to-song",
+        "text-to-audio",
+        "arxiv:2609.33757",
+        "arxiv:2610.05336",
+        "arxiv:2503.08638",
+        "base_model:m-a-p/YuE2-3B",
+        "base_model:quantized:m-a-p/YuE2-3B",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/moonbox-dev/YuE2-3B-MLX",
+      "card_text": "---\nbase_model: m-a-p/YuE2-3B\nbase_model_relation: quantized\nlicense: cc-by-nc-4.0\npipeline_tag: text-to-audio\nlibrary_name: mlx\ntags:\n- mlx\n- moonbox\n- yue2\n- yue\n- music-generation\n- text-to-music\n- song-generation\n- lyrics-to-song\n---\n\n# YuE2-3B MLX\n\nMLX builds of [YuE2-3B](https://huggingface.co/m-a-p/YuE2-3B), made by Moonbox for Apple Silicon Macs. Each precision is a folder; keep a folder's\nfiles together. Only the parts listed below are converted: the rest of the pipeline comes from the original\nrepository unless the section below says otherwise.\n\n## Files\n\nThe last column is how far each build is from the original PyTorch model on the same inputs (see the section below\nfor what was measured).\n\n| Precision | File | Size | sha256 | Checked against the original |\n|---|---|---|---|---|\n| 8bit | [`8bit/LICENSE`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/LICENSE) | 20.3 kB | `060985741d20` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/THIRD_PARTY_NOTICES.md`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/THIRD_PARTY_NOTICES.md) | 0.8 kB | `14d3fd9f6fee` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/ar.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/ar.safetensors) | 1.50 GB | `8fe39fdc9332` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/config.json`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/config.json) | 1.9 kB | `a7b0daf7ce33` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/mlx_model.py`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/mlx_model.py) | 54.2 kB | `457dc446be16` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/nar.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/nar.safetensors) | 1.51 GB | `fc90aac152bb` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/qwen.tiktoken`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/qwen.tiktoken) | 2.6 MB | `b2b1b8dfb5cc` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/vae.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/vae.safetensors) | 265.4 MB | `2a677eaee050` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/vocab.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/vocab.safetensors) | 803.8 MB | `e2072b33387e` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 8bit | [`8bit/yue2_generation_config.json`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/8bit/yue2_generation_config.json) | 0.5 kB | `203830cebde6` | AR KL 0.0009 nats (p95 0.0019), top-1 agreement 97.2 %; audio 0.16 dB log-mel, MR-STFT 0.089, SNR 25.7 dB vs bf16 |\n| 6bit | [`6bit/LICENSE`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/LICENSE) | 20.3 kB | `060985741d20` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/THIRD_PARTY_NOTICES.md`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/THIRD_PARTY_NOTICES.md) | 0.8 kB | `14d3fd9f6fee` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/ar.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/ar.safetensors) | 1.15 GB | `38df911aab6a` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/config.json`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/config.json) | 1.9 kB | `a7a2576e4874` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/mlx_model.py`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/mlx_model.py) | 54.2 kB | `457dc446be16` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/nar.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/nar.safetensors) | 1.16 GB | `dcd8ba3d93ae` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/qwen.tiktoken`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/qwen.tiktoken) | 2.6 MB | `b2b1b8dfb5cc` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/vae.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/vae.safetensors) | 265.4 MB | `2a677eaee050` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/vocab.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/vocab.safetensors) | 803.8 MB | `e2072b33387e` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 6bit | [`6bit/yue2_generation_config.json`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/6bit/yue2_generation_config.json) | 0.5 kB | `203830cebde6` | AR KL 0.0018 nats (p95 0.0034), top-1 agreement 96.0 %; audio 0.34 dB log-mel, MR-STFT 0.166, SNR 17.9 dB vs bf16 |\n| 4bit | [`4bit/LICENSE`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/LICENSE) | 20.3 kB | `060985741d20` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/THIRD_PARTY_NOTICES.md`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/THIRD_PARTY_NOTICES.md) | 0.8 kB | `14d3fd9f6fee` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/ar.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/ar.safetensors) | 969.2 MB | `df42e72eb900` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/config.json`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/config.json) | 1.9 kB | `35766ac3ca19` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/mlx_model.py`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/mlx_model.py) | 54.2 kB | `457dc446be16` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/nar.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/nar.safetensors) | 979.2 MB | `f5ddfe2e9295` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/qwen.tiktoken`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/qwen.tiktoken) | 2.6 MB | `b2b1b8dfb5cc` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/vae.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/vae.safetensors) | 265.4 MB | `2a677eaee050` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/vocab.safetensors`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/vocab.safetensors) | 803.8 MB | `e2072b33387e` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n| 4bit | [`4bit/yue2_generation_config.json`](https://huggingface.co/moonbox-dev/YuE2-3B-MLX/blob/main/4bit/yue2_generation_config.json) | 0.5 kB | `203830cebde6` | mixed 4 / 6 bits: AR KL 0.0074 nats (p95 0.0141), top-1 agreement 91.8 %; audio 0.78 dB log-mel, MR-STFT 0.319, SNR 14.2 dB vs bf16 (passes both marks; 4 bits throughout: KL 0.016, 87.4 %, 1.52 dB, 8.2 dB) |\n\n## How to run\n\nYuE2-3B (m-a-p's music model: lyrics and a style prompt in, a full song with vocals out, 48 kHz stereo) converted to\nMLX for Apple Silicon, in three sizes. Each folder is complete and runs with the `mlx_model.py` inside it: no PyTorch.\n\nThese files were converted and quantized by Moonbox from [m-a-p/YuE2-3B](https://huggingface.co/m-a-p/YuE2-3B)\n(revision `8f24312f`) and [m-a-p/YuE2-Vae](https://huggingface.co/m-a-p/YuE2-Vae) (revision `152733a1`). They are\nnot an official m-a-p release. The weights are CC BY-NC 4.0: non-commercial use only, with attribution.\n\n## How to run\n\nNeeds `mlx`, `numpy` and `tiktoken` (`soundfile` only to write the file below). Download one folder:\n\n```python\nfrom huggingface_hub import snapshot_download\nfolder = snapshot_download(\"moonbox-dev/YuE2-3B-MLX\", allow_patterns=\"6bit/*\") + \"/6bit\"\n\nimport sys; sys.path.insert(0, folder)\nfrom mlx_model import Pipeline\n\npipe = Pipeline(folder)\naudio, info = pipe.generate(\n    style=\"indie pop, warm female vocal, acoustic guitar, soft drums, hopeful\",\n    lyrics=\"[Verse]\\nMorning light across the kitchen floor\\nCoffee steam and an open door\\n\\n[Chorus]\\nSo here I go, here I go\\n\",\n    seconds=60,          # an upper bound; leave it out and the model ends the song itself (at most 6 minutes)\n    seed=0,\n)\nimport soundfile as sf\nsf.write(\"song.flac\", audio.T, pipe.sample_rate)      # audio: float32 [2, samples], 48 kHz\nprint(info[\"abc\"])                                     # the score the model wrote before the music\n```\n\nor from a shell: `python 6bit/mlx_model.py 6bit --style \"...\" --lyrics @lyrics.txt --seconds 60 --out song.wav`.\n\n- **Lyrics** use section tags on their own lines (`[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Bridge]`,\n  `[Interlude]`, `[Outro]`); English and Mandarin are what the model was trained on. **Style** is a comma-separated\n  description (genre, mood, instruments, voice).\n- `cot=\"full\"` (default) makes the model write a chord-annotated ABC score first and then the music; `\"melody\"`\n  writes a score without chords; `\"off\"` skips the score. `cfg_scale` sets classifier-free guidance of the music\n  tokens (default: none with a score, 1.01 without, as the publisher's package).\n- `on_progress(stage, done, total)` reports the four stages (`plan`: score tokens, `compose`: music tokens, 25 per\n  second, `render`: 64 evaluations of the acoustic model, `decode`: audio tiles; for the first two `total` is the\n  upper bound). `should_stop()` is polled throughout; returning True raises `mlx_model.Cancelled`.\n- The same seed gives the same song on the same build. It does not give the song the PyTorch package makes from that\n  seed: the sampling rules are the publisher's, the random stream is numpy's.\n- `seconds` cuts the song off; the model still plans a whole song from the lyrics, so give it lyrics that fit.\n\n## What is in a folder\n\n| File | What |\n|---|---|\n| `ar.safetensors` | the \"AR expert\": the half of the 28-layer transformer that writes the score and the music tokens |\n| `nar.safetensors` | the \"NAR expert\": the half that turns the tokens into audio latents by flow matching (32 midpoint steps), with its small latent and timestep layers |\n| `vocab.safetensors` | token embedding and output head (184704 tokens), 8 bits; the same file in every folder |\n| `vae.safetensors` | the YuE2-Vae decoder, float32; the same file in every folder |\n| `qwen.tiktoken`, `yue2_generation_config.json` | the tokenizer and the publisher's sampling defaults, unchanged |\n| `mlx_model.py` | the whole runtime: tokenizer, both experts, sampler, solver, decoder, pipeline |\n| `config.json` | architecture, what is quantized at how many bits, source revisions |\n\nThe attention and feed-forward linears of both experts are quantized with MLX's affine quantization (group size 64);\nnorms and the latent / timestep layers stay bf16, the VAE float32. Only one of the three large parts is in memory at\na time.\n\n## The three builds\n\n| Folder | Size | Bits | Token model vs bf16: KL (mean / p95), top-1 | Audio vs bf16: log-mel, MR-STFT, SNR | 60 s song on an M5 | Peak memory | Status |\n|---|---|---|---|---|---|---|---|\n| `8bit/` | 4.08 GB | 8 | 0.0009 / 0.0019 nats, 97.2 % | 0.16 dB, 0.089, 25.7 dB | 107 s | 2.6 GB | passes |\n| `6bit/` | 3.37 GB | 6 | 0.0018 / 0.0034 nats, 96.0 % | 0.34 dB, 0.166, 17.9 dB | 133 s | 2.2 GB | passes |\n| `4bit/` | 3.02 GB | 4, with 14 of each expert's 28 layers at 6 | 0.0074 / 0.0141 nats, 91.8 % | 0.78 dB, 0.319, 14.2 dB | 127 s | 2.0 GB | passes; clearly further from bf16 than `6bit/` |\n\nEach size includes the two files every folder shares (0.80 GB `vocab.safetensors`, 0.27 GB `vae.safetensors`).\n\n**How they were checked.** Two songs made by the same model are never the same, so the builds are not compared song\nagainst song. Everything is measured against the unquantized (bf16) weights run through the same `mlx_model.py`:\n\n- **Token model.** The bf16 model writes a score and 60 s of music tokens for an English and a Mandarin prompt. Each\n  build then predicts every one of those 3000 music tokens given the true earlier ones. KL is the distance between\n  the two predicted distributions (0 = identical), top-1 how often the most likely token is the same. Our mark:\n  mean KL at most 0.01 nats and top-1 at least 90 %.\n- **Audio.** Turning tokens into sound is deterministic once the noise is fixed, so here the waveforms are compared:\n  each build renders the same tokens from the same noise as bf16. Log-mel distance is the mean difference of the\n  two mel spectrograms in dB; SNR compares the waveforms. For scale, two bf16 renders of the same tokens from\n  *different* noise (two takes of one song) are 4.62 dB, 1.36 and -2.9 dB apart. Our mark: at most a quarter of\n  that log-mel distance (1.16 dB). Below 16 kHz no build shifts the long-term spectrum by more than 0.3 dB.\n- **Why `4bit/` is not 4 bits throughout.** At 4 bits everywhere the token model is at KL 0.016 / top-1 87.4 % and\n  the audio 1.52 dB (SNR 8 dB) from bf16: under both marks. The error is spread over the layers, largest in the\n  middle of the AR expert and at the end of the NAR expert, so `4bit/` keeps AR layers 7 - 20 and NAR layers 14 - 27\n  at 6 bits (`config.json` lists the bits per layer). That costs 0.36 GB and brings both under the marks.\n- **The port.** `mlx_model.py` run in float32 reproduces m-a-p's PyTorch code on the original weights: token\n  distributions to 1e-5 nats, audio latents to 3e-6, the decoded audio to 102 dB SNR. As shipped it computes in\n  bf16 like the original (29 dB from float32 PyTorch, the same order as the `8bit/` build's distance from bf16).\n- **Not checked: nobody listened**, and the lyrics were not checked with a speech recogniser. One 60 s song per build\n  was generated and measured: no clipping, no silence, -14 LUFS, and the tempo and key found in the audio are those\n  of the score the model wrote for it (83 - 84 BPM; D major or its relative minor).\n\nTimes are for one 60 s song on an Apple M5 (24 GB, fanless MacBook Air; they vary by 20 % with heat and were not\ntaken back to back): writing the score takes 24 - 28 s (the model plans the whole song whatever `seconds` is), the\nmusic tokens 27 - 29 s (50 - 60 tokens per second; one second of music is 25 tokens), rendering 49 - 67 s, decoding\n5 - 6 s. Rendering grows faster than the song's length: a 118 s song took 272 s in all with `4bit/` (2.2 GB peak).\nPeak memory is MLX's own count; the whole process peaks 0.4 GB higher.\n\n## How these were made\n\n- **Source**: `model.safetensors` of m-a-p/YuE2-3B (3.62 B values in bf16, sha256 `1d55c42c...`) and of m-a-p/YuE2-Vae.\n- **Quantized** with MLX's affine quantization (`mx.quantize`, group size 64): the attention (q, k, v, o) and\n  feed-forward (gate, up, down) linears of both experts at the folder's bits; the token embedding and the output\n  head at 8 bits in every folder (measured: no change in the token model's numbers against keeping them bf16).\n  Kept bf16: all norm weights, the latent input / output layers, the timestep MLP. The VAE decoder is float32 with\n  its weight normalisation folded in (fp16 is 53 dB from float32: not transparent).\n- **Left out**: the VAE encoder (not needed to generate), and `latent_pos_embed.pe`, a fixed sinusoid that\n  `mlx_model.py` recomputes.\n- `mlx_model.py` sets `MLX_ENABLE_TF32=0` when it is imported (unless the variable is already set): with MLX's\n  reduced-precision float32 matmul on M5 GPUs the decoder is 46 dB from the reference instead of 110 dB.\n\n## How these were made\n\nFrom [YuE2-3B](https://huggingface.co/m-a-p/YuE2-3B) at revision `8f24312f18`: the original weights loaded in MLX and stored as bf16 or fp16, or\nquantized with MLX's affine quantization (`8bit`, `6bit`, `4bit`, group size 64; layers MLX can't quantize, such as\nconvolutions and norms, stay bf16). Every build was checked against the original before upload; the `sha256` column\nabove is what the files must hash to.\n\n## License\n\nCC-BY-NC-4.0 (weights); code Apache-2.0. These files are a derivative of the original model and carry its license: it is copied in this\nrepository, and it governs your use of these files. The original model card follows unchanged.\n\n---\n\n# Original model card\n\n<p align=\"center\">\n  <img src=\"assets/logo.png\" alt=\"YuE logo\" width=\"144\" />\n</p>\n<h1 align=\"center\">🤗 YuE2-3B</h1>\n<p align=\"center\"><strong>Frontier music generation with editable scores</strong></p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/multimodal-art-projection/YuE\"><img alt=\"GitHub\" src=\"https://img.shields.io/badge/GitHub-YuE-181717?logo=github&amp;logoColor=white\" height=\"20\" /></a>\n  &nbsp;\n  <a href=\"https://discord.gg/ssAyWMnMzu\"><img alt=\"Join Discord\" src=\"https://img.shields.io/discord/842440537755353128?label=Discord&amp;color=5865F2&amp;logo=discord&amp;logoColor=white\" height=\"20\" /></a>\n</p>\n<p align=\"center\">\n  <a href=\"https://map-yue2.github.io/\">🎧&nbsp;Demo</a>\n  ·\n  <a href=\"https://arena.3-148-255-99.sslip.io:8080\">🗳️&nbsp;Music&nbsp;Arena</a>\n  ·\n  <a href=\"#quick-start\">🚀&nbsp;Quick&nbsp;start</a>\n  ·\n  <a href=\"#cover-an-existing-song\">🎙️&nbsp;Cover</a>\n  ·\n  <a href=\"#export-a-plan-edit-it-and-generate\">🤖&nbsp;Edit</a>\n  ·\n  <a href=\"#speed-and-resources\" title=\"Speed and resources\">⚡&nbsp;Speed</a>\n  ·\n  <a href=\"#benchmarks\">📊&nbsp;Benchmarks</a>\n  ·\n  <a href=\"https://arxiv.org/abs/2609.33757\">📄&nbsp;arXiv</a>\n  ·\n  <a href=\"https://github.com/multimodal-art-projection/YuE/blob/main/docs/technical_report.pdf\">PDF</a>\n  ·\n  <a href=\"https://arxiv.org/abs/2610.05336\">📄&nbsp;SheetSage2&nbsp;arXiv</a>\n  ·\n  <a href=\"#citation\">📚&nbsp;Citation</a>\n</p>\n<p align=\"center\">\n  <a href=\"https://huggingface.co/m-a-p/YuE2-3B\"><img alt=\"🤗 YuE2-3B\" src=\"https://img.shields.io/badge/YuE2--3B-374151?logo=huggingface&amp;logoColor=FFD21E\" height=\"20\" /></a>\n  &nbsp;\n  <a href=\"https://huggingface.co/m-a-p/YuE2-Vae\"><img alt=\"🤗 YuE2-Vae\" src=\"https://img.shields.io/badge/YuE2--Vae-374151?logo=huggingface&amp;logoColor=FFD21E\" height=\"20\" /></a>\n  &nbsp;\n  <a href=\"https://huggingface.co/m-a-p/YuE2-Vae-legacy\"><img alt=\"🤗 YuE2-Vae-legacy\" src=\"https://img.shields.io/badge/YuE2--Vae--legacy-374151?logo=huggingface&amp;logoColor=FFD21E\" height=\"20\" /></a>\n  &nbsp;\n  <a href=\"https://huggingface.co/m-a-p/MERT-v2-30s\"><img alt=\"🤗 MERT-v2-30s\" src=\"https://img.shields.io/badge/MERT--v2--30s-374151?logo=huggingface&amp;logoColor=FFD21E\" height=\"20\" /></a>\n  &nbsp;\n  <a href=\"https://huggingface.co/m-a-p/MERT-v2-FullSong\"><img alt=\"🤗 MERT-v2-FullSong\" src=\"https://img.shields.io/badge/MERT--v2--FullSong-374151?logo=huggingface&amp;logoColor=FFD21E\" height=\"20\" /></a>\n  &nbsp;\n  <a href=\"https://huggingface.co/datasets/m-a-p/WildSongBench\"><img alt=\"🤗 WildSongBench\" src=\"https://img.shields.io/badge/WildSongBench-374151?logo=huggingface&amp;logoColor=FFD21E\" height=\"20\" /></a>\n  &nbsp;\n  <a href=\"https://huggingface.co/m-a-p/SheetSage2\"><img alt=\"SheetSage2\" src=\"https://img.shields.io/badge/SheetSage2-374151?logo=huggingface&amp;logoColor=FFD21E\" height=\"20\" /></a>\n</p>\n\n**YuE2 is an open music generation model with frontier song quality competitive with Suno v5/v6.** Turn lyrics and a style prompt into a complete song with vocals and accompaniment, then shape its melody and chords through an editable score.\n\n<a id=\"music-arena\"></a>\n\n> **🎧 YuE2 needs your ears**\n>\n> Help evaluate YuE2 alongside leading proprietary music models in our blind listening arena. Listen to anonymous music clips, choose your preference, and contribute to our listener preference study.\n>\n> **[Listen & vote →](https://arena.3-148-255-99.sslip.io:8080)** · No account needed.\n\n**State-of-the-art results on WildSongBench.** YuE2 (best-of-8) achieves the highest SongBench average among all evaluated open and proprietary models: **6.9632**, compared with **6.8721** for Suno v5, **6.5562** for Suno v6, and **6.4195** for Suno v6 Wild.\n\n![YuE2 song quality and text alignment on WildSongBench](assets/figure1.png)\n\n*Frontier song quality and text alignment on 192 WildSongBench prompts. YuE2 uses symbolic planning; Bo8 means best-of-8.*\n\nSeptember 12, 2026 comparison: 17 settings, including Suno v6 and Suno v6 Wild. [Vector PDF](assets/figure1.pdf) · [SVG](assets/figure1.svg) · [All nine metrics and protocols](https://huggingface.co/datasets/m-a-p/WildSongBench/blob/main/benchmark/results.md) · [Full-precision CSV](https://huggingface.co/datasets/m-a-p/WildSongBench/resolve/main/benchmark/benchmark-results.csv).\n\n- **Compose and edit:** melody + chords, melody-only, or direct generation; bring your own ABC score.\n- **Edit with an agent:** turn musical feedback into score, style and lyric revisions, then let YuE2 render the next version. [Hear the editing process](https://map-yue2.github.io/#agentic-music-editing).\n- **Run locally:** 48 kHz stereo songs on a 24GB GPU, without quantization.\n- **Build on it:** Hugging Face loading, text guidance (CFG), and separate planning and synthesis APIs.\n\n![YuE2 architecture](assets/architecture.png)\n\n*One AR–NAR Mixture-of-Transformers backbone writes the score and semantic tokens, then generates acoustic latents through flow matching. The VAE turns them into stereo audio.*\n\n<a id=\"listen\"></a>\n\n## 🎧 Listen to YuE2\n\n<a id=\"text-to-music\"></a>\n\n### 🎶 Text-to-music\n\nOriginal songs generated from lyrics and a style prompt.\n\n**Cyber Metal · English · 5:00**\n\n<audio controls preload=\"none\" aria-label=\"Cyber Metal\" src=\"https://huggingface.co/m-a-p/YuE2-3B/resolve/main/assets/audio/cyber-metal.mp3\"></audio>\n\n**今晚不眠 · Mandarin funk / nu-disco · 3:24**\n\n<audio controls preload=\"none\" aria-label=\"今晚不眠\" src=\"https://huggingface.co/m-a-p/YuE2-3B/resolve/main/assets/audio/tonight-awake.mp3\"></audio>\n\n**Passion · English rock · 3:55**\n\n<audio controls preload=\"none\" aria-label=\"Passion\" src=\"https://huggingface.co/m-a-p/YuE2-3B/resolve/main/assets/audio/passion.mp3\"></audio>\n\n*All three songs use [🤗 YuE2-Vae](https://huggingface.co/m-a-p/YuE2-Vae).*\n\n<a id=\"cover-song\"></a>\n\n### 🎙️ Cover songs\n\nExisting songs reimagined in a new style.\n\n[Make your own cover →](#cover-an-existing-song)\n\n**Auld Lang Syne · Jazz-funk cover · 3:10**\n\n<audio controls preload=\"none\" aria-label=\"Auld Lang Syne — Jazz-funk cover\" src=\"https://huggingface.co/m-a-p/YuE2-3B/resolve/main/assets/audio/auld-lang-syne-jazz-funk-cover.mp3\"></audio>\n\n**最炫民族风 · Ballad cover · 4:45**\n\n<audio controls preload=\"none\" aria-label=\"最炫民族风 — Ballad cover\" src=\"https://huggingface.co/m-a-p/YuE2-3B/resolve/main/assets/audio/zuixuan-ballad-cover.mp3\"></audio>\n\n**Jingle Bells · Heavy metal cover · 1:09**\n\n<audio controls preload=\"none\" aria-label=\"Jingle Bells — Heavy metal cover\" src=\"https://huggingface.co/m-a-p/YuE2-3B/resolve/main/assets/audio/jingle-bells-heavy-metal-cover.mp3\"></audio>\n\n<a id=\"agentic-editing\"></a>\n\n### 🤖 Agentic editing\n\n**[Explore the agentic editing demo →](https://map-yue2.github.io/#agentic-music-editing)**\n\nFollow **The Last Train** through **9 steps and 14 versions**, from Mandarin pop to English jazz with modern harmony and a saxophone solo built around two complete statements of “Twinkle, Twinkle, Little Star.” Hear the full songs and inspect the conversation, scores, prompts and lyrics at each step.\n\n[Try editing with an agent →](#export-a-plan-edit-it-and-generate)\n\n<a id=\"quick-start\"></a>\n\n## 🚀 Quick start\n\nLinux · Python 3.10+ · 24GB NVIDIA GPU with BF16 support. Install the inference package:\n\n```bash\npython -m pip install huggingface-hub==0.36.2\nhf download m-a-p/YuE2-3B yue2_infer-0.1.5-py3-none-any.whl --local-dir .\npython -m pip install ./yue2_infer-0.1.5-py3-none-any.whl\n```\n\n[Create](#generate-a-song) · [Cover](#cover-an-existing-song) · [Edit & agentic edit](#export-a-plan-edit-it-and-generate)\n\nLoad the pipeline once for the examples below:\n\n```python\nfrom pathlib import Path\nfrom yue2 import YuE2Pipeline\n\npipe = YuE2Pipeline.from_pretrained(\"m-a-p/YuE2-3B\", device=\"cuda\")\n```\n\n<a id=\"generate-a-song\"></a>\n\n### 🎶 Create\n\nTurn a style prompt and lyrics into a complete song with vocals and accompaniment.\n\nUse the [style and full lyrics from 今晚不眠](examples/tonight-awake.json), the funk / nu-disco demo above.\n\n```python\nimport json\nfrom huggingface_hub import hf_hub_download\n\nrepo = \"m-a-p/YuE2-3B\"\nprompt_path = hf_hub_download(repo, \"examples/tonight-awake.json\")\ndemo = json.loads(Path(prompt_path).read_text(encoding=\"utf-8\"))\nstyle, lyrics = demo[\"style\"], demo[\"lyrics\"]\n\nsong = pipe(style=style, lyrics=lyrics, cot=\"full\", seed=demo[\"seed\"])\nsong.save(\"song.flac\")\nsong.save_artifacts(\"outputs/song\")  # ABC, tokens, latents, audio and settings\n```\n\nDefaults are ready to use: `cot=\"full\"` and [🤗 YuE2-Vae](https://huggingface.co/m-a-p/YuE2-Vae).\n\n| Option | What it does |\n|---|---|\n| `cot=\"full\"` | Melody + chord planning (default) |\n| `cot=\"melody\"` | Melody-only planning; recommended for covers |\n| `cot=\"off\"` | Generate without a symbolic plan |\n| `cfg_scale=1.2` | Experiment with stronger text guidance |\n\n<a id=\"cover-an-existing-song\"></a>\n\n### 🎙️ Cover\n\nStart from an existing recording and give it a new arrangement.\n\n**For covers, we recommend melody-only mode (`cot=\"melody\"`).**\n\n1. **Get the score:** transcribe the existing song with [🤗 SheetSage2](https://huggingface.co/m-a-p/SheetSage2) and save its melody ABC **without chord symbols** as `melody.abc`.\n2. **Get the lyrics:** ask an agent to find them online, or transcribe the singing with [Qwen3-ASR](https://huggingface.co/Qwen/Qwen3-ASR-1.7B) or the [Gemini API](https://ai.google.dev/gemini-api/docs/audio). Check the words, organize them into sections matching the recording, and save them as `cover_lyrics.txt`.\n3. **Choose a target style and generate:** review or edit the score and lyrics, then supply them to YuE2 with `cot=\"melody\"` and your target style prompt.\n\nRun the transcription tools in their own environments, then use the YuE2 pipeline:\n\n```python\ncover = pipe(\n    style=\"Jazz-funk, warm lead vocal, Rhodes piano, electric bass, tight drums\",\n    lyrics=Path(\"cover_lyrics.txt\").read_text(encoding=\"utf-8\"),\n    abc=Path(\"melody.abc\").read_text(encoding=\"utf-8\"),\n    cot=\"melody\", seed=831001,\n)\ncover.save(\"cover.flac\")\ncover.save_artifacts(\"outputs/cover\")\n```\n\n`cot=\"melody\"` does not remove chord symbols automatically. Use `cot=\"full\"` if you want to supply the original or edited harmony as well.\n\n<a id=\"export-a-plan-edit-it-and-generate\"></a>\n\n### 🎼 Edit & agentic edit\n\nEdit the ABC yourself, or give an agent the score, original prompt and lyrics, and your requested changes. The agent can reharmonize, develop a solo, or adapt the lyrics and style; YuE2 renders each revision. [Hear the multi-turn editing demo](https://map-yue2.github.io/#agentic-music-editing).\n\nFor the song from **Create**, copy `outputs/song/score.abc` to `edited.abc`. To obtain a plan before generating audio, use the same prompt and seed:\n\n```python\nplan = pipe.plan(style=style, lyrics=lyrics, cot=\"full\", seed=demo[\"seed\"])\nplan.save(\"original_plan\")\n# Keep the original and edit a copy as edited.abc.\n```\n\nFor strict reharmonization, ask the agent to preserve melody pitches and rhythm and check sustained notes against the new chords. Allow selected melody or lyric changes for a broader adaptation. After reviewing `edited.abc`, regenerate with the revised style; this example keeps the lyrics and seed from **Create**:\n\n```python\nedited_style = (\n    \"Jazz, expressive lead vocal, piano, tenor saxophone, upright bass, \"\n    \"brushed drums, no guitar, spacious modern harmony\"\n)\nsong = pipe(style=edited_style, lyrics=lyrics, cot=\"full\", seed=demo[\"seed\"],\n            abc=Path(\"edited.abc\").read_text(encoding=\"utf-8\"))\nsong.save(\"edited.flac\")\nsong.save_artifacts(\"outputs/edited\")\n```\n\n<details>\n<summary>⚙️ CFG, individual stages, and decoder selection</summary>\n\nGeneration shows English progress messages by default, including the current stage, elapsed time, and token throughput. To disable them, use `YuE2Pipeline.from_pretrained(repo, progress=False)` in Python or `yue2 generate --quiet` / `yue2 batch --quiet` on the command line.\n\nEach CoT mode selects its native instruction. Semantic CFG defaults to 1.0 for full/melody and 1.01 for off; ABC sampling uses no CFG.\n\n`pipe.plan()` → `pipe.generate_semantic(plan)` → `pipe.synthesize(semantic)` → `pipe.decode(latents)`. Call `pipe.close()` when finished. For the benchmark decoder, pass `vae=\"m-a-p/YuE2-Vae-legacy\"` to `from_pretrained`.\n\n</details>\n\n<a id=\"speed-and-resources\"></a>\n\n## ⚡ Speed and resources\n\n**A 3.6-minute song in 71 seconds on an RTX 4090.** The HF package uses PyTorch, CUDA graphs, and FlashAttention, with BF16 AR/NAR and FP32 VAE.\n\n| GPU | CoT | Warm samples | LM tokens/s | Generation / audio | Peak VRAM |\n|---|---|---:|---:|---:|---:|\n| RTX 4090 24GB | full | 32 | 139.48 | 71.04 / 214.85 s | 11.18 GiB |\n| RTX 4090 24GB | melody | 32 | 139.32 | 68.68 / 214.67 s | 11.02 GiB |\n| RTX 4090 24GB | off | 32 | 121.07 | 57.91 / 196.88 s | 11.09 GiB |\n| H800 80GB | full | 1 | 164.38 | 54.74 / 224.96 s | 10.34 GiB |\n\nOne song at a time. Use a **24GB GPU** and **24GB available host RAM**; maximum-context testing peaked at **14.08 GiB**.\n\n**H800 server · vLLM 0.19 · full CoT.** This separate serving runtime handles concurrent requests:\n\n| AR concurrency limit | LM system tokens/s | Songs/hour | Peak VRAM |\n|---:|---:|---:|---:|\n| 1 | 378.42 | 119.43 | 78.55 GiB |\n| 16 | 2418.63 | 340.38 | 78.66 GiB |\n| 32 | 3231.74 | 373.53 | 76.61 GiB |\n\n<details>\n<summary>🔎 Measurement details</summary>\n\nHF: PyTorch 2.10, Transformers 4.57.6, no quantization, default YuE2-Vae. 4090 values average 32 warm requests per mode; H800 is a one-song HF download-and-generation check. Times are synchronized pipeline calls, excluding initial path resolution and saving. NVML records the full-run GPU peak.\n\nServer: 32 songs per row; AR/NAR use PyTorch 2.10 and Triton 3.6, VAE uses PyTorch 2.6. Songs/hour is warm batch throughput through all stages, not request latency. TPS counts output tokens once, excluding prefixes, supplied ABC, and the second CFG branch. Memory includes reserved KV cache. This server is separate from the HF quick start.\n\n</details>\n\n<a id=\"benchmarks\"></a>\n\n## 📊 Benchmarks\n\n<a id=\"wildsongbench--full-song-generation\"></a>\n\n### 🌍 WildSongBench · full-song generation\n\n**🔓 Open models**\n\n| Model | Musicality ↑ | SongBench Avg ↑ | MuLan ↑ | AllMusicCaps ↑ | Q3O ↑ | PER ↓ |\n|---|---:|---:|---:|---:|---:|---:|\n| YuE 1 | 4.0847 | 4.9165 | 0.2623 | 0.2882 | 3.7301 | 36.38% |\n| SongBloom | 3.4493 | 4.2350 | 0.2697 | 0.1926 | 3.0287 | 19.19% |\n| LeVo 2 | 5.4590 | 6.3247 | 0.3542 | 0.2680 | 3.9458 | 26.12% |\n| ACE-Step 1.5 | 5.1588 | 6.0118 | 0.4372 | 0.3869 | 4.5809 | 7.46% |\n| HeartMuLa | 5.4963 | 6.2483 | 0.3823 | 0.2786 | 3.4907 | 10.71% |\n| DiffRhythm 2 | 4.4775 | 5.2428 | 0.3782 | 0.3255 | 4.0870 | 18.41% |\n| Muse | 5.1692 | 6.0349 | 0.3937 | 0.3466 | 4.4038 | 33.42% |\n| MiniMax Music 3 | 5.3482 | 6.2830 | 0.3928 | 0.3609 | 4.4362 | **6.27%** |\n| **YuE2** | 5.9075 | 6.7316 | **0.5068** | **0.4054** | 4.6819 | 8.44% |\n| **YuE2 (best-of-8)** | **6.2666** | **6.9632** | 0.5051 | 0.3980 | **4.7009** | 9.79% |\n\n**🔒 Proprietary models**\n\n| Model | Musicality ↑ | SongBench Avg ↑ | MuLan ↑ | AllMusicCaps ↑ | Q3O ↑ | PER ↓ |\n|---|---:|---:|---:|---:|---:|---:|\n| Suno v5 | 5.9918 | 6.8721 | **0.5428** | **0.4353** | 4.5907 | 8.10% |\n| Suno v4.5 | 5.8317 | 6.6995 | 0.5022 | 0.3873 | 4.4149 | **5.80%** |\n| Suno v5.5 | 5.8087 | 6.7150 | 0.5089 | 0.3917 | 4.5914 | 5.96% |\n| Suno v6 | 5.6558 | 6.5562 | 0.4916 | 0.4305 | 4.6258 | 7.58% |\n| Suno v6 Wild | 5.5644 | 6.4195 | 0.4999 | 0.4316 | 4.5898 | 7.45% |\n| MiniMax Music 2.6 | 5.4437 | 6.3222 | 0.4251 | 0.3670 | 4.5688 | 24.55% |\n| Mureka 9 | 6.0488 | 6.9377 | 0.4394 | 0.4102 | 4.6368 | 11.69% |\n| **YuE2** | 5.9075 | 6.7316 | 0.5068 | 0.4054 | 4.6819 | 8.44% |\n| **YuE2 (best-of-8)** | **6.2666** | **6.9632** | 0.5051 | 0.3980 | **4.7009** | 9.79% |\n\n*192 prompts. Both YuE2 settings use symbolic planning and [🤗 YuE2-Vae-legacy](https://huggingface.co/m-a-p/YuE2-Vae-legacy). Standard YuE2 selects from two candidates; best-of-8 selects from eight.*\n\n<a id=\"shs100k--zero-shot-cover-generation\"></a>\n\n### 🎤 SHS100K · zero-shot cover generation\n\n| Method | CLEWS mAP ↑ | CLEWS Hit@1 ↑ | VINet mAP ↑ | MuLan ↑ | Musicality ↑ |\n|---|---:|---:|---:|---:|---:|\n| SongEcho | 0.419 | 48.4% | 0.122 | 0.366 | 3.286 |\n| ACE-Step 1.5 | 0.024 | 2.4% | 0.006 | 0.166 | 3.689 |\n| **YuE2 (full score)** | **0.647** | **71.3%** | **0.288** | 0.382 | 5.104 |\n| YuE2 (without chords) | 0.598 | 67.3% | 0.179 | 0.417 | 5.490 |\n| YuE2 (without score) | 0.006 | 0.3% | 0.004 | **0.474** | **5.691** |\n\n*948 works × two styles × two seeds: 3,792 songs per method, without candidate selection. The score-conditioned variants use supplied source scores; all YuE2 variants use YuE2-Vae-legacy.*\n\n<details>\n<summary>📐 Evaluation protocols and metric definitions</summary>\n\nWSB: SongBench Avg averages seven dimensions; Q3O measures prompt adherence on a 0–5 scale; PER is phoneme error rate. YuE2 selects the lower-PER candidate from two. Best-of-8 selects by Musicality → Q3O → PER. Each candidate's PER uses the lowest-PER of four ASR passes. A pipeline call generates one candidate; selection is separate. Q3O weights differ on 10 of 192 prompts between the two YuE2 settings. Bold marks the best value within each table. Open baselines, Suno v6, and Suno v6 Wild use two candidates and four ASR passes per candidate, followed by lower-PER selection; earlier proprietary systems retain their delivered-candidate protocols. MiniMax Music 3 uses its official caption rewriter. SongBloom uses a fixed audio prompt rather than a style-text input.\n\nSHS100K: CLEWS and Discogs-VINet measure preserved song identity against 10,545 recordings after source exclusion. MuLan measures target-style similarity; Musicality is from SongBench. Identity and quality should be read together. Every displayed metric covers all 3,792 outputs per method; incomplete Q3O scores are omitted. Source-score extraction is separate from this kit.\n\nThe overview plot combines SongBench and SongEval for quality, and MuLan, AllMusicCaps, and Q3O for alignment. These are automatic benchmark results under the stated candidate-selection protocols.\n\n</details>\n\n<details>\n<summary>🔊 Choosing a VAE</summary>\n\nIn our comparisons, [🤗 YuE2-Vae-legacy](https://huggingface.co/m-a-p/YuE2-Vae-legacy) achieves higher musicality scores on benchmarks, while [🤗 YuE2-Vae](https://huggingface.co/m-a-p/YuE2-Vae) delivers better perceptual audio quality. We recommend YuE2-Vae by default; use YuE2-Vae-legacy when reproducing the paper's benchmark results.\n\n</details>\n\n<a id=\"citation\"></a>\n\n## 📚 Citation\n\nPlease cite the [YuE2 paper](https://arxiv.org/abs/2609.33757) when using YuE2-3B in your research:\n\n```bibtex\n@article{yuan2026yue2,\n  title = {{YuE2}: Unifying Symbolic and Audio Music Generation at Frontier Quality},\n  author = {Yuan, Ruibin and Pan, Jiahao and Jiang, Junyan and Wu, Zhiyue and Zhou, Ziya and Sun, Jiankai and Li, Yizhi and Zhang, Ge and Gu, Yicheng and Tian, Zeyue and Dai, Junyu and Lin, Hanfeng and Li, Kai and Wu, Shangda and Liu, Xuanjie and Wang, Jiaming and Liu, Zihan and Wang, Yue and Ma, Yinghao and Yin, Hanzhi and Chen, Kangrui and Zhang, Xinyue and Ma, Ziyang and Liao, Mengqi and Zhao, Hejia and Huang, Guowei and Yan, Chao and Ke, Lei and Yu, Jianwei and Liu, Bei and Guo, Joe and Xue, Liumeng and Xia, Gus and Xue, Wei and Guo, Yike},\n  journal = {arXiv preprint arXiv:2609.33757},\n  year = {2026},\n  eprint = {2609.33757},\n  archivePrefix = {arXiv},\n  primaryClass = {eess.AS},\n  url = {https://arxiv.org/abs/2609.33757}\n}\n```\n\nWhen using SheetSage2 for transcription, covers, or score editing, please also cite the [SheetSage2 paper](https://arxiv.org/abs/2610.05336):\n\n```bibtex\n@misc{jiang2026sheetsage2,\n  title = {{SheetSage2}: Coherent Lead-Sheet Transcription with Synthetic Supervision},\n  author = {Jiang, Junyan and Yuan, Ruibin and Pan, Jiahao and Xue, Wei and Guo, Yike and Xia, Gus and LeCun, Yann},\n  year = {2026},\n  eprint = {2610.05336},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.SD},\n  url = {https://arxiv.org/abs/2610.05336}\n}\n```\n\nFor the original YuE model, please cite:\n\n```bibtex\n@article{yuan2025yue,\n  title = {{YuE}: Scaling Open Foundation Models for Long-Form Music Generation},\n  author = {Yuan, Ruibin and Lin, Hanfeng and Guo, Shuyue and Zhang, Ge and Pan, Jiahao and Zang, Yongyi and Liu, Haohe and Liang, Yiming and Ma, Wenye and Du, Xingjian and Du, Xinrun and Ye, Zhen and Zheng, Tianyu and Jiang, Zhengxuan and Ma, Yinghao and Liu, Minghao and Tian, Zeyue and Zhou, Ziya and Xue, Liumeng and Qu, Xingwei and Li, Yizhi and Wu, Shangda and Shen, Tianhao and Ma, Ziyang and Zhan, Jun and Wang, Chunhui and Wang, Yatian and Chi, Xiaowei and Zhang, Xinyue and Yang, Zhenzhu and Wang, Xiangzhou and Liu, Shansong and Mei, Lingrui and Li, Peng and Wang, Junjie and Yu, Jianwei and Pang, Guojian and Li, Xu and Wang, Zihao and Zhou, Xiaohuan and Yu, Lijun and Benetos, Emmanouil and Chen, Yong and Lin, Chenghua and Chen, Xie and Xia, Gus and Zhang, Zhaoxiang and Zhang, Chao and Chen, Wenhu and Zhou, Xinyu and Qiu, Xipeng and Dannenberg, Roger and Liu, Jiaheng and Yang, Jian and Huang, Wenhao and Xue, Wei and Tan, Xu and Guo, Yike},\n  journal = {arXiv preprint arXiv:2503.08638},\n  year = {2025},\n  eprint = {2503.08638},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2503.08638}\n}\n```\n\nWeights: [CC BY-NC 4.0](LICENSE). [Third-party code licenses](THIRD_PARTY_NOTICES.md).\n",
+      "arxiv_ids": [
+        "2503.08638",
+        "2609.33757",
+        "2610.05336"
+      ],
+      "datasets": [],
+      "base_models": [
+        "m-a-p/YuE2-3B"
+      ],
+      "variants": [
+        "moonbox-dev/YuE2-3B-ONNX",
+        "moonbox-dev/YuE2-3B-GGUF"
+      ],
+      "score": 44,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "model card links an arXiv paper",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "snkii/Sori-10B-Speech",
+      "author": "snkii",
+      "created_at": "2026-11-20",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "sori_speech",
+        "feature-extraction",
+        "audio",
+        "speech",
+        "speech-llm",
+        "audio-language-model",
+        "paralinguistics",
+        "spoken-reasoning",
+        "emotion",
+        "audio-text-to-text",
+        "custom_code",
+        "en",
+        "base_model:Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "base_model:merge:Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "base_model:Qwen/Qwen3.5-9B",
+        "base_model:merge:Qwen/Qwen3.5-9B",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 102,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/snkii/Sori-10B-Speech",
+      "card_text": "---\nlanguage:\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nlicense: cc-by-nc-sa-4.0\nbase_model:\n- Qwen/Qwen3.5-9B\n- Qwen/Qwen3-Omni-30B-A3B-Instruct\nbase_model_relation: merge\ntags:\n- audio\n- speech\n- speech-llm\n- audio-language-model\n- paralinguistics\n- spoken-reasoning\n- emotion\n---\n\n<div align=\"center\">\n  <h1 style=\"margin: 0;\">Sori-10B-Speech</h1>\n</div>\n\n<div align=\"center\" style=\"margin-top: 10px;\">\n  <b>Seonuk Kim</b> &nbsp;&middot;&nbsp; <b>Semin Kim</b> &nbsp;&middot;&nbsp; &#127472;&#127479;\n</div>\n\n<div align=\"center\" style=\"margin-top: 4px;\">\n  <code>{sukim, smkim21}@hi.snu.ac.kr</code>\n</div>\n\n<p align=\"center\" style=\"margin: 20px 0;\">\n  <a href=\"https://hi.snu.ac.kr/\"><img src=\"sori-header.gif\" alt=\"Sori · SNU Human Interface Lab\" width=\"640\"></a>\n</p>\n\n\n*Sori* (소리) is Korean for *sound*. Sori-10B-Speech is a speech LLM that hears how things are said (tone, hesitation,\nemotion, who is speaking and in what state) and uses those cues when it reasons.\n\n## Usage\n\n```python\n# pip install \"transformers>=5.23\" soundfile\nimport soundfile as sf\nimport torch\nfrom transformers import AutoModelForCausalLM, AutoProcessor\n\nrepo = \"snkii/Sori-10B-Speech\"\nprocessor = AutoProcessor.from_pretrained(repo, trust_remote_code=True)\nmodel = AutoModelForCausalLM.from_pretrained(repo, trust_remote_code=True, dtype=torch.bfloat16, device_map=\"auto\")\n\naudio, sr = sf.read(\"speech.wav\", dtype=\"float32\")  # 16 kHz mono\nmessages = [{\"role\": \"user\", \"content\": [\n    {\"type\": \"audio\"},\n    {\"type\": \"text\", \"text\": \"How does the speaker sound, and why?\"},\n]}]\nprompt = processor.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)\ninputs = processor(text=prompt, audio=audio, sampling_rate=sr, return_tensors=\"pt\").to(model.device)\n\noutput = model.generate(**inputs, max_new_tokens=256)\nprint(processor.decode(output[0, inputs[\"input_ids\"].shape[1]:], skip_special_tokens=True))\n```\n\nSeveral clips and questions in one batch:\n\n```python\nfiles = [\"a.wav\", \"b.wav\", \"c.wav\"]\nquestions = [\"How does the speaker sound, and why?\", \"What is the speaker's mood?\", \"Is the speaker hesitant?\"]\n\naudios = [sf.read(f, dtype=\"float32\")[0] for f in files]  # 16 kHz mono\nprompts = [processor.apply_chat_template([{\"role\": \"user\", \"content\": [\n    {\"type\": \"audio\"},\n    {\"type\": \"text\", \"text\": q},\n]}], add_generation_prompt=True, tokenize=False) for q in questions]\ninputs = processor(text=prompts, audio=audios, sampling_rate=16000, padding=True, return_tensors=\"pt\").to(model.device)\n\noutput = model.generate(**inputs, max_new_tokens=256)\nfor answer in processor.batch_decode(output[:, inputs[\"input_ids\"].shape[1]:], skip_special_tokens=True):\n    print(answer)\n```\n\n## License\n\nSori-10B-Speech is released under **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)**: use it and\nbuild on it for non-commercial purposes, with attribution, and share what you derive from it under the same terms.\nCommercial use is not licensed because part of the training data is licensed for non-commercial use. Third-party\ncomponents keep their own licenses, which will be listed with the weights.\n\n## Citation\n\n```bibtex\n@software{kim_sori_10b_speech_2026,\n  author      = {Kim, Seonuk and Kim, Semin},\n  title       = {{Sori-10B-Speech}},\n  year        = {2026},\n  institution = {Human Interface Laboratory, Seoul National University},\n  url         = {https://huggingface.co/snkii/Sori-10B-Speech}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3.5-9B",
+        "Qwen/Qwen3-Omni-30B-A3B-Instruct"
+      ],
+      "variants": [],
+      "score": 43,
+      "topic_scores": {
+        "audio_language_models": 40,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model, speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "jjcoders/suna-v1",
+      "author": "jjcoders",
+      "created_at": "2026-10-11",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "gguf",
+        "suna_v1_1_acestep_xl_sft",
+        "music-generation",
+        "text-to-music",
+        "audio",
+        "singing-synthesis",
+        "48khz-stereo",
+        "suna-ai",
+        "text-to-audio",
+        "en",
+        "ml",
+        "fr",
+        "es",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 2299,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/jjcoders/suna-v1",
+      "card_text": "---\nlicense: mit\nlibrary_name: diffusers\ntags:\n  - music-generation\n  - text-to-music\n  - audio\n  - singing-synthesis\n  - 48khz-stereo\n  - suna-ai\n  - gguf\n  - safetensors\nlanguage:\n  - en\n  - ml\n  - fr\n  - es\npipeline_tag: text-to-audio\n---\n\n# 👑 JJ coders Suna AI v1.0 — Official Halloween 2026 Flagship Foundation Model\n\n**JJ coders Suna AI v1.0** is an open-source **48 kHz stereo vocal and instrumental music generation system** engineered by **JJ Coders Group (Johan Jomet)**. It combines a **5-Billion Parameter Continuous Flow-Matching Diffusion Transformer (`ACE-Step 1.5 XL SFT`)**, **`Qwen3-Embedding-0.6B`** lyric/phonetic conditioning, **14 Per-Genre Rank-64 DiT LoRA Experts**, a **15.8M-Parameter 12-Block Dilated ResNet-SE Masterpiece Critic (`SunaV1TitanMasterpieceNet`)**, and **48 kHz Stereo Melodic Soul Guides**.\n\n* 🌐 **Official Website:** [suna.jjcoders.com](https://suna.jjcoders.com)\n* 🎛️ **Live A100 Gradio Studio:** [huggingface.co/spaces/johanjomet/suna-ai-studio](https://huggingface.co/spaces/johanjomet/suna-ai-studio)\n* 📦 **Model Hub Repository:** [huggingface.co/jjcoders/suna-v1](https://huggingface.co/jjcoders/suna-v1)\n\n---\n\n## 🚀 Key Architectural Breakthroughs in `Suna AI v1.0`\n\n| Architectural Layer | Legacy Raw Open-Source Diffusion | JJ coders Suna AI v1.0 Flagship |\n| :--- | :--- | :--- |\n| **Vocal Pitch & Melody (`210–4,200 Hz`)** | Flat 1-note monotone \"reading text aloud\" | **Legato Melodic Soul Guide + `+12st` Octave Chorus Belt (`1.8 Oct` F0 range)** |\n| **Intro Rhythm Lock (`0:00–0:15`)** | 20–35s of beatless silence or random noise | **Locked-in `0:00` Sub-Bass & Drum Pocket (`99.4%` groove lock)** |\n| **Lyric & Phonetic Articulation** | 20s `\"Oh-woah\"` scream loops & shouted `[Drop]!` tags | **Syllable-Paced Phonetic Aligner + Multilingual G2P (`en`, `ml`, `fr`, `es`)** |\n| **Candidate Selection** | Single blind random seed | **15.8M-Param `SunaV1TitanMasterpieceNet` (12 Dilated ResBlocks + SE)** |\n| **Audio Fidelity & Mastering** | 16–32 kHz mono/muddy output | **True 48 kHz Stereo Oobleck VAE + `-14 LUFS` Mid-Side Mastering** |\n\n---\n\n## 📂 Repository Files & Multi-Format Checkpoints\n\n* `model.safetensors` & `suna_v1_lora_experts.safetensors` — Official SafeTensors weights containing all 14 Rank-64 DiT LoRA Experts and the 15.8M-parameter `SunaV1TitanMasterpieceNet` Critic.\n* `JJ_coders_Suna_AI_v1_Q4_K_M.gguf` & `JJ_coders_Suna_AI_v1_3_Q4_K_M.gguf` — Official binary GGUF v3 packages for local/edge runtimes.\n* `suna_v1_ultimate_adapter.pt`, `suna_v1_halloween_10b_titan_adapter.pt`, & `suna_v2_1_pop_masterpiece_adapter.pt` — Unified PyTorch checkpoints for Colab & ZeroGPU Spaces.\n* `suna_v1_dna_bank.json` & `config.json` — Melodic Soul harmonic profiles, BPM/key matrices, and model configuration.\n\n---\n\n## 📜 License & Attribution\n\n* **ACE-Step 1.5 XL SFT Backbone & Oobleck VAE:** MIT License (Copyright © 2026 ACE-Step Team).\n* **Qwen3-Embedding-0.6B Text & Phonetic Encoder:** Apache 2.0 License (Copyright © Alibaba Cloud).\n* **JJ coders Suna AI v1.0 LoRA Experts, Melodic Soul Engine, G2P Aligner, & Critic Network:** MIT License (Copyright © 2026 JJ Coders Group / Johan Jomet).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "empiriolabsai/canora-turkish",
+      "author": "empiriolabsai",
+      "created_at": "2026-11-20",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "kokoro",
+        "onnx",
+        "style_text_to_speech_2",
+        "text-to-speech",
+        "tts",
+        "canora",
+        "turkish",
+        "speech-synthesis",
+        "transformers.js",
+        "tr",
+        "base_model:hexgrad/Kokoro-82M",
+        "base_model:finetune:hexgrad/Kokoro-82M",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 204,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "kokoro",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/empiriolabsai/canora-turkish",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "hexgrad/Kokoro-82M"
+      ],
+      "variants": [
+        "empiriolabsai/canora-dutch",
+        "empiriolabsai/canora-polish",
+        "empiriolabsai/canora-korean",
+        "empiriolabsai/canora-german",
+        "empiriolabsai/canora-norwegian"
+      ],
+      "score": 19,
+      "topic_scores": {
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "batteryphil/VAULT-PRIMAL-F5-TTS-337M",
+      "author": "batteryphil",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot-tts",
+        "f5-tts",
+        "diffusion",
+        "flow-matching",
+        "dit",
+        "convnext",
+        "quantization",
+        "4-bit",
+        "2-bit",
+        "vault",
+        "primal",
+        "en",
+        "zh",
+        "base_model:SWivid/F5-TTS",
+        "base_model:finetune:SWivid/F5-TTS",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "safetensors",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/batteryphil/VAULT-PRIMAL-F5-TTS-337M",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nbase_model:\n  - SWivid/F5-TTS\npipeline_tag: text-to-speech\nlibrary_name: safetensors\nlanguage:\n  - en\n  - zh\ntags:\n  - text-to-speech\n  - tts\n  - voice-cloning\n  - zero-shot-tts\n  - f5-tts\n  - diffusion\n  - flow-matching\n  - dit\n  - convnext\n  - quantization\n  - 4-bit\n  - 2-bit\n  - vault\n  - primal\n---\n\n# VAULT-PRIMAL-F5-TTS-337M (`192.0 MB` 4-Bit & `138.9 MB` 2-Bit Zero-Shot Voice Cloning Diffusion TTS)\n\n**`F5-TTS v1 Base` (`337.1M` parameters — `4x ConvNeXt V2` CNN Text Encoder + `22`-Layer `DiT` Conditional Flow-Matching Diffusion + `Vocos`, `24 kHz`) compressed from `1.35 GB` down to `192.0 MB` (`V3_P4_0 + PRIMAL`) and `138.9 MB` (`V3_Q2_0 + PRIMAL`)!**\n\n- **Zero-Shot Voice Cloning in 1 Command:** Clone **any** voice from a `5–10s` `.wav`/`.mp3` clip — or run immediately with the bundled default voice (`examples/ref_en.wav`) and zero setup!\n- **Never Downloads the `1.35 GB` Upstream `FP32` Checkpoint:** Instantiates `CFM(transformer=DiT(...))` directly and downloads ONLY the `192.0 MB` (`4-bit`) or `138.9 MB` (`2-bit`) `.safetensors` shard.\n- **Shadowless Velocity-Field `PRIMAL` Rescue:** Raw 2-bit `F5-TTS` collapses into **`100.0%` WER unintelligible static** across `16` ODE steps; **4.2 minutes (`120` steps, `164,654` discrete integer flips)** of Conditional Flow-Matching velocity distillation (`0` `FP32` shadow weights) brought it all the way back to **`6.78%` WER / `4.68%` CER**!\n\n---\n\n## Listen First (Side-by-Side Audio Samples)\n\nPrompt: *\"Hello! This is a full text to speech quantization benchmark running locally on consumer hardware.\"* (`24 kHz` Zero-Shot Voice Cloning)\n\n| Checkpoint | True File Size | Compression | Play Sample |\n| :--- | :---: | :---: | :--- |\n| Upstream `FP32` (`SWivid/F5-TTS`, `16` NFE) | `1,348.4 MB` | `1.00x` | <audio controls src=\"https://huggingface.co/batteryphil/VAULT-PRIMAL-F5-TTS-337M/resolve/main/samples/00_fp32.wav\"></audio> [Download `.wav`](samples/00_fp32.wav) |\n| Standard Uniform `Q4_0` Baseline | `192.0 MB` | `7.02x` | <audio controls src=\"https://huggingface.co/batteryphil/VAULT-PRIMAL-F5-TTS-337M/resolve/main/samples/01_q4_0.wav\"></audio> [Download `.wav`](samples/01_q4_0.wav) |\n| **`f5_tts_v3_p4_0_primal.safetensors`** *(Recommended)* | **`192.0 MB`** | **`7.02x`** | <audio controls src=\"https://huggingface.co/batteryphil/VAULT-PRIMAL-F5-TTS-337M/resolve/main/samples/02_v3_p4_0_primal.wav\"></audio> [Download `.wav`](samples/02_v3_p4_0_primal.wav) |\n| **`f5_tts_v3_q2_0_primal.safetensors`** *(Extreme 2-Bit `DiT`)* | **`138.9 MB`** | **`9.71x`** | <audio controls src=\"https://huggingface.co/batteryphil/VAULT-PRIMAL-F5-TTS-337M/resolve/main/samples/03_v3_q2_0_primal.wav\"></audio> [Download `.wav`](samples/03_v3_q2_0_primal.wav) |\n\n---\n\n## Which Checkpoint Should I Pick?\n\n| Variant Flag | File in Repo | Size | Best For |\n| :--- | :--- | :---: | :--- |\n| `--variant p4_0` *(Default)* | `f5_tts_v3_p4_0_primal.safetensors` | **`192.0 MB`** | **Clean Zero-Shot Voice Cloning (`7.02x` smaller than `1.35 GB`):** Matches `FP32`'s exact **`3.69%` Character Error Rate (`0.00%` CER degradation)** after `93,733` discrete `PRIMAL` flips. |\n| `--variant q2_0` | `f5_tts_v3_q2_0_primal.safetensors` | **`138.9 MB`** | **Extreme `9.71x` Diffusion Compression (`188.7M` `DiT` + `ConvNeXt V2` body @ `2.25 bpw` + `adaLN` @ `4.50 bpw`):** Rescued from `100.0%` WER static down to **`6.78%` WER / `4.68%` CER** via `164,654` velocity-field `PRIMAL` flips! |\n\n---\n\n## 60-Second Quickstart (Copy & Paste)\n\n### Option A — 1-Command CLI (Instant Speech + Zero-Shot Voice Cloning)\n```bash\npip install torch torchaudio safetensors soundfile huggingface_hub numpy f5-tts\ngit clone https://huggingface.co/batteryphil/VAULT-PRIMAL-F5-TTS-337M\ncd VAULT-PRIMAL-F5-TTS-337M\n\n# 1. Speak immediately using the bundled voice (192.0 MB 4-bit Prime-Harmonic):\npython infer.py \"Hello! This 337 million parameter diffusion TTS model was compressed 7x down to 192 megabytes!\" -o f5_p4.wav\n\n# 2. Clone YOUR OWN voice from any 5-10s audio file (auto-transcribes if --ref-text is omitted!):\npython infer.py \"Now I am speaking in your cloned voice, locally and privately!\" \\\n  --ref-audio path/to/your_5sec_voice.wav \\\n  --ref-text \"Exact words spoken in your five second clip.\" \\\n  -o my_cloned_voice.wav\n\n# 3. Test the extreme 138.9 MB 2-bit DiT diffusion model:\npython infer.py \"Velocity-field discrete distillation rescued two-bit diffusion from dead static!\" --variant q2_0 -o f5_q2.wav\n```\n\n### Option B — 4-Line Python API (Auto-Downloads `192 MB` or `139 MB` Directly From Hugging Face)\n```python\nimport importlib.util\nfrom huggingface_hub import hf_hub_download\n\nspec = importlib.util.spec_from_file_location(\n    \"vault_tts\", hf_hub_download(\"batteryphil/VAULT-PRIMAL-F5-TTS-337M\", \"vault_tts.py\")\n)\nvault_tts = importlib.util.module_from_spec(spec); spec.loader.exec_module(vault_tts)\n\ntts = vault_tts.load_f5_tts(variant=\"p4_0\")  # 192.0 MB (or variant=\"q2_0\" for 138.9 MB!)\ntts.speak(\"Hello! Multi-paragraph zero-shot voice cloning in four lines of Python.\", out_path=\"speech.wav\")\n```\n\n---\n\n## Objective Benchmark Results (`ConvNeXt V2` + `22`-Layer `DiT` Flow-Matching Diffusion)\n\nEvaluated across **12 held-out spoken prompts** (`177` words total, **0 overlap** with the `18` calibration trajectories, `16`-step Sway-Sampling Euler ODE) using `openai/whisper-small.en` round-trip ASR:\n\n| Variant | Packed Size (`vs FP32`) | Eff. `bpw` | Whisper `WER %` $\\downarrow$ | Whisper `CER %` $\\downarrow$ | Log-Mel Dist (`dB`) $\\downarrow$ | Discrete `PRIMAL` Healing |\n| :--- | :---: | :---: | :---: | :---: | :---: | :--- |\n| Upstream `FP32` (`F5TTS_v1_Base`) | `1,348.39 MB` (`1.00x`) | `32.00` | `3.95%` | `3.69%` | `0.000` | Reference (`16` NFE Sway-Sampling) |\n| Uniform Linear `Q4_0` PTQ | `191.99 MB` (`7.02x`) | `4.56` | `3.95%` | `3.69%` | `4.694` | Uniform 4-bit baseline |\n| **`V3_P4_0 + Shadowless PRIMAL`** | **`191.99 MB` (`7.02x`)** | **`4.56`** | `4.52%` | **`3.69%`** | `5.333` | **`93,733` flips (`205s`) -> `0.00%` CER loss vs `1.35 GB` `FP32`!** |\n| `V3_Q2_0` 2-Bit `DiT` Raw PTQ | `138.90 MB` (`9.71x`) | `3.30` | `100.00%` *(Static)* | `87.94%` | `16.657` | **Complete ODE collapse** before `PRIMAL` |\n| **`V3_Q2_0 + Velocity-Field PRIMAL`** | **`138.90 MB` (`9.71x`)** | **`3.30`** | **`6.78%` (`-93.2%`!)** | **`4.68%`** | **`8.497`** | **`164,654` flips (`4.2 min` CFM distill): `100% -> 6.78%` WER!** |\n\n---\n\n## How WeSolved 2-Bit Diffusion (`DiT`) Quantization Collapse\n\n1. **Protecting `adaLN-Zero` Modulation Gates:** Every `DiT` block uses an `adaLN-Zero` linear projection to regress `6` per-channel shift, scale, and residual-gate vectors from the continuous ODE time embedding `t in [0, 1]`. Crushing `adaLN` to 2 bits corrupts feature variance across all `22` blocks and `16` Euler ODE steps. Keeping `adaLN` + I/O projections in 4-bit `V3_P4_0` (`4.50 bpw`) while compressing all **`188.7M` `DiT` Attention (`Q/K/V/O`), Feed-Forward, and `ConvNeXt V2` CNN weights** to **2-bit `V3_Q2_0` (`2.25 bpw`)** packs the `1.35 GB` model into **`138.90 MB`** (`9.71x` compression).\n2. **Trajectory Velocity-Field Shadowless `PRIMAL`:** Instead of unrolling backpropagation through all `16` ODE steps (which explodes VRAM and vanishes gradients), we cache `108` exact `FP32` teacher `(x_t, t, v_cond, v_uncond)` snapshots across Sway-Sampled timesteps `t in [0, 1]` and train both the 2-bit `V3_Q2_0` `DiT` body and 4-bit `V3_P4_0` `adaLN` codes/scales directly in integer space (`0` `FP32` shadow weights, `0.95` leaky `int8` vote decay, Adafactor Gauss-Newton preconditioning) to match the Classifier-Free Guided velocity vector field (`ema_loss: 2.128 -> 0.456` in `251.8s`).\n\n---\n\n## Companion VAULT + PRIMAL Releases\n\n- **[`batteryphil/VAULT-PRIMAL-Tiny-Voca-4.5M`](https://huggingface.co/batteryphil/VAULT-PRIMAL-Tiny-Voca-4.5M)** — `2.64 MB` (`4-bit`) & `1.38 MB` (`2-bit`) Micro-Transformer TTS (`0.00%` WER loss vs `FP32`!).\n- **[`batteryphil/VAULT-PRIMAL-VITS-29M`](https://huggingface.co/batteryphil/VAULT-PRIMAL-VITS-29M)** — Pure 1D-CNN WaveNet Flow + HiFi-GAN TTS (`16.52 MB` `4-bit` beating `Q4_0` by `-10.4%` Mel error & `8.75 MB` `2-bit` `PRIMAL`).\n- **[`batteryphil/VAULT-v3-DeepSeek-R1-1.5B-PRIMAL-VLT3`](https://huggingface.co/batteryphil/VAULT-v3-DeepSeek-R1-1.5B-PRIMAL-VLT3)** — Standalone C99 `.vlt3` Reasoning LLM (`680.9 MB` `V3_Q2_0` & `1.18 GiB` `V3_P4_0`).\n- **GitHub Source & Reproducible Pipeline:** [`https://github.com/batteryphil/VAULT-v3-PRIMAL`](https://github.com/batteryphil/VAULT-v3-PRIMAL)\n\n---\n\n## License\n\n- **Upstream Base Weights (`SWivid/F5-TTS`):** `CC-BY-NC-4.0` (Emilia dataset non-commercial terms; `f5-tts` library code is `MIT`).\n- **`VAULT + PRIMAL` Code, Loader & Codec:** Free (`0%`) for individuals & non-commercial use; `5%` profit share for commercial entities when applied to commercially-licensed base checkpoints (see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE)).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "SWivid/F5-TTS"
+      ],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "speech_models": 17
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech, voice cloning",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "batteryphil/VAULT-PRIMAL-VITS-29M",
+      "author": "batteryphil",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "vits",
+        "text-to-audio",
+        "text-to-speech",
+        "tts",
+        "cnn",
+        "hifi-gan",
+        "normalizing-flow",
+        "quantization",
+        "4-bit",
+        "2-bit",
+        "vault",
+        "primal",
+        "en",
+        "base_model:facebook/mms-tts-eng",
+        "base_model:finetune:facebook/mms-tts-eng",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/batteryphil/VAULT-PRIMAL-VITS-29M",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/mms-tts-eng"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "itzune/antzoki-mini-tts-GGUF",
+      "author": "itzune",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "gguf",
+        "llama.cpp",
+        "text-to-speech",
+        "tts",
+        "basque",
+        "euskara",
+        "voice-cloning",
+        "audio8",
+        "eu",
+        "base_model:itzune/antzoki-mini-tts",
+        "base_model:quantized:itzune/antzoki-mini-tts",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/itzune/antzoki-mini-tts-GGUF",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n  - eu\npipeline_tag: text-to-speech\nbase_model: itzune/antzoki-mini-tts\nbase_model_relation: quantized\ntags:\n  - gguf\n  - llama.cpp\n  - text-to-speech\n  - tts\n  - basque\n  - euskara\n  - voice-cloning\n  - audio8\n---\n\n# antzoki-mini-tts GGUF (Q4_K_M)\n\nCPU build of [itzune/antzoki-mini-tts](https://huggingface.co/itzune/antzoki-mini-tts), a Basque\n(*euskara*) fine-tune of [Edge0/Audio8-TTS-Realistic-Air](https://huggingface.co/Edge0/Audio8-TTS-Realistic-Air)\n(0.6B, DualAR, 44.1 kHz codec, zero-shot voice cloning), as a bundle for the Audio8 llama.cpp\nruntime. It runs with no Python and no GPU.\n\n> **The bundle needs the Audio8-patched llama.cpp**, not stock llama.cpp, Ollama or LM Studio.\n> The runtime does the text processing, DualAR generation, voice cloning and codec decoding.\n\n## Files\n\n| File | Type | Size |\n|---|---|---:|\n| `models/slow-q4_k_m.gguf` | slow AR (24 layers), Q4_K_M | 387 MiB |\n| `models/fast-q4_k_m.gguf` | fast AR (4 layers, 10 codebooks), Q4_K_M | 46 MiB |\n| `models/codebook_embeddings.f32` | codebook embeddings, F32 | 140 MiB |\n| `models/audio8-realistic-codec-f32.gguf` | audio codec, F32 | 1.26 GiB |\n| `audio8-runtime.json` | bundle manifest read by the runtime | |\n\nOnly the two AR models are quantized. The RoPE tables and the codec stay F32 because the runtime\nrequires it, so the codec is most of the download. The model width (896) is not a multiple of\n256, so Q4_K_M uses Q5_0/Q8_0 for about half of its tensors.\n\n## Usage\n\n```bash\n# 1. Build the runtime (once). CPU build with this machine's SIMD + OpenMP.\ngit clone https://github.com/Edge0-AI/Audio8_TTS\ngit clone https://github.com/ggml-org/llama.cpp.git\ngit -C llama.cpp checkout d854d98bae598388ecea1ed84396587e5edc326d\npython3 Audio8_TTS/llama_cpp/prepare.py --source llama.cpp\ncmake -S llama.cpp -B build-cpu -G \"Unix Makefiles\" -C Audio8_TTS/llama_cpp/cmake/common.cmake \\\n  -DGGML_NATIVE=ON -DGGML_OPENMP=ON -DAUDIO8_CODEC_OPENMP=ON '-DCMAKE_INSTALL_RPATH=$ORIGIN/../lib'\ncmake --build build-cpu --parallel --target llama-tts\n\n# 2. Download the bundle and the Basque text normalizer\nhf download itzune/antzoki-mini-tts-GGUF --local-dir antzoki-gguf\nhf download itzune/antzoki-mini-tts eu_normalize.py --local-dir .\n\n# 3. Synthesize. Normalize the text first: numbers, dates and abbreviations become words.\nTEXT=$(python3 -c 'from eu_normalize import normalize; print(normalize(\"Bihar goizean, zortzietan, Bilboko geltokian elkartuko gara.\"))')\nbuild-cpu/bin/llama-tts --audio8-model-dir antzoki-gguf --text \"$TEXT\" --output out.wav \\\n  --gpu-layers 0 --threads 16 --max-frames 512\n\n# Voice cloning: 10–15 s of clean speech plus its exact transcript\nbuild-cpu/bin/llama-tts --audio8-model-dir antzoki-gguf --text \"$TEXT\" --output clone.wav \\\n  --gpu-layers 0 --threads 16 --max-frames 512 \\\n  --reference-audio ref.wav --reference-text \"Erreferentzian esaten den testu zehatza.\"\n```\n\n`llama-tts` does not overwrite an existing `--output` file. When generation reaches\n`--max-frames` without an end of speech (a runaway), it exits with an error. Run it again with\nanother `--seed`.\n\n## Quality and speed\n\nMeasured on CPU with 8 sentences that are not in the training data, with a held-out reference voice\nand without a reference, and 3 seeds each.\n\n| Bundle | Size | Speaker SIM ↑ | Runaways, with ref | Runaways, no ref | RTF (with ref / no ref) |\n|---|---:|---:|---:|---:|---:|\n| F32 | 3.6 GB | 0.932 | 1/24 | 3/24 | 7.9 / 7.1 |\n| **Q4_K_M (this repo)** | 1.9 GB | **0.940** | **0/24** | 4/24 | 3.7 / 2.7 |\n| Q4_0 | 1.8 GB | 0.923 | 3/24 | 7/24 | 3.4 / 2.4 |\n\nThe Q4_K_M and F32 results are within noise of each other, and Q4_K_M is 2–2.6× faster. RTF is\nseconds of compute per second of audio, measured with 4 jobs sharing the CPU. One job with 16\nthreads runs at about 2 RTF: a 5 s sentence with a reference takes 2.8 s of AR, 4.7 s of codec\nand 3.3 s of reference encoding. CPU synthesis is therefore slower than real time, and the F32\ncodec is the bottleneck.\n\n## Limitations\n\nThe limitations of the [original model](https://huggingface.co/itzune/antzoki-mini-tts) apply.\nIt was trained on about 9 hours of read speech, and it mispronounces some rare words and names\n(for example *Antton*). There is no speed parameter: the pace follows the reference. Without a\nreference, the voice and the pace change with every seed.\n\n## Reproduce\n\nThe conversion and quantization scripts are in\n[github.com/itzune/antzoki-mini-tts](https://github.com/itzune/antzoki-mini-tts) (`scripts/gguf/`):\n`convert_eu.py` (F32 bundle), `quantize_eu.sh` (Q4_K_M) and `eval_gguf.py` (the table above).\n\n## License\n\nApache-2.0, like the base model. See `LICENSE` and `NOTICE`.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "itzune/antzoki-mini-tts"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "itzune/antzoki-mini-tts",
+      "author": "itzune",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "gguf",
+        "arktts",
+        "feature-extraction",
+        "text-to-speech",
+        "tts",
+        "basque",
+        "euskara",
+        "voice-cloning",
+        "audio8",
+        "custom_code",
+        "eu",
+        "dataset:openslr/76",
+        "base_model:Edge0/Audio8-TTS-Realistic-Air",
+        "base_model:finetune:Edge0/Audio8-TTS-Realistic-Air",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/itzune/antzoki-mini-tts",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n  - eu\nlibrary_name: transformers\npipeline_tag: text-to-speech\nbase_model: Edge0/Audio8-TTS-Realistic-Air\nbase_model_relation: finetune\ndatasets:\n  - openslr/76\ntags:\n  - text-to-speech\n  - tts\n  - basque\n  - euskara\n  - voice-cloning\n  - audio8\n---\n\n# antzoki-mini-tts\n\nBasque (*euskara*) text-to-speech: a supervised fine-tune of the slow AR branch (fast AR kept frozen) of\n[Edge0/Audio8-TTS-Realistic-Air](https://huggingface.co/Edge0/Audio8-TTS-Realistic-Air)\n(0.6B, DualAR, 44.1 kHz codec, zero-shot voice cloning). Basque is not one of the base\nmodel's 23 languages, so this release adapts it to a new language.\n\n> **Status: experimental.** Trained on about 9 hours of read speech from one corpus. Listen to\n> the samples before you use it, and expect errors on rare words, acronyms and code-switching.\n\n## Usage\n\n```bash\ngit clone https://github.com/Edge0-AI/Audio8_TTS && cd Audio8_TTS\npip install -r requirements.txt\n```\n\n```python\nimport sys, soundfile as sf, torch\nfrom huggingface_hub import hf_hub_download\nfrom transformers import AutoModel, AutoProcessor\n\nrepo = \"itzune/antzoki-mini-tts\"\nsys.path.insert(0, hf_hub_download(repo, \"eu_normalize.py\").rsplit(\"/\", 1)[0])\nfrom eu_normalize import normalize          # same normalizer as in training\n\nprocessor = AutoProcessor.from_pretrained(repo, trust_remote_code=True)\nmodel = AutoModel.from_pretrained(repo, trust_remote_code=True, dtype=torch.bfloat16).cuda().eval()\n\ntext = normalize(\"Donostiako zinemaldia 1953an sortu zen.\")   # -> \"... mila bederatziehun eta berrogeita hamahiruan ...\"\ninputs = processor(text=[text], return_tensors=\"pt\")\n# voice cloning: processor(text=[text], reference_audio=[\"ref.wav\"], reference_text=[\"exact transcript\"], return_tensors=\"pt\")\ninputs = {k: v.cuda() for k, v in inputs.items()}\nout = model.generate(**inputs, max_new_tokens=512, do_sample=True, temperature=0.8, top_p=0.95,\n                     top_k=50, return_dict_in_generate=True)\nwav, lengths = model.decode_audio(out.codes)\nsf.write(\"out.wav\", wav[0, : int(lengths[0])].float().cpu().numpy(), model.config.codec_sample_rate)\n```\n\nOr with the CLI from the Audio8 repo:\n`python audio8_tts_infer.py --model itzune/antzoki-mini-tts --text \"...\" [--reference-audio ref.wav --reference-text \"...\"] --output out.wav`\n\nCPU without Python or GPU: the llama.cpp GGUF build (Q4_K_M) is in [itzune/antzoki-mini-tts-GGUF](https://huggingface.co/itzune/antzoki-mini-tts-GGUF).\n\n**Always normalize the text with `eu_normalize.normalize()`.** The model never saw digits\nduring training: numbers become Basque words that keep their case suffix\n(`2008an` → `bi mila eta zortzian`, `1950eko` → `mila bederatziehun eta berrogeita hamarreko`).\nKeep each input under about 150 characters.\n\n## Training\n\n| | |\n|---|---|\n| Data | [OpenSLR 76](https://www.openslr.org/76/): crowdsourced Basque read speech. After filtering: 6811 training utterances (9.1 h), 50 speakers |\n| Held out | speakers `euf_07505`, `eum_01523`, used for evaluation and never trained on |\n| Audio prep | silence trimming, resampled to 44.1 kHz, loudness set to −20 LUFS (−1 dBFS peak), speaking-rate outlier filter |\n| Voice cloning | 61% of training rows paired with another utterance of the same speaker as the reference prompt |\n| Method | slow AR branch trained, fast AR (acoustic detail) frozen, bf16, DeepSpeed ZeRO-2, 1× RTX 5090 (24 GB) |\n| Hyper-params | learning_rate=1e-5, num_train_epochs=2, batch_size=4, gradient_accumulation_steps=4, warmup_ratio=0.03, lr_scheduler_type=cosine, weight_decay=0.01, extra: `--load_best_model_at_end true --metric_for_best_model eval_loss --greater_is_better false` |\n| Pipeline | https://github.com/itzune/antzoki-mini-tts (Audio8_TTS @ `aef426d`) |\n\n## Evaluation\n\nTeacher-forced loss on 200 utterances from the held-out speakers (lower is better).\n\n| Model | eval loss | slow loss | fast loss | slow acc |\n|---|---:|---:|---:|---:|\n| base (Audio8-TTS-Realistic-Air) | 12.730 | 5.423 | 7.308 | 0.102 |\n| audio8_eu_sft_v2 | 9.088 | 3.803 | 5.285 | 0.176 |\n| **audio8_eu_sft_v4 (this release)** | 9.183 | 3.806 | 5.378 | 0.177 |\n\nA first run (2e-5 learning rate, 6 epochs) reached its best held-out loss after about 250 steps\nand then overfit: OpenSLR 76 has many speakers reading the same sentences. This release uses the same short, early-stopped schedule with the fast AR frozen: its loss is slightly higher than the fully fine-tuned run, but it sounds and measures about the same and had fewer runaway generations when cloning.\n\n**Voice cloning and robustness** (8 new sentences × 2 held-out reference voices + no reference, 8 seeds). SIM = cosine similarity of WavLM speaker embeddings between the output and the reference (real recordings: 0.97 same speaker, 0.673 different speakers). A runaway has no end of speech or a speaking rate below 8 characters/s.\n\n| Model | SIM ↑ | runaway, with ref | runaway, no ref |\n|---|---:|---:|---:|\n| base (Audio8-TTS-Realistic-Air) | 0.968 | 8/128 (6%) | 5/64 (8%) |\n| this model | 0.957 | 4/128 (3%) | 8/64 (12%) |\n\n## Samples\n\nNo reference audio (the model picks a voice):\n\n- **Bihar goizean, zortzietan, Bilboko geltokian elkartuko gara.**\n  <audio controls src=\"samples/noref_s01.wav\"></audio>\n- **Euskara Europako hizkuntzarik zaharrenetakoa da, eta oraindik bizirik dirau.**\n  <audio controls src=\"samples/noref_s02.wav\"></audio>\n\n## Limitations and responsible use\n\n- Small single-domain corpus (read sentences): spontaneous or expressive speech, long inputs,\n  dialects and code-switching are out of distribution.\n- Acronyms and alphanumeric names (`U2`, `AP-68`) are read with Basque digit names.\n- Some generations run away (no end of speech, long silences or babbling), as with the base\n  model. Check the duration and regenerate with another seed when it makes no sense for the\n  text; `scripts/say.py` in the GitHub repo does this automatically.\n- There is no speed parameter. With a reference, the model copies most of the reference's pace;\n  without one, the pace varies from seed to seed.\n- The palatal *tt* / *dd* sounds (*Antton*, *pottoka*) are almost absent from the training data\n  and usually come out wrong. Having the word in the reference helps only sometimes.\n- Voice cloning can imitate real people. Do not clone a voice without the speaker's consent,\n  and do not use this model to impersonate anyone or to deceive.\n\n## License and attribution\n\n- Model weights and code: **Apache-2.0**, as for the base model (see `LICENSE` and `NOTICE`).\n- Training data: **OpenSLR 76** by Google, CC BY-SA 4.0. *Kjartansson, O., Gutkin, A., Butryna, A.,\n  Demirsahin, I., Rivera, C. (2020). Open-Source High Quality Speech Datasets for Basque, Catalan and\n  Galician. SLTU-CCURL 2020.* Check whether the ShareAlike terms apply to your use.\n- Base model: [Edge0/Audio8-TTS-Realistic-Air](https://huggingface.co/Edge0/Audio8-TTS-Realistic-Air) (Apache-2.0).\n- Data recipe inspired by [itzune/antzoki-tts](https://github.com/itzune/antzoki-tts).\n",
+      "arxiv_ids": [],
+      "datasets": [
+        "openslr/76"
+      ],
+      "base_models": [
+        "Edge0/Audio8-TTS-Realistic-Air"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "loom-ai-org/musicgen-small-loom",
+      "author": "loom-ai-org",
+      "created_at": "2026-10-10",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "loom-py-rt",
+        "gguf",
+        "loom",
+        "text-to-codes",
+        "text-to-audio",
+        "en",
+        "base_model:facebook/musicgen-small",
+        "base_model:quantized:facebook/musicgen-small",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 34,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "loom-py-rt",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/loom-ai-org/musicgen-small-loom",
+      "card_text": "---\nlicense: cc-by-nc-4.0\nlanguage:\n- en\nbase_model:\n- facebook/musicgen-small\npipeline_tag: text-to-audio\ntags:\n- loom\n- text-to-codes\nlibrary_name: loom-py-rt\n---\n# MusicGen Small\n\nMeta's MusicGen Small text-to-music model, exported for loom.cpp. Family 14: a text description in, EnCodec tokens out -- pair it with `encodec-32khz-loom` for audio.\n\nThis is a [loom.cpp](https://github.com/loom-ai-org/loom.cpp) export: a single self-describing GGUF\nthat carries its own graph topologies, tokenizer (if any) and driver script, produced by\n[loom-exporter](https://github.com/loom-ai-org/loom-exporter).\n\n## Original model\n\nExported from [`facebook/musicgen-small`](https://huggingface.co/facebook/musicgen-small). Weights are unmodified; this repo packages the same parameters into\nloom.cpp's GGUF format.\n\n## License\n\n`cc-by-nc-4.0`, inherited from the base model above.\n\n## Language(s)\n\n`en`\n\n## Usage\n\nRun it with [loom-py](https://github.com/loom-ai-org/loom-py) -- `loom-py-rt` on PyPI:\n\n```sh\npip install -U \"loom-py-rt[hub]>=1.0.0\"\n```\n\n```python\nimport loom\n\nmodel = loom.Model.from_pretrained(\"loom-ai-org/musicgen-small-loom\")\n\n# The prompt DESCRIBES the music -- genre, instruments, mood. What comes back is EnCodec TOKENS, not\n# audio: frame-major, 4 codebooks wide, 50 frames per second, so max_new_tokens=250 is five seconds.\ncodes = model.text2codes.infer(\"80s pop track with bassy drums and synth\", max_new_tokens=250, seed=1)\nprint(len(codes), \"frames x\", len(codes[0]), \"codebooks\")\n\n# The second half of the pair, in a repo of its own: the codec this model was trained with.\ncodec = loom.Model.from_pretrained(\"loom-ai-org/encodec-32khz-loom\")\naudio = codec.codes2speech.infer(codes)\nprint(len(audio), \"samples at\", audio.sample_rate, \"Hz =\", round(audio.duration, 2), \"s\")\naudio.save(\"out.wav\")\n\n# Nothing goes between those two calls. Both files declare the width of a frame:\nprint(model.hparam(\"codec.n_codebooks\"), \"==\", codec.hparam(\"codec.n_codebooks\"))\n\n# This model SAMPLES by default, with classifier-free guidance; `seed=` pins a take, and\n# temperature=0 decodes greedily (transformers' generate(do_sample=False), code for code).\nprint(model.hparam(\"sampling.top_k\"), model.hparam(\"sampling.guidance_scale\", \"f32\"))\n```\n\n### Streaming\n\n```python\n# Live: the codes as they are drawn, each piece decoded as it arrives -- the two streams chained\n# (loom.cpp ADR-102). Play each piece as it comes.\nsizes = [len(piece) for piece in codec.codes2speech.stream(model.text2codes.stream(\"80s pop track with bassy drums and synth\", max_new_tokens=100, seed=1))]\nprint(len(sizes), \"pieces,\", sum(sizes), \"samples\")\n```\n\n### The layer underneath\n\nThe call above is the high-level door: one per task, named for the modality pair it maps between, with\nthe windowing, sampling and assembly this model needs already applied. Under it, `model.infer(...)`\npasses your arguments straight to the driver this GGUF embeds -- which is where you go for a knob the\ndoor does not name.\n\n`model.driver_source` prints that driver, including a header comment documenting every argument it\naccepts for this model, and is the authority on it. See [loom-py](https://github.com/loom-ai-org/loom-py) for the API and\n[loom.cpp](https://github.com/loom-ai-org/loom.cpp) for what the engine does between the two.\n\n## Known limitations\n\n**This model does not produce audio.** It emits four streams of EnCodec tokens, and [`encodec-32khz-loom`](https://huggingface.co/loom-ai-org/encodec-32khz-loom) -- the codec it was trained with -- turns them into 32 kHz mono audio. The usage snippet above is the whole of the joining.\n\n**The prompt describes the music; it is not lyrics.** Genre, instruments, tempo and mood in English, through the T5 vocabulary this file carries. MusicGen Small makes no vocals.\n\n**It samples, at the settings `transformers` uses for this checkpoint**: `top_k 50` and classifier-free guidance at `3.0`. (Meta's own `audiocraft` library samples with `top_k 250`; this file follows the checkpoint's Hugging Face generation config.) Two runs give two takes; `seed=` pins one, and `temperature=0` decodes greedily, which reproduces `transformers`' `generate(do_sample=False)` code for code.\n\n`max_new_tokens` counts **audio frames** at 50 per second, so 250 is five seconds. The default is 1496 frames, about 30 s, which is the checkpoint's own generation length and its training clip length. The decoder's 2048 positions cap one call at 2045 frames (40.9 s).\n\nGuidance costs a second decoder pass at every step, so it roughly doubles the work. `guidance_scale=1.0` turns it off: faster, and the music follows the prompt less closely. On a 4-thread laptop-class CPU, two seconds of music took about 27 s with guidance and 14 s without; a GPU or more cores helps.\n\n**Expect lo-fi sound; that comes from the model, not from this export.** MusicGen generates music as a 2.2 kbps EnCodec stream: four 2048-entry codebooks at 50 frames a second. That is enough for style, rhythm and instrumentation, and it sounds about like an old radio. This file's codes match `transformers` exactly, and the codec matches it to 3e-5, so a sharper result would have to come from a larger MusicGen checkpoint, not a different runtime.\n\nMono and text-conditioned only. The melody-conditioned and stereo MusicGen checkpoints are different models and are not covered by this file. 2.1 GB, F32.\n\n## Files\n\n- `musicgen-small.gguf` -- the model, exported with loom-exporter.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/musicgen-small"
+      ],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio (pipeline tag), musicgen",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "nervous-sloth/rickroller",
+      "author": "nervous-sloth",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "music-generation",
+        "lora",
+        "yue2",
+        "text-to-audio",
+        "en",
+        "license:cc0-1.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc0-1.0",
+      "gated": false,
+      "url": "https://huggingface.co/nervous-sloth/rickroller",
+      "card_text": "---\nlicense: cc0-1.0\nlanguage:\n  - en\ntags:\n  - music-generation\n  - lora\n  - yue2\n  - text-to-audio\ndescription: A YuE2 3B LoRA adapter for creating Rickroll parodies and covers.\n---\n\n# RickRoll YuE2 LoRA v2 (r05, step 380)\n\nA YuE2 3B LoRA adapter used to create Rickroll parodies and covers. The full model card, file manifest and recommended settings are in [MODEL_CARD.md](MODEL_CARD.md); `SHA256SUMS.txt` carries the SHA-256 of every file in the package.\n\nThis adapter package is dedicated to the public domain under CC0-1.0. The base YuE2 weights it runs with carry their own non-commercial CC BY-NC 4.0 terms, which this dedication does not change.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license cc0-1.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Shadow0482/personaplex-7b-v1-q8",
+      "author": "Shadow0482",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "moshi",
+        "personaplex",
+        "speech-to-speech",
+        "full-duplex",
+        "quantized",
+        "int8",
+        "audio-to-audio",
+        "base_model:nvidia/personaplex-7b-v1",
+        "base_model:quantized:nvidia/personaplex-7b-v1",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "moshi",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Shadow0482/personaplex-7b-v1-q8",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "nvidia/personaplex-7b-v1"
+      ],
+      "variants": [
+        "Shadow0482/personaplex-7b-v1-q4"
+      ],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "MoshinAli/auralguard-checkpoints",
+      "author": "MoshinAli",
+      "created_at": "2026-09-04",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "audio-classification",
+        "speech-processing",
+        "synthetic-speech-detection",
+        "deepfake-detection",
+        "audio-deepfake-detection",
+        "one-class-classification",
+        "model-calibration",
+        "wavlm",
+        "asvspoof",
+        "pytorch",
+        "dataset:asvspoof2019",
+        "dataset:in-the-wild",
+        "dataset:wavefake",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/MoshinAli/auralguard-checkpoints",
+      "card_text": "---\r\nlicense: mit\r\ntags:\r\n- audio-classification\r\n- speech-processing\r\n- synthetic-speech-detection\r\n- deepfake-detection\r\n- audio-deepfake-detection\r\n- one-class-classification\r\n- model-calibration\r\n- wavlm\r\n- asvspoof\r\n- pytorch\r\ndatasets:\r\n- asvspoof2019\r\n- in-the-wild\r\n- wavefake\r\nmetrics:\r\n- eer\r\n- min-t-dcf\r\n- ece\r\n- brier-score\r\n- auroc\r\npipeline_tag: audio-classification\r\n---\r\n\r\n# AuralGuard: Multi-View One-Class Learning for Generalizable and Calibrated Detection of AI-Generated Speech in the Wild\r\n\r\nOfficial checkpoint repository, standardized evaluation manifests, and reproducible artifact logs for the paper:  \r\n**\"AuralGuard: Multi-View One-Class Learning for Generalizable and Calibrated Detection of AI-Generated Speech in the Wild\"**  \r\n*Target: Elsevier Machine Learning with Applications (MLWA) / IEEE Transactions on Information Forensics and Security (T-IFS)*\r\n\r\n- 📄 **Manuscript Status:** Preprint currently under peer review. The manuscript PDF is not hosted in this repository; contact the authors for an academic copy.\r\n- 💻 **Official Code Repository:** [github.com/MIHMahmudEli/auralguard](https://github.com/MIHMahmudEli/auralguard.git)\r\n- 👥 **Authors:** Mohsin Ibna Hossain, Md. Muttakin, Sadman Hasan Miraj, and Md. Khairul Alam Mazumder* (*Corresponding Author*, khairul@aiub.edu)\r\n- 🏛️ **Affiliation:** Department of Computer Science, American International University-Bangladesh (AIUB)\r\n- 📋 **Evaluation Manifests:** Hosted under [`manifests/`](manifests/)\r\n- 📜 **Reproducible Artifact Logs:** Hosted under [`logs/`](logs/)\r\n\r\n---\r\n\r\n## 📊 Empirical Benchmark Results\r\n\r\nTrained strictly once on **ASVspoof 2019 LA** and evaluated zero-shot out-of-domain across all benchmarks. Metrics report point estimates with 95% non-parametric bootstrap confidence intervals ($B=1,000$).\r\n\r\n| Architecture | In-Domain (19LA) EER (%) | min t-DCF | Zero-Shot (In-the-Wild) EER (%) | ITW AUROC | ITW ECE (↓) | Zero-Shot (WaveFake) EER (%) |\r\n| :--- | :---: | :---: | :---: | :---: | :---: | :---: |\r\n| **B1 (LFCC-LCNN)** | 16.29 [15.97, 16.63] | 0.6131 | 50.62 [50.00, 51.19] | 0.4979 | 0.4292 | 45.32 [44.86, 45.76] |\r\n| **B2 (RawNet2)** | 8.99 [8.72, 9.23] | 0.3444 | 38.08 [37.57, 38.59] | 0.6671 | 0.5761 | 50.37 [49.89, 50.80] |\r\n| **B3 (AASIST)** | 10.63 [10.36, 10.92] | 0.3921 | 42.33 [41.80, 42.85] | 0.6122 | 0.5552 | 49.89 [49.37, 50.34] |\r\n| **B5 (WavLM+OCS)** | **2.86** [2.73, 3.00] | **0.1041** | **16.55** [16.12, 16.98] | **0.9103** | 0.2320 | 47.43 [46.91, 47.89] |\r\n| **AuralGuard (v1)** | 3.58 [3.40, 3.74] | 0.1326 | 26.02 [25.55, 26.52] | 0.8145 | **0.1028** | 30.66 [30.27, 31.02] |\r\n| **AuralGuard v2** | 5.27 [5.10, 5.47] | 0.1881 | 19.90 [19.45, 20.35] | 0.8760 | 0.1727 | **28.76** [28.34, 29.14] |\r\n\r\n> **Provenance note (independent pre-submission audit):** All baseline and AuralGuard metrics are computed directly from the released checkpoint weights using the standardized evaluation protocol (bootstrap $B=1{,}000$). The **AuralGuard (v1)** row reflects independent re-evaluation of `checkpoints/auralguard/best.ckpt` (in-domain **3.58%**, In-the-Wild **26.02%**, WaveFake **30.66%**). The **AuralGuard v2** row reflects independent re-evaluation of `checkpoints/auralguard_v2/best.ckpt` (in-domain **5.27%**, In-the-Wild **19.90%**, WaveFake **28.76%**).\r\n\r\n---\r\n\r\n\r\n## 📁 Repository Directory Structure\r\n\r\n```\r\n.\r\n├── checkpoints/                        # Trained PyTorch model checkpoint weights\r\n│   ├── auralguard_v2/                  # Full AuralGuard v2 (best.ckpt, last.ckpt)\r\n│   ├── auralguard/                     # AuralGuard v1 baseline (best.ckpt, last.ckpt)\r\n│   ├── b1_lcnn/                        # B1: LFCC-LCNN baseline (best.ckpt, last.ckpt)\r\n│   ├── b2_rawnet2/                     # B2: RawNet2 baseline (best.ckpt, last.ckpt)\r\n│   ├── b3_aasist/                      # B3: AASIST graph-attention baseline (best.ckpt, last.ckpt)\r\n│   └── b5_wavlm_ocs/                   # B5: Single-view WavLM+OCS baseline (best.ckpt, last.ckpt)\r\n│\r\n├── manifests/                          # Standardized evaluation & training manifests\r\n│   ├── asvspoof2019_la_train.csv       # ASVspoof 2019 LA fixed training partition (25,380 trials)\r\n│   ├── asvspoof2019_la_dev.csv         # ASVspoof 2019 LA development partition (24,844 trials)\r\n│   ├── asvspoof2019_la_eval.csv        # ASVspoof 2019 LA evaluation partition (71,237 trials)\r\n│   ├── in_the_wild.csv                 # In-the-Wild unconstrained evaluation set (31,779 trials)\r\n│   ├── wavefake.csv                    # WaveFake multi-vocoder benchmark (160,466 trials)\r\n│   └── README.md                       # Manifest schemas, trial breakdown, and data origin\r\n│\r\n├── logs/                               # Reproducible artifact logs & verification trail\r\n│   ├── SHA256SUMS.txt                  # Authoritative cryptographic SHA-256 checksums\r\n│   ├── reproducibility_report.md       # Hardware, software, hyperparameter & execution logs\r\n│   ├── checkpoint_audit.csv            # Structural checkpoint verification & parameter counts\r\n│   ├── parameter_audit.csv             # Module-wise parameter allocations\r\n│   ├── manuscript_consistency.csv      # Line-by-line verification against paper numbers\r\n│   ├── RESULT_CONSISTENCY_MATRIX.md    # Multi-seed replication breakdown (Seeds 7, 42, 43, 2024)\r\n│   └── README.md                       # Log directory documentation\r\n│\r\n└── results/                            # Raw empirical evaluation outputs (JSON)\r\n```\r\n\r\n---\r\n\r\n## 🚀 Quick Usage\r\n\r\n### Download Model Checkpoints\r\n\r\n```python\r\nimport torch\r\nfrom huggingface_hub import hf_hub_download\r\n\r\n# Download AuralGuard v2 checkpoint\r\nckpt_path = hf_hub_download(\r\n    repo_id=\"MoshinAli/auralguard-checkpoints\",\r\n    filename=\"checkpoints/auralguard_v2/best.ckpt\"\r\n)\r\nprint(f\"Downloaded checkpoint to: {ckpt_path}\")\r\n```\r\n\r\n### Verify SHA-256 Checksums\r\n\r\n```bash\r\ncurl -O https://huggingface.co/MoshinAli/auralguard-checkpoints/raw/main/logs/SHA256SUMS.txt\r\nsha256sum -c SHA256SUMS.txt\r\n```\r\n\r\n---\r\n\r\n## 📜 Citation\r\n\r\n```bibtex\r\n@article{hossain2026auralguard,\r\n  title     = {AuralGuard: Multi-View One-Class Learning for Generalizable and Calibrated Detection of AI-Generated Speech in the Wild},\r\n  author    = {Hossain, Mohsin Ibna and Muttakin, Md. and Miraj, Sadman Hasan and Mazumder, Md. Khairul Alam},\r\n  journal   = {Preprint submitted to Elsevier Machine Learning with Applications},\r\n  year      = {2026},\r\n  url       = {https://huggingface.co/MoshinAli/auralguard-checkpoints}\r\n}\r\n```\r\n\r\n---\r\n\r\n## ⚖️ License\r\n\r\nThe model weights, manifests, and artifact logs in this repository are released under the [MIT License](LICENSE).\r\n",
+      "arxiv_ids": [],
+      "datasets": [
+        "asvspoof2019",
+        "in-the-wild",
+        "wavefake"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "cdismus4/chimera-jev-full-duplex",
+      "author": "cdismus4",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "onnx",
+        "chimera-jev",
+        "full-duplex",
+        "jev",
+        "speech-to-speech",
+        "turn-taking",
+        "voice",
+        "wasm",
+        "speech",
+        "real-time",
+        "browser",
+        "conversational-ai",
+        "audio-to-audio",
+        "ja",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/cdismus4/chimera-jev-full-duplex",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "oluwagbotty/afri-seamless-ft-p8-multi",
+      "author": "oluwagbotty",
+      "created_at": "2026-11-21",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "automatic-speech-recognition",
+      "tags": [
+        "safetensors",
+        "speech-translation",
+        "seamless_m4t_v2",
+        "african-languages",
+        "hausa",
+        "igbo",
+        "yoruba",
+        "automatic-speech-recognition",
+        "ha",
+        "ig",
+        "yo",
+        "base_model:facebook/seamless-m4t-v2-large",
+        "base_model:finetune:facebook/seamless-m4t-v2-large",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/oluwagbotty/afri-seamless-ft-p8-multi",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/seamless-m4t-v2-large"
+      ],
+      "variants": [
+        "oluwagbotty/afri-seamless-ft-p8"
+      ],
+      "score": 10,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition (pipeline tag), speech translation",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "huybik/hibiki-zero-vi-full-sft",
+      "author": "huybik",
+      "created_at": "2026-07-29",
+      "last_modified": "2026-11-22",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "moshi",
+        "speech-translation",
+        "simultaneous-translation",
+        "mimi",
+        "audio-to-audio",
+        "vi",
+        "en",
+        "base_model:kyutai/hibiki-zero-3b-pytorch-bf16",
+        "base_model:finetune:kyutai/hibiki-zero-3b-pytorch-bf16",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "moshi",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/huybik/hibiki-zero-vi-full-sft",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "kyutai/hibiki-zero-3b-pytorch-bf16"
+      ],
+      "variants": [],
+      "score": 9,
+      "topic_scores": {
+        "speech_models": 8
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech translation",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    }
+  ]
+}
