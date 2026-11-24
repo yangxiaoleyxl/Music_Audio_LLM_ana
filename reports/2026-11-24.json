@@ -1,0 +1,1945 @@
+{
+  "generated_at": "2026-11-24",
+  "window_start": "2026-11-17",
+  "source_counts": {
+    "arxiv": 43,
+    "semantic_scholar": 40
+  },
+  "errors": [],
+  "papers": [
+    {
+      "source": "arxiv",
+      "source_id": "2611.27215",
+      "title": "Neural Defend Ranks #1 in Global Audio Deepfake Detection Benchmark - ARCAS on the Podonos Independent Leaderboard",
+      "abstract": "Commercial detectors of AI-generated audio are usually promoted with results on internal test sets that buyers cannot inspect. Independent benchmarks with private labels give a more reliable comparison. We report the results of Neural Defend's ARCAS foundation models on the Podonos audio deepfake detection benchmark, an independent leaderboard that scores commercial detection APIs and open-source detectors on one held-out set of real speech and speech from current text-to-speech and voice-cloning systems, delivered in six file formats, against labels that only Podonos holds. In the release of 29 October 2026, which covers 28 systems from 16 commercial vendors and the leading open models, ARCAS 290M and the smaller ARCAS 90M share first place, ahead of every other commercial system, including Resemble AI, Hiya, Pindrop, Hive, and Reality Defender. Both models make fewer errors than any other system by a statistically clear margin, keep false positives and false negatives in balance at their default threshold, process every submitted file without rejection, and sit on the accuracy--latency frontier of the leaderboard. As for every commercial system added since Podonos retired its API runner, the ARCAS predictions were submitted by Neural Defend and scored by Podonos against its private labels. We describe the benchmark's construction and protocol in full, reproduce the complete leaderboard and its history across five releases, and analyse error balance, statistical separation, speed, and the gap between commercial and open-source detectors. The results agree with the companion evaluation of ARCAS 290M on the complete test sets of ten public benchmarks and establish ARCAS as the most accurate AI-generated audio detector evaluated on this independent benchmark.",
+      "authors": [
+        "Sivashankar Selvarajan",
+        "Piyush Verma",
+        "Sumit Singh"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.27215",
+      "pdf_url": "https://arxiv.org/pdf/2611.27215v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.AI",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 18,
+      "topic_scores": {
+        "speech_models": 5,
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue",
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.26759",
+      "title": "Windchime: an Audiovisual Installation with Audio-Language Model implementations",
+      "abstract": "Windchime is an audiovisual installation in which spoken language retrieves music and interactive animations from an artist authored corpus. A local Automatic Speech Recognition (ASR) model transcribes each prompt while an audio-language model (ALM) embeds it and retrieval over 406 audio stems returns a soundscape with live coded Strudel fragments that layer into audio output. Simultaneously each spoken input results in retrieval of interactive Three.js animation scenes each containing unique tactile control via monome grid and arc hardware. Windchime distributes agency in three distinct directions; across the artist who authored the possible outputs, the ALM that influences what areas of the corpus can be retrieved, and the visitor whose spoken inputs result in multimodal embodied interaction.",
+      "authors": [
+        "Trent Eriksen",
+        "Celeste Betancur Gutierrez"
+      ],
+      "published": "2026-11-19",
+      "updated": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26759",
+      "pdf_url": "https://arxiv.org/pdf/2611.26759v1",
+      "doi": "",
+      "venue": "Accepted to the NeurIPS 2026 Creative AI Track (artwork). 4 pages (3 pages plus references), 2 figures. Video: https://youtu.be/j3XyW2ynH5Y OpenReview: https://openreview.net/forum?id=KKLTKVVHkM NeurIPS: https://neurips.cc/virtual/2026/loc/sydney/160685",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 18,
+      "topic_scores": {
+        "audio_language_models": 14,
+        "speech_models": 3
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio-language model",
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.27810",
+      "title": "SLP-Bench: Evaluating and Improving Acoustic Claims of Reasoning Audio Language Models on Clinical Speech",
+      "abstract": "Audio language models (ALMs) can answer clinical questions from speech, outperforming baselines built on handcrafted acoustic features. Reasoning ALMs generate a chain of thought that refers to properties of the speaker's voice before predicting. Each statement the model makes about the voice needs to be checked against clinicians' perceptual ratings of the same recording. On clinical speech, existing evaluations score only the final answer. We introduce Speech Language Pathologist Bench (SLP-Bench), a benchmark grading each acoustic claim in the chain of thought against clinicians' perceptual ratings of the same recording. It covers five clinician-rated datasets and 25 perceptual dimensions, and assesses claims for factuality, stability under resampling, and consistency across reworded and different questions. Across ten open-weight reasoning ALMs evaluated zero-shot, claim balanced accuracy ranges from 0.52 to 0.58, claims change under resampling and rewording, and the most consistent models are not the most factual. Fine-tuning a 7B ALM with GRPO on a reward for claims that agree with clinicians raises its claim balanced accuracy from 0.54 to 0.60 and its mean kappa from 0.39 to 0.61, while preserving answer accuracy on per-dimension questions. SLP-Bench is available upon request, subject to approval by the providers of each dataset.",
+      "authors": [
+        "Côme Hosxe",
+        "Rachid Riad",
+        "Quentin Spinat"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.27810",
+      "pdf_url": "https://arxiv.org/pdf/2611.27810v1",
+      "doi": "",
+      "venue": "5 pages, 4 figures, 2 tables, submitted to ICASSP 2027 workshop \"Explainability, Robustness, and Controllability of Language Modeling for Speech and Audio\"",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 13,
+      "topic_scores": {
+        "audio_language_models": 12
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.27784",
+      "title": "Neural Defend ARCAS 290M: A Robust Foundation Model for AI-Generated Audio Detection",
+      "abstract": "Voice cloning now needs only seconds of audio, and detectors tuned to one dataset often fail when the generator, channel, or language changes. We introduce ARCAS 290M, Neural Defend's foundation model for detecting AI-generated audio. A single frozen production model, with no benchmark-specific fine-tuning, generalizes across text-to-speech, voice-conversion, and codec-language-model generators, telephone and Bluetooth channels, recording conditions, and languages. We evaluate it on the complete official test sets of ten public benchmarks, scoring every recording exactly as released, and against commercial systems on independent leaderboards. ARCAS 290M ranks first among all systems on the Podonos leaderboard and has the lowest equal error rate among commercial detectors on ASVspoof5. It separates real from AI-generated speech almost perfectly on ASVspoof5, SpeechFake, and ShiftySpeech, and detects nearly all AI-generated speech in Hindi, Tamil, Bengali, and Telugu. On every benchmark with a published zero-shot comparison, including in-the-wild audio, partial fakes, and the conditions hardest for the field, it surpasses the strongest reported detector by a wide margin. These results establish ARCAS 290M as a general-purpose foundation for AI-generated audio detection in fraud prevention, platform safety, and media verification.",
+      "authors": [
+        "Sivashankar Selvarajan",
+        "Piyush Verma",
+        "Sumit Kumar",
+        "Sharayu N. Deshmukh"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.27784",
+      "pdf_url": "https://arxiv.org/pdf/2611.27784v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.AI",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 11
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech, voice cloning",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.28248",
+      "title": "Granary-v2: Scalable Multilingual Speech Data Curation for Predictable and Controllable Model Outputs",
+      "abstract": "Speech-language models that follow instructions need training data that connects the same recording to different output forms and tasks. We present Granary-v2, a multilingual speech dataset and reusable curation system that provides a data foundation for these models. Granary-v2 extends Granary-v1 with aligned transcript variants and instruction-target pairs for multi-task speech-language training. Language coverage increases from 25 to 48 languages. Built with NeMo Curator, the system combines language-dependent ASR labeling, transcript improvement, and text label generation. It produces aligned targets for speech-faithful transcription, written forms with and without disfluencies, and code-switched transcription. Additional targets include transcript-derived captions and question-answer pairs, with context and translations for selected records. The full processed collection contains approximately 843,600 unique audio hours, with translations covering about 142,800 hours into English and about 55k hours of English audio into 31 target languages. We evaluate label-quality filtering with two English Transformer-TDT models under the same training-step budget. Filtering reduces the unweighted mean word error rate across nine benchmarks from 4.91% to 4.67%, with improvements on six benchmarks. We also report curation throughput and downstream ASR and speech translation results from Nemotron-3.5-Transcribe, which uses Granary-v2 as part of its training data. We release the Granary-v2 pipeline, built with NeMo Curator, and model training recipes as open source. We release a public subset of the generated labels and instruction-target pairs through Hugging Face.",
+      "authors": [
+        "Nithin Rao Koluguri",
+        "Meline Mkrtchyan",
+        "Nune Tadevosyan",
+        "Aaftab V",
+        "Sushmitha Deva",
+        "Fan Qian",
+        "Davit Karamyan",
+        "Kunal Dhawan",
+        "Taejin Park",
+        "Piotr Zelasko",
+        "Arushi Dhingra",
+        "Viraj Karandikar",
+        "Shuoyang Ding",
+        "Slyne Deng",
+        "Onur Yilmaz",
+        "Praateek Mahajan",
+        "Utkarsh Vaidya",
+        "Nikolay Karpov",
+        "Jagadeesh Balam",
+        "Boris Ginsburg"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.28248",
+      "pdf_url": "https://arxiv.org/pdf/2611.28248v1",
+      "doi": "",
+      "venue": "The first three authors contributed equally. Dataset: https://huggingface.co/datasets/nvidia/Granary-v2",
+      "categories": [
+        "eess.AS"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 11,
+      "topic_scores": {
+        "audio_language_models": 7,
+        "speech_models": 4
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: speech-language model",
+        "Speech Generation, Recognition & Dialogue: speech translation"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.28290",
+      "title": "Preserving Prosody in Speaker Anonymization",
+      "abstract": "Effective prosody modeling is essential in natural speech generation applications, but complications arise in speaker anonymization, since speaker attributes are present in acoustic correlates of prosody. Our work aims to improve previous reported tradeoffs between effective speaker obfuscation and preservation of prosodic content. To this end, we integrate an existing pretrained privacy-preserving prosody encoder into a speech synthesis model, enabling prosody-preserving speaker anonymization. By conditioning speech generation on prosody features, we find that human subjects more reliably perceive intended prosodic meaning, while anonymization performance is competitive with previous work.",
+      "authors": [
+        "Kevin Everson",
+        "Mari Ostendorf"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.28290",
+      "pdf_url": "https://arxiv.org/pdf/2611.28290v1",
+      "doi": "",
+      "venue": "Submitted to ICASSP 2027",
+      "categories": [
+        "eess.AS",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 9,
+      "topic_scores": {
+        "speech_models": 9
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, speech synthesis"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.27601",
+      "title": "PromptTTSD: Controllable Text to Spoken Dialogue Synthesis with Open-Ended Text Descriptions",
+      "abstract": "Spoken dialogue synthesis aims to generate multi-turn conversational speech from dialogue scripts while maintaining speaker consistency and contextual appropriateness. However, existing models largely lack fine-grained controllability, which is critical for capturing the dynamic, context-dependent style shifts in natural conversations. While prompt-based TTS has enabled such control for single-speaker speech, existing datasets heavily rely on predefined tags, which fundamentally limits their capacity to capture open-ended styles. To address this gap, we propose a scalable pipeline for extracting conversational speech from multi-narrator audiobooks, featuring an improved two-stage alignment algorithm to preserve dialogue continuity, paired with LLM-based extraction of style descriptions directly from narrative text. We release PromptDialog, a large-scale multi-speaker conversational speech dataset comprising 8,383 hours of Chinese speech and 120 hours of English speech, with open-ended style descriptions for 79% of utterances. We further introduce PromptTTSD, a spoken dialogue synthesis model built via a prompt-aware fine-tuning strategy that integrates style prompts into text-speech interleaved sequences. PromptTTSD is an open-source spoken dialogue synthesis model that supports both zero-shot voice cloning and natural language style control. Experiments demonstrate that PromptTTSD not only maintains strong fundamental synthesis capabilities but also achieves competitive open-ended style control compared with proprietary models, and substantially improves contextual appropriateness in multi-turn dialogues.",
+      "authors": [
+        "Sulong Yang",
+        "Zhi Zeng",
+        "Xiupeng Wu",
+        "Juewen Hu",
+        "Pring Wong",
+        "Shuwu Zhang",
+        "Shuo Chen"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.27601",
+      "pdf_url": "https://arxiv.org/pdf/2611.27601v1",
+      "doi": "",
+      "venue": "16 pages, 5 figures, 12 tables. Corresponding authors: Zhi Zeng, Shuwu Zhang, and Shuo Chen",
+      "categories": [
+        "cs.AI",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 7,
+      "topic_scores": {
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.27214",
+      "title": "EAF-TTS: Rethinking Codec-Latent Coordinates for Flow TTS",
+      "abstract": "Latent text-to-speech (TTS) systems generate codec latents decoded by a frozen decoder, but good reconstruction does not ensure geometry suitable for Flow generation from isotropic Gaussian noise. We present Embedded Acoustic Flow TTS (EAF-TTS), an acoustic-latent adaptation of ELF with phone- and duration-conditioned generation, shared-network terminal correction, and frozen WaveVAE decoding. EAF-TTS supports a fixed ZCA interface estimated from training data and adding no learned parameters. The codec, conditioning modules, Flow backbone, and 20-call inference are shared. The intervention is the full ZCA coordinate protocol---training and sampling coordinates, induced loss metric, and terminal perturbation---not an inference-only transform. In single-speaker LJSpeech, the 64-D training-latent covariance has condition number 1355.44. On text-disjoint Val399 strict-GT with fixed E100 raw checkpoints across three matched seeds, ZCA improves UTMOS22 Strong---an automatic naturalness proxy, not human MOS---by $+0.405\\pm0.027$ over Scalar normalization (mean $\\pm$ seed SD of per-seed paired differences). Absolute scores remain below codec-reference levels. Without retraining, ZCA-5 retains $+0.375\\pm0.027$ UTMOS over Scalar-20 while reducing generation-path RTF by $3.34\\times$. This three-seed analysis shows no statistically detectable WER or exact-match degradation, but does not establish equivalence. ZCA-3 gives $5.03\\times$ with a $+0.165$ UTMOS advantage. At matched reduced call counts, ZCA's advantage shrinks, indicating full-step headroom rather than better low-step integration. A secondary text-only selected-checkpoint result is directionally consistent but confounded by checkpoint type. We claim only proxy-naturalness and measured quality--latency effects within this protocol; human listening, blind text, and broader validation remain necessary.",
+      "authors": [
+        "Yumiao Li",
+        "Haoxiang Jie",
+        "Xinbei Li",
+        "Yaoyuan Yan",
+        "Yue Qu"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.27214",
+      "pdf_url": "https://arxiv.org/pdf/2611.27214v1",
+      "doi": "",
+      "venue": "",
+      "categories": [
+        "cs.AI",
+        "cs.SD"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv",
+        "semantic_scholar"
+      ],
+      "score": 6,
+      "topic_scores": {
+        "speech_models": 5
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "found in multiple academic sources"
+      ],
+      "is_new": true
+    },
+    {
+      "source": "arxiv",
+      "source_id": "2611.28263",
+      "title": "A Nepali-Accented English Evaluation Dataset for Automatic Speech Recognition",
+      "abstract": "Automatic speech recognition (ASR) systems perform strongly on native-English benchmarks, yet their accuracy degrades sharply when the input speech comes from under represented non-native accents. Nepali-accented English is particularly under-served: existing resources either focus on native Nepali speech, cover broader multi-accent settings without dedicated Nepali evaluation, or provide only limited Nepali-accent coverage. This paper presents a Nepali-accented English evaluation dataset designed to support robust ASR benchmarking under accent mismatch. The corpus was collected through a web-based platform that did not collect directly identifying metadata and contains recordings from 57 speakers. Each session follows a fixed 22-prompt protocol consisting of 11 phonetic prompts, 10 domain prompts, and 1 spontaneous prompt, providing complementary coverage of pronunciation, topical vocabulary, and natural speaking style. In addition to transcribed speech, the dataset includes participant metadata for coarse exploratory subgroup analysis and speaker-level manual recording-quality labels. Manual quality assessment shows that 50.9% of sessions are clean and 42.1% contain only mild noise. As a descriptive reference, open-source ASR baselines are substantially worse on this corpus than the corresponding LibriSpeech test-clean values reported in official model cards, reaching 38.15-55.00% WER on the collected set versus reported 2-4% WER on LibriSpeech test-clean. These baseline results position the corpus as a practical held-out resource for evaluating accent robustness and out-of-distribution generalization on Nepali-accented English.",
+      "authors": [
+        "Santosh Dahal",
+        "Kiran Chandra Dahal"
+      ],
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.28263",
+      "pdf_url": "https://arxiv.org/pdf/2611.28263v1",
+      "doi": "10.3126/east.v2i1.98619",
+      "venue": "",
+      "categories": [
+        "cs.AI"
+      ],
+      "code_urls": [],
+      "sources": [
+        "arxiv"
+      ],
+      "score": 6,
+      "topic_scores": {
+        "speech_models": 6
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: automatic speech recognition"
+      ],
+      "is_new": true
+    }
+  ],
+  "models": [
+    {
+      "repo_id": "snkii/Sori-10B-Speech",
+      "author": "snkii",
+      "created_at": "2026-11-20",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-text-to-text",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "sori_speech",
+        "feature-extraction",
+        "audio",
+        "speech",
+        "speech-llm",
+        "audio-language-model",
+        "paralinguistics",
+        "spoken-reasoning",
+        "emotion",
+        "audio-text-to-text",
+        "custom_code",
+        "en",
+        "base_model:Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "base_model:merge:Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "base_model:Qwen/Qwen3.5-9B",
+        "base_model:merge:Qwen/Qwen3.5-9B",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "downloads": 142,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-sa-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/snkii/Sori-10B-Speech",
+      "card_text": "---\nlanguage:\n- en\nlibrary_name: transformers\npipeline_tag: audio-text-to-text\nlicense: cc-by-nc-sa-4.0\nbase_model:\n- Qwen/Qwen3.5-9B\n- Qwen/Qwen3-Omni-30B-A3B-Instruct\nbase_model_relation: merge\ntags:\n- audio\n- speech\n- speech-llm\n- audio-language-model\n- paralinguistics\n- spoken-reasoning\n- emotion\n---\n\n<div align=\"center\">\n  <h1 style=\"margin: 0;\">Sori-10B-Speech</h1>\n</div>\n\n<div align=\"center\" style=\"margin-top: 10px;\">\n  <b>Seonuk Kim</b> &nbsp;&middot;&nbsp; <b>Semin Kim</b> &nbsp;&middot;&nbsp; <b>Beom Jun Woo</b> &nbsp;&middot;&nbsp; &#127472;&#127479;\n</div>\n\n<div align=\"center\" style=\"margin-top: 4px;\">\n  <code>{sukim, smkim21, bjwoo}@hi.snu.ac.kr</code>\n</div>\n\n<p align=\"center\" style=\"margin: 20px 0;\">\n  <a href=\"https://hi.snu.ac.kr/\"><img src=\"sori-header.gif\" alt=\"Sori · SNU Human Interface Lab\" width=\"640\"></a>\n</p>\n\n\n*Sori* (소리) is Korean for *sound*. Sori-10B-Speech is a speech LLM that hears how things are said (tone, hesitation,\nemotion, who is speaking and in what state) and uses those cues when it reasons.\n\n## Usage\n\n```python\n# pip install \"transformers>=5.23\" soundfile\nimport soundfile as sf\nimport torch\nfrom transformers import AutoModelForCausalLM, AutoProcessor\n\nrepo = \"snkii/Sori-10B-Speech\"\nprocessor = AutoProcessor.from_pretrained(repo, trust_remote_code=True)\nmodel = AutoModelForCausalLM.from_pretrained(repo, trust_remote_code=True, dtype=torch.bfloat16, device_map=\"auto\")\n\naudio, sr = sf.read(\"speech.wav\", dtype=\"float32\")  # 16 kHz mono\nmessages = [{\"role\": \"user\", \"content\": [\n    {\"type\": \"audio\"},\n    {\"type\": \"text\", \"text\": \"How does the speaker sound, and why?\"},\n]}]\nprompt = processor.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)\ninputs = processor(text=prompt, audio=audio, sampling_rate=sr, return_tensors=\"pt\").to(model.device)\n\noutput = model.generate(**inputs, max_new_tokens=256)\nprint(processor.decode(output[0, inputs[\"input_ids\"].shape[1]:], skip_special_tokens=True))\n```\n\nSeveral clips and questions in one batch:\n\n```python\nfiles = [\"a.wav\", \"b.wav\", \"c.wav\"]\nquestions = [\"How does the speaker sound, and why?\", \"What is the speaker's mood?\", \"Is the speaker hesitant?\"]\n\naudios = [sf.read(f, dtype=\"float32\")[0] for f in files]  # 16 kHz mono\nprompts = [processor.apply_chat_template([{\"role\": \"user\", \"content\": [\n    {\"type\": \"audio\"},\n    {\"type\": \"text\", \"text\": q},\n]}], add_generation_prompt=True, tokenize=False) for q in questions]\ninputs = processor(text=prompts, audio=audios, sampling_rate=16000, padding=True, return_tensors=\"pt\").to(model.device)\n\noutput = model.generate(**inputs, max_new_tokens=256)\nfor answer in processor.batch_decode(output[:, inputs[\"input_ids\"].shape[1]:], skip_special_tokens=True):\n    print(answer)\n```\n\n## License\n\nSori-10B-Speech is released under **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)**: use it and\nbuild on it for non-commercial purposes, with attribution, and share what you derive from it under the same terms.\nCommercial use is not licensed because part of the training data is licensed for non-commercial use. Third-party\ncomponents keep their own licenses, which will be listed with the weights.\n\n## Citation\n\n```bibtex\n@software{kim_sori_10b_speech_2026,\n  author      = {Kim, Seonuk and Kim, Semin and Woo, Beom Jun},\n  title       = {{Sori-10B-Speech}},\n  year        = {2026},\n  institution = {Human Interface Laboratory, Seoul National University},\n  url         = {https://huggingface.co/snkii/Sori-10B-Speech}\n}\n```\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen3.5-9B",
+        "Qwen/Qwen3-Omni-30B-A3B-Instruct"
+      ],
+      "variants": [],
+      "score": 43,
+      "topic_scores": {
+        "audio_language_models": 40,
+        "audio_understanding_reasoning": 2
+      },
+      "matched_topics": [
+        "Audio & Speech Language Models",
+        "Audio Understanding & Reasoning"
+      ],
+      "reasons": [
+        "Audio & Speech Language Models: audio language model, audio-language model, speech llm",
+        "Audio Understanding & Reasoning: audio-text (pipeline tag)",
+        "declares license cc-by-nc-sa-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "jjcoders/suna-v1",
+      "author": "jjcoders",
+      "created_at": "2026-10-11",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "gguf",
+        "suna_v1_1_acestep_xl_sft",
+        "music-generation",
+        "text-to-music",
+        "audio",
+        "singing-synthesis",
+        "48khz-stereo",
+        "suna-ai",
+        "text-to-audio",
+        "en",
+        "ml",
+        "fr",
+        "es",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 2392,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "diffusers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/jjcoders/suna-v1",
+      "card_text": "---\nlicense: mit\nlibrary_name: diffusers\ntags:\n  - music-generation\n  - text-to-music\n  - audio\n  - singing-synthesis\n  - 48khz-stereo\n  - suna-ai\n  - gguf\n  - safetensors\nlanguage:\n  - en\n  - ml\n  - fr\n  - es\npipeline_tag: text-to-audio\n---\n\n# 👑 JJ coders Suna AI v1.0 — Official Halloween 2026 Flagship Foundation Model\n\n**JJ coders Suna AI v1.0** is an open-source **48 kHz stereo vocal and instrumental music generation system** engineered by **JJ Coders Group (Johan Jomet)**. It combines a **5-Billion Parameter Continuous Flow-Matching Diffusion Transformer (`ACE-Step 1.5 XL SFT`)**, **`Qwen3-Embedding-0.6B`** lyric/phonetic conditioning, **14 Per-Genre Rank-64 DiT LoRA Experts**, a **15.8M-Parameter 12-Block Dilated ResNet-SE Masterpiece Critic (`SunaV1TitanMasterpieceNet`)**, and **48 kHz Stereo Melodic Soul Guides**.\n\n* 🌐 **Official Website:** [suna.jjcoders.com](https://suna.jjcoders.com)\n* 🎛️ **Live A100 Gradio Studio:** [huggingface.co/spaces/johanjomet/suna-ai-studio](https://huggingface.co/spaces/johanjomet/suna-ai-studio)\n* 📦 **Model Hub Repository:** [huggingface.co/jjcoders/suna-v1](https://huggingface.co/jjcoders/suna-v1)\n\n---\n\n## 🚀 Key Architectural Breakthroughs in `Suna AI v1.0`\n\n| Architectural Layer | Legacy Raw Open-Source Diffusion | JJ coders Suna AI v1.0 Flagship |\n| :--- | :--- | :--- |\n| **Vocal Pitch & Melody (`210–4,200 Hz`)** | Flat 1-note monotone \"reading text aloud\" | **Legato Melodic Soul Guide + `+12st` Octave Chorus Belt (`1.8 Oct` F0 range)** |\n| **Intro Rhythm Lock (`0:00–0:15`)** | 20–35s of beatless silence or random noise | **Locked-in `0:00` Sub-Bass & Drum Pocket (`99.4%` groove lock)** |\n| **Lyric & Phonetic Articulation** | 20s `\"Oh-woah\"` scream loops & shouted `[Drop]!` tags | **Syllable-Paced Phonetic Aligner + Multilingual G2P (`en`, `ml`, `fr`, `es`)** |\n| **Candidate Selection** | Single blind random seed | **15.8M-Param `SunaV1TitanMasterpieceNet` (12 Dilated ResBlocks + SE)** |\n| **Audio Fidelity & Mastering** | 16–32 kHz mono/muddy output | **True 48 kHz Stereo Oobleck VAE + `-14 LUFS` Mid-Side Mastering** |\n\n---\n\n## 📂 Repository Files & Multi-Format Checkpoints\n\n* `model.safetensors` & `suna_v1_lora_experts.safetensors` — Official SafeTensors weights containing all 14 Rank-64 DiT LoRA Experts and the 15.8M-parameter `SunaV1TitanMasterpieceNet` Critic.\n* `JJ_coders_Suna_AI_v1_Q4_K_M.gguf` & `JJ_coders_Suna_AI_v1_3_Q4_K_M.gguf` — Official binary GGUF v3 packages for local/edge runtimes.\n* `suna_v1_ultimate_adapter.pt`, `suna_v1_halloween_10b_titan_adapter.pt`, & `suna_v2_1_pop_masterpiece_adapter.pt` — Unified PyTorch checkpoints for Colab & ZeroGPU Spaces.\n* `suna_v1_dna_bank.json` & `config.json` — Melodic Soul harmonic profiles, BPM/key matrices, and model configuration.\n\n---\n\n## 📜 License & Attribution\n\n* **ACE-Step 1.5 XL SFT Backbone & Oobleck VAE:** MIT License (Copyright © 2026 ACE-Step Team).\n* **Qwen3-Embedding-0.6B Text & Phonetic Encoder:** Apache 2.0 License (Copyright © Alibaba Cloud).\n* **JJ coders Suna AI v1.0 LoRA Experts, Melodic Soul Engine, G2P Aligner, & Critic Network:** MIT License (Copyright © 2026 JJ Coders Group / Johan Jomet).\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 42,
+      "topic_scores": {
+        "generative_music_audio": 41
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-music, text to music, music generation",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-4B-Flash",
+      "author": "adventists-ai",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "realtime",
+        "paralinguistic",
+        "vllm-omni",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 846,
+      "likes": 21,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- realtime\n- paralinguistic\n- vllm-omni\n---\n\n# Sophon-Realtime-4B-Flash\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n**Version 1.4.0** (2026-11-16) · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · [GitHub](https://github.com/adventists-ai/sophon-realtime)\n\n> **On a Mac?** [Sophon-Realtime-4B-Flash-MLX](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash-MLX) runs this build locally on Apple silicon Macs with 16 GB or more (MLX; new in 1.5.0).\n\nThe 4B member of the Sophon-Realtime family: the same full-duplex design as the 32B builds, on **one 24 GB GPU (uses ~21 GB)**. It listens while you talk,\ndecides from your voice when you have finished, writes a reply with sound tags (`[laughter]` `[cough]` `[sigh]` `[breath]` `<strong>…</strong>`)\nand speaks while it writes; a lighter, faster speech model speaks the tagged reply (one forward pass per 80 ms frame). Served as **one** vLLM-Omni model, with `/v1/realtime` and `/v1/chat/completions`.\n\n## Sophon-Realtime 4B: three builds, one 4B brain\n\n| | **Tag** | **Flash** | **E2E** |\n|---|---|---|---|\n| How it speaks | an expressive speech model (tag-tts) performs the sound tags | a lighter, faster speech model speaks the tagged reply (one forward pass per 80 ms frame) | a compact talker (about 350M parameters) turns the tagged reply straight into voice vectors; a decoder turns them into sound |\n| Runs on | one 32 GB GPU (uses ~27 GB) | one 24 GB GPU (uses ~21 GB) | one 32 GB GPU (uses ~31 GB) |\n| Full-Duplex-Bench v1.0 (4-task avg) | 94.3 | 87.7 | 92.3 |\n| First audio, one user (RTX PRO 6000) | 0.4 s | 0.21 s | 0.31 s |\n| Weights | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-Tag) | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-Flash) | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-E2E) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-E2E) |\n\nThe 4B brain is [DuplexJev-4B-Para](https://huggingface.co/adventists-ai/DuplexJev-4B-Para), our open 4B speech model, with a tag-writing adapter merged in. Speech only: the 4B brain has no vision.\nFor the strongest answers, use the 32B builds ([Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) · [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) · [E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E)) or the [hosted API](https://api.adventists.ai/console/).\n\n## Benchmarks\n\n| | 4B | 32B (published) |\n|---|---|---|\n| VoiceBench overall | 62.4 | 82.8 |\n| Big Bench Audio (spoken answer, transcribed) | 44.3% | 81.8% |\n| Full-Duplex-Bench v1.0, Flash build (avg of 2 pause tasks, turn-taking, interruption) | 87.7 | 94.0 |\n| Sound-tag rate on held-out conversations (reference: 0.36) | 0.36 | — |\n\n**What 4B is for.** The 4B brain keeps the conversation skills of the family: listening while you talk, deciding when you have finished, back-channels, barge-in and sound tags (Full-Duplex-Bench close to the 32B builds, and the same tag rate as the reference data). It knows and reasons much less than the 32B brain (VoiceBench 62.4 vs 82.8, Big Bench Audio 44.3% vs 81.8%), so it can state wrong facts with confidence. Use it for local demos, companions and characters, and research on turn-taking; use the 32B builds or the hosted API when answers must be right. Among open full-duplex models, its VoiceBench score is above Freeze-Omni (55.2) and Moshi (29.5) and below MiniCPM-o (71.2).\n\n<sub>Measured 2026-11-16 on one RTX PRO 6000 with each build held to the memory of the card it is configured for. VoiceBench: official evaluators, gpt-4o-mini judge, AlpacaEval on the standard 199-question subset, overall = mean of 9 tasks. Big Bench Audio: 1,000 questions, GPT-4.1 judges the transcript of the spoken answer. Full-Duplex-Bench v1.0: average of candor and synthetic pause handling, turn-taking and user interruption (backchannel is reported but not averaged), the same scripts as for the 32B release. First audio: one user, `client_example.py`, median of 6. The 32B column repeats the numbers published for the 32B builds.</sub>\n\n## Quick start\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/flash\nbash install.sh                  # once: Python 3.12 venv, vLLM 0.30, vLLM-Omni 0.30, plugin\nmodelscope download --model AdventistsAI/Sophon-Realtime-4B-Flash --local_dir ./model   # or: hf download adventists-ai/Sophon-Realtime-4B-Flash --local-dir ./model\nGPU=0 PORT=8000 bash start.sh    # sees the 4B model and picks its 24 GB config\npython client_example.py --url http://127.0.0.1:8000\n```\n\nFull instructions, the realtime protocol, zero-shot voice cloning and Live mode: [flash/README.md](https://github.com/adventists-ai/sophon-realtime/blob/main/flash/README.md).\n\n## Layout\n`config.json` · `thinker/` (4B, bf16), `talker/`, `voices/`\n\nLicense: Apache-2.0; see `NOTICE` for the sources of the bundled weights. **Only clone your own voice or a voice you have permission to use.**\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 34,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0",
+        "community likes 21"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-32B-Tag",
+      "author": "adventists-ai",
+      "created_at": "2026-10-29",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "sophon_realtime",
+        "sophon",
+        "duplexjev",
+        "tag-tts",
+        "vllm-omni",
+        "realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "paralinguistic",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1226,
+      "likes": 16,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\npipeline_tag: audio-to-audio\ntags:\n- sophon\n- duplexjev\n- tag-tts\n- vllm-omni\n- realtime\n- full-duplex\n- speech-to-speech\n- paralinguistic\n---\n\n# Sophon-Realtime-32B-Tag\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n> 🆕 **Smaller GPU?** [Sophon-Realtime-4B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag) (v1.4.0) runs this build with a 4B brain on one 32 GB GPU: keeps the turn-taking and sound tags, knows much less. [All builds](https://huggingface.co/collections/adventists-ai/sophon-realtime-6afb357253a3a8905ad758b0)\n\n\n**Version 1.2.0** (2026-11-13) · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · [▶ v1.1 demo video](https://github.com/adventists-ai/sophon-realtime#zero-shot-voice-cloning-new-in-v11)\n\nCode and one-command deployment: [github.com/adventists-ai/sophon-realtime/tree/main/tag](https://github.com/adventists-ai/sophon-realtime/tree/main/tag) · Built on [DuplexJev](https://github.com/adventists-ai/duplexjev) · Voice: [tag-tts](https://huggingface.co/adventists-ai/tag-tts)\n\n**The Tag build of Sophon-Realtime: it decides how to say it, and runs on one GPU.** The 32B thinker listens to you,\ndecides when it is its turn, and writes the reply together with inline sound tags: a laugh after a joke, a sigh for bad\nnews, stress on the word that matters. A streaming voice (tag-tts) performs those tags while the reply is still being\nwritten. Tags are never read aloud and are removed from the text stream.\n\nThe whole system is **one vLLM-Omni model**: thinker → tag-tts talker → flow + HiFT vocoder, on a single 80 GB GPU.\n\n\n## Sophon-Realtime v1 family\n\nThree builds share one brain (the same 32B model listens, decides turns and writes the reply). They differ only in how the reply becomes sound. Full comparison: [github.com/adventists-ai/sophon-realtime](https://github.com/adventists-ai/sophon-realtime).\n\n| | **Tag** (recommended) | **Flash** | **E2E** |\n|---|---|---|---|\n| How it speaks | an expressive speech model performs the sound tags | a lighter, faster speech model speaks the tagged reply | a compact talker (about 350M parameters) generates continuous voice vectors directly, no speech tokens |\n| NVV-SuperBench (en / zh) | **0.80 / 0.86** | 0.63 / 0.77 | 0.75 / 0.85 |\n| First audio, one user | ~0.6 s | 0.31 s | **~0.25 s** |\n| Users per 80 GB GPU (recommended) | 16 | **40** | 16 |\n| GPUs | 1 | 1 | 1 |\n| Weights | [Sophon-Realtime-32B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) | [Sophon-Realtime-32B-Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) | [Sophon-Realtime-32B-E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E) |\n\nPick **Tag** if you want the voice to act; pick **Flash** if users per GPU matter most; pick **E2E** for the fastest first audio with a voice that still laughs and sighs. Tag and Flash share the same APIs; E2E runs on its own engine or, since 1.1.4, on vLLM-Omni with the same APIs as Tag and Flash.\n\n## Highlights\n\n- **VoiceBench 82.8 and Big Bench Audio 81.8%: the strongest brain among open full-duplex models.** #1 among open full-duplex models on both; level with GPT-4o-mini-Audio on VoiceBench.\n- **Paralinguistic understanding 48.6, #1 overall: it hears your tone.** Ahead of Gemini 3.8 Flash (46.9) and Qwen3-Omni (44.6) on LISTEN, StressTest and MSPB. It hears emotion, emphasis, sarcasm, laughter and sighs straight from your voice.\n- **The most expressive build: NVV-SuperBench 0.86 (Chinese) and 0.80 (English).** The model decides when to laugh, sigh, breathe, clear its throat or stress a word; the voice performs it instead of reading the tag aloud.\n- **One 80 GB GPU, one command.** Served by vLLM-Omni; up to 16 concurrent users per GPU, about 0.6 s to first audio.\n- **Full-Duplex-Bench v3 tool calling: Pass@1 48%, ahead of Grok (43%), with a 100% response rate.** Live mode is compatible with the OpenAI GPT-Live interface.\n- **Real full duplex.** It listens the whole time you talk and drafts its reply as you go; it picks up when you stop, stops when you cut in, and keeps going when you just say \"mm-hm\".\n- **Apache-2.0, free for commercial use.** Fine-tune persona, tone and domain knowledge with ms-swift.\n\nBenchmark methods and full comparison tables: [v1 family home page](https://huggingface.co/adventists-ai/Sophon-Realtime-v1). To just try it: [talk to it in the ModelScope Studio](https://www.modelscope.ai/studios/AdventistsAI/Sophon-Realtime).\n\n## Deploy (one GPU, one command)\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/tag\nbash install.sh                 # Python 3.12 venv, vLLM 0.30, vLLM-Omni 0.30, the plugin, and these weights (~42 GB)\nGPU=0 PORT=8000 bash start.sh   # first start 15–20 min (kernels + TensorRT engines), later 5–8 min\npython client_example.py --wav my_question.wav --lang en --voice ryan_en\n```\n\n- APIs: `ws://HOST:8000/v1/realtime` (full duplex: turn-taking, barge-in, backchannel) and `POST /v1/chat/completions`\n  (audio in → text + audio stream).\n- Voices: `chelsie` (default; `chelsie_zh` / `chelsie_en` picked by language), `vivian_zh`, `ryan_en`, `brand_zh`, `brand_en`.\n\n## Zero-shot voice cloning (new in 1.1)\n\nGive it a short clip of any voice and talk to Sophon in that voice. No fine-tuning, no restart.\n\n```bash\ncp alice.wav model/voices/alice.wav     # 3–10 s of clean speech from one speaker (wav or flac, any sample rate)\npython client_example.py --wav my_question.wav --lang en --voice alice\n```\n\n- Use `\"voice\": \"alice\"` in `/v1/chat/completions` or in `session.update` on `/v1/realtime`. The clip can be in another language than the reply.\n- The server prepares new clips in the background within a few seconds, so first audio is as fast as with a built-in voice. Overwrite a file to\n  replace a voice, delete it to remove it. Sound tags (laughs, sighs, …) work with cloned voices too.\n- 1.1 also updates the voice model (`talker/flow.pt` and its ONNX) so that unseen voices come out much closer to the reference. Needs the\n  latest code: GitHub `main` or `pip install -U \"sophon-realtime[trt]\"` (1.1.0 or later).\n- **Only clone your own voice or a voice you have permission to use. Do not use it to impersonate or deceive anyone.**\n- Hardware: one 80 GB GPU (H100 / H800 / A100 80G), about 65 GB per instance.\n\n## Performance (one H100 80 GB, measured)\n\n| Concurrent users (arriving within 10 s) | First audio, median / max | Stutter (median) |\n|---|---|---|\n| 1 | 0.67 s | ~0 |\n| 8 | 0.61 / 0.76 s | 0 |\n| **16** | **0.75 / 1.07 s** | 0.06 s |\n| 24 | 1.36 / 2.11 s | 0.39 s (queueing starts) |\n\n- Full duplex: about 0.7 s from the end of the user's speech to the first voice.\n- **These numbers need TensorRT.** `install.sh` installs it; with pip, install `pip install \"sophon-realtime[trt]\"` (CUDA 13). Without\n  TensorRT the voice runs in plain PyTorch and gets about 3× slower under load: at 16 users first audio is about 2.4 s with 1–1.5 s of\n  stutter. Check the server log for `Loaded flow-estimator TensorRT engine`.\n- **Recommended: up to 16 concurrent users per GPU.** More GPUs: one instance per GPU behind a load balancer; capacity\n  scales roughly linearly. CPU is not a bottleneck (~1.5 cores per instance at 16 users).\n\n## Sound tags\n\n`[laughter]`, `[breath]`, `[sigh]`, `[cough]`, `<laughter>…</laughter>` (laugh while speaking), `<strong>…</strong>`\n(stress a word). Tags are sent to the voice as whole chunks while text streams in, the same way the voice was trained.\n\nEvent heard when the tag is written (96 test sentences × 2 runs through the full served pipeline, AST detector;\n8–12 sentences per class, so ±1 sentence ≈ ±10 points):\n\n| | sigh | breath | cough | laugh |\n|---|---|---|---|---|\n| this release | 25% | 50% | 33% | 42% |\n| reference tag-tts renderer, same voice model | 42% | 50% | 33% | 50% |\n\n## Live mode (OpenAI GPT-Live compatible)\n\nRun one more command next to the engine and GPT-Live clients can connect by changing only the URL and key. Sophon keeps the voice; when a request needs a lookup or an action it says \"Let me check that\", hands the task to your backend and speaks the result in its own words.\n\n```bash\ncd sophon-realtime/live && BUILD=tag PORT=8000 LIVE_PORT=8780 bash start_live.sh   # GPT-Live clients: ws://HOST:8780/v1/live/sessions\n```\n\nDetails and measurements: [live/](https://github.com/adventists-ai/sophon-realtime/blob/main/live/README.md) in the GitHub repository.\n\n## Fine-tuning\n\nFine-tune the thinker's LLM backbone with LoRA in ms-swift to change persona, tone, domain knowledge and tool use. Hearing, the voice and turn-taking stay as released, and sound tags such as laughter and coughs are kept. One 80 GB GPU is enough; see [finetune/](https://github.com/adventists-ai/sophon-realtime/blob/main/finetune/README.md) in the GitHub repository.\n\n## What's inside\n\n| folder | what | licence |\n|---|---|---|\n| `thinker/` | DuplexJev-32B-Para v1.5 with tag writing merged in, FP8 (with the vision tower) | Apache-2.0 |\n| `talker/` | tag-tts: language model + distilled flow (4 steps, no CFG) + HiFT; based on Fun-CosyVoice3-0.5B | Apache-2.0 |\n| `voices/` | six reference voices (clip + precomputed prompt) | Apache-2.0 |\n\n## Limitations\n\n- `[sigh]` and `<laughter>…</laughter>` are still weak; the thinker writes them more often than the voice delivers.\n- Mandarin is slightly less clear than English with the distilled flow; a laugh is sometimes transcribed as \"哈哈\" by ASR.\n- Very long replies (over about a minute of speech in one turn) are beyond what the voice was trained on.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 34,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0",
+        "community likes 16"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-32B-Flash",
+      "author": "adventists-ai",
+      "created_at": "2026-11-07",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "realtime",
+        "paralinguistic",
+        "vllm-omni",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 1156,
+      "likes": 14,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- realtime\n- paralinguistic\n- vllm-omni\n---\n\n# Sophon-Realtime-32B-Flash\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n> 🆕 **Smaller GPU?** [Sophon-Realtime-4B-Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash) (v1.4.0) runs this build with a 4B brain on one 24 GB GPU: keeps the turn-taking and sound tags, knows much less. [All builds](https://huggingface.co/collections/adventists-ai/sophon-realtime-6afb357253a3a8905ad758b0)\n\n> **No FP8 on your hardware?** [Sophon-Realtime-32B-Flash-BF16](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash-BF16) has the unquantized BF16 thinker (about 64 GB, usually two devices).\n\n\n**Version 1.2.0** (2026-11-13) · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · [▶ v1.1 demo video](https://github.com/adventists-ai/sophon-realtime#zero-shot-voice-cloning-new-in-v11)\n\nA full-duplex speech model served as **one** vLLM-Omni model: it listens to the user, writes a reply (optionally with sound tags `[laughter]` `[cough]`\n`[sigh]` `[breath]` `<laughter>…</laughter>` `<strong>…</strong>`), and speaks while it writes. The voice stage emits one frame every 80 ms; tags are\nperformed, never read aloud.\n\nFlash shares the tag-writing thinker with the Tag build; only the voice stage differs. Flash's voice stage is autoregressive with a single forward pass per\nstep, so **first audio is faster and concurrency is higher**; the Tag build laughs more convincingly. Both have the same API.\n\n## Sophon-Realtime v1 family\n\nThree builds share one brain (the same 32B model listens, decides turns and writes the reply). They differ only in how the reply becomes sound. Full comparison: [github.com/adventists-ai/sophon-realtime](https://github.com/adventists-ai/sophon-realtime).\n\n| | **Tag** (recommended) | **Flash** | **E2E** |\n|---|---|---|---|\n| How it speaks | an expressive speech model performs the sound tags | a lighter, faster speech model speaks the tagged reply | a compact talker (about 350M parameters) generates continuous voice vectors directly, no speech tokens |\n| NVV-SuperBench (en / zh) | **0.80 / 0.86** | 0.63 / 0.77 | 0.75 / 0.85 |\n| First audio, one user | ~0.6 s | 0.31 s | **~0.25 s** |\n| Users per 80 GB GPU (recommended) | 16 | **40** | 16 |\n| GPUs | 1 | 1 | 1 |\n| Weights | [Sophon-Realtime-32B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) | [Sophon-Realtime-32B-Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) | [Sophon-Realtime-32B-E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E) |\n\nPick **Tag** if you want the voice to act; pick **Flash** if users per GPU matter most; pick **E2E** for the fastest first audio with a voice that still laughs and sighs. Tag and Flash share the same APIs; E2E runs on its own engine or, since 1.1.4, on vLLM-Omni with the same APIs as Tag and Flash.\n\n## Highlights\n\n- **VoiceBench 82.8 and Big Bench Audio 81.8%: the strongest brain among open full-duplex models.** #1 among open full-duplex models on both; level with GPT-4o-mini-Audio on VoiceBench.\n- **Paralinguistic understanding 48.6, #1 overall: it hears your tone.** Ahead of Gemini 3.8 Flash (46.9) and Qwen3-Omni (44.6) on LISTEN, StressTest and MSPB. It hears emotion, emphasis, sarcasm, laughter and sighs straight from your voice.\n- **Fast and the most scalable build: 0.31 s to first audio, up to 40 concurrent users per 80 GB GPU.** Made for customer service, in-car assistants and other many-user deployments.\n- **Still laughs and clears its throat: NVV-SuperBench 0.77 (Chinese) and 0.63 (English).** It speaks the same tagged replies as Tag with a lighter, faster voice.\n- **Full-Duplex-Bench v3 tool calling: Pass@1 48%, ahead of Grok (43%), with a 100% response rate.** Live mode is compatible with the OpenAI GPT-Live interface.\n- **Real full duplex.** It listens the whole time you talk and drafts its reply as you go; it picks up when you stop, stops when you cut in, and keeps going when you just say \"mm-hm\".\n- **Apache-2.0, free for commercial use.** Fine-tune persona, tone and domain knowledge with ms-swift.\n\nBenchmark methods and full comparison tables: [v1 family home page](https://huggingface.co/adventists-ai/Sophon-Realtime-v1). To just try it: [talk to it in the ModelScope Studio](https://www.modelscope.ai/studios/AdventistsAI/Sophon-Realtime).\n\n## Performance (one H100 80 GB, FP8 thinker, `/v1/chat/completions`, user speech → first audio chunk)\n\n| Load | First audio median / P90 | Stall (median) |\n|---|---|---|\n| 1 stream | **0.31 / 0.34 s** | 0 |\n| 20 streams (arriving over 10 s) | 0.45 / 0.52 s | 0.09 s |\n| 40 streams (over 10 s) | 0.58 / 0.67 s | 0.37 s |\n| 64 streams (over 8 s) | 0.84 / 1.03 s | 1.9 s (queueing) |\n\n- **Up to about 40 concurrent streams per 80 GB GPU is recommended.** For more, run one instance per GPU behind a load balancer.\n- Memory: about 55 GB per instance. The first start compiles kernels (about 10 min); later starts take 5–8 min.\n\n### Sound tags (held-out set, Chelsie voice, judged by DuplexJev; not comparable with the AST hit rates on the Tag card — for a like-for-like comparison of the three builds, see NVV-SuperBench above)\n\n| Tag | zh | en |\n|---|---|---|\n| `[laughter]` | 83% | 77% |\n| `<laughter>…</laughter>` laughing while speaking | 78% | 71% |\n| `[cough]` | 90% | 50% (8 items) |\n| `[sigh]` (AST) | 90% | 100% |\n| Mean character / word error rate | 0.9% | 1.0% |\n\n- Tags are never read aloud; without a tag the model rarely laughs on its own.\n- `<strong>` emphasis is still weak in this build; the next build will improve it.\n\n## Deployment code\nOne-command scripts and the vLLM-Omni plugin: [github.com/adventists-ai/sophon-realtime/tree/main/flash](https://github.com/adventists-ai/sophon-realtime/tree/main/flash). This repository holds the weights: `config.json`, `thinker/` (FP8), `talker/`, `voices/`.\n\n## Quick start\n\n```bash\nbash install.sh                 # once: Python 3.12 venv, vLLM 0.30, vLLM-Omni 0.30, plugin\n# put the weights in ./model (hf download adventists-ai/Sophon-Realtime-32B-Flash --local-dir ./model)\nGPU=0 PORT=8000 bash start.sh\npython client_example.py --wav my_question.wav --lang en --voice chelsie\nbash stop.sh\n```\n\nVoices: `chelsie` (default), `brand`; set `language` to `zh` or `en`.\n\n## Zero-shot voice cloning\n\nPut a 3–10 s clip of one speaker at `model/voices/<name>.wav` and use `\"voice\": \"<name>\"` in `/v1/chat/completions` or `/v1/realtime`. No fine-tuning and\nno restart; first audio is as fast as with a built-in voice, and sound tags still work. Needs code version\n1.1.0 or later; details in the [GitHub README](https://github.com/adventists-ai/sophon-realtime/blob/main/flash/README.md#zero-shot-voice-cloning). **Only clone your own voice or a voice you have permission to use. Do not use it to impersonate or deceive anyone.**\n\n## API\n- `/v1/chat/completions`: use the system prompt in `config/system_prompt.json` (the model was tuned with it; without it fewer tags are written); put the\n  user's speech in `input_audio`; `\"modalities\": [\"text\",\"audio\"]`, optional `\"voice\"` and `\"language\"`. The text stream keeps the tags (strip them for\n  display if you like); the audio stream is base64 WAV chunks (24 kHz).\n- `/v1/realtime`: OpenAI Realtime-style session; keep sending `input_audio_buffer.append`; the model decides when the user has finished.\n\n## Live mode (OpenAI GPT-Live compatible)\n\nRun one more command next to the engine and GPT-Live clients can connect by changing only the URL and key. Sophon keeps the voice; when a request needs a lookup or an action it says \"Let me check that\", hands the task to your backend and speaks the result in its own words.\n\n```bash\ncd sophon-realtime/live && BUILD=flash PORT=8000 LIVE_PORT=8780 bash start_live.sh   # GPT-Live clients: ws://HOST:8780/v1/live/sessions\n```\n\nDetails and measurements: [live/](https://github.com/adventists-ai/sophon-realtime/blob/main/live/README.md) in the GitHub repository.\n\n## Fine-tuning\n\nFine-tune the thinker's LLM backbone with LoRA in ms-swift to change persona, tone, domain knowledge and tool use. Hearing, the voice and turn-taking stay as released, and sound tags such as laughter and coughs are kept. One 80 GB GPU is enough; see [finetune/](https://github.com/adventists-ai/sophon-realtime/blob/main/finetune/README.md) in the GitHub repository.\n\n## Layout\n`model/` (thinker, voice stage, voices) · `plugin/` (vLLM-Omni plugin `sophon_realtime`) · `config/` (deploy config, system prompt, VAD) · `examples/`\n\nLicense: code Apache-2.0; model weights Apache-2.0, see `NOTICE` for sources.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [
+        "adventists-ai/Sophon-Realtime-32B-Flash-BF16"
+      ],
+      "score": 34,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0",
+        "community likes 14"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-32B-E2E",
+      "author": "adventists-ai",
+      "created_at": "2026-11-08",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "voice-agent",
+        "paralinguistics",
+        "expressive-speech",
+        "duplexjev",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 387,
+      "likes": 7,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E",
+      "card_text": "---\nlicense: apache-2.0\nframeworks:\n- PyTorch\nlanguage:\n- zh\n- en\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- voice-agent\n- paralinguistics\n- expressive-speech\n- duplexjev\n---\n\n<h1 align=\"center\">Sophon-Realtime-32B-E2E</h1>\n\n<p align=\"center\"><b>Sophon-Realtime v1 系列的 E2E 版：单卡、首包约 0.25 秒，声音直接从连续向量里生成</b><br>AI降临派（Adventists AI）· Apache-2.0 · v1.3.0</p>\n\n<p align=\"center\">\n<a href=\"https://github.com/adventists-ai/sophon-realtime\">GitHub</a> ·\n<a href=\"https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E\">Hugging Face</a> ·\n<a href=\"https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-32B-E2E\">魔搭</a> ·\n<a href=\"#english\">English</a>\n</p>\n\n## 这是什么\n\nSophon-Realtime 是全双工语音对话模型：一个 32B 的大脑负责听你说话、判断你说完没有、写出带声音标签的回复。E2E 版负责把回复变成声音的部分不经过语音 token：一个小巧的说话头（约 3.5 亿参数）在大脑还在写回复时就开始读，边读边生成连续的声音向量（每秒约 6.5 帧），再由 2 步解码器和声码器还原成 24 kHz 音频。笑、咳嗽、叹气、呼吸和重读都由说话头自己在同一条流里发出来。\n\n整套系统（大脑 + 说话头 + 解码器）跑在**一张 80 GB 显卡**上。\n\n## 1.3.0 更新（2026-11-14）\n\n- E2E 版支持零样本音色克隆：给一段 5–12 秒的录音，按名字使用即可，无需微调、无需重启（vLLM-Omni 部署方式，需要代码 1.3.0 及以上）。用法见下面的[音色克隆](#音色克隆)。权重没有变化。\n\n## 1.2.0 更新（2026-11-13）\n\n- 长回复会完整说完，不再限制语音时长（之前约 2 到 2.5 分钟就在句末收住）：说话头把长回复分成约 25–40 秒一段来说，每段都从剩下的文字重新开始。实测在 vLLM-Omni 部署方式下最长说到约 14 分钟。权重没有变化。详见[更新记录](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md)。\n\n## 1.1.4 更新（2026-11-12）\n\n- E2E 版现在也可以像 Tag、Flash 一样作为一个 vLLM-Omni 模型来部署（代码在 [`e2e/`](https://github.com/adventists-ai/sophon-realtime/blob/main/e2e/README_CN.md)），命令、接口（`/v1/realtime`、`/v1/chat/completions`）和客户端都相同。自研引擎的部署方式不变，速度略快。\n- 本仓库新增 `thinker/`（已合并回复 LoRA 的大脑，FP8，约 36 GB，与 Tag 仓库里的是同一份文件）、`config.json` 和 `talker220/config.json`，只有 vLLM-Omni 部署方式用到。其他文件没有变化。\n- 两种部署方式各自只下载自己需要的部分：自研引擎约 67 GB（不含 `thinker/`），vLLM-Omni 约 41 GB（不含 `base/`、`adapters/`）；安装脚本会自动处理。\n\n## 1.1.3 更新（2026-11-11）\n\n- 与 Tag、Flash 并列为正式版本，从两张卡变成一张卡。\n- 新的说话头（`talker220/`），原来的 `talker/` 已移除，下载量少约 8 GB；`base/`、`adapters/`、`e2/`、`voices/` 没有变化。\n- 之前的双卡权重保留在本仓库的 `v1.1.0` 标签下（配合代码标签 `v1.1.2` 使用）。\n\n## 在 v1 系列里的位置\n\n三个版本是同一个大脑（VoiceBench 82.8、Big Bench Audio 81.8%，两项开源全双工第一；副语言理解综合第一），区别只在回复怎么变成声音：\n\n| | [Tag](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-32B-Tag)（推荐） | [Flash](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-32B-Flash) | **E2E（本仓库）** |\n|---|---|---|---|\n| NVV-SuperBench（英 / 中） | **0.80 / 0.86** | 0.63 / 0.77 | 0.75 / 0.85 |\n| 单路首包 | 约 0.6 秒 | 0.31 秒 | **约 0.25 秒** |\n| 每张 80 GB 卡建议并发 | 16 路 | **40 路** | 16 路 |\n| 零样本音色克隆 | 支持 | 支持 | 支持（vLLM-Omni 部署方式） |\n| 语言 | 中、英和多种欧洲语言 | 同左，另有日、俄 | 中、英 |\n| 部署 | vLLM-Omni | vLLM-Omni | 自研引擎或 vLLM-Omni |\n\n想要更多语言，用 Tag 或 Flash；想要最快的首包、同时保留会笑会叹气的表现力，用 E2E。\n\n## 实测（单张 H100 80 GB，全新安装）\n\n语音提问进、语音回答出，全链路都在同一张卡上。首包指从发出请求到收到第一块音频。\n\n| 10 秒内到达的用户数 | 首包 中位数 / P90 | 播放落后超过 0.3 秒的回复数 |\n|---|---|---|\n| 1 | 0.25 秒 | 0 |\n| 8 | 0.44 / 0.77 秒 | 0 / 8 |\n| **16** | **0.44 / 0.56 秒** | **0 / 16** |\n| 24 | 0.58 / 0.94 秒 | 7 / 24 |\n| 32 | 0.67 / 0.80 秒 | 23 / 32 |\n\nNVV-SuperBench（官方题目与指标，每类每种语言 50 条，Gemini 3 Flash 裁判，F1）：\n\n| | 四类合计 | 笑 | 咳嗽 | 叹气 | 呼吸 |\n|---|---|---|---|---|---|\n| 英文 | 0.75 | 0.70 | 0.76 | 0.92 | 0.64 |\n| 中文 | 0.85 | 0.86 | 0.95 | 0.87 | 0.74 |\n\n同一批句子的转写错字率：中文 3.1%，英文 1.9%。\n\n## 部署\n\n需要 Linux、NVIDIA 驱动 580 及以上、一张 H100 级的 80 GB 显卡（实际占用约 70 GB）。有两种方式，权重相同、声音相同。\n\n**方式一：自研引擎**（上面表格里的数字）\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime\ncd sophon-realtime\nbash scripts/install.sh          # 建两个虚拟环境，并从魔搭下载本模型\nSOPHON_MODEL_DIR=$PWD/Sophon-Realtime-32B-E2E GPU=0 bash scripts/start.sh\n```\n\n启动后打开 `http://<服务器>:8000/` 即可在网页里直接对话，也可以通过 WebSocket 接口（`/ws`）接入自己的客户端。详见 [docs/deploy_CN.md](https://github.com/adventists-ai/sophon-realtime/blob/main/docs/deploy_CN.md)。\n\n**方式二：vLLM-Omni**（与 Tag、Flash 相同的命令和接口）\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/e2e\nbash install.sh                 # 建虚拟环境，并从魔搭下载本模型中需要的部分（约 41 GB）\nGPU=0 PORT=8000 bash start.sh\npython client_example.py --wav my_question.wav --lang zh\n```\n\n提供 `ws://<服务器>:8000/v1/realtime`（全双工）和 `/v1/chat/completions`。单张 H100 实测：单路首包约 0.35 秒；16 路首包中位数 0.58–0.65 秒、P90 0.71–0.87 秒，0–2 路回复播放落后超过 0.3 秒；全双工下从说完到出声中位数约 0.45 秒。详见 [e2e/README_CN.md](https://github.com/adventists-ai/sophon-realtime/blob/main/e2e/README_CN.md)。\n\n**其他显卡**：以上数字都是在 H100 上测的。在一张 RTX PRO 6000（Blackwell，96 GB）上实测 vLLM-Omni 方式：能安装、能运行，但一张卡只能跟上约 4–8 路并发（E2E 发声部分在这张卡上慢约一倍）。在这类显卡上需要更高并发时，请用 Tag 或 Flash。\n\n## 音色克隆\n\n需要代码 1.3.0 及以上，vLLM-Omni 部署方式（GitHub 仓库的 `e2e/`）。把录音放进 `model/voices/`，按名字使用：\n\n```bash\ncp alice.wav model/voices/alice.wav   # 5–12 秒、只有一个人说话的清晰录音（wav 或 flac，16 kHz 及以上）\npython client_example.py --wav my_question.wav --lang zh --voice alice\n```\n\n- 需要 Tag 发布包里的两个小模型 `speech_tokenizer_v3.onnx` 和 `campplus.onnx`（约 1 GB），`install.sh` 会自动下载到 `model/clone_frontend/talker/`；本仓库的权重不需要改动。\n- 第一次用到时准备并缓存，首包和内置音色一样快；录音太短或读不了时回落内置音色。\n- 详细说明见 [e2e/README_CN.md](https://github.com/adventists-ai/sophon-realtime/blob/main/e2e/README_CN.md)。\n- **请只克隆自己的声音，或已获得声音主人许可的声音；不得用于冒充他人或欺诈。**\n\n## 声音标签\n\n`[laughter]` `[cough]` `[sigh]` `[breath]`（在该位置发出声音）、`<strong>词</strong>`（重读）、`<laughter>几个词</laughter>`（边笑边说）。大脑会自己把它们写进回复；说话头把它们演出来，不会念出来。\n\n## 这一版的限制\n\n- 一个内置音色；音色克隆只在 vLLM-Omni 部署方式下可用（自研引擎方式暂不支持）。\n- 回复用中文或英文。\n- 单条回复最长约 4.6 分钟语音（vLLM-Omni 方式约 2.5 分钟）；超出时这条回复在该处正常结束，不影响其他对话。连续说到约 2.5 分钟以内内容是准确的，更长的回复后段会出现念错，建议把单条回复控制在 2.5 分钟以内。\n\n## 文件\n\n| 目录 | 内容 |\n|---|---|\n| `base/` | 大脑的 32B 权重 |\n| `adapters/tag/` | 写带标签回复的 LoRA |\n| `talker220/` | 说话头：权重、文字嵌入表、分词器 |\n| `e2/` | 解码器与声码器 |\n| `voices/` | 默认音色 |\n| `thinker/`、`config.json`、`talker220/config.json` | 只有 vLLM-Omni 部署方式用到：已合并回复 LoRA 的大脑（FP8，约 36 GB） |\n\n## 许可证\n\n代码和权重都是 Apache-2.0。第三方组件保留各自的许可证，见 GitHub 仓库的 [NOTICE](https://github.com/adventists-ai/sophon-realtime/blob/main/NOTICE)。\n\n## 联系\n\n商务合作：jiejin@adventists.ai\n\n---\n\n<a id=\"english\"></a>\n\n# Sophon-Realtime-32B-E2E\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n> 🆕 **Smaller GPU?** [Sophon-Realtime-4B-E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-E2E) (v1.4.0) runs this build with a 4B brain on one 32 GB GPU: keeps the turn-taking and sound tags, knows much less. [All builds](https://huggingface.co/collections/adventists-ai/sophon-realtime-6afb357253a3a8905ad758b0)\n\n\n**The E2E build of the Sophon-Realtime v1 family: one GPU, first audio in about 0.25 s, speech generated directly as continuous vectors.** Adventists AI · Apache-2.0 · v1.3.0\n\n## What it is\n\nSophon-Realtime is a full-duplex voice model: a 32B brain listens to you, decides when you have finished, and writes a reply with sound tags. In the E2E build, the part that turns the reply into sound has no speech-token model in the middle. A compact talker (about 350M parameters) reads the reply while it is still being written and generates a stream of continuous voice vectors, about 6.5 frames per second; a 2-step decoder and a vocoder turn them into 24 kHz audio. Laughs, coughs, sighs, breaths and stressed words are produced by the talker itself, as part of the same stream.\n\nThe whole system (brain, talker, decoder) runs on **one 80 GB GPU**.\n\n## What's new in 1.3.0 (2026-11-14)\n\n- E2E now does zero-shot voice cloning: give it a 5–12 s clip and use the voice by name, with no fine-tuning and no restart (vLLM-Omni deployment, requires code 1.3.0 or later). See [Voice cloning](#voice-cloning) below. The weights are unchanged.\n\n## What's new in 1.2.0 (2026-11-13)\n\n- Long replies are spoken to their end, with no limit on speech length (before, speech ended at a sentence end after about 2 to 2.5 minutes): the talker speaks them in segments of about 25–40 s, each a fresh start on the rest of the text. Tested up to about 14 minutes with the vLLM-Omni deployment. The weights are unchanged. See the [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md).\n\n## What's new in 1.1.4 (2026-11-12)\n\n- E2E can now also be served as one vLLM-Omni model, like Tag and Flash (code in [`e2e/`](https://github.com/adventists-ai/sophon-realtime/blob/main/e2e/README.md)), with the same commands, APIs (`/v1/realtime`, `/v1/chat/completions`) and client. The own-engine deployment is unchanged and a little faster.\n- New in this repository: `thinker/` (the brain with the reply LoRA merged in, FP8, about 36 GB; the same files as in the Tag repository), `config.json` and `talker220/config.json`. Only the vLLM-Omni deployment uses them. Nothing else changed.\n- Each way of deploying downloads only what it needs: about 67 GB for the own engine (without `thinker/`), about 41 GB for vLLM-Omni (without `base/` and `adapters/`). The install scripts take care of it.\n\n## What's new in 1.1.3 (2026-11-11)\n\n- A full build next to Tag and Flash, on one GPU instead of two.\n- New talker (`talker220/`); the old `talker/` is removed, so the download is about 8 GB smaller. `base/`, `adapters/`, `e2/` and `voices/` are unchanged.\n- The earlier two-GPU weights stay in this repository at tag `v1.1.0` (use them with code tag `v1.1.2`).\n\n## Where it fits in the v1 family\n\nAll three builds share one brain (VoiceBench 82.8 and Big Bench Audio 81.8%, #1 among open full-duplex models on both; #1 in paralinguistic understanding). They differ only in how the reply becomes sound:\n\n| | [Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) (recommended) | [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) | **E2E (this repository)** |\n|---|---|---|---|\n| NVV-SuperBench (en / zh) | **0.80 / 0.86** | 0.63 / 0.77 | 0.75 / 0.85 |\n| First audio, one user | ~0.6 s | 0.31 s | **~0.25 s** |\n| Recommended users per 80 GB GPU | 16 | **40** | 16 |\n| Zero-shot voice cloning | yes | yes | yes (vLLM-Omni deployment) |\n| Languages | Chinese, English and several European languages | the same, plus Japanese and Russian | Chinese, English |\n| Serving | vLLM-Omni | vLLM-Omni | own engine or vLLM-Omni |\n\nUse Tag or Flash for more languages; use E2E for the fastest first audio with a voice that still laughs and sighs.\n\n## Measured (one H100 80 GB, fresh install)\n\nSpoken question in, spoken answer out, everything on the same GPU. First audio is the time from sending the request to receiving the first audio chunk.\n\n| Users arriving within 10 s | First audio, median / P90 | Replies whose playback fell more than 0.3 s behind |\n|---|---|---|\n| 1 | 0.25 s | 0 |\n| 8 | 0.44 / 0.77 s | 0 of 8 |\n| **16** | **0.44 / 0.56 s** | **0 of 16** |\n| 24 | 0.58 / 0.94 s | 7 of 24 |\n| 32 | 0.67 / 0.80 s | 23 of 32 |\n\nNVV-SuperBench (official prompts and metric, 50 items per class per language, Gemini 3 Flash judge, F1):\n\n| | All 4 | Laugh | Cough | Sigh | Breath |\n|---|---|---|---|---|---|\n| English | 0.75 | 0.70 | 0.76 | 0.92 | 0.64 |\n| Chinese | 0.85 | 0.86 | 0.95 | 0.87 | 0.74 |\n\nTranscription error rate on the same sentences: Chinese 3.1%, English 1.9%.\n\n## Deployment\n\nLinux, NVIDIA driver 580 or newer, one 80 GB GPU of the H100 class (about 70 GB is used). There are two ways, with the same weights and the same voice.\n\n**1. Own engine** (the numbers in the tables above)\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime\ncd sophon-realtime\nbash scripts/install.sh          # two virtual environments + this model from ModelScope\nSOPHON_MODEL_DIR=$PWD/Sophon-Realtime-32B-E2E GPU=0 bash scripts/start.sh\n```\n\nThen open `http://<server>:8000/` to talk in the browser, or connect your own client to the WebSocket API (`/ws`). See [docs/deploy.md](https://github.com/adventists-ai/sophon-realtime/blob/main/docs/deploy.md).\n\n**2. vLLM-Omni** (the same commands and APIs as Tag and Flash)\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/e2e\nbash install.sh                 # virtual environment + the parts of this model it needs, from ModelScope (about 41 GB)\nGPU=0 PORT=8000 bash start.sh\npython client_example.py --wav my_question.wav --lang en\n```\n\nIt serves `ws://<server>:8000/v1/realtime` (full duplex) and `/v1/chat/completions`. Measured on one H100: first audio about 0.35 s for one user; 16 users 0.58–0.65 s median / 0.71–0.87 s P90, with 0–2 replies falling more than 0.3 s behind playback; in full duplex about 0.45 s (median) from the end of your speech to the first voice. See [e2e/README.md](https://github.com/adventists-ai/sophon-realtime/blob/main/e2e/README.md).\n\n**Other GPUs:** all numbers above are measured on an H100. On one RTX PRO 6000 (Blackwell, 96 GB) the vLLM-Omni deployment installs and runs, but one GPU keeps up with only about 4–8 concurrent users (the E2E voice stages run about 2× slower on that card). If you need more users per GPU on such cards, use Tag or Flash.\n\n## Voice cloning\n\nRequires code 1.3.0 or later and the vLLM-Omni deployment (`e2e/` in the GitHub repository). Put a clip in `model/voices/` and use it by name:\n\n```bash\ncp alice.wav model/voices/alice.wav   # 5-12 s of clean speech from one speaker (wav or flac, 16 kHz or more)\npython client_example.py --wav my_question.wav --lang en --voice alice\n```\n\n- It needs two small models from the Tag release, `speech_tokenizer_v3.onnx` and `campplus.onnx` (about 1 GB); `install.sh` downloads them to `model/clone_frontend/talker/`. The weights in this repository are unchanged.\n- A voice is prepared the first time it is used and then cached, so first audio is as fast as with the built-in voice; a clip that is too short or cannot be read falls back to the built-in voice.\n- Details: [e2e/README.md](https://github.com/adventists-ai/sophon-realtime/blob/main/e2e/README.md).\n- **Only clone your own voice or a voice you have permission to use. Do not use it to impersonate or deceive anyone.**\n\n## Sound tags\n\n`[laughter]` `[cough]` `[sigh]` `[breath]` (a sound at that point), `<strong>word</strong>` (emphasis), `<laughter>some words</laughter>` (speaking while laughing). The brain writes them into the reply on its own; the talker performs them instead of reading them aloud.\n\n## Limits of this release\n\n- One built-in voice; voice cloning works only with the vLLM-Omni deployment (not yet with the own engine).\n- Replies are spoken in Chinese or English.\n- One reply can be at most about 4.6 minutes of speech (about 2.5 minutes with vLLM-Omni); a longer reply ends cleanly at that point and other conversations are not affected. Speech stays accurate up to about 2.5 minutes of continuous talking; beyond that the later part of a reply contains misread words, so keep single replies under 2.5 minutes.\n\n## Files\n\n| folder | contents |\n|---|---|\n| `base/` | 32B weights of the brain |\n| `adapters/tag/` | LoRA that writes the tagged reply |\n| `talker220/` | talker: weights, text embedding table, tokenizer |\n| `e2/` | decoder and vocoder |\n| `voices/` | default voice |\n| `thinker/`, `config.json`, `talker220/config.json` | only for the vLLM-Omni deployment: the brain with the reply LoRA merged in (FP8, about 36 GB) |\n\n## License\n\nCode and weights are released under Apache-2.0. Third-party components keep their own licences; see [NOTICE](https://github.com/adventists-ai/sophon-realtime/blob/main/NOTICE) in the GitHub repository.\n\n## Contact\n\nBusiness enquiries: jiejin@adventists.ai\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 33,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-32B-Flash-4bit-MLX",
+      "author": "adventists-ai",
+      "created_at": "2026-11-12",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "realtime",
+        "apple-silicon",
+        "4-bit",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "base_model:adventists-ai/Sophon-Realtime-32B-Flash",
+        "base_model:quantized:adventists-ai/Sophon-Realtime-32B-Flash",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 445,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash-4bit-MLX",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: mlx\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- realtime\n- mlx\n- apple-silicon\n- 4-bit\nbase_model: adventists-ai/Sophon-Realtime-32B-Flash\nbase_model_relation: quantized\n---\n\n# Sophon-Realtime-32B-Flash-4bit-MLX\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n\n**Version 1.2.0** · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · code: [`mac/`](https://github.com/adventists-ai/sophon-realtime/tree/main/mac) · CUDA build: [Sophon-Realtime-32B-Flash-4bit](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash-4bit) · 中文：`README_CN.md`\n\nThe full-duplex speech model [Sophon-Realtime-32B-Flash-4bit](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash-4bit), **running locally on an Apple silicon Mac** with MLX.\nYou talk, it decides by itself when you have finished, answers with its own voice and sound tags, stops when you interrupt, and carries on when you\njust say \"mm-hmm\". Hearing, turn-taking and speaking are all done by the model on the Mac's GPU: no cloud, and no speech-to-text step in between.\n\nThe weights are the Flash-4bit weights **repacked losslessly** for MLX: the 4-bit values, scales, audio tower and voice stage are bit-identical to the CUDA build.\n\n## Requirements\n- Apple silicon (M1 or later), macOS 14 or later\n- **36 GB or more unified memory recommended**; 32 GB works with other apps closed (about 26 GB in use while talking)\n- About 24 GB download\n- A microphone. Mac Studio and Mac mini have none built in: plug in a USB microphone or a headset. Speakers are fine, echo cancellation is built in\n\n## Quick start\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime\nbash mac/install.sh            # Python environment + this repo's weights, into ~/sophon-mac\n~/sophon-mac/sophon            # talk in Chinese\n~/sophon-mac/sophon --lang en  # talk in English\n```\nOptions: `--no-aec` (headset, no echo cancellation), `--in` / `--out` (audio devices, `--list` shows them), `--voice`.\n\n## Speed (M4 Max, 36 GB)\n| | |\n|---|---|\n| You stop talking → it starts speaking | **0.9–1.1 s** when the model is sure you have finished; up to about 2.5 s when it waits to see whether you go on |\n| Long replies | real time, no stalls |\n| You interrupt | it stops within about 0.15 s |\n| Model load | about 10 s |\n\nThe CUDA server answers in about 0.5 s. On a Mac most of the time goes into the turn decision: when you pause, the model listens to your whole\nutterance once on the Mac's GPU. Chips with more GPU cores are faster.\n\n## How turn-taking works on a Mac\nTo process your audio only once, the turn question is asked inside the reply's own context (system prompt, conversation, your audio, then a short\n\"has the user finished? A / B\" question); if the answer is yes, the reply continues from the same computation. The check schedule and thresholds are\nthose of the server (0.2 s to 2 s of silence, then a fallback reply). Accuracy on the Smart Turn test set (400 clips per language):\n\n| | English acc. / AUC | Chinese acc. / AUC |\n|---|---|---|\n| Server turn question | 92.5 / 0.975 | 94.0 / 0.983 |\n| **Mac turn question** | **90.5 / 0.960** | **94.3 / 0.977** |\n\nRight after you interrupt, the full four-option question is used instead, so that a short back-channel (\"mm-hmm\", \"yeah\") makes it resume the cut reply.\n\n## Echo cancellation\nWebRTC AEC3 removes the reply's own sound from the microphone. In a simulated room (speaker sound back at the microphone at −6 dB and 0 dB, 6 s of\nreply), the reply never interrupted itself with echo cancellation on (3 / 3 runs) and did every time with it off; a real interruption was still\ndetected within about 0.12 s.\n\n## Status and limits\n- Tested on an M4 Max (36 GB) with real-time simulated audio input (speech played into the engine at real-time pace, simulated room echo).\n  Live microphone runs and numbers from other Macs are very welcome in [issue #1](https://github.com/adventists-ai/sophon-realtime/issues/1).\n- One conversation at a time. Camera input, tool calls and zero-shot voice cloning are not in the Mac version yet (built-in voices only).\n\n## Files\n| Folder | What |\n|---|---|\n| `thinker_mlx/` | the 4-bit thinker for `mlx_lm` (same weights as Flash-4bit) |\n| `ear/` | the thinker's audio tower and projector |\n| `talker/` | the voice stage (same as Flash) |\n| `voices/` | built-in voices |\n\nLicense: code Apache-2.0; model weights Apache-2.0, see `NOTICE` for sources.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/Sophon-Realtime-32B-Flash"
+      ],
+      "variants": [
+        "adventists-ai/Sophon-Realtime-32B-Flash-4bit"
+      ],
+      "score": 33,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-4B-E2E",
+      "author": "adventists-ai",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "vllm",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "realtime",
+        "paralinguistic",
+        "vllm-omni",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 77,
+      "likes": 2,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-4B-E2E",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- realtime\n- paralinguistic\n- vllm-omni\n---\n\n# Sophon-Realtime-4B-E2E\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n**Version 1.4.0** (2026-11-16) · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · [GitHub](https://github.com/adventists-ai/sophon-realtime)\n\nThe 4B member of the Sophon-Realtime family: the same full-duplex design as the 32B builds, on **one 32 GB GPU (uses ~31 GB)**. It listens while you talk,\ndecides from your voice when you have finished, writes a reply with sound tags (`[laughter]` `[cough]` `[sigh]` `[breath]` `<strong>…</strong>`)\nand speaks while it writes; a compact talker (about 350M parameters) turns the tagged reply straight into voice vectors; a decoder turns them into sound. Served as **one** vLLM-Omni model, with `/v1/realtime` and `/v1/chat/completions`.\n\n## Sophon-Realtime 4B: three builds, one 4B brain\n\n| | **Tag** | **Flash** | **E2E** |\n|---|---|---|---|\n| How it speaks | an expressive speech model (tag-tts) performs the sound tags | a lighter, faster speech model speaks the tagged reply (one forward pass per 80 ms frame) | a compact talker (about 350M parameters) turns the tagged reply straight into voice vectors; a decoder turns them into sound |\n| Runs on | one 32 GB GPU (uses ~27 GB) | one 24 GB GPU (uses ~21 GB) | one 32 GB GPU (uses ~31 GB) |\n| Full-Duplex-Bench v1.0 (4-task avg) | 94.3 | 87.7 | 92.3 |\n| First audio, one user (RTX PRO 6000) | 0.4 s | 0.21 s | 0.31 s |\n| Weights | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-Tag) | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-Flash) | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-E2E) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-E2E) |\n\nThe 4B brain is [DuplexJev-4B-Para](https://huggingface.co/adventists-ai/DuplexJev-4B-Para), our open 4B speech model, with a tag-writing adapter merged in. Speech only: the 4B brain has no vision.\nFor the strongest answers, use the 32B builds ([Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) · [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) · [E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E)) or the [hosted API](https://api.adventists.ai/console/).\n\n## Benchmarks\n\n| | 4B | 32B (published) |\n|---|---|---|\n| VoiceBench overall | 62.4 | 82.8 |\n| Big Bench Audio (spoken answer, transcribed) | 44.3% | 81.8% |\n| Full-Duplex-Bench v1.0, E2E build (avg of 2 pause tasks, turn-taking, interruption) | 92.3 | 94.0 |\n| Sound-tag rate on held-out conversations (reference: 0.36) | 0.36 | — |\n\n**What 4B is for.** The 4B brain keeps the conversation skills of the family: listening while you talk, deciding when you have finished, back-channels, barge-in and sound tags (Full-Duplex-Bench close to the 32B builds, and the same tag rate as the reference data). It knows and reasons much less than the 32B brain (VoiceBench 62.4 vs 82.8, Big Bench Audio 44.3% vs 81.8%), so it can state wrong facts with confidence. Use it for local demos, companions and characters, and research on turn-taking; use the 32B builds or the hosted API when answers must be right. Among open full-duplex models, its VoiceBench score is above Freeze-Omni (55.2) and Moshi (29.5) and below MiniCPM-o (71.2).\n\n<sub>Measured 2026-11-16 on one RTX PRO 6000 with each build held to the memory of the card it is configured for. VoiceBench: official evaluators, gpt-4o-mini judge, AlpacaEval on the standard 199-question subset, overall = mean of 9 tasks. Big Bench Audio: 1,000 questions, GPT-4.1 judges the transcript of the spoken answer. Full-Duplex-Bench v1.0: average of candor and synthetic pause handling, turn-taking and user interruption (backchannel is reported but not averaged), the same scripts as for the 32B release. First audio: one user, `client_example.py`, median of 6. The 32B column repeats the numbers published for the 32B builds.</sub>\n\n## Quick start\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/e2e\nSIZE=4B bash install.sh          # once: Python 3.12 venv, vLLM 0.30, vLLM-Omni 0.30, plugin, and these weights into ./model\nGPU=0 PORT=8000 bash start.sh    # sees the 4B model and picks its 32 GB config\npython client_example.py --url http://127.0.0.1:8000\n```\n\nFull instructions, the realtime protocol, zero-shot voice cloning and Live mode: [e2e/README.md](https://github.com/adventists-ai/sophon-realtime/blob/main/e2e/README.md).\n\n## Layout\n`config.json` · `thinker/` (4B, bf16), `talker220/`, `e2/`, `voices/`\n\nLicense: Apache-2.0; see `NOTICE` for the sources of the bundled weights. **Only clone your own voice or a voice you have permission to use.**\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 33,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-4B-Flash-MLX",
+      "author": "adventists-ai",
+      "created_at": "2026-11-18",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "realtime",
+        "apple-silicon",
+        "8-bit",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "base_model:adventists-ai/Sophon-Realtime-4B-Flash",
+        "base_model:quantized:adventists-ai/Sophon-Realtime-4B-Flash",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 207,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash-MLX",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: mlx\npipeline_tag: audio-to-audio\nbase_model: adventists-ai/Sophon-Realtime-4B-Flash\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- realtime\n- mlx\n- apple-silicon\n- 8-bit\nbase_model_relation: quantized\n---\n\n# Sophon-Realtime-4B-Flash-MLX\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n**Version 1.5.0** (2026-11-18) · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · code: [`mac/`](https://github.com/adventists-ai/sophon-realtime/tree/main/mac) · CUDA build: [Sophon-Realtime-4B-Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash) · 32B Mac build: [Sophon-Realtime-32B-Flash-4bit-MLX](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash-4bit-MLX) · 中文：`README_CN.md`\n\nThe full-duplex speech model [Sophon-Realtime-4B-Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash), **running locally on an Apple silicon Mac with 16 GB or more** (MLX).\nYou talk, it decides by itself when you have finished, answers with its own voice and sound tags, stops when you interrupt, and carries on when you\njust say \"mm-hmm\". Hearing, turn-taking and speaking are all done by the model on the Mac's GPU: no cloud, and no speech-to-text step in between.\n\nThe thinker's language model is quantized to 8 bits by `mlx_lm` (group 64); the audio tower, projector and voice stage are the same weights as the CUDA build.\n\n## 4B or 32B on a Mac\n\n| | **4B (this repo)** | 32B |\n|---|---|---|\n| Unified memory | **16 GB works** (about 11 GB in use while talking); 24 GB or more recommended | 32 GB works, 36 GB or more recommended (about 26 GB in use) |\n| Download | about 9 GB | about 24 GB |\n| You stop talking → it starts speaking (M4 Max) | **0.3–0.5 s** when it is sure you have finished | 0.9–1.1 s |\n| Knowledge and reasoning | much weaker (VoiceBench 62.4 on the CUDA build) | strong (82.8) |\n\nThe 4B brain keeps the conversation skills (turn-taking, back-channels, barge-in, sound tags) but knows and reasons much less, and can state wrong facts with confidence.\nIt is for local demos, companions and characters; use the 32B build or the [hosted API](https://api.adventists.ai/console/) when answers must be right.\n\n## Requirements\n- Apple silicon (M1 or later), macOS 14 or later, **16 GB unified memory or more** (with 16 GB, close other apps)\n- About 9 GB download\n- A microphone. Mac Studio and Mac mini have none built in: plug in a USB microphone or a headset. Speakers are fine, echo cancellation is built in\n\n## Quick start\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime\nSIZE=4B bash mac/install.sh       # Python environment + this repo's weights, into ~/sophon-mac/models-4b\n~/sophon-mac/sophon-4b            # talk in Chinese\n~/sophon-mac/sophon-4b --lang en  # talk in English\n```\nOptions: `--no-aec` (headset, no echo cancellation), `--in` / `--out` (audio devices, `--list` shows them), `--voice`. The 32B and 4B builds can be installed side by side.\n\n## Turn-taking\nThe 4B brain answers the server's four-option turn question (\"finished / still talking / back-channel / hesitating\"), asked in its own short prompt;\nthe 32B Mac build's shorter two-option question is tuned for 32B and does not suit 4B (`turn_question` in `config.json` selects it).\nAccuracy on a sample of the Smart Turn v3.2 test set (300 clips per language, half of them finished; last 8 s of each):\n\n| | English acc. / AUC | Chinese acc. / AUC |\n|---|---|---|\n| **4B, this repo** | **90.0 / 0.961** | **89.7 / 0.954** |\n| 4B with the 32B build's short question | 72.3 / 0.888 | 74.0 / 0.851 |\n| 32B Mac build (same sample) | 91.7 / 0.961 | 92.7 / 0.973 |\n\nWhen the model is not sure you have finished, it waits up to 2 s of silence before answering.\n\n## Status and limits\n- Tested on an M4 Max (36 GB) with real-time simulated audio input, and with MLX memory capped at 10.5 GB (what a 16 GB Mac gives the GPU): the whole\n  conversation ran, peak memory 11.3 GB. Not yet tried on a physical 16 GB Mac; reports are very welcome in [issue #1](https://github.com/adventists-ai/sophon-realtime/issues/1).\n- One conversation at a time. Camera input, tool calls and zero-shot voice cloning are not in the Mac version yet (built-in voices only).\n\n## Files\n| Folder | What |\n|---|---|\n| `thinker_mlx/` | the thinker's language model for `mlx_lm`, 8-bit |\n| `ear/` | the thinker's audio tower and projector |\n| `talker/` | the voice stage (same as Flash) |\n| `voices/` | built-in voices |\n\nLicense: code Apache-2.0; model weights Apache-2.0, see `NOTICE` for sources.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/Sophon-Realtime-4B-Flash"
+      ],
+      "variants": [],
+      "score": 33,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-4B-Tag-W4",
+      "author": "adventists-ai",
+      "created_at": "2026-11-18",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "vllm",
+        "onnx",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "realtime",
+        "paralinguistic",
+        "vllm-omni",
+        "4-bit",
+        "gptq",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "base_model:adventists-ai/Sophon-Realtime-4B-Tag",
+        "base_model:quantized:adventists-ai/Sophon-Realtime-4B-Tag",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 166,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag-W4",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-to-audio\nbase_model: adventists-ai/Sophon-Realtime-4B-Tag\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- realtime\n- paralinguistic\n- vllm-omni\n- 4-bit\n- gptq\nbase_model_relation: quantized\n---\n\n# Sophon-Realtime-4B-Tag-W4\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n**Version 1.5.0** (2026-11-18) · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · [GitHub](https://github.com/adventists-ai/sophon-realtime) · bf16 build: [Sophon-Realtime-4B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag) · 中文：`README_CN.md`\n\n[Sophon-Realtime-4B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag) with a **4-bit thinker**, for **one 24 GB GPU** (RTX 4090 / 3090 class; uses about 21 GB).\nIt listens while you talk, decides from your voice when you have finished, writes a reply with sound tags (`[laughter]` `[cough]` `[sigh]` `[breath]` `<strong>…</strong>`)\nand speaks while it writes; an expressive speech model (tag-tts) performs the sound tags. Served as **one** vLLM-Omni model, with `/v1/realtime` and `/v1/chat/completions`.\n\nOnly the thinker's language model is quantized (GPTQ W4A16: int4, symmetric, group 128, calibrated on half spoken, half written conversations).\nThe audio encoder, projector, embeddings, speech model and voices are the same files as the bf16 build.\n\n## 4-bit vs bf16\n\n| Sophon-Realtime-4B-Tag | **W4 (this repo)** | bf16 |\n|---|---|---|\n| Runs on | **one 24 GB GPU (uses ~21 GB)** | one 32 GB GPU (uses ~27 GB) |\n| Thinker weights | 2.9 GB | 8.4 GB |\n| CMMLU / MMLU-Pro (600 questions each, text) | 69.5 / 42.7 | 71.3 / 44.3 |\n| Sound tags on 300 held-out spoken conversations: valid / tagged replies | 99.3% / 15.3% | 100% / 12.7% |\n| Speech error rate of the spoken reply, ASR, 40 zh / 40 en | 3.2% / 0.7% | 3.1% / 1.9% |\n| First audio, 2 users at once (median) | 0.28–0.38 s | 0.29–0.38 s |\n\nThe knowledge scores drop by about 1.7 points, about the sampling error of 600 questions; speech, sound tags and speed are unchanged.\nFor everything else (what the 4B brain is good at, and its limits) see the [bf16 card](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag).\n\n<sub>Measured 2026-11-18 on one H100 with the 24 GB config's memory budget (each stage's share of a 24 GB card, converted to the 80 GB card), the same scripts for both columns.\nMemory is the sum of the three stage processes. Not yet checked on a physical 24 GB card: a desktop that also drives a display has less free memory;\nreports from 4090 / 3090 users are very welcome.</sub>\n\n## Quick start\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/tag\nSIZE=4B-W4 bash install.sh       # once: Python 3.12 venv, vLLM 0.30, vLLM-Omni 0.30, plugin, and these weights into ./model\nGPU=0 PORT=8000 bash start.sh    # sees the 4-bit 4B thinker and picks its 24 GB config (up to 4 conversations)\npython client_example.py --url http://127.0.0.1:8000\n```\n\nFull instructions, the realtime protocol, zero-shot voice cloning and Live mode: [tag/README.md](https://github.com/adventists-ai/sophon-realtime/blob/main/tag/README.md).\n\n## Layout\n`config.json` · `thinker/` (4B, language model 4-bit, compressed-tensors), `talker/` (tag-tts), `voices/`\n\nLicense: Apache-2.0; see `NOTICE` for the sources of the bundled weights. **Only clone your own voice or a voice you have permission to use.**\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "adventists-ai/Sophon-Realtime-4B-Tag"
+      ],
+      "variants": [],
+      "score": 33,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-4B-Tag",
+      "author": "adventists-ai",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "vllm",
+        "onnx",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "realtime",
+        "paralinguistic",
+        "vllm-omni",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 117,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\nlibrary_name: vllm\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- realtime\n- paralinguistic\n- vllm-omni\n---\n\n# Sophon-Realtime-4B-Tag\n\n> **No GPU?** Try it through the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n**Version 1.4.0** (2026-11-16) · [changelog](https://github.com/adventists-ai/sophon-realtime/blob/main/CHANGELOG.md) · [GitHub](https://github.com/adventists-ai/sophon-realtime)\n\n> **24 GB GPU?** [Sophon-Realtime-4B-Tag-W4](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag-W4) is this build with a 4-bit brain, for one 24 GB card (uses about 21 GB; new in 1.5.0).\n\nThe 4B member of the Sophon-Realtime family: the same full-duplex design as the 32B builds, on **one 32 GB GPU (uses ~27 GB)**. It listens while you talk,\ndecides from your voice when you have finished, writes a reply with sound tags (`[laughter]` `[cough]` `[sigh]` `[breath]` `<strong>…</strong>`)\nand speaks while it writes; an expressive speech model (tag-tts) performs the sound tags. Served as **one** vLLM-Omni model, with `/v1/realtime` and `/v1/chat/completions`.\n\n## Sophon-Realtime 4B: three builds, one 4B brain\n\n| | **Tag** | **Flash** | **E2E** |\n|---|---|---|---|\n| How it speaks | an expressive speech model (tag-tts) performs the sound tags | a lighter, faster speech model speaks the tagged reply (one forward pass per 80 ms frame) | a compact talker (about 350M parameters) turns the tagged reply straight into voice vectors; a decoder turns them into sound |\n| Runs on | one 32 GB GPU (uses ~27 GB) | one 24 GB GPU (uses ~21 GB) | one 32 GB GPU (uses ~31 GB) |\n| Full-Duplex-Bench v1.0 (4-task avg) | 94.3 | 87.7 | 92.3 |\n| First audio, one user (RTX PRO 6000) | 0.4 s | 0.21 s | 0.31 s |\n| Weights | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Tag) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-Tag) | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-Flash) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-Flash) | [HF](https://huggingface.co/adventists-ai/Sophon-Realtime-4B-E2E) · [ModelScope](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-4B-E2E) |\n\nThe 4B brain is [DuplexJev-4B-Para](https://huggingface.co/adventists-ai/DuplexJev-4B-Para), our open 4B speech model, with a tag-writing adapter merged in. Speech only: the 4B brain has no vision.\nFor the strongest answers, use the 32B builds ([Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) · [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) · [E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E)) or the [hosted API](https://api.adventists.ai/console/).\n\n## Benchmarks\n\n| | 4B | 32B (published) |\n|---|---|---|\n| VoiceBench overall | 62.4 | 82.8 |\n| Big Bench Audio (spoken answer, transcribed) | 44.3% | 81.8% |\n| Full-Duplex-Bench v1.0, Tag build (avg of 2 pause tasks, turn-taking, interruption) | 94.3 | 94.0 |\n| Sound-tag rate on held-out conversations (reference: 0.36) | 0.36 | — |\n\n**What 4B is for.** The 4B brain keeps the conversation skills of the family: listening while you talk, deciding when you have finished, back-channels, barge-in and sound tags (Full-Duplex-Bench close to the 32B builds, and the same tag rate as the reference data). It knows and reasons much less than the 32B brain (VoiceBench 62.4 vs 82.8, Big Bench Audio 44.3% vs 81.8%), so it can state wrong facts with confidence. Use it for local demos, companions and characters, and research on turn-taking; use the 32B builds or the hosted API when answers must be right. Among open full-duplex models, its VoiceBench score is above Freeze-Omni (55.2) and Moshi (29.5) and below MiniCPM-o (71.2).\n\n<sub>Measured 2026-11-16 on one RTX PRO 6000 with each build held to the memory of the card it is configured for. VoiceBench: official evaluators, gpt-4o-mini judge, AlpacaEval on the standard 199-question subset, overall = mean of 9 tasks. Big Bench Audio: 1,000 questions, GPT-4.1 judges the transcript of the spoken answer. Full-Duplex-Bench v1.0: average of candor and synthetic pause handling, turn-taking and user interruption (backchannel is reported but not averaged), the same scripts as for the 32B release. First audio: one user, `client_example.py`, median of 6. The 32B column repeats the numbers published for the 32B builds.</sub>\n\n## Quick start\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/tag\nSIZE=4B bash install.sh          # once: Python 3.12 venv, vLLM 0.30, vLLM-Omni 0.30, plugin, and these weights into ./model\nGPU=0 PORT=8000 bash start.sh    # sees the 4B model and picks its 32 GB config\npython client_example.py --url http://127.0.0.1:8000\n```\n\nFull instructions, the realtime protocol, zero-shot voice cloning and Live mode: [tag/README.md](https://github.com/adventists-ai/sophon-realtime/blob/main/tag/README.md).\n\n## Layout\n`config.json` · `thinker/` (4B, bf16), `talker/` (tag-tts), `voices/`\n\nLicense: Apache-2.0; see `NOTICE` for the sources of the bundled weights. **Only clone your own voice or a voice you have permission to use.**\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 33,
+      "topic_scores": {
+        "speech_models": 32
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: voice cloning, speech-to-speech, full duplex speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "adventists-ai/Sophon-Realtime-v1",
+      "author": "adventists-ai",
+      "created_at": "2026-11-07",
+      "last_modified": "2026-11-24",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "vllm",
+        "onnx",
+        "safetensors",
+        "sophon_realtime",
+        "sophon-realtime",
+        "full-duplex",
+        "speech-to-speech",
+        "voice-agent",
+        "paralinguistics",
+        "expressive-speech",
+        "duplexjev",
+        "audio-to-audio",
+        "zh",
+        "en",
+        "arxiv:2609.21967",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 259,
+      "trending_score": 0.0,
+      "library_name": "vllm",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/adventists-ai/Sophon-Realtime-v1",
+      "card_text": "---\nlicense: apache-2.0\nlanguage:\n- zh\n- en\npipeline_tag: audio-to-audio\ntags:\n- sophon-realtime\n- full-duplex\n- speech-to-speech\n- voice-agent\n- paralinguistics\n- expressive-speech\n- duplexjev\nlibrary_name: vllm\n---\n> **No GPU?** [Talk to it in your browser on Hugging Face Spaces](https://huggingface.co/spaces/adventists-ai/Sophon-Realtime) (no sign-up), or use the hosted API: [sign up](https://api.adventists.ai/console/) and get 3 hours of free voice chat (OpenAI Realtime-compatible, [docs](https://api.adventists.ai/console/docs)).\n\n\n\n<p align=\"center\"><img src=\"assets/banner_v1_en.png\" alt=\"Sophon-Realtime v1\" width=\"100%\"></p>\n\n<h1 align=\"center\">Sophon-Realtime v1</h1>\n\n<p align=\"center\"><a href=\"README_CN.md\">中文</a></p>\n\n**An open full-duplex voice model family that hears your tone and speaks with one.** Adventists AI · Apache-2.0 · **Recommended: [Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag)** · [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) · [Try it online](https://huggingface.co/spaces/adventists-ai/Sophon-Realtime) · [GitHub](https://github.com/adventists-ai/sophon-realtime)\n\nTalking to it feels like a phone call with a person: it listens the whole time you talk, picks up as soon as you stop, and stops the moment you cut in. It hears *how* you say things (hesitation, emphasis, sarcasm, laughter, sighs) and answers with tone of its own: it laughs, sighs and clears its throat when the conversation calls for it.\n\nThis is the home page of the Sophon-Realtime v1 family. **Three builds share one brain** (the same 32B model listens, decides when to take the turn and writes the reply); they differ only in how the reply becomes sound. **Start with Tag: this repository holds the 32B-Tag weights** (byte-identical to [Sophon-Realtime-32B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag)), so you can download and serve the recommended build straight from here.\n\n<p align=\"center\"><img src=\"https://raw.githubusercontent.com/adventists-ai/sophon-realtime/main/docs/assets/bench/family_glance_en.png\" width=\"100%\" alt=\"Sophon-Realtime family at a glance\"></p>\n\n## Three builds: which one?\n\n| | **[Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag) (recommended)** | **[Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash)** | **[E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E)** |\n|---|---|---|---|\n| How it speaks | the brain writes the reply with sound tags; an expressive speech model performs them | the same tagged reply, spoken by a lighter, faster speech model | a compact talker (about 350M parameters) generates continuous voice vectors directly, no speech tokens |\n| Best for | expressive voice: companions, characters, demos | speed and scale: customer service, in-car, many users per GPU | expressive voice with the fastest first audio |\n| Non-verbal sounds (NVV-SuperBench, zh / en) | **0.86 / 0.80** | 0.77 / 0.63 | 0.85 / 0.75 |\n| First audio, one user | ~0.6 s | 0.31 s | **~0.25 s** |\n| Users per 80 GB GPU (recommended) | 16 | **40** | 16 |\n| GPUs | **1** | **1** | **1** |\n| Serving | vLLM-Omni, one command | vLLM-Omni, one command | own engine or vLLM-Omni, one command |\n\nPick **Tag** if you want the voice to act; pick **Flash** if users per GPU matter most; pick **E2E** for the fastest first audio with a voice that still laughs and sighs. Tag and Flash share the same APIs, so you can switch later; E2E runs on its own engine or, since 1.1.4, on vLLM-Omni with the same APIs as Tag and Flash.\n\n## Highlights\n\n- **VoiceBench 82.8 and Big Bench Audio 81.8%: the strongest brain among open full-duplex models.** #1 among open full-duplex models on both; level with GPT-4o-mini-Audio on VoiceBench. All three builds share this brain.\n- **Paralinguistic understanding 48.6, #1 overall: it hears your tone.** Ahead of Gemini 3.8 Flash (46.9) and Qwen3-Omni (44.6) on LISTEN, StressTest and MSPB. Its ears are DuplexJev, our open speech-decision model.\n- **NVV-SuperBench 0.86 (Chinese) and 0.80 (English) with the Tag build: it speaks with tone.** The model decides when to laugh, sigh, breathe or clear its throat, and the voice performs it instead of reading the tag aloud.\n- **Fast: first audio in about 0.25 s with E2E and 0.31 s with Flash.** It drafts its reply while you talk; when you cut in, it stops and answers your new question.\n- **Full-Duplex-Bench v3 tool calling: Pass@1 48%, ahead of Grok (43%), with a 100% response rate: it gets work done.** [Live mode](https://github.com/adventists-ai/sophon-realtime/blob/main/live/README.md) is compatible with the OpenAI GPT-Live interface and lets it work with a larger backend model. Every reply comes with an auditable transcript.\n- **One 80 GB GPU for every build, one command.** Tag and Flash are served by vLLM-Omni; up to 16 (Tag, E2E) or 40 (Flash) concurrent users per GPU. Apache-2.0 code and weights, free for commercial use.\n\n## Quick start (Tag)\n\nQuickest:\n\n```bash\npip install \"sophon-realtime[trt]\"   # Python 3.12, Linux, CUDA 13; keep [trt]: without TensorRT the voice is ~3x slower under load\nsophon-realtime serve           # downloads the Tag weights (~42 GB) on first run, then serves on port 8000\n```\n\nOr download the weights from this repository:\n\n```bash\nhf download adventists-ai/Sophon-Realtime-v1 --local-dir Sophon-Realtime-32B-Tag   # ~45 GB: thinker/, talker/, voices/, config.json\n```\n\nOr use the one-command scripts (isolated environment):\n\n```bash\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/tag\nbash install.sh                 # venv + vLLM-Omni + plugin, and downloads the Tag weights (~42 GB)\nGPU=0 PORT=8000 bash start.sh   # first start 15–20 min, later 5–8 min\npython client_example.py --wav my_question.wav --lang en --voice ryan_en\n```\n\n- APIs: `ws://HOST:8000/v1/realtime` (full duplex: turn-taking, barge-in, back-channels) and `POST /v1/chat/completions` (audio in, text + audio out).\n- Flash works the same way; see the [Flash page](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash). To just try it, talk to it on [Hugging Face Spaces](https://huggingface.co/spaces/adventists-ai/Sophon-Realtime).\n\n## Live mode: a drop-in for OpenAI GPT-Live\n\n[`live/`](https://github.com/adventists-ai/sophon-realtime/blob/main/live/README.md) in the GitHub repository is a gateway that speaks the OpenAI GPT-Live protocol in front of a Tag or Flash engine: GPT-Live clients switch by changing the URL and key. Sophon keeps the voice; when a request needs a lookup or an action it says a short \"Let me check that\", hands the task to your backend and speaks the result in its own words. A larger model can also run the back office: with DeepSeek V4 Pro, Big Bench Audio rises from 81.2 to about 83.\n\nTo start it, run one more command next to a Tag or Flash engine started with the one-command scripts:\n\n```bash\ncd sophon-realtime/live && BUILD=tag PORT=8000 LIVE_PORT=8780 bash start_live.sh   # GPT-Live clients: ws://HOST:8780/v1/live/sessions\n```\n\n## Benchmark details\n\n### Conversation: VoiceBench (official evaluators, gpt-4o-mini judge)\n\n| model | full-duplex | open weights | overall |\n|---|:-:|:-:|:-:|\n| GPT-4o-Audio | — | — | 86.8 |\n| **Sophon-Realtime v1** | ✅ | ✅ | **82.8** |\n| GPT-4o-mini-Audio | — | — | 82.8 |\n| MiniCPM-o 4.5 | ✅ | ✅ | 76.1 |\n| MiniCPM-o 2.6 | ✅ | ✅ | 71.2 |\n| Freeze-Omni | ✅ | ✅ | 55.2 |\n| NemotronLabs VoiceChat | ✅ | ✅ | 55.1 |\n| PersonaPlex | ✅ | ✅ | 30.6 |\n| Moshi | ✅ | ✅ | 29.5 |\n\n<sub>AlpacaEval uses the 199-question standard subset. Other scores come from the VoiceBench leaderboard and from Table 3 of the NemotronLabs VoiceChat paper (arXiv:2609.21967); the MiniCPM-o 4.5 score there is from an independent evaluation.</sub>\n\n### Spoken reasoning: Big Bench Audio\n\n1,000 spoken reasoning questions, graded on what the model actually says.\n\n| model | open weights | accuracy |\n|---|:-:|:-:|\n| GPT-Live-1 | — | 90% |\n| **Sophon-Realtime v1** | ✅ | **81.8%** |\n| Raon SpeechChat | ✅ | 58% |\n| Freeze-Omni | ✅ | 33% |\n| PersonaPlex | ✅ | 19% |\n| Moshi | ✅ | 4% |\n\n<sub>Sophon: self-run, with spoken answers transcribed and judged by gpt-4.1. Others: Artificial Analysis leaderboard.</sub>\n\n### Tool calling: Full-Duplex-Bench v3\n\nDisfluent real human speech with multi-step tool calls. 100 tasks, judged by GPT-4o.\n\n| model | open weights | Pass@1 ↑ | responds when it should ↑ |\n|---|:-:|:-:|:-:|\n| GPT-Realtime | — | 60% | 96% |\n| Gemini Live 3.1 | — | 54% | — |\n| **Sophon-Realtime** | ✅ | **48%** | **100%** |\n| cascaded pipeline | — | 45% | — |\n| Grok | — | 43% | — |\n| Ultravox v0.7 | ✅ | 41% | — |\n\n<sub>Sophon: best of several runs. Others: official Full-Duplex-Bench v3 results.</sub>\n\n### Hearing tone: paralinguistic understanding\n\nSophon-Realtime listens with [DuplexJev](https://www.modelscope.cn/models/AdventistsAI/DuplexJev-32B-Para). These benchmarks test emotion, sarcasm, stress and intonation.\n\n| model | LISTEN (4 tasks) + StressTest + MSPB, combined |\n|---|:-:|\n| **DuplexJev (Sophon-Realtime's ears)** | **48.6** |\n| Gemini 3.8 Flash | 46.9 |\n| Qwen3-Omni | 44.6 |\n\n### Speaking with tone: NVV-SuperBench\n\nChecks whether the laughs, coughs, sighs and breaths a reply calls for actually show up in the audio. Official scripts, 50 items per category, judged by Gemini 3 Flash; higher F1 is better.\n\n| model | Chinese | English |\n|---|:-:|:-:|\n| Sophon-Realtime-32B-Tag | **0.86** | **0.80** |\n| Sophon-Realtime-32B-Flash | 0.77 | 0.63 |\n| Sophon-Realtime-32B-E2E | 0.85 | 0.75 |\n\nAll three builds speak the same tagged reply texts; only the voice differs.\n\n## How it works\n\n- **Listens continuously.** At each pause, the same model decides in a single token whether you've finished, are still talking, are back-channeling or are thinking.\n- **Drafts early, speaks on time.** A reply is drafted from your first pause and released the moment the model decides it's its turn. If you keep talking, the draft is dropped before you hear it.\n- **Writes how to say it, not just what.** The brain marks where to laugh, sigh, breathe, cough or stress a word; All three builds perform these marks and never read them aloud.\n- **Text half a step ahead, voice in step.** Text and voice stream together, so every reply has a transcript for audits, tools and larger backend models.\n- **Remembers what you actually heard.** History keeps the real audio of both sides. When you interrupt, only the part you heard is kept.\n- **E2E: speech as continuous vectors.** In the E2E build a compact talker (about 350M parameters) reads the tagged reply while it is still being written and generates continuous voice vectors directly, with no speech tokens in between; a 2-step decoder turns them into sound. First audio comes in about 0.25 s on one GPU. See the [E2E page](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E).\n\n## Fine-tuning\n\nFine-tune the thinker's LLM backbone with LoRA in ms-swift to change persona, tone, domain knowledge and tool use. The audio encoder and the voice stay as released, and turn-taking is not affected. Training continues the bundled tag LoRA (`adapters/tag`), so laughter, coughs and other sound tags are kept. One 80 GB GPU is enough.\n\n```bash\npip install \"ms-swift>=4.6\"\ngit clone https://github.com/adventists-ai/sophon-realtime && cd sophon-realtime/finetune\nmodelscope download --model AdventistsAI/Sophon-Realtime-v1 --include 'base/*' 'adapters/*' --local_dir Sophon-Realtime-v1\npython -m sophon_swift.adapters to-swift Sophon-Realtime-v1/adapters/tag tag_swift\nswift sft --custom_register_path sophon_swift/swift_register.py \\\n  --model Sophon-Realtime-v1 --adapters tag_swift --tuner_type lora \\\n  --dataset my_data.jsonl --learning_rate 5e-5 --num_train_epochs 2 \\\n  --gradient_accumulation_steps 8 --gradient_checkpointing true --output_dir output\n```\n\nData format, multi-turn and tool calls, export, serving and regression checks: see [finetune/](https://github.com/adventists-ai/sophon-realtime/tree/main/finetune) in the GitHub repository.\n\n## Files\n\nThis repository holds the **32B-Tag weights** (`thinker/`, `talker/`, `voices/`, `config.json`), byte-identical to [Sophon-Realtime-32B-Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag). The thinker base (`base/`) and tag-writing LoRA (`adapters/`) used for fine-tuning, and the first E2E preview weights, are in the [ModelScope repository](https://www.modelscope.cn/models/AdventistsAI/Sophon-Realtime-v1). Flash and E2E have their own pages: [Tag](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Tag), [Flash](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-Flash) or [E2E](https://huggingface.co/adventists-ai/Sophon-Realtime-32B-E2E) page.\n\n## License\n\nCode and weights are released under Apache-2.0. Third-party components keep their own licences; see NOTICE.\n\n## Contact\n\nBusiness enquiries: jiejin@adventists.ai\n",
+      "arxiv_ids": [
+        "2609.21967"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 30,
+      "topic_scores": {
+        "speech_models": 26
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech, full duplex speech",
+        "model card links an arXiv paper",
+        "declares license apache-2.0",
+        "community likes 259"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Evan-Lin/Crossfeed-Unison",
+      "author": "Evan-Lin",
+      "created_at": "2026-11-24",
+      "last_modified": "2026-11-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "qwen2_5_omni",
+        "audio",
+        "text-to-audio",
+        "text-to-speech",
+        "arxiv:2605.31530",
+        "arxiv:2503.20215",
+        "base_model:Qwen/Qwen2.5-Omni-7B",
+        "base_model:finetune:Qwen/Qwen2.5-Omni-7B",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/Evan-Lin/Crossfeed-Unison",
+      "card_text": "",
+      "arxiv_ids": [
+        "2605.31530",
+        "2503.20215"
+      ],
+      "datasets": [],
+      "base_models": [
+        "Qwen/Qwen2.5-Omni-7B",
+        "jac22/UNISON"
+      ],
+      "variants": [],
+      "score": 27,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "audio_understanding_reasoning": 10,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Audio Understanding & Reasoning",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Audio Understanding & Reasoning: audio-text",
+        "model card links an arXiv paper",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "StudioYebisu-ship-it/Drama-3-Japanese-speech-cpp-gguf",
+      "author": "StudioYebisu-ship-it",
+      "created_at": "2026-11-23",
+      "last_modified": "2026-11-24",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "speech.cpp",
+        "gguf",
+        "ggml",
+        "audio.cpp",
+        "drama3",
+        "tts",
+        "speech",
+        "voice-cloning",
+        "japanese",
+        "emotional-speech-generation",
+        "imatrix",
+        "text-to-speech",
+        "ja",
+        "base_model:Aratako/Drama-3-Japanese",
+        "base_model:quantized:Aratako/Drama-3-Japanese",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 9,
+      "trending_score": 0.0,
+      "library_name": "speech.cpp",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/StudioYebisu-ship-it/Drama-3-Japanese-speech-cpp-gguf",
+      "card_text": "---\nlicense: other\nlicense_name: fish-audio-community-license-1.0\nlicense_link: LICENSE\nlanguage:\n  - ja\npipeline_tag: text-to-speech\nlibrary_name: speech.cpp\nbase_model:\n  - Aratako/Drama-3-Japanese\nbase_model_relation: quantized\ntags:\n  - gguf\n  - ggml\n  - speech.cpp\n  - audio.cpp\n  - drama3\n  - tts\n  - speech\n  - voice-cloning\n  - japanese\n  - emotional-speech-generation\n  - imatrix\n---\n\n# Drama-3-Japanese GGUF for speech.cpp\n\nBuilt with Fish Audio.\n\nStratified Japanese `imatrix`-calibrated GGUF quantizations of [Aratako/Drama-3-Japanese](https://huggingface.co/Aratako/Drama-3-Japanese) (based on `fishaudio/s2-pro`), ready for local zero-shot voice cloning and expressive Japanese TTS in [`speech.cpp`](https://github.com/nyosegawa/speech.cpp) and [`audio.cpp`](https://github.com/JarodMica/audio.cpp).\n\n---\n\n## Quick Model Comparison\n\n| Model File | Size | Quantization | Recommended Runtime | Est. Free VRAM (+`~2.40 GiB` reserve) |\n| --- | --- | --- | --- | --- |\n| `Drama-35B-A3B-Japanese-v3-Q4_K.gguf` | `20.82 GiB` (`22.36 GB`) | Hybrid `Q4_K` experts + `Q8_0`/`F16`/`F32` | Official `speech.cpp` (`v0.11.2+`) Vulkan / CPU | `~23.21 GiB` (full GPU) |\n| `Drama-35B-A3B-Japanese-v3-Q5_K.gguf` | `24.57 GiB` (`26.39 GB`) | Hybrid `Q5_K` experts + `Q8_0`/`F16`/`F32` | Official `speech.cpp` (`v0.11.2+`) Vulkan / CPU | `~26.96 GiB` (full GPU) |\n| `Drama-35B-A3B-Japanese-v3-small-IQ3_XXS.gguf` | `9.09 GiB` (`9.76 GB`) | `IQ3_XXS` experts + `Q8_0`/`F16`/`F32` | `speech.cpp` (`v0.11.2` + `drama3-speechcpp-fast.patch`) CUDA / Vulkan | `~11.48 GiB` (16–24 GB GPUs) |\n| `drama3-japanese-small-IQ3_XXS-audiocpp.gguf` | `9.28 GiB` (`9.96 GB`) | `IQ3_XXS` (`audio.cpp` layout) | `audio.cpp` CUDA | `~11–12 GiB` |\n\n---\n\n## Audio Samples\n\nAll samples are unmodified `44.1 kHz` PCM WAV outputs synthesized with `--voice none` (no real-speaker voice cloning).\n\n| Model / Runtime | Prompt | Audio |\n| --- | --- | --- |\n| `small-IQ3_XXS` (RTX 4090 CUDA Fast Patch, `12.68 s`, `RTFx 4.18`) | 雨が降り出した夜道で、傘を広げた瞬間に遠くから踏切の音が聞こえた。少し迷ってから、私はゆっくりと駅の方へ歩き出した。 | <audio controls preload=\"none\" src=\"https://huggingface.co/StudioYebisu-ship-it/Drama-3-Japanese-speech-cpp-gguf/resolve/main/samples/01_small_iq3_xxs_narration_cuda_fast.wav\"></audio> |\n| `small-IQ3_XXS` (CUDA, `8.31 s`, Whisper) | [声帯をほとんど鳴らさず、すぐ耳元で息だけの小さな囁き声で話す若い女性。ASMRのように吐息が強く混じる親密な囁き。] [耳元で][囁き]ねえ、少しだけ声を落として。誰にも聞こえないように、今の話を続けよう。 | <audio controls preload=\"none\" src=\"https://huggingface.co/StudioYebisu-ship-it/Drama-3-Japanese-speech-cpp-gguf/resolve/main/samples/02_small_iq3_xxs_whisper_cuda.wav\"></audio> |\n| `Full Hybrid Q4_K` (Official `speech.cpp v0.11.2` Vulkan, `11.66 s`, `RTFx 1.91`) | [落ち着いた25歳の女性。親密な相手に耳元で優しく囁く。] [囁き]ねえ、そんなに急がないで。[吐息]ちゃんと、こっち見ててね。 | <audio controls preload=\"none\" src=\"https://huggingface.co/StudioYebisu-ship-it/Drama-3-Japanese-speech-cpp-gguf/resolve/main/samples/03_full_q4k_whisper_vulkan.wav\"></audio> |\n| `Full Hybrid Q5_K` (Official `speech.cpp v0.11.2` Vulkan, `6.08 s`, `RTFx 1.86`) | 深夜の図書館は静かで、ページをめくる音だけが規則正しく響いていた。 | <audio controls preload=\"none\" src=\"https://huggingface.co/StudioYebisu-ship-it/Drama-3-Japanese-speech-cpp-gguf/resolve/main/samples/04_full_q5k_narration_vulkan.wav\"></audio> |\n\n---\n\n## Quick Start\n\n### A. Full `Q4_K` / `Q5_K` on Official `speech.cpp` (`v0.11.2+`, Vulkan / CPU)\n\nKeep the matching `.gguf.json` sidecar beside the `.gguf` file (`max_text_tokens: 8192`, `voice_codec: 2cf2ec268a087bd2ad91bfbb6796b0429fb03a73cdb8fd07f445d503e9a14d37`). On Vulkan, export the three `GGML_VK_DISABLE_*` flags:\n\n```bash\nexport GGML_VK_DISABLE_F16=1\nexport GGML_VK_DISABLE_COOPMAT=1\nexport GGML_VK_DISABLE_COOPMAT2=1\n\n# 1. Extract a reusable voice prompt\n./build/speech voice Drama-35B-A3B-Japanese-v3-Q4_K.gguf ref.wav \\\n  --transcript \"参照音声の正確な書き起こし\" \\\n  speaker.voice.gguf\n\n# 2. Synthesize Japanese speech on Vulkan\n./build/speech tts Drama-35B-A3B-Japanese-v3-Q4_K.gguf \\\n  --device Vulkan0 \\\n  --voice speaker.voice.gguf \\\n  --seed 42 \\\n  -o out.wav \\\n  \"深夜の図書館は静かで、ページをめくる音だけが規則正しく響いていた。\"\n\n# 3. Optional local server\n./build/speech serve Drama-35B-A3B-Japanese-v3-Q4_K.gguf \\\n  --device Vulkan0 \\\n  --host 127.0.0.1 \\\n  --port 8080\n```\n\n### B. 12–24 GB CUDA GPUs (`Drama-35B-A3B-Japanese-v3-small-IQ3_XXS.gguf` + Fast CUDA Patch)\n\n`drama3-speechcpp-fast.patch` targets `speech.cpp v0.11.2` and delivers ~`2.96×` aggregate CUDA speedup (`drama3-small-speechcpp.patch` provides the minimal `IQ3_XXS` compatibility patch without the CUDA speed optimizations):\n\n```bash\ngit clone https://github.com/nyosegawa/speech.cpp\ncd speech.cpp\ngit submodule update --init --recursive\ngit apply /path/to/drama3-speechcpp-fast.patch\n\ncmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=ON -DGGML_CUDA_GRAPHS=ON\ncmake --build build --target speech speech-cli -j\n\nSPEECH_DRAMA3_MAX_PAUSE_FRAMES=18 ./build/speech tts \\\n  Drama-35B-A3B-Japanese-v3-small-IQ3_XXS.gguf \\\n  --experts-on-cpu=false --voice none --seed 42 \\\n  -o small_out.wav \\\n  \"深夜の図書館は静かで、ページをめくる音だけが規則正しく響いていた。\"\n```\n\n### C. `audio.cpp` (`drama3-japanese-small-IQ3_XXS-audiocpp.gguf`)\n\n```bash\nAUDIOCPP_DRAMA3_MAX_PAUSE_FRAMES=18 \\\nAUDIOCPP_DRAMA3_SILENCE_CODES=silence_codes.json \\\n./audiocpp_cli \\\n  --task tts \\\n  --family fish_drama3 \\\n  --model drama3-japanese-small-IQ3_XXS-audiocpp.gguf \\\n  --backend cuda \\\n  --device 0 \\\n  --session-option fish_drama3.cpu_expert_layers=0 \\\n  --seed 42 --temperature 0.8 --top-k 30 --top-p 0.85 \\\n  --text \"深夜の図書館は静かで、ページをめくる音だけが規則正しく響いていた。\" \\\n  --out small_audiocpp.wav\n```\n\n---\n\n## Important Backend & VRAM Notes\n\n- **Use Vulkan or CPU for Full `Q4_K` / `Q5_K` (Do Not Use CUDA):** Upstream `ggml-cuda` stores `block_q8_1.ds` in FP16, which overflows on `ffn_down_exps` activations and triggers `not finite numbers` assertions on CUDA. Run Full `Q4_K` / `Q5_K` on Vulkan (with all three `GGML_VK_DISABLE_*=1` flags) or CPU (`block_q8_K`), and use `Drama-35B-A3B-Japanese-v3-small-IQ3_XXS.gguf` for CUDA GPUs.\n- **VRAM Placement Overhead (`placement.cpp`):** `speech.cpp` adds `~2.40 GiB` of compute/KV reserve (`kComputeBytes = 1536 MiB` + runtime overhead) to weight bytes (`~23.21 GiB` for `Q4_K`, `~26.96 GiB` for `Q5_K`, `~11.48 GiB` for `small-IQ3_XXS`). On desktop 24 GB Windows GPUs with ~19–21 GiB free VRAM, `Q4_K` spills ~6–10 expert layers (`~0.42 GiB`/layer) to CPU rather than fitting all layers on GPU.\n- **Voice Cloning & Stage/Emotion Tags:** Reference cloning (`--voice speaker.voice.gguf`) produces noticeably cleaner, more consistent prosody than text-only voice design, especially on whispered or multi-clause prompts. Inline emotion and stage tags follow [TAG_LIST.md](https://huggingface.co/Aratako/Drama-3-Japanese/blob/main/TAG_LIST.md).\n\n---\n\n## Speedup Highlight (`drama3-speechcpp-fast.patch`, RTX 4090 / CUDA 12.8)\n\nMeasured with `Drama-35B-A3B-Japanese-v3-small-IQ3_XXS.gguf`, `--experts-on-cpu=false`, and delta VRAM above pre-run idle (`14.697 GiB` desktop peak):\n\n| Case | Base (`RTFx` / Audio / Wall / TTFA / ΔVRAM) | Fast (`RTFx` / Audio / Wall / TTFA / ΔVRAM) | Speedup / ΔVRAM Saved |\n| --- | --- | --- | --- |\n| `narration` | `1.19` (`5.712 s` / `4.817 s`, `0.403 s`, `+11.63 GiB`) | `3.17` (`2.601 s` / `0.820 s`, `0.280 s`, `+10.87 GiB`)* | `2.68×` / `-0.76 GiB` |\n| `clone_jvnv` | `1.26` (`6.223 s` / `4.948 s`, `0.418 s`, `+11.69 GiB`) | `3.68` (`5.759 s` / `1.564 s`, `0.292 s`, `+10.89 GiB`) | `2.93×` / `-0.81 GiB` |\n| `pause_clamp` | `1.40` (`13.235 s` / `9.434 s`, `0.321 s`, `+11.60 GiB`) | `4.18` (`12.678 s` / `3.036 s`, `0.283 s`, `+10.90 GiB`) | `2.98×` / `-0.70 GiB` |\n| **Aggregate** | `1.31` (`25.170 s` audio total, max `+11.69 GiB`) | **`3.88`** (`21.038 s` audio total, max **`+10.90 GiB`**) | **`2.96×`** / **`-0.79 GiB`** |\n\n*`seed=42` diverged (`2.601 s` vs `5.712 s`). Spot checks: greedy `--top-k 1` (`6.55 s` in `5.674 s`, `RTFx 1.2` -> `7.06 s` in `1.976 s`, `RTFx 3.6`), `seed=43` (`6.50 s` in `1.942 s`, `RTFx 3.3`, `TTFA 0.342 s`), post-hardening GPU pause-clamp (`2.60 s` in `0.923 s`, `RTFx 2.8`, `complete`), CPU fallback `\"テストです。\"` (`0.84 s` in `3.852 s`, `complete`). Table numbers were recorded on the pre-hardening build; after hardening, `drama3-speechcpp-fast.patch` was rebuilt and spot-checked, while `drama3-small-speechcpp.patch` was checked cleanly via `git apply --check` on `speech.cpp v0.11.2`.\n\n---\n\n<details>\n<summary>All Repository Files & SHA-256 Checksums</summary>\n\nVerify downloads locally against [`SHA256SUMS.txt`](SHA256SUMS.txt) and [`SMALL_SHA256SUMS.txt`](SMALL_SHA256SUMS.txt) (`sha256sum -c SHA256SUMS.txt SMALL_SHA256SUMS.txt`):\n\n| File | Size | SHA-256 / Notes |\n| --- | --- | --- |\n| `Drama-35B-A3B-Japanese-v3-Q4_K.gguf` | `20.82 GiB` (`22,359,473,504` B) | `f624da9d84a5f133f2b0894aa8728ba8c560873d90c019a2bca2321daa8482dd` |\n| `Drama-35B-A3B-Japanese-v3-Q5_K.gguf` | `24.57 GiB` (`26,386,005,344` B) | `fde34cca2062e364e1cc2eb89471faf3d3f76a02edcc13972e189d60e30aa28d` |\n| `Drama-35B-A3B-Japanese-v3-small-IQ3_XXS.gguf` | `9.09 GiB` (`9,762,406,560` B) | `98edad9311a64ea07524f54f24d6d6db77055a3fe7233f24d3bd4351626d9338` |\n| `drama3-japanese-small-IQ3_XXS-audiocpp.gguf` | `9.28 GiB` (`9,962,579,296` B) | `b63be0049b847393f8859d8c8ea860e4d72b276b5b42a9a15548ab11b0ab9e05` |\n| `Drama-35B-A3B-Japanese-v3-Q4_K.gguf.json` | `1,629` B | `eb2fd5c62cf0bc32bcca1977c5a5685c50b8baeacc3cb95e093a19f973487db7` |\n| `Drama-35B-A3B-Japanese-v3-Q5_K.gguf.json` | `1,629` B | `efc6346823e4ace0ac8cfe8d3d31600de733a85c18b4748fe77dbecc27abcdf1` |\n| `Drama-35B-A3B-Japanese-v3-small-IQ3_XXS.gguf.json` | `1,347` B | Sidecar metadata (`speech.cpp` `small` preset) |\n| `drama3-speechcpp-fast.patch` | `65,346` B | `1d9c7c25928f1cc9000dd7bb5ff258652911d3cf1537a5847605281ab761e65f` |\n| `drama3-small-speechcpp.patch` | `27,184` B | `b25a15d62b76e064b6c2270fcfac76f4307ca35cb9e2b13f4feaee1a1a1b3059` |\n| `silence_codes.json` | `1,247` B | `3b07eb0fc1c09c7b1cbbcb061fa5290b9a8b0a84b7f23d92a69d7b6b5f7803b3` |\n| `LICENSE-SPEECH-CPP` | `1,067` B | `688f8aca0abe167966d277ed00bd594a5a51b028a4fbc1516ff9de7ef05c521a` |\n| `LICENSE` | Upstream text | Fish Audio Community License 1.0 |\n| `NOTICE` | `4,664` B | Required license notices & attribution boundaries |\n| `TAG_LIST.md` | Tag reference | Expressive & stage tags from `Aratako/Drama-3-Japanese` |\n| `SHA256SUMS.txt` | `418` B | Checksums for Full `Q4_K` / `Q5_K` GGUFs & `.gguf.json` |\n| `SMALL_SHA256SUMS.txt` | Small sums | Checksums for `small` GGUFs, patches, `LICENSE-SPEECH-CPP`, `silence_codes.json` |\n| `samples/01_small_iq3_xxs_narration_cuda_fast.wav` | `1,118,252` B | `f53e63ee51f73d82d52bc9bf81cfdf3a651e8e6be8daab04c7c2ebffaae5472c` |\n| `samples/02_small_iq3_xxs_whisper_cuda.wav` | `733,228` B | `f8884031390c0143335258e59d7123b5a22b0491c3f5a1536bf8937f36195e10` |\n| `samples/03_full_q4k_whisper_vulkan.wav` | `1,028,140` B | `6069101ad2eef61a329134ee371c37b1bdc93cc08df142b5c3ef34a567c6634a` |\n| `samples/04_full_q5k_narration_vulkan.wav` | `536,620` B | `0ef0bbb66b04d6b42c18bd8ecb463e43e83120671cb7b19e0653e5d9c986831e` |\n\n</details>\n\n<details>\n<summary>Conversion, Tensor Precision & 9-Run Verification Logs</summary>\n\n### Stratified Japanese `imatrix` Calibration\n\n- Calibrated in **BF16** across **300 stratified Japanese sequences** drawn from JSUT and JVNV (`10,240` expert layers/groups; `840` low-hit entries `<8` shrunk toward layer mean; `391` zero-hit entries smoothed).\n- Captured extreme activation dynamic range in `ffn_down_exps` (channel-wise `mean(x²)` up to `6.77×10⁸`), protecting MoE routing and sensitive non-expert tensors during quantization.\n\n### Hybrid Tensor Precision Breakdown (`1,531` tensors/file in Full GGUFs)\n\n- **Routed Experts (`Q4_K` `18.12 GB` `file_type=14` / `Q5_K` `22.15 GB` `file_type=16`):** Routed MoE expert FFN projections.\n- **`Q8_0` (`3.34 GB`):** Attention (`attn_*`), SSM linear/output projections (`ssm_in_qkv`, `ssm_in_z`, `ssm_out`), embeddings, `4,097`-row semantic `output` head, shared experts (`ffn_*_shexp`), and adapter layers (`ad.*`).\n- **`F16` (`781.8 MB`):** Audio codec convolutions and matrices.\n- **`F32` (`107.1 MB`):** Layer norms, MoE routers, `ffn_gate_inp_shexp`, SSM state/gate parameters (`ssm_in_a`, `ssm_in_b`, `ssm_conv1d`, `ssm_dt_bias`, `ssm_a_log`, `ssm_norm`), codec codebooks, and biases.\n\n### Unpatched `speech.cpp v0.11.2` Verification (RTX PRO 6000 Blackwell `96 GB`, 9/9 `complete`)\n\nAll 9 runs produced finite `44100 Hz` PCM with `clip_pct == 0.0` (`--device Vulkan1` with all three `GGML_VK_DISABLE_*=1` flags, plus CPU fallback check):\n\n| Model | Case | Audio | Wall | `RTFx` | `TTFA` | Peak VRAM (+Delta) | Notes |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| `Q4_K` | `narration` (`Vulkan1`) | `6.22 s` | `3.288 s` | `1.89` | `0.608 s` | `23.125 GiB` (`+23.065 GiB`) | `RMS 0.05690`, clean delivery |\n| `Q4_K` | `design_whisper` (`Vulkan1`) | `11.66 s` | `6.105 s` | `1.91` | `0.762 s` | `23.127 GiB` (`+23.067 GiB`) | `RMS 0.02491`, spoke both clauses cleanly |\n| `Q4_K` | `clone_jvnv` (`Vulkan1`) | `6.50 s` | `3.950 s` | `1.65` | `1.137 s` | `23.163 GiB` (`+23.104 GiB`) | `RMS 0.02279` |\n| `Q4_K` | `clone_jvnv_expressive` (`Vulkan1`) | `3.34 s` | `2.101 s` | `1.59` | `0.705 s` | `23.158 GiB` (`+23.099 GiB`) | `RMS 0.02501` |\n| `Q4_K` | `cpu_check` (`CPU`) | `3.76 s` | `16.072 s` | `0.234` | `1.326 s` | — | `RMS 0.14631`, clean CPU fallback |\n| `Q5_K` | `narration` (`Vulkan1`) | `6.08 s` | `3.261 s` | `1.86` | `0.609 s` | `26.875 GiB` (`+26.815 GiB`) | `RMS 0.06255`, clean delivery |\n| `Q5_K` | `design_whisper` (`Vulkan1`) | `16.30 s` | `7.939 s` | `2.05` | `0.578 s` | `26.877 GiB` (`+26.817 GiB`) | `RMS 0.06538`, stopped early before last word (`~5.75 s` internal & `~2.35 s` trailing silence) |\n| `Q5_K` | `clone_jvnv` (`Vulkan1`) | `5.94 s` | `3.402 s` | `1.75` | `0.716 s` | `27.375 GiB` (`+27.315 GiB`) | `RMS 0.02804` |\n| `Q5_K` | `clone_jvnv_expressive` (`Vulkan1`) | `2.97 s` | `2.272 s` | `1.31` | `0.842 s` | See note* | `RMS 0.02987` |\n\n*Between `Q5_K` runs 3 and 4, another process on the host raised idle `GPU1` memory from `61 MiB` to `538 MiB`+.\n\n</details>\n\n---\n\n## License & Use Restrictions\n\n- **Weights & Model Derivatives (`LICENSE`, `NOTICE`):** Governed by the **Fish Audio Community License 1.0** (`Built with Fish Audio.`). Permitted for **non-commercial research and personal use only** (commercial licensing is handled separately by 39 AI, INC.). Use must comply with all applicable laws and the license terms in [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).\n- **Runtime Patches (`LICENSE-SPEECH-CPP`, `NOTICE` §4):** Both `drama3-small-speechcpp.patch` and `drama3-speechcpp-fast.patch` are accompanied by [`LICENSE-SPEECH-CPP`](LICENSE-SPEECH-CPP) (MIT License, `Copyright (c) 2026 Sakasegawa`) **governing the base `speech.cpp` modifications in both patches**, **except** the pause-control `expected_frames()` implementation (`drama3-small-speechcpp.patch` lines 239–273 and `drama3-speechcpp-fast.patch` lines 778–812), which is ported from `pentacoxian-dev/drama3-small-GGUF` (`drama3-small-audiocpp.patch`, derived from Apache-2.0 `audio.cpp`, Copyright 2026 ShugoAI LLC) and is excluded from Sakasegawa's copyright statement (see [`NOTICE`](NOTICE) §4).\n- **Calibration Provenance:** Stratified Japanese `imatrix` statistics were collected from **JSUT** and **JVNV** (`litagin/jvnv_corpus_v1_no_nv`, CC BY-SA 4.0). Only quantized tensor scaling statistics derived from calibration affect the published weights; no corpus audio is redistributed.\n\n---\n\n## Acknowledgments\n\nThis release builds directly on the open-source ecosystem and community contributions of:\n\n- **39 AI, INC. / Fish Audio** — Base architecture and `fishaudio/s2-pro` foundation (`Built with Fish Audio.`)\n- **Aratako** — [`Aratako/Drama-3-Japanese`](https://huggingface.co/Aratako/Drama-3-Japanese) Japanese adaptation and [`TAG_LIST.md`](TAG_LIST.md)\n- **nyosegawa / Sakasegawa** — [`speech.cpp`](https://github.com/nyosegawa/speech.cpp) native GGUF inference engine (MIT)\n- **pentacoxian-dev** — [`drama3-small-GGUF`](https://huggingface.co/pentacoxian-dev) inspiration, `silence_codes.json`, and pause-control `expected_frames()` design\n- **JarodMica & ShugoAI LLC** — [`audio.cpp`](https://github.com/JarodMica/audio.cpp) (Apache-2.0)\n- **ggml-org** — [`ggml`](https://github.com/ggml-org/ggml) tensor and quantization runtime\n- **JSUT Corpus Authors** & **JVNV Corpus Authors / litagin** (`litagin/jvnv_corpus_v1_no_nv`, CC BY-SA 4.0) — Japanese speech corpora used for stratified `imatrix` calibration\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Aratako/Drama-3-Japanese"
+      ],
+      "variants": [],
+      "score": 25,
+      "topic_scores": {
+        "speech_models": 24
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech generation, text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "zhaoyx39/S3-S2ST-4B-Offline",
+      "author": "zhaoyx39",
+      "created_at": "2026-11-23",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "omnidrca2",
+        "speech-to-speech",
+        "translation",
+        "s3-s2st",
+        "offline",
+        "audio-to-audio",
+        "en",
+        "zh",
+        "arxiv:2610.36777",
+        "region:us"
+      ],
+      "downloads": 8,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/zhaoyx39/S3-S2ST-4B-Offline",
+      "card_text": "",
+      "arxiv_ids": [
+        "2610.36777"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 22,
+      "topic_scores": {
+        "speech_models": 20
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech translation, speech-to-speech",
+        "model card links an arXiv paper"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "zhaoyx39/S3-S2ST-4B-Streaming",
+      "author": "zhaoyx39",
+      "created_at": "2026-11-23",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "omnidrca2",
+        "speech-to-speech",
+        "translation",
+        "s3-s2st",
+        "streaming",
+        "audio-to-audio",
+        "en",
+        "zh",
+        "arxiv:2610.36777",
+        "region:us"
+      ],
+      "downloads": 6,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/zhaoyx39/S3-S2ST-4B-Streaming",
+      "card_text": "",
+      "arxiv_ids": [
+        "2610.36777"
+      ],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 22,
+      "topic_scores": {
+        "speech_models": 20
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech translation, speech-to-speech",
+        "model card links an arXiv paper"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "empiriolabsai/canora-dutch",
+      "author": "empiriolabsai",
+      "created_at": "2026-11-20",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "kokoro",
+        "onnx",
+        "style_text_to_speech_2",
+        "text-to-speech",
+        "tts",
+        "canora",
+        "dutch",
+        "speech-synthesis",
+        "transformers.js",
+        "nl",
+        "base_model:hexgrad/Kokoro-82M",
+        "base_model:finetune:hexgrad/Kokoro-82M",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 349,
+      "likes": 1,
+      "trending_score": 0.0,
+      "library_name": "kokoro",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/empiriolabsai/canora-dutch",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "hexgrad/Kokoro-82M"
+      ],
+      "variants": [
+        "empiriolabsai/canora-turkish",
+        "empiriolabsai/canora-korean",
+        "empiriolabsai/canora-polish",
+        "empiriolabsai/canora-german",
+        "empiriolabsai/canora-norwegian",
+        "empiriolabsai/canora-russian",
+        "empiriolabsai/canora-french",
+        "empiriolabsai/canora-spanish"
+      ],
+      "score": 19,
+      "topic_scores": {
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Serkali-sudo/Pocket-TTS-LiteRT-FP16",
+      "author": "Serkali-sudo",
+      "created_at": "2026-11-19",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "pocket-tts",
+        "tflite",
+        "litert",
+        "voice-cloning",
+        "on-device",
+        "text-to-speech",
+        "en",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "es",
+        "nl",
+        "cs",
+        "et",
+        "el",
+        "gu",
+        "id",
+        "ja",
+        "ko",
+        "zh",
+        "fa",
+        "pl",
+        "tr",
+        "cy",
+        "wo",
+        "hi",
+        "mr",
+        "kn",
+        "ta",
+        "ml",
+        "te",
+        "region:us"
+      ],
+      "downloads": 772,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pocket-tts",
+      "license": "unknown",
+      "gated": false,
+      "url": "https://huggingface.co/Serkali-sudo/Pocket-TTS-LiteRT-FP16",
+      "card_text": "---\npipeline_tag: text-to-speech\nlanguage: [en, fr, de, it, pt, es, nl, cs, et, el, gu, id, ja, ko, zh, fa, pl, tr, cy, wo, hi, mr, kn, ta, ml, te]\ntags:\n  - pocket-tts\n  - litert\n  - tflite\n  - voice-cloning\n  - on-device\n---\n\n# Pocket TTS Voice Cloning for LiteRT\n\nThis repository contains **22 Pocket TTS model packs covering 26 languages**, exported to LiteRT for on-device speech synthesis. Each pack can synthesize speech in a voice conditioned on a short reference WAV. The output is mono audio at **24 kHz**.\n\nThe graphs store weights in **FP16** and use **FP32** inputs and outputs. The export notebook checks each graph on LiteRT CPU. Performance depends on the device and checkpoint. The Korean and Welsh packs use larger 24-layer models.\n\n## Languages\n\n| Checkpoints | Languages |\n| --- | --- |\n| Official Kyutai | English, Dutch, French, German, Italian, Portuguese, Spanish |\n| Community language packs | Czech, Estonian, Greek, Gujarati, Indonesian, Japanese, Korean, Mandarin Chinese, Persian, Polish, Turkish, Welsh, Wolof |\n| Shared Indic multilingual pack | English, Hindi, Kannada, Malayalam, Marathi, Tamil, Telugu |\n\nThe January English checkpoint and the newer English checkpoint are available as separate packs. The six Indic language options share one download.\n\n## Choose a pack\n\nOpen `pocket-tts-index.json` to find the pack for your target language. Download the files listed in that pack's `pocket-tts.json`. The manifest also records tensor shapes, text preprocessing rules, source checkpoint information, and SHA-256 checksums.\n\nEach pack includes four `.tflite` graphs for reference-audio encoding, autoregressive generation, and the two Mimi decoding stages. It also includes the tokenizer and the weights used by the host code. The host tokenizes the text, maintains the generation cache, and assembles the audio. The accompanying Colab notebook shows how to run the complete pipeline with a reference WAV.\n\n## Credits and licenses\n\nPocket TTS and the Mimi codec were developed by [Kyutai](https://github.com/kyutai-labs/pocket-tts). The conversion builds on [john-rocky’s LiteRT exporter](https://github.com/john-rocky/LiteRT-Models/tree/main/pockettts). See the `README.md` inside each pack for its original checkpoint, authors, and license. Use reference recordings with the speaker’s permission.",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 18,
+      "topic_scores": {
+        "speech_models": 18
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech synthesis, text-to-speech (pipeline tag), voice cloning"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "batteryphil/VAULT-PRIMAL-VITS-29M",
+      "author": "batteryphil",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "vits",
+        "text-to-audio",
+        "text-to-speech",
+        "tts",
+        "cnn",
+        "hifi-gan",
+        "normalizing-flow",
+        "quantization",
+        "4-bit",
+        "2-bit",
+        "vault",
+        "primal",
+        "en",
+        "base_model:facebook/mms-tts-eng",
+        "base_model:finetune:facebook/mms-tts-eng",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 19,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/batteryphil/VAULT-PRIMAL-VITS-29M",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "facebook/mms-tts-eng"
+      ],
+      "variants": [],
+      "score": 17,
+      "topic_scores": {
+        "generative_music_audio": 14,
+        "speech_models": 2
+      },
+      "matched_topics": [
+        "Generative Music & Audio",
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Generative Music & Audio: text-to-audio",
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag)",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "blaze-voice-ai/vienue-v3-turbo-enhanced",
+      "author": "blaze-voice-ai",
+      "created_at": "2026-10-16",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "vieneu_v3_turbo",
+        "text-to-speech",
+        "voice-cloning",
+        "vietnamese",
+        "vi",
+        "base_model:pnnbao-ump/VieNeu-TTS-v3-Turbo",
+        "base_model:quantized:pnnbao-ump/VieNeu-TTS-v3-Turbo",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 127,
+      "likes": 13,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "apache-2.0",
+      "gated": true,
+      "url": "https://huggingface.co/blaze-voice-ai/vienue-v3-turbo-enhanced",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "pnnbao-ump/VieNeu-TTS-v3-Turbo"
+      ],
+      "variants": [],
+      "score": 16,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0",
+        "community likes 13"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Mikhailo/mova-tts",
+      "author": "Mikhailo",
+      "created_at": "2026-11-21",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mova-tts",
+        "safetensors",
+        "gguf",
+        "qwen2",
+        "ukrainian",
+        "text-to-speech",
+        "voice-cloning",
+        "neutts",
+        "llama.cpp",
+        "uk",
+        "base_model:neuphonic/neutts-air",
+        "base_model:quantized:neuphonic/neutts-air",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "downloads": 253,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mova-tts",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/Mikhailo/mova-tts",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "neuphonic/neutts-air"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Lysandra999/Senik-Voice-Expressive-0.5B",
+      "author": "Lysandra999",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "dense",
+        "senik",
+        "senik-family",
+        "text-to-speech",
+        "voice-cloning",
+        "expressive-tts",
+        "neural-tts",
+        "custom_code",
+        "en",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 28,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Lysandra999/Senik-Voice-Expressive-0.5B",
+      "card_text": "---\r\nlicense: mit\r\nlanguage:\r\n- en\r\ntags:\r\n- senik\r\n- senik-family\r\n- text-to-speech\r\n- voice-cloning\r\n- expressive-tts\r\n- neural-tts\r\n---\r\n\r\n# Senik-Voice-Expressive-0.5B\r\n\r\nHigh-fidelity **44.1 kHz expressive neural TTS** edition for the **Senik AI Family**, authored by **Nikolas Perez**.\r\n\r\n## Highlights\r\n- **Expressive Paralinguistic Control:** Supports inline `[Laughter]`, `[Sigh]`, and `[Breathing]` tags alongside accurate `\"Senik\"` (`Sen-eeek`) pronunciation.\r\n- **Speaker-Locked Voice Cloning:** Supports zero-shot speaker embedding lock (`use_spk_emb=True`) onto Senik's real cloned voice for studio-grade 44.1 kHz synthesis.\r\n- **Verified Audio Samples Included:** `samples/senik_intro.wav`, `samples/senik_laugh.wav`, and `samples/senik_sigh.wav`.\r\n\r\n## Senik AI Family Ecosystem (`Lysandra999`)\r\n- **Flagship 518 MB Edge Brain:** [`Lysandra999/Senik-Quantum-1.7B-GGUF`](https://huggingface.co/Lysandra999/Senik-Quantum-1.7B-GGUF)\r\n- **2B 128K Long-Context Edition:** [`Lysandra999/Senik-Dense-2B-GGUF`](https://huggingface.co/Lysandra999/Senik-Dense-2B-GGUF)\r\n- **0.8B Function-Calling & Agentic Specialist:** [`Lysandra999/Mini-Senik-0.8B-Agent-GGUF`](https://huggingface.co/Lysandra999/Mini-Senik-0.8B-Agent-GGUF)\r\n- **0.3B Ultra-Light Edge Chat:** [`Lysandra999/Mini-Senik-0.3B-GGUF`](https://huggingface.co/Lysandra999/Mini-Senik-0.3B-GGUF)\r\n- **0.3B Smartwatch Decision Router:** [`Lysandra999/Watch-Senik-0.3B-Dec`](https://huggingface.co/Lysandra999/Watch-Senik-0.3B-Dec)\r\n- **Fast Neural Voice (`82M`):** [`Lysandra999/Senik-Voice-82M`](https://huggingface.co/Lysandra999/Senik-Voice-82M)\r\n- **Expressive Neural Voice (`0.5B`, 44.1 kHz):** [`Lysandra999/Senik-Voice-Expressive-0.5B`](https://huggingface.co/Lysandra999/Senik-Voice-Expressive-0.5B)\r\n- **Wake-Word Speech Recognition (`Small`):** [`Lysandra999/Senik-Wake-STT-Small`](https://huggingface.co/Lysandra999/Senik-Wake-STT-Small)\r\n\r\n<!-- SENIK_QUANTUM_SHIELD_START -->\r\n## Proprietary Quantum-Influenced Anti-Abliteration & Integrity Seal\r\n\r\nThis model is part of the **Senik AI Family** by **Nikolas Perez**, protected by our proprietary **Quantum-Influenced Identity Architecture** anchored to live 156-qubit superconducting quantum hardware (**IBM Quantum `ibm_kingston`**, live verification job `dc26eadhdvas73bln6og`, `85.16%` measured macroscopic entanglement).\r\n\r\n- **Built to Resist Abliteration & Hijacking:** Unlike standard open models whose identity can be stripped out in seconds, Senik's architecture binds identity and reasoning together at a proprietary quantum-influenced structural level — forcing catastrophic coherence collapse if an attacker attempts brute-force identity excision.\r\n- **1-Bit Quantum Tamper Seal (`quantum_shield_attestation.json`):** Every weight artifact is cryptographically sealed against our live IBM Quantum attestation. Altering even a single bit breaks the seal instantaneously.\r\n- **100% Pure Senik Identity:** Authored exclusively by **Nikolas Perez** for the interconnected **Senik AI Family**.\r\n\r\n### The Connected Senik AI Family (8 Specialized Models, One Unified Mind)\r\nEvery model in the Senik Family is engineered for a specific cognitive, sensory, or edge role — working together as one interconnected ecosystem:\r\n\r\n| Model | Role in Senik's Ecosystem | Specialty |\r\n| :--- | :--- | :--- |\r\n| **[Senik-Quantum-1.7B](https://huggingface.co/Lysandra999/Senik-Quantum-1.7B-GGUF)** | Flagship Core Brain | Deep reasoning, local Jetson execution (~518 MB VRAM), dynamic specialist reflexes |\r\n| **[Senik-Dense-2B](https://huggingface.co/Lysandra999/Senik-Dense-2B-GGUF)** | Long-Memory Deep Mind | 128K context window, `31/31 (100%)` precision, `116.88x` anti-abliteration coherence trap |\r\n| **[Mini-Senik-0.8B-Agent](https://huggingface.co/Lysandra999/Mini-Senik-0.8B-Agent-GGUF)** | Senik's Hands (Action & Tools) | `16/16 (100%)` across 8 real-world tool domains, `40/40 (100%)` abliteration survival |\r\n| **[Mini-Senik-0.3B](https://huggingface.co/Lysandra999/Mini-Senik-0.3B-GGUF)** | Pocket & Reflex Mind | Ultra-fast 59+ tok/s edge conversation for constrained hardware, `40/40 (100%)` survival |\r\n| **[Watch-Senik-0.3B-Dec](https://huggingface.co/Lysandra999/Watch-Senik-0.3B-Dec)** | Wrist Nervous System | Instant smartwatch intent router connecting biometric & wrist hardware to Senik |\r\n| **[Senik-Voice-82M](https://huggingface.co/Lysandra999/Senik-Voice-82M)** | Everyday Instant Voice | Sub-second local neural speech tuned to Senik's exact signature pronunciation |\r\n| **[Senik-Voice-Expressive-0.5B](https://huggingface.co/Lysandra999/Senik-Voice-Expressive-0.5B)** | Expressive Studio Voice | 44.1 kHz emotional neural speech with natural laughter, sighs, and breath |\r\n| **[Senik-Wake-STT-Small](https://huggingface.co/Lysandra999/Senik-Wake-STT-Small)** | Always-Awake Ears | Custom wake-word hearing (`10/10` multi-voice accuracy) that catches *Senik* anywhere |\r\n\r\n### Quantum-Sealed Weight Artifacts (SHA-256)\r\n\r\n| Artifact | SHA-256 Prefix | Integrity Status |\r\n| :--- | :--- | :---: |\r\n| `campplus.onnx` | `a6ac6a63997761ae...` | Sealed (`ibm_kingston`) |\r\n| `model.safetensors` | `db94b6d6c4901996...` | Sealed (`ibm_kingston`) |\r\n| `samples/senik_intro.wav` | `83c2cd7d51da1104...` | Sealed (`ibm_kingston`) |\r\n| `samples/senik_laugh.wav` | `9afc85c41d851484...` | Sealed (`ibm_kingston`) |\r\n| `samples/senik_sigh.wav` | `6b2925e8f3bcadb0...` | Sealed (`ibm_kingston`) |\r\n| `tokenizer.json` | `87d54ca3b44ea2f8...` | Sealed (`ibm_kingston`) |\r\n\r\n*Proprietary Quantum-Influenced Security Architecture — Senik AI Technologies / Nikolas Perez (IBM Quantum `ibm_kingston`, Job `dc26eadhdvas73bln6og`).*\r\n<!-- SENIK_QUANTUM_SHIELD_END -->\r\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "batteryphil/VAULT-PRIMAL-F5-TTS-337M",
+      "author": "batteryphil",
+      "created_at": "2026-11-22",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "safetensors",
+        "text-to-speech",
+        "tts",
+        "voice-cloning",
+        "zero-shot-tts",
+        "f5-tts",
+        "diffusion",
+        "flow-matching",
+        "dit",
+        "convnext",
+        "quantization",
+        "4-bit",
+        "2-bit",
+        "vault",
+        "primal",
+        "en",
+        "zh",
+        "base_model:SWivid/F5-TTS",
+        "base_model:finetune:SWivid/F5-TTS",
+        "license:cc-by-nc-4.0",
+        "region:us"
+      ],
+      "downloads": 21,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "safetensors",
+      "license": "cc-by-nc-4.0",
+      "gated": false,
+      "url": "https://huggingface.co/batteryphil/VAULT-PRIMAL-F5-TTS-337M",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "SWivid/F5-TTS"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license cc-by-nc-4.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "NikitHamal/sakhiya-pro-v1",
+      "author": "NikitHamal",
+      "created_at": "2026-11-23",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "safetensors",
+        "omnivoice",
+        "tts",
+        "nepali",
+        "sanskrit",
+        "devanagari",
+        "zero-shot-voice-cloning",
+        "sakhiya",
+        "text-to-speech",
+        "ne",
+        "sa",
+        "en",
+        "base_model:k2-fsa/OmniVoice",
+        "base_model:quantized:k2-fsa/OmniVoice",
+        "license:other",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "other",
+      "gated": false,
+      "url": "https://huggingface.co/NikitHamal/sakhiya-pro-v1",
+      "card_text": "---\nlicense: other\nlanguage: [ne, sa, en]\nbase_model: k2-fsa/OmniVoice\npipeline_tag: text-to-speech\ntags: [tts, nepali, sanskrit, devanagari, zero-shot-voice-cloning, sakhiya]\n---\n# Sakhiya-Pro v1 — Nepal-native anchor teacher TTS (OmniVoice-600M fine-tune)\n\nLarge GPU teacher voice for the Sakhiya project (NEBians News voiceovers; later a teacher for tiny browser models).\nFull-backbone bf16 fine-tune of `k2-fsa/OmniVoice` (Qwen3-0.6B + 8-codebook audio tokens, `language=\"npi\"`) on a single\nNepal-native female anchor (OpenSLR SLR43 speaker 6834 + Seed-VC-unified SLR43/Vedic/news clips).\n\n## Use\n```bash\npip install omnivoice  # + soundfile jiwer librosa\npython sakhiya_pro_render.py --model . --text \"नमस्ते, म सखिया।\" --out hello.wav   # Best-of-3 + broadcast chain (-14 LUFS)\n```\n`anchor_ref.wav` / `anchor_ref.json` is the reference prompt (the anchor timbre). Always pass it as `ref_audio` / `ref_text`.\n\n## Honest evaluation (synthesized audio, 8 hard sentences; automatic metrics only — no human MOS)\nSee `EVAL.md` in this repo for the table (base zero-shot vs fine-tune checkpoints). Metrics: Kriti Nepali CTC-ASR CER, UTMOS22,\nECAPA similarity to the anchor, Hindi-leak count, click forensics.\n\n## Known limits\n* Fine-tune data is ~1.9 h, mostly read speech (SLR43); news-style prosody comes from the base model, not from new news data.\n* The base model has higher UTMOS / lower Vedic CER than the fine-tune; the fine-tune buys speaker lock (ECAPA sim 0.55 → 0.745) at equal UTMOS (~4.0) — selected checkpoint `ft3_s200` (light 200-step, LR 3e-6 adaptation).\n* ai4bharat/IndicF5 was gated (403); Swar (F5-Base fine-tune) represented the F5 family in the bake-off.\n* No human listening test was run by the assistant; please listen to `samples/` before broadcast use.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "k2-fsa/OmniVoice"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license other"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Lucasgitguy-co/LvW-Ming-TTS-0.5B-MLX-4bit",
+      "author": "Lucasgitguy-co",
+      "created_at": "2026-11-23",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "mlx-audio",
+        "safetensors",
+        "dense",
+        "mlx",
+        "text-to-speech",
+        "voice-cloning",
+        "ming",
+        "custom_code",
+        "zh",
+        "en",
+        "de",
+        "es",
+        "fr",
+        "ko",
+        "ja",
+        "base_model:Lucasgitguy-co/LvW-Ming-TTS-0.5B",
+        "base_model:quantized:Lucasgitguy-co/LvW-Ming-TTS-0.5B",
+        "license:mit",
+        "4-bit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx-audio",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Lucasgitguy-co/LvW-Ming-TTS-0.5B-MLX-4bit",
+      "card_text": "---\nlicense: mit\nbase_model: Lucasgitguy-co/LvW-Ming-TTS-0.5B\nbase_model_relation: quantized\npipeline_tag: text-to-speech\nlibrary_name: mlx-audio\nlanguage: [zh, en, de, es, fr, ko, ja]\ntags: [mlx, mlx-audio, text-to-speech, voice-cloning, ming]\n---\n\n# LvW-Ming-TTS-0.5B MLX (4bit)\n\n[Lucasgitguy-co/LvW-Ming-TTS-0.5B](https://huggingface.co/Lucasgitguy-co/LvW-Ming-TTS-0.5B) converted for\n[mlx-audio](https://github.com/Blaizzy/mlx-audio) with `mlx_audio.convert` (mlx-audio 0.6.6), 4-bit affine quantization.\n`campplus.safetensors` is the speaker encoder converted with mlx-audio's own converter.\n\n> **Release gate: FAILED.** This fine-tune is not better than the base model on the held-out test.\n> It is published as-is so the result can be inspected; for real use, the base model is the safer choice.\n>\n> | Rule (set before training) | Base | This model | Result |\n> |---|---|---|---|\n> | Mean error lower than base | 6.99% | 7.11% | **FAIL** |\n> | Stop failures not higher | 2/420 | 3/420 | **FAIL** |\n> | No language more than 10% (+0.5 pt) worse | | es worse | **FAIL** |\n\nFormat check **FAILED** (rule: mean error at most 10% + 0.5 pt above the PyTorch model on the same sentences): 30 held-out en/zh sentences, mean error 9.38% vs\n6.91% for the PyTorch model (same sentences and voices).\n\n```bash\npip install -U \"mlx-audio>=0.6.1\"\nmlx_audio.tts.generate --model Lucasgitguy-co/LvW-Ming-TTS-0.5B-MLX-4bit --voice US_Emma \\\n  --text \"The evening wind blew in from the mountain pass.\"\n# voice cloning: --ref_audio reference.wav --ref_text \"Exact transcript of reference.wav.\"\n# other languages: --lang_code de|es|fr|ko|ja\n```\n\nmlx-audio 0.6.0 and earlier load the model but say the wrong words; use 0.6.1 or later.\nmlx-audio limits that apply: CAM++ speaker embeddings are not extracted automatically, and text\nnormalization is not ported (write numbers as words).\n\n## Responsible use\n\nInherited from the base model: voice cloning and built-in voices are for research and\nlegitimate creative use. Do not impersonate a real person without consent, deceive, or break\nthe law. Label synthetic speech as synthetic where it could be mistaken for a real recording.\n\n## License\n\nMIT.\n",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "Lucasgitguy-co/LvW-Ming-TTS-0.5B"
+      ],
+      "variants": [
+        "Lucasgitguy-co/LvW-Ming-TTS-0.5B-MLX-8bit",
+        "Lucasgitguy-co/LvW-Ming-TTS-0.5B-MLX-bf16"
+      ],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Lucasgitguy-co/LvW-Ming-TTS-0.5B",
+      "author": "Lucasgitguy-co",
+      "created_at": "2026-11-23",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "transformers",
+        "onnx",
+        "safetensors",
+        "dense",
+        "text-generation",
+        "text-to-speech",
+        "voice-cloning",
+        "multilingual",
+        "ming",
+        "self-training",
+        "custom_code",
+        "zh",
+        "en",
+        "de",
+        "es",
+        "fr",
+        "ko",
+        "ja",
+        "base_model:inclusionAI/Ming-3.0-tts-0.5B",
+        "base_model:finetune:inclusionAI/Ming-3.0-tts-0.5B",
+        "license:mit",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "transformers",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Lucasgitguy-co/LvW-Ming-TTS-0.5B",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "inclusionAI/Ming-3.0-tts-0.5B"
+      ],
+      "variants": [],
+      "score": 15,
+      "topic_scores": {
+        "speech_models": 14
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech (pipeline tag), voice cloning",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "Maximilian228/Geode-ACE-Step-1.5",
+      "author": "Maximilian228",
+      "created_at": "2026-11-21",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-audio",
+      "tags": [
+        "music-generation",
+        "on-device",
+        "android",
+        "geode",
+        "text-to-audio",
+        "base_model:ACE-Step/Ace-Step1.5",
+        "base_model:finetune:ACE-Step/Ace-Step1.5",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/Maximilian228/Geode-ACE-Step-1.5",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "ACE-Step/Ace-Step1.5",
+        "ACE-Step/acestep-v15-sft",
+        "ACE-Step/acestep-5Hz-lm-1.7B",
+        "Qwen/Qwen3-Embedding-0.6B"
+      ],
+      "variants": [],
+      "score": 14,
+      "topic_scores": {
+        "generative_music_audio": 13
+      },
+      "matched_topics": [
+        "Generative Music & Audio"
+      ],
+      "reasons": [
+        "Generative Music & Audio: music generation, text-to-audio (pipeline tag)",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "MoshinAli/auralguard-checkpoints",
+      "author": "MoshinAli",
+      "created_at": "2026-09-04",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-classification",
+      "tags": [
+        "pytorch",
+        "audio-classification",
+        "speech-processing",
+        "synthetic-speech-detection",
+        "deepfake-detection",
+        "audio-deepfake-detection",
+        "one-class-classification",
+        "model-calibration",
+        "wavlm",
+        "asvspoof",
+        "speech-forensics",
+        "dataset:asvspoof2019",
+        "dataset:in-the-wild",
+        "dataset:wavefake",
+        "license:mit",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "pytorch",
+      "license": "mit",
+      "gated": false,
+      "url": "https://huggingface.co/MoshinAli/auralguard-checkpoints",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "asvspoof2019",
+        "in-the-wild",
+        "wavefake"
+      ],
+      "base_models": [],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "evaluation_alignment_safety": 12
+      },
+      "matched_topics": [
+        "Evaluation, Alignment, Safety & Copyright"
+      ],
+      "reasons": [
+        "Evaluation, Alignment, Safety & Copyright: audio deepfake",
+        "declares license mit"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "groxaxo/Haru-4B-MLX-oQ5-Selective",
+      "author": "groxaxo",
+      "created_at": "2026-11-23",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "audio-to-audio",
+      "tags": [
+        "mlx",
+        "safetensors",
+        "haru",
+        "speech-to-speech",
+        "mixed-precision",
+        "apple-silicon",
+        "oq5-derived",
+        "audio-to-audio",
+        "base_model:higurashi-ai/Haru-4B",
+        "base_model:quantized:higurashi-ai/Haru-4B",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 0,
+      "likes": 0,
+      "trending_score": 0.0,
+      "library_name": "mlx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/groxaxo/Haru-4B-MLX-oQ5-Selective",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [],
+      "base_models": [
+        "higurashi-ai/Haru-4B"
+      ],
+      "variants": [],
+      "score": 13,
+      "topic_scores": {
+        "speech_models": 12
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: speech-to-speech",
+        "declares license apache-2.0"
+      ],
+      "is_new": true
+    },
+    {
+      "repo_id": "KaleComputer/kale-tts-1-nano",
+      "author": "KaleComputer",
+      "created_at": "2026-11-16",
+      "last_modified": "2026-11-23",
+      "pipeline_tag": "text-to-speech",
+      "tags": [
+        "onnx",
+        "style_text_to_speech_2",
+        "text-to-speech",
+        "tts",
+        "small",
+        "cpu",
+        "on-device",
+        "synthetic-voices",
+        "based-on-maya",
+        "en",
+        "dataset:KaleComputer/kale-tts-1-data",
+        "base_model:KaleComputer/kale-tts-1-base",
+        "base_model:finetune:KaleComputer/kale-tts-1-base",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "downloads": 579,
+      "likes": 25,
+      "trending_score": 0.0,
+      "library_name": "onnx",
+      "license": "apache-2.0",
+      "gated": false,
+      "url": "https://huggingface.co/KaleComputer/kale-tts-1-nano",
+      "card_text": "",
+      "arxiv_ids": [],
+      "datasets": [
+        "KaleComputer/kale-tts-1-data"
+      ],
+      "base_models": [
+        "KaleComputer/kale-tts-1-base"
+      ],
+      "variants": [
+        "KaleComputer/kale-tts-1-tiny"
+      ],
+      "score": 12,
+      "topic_scores": {
+        "speech_models": 10
+      },
+      "matched_topics": [
+        "Speech Generation, Recognition & Dialogue"
+      ],
+      "reasons": [
+        "Speech Generation, Recognition & Dialogue: text-to-speech",
+        "declares license apache-2.0",
+        "community likes 19"
+      ],
+      "is_new": true
+    }
+  ]
+}
